@@ -3485,6 +3485,3040 @@ apply_lang("ja", JA)
 apply_lang("ko", KO)
 apply_lang("es", ES)
 
+# ================= 2026-08-07 deep round 2 (exploration/characters/achievements/cooking/weather/drone-combat) =================
+ZH["exploration"] = {
+ "title": "多洛可小镇探索指南：全部 5 个区域",
+ "metaTitle": "多洛可小镇区域：全部 5 个区域与旧城废墟（1.0）",
+ "metaDescription": "多洛可小镇全部区域详解：外围、河谷、湿地、洞穴，以及 1.0 新增的旧城废墟——每个区域的资源、秘密与出发准备。",
+ "intro": "探索是多洛可小镇的核心。五大区域藏着独特的资源、敌人与故事——包括 1.0 发售新增的旧城废墟。这里讲清每个区域的价值，以及如何活着回来。",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "全部区域速览",
+   "body": "五个区域各有各的资源、敌人与故事——加上 1.0 的旧城废墟。",
+   "columns": [
+    "区域",
+    "有什么",
+    "为什么去"
+   ],
+   "rows": [
+    [
+     "外围",
+     "起始废土、基础资源",
+     "大本营与第一块农场"
+    ],
+    [
+     "河谷",
+     "郁郁葱葱——为什么？（核心谜团）",
+     "稀有材料、库玛桑、剧情"
+    ],
+    [
+     "湿地",
+     "凶险；Boss 掉落中型E芯片 ⚠️",
+     "战斗模块、稀有战利品"
+    ],
+    [
+     "洞穴",
+     "神秘的富矿地下",
+     "矿物与隐藏科技"
+    ],
+    [
+     "旧城废墟（1.0）",
+     "凶悍敌人、新 NPC、支线、终局资源",
+     "1.0 结局 + 新制作材料"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "荒野生存",
+   "body": "野外很危险——准备是否充分，决定你满载而归还是重生回城。",
+   "items": [
+    "标记回家的路，否则可能夜里流落在外。",
+    "警惕凶猛的生物与废墟中的敌对者。",
+    "长途出行前给无人机装好武器与照明模块。",
+    "带上食物——烹饪增益让你活得更久、跑得更快。",
+    "出发前先看天气预报——雷暴与酸雨会惩罚没准备的探索者。",
+    "深入前先想好撤退路线。"
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "探索旧城废墟（1.0 新增）",
+   "body": "1.0 发售的重大新区域——官方公告称其为游戏「第三大区域」。",
+   "items": [
+    [
+     "随剧情解锁",
+     "通往废墟城的道路遍布多洛可小镇。"
+    ],
+    [
+     "准备迎战凶悍新敌人",
+     "新敌人与生物在等待——出发前先升级无人机。"
+    ],
+    [
+     "遇见新 NPC 与同伴",
+     "神秘同伴加入阵容并开启新任务。"
+    ],
+    [
+     "收集新资源",
+     "旧城材料支撑终局制作与工具升级。"
+    ],
+    [
+     "跟进支线",
+     "新支线把该区域与小城重建连在一起。"
+    ],
+    [
+     "当作终局对待",
+     "备足能量、食物与战斗模块——这是最难的区域。"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "关键资源分布",
+   "body": "钓鱼点、采集点与稀有掉落分布在地图各处——以下是已核实的重点。",
+   "columns": [
+    "资源",
+    "区域",
+    "说明"
+   ],
+   "rows": [
+    [
+     "稀有材料（交易）",
+     "河谷",
+     "游商库玛桑交易稀有材料 ⚠️"
+    ],
+    [
+     "中型E芯片",
+     "湿地",
+     "湿地 Boss 掉落 ⚠️"
+    ],
+    [
+     "矿物与隐藏科技",
+     "洞穴",
+     "地下采矿废墟有最好的矿点"
+    ],
+    [
+     "终局制作材料",
+     "旧城废墟（1.0）",
+     "1.0 引入的新资源类型"
+    ],
+    [
+     "高级无人机零件",
+     "钓鱼",
+     "稀有鱼掉落高级无人机与工具零件——用钓鱼养出装"
+    ]
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "三大谜团（与常见错误）",
+   "body": "在毁灭的世界里，河谷为何依旧葱郁？小镇消失的领袖去了哪里？为什么那么多前末世科技件都带着「Eden」印记？1.0 的剧情会给出答案——而且答案与特定村民绑定，所以要和每个人交谈。常见错误：匆匆掠过剧情物件——一路狂奔会错过好几处剧情节点。"
+  },
+  {
+   "type": "faq",
+   "heading": "常见问题速答",
+   "body": "",
+   "items": [
+    [
+     "游戏有多少个区域？",
+     "五个基础区域（外围、河谷、湿地、洞穴）加 1.0 的旧城废墟。旧城废墟被官方称为游戏第三大区域。"
+    ],
+    [
+     "1.0 旧城废墟有什么新东西？",
+     "重大新区域：凶悍敌人、新 NPC 与同伴、支线任务与终局制作资源。"
+    ],
+    [
+     "在哪里能找到库玛桑？",
+     "库玛桑是河谷的游走 NPC，是稀有材料的来源 ⚠️。"
+    ],
+    [
+     "夜里能探索废墟吗？",
+     "可以，但先给无人机装照明模块——没灯夜战是经典失误。"
+    ],
+    [
+     "高级无人机零件怎么获得？",
+     "稀有鱼掉落高级无人机与工具零件；湿地 Boss 掉落中型E芯片 ⚠️。"
+    ]
+   ]
+  }
+ ]
+}
+JA["exploration"] = {
+ "title": "ドロックタウン探索ガイド：全5地域",
+ "metaTitle": "ドロックタウン地域：全5エリアと旧市街遺跡（1.0）",
+ "metaDescription": "ドロックタウンの全地域を解説：郊外、リバーバレー、湿地、洞窟、そして1.0の旧市街遺跡——資源・秘密・出発準備まで。",
+ "intro": "探索はドロックタウンの中心です。5つの地域には独自の資源・敵・物語があり——1.0で追加された旧市街遺跡も。各地域の価値と、生きて帰る方法をまとめました。",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "全地域早見表",
+   "body": "5地域それぞれに資源・敵・物語——さらに1.0の旧市街遺跡。",
+   "columns": [
+    "地域",
+    "あるもの",
+    "行く理由"
+   ],
+   "rows": [
+    [
+     "郊外",
+     "最初の荒廃地、基本資源",
+     "拠点と最初の農場"
+    ],
+    [
+     "リバーバレー",
+     "緑豊か——なぜ？（核心の謎）",
+     "レア素材、クマサン、ストーリー"
+    ],
+    [
+     "湿地",
+     "危険；ボスがミディアムEチップをドロップ ⚠️",
+     "戦闘モジュール、レアドロップ"
+    ],
+    [
+     "洞窟",
+     "謎に満ちた資源豊富な地下",
+     "鉱物と隠されたテクノロジー"
+    ],
+    [
+     "旧市街遺跡（1.0）",
+     "凶暴な敵、新NPC、サブクエスト、終盤資源",
+     "1.0のクライマックス＋新素材"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "荒野での生存",
+   "body": "野は危険——準備が大漁と復活の分かれ道です。",
+   "items": [
+    "帰り道をマークしておかないと、夜に迷子になる。",
+    "凶暴なクリーチャーと遺跡の敵対者に警戒。",
+    "遠征前にドローンに武器・照明モジュールを装備。",
+    "食料を持っていく——料理バフで長持ち＆高速移動。",
+    "先に天気予報を確認——嵐と酸性雨は準備不足の探索者を罰する。",
+    "深く潜る前に退路を決めておく。"
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "旧市街遺跡を探索（1.0追加）",
+   "body": "1.0で追加された大規模新地域——公式発表ではゲーム「第3のメジャーエリア」。",
+   "items": [
+    [
+     "ストーリーで解放",
+     "廃墟の街へ通じる道はドロックタウン各地にある。"
+    ],
+    [
+     "凶暴な新敵に備える",
+     "新しい敵とクリーチャーが待つ——事前にドローン強化を。"
+    ],
+    [
+     "新NPCと仲間に会う",
+     "謎の仲間が加わり、新しいクエストが開く。"
+    ],
+    [
+     "新資源を集める",
+     "旧市街の素材は終盤クラフトと道具強化を支える。"
+    ],
+    [
+     "サブクエストを追う",
+     "新サブコンテンツが地域と町の復興をつなぐ。"
+    ],
+    [
+     "終盤として扱う",
+     "エネルギー・食料・戦闘モジュールを準備——最難関エリア。"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "重要資源の入手先",
+   "body": "釣り場・採集ポイント・レアドロップはマップ各地に——以下は検証済みの要点。",
+   "columns": [
+    "資源",
+    "地域",
+    "備考"
+   ],
+   "rows": [
+    [
+     "レア素材（取引）",
+     "リバーバレー",
+     "放浪者クマサンがレア素材を扱う ⚠️"
+    ],
+    [
+     "ミディアムEチップ",
+     "湿地",
+     "湿地ボスからドロップ ⚠️"
+    ],
+    [
+     "鉱物と隠しテクノロジー",
+     "洞窟",
+     "地下の採掘遺跡が最高の鉱脈"
+    ],
+    [
+     "終盤クラフト素材",
+     "旧市街遺跡（1.0）",
+     "1.0で追加された新資源"
+    ],
+    [
+     "高性能ドローン部品",
+     "釣り",
+     "レア魚が高級部品を落とす——釣りでビルドを賄う"
+    ]
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "3つの謎（とよくある失敗）",
+   "body": "滅びた世界でリバーバレーはなぜ緑？消えた町長はどこへ？なぜ前終末テクノロジーに「Eden」の刻印が？答えは1.0のストーリーに——特定の住人に結びついているので、全員と話そう。よくある失敗：伝承オブジェクトを急ぎ足で通り過ぎる——地域を駆け抜けると複数の物語を逃します。"
+  },
+  {
+   "type": "faq",
+   "heading": "よくある質問",
+   "body": "",
+   "items": [
+    [
+     "地域はいくつある？",
+     "基本5地域（郊外、リバーバレー、湿地、洞窟）＋1.0の旧市街遺跡。旧市街遺跡は公式に「第3のメジャーエリア」とされています。"
+    ],
+    [
+     "1.0の旧市街遺跡には何が？",
+     "大規模新地域：凶暴な敵、新NPC・仲間、サブクエスト、終盤クラフト資源。"
+    ],
+    [
+     "クマサンはどこに？",
+     "リバーバレーを歩き回るNPCで、レア素材の入手先 ⚠️。"
+    ],
+    [
+     "夜に遺跡を探索できる？",
+     "できますが、先に照明モジュールを装備——灯りなしの夜戦は典型ミス。"
+    ],
+    [
+     "高性能ドローン部品はどう入手？",
+     "レア魚が高級部品を落とし、湿地ボスがミディアムEチップをドロップ ⚠️。"
+    ]
+   ]
+  }
+ ]
+}
+KO["exploration"] = {
+ "title": "돌록 타운 탐험 가이드: 전체 5개 지역",
+ "metaTitle": "돌록 타운 지역: 전체 5개 구역과 구시가지 유적 (1.0)",
+ "metaDescription": "돌록 타운의 모든 지역 해설: 교외, 리버 밸리, 습지, 동굴, 그리고 1.0의 구시가지 유적 — 자원·비밀·출발 준비까지.",
+ "intro": "탐험은 돌록 타운의 핵심입니다. 5개 지역마다 독특한 자원과 적, 이야기가 있으며 — 1.0에서 추가된 구시가지 유적도 있습니다. 각 지역의 가치와 무사히 돌아오는 법을 정리했습니다.",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "전체 지역 한눈에 보기",
+   "body": "5개 지역마다 자원·적·이야기가 다르며 — 1.0의 구시가지 유적까지.",
+   "columns": [
+    "지역",
+    "있는 것",
+    "가는 이유"
+   ],
+   "rows": [
+    [
+     "교외",
+     "시작 황무지, 기본 자원",
+     "본거지와 첫 농장"
+    ],
+    [
+     "리버 밸리",
+     "무성함 — 왜? (핵심 미스터리)",
+     "희귀 재료, 쿠마상, 스토리"
+    ],
+    [
+     "습지",
+     "위험; 보스가 미디엄 E칩 드랍 ⚠️",
+     "전투 모듈, 희귀 전리품"
+    ],
+    [
+     "동굴",
+     "신비로운 자원 풍부한 지하",
+     "광물과 숨겨진 기술"
+    ],
+    [
+     "구시가지 유적 (1.0)",
+     "사나운 적, 새 NPC, 사이드 퀘스트, 엔드게임 자원",
+     "1.0 피날레 + 새 제작 재료"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "황무지에서 살아남기",
+   "body": "야생은 위험합니다 — 준비가 대박과 부활의 차이를 만듭니다.",
+   "items": [
+    "집으로 가는 길을 표시하세요 — 밤에 길을 잃을 수 있습니다.",
+    "사나운 생물과 유적의 적대자에게 경계하세요.",
+    "긴 원정 전에 드론에 무기·조명 모듈을 장착하세요.",
+    "음식을 챙기세요 — 요리 버프가 생존과 속도를 높입니다.",
+    "먼저 일기예보를 확인하세요 — 폭풍과 산성비는 준비 없는 탐험가를 벌합니다.",
+    "깊이 들어가기 전에 퇴로를 정하세요."
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "구시가지 유적 탐험 (1.0 추가)",
+   "body": "1.0에서 추가된 대형 신규 지역 — 공식 발표에서는 게임의 '세 번째 주요 지역'.",
+   "items": [
+    [
+     "스토리로 해금",
+     "폐허 도시로 가는 길은 돌록 타운 곳곳에 있습니다."
+    ],
+    [
+     "사나운 새 적에 대비",
+     "새 적과 생물이 기다립니다 — 가기 전에 드론을 업그레이드하세요."
+    ],
+    [
+     "새 NPC와 동료 만나기",
+     "수수께끼의 동료가 합류하며 새 퀘스트가 열립니다."
+    ],
+    [
+     "새 자원 수집",
+     "구시가지 재료가 엔드게임 제작과 도구 강화를 뒷받침합니다."
+    ],
+    [
+     "사이드 퀘스트 따르기",
+     "새 사이드 콘텐츠가 지역과 마을 재건을 잇습니다."
+    ],
+    [
+     "엔드게임으로 취급",
+     "에너지·음식·전투 모듈을 준비하세요 — 가장 어려운 구역입니다. "
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "주요 자원 위치",
+   "body": "낚시터·채집 지점·희귀 드랍이 지도 곳곳에 — 다음은 검증된 핵심입니다.",
+   "columns": [
+    "자원",
+    "지역",
+    "비고"
+   ],
+   "rows": [
+    [
+     "희귀 재료 (거래)",
+     "리버 밸리",
+     "떠도는 상인 쿠마상이 희귀 재료 거래 ⚠️"
+    ],
+    [
+     "미디엄 E칩",
+     "습지",
+     "습지 보스 드랍 ⚠️"
+    ],
+    [
+     "광물과 숨겨진 기술",
+     "동굴",
+     "지하 채굴 유적이 최고의 광맥"
+    ],
+    [
+     "엔드게임 제작 재료",
+     "구시가지 유적 (1.0)",
+     "1.0에서 추가된 새 자원"
+    ],
+    [
+     "고급 드론 부품",
+     "낚시",
+     "희귀어가 고급 부품 드랍 — 낚시로 빌드 자금 마련"
+    ]
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "세 가지 미스터리 (그리고 흔한 실수)",
+   "body": "멸망한 세계에서 리버 밸리는 왜 무성할까? 사라진 지도자는 어떻게 됐을까? 왜 전멸 전 기술에 'Eden' 각인이 새겨져 있을까? 답은 1.0 스토리에 — 특정 주민과 연결되어 있으니 모두와 대화하세요. 흔한 실수: 스토리 오브젝트를 지나치기 — 지역을 달리면 여러 이야기를 놓칩니다."
+  },
+  {
+   "type": "faq",
+   "heading": "빠른 답변",
+   "body": "",
+   "items": [
+    [
+     "지역은 몇 개인가요?",
+     "기본 5개 지역(교외, 리버 밸리, 습지, 동굴) + 1.0의 구시가지 유적. 구시가지 유적은 공식적으로 게임의 세 번째 주요 지역으로 불립니다."
+    ],
+    [
+     "1.0 구시가지 유적에는 뭐가 있나요?",
+     "대형 신규 지역: 사나운 적, 새 NPC·동료, 사이드 퀘스트, 엔드게임 제작 자원."
+    ],
+    [
+     "쿠마상은 어디에 있나요?",
+     "리버 밸리를 떠도는 NPC로 희귀 재료의 원천 ⚠️."
+    ],
+    [
+     "밤에 유적을 탐험할 수 있나요?",
+     "네, 하지만 먼저 조명 모듈을 장착하세요 — 불빛 없는 야간전은 전형적인 실수입니다."
+    ],
+    [
+     "고급 드론 부품은 어떻게 얻나요?",
+     "희귀어가 고급 드론·도구 부품을 드랍하고, 습지 보스가 미디엄 E칩을 드랍합니다 ⚠️. "
+    ]
+   ]
+  }
+ ]
+}
+ES["exploration"] = {
+ "title": "Guía de exploración de Doloc Town: las 5 regiones",
+ "metaTitle": "Regiones de Doloc Town: las 5 zonas y las Ruinas (1.0)",
+ "metaDescription": "Todas las regiones de Doloc Town explicadas: las Afueras, el Valle del Río, los Humedales, las Cuevas y las Ruinas de la Ciudad Vieja del 1.0 — con recursos, secretos y qué llevar.",
+ "intro": "La exploración es el corazón de Doloc Town. Cinco regiones guardan recursos, enemigos e historias únicos — incluida la nueva Ruinas de la Ciudad Vieja del 1.0. Aquí está el valor de cada zona y cómo sobrevivir a ella.",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "Todas las regiones de un vistazo",
+   "body": "Cinco regiones, cada una con sus recursos, enemigos e historia — más las Ruinas de la Ciudad Vieja del 1.0.",
+   "columns": [
+    "Región",
+    "Qué hay",
+    "Por qué ir"
+   ],
+   "rows": [
+    [
+     "Las Afueras",
+     "Páramo inicial, lo básico, recursos tempranos",
+     "Base y primera granja"
+    ],
+    [
+     "Valle del Río",
+     "Frondoso y próspero — ¿por qué? (misterio central)",
+     "Materiales raros, Kumasang, historia"
+    ],
+    [
+     "Humedales",
+     "Traicioneros; el jefe suelta chip E medio ⚠️",
+     "Módulos de combate, botín raro"
+    ],
+    [
+     "Cuevas",
+     "Subsuelo misterioso y rico en recursos",
+     "Minerales y tecnología oculta"
+    ],
+    [
+     "Ruinas de la Ciudad Vieja (1.0)",
+     "Enemigos feroces, nuevos PNJ, misiones, recursos finales",
+     "Final del 1.0 + materiales nuevos"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "Sobrevivir a la naturaleza",
+   "body": "El exterior es peligroso: la preparación marca la diferencia entre una buena cosecha y reaparecer.",
+   "items": [
+    "Marca tu camino a casa o acabarás varado de noche.",
+    "Ojo con las criaturas feroces y los hostiles de las ruinas.",
+    "Mejora tu dron con módulos de arma y luz antes de viajes largos.",
+    "Lleva comida: los buffs de cocina te mantienen vivo y rápido.",
+    "Consulta primero el pronóstico: las tormentas y la lluvia ácida castigan a los que no se preparan.",
+    "Decide tu ruta de salida antes de comprometerte con una inmersión profunda."
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "Explorar las Ruinas de la Ciudad Vieja (nuevas en 1.0)",
+   "body": "La gran región nueva del 1.0 — descrita en el anuncio oficial como la tercera zona principal del juego.",
+   "items": [
+    [
+     "Desbloquéalas con la historia",
+     "Muchos caminos de Doloc Town llevan hacia la ciudad en ruinas."
+    ],
+    [
+     "Espera enemigos nuevos y feroces",
+     "Nuevos enemigos y criaturas esperan — mejora tu dron antes de ir."
+    ],
+    [
+     "Conoce a nuevos PNJ y compañeros",
+     "Compañeros misteriosos se unen al elenco y abren misiones."
+    ],
+    [
+     "Reúne recursos nuevos",
+     "Los materiales de la Ciudad Vieja alimentan la artesanía final."
+    ],
+    [
+     "Sigue las misiones secundarias",
+     "El contenido secundario une la región con la recuperación del pueblo."
+    ],
+    [
+     "Trátala como contenido final",
+     "Prepara energía, comida y módulos de combate: es la zona más dura. "
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "Dónde encontrar recursos clave",
+   "body": "Puntos de pesca, recolección y botín raro repartidos por el mapa: estos son los destacados verificados.",
+   "columns": [
+    "Recurso",
+    "Región",
+    "Nota"
+   ],
+   "rows": [
+    [
+     "Materiales raros (trueque)",
+     "Valle del Río",
+     "Kumasang, el errante, comercia materiales raros ⚠️"
+    ],
+    [
+     "Chip E medio",
+     "Humedales",
+     "Lo suelta el jefe de los Humedales ⚠️"
+    ],
+    [
+     "Minerales y tecnología oculta",
+     "Cuevas",
+     "Las ruinas mineras subterráneas tienen los mejores nódulos"
+    ],
+    [
+     "Materiales de artesanía final",
+     "Ruinas de la Ciudad Vieja (1.0)",
+     "Tipo de recurso nuevo introducido con el 1.0"
+    ],
+    [
+     "Piezas avanzadas de dron",
+     "Pesca",
+     "Los peces raros dan piezas avanzadas: pesca para financiar tu build"
+    ]
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "Los tres misterios (y errores comunes)",
+   "body": "¿Por qué el Valle del Río sigue frondoso en un mundo en ruinas? ¿Qué pasó con el líder desaparecido del pueblo? ¿Por qué tantas piezas tecnológicas preapocalípticas llevan la marca de 'Eden'? La historia del 1.0 las responde — y están ligadas a aldeanos concretos, así que habla con todos. Error común: pasar de largo los objetos de trasfondo — varios momentos se pierden si atraviesas la región a la carrera."
+  },
+  {
+   "type": "faq",
+   "heading": "Respuestas rápidas",
+   "body": "",
+   "items": [
+    [
+     "¿Cuántas regiones hay?",
+     "Cinco regiones base (Afueras, Valle del Río, Humedales, Cuevas) más las Ruinas de la Ciudad Vieja del 1.0. Las Ruinas se describen como la tercera zona principal del juego."
+    ],
+    [
+     "¿Qué hay de nuevo en las Ruinas del 1.0?",
+     "Una gran región nueva: enemigos feroces, nuevos PNJ y compañeros, misiones secundarias y recursos de artesanía final."
+    ],
+    [
+     "¿Dónde encuentro a Kumasang?",
+     "Es un PNJ errante del Valle del Río y una fuente de materiales raros ⚠️."
+    ],
+    [
+     "¿Puedo explorar ruinas de noche?",
+     "Sí, pero equipa antes un módulo de luz — pelear de noche sin luz es el error clásico."
+    ],
+    [
+     "¿Cómo consigo piezas avanzadas de dron?",
+     "Los peces raros dan piezas avanzadas de dron y herramientas; el jefe de los Humedales suelta un chip E medio ⚠️. "
+    ]
+   ]
+  }
+ ]
+}
+ZH["characters"] = {
+ "title": "多洛可小镇角色：村民档案与秘密",
+ "metaTitle": "多洛可小镇角色：村民、好感与隐藏故事",
+ "metaDescription": "认识多洛可小镇的村民：卡莎、公会会长贝拉、库玛桑等——好感如何解锁食谱与剧情，以及他们日常之下的秘密。",
+ "intro": "多洛可小镇的每一位居民都藏着故事。拜访每一个人、经营羁绊、揭开他们日常之下的秘密——好感是游戏的社交系统，回报是食谱、剧情与节日奖励。",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "已知角色（社区来源）",
+   "body": "社区确认的核心阵容；1.0 完整名单仍在整理中。",
+   "columns": [
+    "角色",
+    "关于",
+    "为什么重要"
+   ],
+   "rows": [
+    [
+     "卡莎",
+     "商店街 2 楼；种田女孩",
+     "满好感解锁「Blooming Friendship」成就"
+    ],
+    [
+     "公会会长贝拉",
+     "经营公会",
+     "任务奖励科技点——早期主要科技收入"
+    ],
+    [
+     "库玛桑",
+     "河谷游走者",
+     "稀有材料交易 ⚠️"
+    ],
+    [
+     "消失的领袖",
+     "核心谜团",
+     "发生了什么？1.0 剧情给出答案"
+    ],
+    [
+     "旧城 NPC",
+     "1.0 新同伴 ⚠️",
+     "在废墟开启新任务"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "好感解锁什么",
+   "body": "心是成长系统，不是装饰。",
+   "columns": [
+    "心等级",
+    "解锁"
+   ],
+   "rows": [
+    [
+     "独特食谱",
+     "好友门槛食谱，如炼金台"
+    ],
+    [
+     "个人剧情片段",
+     "每位朋友的故事深化小镇谜团"
+    ],
+    [
+     "节日奖励",
+     "季节节日给出最大好感加成"
+    ],
+    [
+     "⚠️ 精确门槛",
+     "1.0 实测中"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "如何提升好感（一套日常）",
+   "body": "好感是每日例行公事，不是苦差。",
+   "items": [
+    "每天和所有人交谈——包括「离得远」的人。",
+    "按喜好送礼；慢慢记下每个人的偏好。",
+    "做任务——这是每分钟好感收益最高的投资。",
+    "参加每个节日拿最大加成；1.0 新增蘑菇节。"
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "官方口径：只有友谊，没有恋爱",
+   "body": "开发者已确认：多洛可小镇没有恋爱或结婚系统。社交玩法就是友谊：礼物、节日、心事件与个人故事。别为这款游戏做「恋爱攻略」内容——它并不存在。"
+  },
+  {
+   "type": "note",
+   "heading": "小镇的秘密",
+   "body": "河谷为何依旧葱郁？传说中的领袖怎么了？为什么前末世科技件带「Eden」印记？1.0 剧情会揭晓答案——答案与特定村民绑定，所以要和每个人交谈。"
+  },
+  {
+   "type": "list",
+   "heading": "常见错误",
+   "body": "",
+   "items": [
+    "因为「离得远」就忽略某个村民，会永久错过他的食谱。",
+    "给所有人送同样的礼物，会错失偏好并浪费礼物。",
+    "错过节日是最大损失——它们是日历上价值最高的好感事件。",
+    "跳过贝拉的任务会让科技树缺乏唯一可靠的早期收入。"
+   ]
+  }
+ ]
+}
+JA["characters"] = {
+ "title": "ドロックタウンキャラクター：住人ファイルと秘密",
+ "metaTitle": "ドロックタウンキャラクター：住人・友好・隠された物語",
+ "metaDescription": "ドロックタウンの住人たち：カシア、ギルドマスター・ベラッド、クマサンなど——友好がレシピと物語を開き、日常の下に隠れた秘密を。",
+ "intro": "ドロックタウンの住人は皆、物語を秘めています。全員を訪ね、絆を育て、日常の下の秘密を暴きましょう——友好こそゲームの社交システムで、レシピ・物語・祭り報酬を返してくれます。",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "判明しているキャラクター（コミュニティ情報）",
+   "body": "コミュニティが確認した中心メンバー。1.0の完全リストは編集中。",
+   "columns": [
+    "キャラ",
+    "概要",
+    "重要な理由"
+   ],
+   "rows": [
+    [
+     "カシア",
+     "商店街2階；農家の少女",
+     "友好MAXで「Blooming Friendship」実績"
+    ],
+    [
+     "ギルドマスター・ベラッド",
+     "ギルド運営",
+     "クエストでテックポイント——序盤の主要テック収入"
+    ],
+    [
+     "クマサン",
+     "リバーバレーの放浪者",
+     "レア素材の取引 ⚠️"
+    ],
+    [
+     "消えたリーダー",
+     "中心の謎",
+     "何が起きた？1.0ストーリーで判明"
+    ],
+    [
+     "旧市街のNPC",
+     "1.0の新仲間 ⚠️",
+     "遺跡で新クエストを開く"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "友好で解放されるもの",
+   "body": "ハートは進行システムであり、飾りではありません。",
+   "columns": [
+    "ハートレベル",
+    "解放"
+   ],
+   "rows": [
+    [
+     "独自レシピ",
+     "錬金ステーションなど住人ゲートのレシピ"
+    ],
+    [
+     "個人ストーリー",
+     "各友の物語が町の謎を深める"
+    ],
+    [
+     "祭り報酬",
+     "季節祭が最大の友好ボーナス"
+    ],
+    [
+     "⚠️ 正確なしきい値",
+     "1.0で検証中"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "友好の上げ方（日課）",
+   "body": "友好は日課であって、苦行ではありません。",
+   "items": [
+    "毎日全員と話す——「遠い」相手も。",
+    "好みに合わせて贈り物；覚えた好みはメモ。",
+    "クエストをこなす——分単位で最も効率の良いハート投資。",
+    "すべての祭りに参加して最大ボーナス；1.0はキノコ祭りを追加。"
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "公式：友情のみ——恋愛はありません",
+   "body": "開発者は、ドロックタウンに恋愛・結婚システムはないと確認済み。社交は友情です：贈り物、祭り、ハートイベント、個人ストーリー。「デート攻略」コンテンツは作らないでください——存在しないシステムです。"
+  },
+  {
+   "type": "note",
+   "heading": "町の秘密",
+   "body": "リバーバレーはなぜ緑？伝説のリーダーはどうなった？前終末テクノロジーに「Eden」の刻印が？答えは1.0ストーリーに——特定の住人と結びついているので、全員と話そう。"
+  },
+  {
+   "type": "list",
+   "heading": "よくある失敗",
+   "body": "",
+   "items": [
+    "「遠いから」と住人を無視すると、そのレシピが永久にロックされる。",
+    "全員に同じ贈り物をすると好みを外し、贈り物を無駄にする。",
+    "祭りを逃すのが最大の損失——カレンダーで最も価値の高い友好イベント。",
+    "ベラッドのクエストを飛ばすと、テックツリーが唯一の安定収入を失う。"
+   ]
+  }
+ ]
+}
+KO["characters"] = {
+ "title": "돌록 타운 캐릭터: 주민 파일과 비밀",
+ "metaTitle": "돌록 타운 캐릭터: 주민·우정·숨겨진 이야기",
+ "metaDescription": "돌록 타운의 주민들을 만나보세요: 카시아, 길드마스터 벨라드, 쿠마상 등 — 우정이 레시피와 이야기를 열고, 일상 아래 숨은 비밀까지.",
+ "intro": "돌록 타운의 모든 주민은 이야기를 숨기고 있습니다. 모두를 찾아가고, 인연을 키우고, 일상 아래의 비밀을 파헤치세요 — 우정은 이 게임의 사교 시스템이며 레시피·이야기·축제 보상을 돌려줍니다.",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "알려진 캐릭터 (커뮤니티 정보)",
+   "body": "커뮤니티가 확인한 핵심 출연진; 1.0 전체 명단은 정리 중.",
+   "columns": [
+    "캐릭터",
+    "소개",
+    "중요한 이유"
+   ],
+   "rows": [
+    [
+     "카시아",
+     "상점가 2층; 농사 소녀",
+     "우정 MAX로 'Blooming Friendship' 업적"
+    ],
+    [
+     "길드마스터 벨라드",
+     "길드 운영",
+     "퀘스트로 테크 포인트 — 초반 주요 테크 수입"
+    ],
+    [
+     "쿠마상",
+     "리버 밸리 떠돌이",
+     "희귀 재료 거래 ⚠️"
+    ],
+    [
+     "사라진 지도자",
+     "핵심 미스터리",
+     "무슨 일이? 1.0 스토리에서 해답"
+    ],
+    [
+     "구시가지 NPC",
+     "1.0 새 동료 ⚠️",
+     "유적에서 새 퀘스트 개방"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "우정이 주는 것",
+   "body": "하트는 장식이 아니라 성장 시스템입니다.",
+   "columns": [
+    "하트 레벨",
+    "해금"
+   ],
+   "rows": [
+    [
+     "고유 레시피",
+     "연금술 스테이션 등 주민 게이트 레시피"
+    ],
+    [
+     "개인 스토리",
+     "각 친구의 이야기가 마을 미스터리를 깊게"
+    ],
+    [
+     "축제 보상",
+     "계절 축제가 가장 큰 우정 보너스"
+    ],
+    [
+     "⚠️ 정확한 기준",
+     "1.0에서 검증 중"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "우정 올리는 법 (일상 루틴)",
+   "body": "우정은 노동이 아니라 매일의 루틴입니다.",
+   "items": [
+    "매일 모두와 대화하세요 — '멀다'는 상대도.",
+    "취향에 맞춰 선물하고, 알게 된 취향은 기록하세요.",
+    "퀘스트를 하세요 — 분당 가장 효율적인 하트 투자.",
+    "모든 축제에 참여해 최대 보너스를; 1.0은 버섯 축제를 추가."
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "공식: 우정만 존재 — 연애 없음",
+   "body": "개발자는 돌록 타운에 연애·결혼 시스템이 없다고 확인했습니다. 사교 플레이는 우정입니다: 선물, 축제, 하트 이벤트, 개인 이야기. 이 게임에 '데이트 공략' 콘텐츠를 만들지 마세요 — 존재하지 않습니다."
+  },
+  {
+   "type": "note",
+   "heading": "마을의 비밀",
+   "body": "리버 밸리는 왜 무성할까? 전설의 지도자는 어떻게 됐을까? 왜 전멸 전 기술에 'Eden' 각인이? 답은 1.0 스토리에 — 특정 주민과 연결되어 있으니 모두와 대화하세요."
+  },
+  {
+   "type": "list",
+   "heading": "흔한 실수",
+   "body": "",
+   "items": [
+    "'멀다'는 이유로 한 주민을 무시하면 그 레시피가 영구히 잠깁니다.",
+    "모두에게 같은 선물을 주면 취향을 놓치고 선물을 낭비합니다.",
+    "축제를 놓치는 것이 최대 손실 — 달력에서 가장 가치 높은 우정 이벤트입니다.",
+    "벨라드 퀘스트를 건너뛰면 테크 트리가 유일한 안정적 초반 수입을 잃습니다."
+   ]
+  }
+ ]
+}
+ES["characters"] = {
+ "title": "Personajes de Doloc Town: perfiles de aldeanos y secretos",
+ "metaTitle": "Personajes de Doloc Town: aldeanos y secretos",
+ "metaDescription": "Conoce a los aldeanos de Doloc Town: Kasia, el Maestro de Gremio Bellad, Kumasang y más — cómo la amistad desbloquea recetas e historias y los secretos bajo su vida diaria.",
+ "intro": "Cada residente de Doloc Town esconde una historia. Visítalos a todos, cultiva vínculos y descubre los secretos bajo su vida diaria: la amistad es el sistema social del juego y paga con recetas, historias y recompensas de festival.",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "Personajes conocidos (de la comunidad)",
+   "body": "El reparto central confirmado por la comunidad; la lista completa del 1.0 se está recopilando.",
+   "columns": [
+    "Personaje",
+    "Sobre ellos",
+    "Por qué importan"
+   ],
+   "rows": [
+    [
+     "Kasia",
+     "Calle comercial, 2ª planta; chica granjera",
+     "Amistad máxima desbloquea el logro Blooming Friendship"
+    ],
+    [
+     "Maestro de Gremio Bellad",
+     "Dirige el Gremio",
+     "Las misiones pagan Puntos de Tecnología: el ingreso técnico inicial clave"
+    ],
+    [
+     "Kumasang",
+     "Errante del Valle del Río",
+     "Comercia materiales raros ⚠️"
+    ],
+    [
+     "El líder desaparecido",
+     "Misterio central",
+     "¿Qué pasó? La historia del 1.0 lo responde"
+    ],
+    [
+     "PNJ de la Ciudad Vieja",
+     "Nuevos compañeros en 1.0 ⚠️",
+     "Abrir misiones nuevas en las ruinas"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "Qué desbloquea la amistad",
+   "body": "Los corazones son un sistema de progreso, no decoración.",
+   "columns": [
+    "Nivel de corazón",
+    "Desbloqueo"
+   ],
+   "rows": [
+    [
+     "Recetas únicas",
+     "Recetas de amigo, como la Estación de Alquimia"
+    ],
+    [
+     "Escenas de historia personal",
+     "Cada historia de amistad profundiza los misterios del pueblo"
+    ],
+    [
+     "Recompensas de festival",
+     "Los festivales de temporada dan los mayores bonus de amistad"
+    ],
+    [
+     "⚠️ Umbrales exactos",
+     "Verificándose en 1.0"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "Cómo subir la amistad (una rutina)",
+   "body": "La amistad es una rutina diaria, no un esfuerzo.",
+   "items": [
+    "Habla con todos a diario — incluso con los 'lejanos'.",
+    "Regala según gustos; anota las preferencias que aprendas.",
+    "Haz misiones: la mejor inversión de corazones por minuto.",
+    "Asiste a todos los festivales; el 1.0 añade el Festival de las Setas."
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "Oficial: solo amistad, sin romance",
+   "body": "Los desarrolladores han confirmado que no hay sistema de romance ni matrimonio en Doloc Town. El juego social es de amistad: regalos, festivales, eventos de corazón e historias personales. No hagas contenido de 'guía de citas' para este juego: no existe."
+  },
+  {
+   "type": "note",
+   "heading": "Secretos del pueblo",
+   "body": "¿Por qué el Valle del Río sigue frondoso? ¿Qué fue del líder legendario? ¿Por qué las piezas tecnológicas preapocalípticas llevan 'Eden'? Las respuestas llegan con la historia del 1.0 — y están ligadas a aldeanos concretos, así que habla con todos."
+  },
+  {
+   "type": "list",
+   "heading": "Errores comunes",
+   "body": "",
+   "items": [
+    "Ignorar a un aldeano 'porque está lejos' te bloquea sus recetas para siempre.",
+    "Dar el mismo regalo a todos falla las preferencias y desperdicia regalos.",
+    "Perderte festivales es la mayor pérdida: son los eventos de amistad de mayor valor del calendario.",
+    "Saltarte las misiones de Bellad deja tu árbol tecnológico sin su único ingreso inicial fiable."
+   ]
+  }
+ ]
+}
+ZH["achievements"] = {
+ "title": "多洛可小镇成就：全部 80 个（1.0）",
+ "metaTitle": "多洛可小镇成就：全部 80 个完整列表（1.0）",
+ "metaDescription": "多洛可小镇全部 80 个成就——基础 43 + 1.0 新增 37——含已知成就列表与 100% 收集清单。",
+ "intro": "多洛可小镇共有 80 个 Steam 成就：基础游戏 43 个，加上 1.0 发售（2026 年 8 月 6 日）新增的 37 个。这里给出已核实的数量与目前已知的一切。",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "已知成就（社区来源）",
+   "body": "以下是玩家最常报告的成就；1.0 完整列表正在整理中。",
+   "columns": [
+    "成就",
+    "如何获得"
+   ],
+   "rows": [
+    [
+     "Blooming Friendship",
+     "与卡莎好感拉满"
+    ],
+    [
+     "Eight Elixir",
+     "一天内喝 8 瓶水 ⚠️"
+    ],
+    [
+     "A False Heir",
+     "用错的镐子 ⚠️"
+    ],
+    [
+     "Adventurer",
+     "完成 5 个任务 ⚠️"
+    ],
+    [
+     "Art of Fishing",
+     "钓到湖的最远处 ⚠️"
+    ],
+    [
+     "Culinary Enthusiast",
+     "烹饪 10 道食谱 ⚠️"
+    ],
+    [
+     "Doloc, Our New Home",
+     "阅读河谷标牌 ⚠️"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "成就数量与结构",
+   "body": "成就列表结构清晰。",
+   "items": [
+    "基础成就 43 个（EA 时期）。",
+    "1.0 发售（2026 年 8 月 6 日）新增 37 个。",
+    "共 80 个——数量已由 1.0 发售的媒体报道确认。",
+    "章节选择可回溯补漏 ⚠️。"
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "成就收集清单",
+   "body": "100% 通关靠的是日常积累而非肝。先从自然解锁的成就开始，再补其余。",
+   "items": [
+    "先做日常类成就：喝水（Eight Elixir）、烹饪 10 道（Culinary Enthusiast）、钓鱼。",
+    "好感：把卡莎拉满拿 Blooming Friendship——每天交谈、送礼、做任务。",
+    "任务：完成 5 个拿 Adventurer——让贝拉的任务始终处于进行中。",
+    "探索：阅读河谷标牌拿 Doloc, Our New Home；钓湖的最远处拿 Art of Fishing。",
+    "用章节选择回溯补漏 ⚠️。"
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "如何跟进完整 80 个",
+   "body": "1.0 玩家陆续完成时，去哪里跟进列表。",
+   "items": [
+    "Doloc Town 的 Steam 商店页成就列表（app 2285550）。",
+    "Steam 社区指南——玩家写的清单通常在发售后最快出现。",
+    "TrueSteamAchievements 与 SteamDB 查看完成百分比。"
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "备注",
+   "body": "带解锁条件的完整英文 80 成就清单正在 1.0 实测中整理，完成后会替换上方的部分表格。如果你想冲 100%，先从日常类成就（喝水、烹饪、钓鱼）开始——它们自然发生，却又容易被漏记。"
+  }
+ ]
+}
+JA["achievements"] = {
+ "title": "ドロックタウン実績：全80個（1.0）",
+ "metaTitle": "ドロックタウン実績：全80個の完全リスト（1.0）",
+ "metaDescription": "ドロックタウンの全80実績——ベース43＋1.0追加37——既知リストと100%収集チェックリスト付き。",
+ "intro": "ドロックタウンには合計80のSteam実績があります：ベースゲーム43個と、1.0リリース（2026年8月6日）で追加された37個。検証済みの数と、今わかっていることのすべてをまとめました。",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "判明している実績（コミュニティ情報）",
+   "body": "プレイヤーが最も多く報告する実績。1.0の完全リストは編集中。",
+   "columns": [
+    "実績",
+    "入手方法"
+   ],
+   "rows": [
+    [
+     "Blooming Friendship",
+     "カシアの友好をMAXにする"
+    ],
+    [
+     "Eight Elixir",
+     "1日に水を8本飲む ⚠️"
+    ],
+    [
+     "A False Heir",
+     "間違ったつるはしを使う ⚠️"
+    ],
+    [
+     "Adventurer",
+     "クエストを5つ完了 ⚠️"
+    ],
+    [
+     "Art of Fishing",
+     "湖の最奥まで釣る ⚠️"
+    ],
+    [
+     "Culinary Enthusiast",
+     "レシピを10個調理 ⚠️"
+    ],
+    [
+     "Doloc, Our New Home",
+     "リバーバレーの標識を読む ⚠️"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "実績の数と構成",
+   "body": "実績リストの構成は明快です。",
+   "items": [
+    "ベース実績43個（EA期）。",
+    "1.0リリース（2026年8月6日）で37個追加。",
+    "合計80個——数は1.0発売の報道で確認済み。",
+    "章選択で取りこぼしを回収可能 ⚠️。"
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "実績収集チェックリスト",
+   "body": "100%は苦行より日課で報われる。自然に取れる実績から始め、残りを回収しましょう。",
+   "items": [
+    "まず日課系：水を飲む（Eight Elixir）、レシピ10個調理（Culinary Enthusiast）、釣り。",
+    "友好：カシアをMAXにしてBlooming Friendship——毎日話す・贈る・クエスト。",
+    "クエスト：5つ完了でAdventurer——ベラッドのクエストを常に進行に。",
+    "探索：リバーバレーの標識でDoloc, Our New Home；湖の最奥でArt of Fishing。",
+    "章選択で取りこぼしを回収 ⚠️。"
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "完全80個の追い方",
+   "body": "1.0プレイヤーが埋めていくリストの追跡先。",
+   "items": [
+    "Doloc TownのSteamストアページ実績リスト（app 2285550）。",
+    "Steamコミュニティガイド——発売直後はプレイヤー作成リストが最速。",
+    "TrueSteamAchievementsとSteamDBで達成率を確認。"
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "注記",
+   "body": "解放条件付きの完全英語80実績チェックリストは1.0プレイで編集中で、完成次第上の部分表を置き換えます。100%を目指すなら日課系（水・料理・釣り）から——自然に取れて、漏れやすいからです。"
+  }
+ ]
+}
+KO["achievements"] = {
+ "title": "돌록 타운 업적: 전체 80개 (1.0)",
+ "metaTitle": "돌록 타운 업적: 전체 80개 완전 목록 (1.0)",
+ "metaDescription": "돌록 타운의 전체 80개 업적 — 기본 43 + 1.0 추가 37 — 알려진 목록과 100% 수집 체크리스트 포함.",
+ "intro": "돌록 타운에는 총 80개의 Steam 업적이 있습니다: 기본 게임 43개와 1.0 출시(2026년 8월 6일)로 추가된 37개. 검증된 수와 지금까지 알려진 모든 것을 정리했습니다.",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "알려진 업적 (커뮤니티 정보)",
+   "body": "플레이어들이 가장 많이 보고하는 업적; 1.0 전체 목록은 정리 중.",
+   "columns": [
+    "업적",
+    "획득 방법"
+   ],
+   "rows": [
+    [
+     "Blooming Friendship",
+     "카시아와 우정 MAX"
+    ],
+    [
+     "Eight Elixir",
+     "하루에 물 8병 마시기 ⚠️"
+    ],
+    [
+     "A False Heir",
+     "잘못된 곡괭이 사용 ⚠️"
+    ],
+    [
+     "Adventurer",
+     "퀘스트 5개 완료 ⚠️"
+    ],
+    [
+     "Art of Fishing",
+     "호수 가장 먼 지점 낚기 ⚠️"
+    ],
+    [
+     "Culinary Enthusiast",
+     "레시피 10개 요리 ⚠️"
+    ],
+    [
+     "Doloc, Our New Home",
+     "리버 밸리 표지판 읽기 ⚠️"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "업적 수와 구조",
+   "body": "업적 목록의 구조는 명확합니다.",
+   "items": [
+    "기본 업적 43개 (EA 시기).",
+    "1.0 출시(2026년 8월 6일)로 37개 추가.",
+    "총 80개 — 수치는 1.0 출시 언론 보도로 확인.",
+    "챕터 선택으로 놓친 업적 회수 가능 ⚠️."
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "업적 수집 체크리스트",
+   "body": "100%는 노가다보다 일상에서 보상받습니다. 자연스럽게 얻는 업적부터 시작하고 나머지를 채우세요.",
+   "items": [
+    "먼저 일상형: 물 마시기(Eight Elixir), 레시피 10개 요리(Culinary Enthusiast), 낚시.",
+    "우정: 카시아를 MAX로 — 매일 대화·선물·퀘스트.",
+    "퀘스트: 5개 완료로 Adventurer — 벨라드 퀘스트를 항상 진행 중으로.",
+    "탐험: 리버 밸리 표지판으로 Doloc, Our New Home; 호수 가장 먼 지점으로 Art of Fishing.",
+    "챕터 선택으로 놓친 것 회수 ⚠️."
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "전체 80개 추적 방법",
+   "body": "1.0 플레이어가 채워가는 목록을 따라갈 곳.",
+   "items": [
+    "돌록 타운 Steam 스토어 페이지 업적 목록 (앱 2285550).",
+    "Steam 커뮤니티 가이드 — 출시 직후엔 플레이어 작성 목록이 가장 빠름.",
+    "TrueSteamAchievements와 SteamDB에서 달성률 확인."
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "참고",
+   "body": "해금 조건이 포함된 완전한 영어 80업적 체크리스트는 1.0 플레이로 정리 중이며, 완성되면 위의 부분 표를 대체합니다. 100%를 노린다면 일상형(물·요리·낚시)부터 — 자연스럽게 얻으면서도 놓치기 쉽습니다."
+  }
+ ]
+}
+ES["achievements"] = {
+ "title": "Logros de Doloc Town: los 80 (1.0)",
+ "metaTitle": "Logros de Doloc Town: lista completa de los 80 (1.0)",
+ "metaDescription": "Los 80 logros de Doloc Town — 43 base más 37 nuevos en el 1.0 — con la lista conocida y una guía para el 100%.",
+ "intro": "Doloc Town tiene 80 logros de Steam en total: 43 del juego base más 37 añadidos en el lanzamiento 1.0 (6 de agosto de 2026). Aquí está la cifra verificada y todo lo que sabemos hasta ahora.",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "Logros conocidos (de la comunidad)",
+   "body": "Estos son los logros que más reportan los jugadores; la lista completa del 1.0 se está recopilando.",
+   "columns": [
+    "Logro",
+    "Cómo conseguirlo"
+   ],
+   "rows": [
+    [
+     "Blooming Friendship",
+     "Alcanza la amistad máxima con Kasia"
+    ],
+    [
+     "Eight Elixir",
+     "Bebe 8 botellas de agua en un día ⚠️"
+    ],
+    [
+     "A False Heir",
+     "Usa el pico equivocado ⚠️"
+    ],
+    [
+     "Adventurer",
+     "Completa 5 misiones ⚠️"
+    ],
+    [
+     "Art of Fishing",
+     "Pesca en el punto más lejano de un lago ⚠️"
+    ],
+    [
+     "Culinary Enthusiast",
+     "Cocina 10 recetas ⚠️"
+    ],
+    [
+     "Doloc, Our New Home",
+     "Lee el letrero del Valle del Río ⚠️"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "Números y estructura de logros",
+   "body": "La lista de logros tiene una forma clara.",
+   "items": [
+    "43 logros base (era de Acceso Anticipado).",
+    "37 logros nuevos en el lanzamiento 1.0 (6 de agosto de 2026).",
+    "80 en total — la cifra la confirma la cobertura de prensa del lanzamiento.",
+    "La selección de capítulos permite volver atrás para recuperar logros ⚠️."
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "Guía para conseguir el 100%",
+   "body": "Una partida al 100% premia la rutina sobre el farmeo. Empieza por los logros que salen solos y remata el resto.",
+   "items": [
+    "Primero los de rutina: beber agua (Eight Elixir), cocinar 10 recetas (Culinary Enthusiast), pescar.",
+    "Amistad: sube a Kasia al máximo para Blooming Friendship — habla, regala y haz misiones a diario.",
+    "Misiones: completa 5 para Adventurer — ten siempre activas las de Bellad.",
+    "Exploración: lee el letrero del Valle del Río para Doloc, Our New Home; pesca el punto más lejano para Art of Fishing.",
+    "Usa la selección de capítulos para rematar lo que falte ⚠️."
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "Cómo seguir los 80",
+   "body": "Dónde seguir la lista mientras los jugadores del 1.0 la completan.",
+   "items": [
+    "La lista de logros de la página de Steam de Doloc Town (app 2285550).",
+    "Guías de la comunidad de Steam: las listas de jugadores aparecen rápido tras el lanzamiento.",
+    "TrueSteamAchievements y SteamDB para porcentajes de completación."
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "Nota",
+   "body": "La lista completa en inglés de los 80 logros con condiciones se está recopilando con el juego del 1.0 y reemplazará la tabla parcial de arriba. Si buscas el 100%, empieza por los de rutina (beber agua, cocinar, pescar): salen solos y es fácil no llevar la cuenta."
+  }
+ ]
+}
+ZH["cooking"] = {
+ "title": "多洛可小镇烹饪指南：食谱、增益与食材",
+ "metaTitle": "多洛可小镇烹饪指南：食谱、增益与食物",
+ "metaDescription": "多洛可小镇烹饪全解：如何解锁 80+ 食谱、食物增益的作用，以及烹饪如何支撑探索、种田与战斗。",
+ "intro": "烹饪把收成变成生存力。80+ 道食谱在手，一顿合适的饭就能恢复体力或叠加速度与防御增益——学会做什么、何时吃、为什么重要。",
+ "sections": [
+  {
+   "type": "list",
+   "heading": "烹饪基础",
+   "body": "烹饪把收成变成生存力。",
+   "items": [
+    "全游戏 80+ 道食谱。",
+    "餐食恢复 50-100 体力——足够干一整天活。",
+    "部分餐食带增益：速度、防御等。",
+    "食谱通过好感与科技树解锁。",
+    "镰刀整片收割——更多食材、更少田间时间。"
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "食物增益的作用",
+   "body": "按当天的计划选餐。",
+   "columns": [
+    "效果",
+    "适用场景"
+   ],
+   "rows": [
+    [
+     "恢复体力",
+     "全天种田或探索"
+    ],
+    [
+     "速度增益",
+     "更快收割与赶路"
+    ],
+    [
+     "防御增益",
+     "更安全的废墟探索与 Boss 战"
+    ],
+    [
+     "⚠️ 完整表格",
+     "1.0 实测中"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "80+ 食谱覆盖什么",
+   "body": "一间备齐的厨房满足三种需求：能量、节奏与安全。",
+   "items": [
+    "能量餐——日常主食；恢复 50-100 体力。",
+    "速度餐——收割日与长途赶路日。",
+    "防御餐——废墟探索与 Boss 战。",
+    "好感门槛食谱——部分最强增益在村民心后面（如炼金台）。",
+    "⚠️ 逐食谱完整清单正在 1.0 实测中。"
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "经营一个厨房（一套日常）",
+   "body": "备齐的厨房就是生存计划。",
+   "items": [
+    [
+     "种多样作物",
+     "食谱需要多种食材——多样性胜过数量。"
+    ],
+    [
+     "提升好感",
+     "好友解锁独特食谱（如炼金台）。"
+    ],
+    [
+     "钓鱼与畜牧",
+     "蛋白质来源补齐 pantry。"
+    ],
+    [
+     "出门前先做饭",
+     "增益是便宜的保险——绝不空腹出门。"
+    ]
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "常见错误",
+   "body": "把收成全卖光而不留食谱食材。忽略好感门槛食谱（一些最强增益在心的后面）。只做体力餐——速度与防御增益比单纯卡路里更省时间。"
+  },
+  {
+   "type": "faq",
+   "heading": "常见问题速答",
+   "body": "",
+   "items": [
+    [
+     "游戏有多少道食谱？",
+     "全游戏 80+ 道，官方商店页确认。"
+    ],
+    [
+     "餐食怎么恢复体力？",
+     "多数餐食恢复 50-100 体力——足够干一整天活。"
+    ],
+    [
+     "怎么解锁好感食谱？",
+     "提升村民心——好友门槛独特食谱，如炼金台。"
+    ],
+    [
+     "该做哪种增益？",
+     "废墟与 Boss 战前做防御；收割与赶路做速度；其余做体力。"
+    ],
+    [
+     "早期烹饪值得吗？",
+     "值得——熟食按背包格算的能量效率高于生食材，增益还能回本。"
+    ]
+   ]
+  }
+ ]
+}
+JA["cooking"] = {
+ "title": "ドロックタウン料理ガイド：レシピ・バフ・食材",
+ "metaTitle": "ドロックタウン料理ガイド：レシピ・バフ・食事",
+ "metaDescription": "ドロックタウンの料理を解説：80+レシピの解放方法、食事バフの効果、料理が探索・農業・戦闘を支える仕組み。",
+ "intro": "料理は収穫を生存力に変えます。80+レシピがあれば、正しい一皿が体力を回復し、速度や防御を強化——何を作り、いつ食べ、なぜ大事かをまとめました。",
+ "sections": [
+  {
+   "type": "list",
+   "heading": "料理の基本",
+   "body": "料理は収穫を生存力に変えます。",
+   "items": [
+    "ゲーム全体で80+レシピ。",
+    "食事は体力を50-100回復——丸一日働ける量。",
+    "一部の食事はバフ付き：速度、防御など。",
+    "レシピは友好とテックツリーで解放。",
+    "鎌でまとめ刈り——食材が増え、畑の時間が減る。"
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "食事バフの効果",
+   "body": "その日の計画に合わせて食事を選びましょう。",
+   "columns": [
+    "効果",
+    "使いどころ"
+   ],
+   "rows": [
+    [
+     "体力回復",
+     "終日農業や探索"
+    ],
+    [
+     "速度バフ",
+     "収穫日と長距離移動"
+    ],
+    [
+     "防御バフ",
+     "遺跡探索とボス戦を安全に"
+    ],
+    [
+     "⚠️ 完全テーブル",
+     "1.0で検証中"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "80+レシピがカバーするもの",
+   "body": "備えたキッチンは、エネルギー・テンポ・安全の3ニーズを満たします。",
+   "items": [
+    "エネルギー食——日常の主食；体力50-100回復。",
+    "速度食——収穫日と長距離移動の日。",
+    "防御食——遺跡とボス戦。",
+    "友好ゲートのレシピ——最強バフの一部は住人のハートの先（錬金ステーション等）。",
+    "⚠️ レシピ単位の完全リストは1.0で検証中。"
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "キッチンを整える（日課）",
+   "body": "備えたキッチンは生存計画です。",
+   "items": [
+    [
+     "多様な作物を育てる",
+     "レシピは多様な食材を要求——量より多様性。"
+    ],
+    [
+     "友好を上げる",
+     "友が独自レシピを解放（例：錬金ステーション）。"
+    ],
+    [
+     "釣りと牧場",
+     "タンパク源がパントリーを整える。"
+    ],
+    [
+     "遠征前に料理",
+     "バフは安い保険——空腹で出かけない。"
+    ]
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "よくある失敗",
+   "body": "収穫を全部売ってレシピ用食材を残さない。友好ゲートのレシピを無視（最強バフの一部はハートの先）。体力食しか作らない——速度・防御バフは生カロリーより時間を節約します。"
+  },
+  {
+   "type": "faq",
+   "heading": "よくある質問",
+   "body": "",
+   "items": [
+    [
+     "レシピはいくつある？",
+     "ゲーム全体で80+——公式ストアページが確認。"
+    ],
+    [
+     "食事はどう体力を回復？",
+     "多くは50-100回復——丸一日働ける量。"
+    ],
+    [
+     "友好レシピはどう解放？",
+     "住人のハートを上げる——錬金ステーションなど独自レシピがゲートされる。"
+    ],
+    [
+     "どのバフを作るべき？",
+     "遺跡・ボス前に防御、収穫・移動日に速度、それ以外は体力。"
+    ],
+    [
+     "序盤に料理は価値ある？",
+     "ある——調理食はインベントリ1枠あたりのエネルギー効率が高く、バフは元が取れます。"
+    ]
+   ]
+  }
+ ]
+}
+KO["cooking"] = {
+ "title": "돌록 타운 요리 가이드: 레시피·버프·재료",
+ "metaTitle": "돌록 타운 요리 가이드: 레시피·버프·음식",
+ "metaDescription": "돌록 타운 요리 완전 해설: 80+ 레시피 해금법, 음식 버프 효과, 요리가 탐험·농사·전투를 뒷받침하는 방식.",
+ "intro": "요리는 수확물을 생존력으로 바꿉니다. 80+ 레시피가 있다면, 한 끼로 체력을 회복하거나 속도·방어 버프를 얻을 수 있습니다 — 무엇을, 언제, 왜 중요한지 정리했습니다.",
+ "sections": [
+  {
+   "type": "list",
+   "heading": "요리의 기초",
+   "body": "요리는 수확물을 생존력으로 바꿉니다.",
+   "items": [
+    "게임 전체에 80+ 레시피.",
+    "식사는 체력 50-100 회복 — 하루 종일 일할 수 있는 양.",
+    "일부 식사는 버프 제공: 속도, 방어 등.",
+    "레시피는 우정과 테크 트리로 해금.",
+    "낫으로 한 번에 여러 그루 수확 — 재료가 늘고 밭 시간이 줄어듭니다."
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "음식 버프의 효과",
+   "body": "그날의 계획에 맞춰 식사를 고르세요.",
+   "columns": [
+    "효과",
+    "활용처"
+   ],
+   "rows": [
+    [
+     "체력 회복",
+     "종일 농사 또는 탐험"
+    ],
+    [
+     "속도 버프",
+     "수확일과 장거리 이동"
+    ],
+    [
+     "방어 버프",
+     "안전한 유적 탐험과 보스전"
+    ],
+    [
+     "⚠️ 전체 표",
+     "1.0에서 검증 중"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "80+ 레시피가 다루는 것",
+   "body": "잘 갖춰진 주방은 에너지·템포·안전 세 가지 필요를 채웁니다.",
+   "items": [
+    "에너지 식사 — 일상의 주식; 체력 50-100 회복.",
+    "속도 식사 — 수확일과 장거리 이동일.",
+    "방어 식사 — 유적 탐험과 보스전.",
+    "우정 게이트 레시피 — 최고 버프 중 일부는 주민 하트 뒤(연금술 스테이션 등).",
+    "⚠️ 레시피별 전체 목록은 1.0에서 검증 중."
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "주방 갖추기 (일상 루틴)",
+   "body": "갖춰진 주방은 생존 계획입니다.",
+   "items": [
+    [
+     "다양한 작물 재배",
+     "레시피는 다양한 재료를 요구합니다 — 양보다 다양성."
+    ],
+    [
+     "우정 올리기",
+     "친구가 고유 레시피를 해금합니다 (예: 연금술 스테이션)."
+    ],
+    [
+     "낚시와 목장",
+     "단백질 원천이 식료품 저장실을 채웁니다."
+    ],
+    [
+     "큰 여행 전에 요리",
+     "버프는 값싼 보험 — 빈손으로 나가지 마세요."
+    ]
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "흔한 실수",
+   "body": "수확물을 전부 팔아 레시피용 재료를 남기지 않는 것. 우정 게이트 레시피 무시(최고 버프 중 일부는 하트 뒤). 체력 식사만 만들기 — 속도·방어 버프는 생칼로리보다 시간을 절약합니다."
+  },
+  {
+   "type": "faq",
+   "heading": "빠른 답변",
+   "body": "",
+   "items": [
+    [
+     "레시피는 몇 개인가요?",
+     "게임 전체에 80+ — 공식 스토어 페이지가 확인."
+    ],
+    [
+     "식사는 어떻게 체력을 회복하나요?",
+     "대부분 50-100 회복 — 하루 종일 일할 수 있는 양."
+    ],
+    [
+     "우정 레시피는 어떻게 해금하나요?",
+     "주민 하트를 올리세요 — 연금술 스테이션 같은 고유 레시피가 게이트됩니다."
+    ],
+    [
+     "어떤 버프를 요리해야 하나요?",
+     "유적·보스전 전엔 방어, 수확·이동일엔 속도, 나머지는 체력."
+    ],
+    [
+     "초반에 요리가 가치 있나요?",
+     "네 — 조리 식사는 인벤토리 한 칸당 에너지 효율이 높고 버프는 본전을 뽑습니다. "
+    ]
+   ]
+  }
+ ]
+}
+ES["cooking"] = {
+ "title": "Guía de cocina de Doloc Town: recetas, buffs e ingredientes",
+ "metaTitle": "Guía de cocina de Doloc Town: recetas, buffs y comida",
+ "metaDescription": "La cocina de Doloc Town explicada: cómo desbloquear 80+ recetas, qué hacen los buffs de comida y cómo cocinar impulsa la exploración, la granja y el combate.",
+ "intro": "Cocinar convierte tu cosecha en poder de supervivencia. Con 80+ recetas, la comida adecuada restaura energía o da buffs de velocidad y defensa: aprende qué cocinar, cuándo y por qué importa.",
+ "sections": [
+  {
+   "type": "list",
+   "heading": "Bases de la cocina",
+   "body": "Cocinar convierte tu cosecha en poder de supervivencia.",
+   "items": [
+    "80+ recetas en todo el juego.",
+    "Las comidas restauran 50-100 de energía: suficiente para trabajar todo el día.",
+    "Algunas comidas dan buffs: velocidad, defensa y más.",
+    "Las recetas se desbloquean con la amistad y el árbol tecnológico.",
+    "La hoz cosecha grupos enteros: más ingredientes y menos tiempo en el campo."
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "Qué hacen los buffs de comida",
+   "body": "Elige la comida según el plan del día.",
+   "columns": [
+    "Efecto",
+    "Para qué"
+   ],
+   "rows": [
+    [
+     "Restaurar energía",
+     "Seguir cultivando o explorando todo el día"
+    ],
+    [
+     "Buff de velocidad",
+     "Cosechas y viajes más rápidos"
+    ],
+    [
+     "Buff de defensa",
+     "Inmersiones en ruinas y jefes más seguros"
+    ],
+    [
+     "⚠️ Tabla completa",
+     "Verificándose en 1.0"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "Qué cubren las 80+ recetas",
+   "body": "Una cocina bien surtida cubre tres necesidades: energía, ritmo y seguridad.",
+   "items": [
+    "Comidas de energía: el básico diario; restauran 50-100 de energía.",
+    "Comidas de velocidad: para días de cosecha y viajes largos.",
+    "Comidas de defensa: para inmersiones en ruinas y jefes.",
+    "Recetas de amistad: algunos de los mejores buffs están tras los corazones (p. ej., la Estación de Alquimia).",
+    "⚠️ La lista receta a receta se está verificando en 1.0."
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "Tener la cocina surtida (una rutina)",
+   "body": "Una cocina surtida es un plan de supervivencia.",
+   "items": [
+    [
+     "Planta variedad de cultivos",
+     "Las recetas piden muchos ingredientes: la diversidad gana al volumen."
+    ],
+    [
+     "Sube la amistad",
+     "Los amigos desbloquean recetas únicas (p. ej., la Estación de Alquimia)."
+    ],
+    [
+     "Pesca y cría",
+     "Las fuentes de proteína completan la despensa."
+    ],
+    [
+     "Cocina antes de viajes grandes",
+     "Los buffs son un seguro barato: nunca salgas sin comida."
+    ]
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "Errores comunes",
+   "body": "Vender toda la cosecha sin guardar ingredientes para recetas. Ignorar las recetas de amistad (algunos de los mejores buffs están tras los corazones). Y cocinar solo comidas de energía: los buffs de velocidad y defensa ahorran más tiempo que las calorías crudas."
+  },
+  {
+   "type": "faq",
+   "heading": "Respuestas rápidas",
+   "body": "",
+   "items": [
+    [
+     "¿Cuántas recetas hay?",
+     "Más de 80 en todo el juego, confirmado por la tienda oficial."
+    ],
+    [
+     "¿Cómo restauran energía las comidas?",
+     "La mayoría restaura 50-100 — suficiente para un día completo."
+    ],
+    [
+     "¿Cómo desbloqueo recetas de amistad?",
+     "Sube los corazones de los aldeanos: las recetas únicas como la Estación de Alquimia se desbloquean con amigos."
+    ],
+    [
+     "¿Qué buff debo cocinar?",
+     "Defensa antes de ruinas y jefes; velocidad para cosechar y viajar; energía para todo lo demás."
+    ],
+    [
+     "¿Merece la pena cocinar pronto?",
+     "Sí: la comida cocinada da más energía por casilla de inventario y los buffs se pagan solos. "
+    ]
+   ]
+  }
+ ]
+}
+ZH["weather"] = {
+ "title": "多洛可小镇天气指南：酸雨、雷暴与旱季",
+ "metaTitle": "多洛可小镇天气：酸雨、雷暴与旱季指南",
+ "metaDescription": "掌握多洛可小镇极端天气：用遮盖保护作物免受酸雨与酷热、把雷暴变成能源，并按季节日历从旱灾价格中获利。",
+ "intro": "极端天气定义多洛可小镇。认清每一种威胁、读懂季节日历，并把每一场风暴变成优势。",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "天气威胁与应对",
+   "body": "认清每种威胁，然后把它变成优势。",
+   "columns": [
+    "天气",
+    "风险",
+    "应对"
+   ],
+   "rows": [
+    [
+     "酸雨",
+     "侵蚀作物",
+     "遮盖；收集酸液"
+    ],
+    [
+     "酷热",
+     "烤干土壤",
+     "按时浇水；耐热基因"
+    ],
+    [
+     "雷暴",
+     "破坏农田",
+     "把闪电变成能源"
+    ],
+    [
+     "暴雨",
+     "淹没低地",
+     "免费灌溉"
+    ],
+    [
+     "旱灾（第 4 月）",
+     "枯萎 + 价格飙升",
+     "囤货、高价卖出"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "季节天气日历",
+   "body": "多洛可小镇在四个月历之上运行两季天气年。农场要按它规划。",
+   "columns": [
+    "时段",
+    "天气",
+    "种田影响",
+    "机会"
+   ],
+   "rows": [
+    [
+     "雨季（1–2 月）",
+     "暴雨与雷暴",
+     "池塘水满；部分鱼只在这时出现",
+     "雨水免费灌溉；雷暴充电"
+    ],
+    [
+     "旱季（3–4 月）",
+     "雨少、更热",
+     "作物开始吃力",
+     "多浇水；用遮盖与「雨露均沾」基因"
+    ],
+    [
+     "旱灾（4 月）",
+     "作物枯萎、价格飙升",
+     "最难的种田月",
+     "在全年最高价卖出囤货"
+    ],
+    [
+     "任何季节",
+     "酸雨与热浪可能突袭",
+     "农田有风险",
+     "保持遮盖；集中种脆弱作物"
+    ]
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "把风暴变成能源",
+   "body": "天气是能源，不只是威胁。",
+   "items": [
+    [
+     "安装闪电捕获",
+     "雷暴给农场充电——1.0 自动化的关键。"
+    ],
+    [
+     "让雨水灌溉",
+     "暴雨期间省掉手动浇水，省下体力。"
+    ],
+    [
+     "把握旱灾时机",
+     "第 4 月前囤货，在价格飙升期卖出。"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "天气就绪的农场配置",
+   "body": "把农场建得让天气成为红利而非灾难。",
+   "items": [
+    "每天早上看天气预报——雷暴与酸雨会提前一天预警。",
+    "给露天地块建遮盖，把脆弱作物集中种植。",
+    "安装「雨露均沾」基因，旱期自动浇水。",
+    "用雷暴电力驱动 1.0 无人机站与工业区。",
+    "旱灾前囤货、旱灾中卖出。"
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "像天气一样经营农场",
+   "body": "如果明天有暴风雨，今天浇水就是浪费——但今天充电则价值连城。常见错误：把天气当作随机事件，而不是可以规划的日历。"
+  },
+  {
+   "type": "faq",
+   "heading": "常见问题速答",
+   "body": "",
+   "items": [
+    [
+     "酸雨会怎样？",
+     "侵蚀无遮盖的作物——建遮盖，并把酸液收集成制作资源。"
+    ],
+    [
+     "雷暴有什么用？",
+     "给农场充电，这是 1.0 自动化与工业区的关键。"
+    ],
+    [
+     "旱灾是什么时候？",
+     "4 月，旱季末尾。作物枯萎、商店价格飙升。"
+    ],
+    [
+     "怎么从旱灾获利？",
+     "第 4 月前囤货，在价格飙升期卖出。"
+    ],
+    [
+     "有雨季吗？",
+     "有——1 月与 2 月暴雨与雷暴频繁，部分鱼只在那时出现。"
+    ]
+   ]
+  }
+ ]
+}
+JA["weather"] = {
+ "title": "ドロックタウン天候ガイド：酸性雨・嵐・乾季",
+ "metaTitle": "ドロックタウン天候：酸性雨・嵐・乾季ガイド",
+ "metaDescription": "ドロックタウンの過酷な天候を攻略：酸性雨と酷暑から作物を守り、嵐を電力に変え、季節カレンダーで干ばつの価格高騰から利益を。",
+ "intro": "過酷な天候がドロックタウンを定義します。各脅威を覚え、季節カレンダーを読み、嵐をすべてアドバンテージに変えましょう。",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "天候の脅威と対策",
+   "body": "各脅威を覚え、アドバンテージに変えましょう。",
+   "columns": [
+    "天候",
+    "リスク",
+    "対策"
+   ],
+   "rows": [
+    [
+     "酸性雨",
+     "作物を侵食",
+     "カバー；酸を収集"
+    ],
+    [
+     "灼熱",
+     "土壌を乾かす",
+     "タイミング散水；耐熱遺伝子"
+    ],
+    [
+     "雷雨",
+     "農地を破壊",
+     "雷を電力に"
+    ],
+    [
+     "豪雨",
+     "低地が浸水",
+     "無料灌漑"
+    ],
+    [
+     "干ばつ（第4月）",
+     "枯死＋価格高騰",
+     "備蓄、高値で売却"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "季節天候カレンダー",
+   "body": "ドロックタウンは4か月カレンダーの上に2季の天候年が回ります。農場はそれに合わせて計画を。",
+   "columns": [
+    "期間",
+    "天候",
+    "農業への影響",
+    "機会"
+   ],
+   "rows": [
+    [
+     "雨季（1〜2月）",
+     "豪雨と雷雨",
+     "池が満ちる；一部の魚はこの時期だけ",
+     "雨で無料灌漑；嵐で充電"
+    ],
+    [
+     "乾季（3〜4月）",
+     "雨が減り暑く",
+     "作物が苦しみ始める",
+     "多めに散水；カバーと「雨露均等」遺伝子"
+    ],
+    [
+     "干ばつ（4月）",
+     "枯死、価格高騰",
+     "最も厳しい農業月",
+     "年間最高値で備蓄を売る"
+    ],
+    [
+     "どの季節も",
+     "酸性雨と熱波が突然",
+     "農地がリスクに",
+     "カバー常設；弱い作物は集約"
+    ]
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "嵐を電力に変える",
+   "body": "天候は脅威だけでなくエネルギー源です。",
+   "items": [
+    [
+     "落雷キャプチャを設置",
+     "雷雨が農場の電力を充電——1.0自動化の要。"
+    ],
+    [
+     "雨で灌漑",
+     "豪雨の日は手動散水を省略、労力を節約。"
+    ],
+    [
+     "干ばつのタイミング",
+     "第4月前に備蓄し、価格高騰期に売る。"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "天候対応の農場セットアップ",
+   "body": "天候を災害でなくボーナスにする農場づくり。",
+   "items": [
+    "毎朝天気予報を確認——嵐と酸性雨は1日前に分かる。",
+    "露出区画にカバーを建て、弱い作物はまとめて育てる。",
+    "「雨露均等」遺伝子で乾燥期も自動散水。",
+    "雷雨の電力を1.0ドローン基地と工業地帯に。",
+    "干ばつ前に備蓄、干ばつ中に売却。"
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "天候を知る農家のように",
+   "body": "明日嵐なら今日の散水は無駄——でも今日の充電は無価値ではありません。よくある失敗：天候をランダムとみなすこと。計画できるカレンダーなのです。"
+  },
+  {
+   "type": "faq",
+   "heading": "よくある質問",
+   "body": "",
+   "items": [
+    [
+     "酸性雨は何をする？",
+     "露出した作物を侵食——カバーを建て、酸はクラフト資源に。"
+    ],
+    [
+     "雷雨の利点は？",
+     "農場の電力を充電——1.0自動化と工業地帯の要。"
+    ],
+    [
+     "干ばつはいつ？",
+     "4月、乾季の終わり。作物が枯れ、商店価格が高騰。"
+    ],
+    [
+     "干ばつでどう稼ぐ？",
+     "第4月前に備蓄し、価格高騰期に売る。"
+    ],
+    [
+     "雨季はある？",
+     "ある——1月と2月に豪雨と雷雨が頻発し、一部の魚はこの時期だけ。"
+    ]
+   ]
+  }
+ ]
+}
+KO["weather"] = {
+ "title": "돌록 타운 날씨 가이드: 산성비·폭풍·건기",
+ "metaTitle": "돌록 타운 날씨: 산성비·폭풍·건기 가이드",
+ "metaDescription": "돌록 타운의 극한 날씨 마스터: 덮개로 산성비와 폭염에서 작물을 지키고, 폭풍을 전력으로 바꾸며, 계절 달력으로 가뭄 가격 급등에서 이익을.",
+ "intro": "극한 날씨가 돌록 타운을 정의합니다. 각 위협을 배우고, 계절 달력을 읽고, 모든 폭풍을 이점으로 바꾸세요.",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "날씨 위협과 대응",
+   "body": "각 위협을 배운 뒤 이점으로 바꾸세요.",
+   "columns": [
+    "날씨",
+    "위험",
+    "대응"
+   ],
+   "rows": [
+    [
+     "산성비",
+     "작물 침식",
+     "덮개; 산 수집"
+    ],
+    [
+     "작열하는 더위",
+     "흙이 마름",
+     "때맞춰 물 주기; 내열 유전자"
+    ],
+    [
+     "뇌우",
+     "밭 피해",
+     "번개를 전력으로"
+    ],
+    [
+     "폭우",
+     "저지대 침수",
+     "무료 관개"
+    ],
+    [
+     "가뭄 (4월)",
+     "시듦 + 가격 급등",
+     "비축, 높은 가격에 판매"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "계절 날씨 달력",
+   "body": "돌록 타운은 4개월 달력 위에 두 계절의 날씨 연도가 돌아갑니다. 농장을 여기에 맞춰 계획하세요.",
+   "columns": [
+    "기간",
+    "날씨",
+    "농사 영향",
+    "기회"
+   ],
+   "rows": [
+    [
+     "우기 (1–2월)",
+     "폭우와 뇌우",
+     "연못이 차고 일부 물고기는 이때만",
+     "비로 무료 관개; 폭풍으로 충전"
+    ],
+    [
+     "건기 (3–4월)",
+     "비가 적고 더움",
+     "작물이 힘들어지기 시작",
+     "물 더 주기; 덮개와 '고루 내리는 비' 유전자"
+    ],
+    [
+     "가뭄 (4월)",
+     "시듦, 가격 급등",
+     "가장 힘든 농사 달",
+     "연중 최고가에 비축분 판매"
+    ],
+    [
+     "어느 계절이든",
+     "산성비와 폭염이 갑자기",
+     "밭이 위험",
+     "덮개 상시 유지; 약한 작물 집약"
+    ]
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "폭풍을 전력으로 바꾸기",
+   "body": "날씨는 위협일 뿐 아니라 에너지원입니다.",
+   "items": [
+    [
+     "번개 포집 설치",
+     "뇌우가 농장 전력을 충전 — 1.0 자동화의 핵심."
+    ],
+    [
+     "비로 관개",
+     "폭우 때 손으로 물 주기를 건너뛰고 노력을 아끼세요."
+    ],
+    [
+     "가뭄 타이밍 잡기",
+     "4월 전에 비축하고 가격 급등기에 판매."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "날씨 대비 농장 구성",
+   "body": "날씨를 재난이 아니라 보너스로 만드는 농장 설계.",
+   "items": [
+    "매일 아침 일기예보 확인 — 폭풍과 산성비는 하루 전에 알 수 있습니다.",
+    "노출된 구획에 덮개를 짓고 약한 작물은 모아서 심으세요.",
+    "'고루 내리는 비' 유전자로 건조기에도 자동 물 주기.",
+    "뇌우 전력을 1.0 드론 스테이션과 공업 지구에.",
+    "가뭄 전에 비축하고 가뭄 중에 판매."
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "날씨를 아는 농부처럼",
+   "body": "내일 폭풍이라면 오늘 물 주기는 낭비 — 하지만 오늘 충전은 값을 매길 수 없습니다. 흔한 실수: 날씨를 랜덤으로 여기는 것. 계획할 수 있는 달력입니다."
+  },
+  {
+   "type": "faq",
+   "heading": "빠른 답변",
+   "body": "",
+   "items": [
+    [
+     "산성비는 어떤 피해를 주나요?",
+     "덮개 없는 작물을 침식합니다 — 덮개를 짓고 산은 제작 자원으로."
+    ],
+    [
+     "뇌우는 어떻게 도움이 되나요?",
+     "농장 전력을 충전 — 1.0 자동화와 공업 지구의 핵심."
+    ],
+    [
+     "가뭄은 언제인가요?",
+     "4월, 건기 끝. 작물이 시들고 상점 가격이 치솟습니다."
+    ],
+    [
+     "가뭄에서 어떻게 이익을 내나요?",
+     "4월 전에 비축하고 가격 급등기에 판매하세요."
+    ],
+    [
+     "우기가 있나요?",
+     "네 — 1월과 2월에 폭우와 뇌우가 잦고 일부 물고기는 그때만 나타납니다. "
+    ]
+   ]
+  }
+ ]
+}
+ES["weather"] = {
+ "title": "Guía del clima de Doloc Town: lluvia ácida, tormentas y sequía",
+ "metaTitle": "Clima de Doloc Town: lluvia ácida y tormentas",
+ "metaDescription": "Domina el clima extremo de Doloc Town: protege los cultivos de la lluvia ácida y el calor, convierte las tormentas en energía y aprovecha los precios de la sequía con el calendario estacional.",
+ "intro": "El clima extremo define Doloc Town. Aprende cada amenaza, lee el calendario estacional y convierte cada tormenta en una ventaja.",
+ "sections": [
+  {
+   "type": "table",
+   "heading": "Amenazas del clima y cómo contrarrestarlas",
+   "body": "Aprende cada amenaza y conviértela en ventaja.",
+   "columns": [
+    "Clima",
+    "Riesgo",
+    "Contra"
+   ],
+   "rows": [
+    [
+     "Lluvia ácida",
+     "Erosiona los cultivos",
+     "Cubiertas; recoge el ácido"
+    ],
+    [
+     "Calor abrasador",
+     "Reseca el suelo",
+     "Riego a tiempo; genes resistentes al calor"
+    ],
+    [
+     "Tormenta eléctrica",
+     "Daña los campos",
+     "Aprovecha el rayo para energía"
+    ],
+    [
+     "Lluvia torrencial",
+     "Inundaciones",
+     "Riego gratis"
+    ],
+    [
+     "Sequía (mes 4)",
+     "Marchitez + subida de precios",
+     "Acumula, vende caro"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "El calendario estacional del clima",
+   "body": "Doloc Town combina un calendario de cuatro meses con un año climático de dos estaciones. Planifica la granja en torno a él.",
+   "columns": [
+    "Periodo",
+    "Clima",
+    "Impacto en la granja",
+    "Oportunidad"
+   ],
+   "rows": [
+    [
+     "Estación lluviosa (ene–feb)",
+     "Lluvias fuertes y tormentas",
+     "Los estanques se llenan; algunos peces solo aparecen ahora",
+     "La lluvia riega gratis; las tormentas cargan energía"
+    ],
+    [
+     "Estación seca (mar–abr)",
+     "Menos lluvia, más calor",
+     "Los cultivos empiezan a sufrir",
+     "Riega más; usa cubiertas y el gen Lluvia"
+    ],
+    [
+     "Sequía (abril)",
+     "Marchitez y precios altos",
+     "El mes más duro para la granja",
+     "Vende reservas a los precios más altos del año"
+    ],
+    [
+     "Cualquier estación",
+     "Lluvia ácida y olas de calor repentinas",
+     "Campos en riesgo",
+     "Mantén cubiertas; agrupa los cultivos vulnerables"
+    ]
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "Convertir tormentas en energía",
+   "body": "El clima es una fuente de energía, no solo una amenaza.",
+   "items": [
+    [
+     "Instala captación de rayos",
+     "Las tormentas cargan la energía de tu granja: clave para la automatización 1.0."
+    ],
+    [
+     "Deja que la lluvia riegue",
+     "Sáltate el riego manual en los chaparrones y ahorra esfuerzo."
+    ],
+    [
+     "Aprovecha el momento de la sequía",
+     "Acumula antes del mes 4 y vende durante la subida de precios."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "Una granja preparada para el clima",
+   "body": "Construye tu granja para que el clima sea un bonus, no un desastre.",
+   "items": [
+    "Revisa el pronóstico cada mañana: las tormentas y la lluvia ácida avisan con un día de antelación.",
+    "Construye cubiertas sobre las parcelas expuestas y agrupa los cultivos vulnerables.",
+    "Instala el gen Lluvia para regar automáticamente en las sequías.",
+    "Usa la energía de las tormentas para las estaciones de drones del 1.0 y la zona industrial.",
+    "Acumula antes de la sequía y vende durante ella."
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "Cultiva como si conocieras el clima",
+   "body": "Si mañana hay tormenta, regar hoy es un desperdicio — pero cargar hoy no tiene precio. Error común: tratar el clima como aleatorio en vez de un calendario que puedes planificar."
+  },
+  {
+   "type": "faq",
+   "heading": "Respuestas rápidas",
+   "body": "",
+   "items": [
+    [
+     "¿Qué hace la lluvia ácida?",
+     "Erosiona los cultivos sin cubierta: constrúyelas y recoge el ácido como recurso de artesanía."
+    ],
+    [
+     "¿Cómo ayudan las tormentas?",
+     "Cargan la energía de tu granja, clave para la automatización 1.0 y la zona industrial."
+    ],
+    [
+     "¿Cuándo es la sequía?",
+     "Abril, al final de la estación seca. Los cultivos se marchitan y los precios suben."
+    ],
+    [
+     "¿Cómo saco provecho de la sequía?",
+     "Acumula bienes antes del mes 4 y véndelos durante la subida de precios."
+    ],
+    [
+     "¿Hay estación lluviosa?",
+     "Sí: enero y febrero traen lluvias fuertes y tormentas; algunos peces solo aparecen entonces. "
+    ]
+   ]
+  }
+ ]
+}
+ZH["drone-combat"] = {
+ "title": "多洛可小镇无人机战斗指南：升级与模块",
+ "metaTitle": "多洛可小镇无人机战斗：出装、升级与最佳模块",
+ "metaDescription": "掌握多洛可小镇无人机战斗：底盘、枪管与电池升级，战术电容、影子射手等战术模块，以及如何击破装甲敌人。",
+ "intro": "你的无人机是一套可打造的作战平台。升级底盘、枪管与电池，装配战术模块，学会击破装甲敌人——这里是完整的战斗图景。",
+ "sections": [
+  {
+   "type": "list",
+   "heading": "无人机战斗操作",
+   "body": "四个键覆盖战斗中的一切——先学操作，再谈出装。",
+   "items": [
+    "RMB：锁定目标",
+    "LMB：射击",
+    "Space：闪避 / 冲刺",
+    "R：换弹",
+    "F：蓄力光束（破盾）"
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "核心升级",
+   "body": "每项升级改变的是打法，不只是数字。",
+   "columns": [
+    "部件",
+    "改变什么",
+    "优先级"
+   ],
+   "rows": [
+    [
+     "底盘",
+     "血量、机动、生存",
+     "第 2"
+    ],
+    [
+     "枪管",
+     "射速与伤害",
+     "第 3"
+    ],
+    [
+     "电池",
+     "能量容量与续航",
+     "第 1——没能量就是死"
+    ],
+    [
+     "武器模块",
+     "主动战斗技能",
+     "看出装"
+    ],
+    [
+     "照明模块",
+     "暗废墟能见度",
+     "夜跑前"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "值得关注的模块（社区来源）",
+   "body": "模块定义你的战斗风格。",
+   "columns": [
+    "模块",
+    "效果"
+   ],
+   "rows": [
+    [
+     "战术电容",
+     "换弹后附加伤害"
+    ],
+    [
+     "影子射手",
+     "概率双发"
+    ],
+    [
+     "警用无人机 / 狙击",
+     "更高阶战斗出装 ⚠️"
+    ],
+    [
+     "中型E芯片",
+     "湿地 Boss 掉落 ⚠️"
+    ]
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "战斗出装顺序",
+   "body": "一套可靠的早期成长路线。",
+   "items": [
+    [
+     "先升电池",
+     "战斗中没能量是新玩家头号死因。"
+    ],
+    [
+     "再升枪管",
+     "单位能量的伤害更高。"
+    ],
+    [
+     "装战术模块",
+     "电容 / 影子射手随出装成长。"
+    ],
+    [
+     "靠钓鱼攒零件",
+     "稀有鱼掉落高级零件——用钓鱼养战斗。"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "分场景战斗战术",
+   "body": "适应敌人，而不是硬刚。",
+   "items": [
+    "装甲 Scavenger Bugs 无视普通火力——用蓄力光束（F）破盾再倾泻。",
+    "永远在掩体后换弹；开阔地换弹会挨打。",
+    "向开阔方向闪避，别撞墙——慌闪撞墙是经典死法。",
+    "夜跑废墟前装照明模块，没有就别打夜战。",
+    "湿地 Boss 掉落中型E芯片——为更高阶出装刷它 ⚠️。"
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "对抗 Scavenger Bugs（与常见错误）",
+   "body": "装甲 Scavenger Bugs 无视普通火力。用蓄力光束（F）破盾再倾泻。常见错误：慌闪撞墙、开阔地换弹、没装照明模块就夜战。⚠️ 细节来自社区攻略，请在 1.0 中验证。"
+  },
+  {
+   "type": "faq",
+   "heading": "常见问题速答",
+   "body": "",
+   "items": [
+    [
+     "怎么击破装甲敌人？",
+     "用蓄力光束（F）破盾——普通火力会被装甲 Scavenger Bugs 弹开。"
+    ],
+    [
+     "先升级什么？",
+     "电池。战斗中没能量是新玩家头号死因；然后升枪管补伤害。"
+    ],
+    [
+     "高级零件在哪掉？",
+     "稀有鱼掉落高级无人机与工具零件；湿地 Boss 掉落中型E芯片 ⚠️。"
+    ],
+    [
+     "夜战可行吗？",
+     "可行，但必须装照明模块——否则敌人先看到你。"
+    ],
+    [
+     "最好的模块是哪些？",
+     "战术电容（换弹后附加伤害）与影子射手（概率双发）是社区最爱 ⚠️。"
+    ]
+   ]
+  }
+ ]
+}
+JA["drone-combat"] = {
+ "title": "ドロックタウンドローン戦闘ガイド：強化とモジュール",
+ "metaTitle": "ドロックタウンドローン戦闘：ビルド・強化・最強モジュール",
+ "metaDescription": "ドロックタウンのドローン戦闘を攻略：シャーシ・バレル・バッテリー強化、タクティカルキャパシタやシャドウシューター等、装甲敵の撃破法まで。",
+ "intro": "ドローンは組み立て可能な戦闘プラットフォーム。シャーシ・バレル・バッテリーを強化し、戦術モジュールを装備し、装甲敵の撃破を覚えましょう——完全な戦闘の全体像です。",
+ "sections": [
+  {
+   "type": "list",
+   "heading": "ドローン戦闘の操作",
+   "body": "戦闘の基本は4つのキー——ビルドより先に操作を。",
+   "items": [
+    "RMB：ターゲットにロックオン",
+    "LMB：射撃",
+    "Space：回避 / ダッシュ",
+    "R：リロード",
+    "F：チャージビーム（シールド破壊）"
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "コア強化",
+   "body": "各強化は数字だけでなく戦い方を変えます。",
+   "columns": [
+    "部位",
+    "変わるもの",
+    "優先度"
+   ],
+   "rows": [
+    [
+     "シャーシ",
+     "HP、機動、生存性",
+     "2番目"
+    ],
+    [
+     "バレル",
+     "射速とダメージ",
+     "3番目"
+    ],
+    [
+     "バッテリー",
+     "エネルギー容量と稼働時間",
+     "1番——切れたら死"
+    ],
+    [
+     "武器モジュール",
+     "アクティブ戦闘スキル",
+     "ビルド次第"
+    ],
+    [
+     "照明モジュール",
+     "暗い遺跡での視界",
+     "夜間遠征前に"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "注目モジュール（コミュニティ情報）",
+   "body": "モジュールが戦闘スタイルを決めます。",
+   "columns": [
+    "モジュール",
+    "効果"
+   ],
+   "rows": [
+    [
+     "タクティカルキャパシタ",
+     "リロード後に追加ダメージ"
+    ],
+    [
+     "シャドウシューター",
+     "確率で2連射"
+    ],
+    [
+     "ポリスドローン / スナイパー",
+     "上位戦闘ビルド ⚠️"
+    ],
+    [
+     "ミディアムEチップ",
+     "湿地ボスがドロップ ⚠️"
+    ]
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "戦闘ビルドの順序",
+   "body": "信頼できる序盤の成長ルート。",
+   "items": [
+    [
+     "まずバッテリー",
+     "戦闘中のエネルギー切れが新規プレイヤー第1の死因。"
+    ],
+    [
+     "次にバレル",
+     "消費エネルギーあたりのダメージが増える。"
+    ],
+    [
+     "戦術モジュールを装着",
+     "キャパシタ / シャドウシューターがビルドを伸ばす。"
+    ],
+    [
+     "釣りで部品を貯める",
+     "レア魚が高級部品——釣りで戦闘を賄う。"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "場面別の戦闘戦術",
+   "body": "敵に合わせて動く——無理に押さない。",
+   "items": [
+    "装甲Scavenger Bugsは通常射撃を無視——チャージビーム（F）でシールドを破ってから撃ち込む。",
+    "リロードは必ずカバーの中で——開けた場所でのリロードは被弾。",
+    "回避は開けた方向へ——壁へのパニック回避は典型ミス。",
+    "夜の遺跡では照明モジュールを装備し、なければ夜戦しない。",
+    "湿地ボスはミディアムEチップをドロップ——上位ビルド用にファーム ⚠️。"
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "Scavenger Bugs対策（と失敗回避）",
+   "body": "装甲Scavenger Bugsは通常射撃を無視。チャージビーム（F）でシールドを破ってから撃ち込む。よくある失敗：壁へのパニック回避、開けた場所でのリロード、照明モジュールなしの夜戦。⚠️ コミュニティガイド由来。1.0で要検証。"
+  },
+  {
+   "type": "faq",
+   "heading": "よくある質問",
+   "body": "",
+   "items": [
+    [
+     "装甲敵の破り方は？",
+     "チャージビーム（F）でシールドを破る——通常射撃は装甲Scavenger Bugsに弾かれます。"
+    ],
+    [
+     "最初に強化すべきは？",
+     "バッテリー。戦闘中のエネルギー切れが第1の死因。次にバレルでダメージ。"
+    ],
+    [
+     "高級部品はどこで？",
+     "レア魚が高級ドローン・道具部品を落とし、湿地ボスがミディアムEチップ ⚠️。"
+    ],
+    [
+     "夜戦は可能？",
+     "可能ですが照明モジュール必須——ないと敵が先に気づきます。"
+    ],
+    [
+     "最強モジュールは？",
+     "タクティカルキャパシタ（リロード後ダメージ）とシャドウシューター（確率2連射）が定番 ⚠️。"
+    ]
+   ]
+  }
+ ]
+}
+KO["drone-combat"] = {
+ "title": "돌록 타운 드론 전투 가이드: 강화와 모듈",
+ "metaTitle": "돌록 타운 드론 전투: 빌드·강화·최고 모듈",
+ "metaDescription": "돌록 타운 드론 전투 마스터: 섀시·배럴·배터리 강화, 택티컬 캐패시터·섀도우 슈터 등 모듈, 장갑 적 처치법까지.",
+ "intro": "드론은 조립 가능한 전투 플랫폼입니다. 섀시·배럴·배터리를 강화하고 전술 모듈을 장착하며 장갑 적 처치법을 배우세요 — 완전한 전투의 그림입니다.",
+ "sections": [
+  {
+   "type": "list",
+   "heading": "드론 전투 조작",
+   "body": "전투의 기본은 4개 키 — 빌드보다 조작부터.",
+   "items": [
+    "RMB: 타깃 록온",
+    "LMB: 발사",
+    "Space: 회피 / 대시",
+    "R: 재장전",
+    "F: 차지 빔 (실드 파괴)"
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "핵심 강화",
+   "body": "각 강화는 숫자가 아니라 전투 방식을 바꿉니다.",
+   "columns": [
+    "부품",
+    "바뀌는 것",
+    "우선순위"
+   ],
+   "rows": [
+    [
+     "섀시",
+     "체력, 기동, 생존성",
+     "2순위"
+    ],
+    [
+     "배럴",
+     "연사력과 피해",
+     "3순위"
+    ],
+    [
+     "배터리",
+     "에너지 용량과 가동 시간",
+     "1순위 — 끊기면 죽음"
+    ],
+    [
+     "무기 모듈",
+     "액티브 전투 스킬",
+     "빌드에 따라"
+    ],
+    [
+     "조명 모듈",
+     "어두운 유적에서 시야",
+     "야간 원정 전"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "주목할 모듈 (커뮤니티 정보)",
+   "body": "모듈이 전투 스타일을 결정합니다.",
+   "columns": [
+    "모듈",
+    "효과"
+   ],
+   "rows": [
+    [
+     "택티컬 캐패시터",
+     "재장전 후 추가 피해"
+    ],
+    [
+     "섀도우 슈터",
+     "확률로 2연발"
+    ],
+    [
+     "폴리스 드론 / 스나이퍼",
+     "상위 전투 빌드 ⚠️"
+    ],
+    [
+     "미디엄 E칩",
+     "습지 보스 드랍 ⚠️"
+    ]
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "전투 빌드 순서",
+   "body": "믿을 수 있는 초반 성장 루트.",
+   "items": [
+    [
+     "먼저 배터리",
+     "전투 중 에너지 고갈이 신규 플레이어 1위 사인."
+    ],
+    [
+     "다음 배럴",
+     "소모 에너지당 피해가 늘어납니다."
+    ],
+    [
+     "전술 모듈 장착",
+     "캐패시터 / 섀도우 슈터가 빌드를 키웁니다."
+    ],
+    [
+     "낚시로 부품 모으기",
+     "희귀어가 고급 부품 — 낚시로 전투 자금 마련."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "상황별 전투 전술",
+   "body": "적에 맞춰 움직이세요 — 억지로 밀어붙이지 마세요.",
+   "items": [
+    "장갑 Scavenger Bugs는 일반 사격을 무시 — 차지 빔(F)으로 실드를 깨고 쏟아부으세요.",
+    "재장전은 반드시 엄폐물 뒤에서 — 열린 곳 재장전은 피격.",
+    "회피는 열린 방향으로 — 벽으로의 패닉 회피는 전형적 실수.",
+    "밤 유적에선 조명 모듈 장착, 없으면 야간전 하지 마세요.",
+    "습지 보스가 미디엄 E칩 드랍 — 상위 빌드용 파밍 ⚠️."
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "Scavenger Bugs 처치법 (그리고 실수 피하기)",
+   "body": "장갑 Scavenger Bugs는 일반 사격을 무시합니다. 차지 빔(F)으로 실드를 깨고 쏟아부으세요. 흔한 실수: 벽으로의 패닉 회피, 열린 곳 재장전, 조명 모듈 없는 야간전. ⚠️ 커뮤니티 가이드 유래. 1.0에서 검증 필요."
+  },
+  {
+   "type": "faq",
+   "heading": "빠른 답변",
+   "body": "",
+   "items": [
+    [
+     "장갑 적을 어떻게 깨나요?",
+     "차지 빔(F)으로 실드를 파괴 — 일반 사격은 장갑 Scavenger Bugs에 튕깁니다."
+    ],
+    [
+     "먼저 무엇을 강화하나요?",
+     "배터리. 전투 중 에너지 고갈이 1위 사인. 다음 배럴로 피해."
+    ],
+    [
+     "고급 부품은 어디서?",
+     "희귀어가 고급 드론·도구 부품 드랍, 습지 보스가 미디엄 E칩 ⚠️."
+    ],
+    [
+     "야간전이 가능한가요?",
+     "네, 하지만 조명 모듈 필수 — 없으면 적이 먼저 봅니다."
+    ],
+    [
+     "최고 모듈은?",
+     "택티컬 캐패시터(재장전 후 피해)와 섀도우 슈터(확률 2연발)가 커뮤니티 단골 ⚠️. "
+    ]
+   ]
+  }
+ ]
+}
+ES["drone-combat"] = {
+ "title": "Guía de combate con dron de Doloc Town: mejoras y módulos",
+ "metaTitle": "Combate con dron de Doloc Town: builds y módulos",
+ "metaDescription": "Domina el combate con dron de Doloc Town: mejoras de chasis, cañón y batería, módulos tácticos como el Capacitor Táctico y el Disparador Sombra, y cómo vencer a los enemigos blindados.",
+ "intro": "Tu dron es una plataforma de combate personalizable. Mejora su chasis, cañón y batería, equipa módulos tácticos y aprende a romper enemigos blindados: aquí está el panorama completo del combate.",
+ "sections": [
+  {
+   "type": "list",
+   "heading": "Controles del combate con dron",
+   "body": "Cuatro teclas cubren todo en un combate: aprende los controles antes que las builds.",
+   "items": [
+    "RMB: fijar objetivo",
+    "LMB: disparar",
+    "Espacio: esquivar / dash",
+    "R: recargar",
+    "F: rayo de carga (rompe escudos)"
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "Mejoras principales",
+   "body": "Cada mejora cambia cómo se juega el combate, no solo los números.",
+   "columns": [
+    "Pieza",
+    "Qué cambia",
+    "Prioridad"
+   ],
+   "rows": [
+    [
+     "Chasis",
+     "Vida, movilidad, supervivencia",
+     "2ª"
+    ],
+    [
+     "Cañón",
+     "Cadencia y daño",
+     "3ª"
+    ],
+    [
+     "Batería",
+     "Capacidad de energía y tiempo activo",
+     "1ª — quedarse sin energía mata"
+    ],
+    [
+     "Módulo de arma",
+     "Habilidad de combate activa",
+     "Según build"
+    ],
+    [
+     "Módulo de luz",
+     "Visibilidad en ruinas oscuras",
+     "Antes de salidas nocturnas"
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "heading": "Módulos destacados (de la comunidad)",
+   "body": "Los módulos definen tu identidad de combate.",
+   "columns": [
+    "Módulo",
+    "Efecto"
+   ],
+   "rows": [
+    [
+     "Capacitor Táctico",
+     "Daño extra tras recargar"
+    ],
+    [
+     "Disparador Sombra",
+     "Probabilidad de disparar dos veces"
+    ],
+    [
+     "Dron Policía / Francotirador",
+     "Builds de combate superiores ⚠️"
+    ],
+    [
+     "Chip E medio",
+     "Lo suelta el jefe de los Humedales ⚠️"
+    ]
+   ]
+  },
+  {
+   "type": "steps",
+   "heading": "Orden de build para el combate",
+   "body": "Una progresión temprana fiable.",
+   "items": [
+    [
+     "Mejora la batería primero",
+     "Quedarse sin energía a mitad del combate es la muerte n.º 1 de novatos."
+    ],
+    [
+     "Después el cañón",
+     "Más daño por energía gastada."
+    ],
+    [
+     "Equipa un módulo táctico",
+     "Capacitor / Disparador Sombra escalan con tu build."
+    ],
+    [
+     "Guarda piezas de la pesca",
+     "Los peces raros dan piezas avanzadas: pesca para financiar el combate."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "heading": "Tácticas de combate según la situación",
+   "body": "Adáptate al enemigo, no al revés.",
+   "items": [
+    "Los Scavenger Bugs blindados ignoran el fuego normal: carga el rayo (F) para romper su escudo y entonces dispara.",
+    "Recarga siempre a cubierto; recargar a la vista te hace recibir golpes.",
+    "Esquiva hacia espacio abierto, no contra las paredes: la esquiva de pánico es una muerte clásica.",
+    "Equipa un módulo de luz antes de las ruinas nocturnas y no pelees de noche sin él.",
+    "El jefe de los Humedales suelta un chip E medio: cultívalo para builds superiores ⚠️."
+   ]
+  },
+  {
+   "type": "note",
+   "heading": "Luchar contra Scavenger Bugs (y evitar errores)",
+   "body": "Los Scavenger Bugs blindados ignoran el fuego normal. Carga el rayo (F) para romper su escudo y entonces dispara. Errores comunes: esquivas de pánico contra las paredes, recargar a la vista y pelear de noche sin módulo de luz. ⚠️ Detalles de guías de la comunidad; verifica en 1.0."
+  },
+  {
+   "type": "faq",
+   "heading": "Respuestas rápidas",
+   "body": "",
+   "items": [
+    [
+     "¿Cómo rompo a los enemigos blindados?",
+     "Usa el rayo de carga (F) para romper escudos: el fuego normal rebota en los Scavenger Bugs blindados."
+    ],
+    [
+     "¿Qué mejoro primero?",
+     "La batería. Quedarse sin energía a mitad del combate es la muerte n.º 1 de novatos; luego el cañón para daño."
+    ],
+    [
+     "¿Dónde caen las piezas avanzadas?",
+     "Los peces raros dan piezas avanzadas de dron y herramientas; el jefe de los Humedales suelta un chip E medio ⚠️."
+    ],
+    [
+     "¿Es viable el combate nocturno?",
+     "Sí, pero solo con módulo de luz equipado: sin él, los enemigos te ven antes."
+    ],
+    [
+     "¿Cuáles son los mejores módulos?",
+     "El Capacitor Táctico (daño tras recargar) y el Disparador Sombra (probabilidad de doble disparo) son los favoritos de la comunidad ⚠️. "
+    ]
+   ]
+  }
+ ]
+}
+apply_lang("zh-CN", ZH)
+apply_lang("ja", JA)
+apply_lang("ko", KO)
+apply_lang("es", ES)
+
 # zh-TW via OpenCC from zh-CN (site i18n + page i18n)
 zc_site = d["site"]["i18n"].get("zh-CN", {})
 d["site"]["i18n"]["zh-TW"] = json.loads(cc.convert(json.dumps(zc_site, ensure_ascii=False)))

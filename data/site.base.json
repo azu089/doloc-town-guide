@@ -359,7 +359,7 @@
   {
    "slug": "automation",
    "title": "Doloc Town Farming Automation Guide (1.0)",
-   "metaTitle": "Doloc Town Farming Automation: Solar, Wind & Drones (1.0)",
+   "metaTitle": "Doloc Town Farming Automation: Solar, Wind and Drones (1.0)",
    "metaDescription": "How farming automation works in Doloc Town 1.0: build solar and wind power, deploy farming drone stations and let drones seed, nurture and harvest for you.",
    "intro": "The 1.0 release turns you from a farmer into a farm manager. Here is how to generate clean energy, deploy drone stations and automate the whole crop cycle.",
    "sections": [
@@ -875,7 +875,7 @@
    "title": "Doloc Town Drone Combat Guide: Upgrades & Modules",
    "metaTitle": "Doloc Town Drone Combat: Builds, Upgrades & Best Modules",
    "metaDescription": "Master Doloc Town drone combat: chassis, barrel and battery upgrades, tactical mods like Tactical Capacitor and Shadow Shooter, and how to beat armored enemies.",
-   "intro": "Your drone is a buildable combat platform. Upgrade its chassis, barrel and battery, fit tactical modules and learn to break armored enemies.",
+   "intro": "Your drone is a buildable combat platform. Upgrade its chassis, barrel and battery, fit tactical modules and learn to break armored enemies — here is the full combat picture.",
    "sections": [
     {
      "type": "list",
@@ -981,10 +981,51 @@
      ]
     },
     {
+     "type": "list",
+     "tag": "TACTICS",
+     "heading": "Combat Tactics by Situation",
+     "body": "Adapt to the enemy, not the other way around.",
+     "items": [
+      "Armored Scavenger Bugs ignore normal fire — charge the beam (F) to break their shield, then unload.",
+      "Always reload behind cover; reloading in the open gets you hit.",
+      "Dodge toward open space, not into walls — panic-dodging into geometry is a classic death.",
+      "Equip a lighting module before night ruin runs, and don't fight at night without it.",
+      "The Wetlands boss drops a Medium E-chip — farm it for higher-tier builds ⚠️."
+     ]
+    },
+    {
      "type": "note",
      "tag": "TIP",
      "heading": "Fighting Scavenger Bugs (And Avoiding Mistakes)",
      "body": "Armoured Scavenger Bugs ignore normal fire. Charge the beam (F) to break their shield, then unload. Common mistakes: panic-dodging into walls, reloading in the open, and fighting at night without a lighting module. ⚠️ Details from community guides; verify in 1.0."
+    },
+    {
+     "type": "faq",
+     "tag": "QA",
+     "heading": "Quick Answers",
+     "body": "",
+     "items": [
+      [
+       "How do I break armored enemies?",
+       "Use the charge beam (F) to break shields — normal fire bounces off armored Scavenger Bugs."
+      ],
+      [
+       "What should I upgrade first?",
+       "Battery. Running out of energy mid-fight is the #1 new-player death; then barrel for damage."
+      ],
+      [
+       "Where do advanced parts drop?",
+       "Rare fish drop advanced drone and tool parts; the Wetlands boss drops a Medium E-chip ⚠️."
+      ],
+      [
+       "Is night combat viable?",
+       "Yes, but only with a lighting module fitted — otherwise enemies see you before you see them."
+      ],
+      [
+       "What are the best modules?",
+       "Tactical Capacitor (bonus damage after reload) and Shadow Shooter (chance to fire twice) are the community favorites ⚠️."
+      ]
+     ]
     }
    ],
    "sources": [
@@ -1005,15 +1046,15 @@
   {
    "slug": "exploration",
    "title": "Doloc Town Exploration Guide: All 5 Regions",
-   "metaTitle": "Doloc Town Regions: All 5 Areas & Old City Ruins",
-   "metaDescription": "Every Doloc Town region explained: the Outskirts, River Valley, Wetlands, Caves and the new 1.0 Old City Ruins — plus what resources and secrets each holds.",
-   "intro": "Exploration is the heart of Doloc Town. Five regions hold unique resources, foes and stories — including the brand-new Old City Ruins from the 1.0 release.",
+   "metaTitle": "Doloc Town Regions: All 5 Areas & Old City Ruins (1.0)",
+   "metaDescription": "Every Doloc Town region explained: the Outskirts, River Valley, Wetlands, Caves and the new 1.0 Old City Ruins — plus resources, secrets and what to bring.",
+   "intro": "Exploration is the heart of Doloc Town. Five regions hold unique resources, foes and stories — including the brand-new Old City Ruins from the 1.0 release. Here is what each area is worth, and how to survive it.",
    "sections": [
     {
      "type": "table",
      "tag": "REGIONS",
      "heading": "All Regions at a Glance",
-     "body": "Five regions, each with its own resources, foes and story.",
+     "body": "Five regions, each with its own resources, foes and story — plus the 1.0 Old City Ruins.",
      "columns": [
       "Region",
       "What's there",
@@ -1042,8 +1083,8 @@
       ],
       [
        "Old City Ruins (1.0)",
-       "Fierce enemies, new NPCs, side quests",
-       "Endgame story + resources"
+       "Fierce enemies, new NPCs, side quests, endgame resources",
+       "1.0 finale + new crafting materials"
       ]
      ]
     },
@@ -1057,6 +1098,7 @@
       "Stay alert for vicious creatures and hostiles in ruins.",
       "Upgrade your drone with weapon and lighting modules before long trips.",
       "Bring food — cooking buffs keep you alive and fast.",
+      "Check the weather forecast first — storms and acid rain punish unprepared explorers.",
       "Know your exit route before you commit to a deep dive."
      ]
     },
@@ -1064,7 +1106,7 @@
      "type": "steps",
      "tag": "1.0",
      "heading": "Exploring the Old City Ruins (New in 1.0)",
-     "body": "The final major area of the 1.0 release.",
+     "body": "The 1.0 release's major new region — described in the official announcement as the third major area of the game.",
      "items": [
       [
        "Unlock through the story",
@@ -1072,7 +1114,7 @@
       ],
       [
        "Expect fierce new enemies",
-       "New foes and creatures await — upgrade before you go."
+       "New foes and creatures await — upgrade your drone before you go."
       ],
       [
        "Meet new NPCs and companions",
@@ -1080,7 +1122,53 @@
       ],
       [
        "Gather new resources",
-       "Old City materials feed endgame crafting."
+       "Old City materials feed endgame crafting and tool upgrades."
+      ],
+      [
+       "Follow the side quests",
+       "New side content ties the region into the town's recovery."
+      ],
+      [
+       "Treat it as endgame",
+       "Prepare energy, food and combat modules — this is the hardest zone."
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "tag": "RESOURCES",
+     "heading": "Where to Find Key Resources",
+     "body": "Fishing spots, gathering nodes and rare drops are spread across the map — these are the verified highlights.",
+     "columns": [
+      "Resource",
+      "Region",
+      "Note"
+     ],
+     "rows": [
+      [
+       "Rare materials (trading)",
+       "River Valley",
+       "Kumasang the roamer trades rare materials ⚠️"
+      ],
+      [
+       "Medium E-chip",
+       "Wetlands",
+       "Drops from the Wetlands boss ⚠️"
+      ],
+      [
+       "Minerals & hidden tech",
+       "Caves",
+       "Underground mining ruins hold the best mineral nodes"
+      ],
+      [
+       "Endgame crafting materials",
+       "Old City Ruins (1.0)",
+       "New resource type introduced with 1.0"
+      ],
+      [
+       "Advanced drone parts",
+       "Fishing",
+       "Rare fish drop advanced drone and tool parts — fish to fund your build"
       ]
      ]
     },
@@ -1088,7 +1176,35 @@
      "type": "note",
      "tag": "MYSTERY",
      "heading": "The Three Mysteries (And Common Mistakes)",
-     "body": "Why does the River Valley stay lush in a ruined world? What happened to the town's vanished leader? Why do so many pre-apocalypse tech pieces carry the mark of 'Eden'? The 1.0 story answers them. Common mistake: rushing past lore objects — several story beats are missable if you sprint the region."
+     "body": "Why does the River Valley stay lush in a ruined world? What happened to the town's vanished leader? Why do so many pre-apocalypse tech pieces carry the mark of 'Eden'? The 1.0 story answers them — and the answers are tied to specific villagers, so talk to everyone. Common mistake: rushing past lore objects — several story beats are missable if you sprint the region."
+    },
+    {
+     "type": "faq",
+     "tag": "QA",
+     "heading": "Quick Answers",
+     "body": "",
+     "items": [
+      [
+       "How many regions are there?",
+       "Five base regions (Outskirts, River Valley, Wetlands, Caves and the Old City Ruins added in 1.0). The Old City Ruins is described as the game's third major area."
+      ],
+      [
+       "What is new in the 1.0 Old City Ruins?",
+       "A major new region with fierce enemies, new NPCs and companions, side quests and endgame crafting resources."
+      ],
+      [
+       "Where can I find Kumasang?",
+       "Kumasang is a roaming NPC in the River Valley and a source of rare materials ⚠️."
+      ],
+      [
+       "Can I explore ruins at night?",
+       "Yes, but fit a lighting module to your drone first — night fights without light are the classic mistake."
+      ],
+      [
+       "How do I get advanced drone parts?",
+       "Rare fish drop advanced drone and tool parts; the Wetlands boss drops a Medium E-chip ⚠️."
+      ]
+     ]
     }
    ],
    "sources": [
@@ -1099,6 +1215,10 @@
     {
      "label": "Official 1.0 announcement",
      "url": "https://steamcommunity.com/app/2285550/allnews/?l=english"
+    },
+    {
+     "label": "Mejoress Doloc Town guide",
+     "url": "https://www.mejoress.com/en/doloc-town-guide/"
     }
    ],
    "meta": {
@@ -1456,8 +1576,8 @@
    "slug": "cooking",
    "title": "Doloc Town Cooking Guide: Recipes, Buffs & Ingredients",
    "metaTitle": "Doloc Town Cooking Guide: Recipes, Buffs & Food",
-   "metaDescription": "Doloc Town cooking explained: how to unlock 80+ recipes, what food buffs do, and how cooking fuels exploration and combat.",
-   "intro": "Cooking turns your harvest into survival power. With 80+ recipes, the right meal can restore energy or buff your speed and defense.",
+   "metaDescription": "Doloc Town cooking explained: how to unlock 80+ recipes, what food buffs do, and how cooking fuels exploration, farming and combat.",
+   "intro": "Cooking turns your harvest into survival power. With 80+ recipes, the right meal can restore energy or buff your speed and defense — learn what to cook, when, and why it matters.",
    "sections": [
     {
      "type": "list",
@@ -1468,7 +1588,8 @@
       "80+ recipes across the game.",
       "Meals restore 50-100 energy — enough to keep working all day.",
       "Some meals add buffs: speed, defense and more.",
-      "Recipes unlock through friendship and the tech tree."
+      "Recipes unlock through friendship and the tech tree.",
+      "A sickle harvests whole groups — more ingredients, less time in the field."
      ]
     },
     {
@@ -1500,6 +1621,19 @@
      ]
     },
     {
+     "type": "list",
+     "tag": "CATEGORIES",
+     "heading": "What the 80+ Recipes Cover",
+     "body": "A stocked kitchen covers three needs: fuel, tempo and safety.",
+     "items": [
+      "Energy meals — the everyday staple; restore 50-100 energy.",
+      "Speed meals — for harvest days and long travel days.",
+      "Defense meals — for ruin dives and boss fights.",
+      "Friendship-gated recipes — some of the best buffs sit behind villager hearts (e.g. the Alchemy Station).",
+      "⚠️ A full recipe-by-recipe list is being verified in 1.0."
+     ]
+    },
+    {
      "type": "steps",
      "tag": "KITCHEN",
      "heading": "Stocking a Kitchen (A Routine)",
@@ -1528,6 +1662,34 @@
      "tag": "MISTAKES",
      "heading": "Common Mistakes",
      "body": "Selling every harvest instead of keeping ingredients for recipes. Ignoring friendship-gated recipes (some of the best buffs are behind hearts). And cooking only energy meals — the speed and defense buffs save more time than raw calories."
+    },
+    {
+     "type": "faq",
+     "tag": "QA",
+     "heading": "Quick Answers",
+     "body": "",
+     "items": [
+      [
+       "How many recipes are there?",
+       "80+ recipes across the game, confirmed by the official store page."
+      ],
+      [
+       "How do meals restore energy?",
+       "Most meals restore 50-100 energy — enough to keep working a full day."
+      ],
+      [
+       "How do I unlock friendship recipes?",
+       "Raise villager hearts — friends gate unique recipes like the Alchemy Station."
+      ],
+      [
+       "Which buff should I cook for?",
+       "Defense before ruin dives and boss fights; speed for harvest and travel days; energy for everything else."
+      ],
+      [
+       "Is cooking worth it early?",
+       "Yes — cooked meals beat raw ingredients for energy per inventory slot, and buffs pay for themselves."
+      ]
+     ]
     }
    ],
    "sources": [
@@ -1609,41 +1771,93 @@
   {
    "slug": "characters",
    "title": "Doloc Town Characters: Villager Profiles & Secrets",
-   "metaTitle": "Doloc Town Characters: Villager Profiles & Hidden Stories",
-   "metaDescription": "Meet the villagers of Doloc Town: Kasia, Guildmaster Bellad, Kumasang and more — plus the secrets hidden beneath their lighthearted daily lives.",
-   "intro": "Every resident of Doloc Town hides a story. Visit each one, nurture connections and uncover the secrets beneath their daily lives.",
+   "metaTitle": "Doloc Town Characters: Villagers, Friendship and Secrets",
+   "metaDescription": "Meet the villagers of Doloc Town: Kasia, Guildmaster Bellad, Kumasang and more — how friendship unlocks recipes and story, and the secrets beneath their daily lives.",
+   "intro": "Every resident of Doloc Town hides a story. Visit each one, nurture connections and uncover the secrets beneath their daily lives — friendship is the game's social system, and it pays in recipes, story and festival rewards.",
    "sections": [
     {
      "type": "table",
      "tag": "CAST",
      "heading": "Known Characters (Community-Sourced)",
-     "body": "Every resident hides a story; this is the community-confirmed core cast.",
+     "body": "The community-confirmed core cast; the full 1.0 roster is still being compiled.",
      "columns": [
       "Character",
-      "About"
+      "About",
+      "Why they matter"
      ],
      "rows": [
       [
        "Kasia",
-       "Shop street, 2nd floor; farming girl; Blooming Friendship achievement"
+       "Shop street, 2nd floor; farming girl",
+       "Max friendship unlocks the Blooming Friendship achievement"
       ],
       [
        "Guildmaster Bellad",
-       "Runs the Guild; quests pay Tech Points"
+       "Runs the Guild",
+       "Quests pay Tech Points — the main early tech income"
       ],
       [
        "Kumasang",
-       "River Valley roamer; rare materials ⚠️"
+       "River Valley roamer",
+       "Rare materials trader ⚠️"
       ],
       [
        "The vanished leader",
-       "Central mystery — what happened? (answered in 1.0)"
+       "Central mystery",
+       "What happened? Answered in the 1.0 story"
       ],
       [
        "Old City NPCs",
-       "New companions in 1.0 ⚠️"
+       "New companions in 1.0 ⚠️",
+       "Open new quests in the ruins"
       ]
      ]
+    },
+    {
+     "type": "table",
+     "tag": "UNLOCKS",
+     "heading": "What Friendship Unlocks",
+     "body": "Hearts are a progression system, not decoration.",
+     "columns": [
+      "Heart level",
+      "Unlock"
+     ],
+     "rows": [
+      [
+       "Unique recipes",
+       "Friends gate recipes like the Alchemy Station"
+      ],
+      [
+       "Personal story scenes",
+       "Each friend's story deepens the town's mysteries"
+      ],
+      [
+       "Festival rewards",
+       "Seasonal festivals give the biggest friendship boosts"
+      ],
+      [
+       "⚠️ Exact thresholds",
+       "Still being verified in 1.0"
+      ]
+     ]
+    },
+    {
+     "type": "list",
+     "tag": "ROUTINE",
+     "heading": "How to Raise Friendship (A Routine)",
+     "body": "Friendship is a daily routine, not a grind.",
+     "items": [
+      "Talk to everyone daily — even the ones 'far away'.",
+      "Gift according to taste; note preferences as you learn them.",
+      "Do quests — they are the best heart-per-minute investment.",
+      "Attend every festival for the biggest boosts; 1.0 adds the Mushroom Fest."
+     ]
+    },
+    {
+     "type": "note",
+     "tag": "OFFICIAL",
+     "heading": "Official: Friendship Only — No Romance",
+     "body": "The developers have confirmed there is no romance or marriage system in Doloc Town. The social game is friendship: gifts, festivals, heart events and personal stories. Don't build 'dating guide' content for this game — it does not exist."
     },
     {
      "type": "note",
@@ -1653,14 +1867,14 @@
     },
     {
      "type": "list",
-     "tag": "SOCIAL",
-     "heading": "Social Tips",
-     "body": "Make every heart count.",
+     "tag": "MISTAKES",
+     "heading": "Common Mistakes",
+     "body": "",
      "items": [
-      "Talk to everyone daily — even the ones 'far away'.",
-      "Gift according to taste; note preferences as you learn them.",
-      "Do quests — they are the best heart investment.",
-      "Attend every festival for the biggest boosts."
+      "Ignoring a villager 'because they're far away' locks you out of their recipes permanently.",
+      "Giving everyone the same gift misses preferences and wastes gifts.",
+      "Missing festivals is the biggest loss — they are the highest-value friendship events on the calendar.",
+      "Skipping Bellad's quests starves your tech tree of its only reliable early income."
      ]
     }
    ],
@@ -1672,6 +1886,10 @@
     {
      "label": "Doloc Town Huiji Wiki (Chinese)",
      "url": "https://doloctown.huijiwiki.com/"
+    },
+    {
+     "label": "InGameNews (no romance, official)",
+     "url": "https://ingamenews.com/"
     }
    ],
    "meta": {
@@ -1771,8 +1989,8 @@
    "slug": "weather",
    "title": "Doloc Town Weather Guide: Acid Rain, Storms & Drought",
    "metaTitle": "Doloc Town Weather: Acid Rain, Storms & Drought Guide",
-   "metaDescription": "Master Doloc Town extreme weather: protect crops from acid rain and heat, harness storms for power and profit from drought prices.",
-   "intro": "Extreme weather defines Doloc Town. Learn each threat — and how to turn it into an advantage.",
+   "metaDescription": "Master Doloc Town extreme weather: protect crops from acid rain and heat, harness storms for power, and profit from drought prices with the seasonal calendar.",
+   "intro": "Extreme weather defines Doloc Town. Learn each threat, read the seasonal calendar, and turn every storm into an advantage.",
    "sections": [
     {
      "type": "table",
@@ -1813,6 +2031,44 @@
      ]
     },
     {
+     "type": "table",
+     "tag": "CALENDAR",
+     "heading": "The Seasonal Weather Calendar",
+     "body": "Doloc Town runs a two-season weather year over a four-month calendar. Plan the farm around it.",
+     "columns": [
+      "Period",
+      "Weather",
+      "Farming impact",
+      "Opportunity"
+     ],
+     "rows": [
+      [
+       "Rainy season (Jan–Feb)",
+       "Heavy rain and thunderstorms",
+       "Ponds fill; some fish appear only now",
+       "Rain irrigates for free; storms charge power"
+      ],
+      [
+       "Dry season (Mar–Apr)",
+       "Less rain, more heat",
+       "Crops start to struggle",
+       "Water more; use covers and the Rain gene"
+      ],
+      [
+       "Drought (April)",
+       "Crops wither, prices spike",
+       "Hardest farming month",
+       "Sell stockpiles at the year's highest prices"
+      ],
+      [
+       "Any season",
+       "Acid rain and heat waves can strike suddenly",
+       "Fields at risk",
+       "Keep covers built; group vulnerable crops"
+      ]
+     ]
+    },
+    {
      "type": "steps",
      "tag": "POWER",
      "heading": "Turning Storms into Power",
@@ -1833,10 +2089,51 @@
      ]
     },
     {
+     "type": "list",
+     "tag": "SETUP",
+     "heading": "A Weather-Ready Farm Setup",
+     "body": "Build your farm so weather is a bonus, not a disaster.",
+     "items": [
+      "Check the forecast every morning — storms and acid rain give you a day's warning.",
+      "Build covers over exposed plots and group vulnerable crops together.",
+      "Install the Rain Falls Evenly gene to auto-water through dry spells.",
+      "Use thunderstorm power for 1.0 drone stations and the industrial zone.",
+      "Stockpile before the drought and sell during it."
+     ]
+    },
+    {
      "type": "note",
      "tag": "TIP",
      "heading": "Farm Like the Weather Knows",
-     "body": "Check the forecast daily. If a storm is coming tomorrow, watering today is wasted — but charging today is priceless. Common mistake: treating weather as random instead of a calendar you can plan around."
+     "body": "If a storm is coming tomorrow, watering today is wasted — but charging today is priceless. Common mistake: treating weather as random instead of a calendar you can plan around."
+    },
+    {
+     "type": "faq",
+     "tag": "QA",
+     "heading": "Quick Answers",
+     "body": "",
+     "items": [
+      [
+       "What does acid rain do?",
+       "It erodes unprotected crops — build covers and collect the acid as a crafting resource."
+      ],
+      [
+       "How do thunderstorms help?",
+       "They charge your farm's power, which is key for 1.0 automation and the industrial zone."
+      ],
+      [
+       "When is the drought?",
+       "April, at the end of the dry season. Crops wither and shop prices spike."
+      ],
+      [
+       "How do I profit from the drought?",
+       "Stockpile goods before Month 4 and sell them during the price spike."
+      ],
+      [
+       "Is there a rainy season?",
+       "Yes — January and February bring heavy rain and thunderstorms; some fish only appear then."
+      ]
+     ]
     }
    ],
    "sources": [
@@ -1858,8 +2155,8 @@
    "slug": "achievements",
    "title": "Doloc Town Achievements: All 80 (1.0)",
    "metaTitle": "Doloc Town Achievements: Full List of All 80 (1.0)",
-   "metaDescription": "All 80 Doloc Town achievements — 43 base plus 37 new in 1.0 — with tips for the ones players struggle with.",
-   "intro": "Doloc Town has 80 Steam achievements in total: 43 from the base game plus 37 added in the 1.0 release. Here's what we know so far.",
+   "metaDescription": "All 80 Doloc Town achievements — 43 base plus 37 new in 1.0 — with the known list and a hunting checklist for 100%.",
+   "intro": "Doloc Town has 80 Steam achievements in total: 43 from the base game plus 37 added in the 1.0 release (August 6, 2026). Here is the verified count and everything we know so far.",
    "sections": [
     {
      "type": "table",
@@ -1909,8 +2206,32 @@
      "items": [
       "43 base achievements (Early Access era).",
       "37 new achievements in the 1.0 release (August 6, 2026).",
-      "80 total.",
+      "80 total — the count is confirmed by press coverage of the 1.0 launch.",
       "Chapter selection lets you go back to mop up missed achievements ⚠️."
+     ]
+    },
+    {
+     "type": "list",
+     "tag": "CHECKLIST",
+     "heading": "Achievement-Hunting Checklist",
+     "body": "A 100% run rewards routine over grinding. Start with the achievements that come naturally, then mop up the rest.",
+     "items": [
+      "Daily-routine achievements first: drink water (Eight Elixir), cook 10 recipes (Culinary Enthusiast), fish.",
+      "Friendship: max out Kasia for Blooming Friendship — talk, gift and quest daily.",
+      "Quests: complete 5 for Adventurer — keep Bellad's quests always active.",
+      "Exploration: read the River Valley sign for Doloc, Our New Home; fish the farthest point of a lake for Art of Fishing.",
+      "Use chapter selection to backtrack for anything you missed ⚠️."
+     ]
+    },
+    {
+     "type": "list",
+     "tag": "TRACK",
+     "heading": "How to Track the Full 80",
+     "body": "Where to follow the list as 1.0 players complete it.",
+     "items": [
+      "The Steam store page's achievement list for Doloc Town (app 2285550).",
+      "Steam Community guides — player-written checklists usually appear fastest after launch.",
+      "TrueSteamAchievements and SteamDB for completion percentages."
      ]
     },
     {
@@ -1975,7 +2296,7 @@
   {
    "slug": "update-log",
    "title": "Doloc Town Update Log: 1.0 & Early Access History",
-   "metaTitle": "Doloc Town Update Log: 1.0 Full Release Notes & EA History",
+   "metaTitle": "Doloc Town Update Log: 1.0 Release Notes and EA History",
    "metaDescription": "Every major Doloc Town update: the 1.0 full release (Aug 6, 2026) and the Early Access updates that built it.",
    "intro": "Track every major Doloc Town update, from the first Early Access build to the 1.0 full release.",
    "sections": [
