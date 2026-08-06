@@ -392,6 +392,64 @@ ZH.update({
    {"heading":"小贴士","body":"在 Deck 上遇到问题先检查更新——开发者表示待优化内容通常是原因。"}
   ]
  },
+ "where-to-buy": {
+  "title":"在哪里购买多洛可小镇（价格、折扣与平台）",
+  "metaTitle":"在哪里购买多洛可小镇：价格与平台（2026）",
+  "metaDescription":"在哪里购买多洛可小镇、Steam 各区价格、首发折扣、支援者包以及支持哪些平台。",
+  "intro":"多洛可小镇 1.0 于 2026 年 8 月 6 日发售。这里告诉你确切在哪里买、多少钱，以及捆绑包里有什么。",
+  "sections":[
+   {"heading":"价格与捆绑包","body":"截至 2026 年 8 月的官方价格，已核对 Steam 商店页与官方 1.0 公告。",
+    "columns":["项目","详情"],
+    "rows":[["标准价格（国区）","Steam 上 ¥58.00"],["首发折扣","1.0 首发促销 20% 折扣 → ¥46.40（至 2026 年 8 月 19 日）"],["支援者包","可选捆绑包，含额外数字内容——当前内容见 Steam 页面"],["平台","PC（Windows）Steam"],["语言","en / zh-CN / zh-TW / fr / de / ja / ko / pt-BR / ru（9 种）"]]},
+   {"heading":"直接回答","body":"购买前需要知道的信息。","items":[
+    "在 Steam 购买——官方商店页是获得多洛可小镇的主要渠道",
+    "1.0 首发促销 20% 折扣，至 2026 年 8 月 19 日 ¥46.40",
+    "多洛可小镇是单人游戏——1.0 没有多人或合作模式",
+    "支援者包是可选项，不是游玩完整游戏所必需的",
+    "官方 1.0 语言支持 9 种，包括英语、中文与日语",
+   ]},
+   {"heading":"购买常见问题","items":[
+    ["在哪里购买多洛可小镇？","在 Steam——store.steampowered.com/app/2285550。这是 PC 版的主要商店。"],
+    ["多洛可小镇多少钱？","标准价 ¥58.00（区域定价不同）。1.0 首发折扣至 2026 年 8 月 19 日 ¥46.40。"],
+    ["有支援者包吗？","有——可选捆绑包，含额外数字内容。当前内容与价格见 Steam 页面。"],
+    ["多洛可小镇能联机吗？","不能——开发者确认 1.0 为纯单人体验。合作模式未来不排除。"],
+    ["支持哪些语言？","1.0 支持 9 种语言：英语、简/繁中文、法语、德语、日语、韩语、巴西葡萄牙语与俄语。"],
+    ["抢先体验存档会继承吗？","1.0 是同一款游戏的延续——EA 存档可带入正式版（更新前请在 Steam 页面确认）。"],
+   ]}
+  ]
+ },
+ "how-long-to-beat": {
+  "title":"多洛可小镇通关要多久？",
+  "metaTitle":"多洛可小镇时长：通关要多久（2026）",
+  "metaDescription":"多洛可小镇通关时长：核心游戏 30+ 小时、100% 完成 100+ 小时，来源为官方商店页。",
+  "intro":"多洛可小镇是内容深厚的农场模拟，通关时间取决于你想做多少事。官方商店页给出了明确数字。",
+  "sections":[
+   {"heading":"官方游戏时长","body":"来自官方 Steam 商店页与 1.0 公告。",
+    "columns":["游玩方式","官方时长","包含内容"],
+    "rows":[["主线 / 核心","30+ 小时","剧情、主线任务与核心农场发展"],["100% 完成","100+ 小时","全部 80 个成就、完整基因研究、钓鱼、畜牧、自动化"],["休闲游玩","40-60 小时","主线加上适量的支线内容"],["短程专注","25-30 小时","只做剧情与主要系统，跳过可选收集"]]},
+   {"heading":"什么让游戏很长","body":"最花时间的系统。","items":[
+    "80 个 Steam 成就（基础 43 + 1.0 新增 37）鼓励全收集",
+    "作物基因系统：30+ 作物 × 约 20 种突变需要研究与培育",
+    "钓鱼：不同池塘、鱼竿与天气有不同渔获——集齐图鉴需要时间",
+    "农业自动化（太阳能+风能→无人机站）是一整条科技树",
+    "5 个区域加上 1.0 新增的旧城废墟带来大量探索时间",
+   ]},
+   {"heading":"想玩快或玩更久","body":"按你想要的速度来。","items":[
+    "想快速通关：专注主线任务与镇务，让自动化处理日常农活",
+    "想 100%：并行推进成就、基因实验室与鱼类图鉴——别留到最后",
+    "善用季节天气：用暴雨浇灌、用雷暴蓄电，而不是对抗它们",
+    "4 月旱季前囤货——价格飙升、作物枯萎",
+   ]},
+   {"heading":"时长常见问题","items":[
+    ["多洛可小镇多长？","官方商店页列出核心游戏 30+ 小时，全收集额外内容 100+ 小时。"],
+    ["100% 现实吗？","现实，但是马拉松——全部 80 个成就、基因研究、钓鱼与自动化需要 100+ 小时。"],
+    ["基因系统很花时间吗？","会——研究 30+ 作物约 20 种突变是最长的可选系统之一。"],
+    ["有通关后内容吗？","旧城废墟区域与成就收集会在主线结束后延长游玩。"],
+    ["多洛可小镇值这个时间投入吗？","首发 ¥46.40 对 30+ 小时游戏来说性价比很高——喜欢农场模拟就值得。"],
+   ]}
+  ]
+ },
+
 })
 
 # ---------- apply translations ----------
@@ -712,6 +770,64 @@ JA.update({
     "items":["Steam Deckで公式に「Playable」。","1.0リリース時点で「Verified」ではない。","問題はバグではなく最適化待ちの可能性が高いと開発者。","既知の問題を修正し、将来のアップデートでVerifiedを目指す。" ]},
   ]
  },
+ "where-to-buy": {
+  "title":"ドロックタウンの購入方法（価格・割引・対応機種）",
+  "metaTitle":"ドロックタウンはどこで買える？価格と対応機種（2026）",
+  "metaDescription":"ドロックタウンの購入方法、Steam の価格、発売記念割引、サポーターパック、対応プラットフォーム。",
+  "intro":"ドロックタウン 1.0 は2026年8月6日に発売されました。購入先、価格、バンドルの中身を解説します。",
+  "sections":[
+   {"heading":"価格とバンドル","body":"2026年8月時点の公式価格（Steam ストアと公式 1.0 アナウンスで確認）。",
+    "columns":["項目","詳細"],
+    "rows":[["標準価格（中国）","Steam で ¥58.00"],["発売記念割引","1.0 発売記念20%オフ → ¥46.40（2026年8月19日まで）"],["サポーターパック","追加デジタルコンテンツ付きの任意バンドル——内容は Steam ページで確認"],["対応機種","PC（Windows）Steam"],["言語","en / zh-CN / zh-TW / fr / de / ja / ko / pt-BR / ru（9言語）"]]},
+   {"heading":"結論","body":"購入前に知っておきたい情報。","items":[
+    "Steam で購入 — 公式ストアがドロックタウンの主な入手先",
+    "1.0 発売記念20%オフで、2026年8月19日まで ¥46.40",
+    "ドロックタウンはシングルプレイゲーム — 1.0 にマルチや協力プレイはありません",
+    "サポーターパックは任意で、本編プレイに必須ではありません",
+    "公式 1.0 の言語対応は9言語（英語・中国語・日本語含む）",
+   ]},
+   {"heading":"購入FAQ","items":[
+    ["どこで買える？","Steam（store.steampowered.com/app/2285550）です。PC 版の主要ストア。"],
+    ["いくら？","標準 ¥58.00（地域価格あり）。1.0 発売記念割引で2026年8月19日まで ¥46.40。"],
+    ["サポーターパックは？","あります — 追加デジタルコンテンツ付きの任意バンドル。内容と価格は Steam ページで。"],
+    ["マルチプレイは？","ありません — 開発者は1.0がシングルプレイ体験と確認。将来の協力は否定していません。"],
+    ["対応言語は？","1.0 で9言語：英語、簡体/繁体中国語、フランス語、ドイツ語、日本語、韓国語、ブラジルポルトガル語、ロシア語。"],
+    ["EAのセーブは引き継がれる？","1.0 は同じゲームの続き — EA セーブは正式版に引き継がれます（更新前に Steam ページで確認）。"],
+   ]}
+  ]
+ },
+ "how-long-to-beat": {
+  "title":"ドロックタウンのクリア時間は？",
+  "metaTitle":"ドロックタウンの長さ・クリア時間（2026）",
+  "metaDescription":"ドロックタウンのクリア時間：コア 30時間以上、100%は100時間以上（公式ストア表記）。",
+  "intro":"ドロックタウンはやり込み要素の多い農場シミュレーション。プレイ時間は何をどこまでやるか次第です。公式ストアが明確な数字を示しています。",
+  "sections":[
+   {"heading":"公式プレイ時間","body":"公式 Steam ストアと 1.0 アナウンスより。",
+    "columns":["プレイ方法","公式時間","含まれるもの"],
+    "rows":[["メイン / コア","30時間以上","ストーリー、メインクエスト、農場の基礎育成"],["100% コンプ","100時間以上","全80実績、遺伝子研究、釣り、牧畜、自動化"],["のんびりプレイ","40〜60時間","メイン＋適度なサブコンテンツ"],["短期集中","25〜30時間","ストーリーと主要システムのみ、収集はスキップ"]]},
+   {"heading":"長くなる理由","body":"時間を最も消費するシステム。","items":[
+    "全80実績（基礎43＋1.0で37）がコンプを促す",
+    "作物遺伝子システム：30+作物×約20変異の研究と育成",
+    "釣り：池・竿・天候で違う獲物 — 図鑑コンプに時間がかかる",
+    "農業オートメーション（太陽光+風力→ドローン基地）は一つのツリー",
+    "5地域＋1.0の旧市街遺跡が探索時間を増やす",
+   ]},
+   {"heading":"早く／じっくり遊ぶ","body":"自分に合ったペースで。","items":[
+    "ストーリーを早く：メインクエストと街の依頼に集中し、ルーチン農作業は自動化に任せる",
+    "100%を目指す：実績・遺伝子ラボ・魚図鑑を並行で — 最後にまとめない",
+    "季節の天候を利用：嵐で水やり、雷雨で蓄電 — 戦わず活用する",
+    "4月の干ばつ前に備蓄 — 価格が高騰し作物は枯れる",
+   ]},
+   {"heading":"時間FAQ","items":[
+    ["クリア時間は？","公式ストアでコア30時間以上、全収集で100時間以上の追加コンテンツと記載。"],
+    ["100%は現実的？","現実的ですがマラソン — 全80実績・遺伝子・釣り・自動化で100時間以上。"],
+    ["遺伝子システムは時間を食う？","はい — 30+作物で約20変異の研究は最長級の任意システムの一つ。"],
+    ["クリア後コンテンツは？","旧市街遺跡と実績集めがメインストーリー後も続きます。"],
+    ["時間対価値は？","発売記念の ¥46.40 は30時間以上のゲームとしては非常にコスパ良好 — 農場シミュが好きならお得。"],
+   ]}
+  ]
+ },
+
 })
 
 KO = {
@@ -1001,6 +1117,64 @@ KO.update({
    {"heading":"팁","body":"Deck에서 문제가 생기면 먼저 업데이트를 확인하세요——개발자는 최적화 대기가 일반적인 원인이라고 합니다."}
   ]
  },
+ "where-to-buy": {
+  "title":"돌록 타운 구매처 (가격, 할인 & 플랫폼)",
+  "metaTitle":"돌록 타운 어디서 사나: 가격 & 플랫폼 (2026)",
+  "metaDescription":"돌록 타운 구매처, Steam 지역별 가격, 출시 할인, 서포터 팩, 지원 플랫폼.",
+  "intro":"돌록 타운 1.0은 2026년 8월 6일 출시됐습니다. 구매처, 가격, 번들 구성을 알려드립니다.",
+  "sections":[
+   {"heading":"가격 & 번들","body":"2026년 8월 기준 공식 가격 (Steam 상점 및 공식 1.0 발표 확인).",
+    "columns":["항목","내용"],
+    "rows":[["표준 가격(중국)","Steam ¥58.00"],["출시 할인","1.0 출시 20% 할인 → ¥46.40 (2026년 8월 19일까지)"],["서포터 팩","추가 디지털 콘텐츠 포함 선택 번들 — 내용은 Steam 페이지에서 확인"],["플랫폼","PC(Windows) Steam"],["언어","en / zh-CN / zh-TW / fr / de / ja / ko / pt-BR / ru (9개 언어)"]]},
+   {"heading":"결론","body":"구매 전 알아야 할 정보.","items":[
+    "Steam에서 구매 — 공식 스토어가 돌록 타운의 주요 판매처",
+    "1.0 출시 20% 할인으로 2026년 8월 19일까지 ¥46.40",
+    "돌록 타운은 싱글 플레이 게임 — 1.0에 멀티나 협동 없음",
+    "서포터 팩은 선택 사항이며 본편 플레이에 필수 아님",
+    "공식 1.0 언어 지원 9개: 영어, 중국어, 일본어 포함",
+   ]},
+   {"heading":"구매 FAQ","items":[
+    ["어디서 사나요?","Steam (store.steampowered.com/app/2285550)입니다. PC 버전의 주요 스토어."],
+    ["얼마인가요?","표준 ¥58.00 (지역 가격 상이). 1.0 출시 할인으로 2026년 8월 19일까지 ¥46.40."],
+    ["서포터 팩이 있나요?","네 — 추가 디지털 콘텐츠가 포함된 선택 번들입니다. 내용과 가격은 Steam 페이지에서."],
+    ["멀티플레이 되나요?","아니요 — 개발자가 1.0은 싱글 플레이로 확인했습니다. 협동은 미래에 배제하지 않음."],
+    ["지원 언어는?","1.0에서 9개 언어: 영어, 간체/번체 중국어, 프랑스어, 독일어, 일본어, 한국어, 브라질 포르투갈어, 러시아어."],
+    ["EA 세이브는 이어지나요?","1.0은 같은 게임의 연속 — EA 세이브가 정식판에 이어집니다 (업데이트 전 Steam 페이지 확인)."],
+   ]}
+  ]
+ },
+ "how-long-to-beat": {
+  "title":"돌록 타운 클리어 시간은?",
+  "metaTitle":"돌록 타운 길이: 클리어 시간 (2026)",
+  "metaDescription":"돌록 타운 클리어 시간: 코어 30시간+, 100% 100시간+ (공식 스토어 기준).",
+  "intro":"돌록 타운은 깊이 있는 농장 시뮬레이션으로, 플레이 시간은 얼마나 하느냐에 따라 달라집니다. 공식 스토어가 명확한 수치를 제시합니다.",
+  "sections":[
+   {"heading":"공식 플레이 시간","body":"공식 Steam 스토어 및 1.0 발표 기준.",
+    "columns":["플레이 방식","공식 시간","포함 내용"],
+    "rows":[["메인 / 코어","30시간 이상","스토리, 메인 퀘스트, 핵심 농장 진행"],["100% 클리어","100시간 이상","전체 80개 업적, 유전자 연구, 낚시, 목축, 자동화"],["여유 플레이","40–60시간","메인 + 적당한 서브 콘텐츠"],["빠른 진행","25–30시간","스토리와 주요 시스템만, 수집 생략"]]},
+   {"heading":"길어지는 이유","body":"가장 시간이 걸리는 시스템.","items":[
+    "80개 업적(기본 43 + 1.0 추가 37)이 완주를 유도",
+    "작물 유전자 시스템: 30+ 작물 × 약 20개 변이 연구와 육종",
+    "낚시: 연못·낚싯대·날씨에 따라 다른 어획 — 도감 완성이 오래 걸림",
+    "농업 자동화(태양광+풍력→드론 기지)는 하나의 테크 트리",
+    "5개 지역 + 1.0의 옛 도시 유적이 탐험 시간을 늘림",
+   ]},
+   {"heading":"빠르게 / 오래 즐기기","body":"원하는 속도를 고르세요.","items":[
+    "스토리 빨리: 메인 퀘스트와 마을 의뢰에 집중하고 일상 농사는 자동화에 맡기기",
+    "100% 목표: 업적·유전자 랩·물고기 도감을 병행 — 마지막에 몰아하지 말 것",
+    "계절 날씨 활용: 폭풍으로 물 주기, 뇌우로 전력 저장 — 싸우지 말고 활용",
+    "4월 가뭄 전에 비축 — 가격이 폭등하고 작물이 시듦",
+   ]},
+   {"heading":"길이 FAQ","items":[
+    ["얼마나 걸리나요?","공식 스토어에 코어 30시간+, 전체 수집 100시간+ 추가 콘텐츠로 표기."],
+    ["100% 현실적인가요?","현실적이지만 마라톤 — 80개 업적, 유전자, 낚시, 자동화에 100시간 이상."],
+    ["유전자 시스템이 오래 걸리나요?","네 — 30+ 작물 약 20개 변이 연구는 가장 긴 선택 시스템 중 하나입니다."],
+    ["엔딩 후 콘텐츠가 있나요?","옛 도시 유적과 업적 수집이 메인 스토리 후에도 이어집니다."],
+    ["시간 대비 가치 있나요?","출시 할인 ¥46.40에 30시간+ 게임이면 가성비가 매우 좋습니다 — 농장 시뮬을 좋아한다면 추천."],
+   ]}
+  ]
+ },
+
 })
 
 ES = {
@@ -1290,6 +1464,64 @@ ES.update({
    {"heading":"Consejo","body":"Si tienes problemas en Deck, comprueba primero las actualizaciones: el equipo dice que las optimizaciones pendientes son la causa habitual."}
   ]
  },
+ "where-to-buy": {
+  "title":"Dónde comprar Doloc Town (Precio, descuentos y plataformas)",
+  "metaTitle":"Dónde comprar Doloc Town: Precio y plataformas (2026)",
+  "metaDescription":"Dónde comprar Doloc Town, precio en Steam, el descuento de lanzamiento, el paquete de apoyo y las plataformas compatibles.",
+  "intro":"Doloc Town 1.0 salió el 6 de agosto de 2026. Aquí está exactamente dónde comprarlo, cuánto cuesta y qué incluyen los paquetes.",
+  "sections":[
+   {"heading":"Precio y paquetes","body":"Precio oficial a agosto de 2026, verificado en la tienda de Steam y el anuncio oficial de 1.0.",
+    "columns":["Elemento","Detalle"],
+    "rows":[["Precio estándar (CN)","¥58.00 en Steam"],["Descuento de lanzamiento","20% de descuento → ¥46.40 durante la promoción de 1.0 (hasta el 19 de agosto de 2026)"],["Paquete de apoyo","Paquete opcional con contenido digital extra — consulta el contenido actual en Steam"],["Plataformas","PC (Windows) en Steam"],["Idiomas","en / zh-CN / zh-TW / fr / de / ja / ko / pt-BR / ru (9 idiomas)"]]},
+   {"heading":"La respuesta directa","body":"Lo que necesitas saber antes de comprar.","items":[
+    "Cómpralo en Steam — la tienda oficial es el lugar principal para conseguir Doloc Town",
+    "La promoción de lanzamiento de 1.0 ofrece un 20 % de descuento: ¥46.40 hasta el 19 de agosto de 2026",
+    "Doloc Town es un juego de un jugador — no hay multijugador ni cooperativo en 1.0",
+    "El paquete de apoyo es opcional y no es necesario para jugar al juego completo",
+    "El 1.0 oficial admite 9 idiomas, incluidos inglés, chino y japonés",
+   ]},
+   {"heading":"FAQ de compra","items":[
+    ["¿Dónde compro Doloc Town?","En Steam — store.steampowered.com/app/2285550. Es la tienda principal para la versión de PC."],
+    ["¿Cuánto cuesta?","¥58.00 estándar (el precio regional varía). El descuento de lanzamiento de 1.0 lo deja en ¥46.40 hasta el 19 de agosto de 2026."],
+    ["¿Hay paquete de apoyo?","Sí — un paquete opcional con contenido digital extra. Consulta el contenido y precio actuales en Steam."],
+    ["¿Doloc Town es multijugador?","No — los desarrolladores confirmaron que 1.0 es una experiencia de un jugador. El cooperativo no se descarta en el futuro."],
+    ["¿Qué idiomas admite?","9 idiomas en 1.0: inglés, chino simplificado/tradicional, francés, alemán, japonés, coreano, portugués brasileño y ruso."],
+    ["¿Mi partida de Acceso Anticipado se conserva?","El 1.0 continúa el mismo juego — las partidas de EA pasan a la versión completa (verifica en Steam antes de actualizar)."],
+   ]}
+  ]
+ },
+ "how-long-to-beat": {
+  "title":"¿Cuánto se tarda en pasar Doloc Town?",
+  "metaTitle":"Duración de Doloc Town: cuánto se tarda (2026)",
+  "metaDescription":"Cuánto se tarda en pasar Doloc Town: más de 30 horas de juego principal y más de 100 para el 100 %, según la tienda oficial.",
+  "intro":"Doloc Town es un simulador agrícola profundo, así que el tiempo depende de cuánto quieras hacer. La tienda oficial da cifras claras.",
+  "sections":[
+   {"heading":"Tiempo oficial","body":"De la tienda oficial de Steam y del anuncio de 1.0.",
+    "columns":["Estilo","Tiempo oficial","Qué incluye"],
+    "rows":[["Historia principal / núcleo","30+ horas","Historia, misiones principales y progreso básico de la granja"],["100% de completado","100+ horas","Los 80 logros, investigación genética, pesca, ganadería y automatización"],["Partida relajada","40-60 horas","Historia principal más una cantidad cómoda de contenido secundario"],["Partida corta","25-30 horas","Historia y sistemas principales, omitiendo la recolección opcional"]]},
+   {"heading":"Qué lo hace largo","body":"Los sistemas que más tiempo añaden.","items":[
+    "Los 80 logros de Steam (43 base + 37 nuevos en 1.0) invitan a completarlo todo",
+    "Sistema genético de cultivos: ~20 mutaciones en más de 30 cultivos por investigar y criar",
+    "Pesca: estanques, cañas y clima diferentes dan capturas distintas — completar el catálogo lleva tiempo",
+    "La automatización agrícola (solar + eólica → estaciones de drones) es todo un árbol tecnológico",
+    "Las 5 regiones más la nueva área de las Ruinas de la Ciudad Vieja añaden tiempo de exploración",
+   ]},
+   {"heading":"Jugar rápido (o más lento)","body":"Marca el ritmo que quieras.","items":[
+    "Para terminar la historia rápido: céntrate en las misiones principales y deja que la automatización haga las tareas rutinarias",
+    "Para el 100%: trabaja logros, el laboratorio genético y el catálogo de peces en paralelo — no lo dejes para el final",
+    "El clima de temporada importa: usa las tormentas para regar y las eléctricas para almacenar energía en vez de combatirlas",
+    "Acumula reservas antes de la sequía de abril — los precios suben y los cultivos se marchitan",
+   ]},
+   {"heading":"FAQ de duración","items":[
+    ["¿Cuánto dura Doloc Town?","La tienda oficial indica más de 30 horas de juego principal y más de 100 de contenido adicional para el 100%."],
+    ["¿Es realista el 100%?","Sí, pero es una maratón — más de 100 horas entre los 80 logros, la genética, la pesca y la automatización."],
+    ["¿El sistema genético añade mucho tiempo?","Sí — investigar ~20 mutaciones en más de 30 cultivos es uno de los sistemas opcionales más largos."],
+    ["¿Hay contenido posfinal?","Las Ruinas de la Ciudad Vieja y la caza de logros extienden la partida tras la historia principal."],
+    ["¿Merece la pena por el tiempo?","A ¥46.40 de lanzamiento, el coste por hora es muy bajo para un juego de 30+ horas — buena relación si te gustan los sims agrícolas."],
+   ]}
+  ]
+ },
+
 })
 
 # ---------- apply translations ----------

@@ -1903,6 +1903,206 @@
     "icon": "steam-deck"
    },
    "heroImage": "/images/steam-deck.jpg"
+  },
+  {
+   "slug": "where-to-buy",
+   "title": "Where to Buy Doloc Town (Price, Discounts & Platforms)",
+   "metaTitle": "Where to Buy Doloc Town: Price & Platforms (2026)",
+   "metaDescription": "Where to buy Doloc Town, Steam price in your region, the launch discount, the Supporter Pack and what platforms are supported.",
+   "intro": "Doloc Town 1.0 launched on August 6, 2026. Here is exactly where to buy it, what it costs, and what is included in the bundles.",
+   "sections": [
+    {
+     "type": "table",
+     "heading": "Price & Bundles",
+     "body": "Official pricing as of August 2026, checked against the Steam store page and the official 1.0 announcement.",
+     "columns": [
+      "Item",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Standard price (CN)",
+       "¥58.00 on Steam"
+      ],
+      [
+       "Launch discount",
+       "20% off → ¥46.40 during the 1.0 launch promotion (until August 19, 2026)"
+      ],
+      [
+       "Supporter Pack",
+       "Optional bundle with extra digital content — check the Steam page for current contents"
+      ],
+      [
+       "Platforms",
+       "PC (Windows) on Steam"
+      ],
+      [
+       "Languages",
+       "en / zh-CN / zh-TW / fr / de / ja / ko / pt-BR / ru (9 languages)"
+      ]
+     ]
+    },
+    {
+     "type": "list",
+     "heading": "The Straight Answer",
+     "body": "What you need to know before buying.",
+     "items": [
+      "Buy on Steam — the official store page is the main place to get Doloc Town",
+      "The 1.0 launch promotion takes 20% off, so ¥46.40 until August 19, 2026",
+      "Doloc Town is a single-player game — there is no multiplayer or co-op at 1.0",
+      "The Supporter Pack is optional and not required to play the full game",
+      "Official 1.0 system language support covers 9 languages, including English, Chinese and Japanese"
+     ]
+    },
+    {
+     "type": "faq",
+     "heading": "Buying FAQ",
+     "body": "",
+     "items": [
+      [
+       "Where do I buy Doloc Town?",
+       "On Steam — store.steampowered.com/app/2285550. It is the primary storefront for the PC version."
+      ],
+      [
+       "How much does Doloc Town cost?",
+       "¥58.00 standard (regional pricing varies). The 1.0 launch discount makes it ¥46.40 until August 19, 2026."
+      ],
+      [
+       "Is there a Supporter Pack?",
+       "Yes — an optional bundle with extra digital content. Check the Steam page for the current contents and price."
+      ],
+      [
+       "Is Doloc Town multiplayer?",
+       "No — the developers confirmed 1.0 is a single-player experience. Co-op is not ruled out for the future."
+      ],
+      [
+       "What languages are supported?",
+       "9 languages at 1.0: English, Simplified/Traditional Chinese, French, German, Japanese, Korean, Brazilian Portuguese and Russian."
+      ],
+      [
+       "Will my Early Access save carry over?",
+       "The 1.0 release continues the same game — Early Access saves carry into the full version (verify on the Steam page before updating)."
+      ]
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "Official Steam page",
+     "url": "https://store.steampowered.com/app/2285550/Doloc_Town/"
+    },
+    {
+     "label": "Official 1.0 announcement",
+     "url": "https://steamcommunity.com/app/2285550/allnews/?l=english"
+    }
+   ],
+   "meta": {
+    "icon": "where-to-buy"
+   }
+  },
+  {
+   "slug": "how-long-to-beat",
+   "title": "How Long Does Doloc Town Take to Beat?",
+   "metaTitle": "Doloc Town Length: How Long to Beat (2026)",
+   "metaDescription": "How long Doloc Town takes to beat: 30+ hours of core gameplay and 100+ hours for 100% completion, per the official store page.",
+   "intro": "Doloc Town is a deep farming sim, so play time depends on how much you want to do. The official store page gives clear numbers.",
+   "sections": [
+    {
+     "type": "table",
+     "heading": "Official Play Time",
+     "body": "From the official Steam store page and the 1.0 announcement.",
+     "columns": [
+      "Playthrough",
+      "Official Time",
+      "What It Includes"
+     ],
+     "rows": [
+      [
+       "Main story / core",
+       "30+ hours",
+       "Story, main quests and core farm progression"
+      ],
+      [
+       "100% completion",
+       "100+ hours",
+       "All 80 achievements, full gene research, fishing, ranching, automation"
+      ],
+      [
+       "Relaxed playthrough",
+       "40-60 hours",
+       "Core story plus a comfortable amount of side content"
+      ],
+      [
+       "Short focused run",
+       "25-30 hours",
+       "Story and main systems, skipping optional collecting"
+      ]
+     ]
+    },
+    {
+     "type": "list",
+     "heading": "What Makes It Long",
+     "body": "The systems that add the most play time.",
+     "items": [
+      "80 Steam achievements (43 base + 37 new in 1.0) encourage full completion",
+      "Crop gene system: ~20 mutations across 30+ crops to research and breed",
+      "Fishing: different ponds, rods and weather give different catches — completing the catalog takes a while",
+      "Farming automation (solar + wind → drone stations) is a whole tech tree to build toward",
+      "The 5 regions plus the new Old City Ruins area add exploration time"
+     ]
+    },
+    {
+     "type": "list",
+     "heading": "How to Play Faster (or Longer)",
+     "body": "Set the pace you want.",
+     "items": [
+      "To finish the story quickly: focus on main quests and town tasks, and let automation handle routine farming",
+      "To 100%: work on achievements, the gene lab and the fish catalog in parallel — don't save them for the end",
+      "Season weather matters: use storms to water and thunderstorms to store power instead of fighting them",
+      "Keep a stockpile before the April drought — prices spike and crops wilt"
+     ]
+    },
+    {
+     "type": "faq",
+     "heading": "Length FAQ",
+     "body": "",
+     "items": [
+      [
+       "How long is Doloc Town?",
+       "The official store page lists 30+ hours of core gameplay and 100+ hours of additional content for full completion."
+      ],
+      [
+       "Is 100% completion realistic?",
+       "Yes, but it's a marathon — 100+ hours across all 80 achievements, gene research, fishing and automation."
+      ],
+      [
+       "Does the gene system add much time?",
+       "Yes — researching ~20 mutations across 30+ crops is one of the longest optional systems."
+      ],
+      [
+       "Is there post-game content?",
+       "The Old City Ruins area and achievement hunting extend play after the main story ends."
+      ],
+      [
+       "Is Doloc Town worth it for the time investment?",
+       "At ¥46.40 during launch, the cost-per-hour is very low for a 30+ hour game — good value if you like farming sims."
+      ]
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "Official Steam page",
+     "url": "https://store.steampowered.com/app/2285550/Doloc_Town/"
+    },
+    {
+     "label": "Official 1.0 announcement",
+     "url": "https://steamcommunity.com/app/2285550/allnews/?l=english"
+    }
+   ],
+   "meta": {
+    "icon": "how-long-to-beat"
+   }
   }
  ]
 }
