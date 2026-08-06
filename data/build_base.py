@@ -1,0 +1,598 @@
+# -*- coding: utf-8 -*-
+"""Doloc Town site.base.json 构建：en 全量 20 页（每页 1-2 来源，未实测标注 ⚠️）."""
+import json
+from pathlib import Path
+ROOT = Path(__file__).parent
+
+STEAM = "https://store.steampowered.com/app/2285550/Doloc_Town/"
+NEWS1 = "https://steamcommunity.com/app/2285550/allnews/?l=english"
+MEJORESS = "https://www.mejoress.com/en/doloc-town-guide/"
+GAME8 = "https://game8.co/games/Doloc-Town"
+GREYWIKI = "https://doloctown.huijiwiki.com/"
+CGMAG = "https://www.cgmagonline.com/review/doloc-town/"
+
+site = {
+ "site": {
+  "name": "Doloc Town Guide",
+  "domain": "doloctownguides.com",
+  "tagline": "1.0 Guide: Farming, Automation, Fishing, Genes & More",
+  "description": "The best Doloc Town 1.0 guides: how to play, farming automation, gene system, fishing, drone combat, friendship, story, achievements, weather and FAQs. Updated regularly.",
+  "language": "en",
+  "gaId": "",
+  "gscVerification": "",
+  "adsenseId": "",
+  "ogImage": "/images/hero.jpg",
+  "languages": ["en","zh-CN","zh-TW","ja","ko","es"],
+  "defaultLanguage": "en",
+  "i18n": {}
+ },
+ "game": {
+  "name": "Doloc Town",
+  "releaseDate": "August 6, 2026",
+  "platforms": ["PC (Steam)"],
+  "genre": "Farming Sim / Platformer / Post-Apocalyptic",
+  "price": "¥58.00",
+  "steamUrl": STEAM,
+  "officialSite": "",
+  "intro": "Doloc Town is a side-scrolling pixel-art farming sim set in a post-apocalyptic wasteland. Play as a young scavenger who builds a vertical farm one platform at a time under extreme weather: acid rain, scorching heat and thunderstorms. Gather 40+ resources, fish, ranch, modify crop genes, fight alongside your drone and automate production with solar and wind power. The 1.0 full release on August 6, 2026 adds a complete story ending, the Old City Ruins area, farming automation and 37 new achievements.",
+  "keyFacts": [
+   "1.0 full release: August 6, 2026 with complete story ending",
+   "30+ hours of core gameplay, 100+ hours of additional content",
+   "Farming automation: solar + wind power → drone stations (new in 1.0)",
+   "Crop gene system: ~20 mutations across 30+ crops",
+   "Extreme weather you can turn to your advantage (acid rain, storms, drought)",
+   "80 Steam achievements total (43 base + 37 new in 1.0)"
+  ],
+  "stats": [
+   {"value":"Aug 6","label":"1.0 release"},
+   {"value":"30h+","label":"Core story"},
+   {"value":"80","label":"Achievements"},
+   {"value":"40+","label":"Resources"},
+   {"value":"5","label":"Regions"},
+   {"value":"¥58","label":"On Steam"}
+  ],
+  "aboutPoints": [
+   "Doloc Town is developed by RedSaw Games Studio and published by Logoi Games with Pathea Games as co-publisher.",
+   "The game left Early Access on August 6, 2026 after launching in EA on May 8, 2025.",
+   "Information on this site is fact-checked against the official Steam store page, official 1.0 announcement, publisher news and reputable media (CGMagazine, PCGamesN, RPGamer).",
+   "Community-sourced details are marked with a ⚠️ note until verified by hands-on play."
+  ],
+  "nameI18n": {},
+  "statsI18n": {}
+ },
+ "pages": []
+}
+
+STEAM_URL = STEAM
+NEWS_URL = NEWS1
+
+P0 = [
+ {
+  "slug":"how-to-play",
+  "title":"How to Play Doloc Town",
+  "metaTitle":"How to Play Doloc Town: Complete Beginner's Guide (1.0)",
+  "metaDescription":"New to Doloc Town? Learn the scavenge-farm-build-explore loop, vertical farms, extreme weather tricks, drone combat basics and 1.0 automation in this full beginner's guide.",
+  "intro":"Doloc Town mixes a side-scrolling platformer with a post-apocalyptic farming sim. You start as a scavenger and end as a farming tycoon — here is the full loop, from day one to drones.",
+  "sections":[
+   {"type":"steps","tag":"CORE LOOP","heading":"The Five-Step Core Loop","body":"Every session follows the same rhythm. Master it and the wasteland becomes a farm.",
+    "items":[["Clear the ruins","Break debris and abandoned structures in the wasteland to open paths and reveal resources."],
+    ["Gather resources","Collect 40+ minerals, plants, scraps and machine parts. Out here even junk has a purpose."],
+    ["Farm vertically","Craft planters and stack platforms to build your farm upward — more space for crops and survival."],
+    ["Build and upgrade","Spend resources on the tech tree, blueprints, buildings and your home."],
+    ["Explore new regions","Use upgraded tools and your drone to reach places you couldn't before, including the 1.0 Old City Ruins."]]},
+   {"type":"list","tag":"PLATFORMS","heading":"Vertical Farming Basics","body":"Doloc Town's signature is building up, not out.",
+    "items":["Craft planters and place them on stacked platforms to expand your farm vertically.","Jump and climb between levels — platforming is part of the farming.","Protect crops from acid rain, scorching heat and thunderstorms with covers and placement.","Sow, water and harvest by hand at first; drones take over after 1.0 automation."]},
+   {"type":"table","tag":"WEATHER","heading":"Weather Effects at a Glance","body":"Extreme weather is dangerous — but you can weaponize it.",
+    "columns":["Weather","Effect on crops","How to turn it to your advantage"],
+    "rows":[["Acid rain","Erodes unprotected crops","Build covers; collect acid as a resource"],
+    ["Scorching heat","Bakes the earth, dries soil","Time watering; plant heat-resistant gene strains"],
+    ["Thunderstorm","Damages exposed fields","Harness lightning to power your farm"],
+    ["Torrential rain","Floods low plots","Let it irrigate fields for free"],
+    ["Drought (Month 4)","Crops wither, prices spike","Stockpile and sell high during the price surge"]]},
+   {"type":"steps","tag":"FIRST WEEK","heading":"First Week Priorities (Do This First)","body":"These five moves set up the whole run.",
+    "items":[["Clear your starting plot","More build space = more crops = faster progress."],
+    ["Build a planter and plant fast crops","Quick harvests fund everything else."],
+    ["Talk to the townsfolk daily","Friendship unlocks recipes, tech and story — including Blooming Friendship."],
+    ["Unlock the Guildmaster's quests","Bellad's tasks pay Tech Points for the tech tree."],
+    ["Start a stockpile before Month 4","Drought prices make a hoard profitable."]]},
+   {"type":"list","tag":"COMBAT","heading":"Drone Combat for Beginners","body":"Your drone is your weapon and your survival tool.",
+    "items":["RMB locks on, LMB shoots, Space dodges, R reloads.","Upgrade chassis, barrels and batteries for fire rate, damage and energy.","Charge beam (F) breaks shields on armored Scavenger Bugs.","Fit weapon and lighting modules before exploring ruins."]},
+   {"type":"note","tag":"1.0","heading":"What the 1.0 Release Changes for New Players","body":"The 1.0 update (August 6, 2026) adds a complete story ending, the Old City Ruins region, farming automation (solar + wind → drone stations), the Mushroom Fest and 37 new achievements. If you are starting now, you can automate chores much earlier than Early Access players could. ⚠️ Exact unlock order is still being verified in 1.0."},
+   {"type":"faq","tag":"QUICK","heading":"Quick Answers",
+    "items":[["Is Doloc Town single-player?","Yes. The developers have confirmed the 1.0 release is a single-player experience; co-op/multiplayer may be discussed later based on community feedback."],
+    ["Do I need to water every day?","Yes at the start — but the 'Rain' mutation auto-waters neighbors, and 1.0 drone stations automate watering entirely."],
+    ["Can I build anywhere?","You stack platforms within your farm area. The Old City Ruins (1.0) adds new buildable zones and resources."],
+    ["How long is Doloc Town?","30+ hours for the core story, 100+ hours with fishing, ranching, genes and collections."]]}
+  ],
+  "sources":[
+   {"label":"Official Steam page","url":STEAM_URL},
+   {"label":"Official 1.0 announcement","url":NEWS_URL}
+  ]
+ },
+ {
+  "slug":"automation",
+  "title":"Doloc Town Farming Automation Guide (1.0)",
+  "metaTitle":"Doloc Town Farming Automation: Solar, Wind & Drone Stations (1.0)",
+  "metaDescription":"How farming automation works in Doloc Town 1.0: build solar and wind power, deploy farming drone stations and let drones seed, nurture and harvest for you.",
+  "intro":"The 1.0 release turns you from a farmer into a farm manager. Here is how to generate clean energy, deploy drone stations and automate the whole crop cycle.",
+  "sections":[
+   {"type":"steps","tag":"1.0","heading":"How Farming Automation Works","body":"Automation has three layers: energy, stations and drones.",
+    "items":[["Harness solar and wind power","Build solar panels and wind turbines to generate clean energy for your farm."],
+    ["Build farming drone stations","Stations are the control point that lets drones run farm operations."],
+    ["Assign automated tasks","Drones handle seeding, nurturing plants and gathering yields end-to-end."],
+    ["Free up your time","While drones work, explore, talk to townsfolk or push the story."]]},
+   {"type":"list","tag":"ENERGY","heading":"Solar vs Wind: What to Build First","body":"Start with whichever matches your weather, then balance.",
+    "items":["Solar panels shine in clear weather and pair with sunny seasons.","Wind turbines keep producing through storms — great in storm-heavy months.","A mix of both keeps energy stable across all weather.","⚠️ Exact build costs and energy values are being verified in 1.0."]},
+   {"type":"steps","tag":"INDUSTRIAL","heading":"The Industrial Zone & Conveyor Belts","body":"Automation isn't only for crops.",
+    "items":[["Start the generator in the industrial area","This powers the new conveyor-belt production line."],
+    ["Build conveyor belts","Move materials automatically between stations."],
+    ["Unlock previously unreachable areas","The industrial line grants access to new parts of the map."]]},
+   {"type":"table","tag":"ROADMAP","heading":"Automation Roadmap (Draft)",
+    "columns":["Stage","What you get","When"],
+    "rows":[["Solar/wind power","Energy for stations","Early-mid game ⚠️"],
+    ["First drone station","Automated seeding","Mid game ⚠️"],
+    ["Full crop cycle","Seed → nurture → harvest","Late game ⚠️"],
+    ["Industrial line","Conveyor + new areas","1.0 endgame"]]},
+   {"type":"note","tag":"1.0","heading":"Why This Page Matters","body":"English guides for Doloc Town automation are virtually non-existent — most coverage stops at Early Access basics. This page is one of the first 1.0-specific automation references in English. Details marked ⚠️ will be updated after hands-on verification."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Farming Automation)","url":STEAM_URL},
+   {"label":"Official 1.0 announcement","url":NEWS_URL}
+  ]
+ },
+ {
+  "slug":"gene-system",
+  "title":"Doloc Town Gene System Guide: Mutations & Seeds",
+  "metaTitle":"Doloc Town Gene System: All Mutations, 3 Modules & Seed Mother Plants",
+  "metaDescription":"How the Doloc Town crop gene system works: gene modules, ~20 mutations like Spore Burst and Rain, seed mother plants, and how to breed stronger crops.",
+  "intro":"Reclaim pre-apocalypse tech and rewrite the genetics of 30+ crops. Gene modules stack up to three per seed and unlock mutations that change how your farm behaves.",
+  "sections":[
+   {"type":"list","tag":"BASICS","heading":"How the Gene System Works","body":"Every seed can carry up to three gene modules. The right combo turns a plain crop into a self-watering, self-replicating machine.",
+    "items":["Use gene readers, replicators and synthesizers to inspect and breed seeds.","Unlock seed mother plants via the shop, Aurora seed research and wild mothers.","Stack up to 3 modules per seed — synergy matters more than raw power.","⚠️ Exact module sources are still being verified in 1.0."]},
+   {"type":"table","tag":"MUTATIONS","heading":"Known Gene Mutations (Community-Verified)",
+    "columns":["Mutation","Effect"],
+    "rows":[["Spore Burst","Mature plants drop fruit automatically"],
+    ["Fractal Crop","Extra drops per harvest"],
+    ["Gift of Time","+1 fruit every 28 days of survival"],
+    ["Hope","Harvests drop seeds"],
+    ["Rain","Auto-waters nearby crops"],
+    ["Constitution","Survives off-season at -50% speed"],
+    ["+ ~14 more","⚠️ Full list being verified in 1.0"]]},
+   {"type":"steps","tag":"BREEDING","heading":"How to Breed Stronger Seeds","body":"Follow the mother-plant pipeline.",
+    "items":[["Get a seed mother plant","Buy from the shop, complete Aurora seed research, or find wild mothers."],
+    ["Extract its genes","Use the gene reader to pull modules."],
+    ["Combine up to 3 modules","Synthesize a custom seed."],
+    ["Plant and observe","Watch mutation synergy on your farm."]]},
+   {"type":"note","tag":"TIPS","heading":"Pro Tips","body":"Pair Rain with auto-harvest mutations for a nearly hands-free plot. Gift of Time rewards long runs — plant it early. ⚠️ Community-sourced; verify in your own save."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Gene System)","url":STEAM_URL},
+   {"label":"Doloc Town Huiji Wiki (Chinese)","url":"https://doloctown.huijiwiki.com/"}
+  ]
+ },
+ {
+  "slug":"fishing",
+  "title":"Doloc Town Fishing Guide: Ponds, Weather & Rare Fish",
+  "metaTitle":"Doloc Town Fishing Guide: Ponds, Weather, Rods & Rare Fish",
+  "metaDescription":"Doloc Town fishing explained: different ponds, rods and weather give different catches, plus how rare fish drop advanced parts for your drone.",
+  "intro":"Fishing is a full second career in Doloc Town. Different ponds, rods and weather change what you catch — and rare fish drop advanced drone parts.",
+  "sections":[
+   {"type":"list","tag":"BASICS","heading":"Fishing Basics","body":"No bait required — just a rod and the right spot.",
+    "items":["Different ponds yield different fish.","Rod quality changes what you can catch.","Weather changes the catch table.","Rare fish drop advanced parts used in drone and tool upgrades."]},
+   {"type":"table","tag":"CONDITIONS","heading":"What Changes Your Catch",
+    "columns":["Factor","Effect"],
+    "rows":[["Pond / water type","Each body of water has its own fish pool"],
+    ["Rod tier","Better rods unlock better fish"],
+    ["Weather","Storms and rain can change spawns"],
+    ["Time / season","Some fish are seasonal ⚠️"]]},
+   {"type":"steps","tag":"FARM","heading":"How to Farm Fish Efficiently",
+    "items":[["Map the ponds","Visit every body of water and note what bites."],
+    ["Match rod to target","Upgrade before chasing rare fish."],
+    ["Fish through weather","Storms often bring uncommon catches."],
+    ["Turn fish into parts","Rare fish fund drone and tool upgrades."]]},
+   {"type":"note","tag":"1.0","heading":"New Fish in 1.0","body":"The 1.0 update adds new fish species. ⚠️ The complete English fish list with per-pond and per-weather tables is being compiled and will be added here."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Fishing)","url":STEAM_URL},
+   {"label":"Doloc Town Huiji Wiki (Chinese, fish tables)","url":"https://doloctown.huijiwiki.com/"}
+  ]
+ },
+ {
+  "slug":"drone-combat",
+  "title":"Doloc Town Drone Combat Guide: Upgrades & Modules",
+  "metaTitle":"Doloc Town Drone Combat: Builds, Upgrades & Best Modules",
+  "metaDescription":"Master Doloc Town drone combat: chassis, barrel and battery upgrades, tactical mods like Tactical Capacitor and Shadow Shooter, and how to beat armored enemies.",
+  "intro":"Your drone is a buildable combat platform. Upgrade its chassis, barrel and battery, fit tactical modules and learn to break armored enemies.",
+  "sections":[
+   {"type":"list","tag":"CONTROLS","heading":"Drone Combat Controls","body":"Four inputs cover everything in a fight.",
+    "items":["RMB: lock on target","LMB: fire","Space: dodge / dash","R: reload","F: charge beam (breaks shields)" ]},
+   {"type":"table","tag":"UPGRADES","heading":"Core Upgrades",
+    "columns":["Part","What it changes"],
+    "rows":[["Chassis","Health, mobility, survivability"],
+    ["Barrel","Fire rate and damage"],
+    ["Battery","Energy capacity and uptime"],
+    ["Weapon module","Active combat skill"],
+    ["Lighting module","Visibility in dark ruins"]]},
+   {"type":"table","tag":"MODULES","heading":"Notable Modules (Community-Sourced)",
+    "columns":["Module","Effect"],
+    "rows":[["Tactical Capacitor","Extra damage after reloading"],
+    ["Shadow Shooter","Chance to fire twice"],
+    ["Police Drone / Sniper","Higher-tier combat builds ⚠️"],
+    ["Medium E-chip","Drops from Wetlands boss ⚠️"]]},
+   {"type":"steps","tag":"BUILD","heading":"Build Order for Combat",
+    "items":[["Upgrade battery first","Downtime kills; energy wins fights."],
+    ["Then barrel","More damage per energy spent."],
+    ["Fit a tactical module","Capacitor/Shadow Shooter scale with your build."],
+    ["Save parts from fishing","Rare fish drop advanced parts — fish to fund combat."]]},
+   {"type":"note","tag":"TIP","heading":"Fighting Scavenger Bugs","body":"Armored Scavenger Bugs ignore normal fire. Charge the beam (F) to break their shield, then unload. ⚠️ Details from community guides; verify in 1.0."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Drone)","url":STEAM_URL},
+   {"label":"Mejoress Doloc Town guide","url":MEJORESS}
+  ]
+ },
+ {
+  "slug":"exploration",
+  "title":"Doloc Town Exploration Guide: All 5 Regions",
+  "metaTitle":"Doloc Town Regions: Outskirts, River Valley, Wetlands, Caves & Old City Ruins",
+  "metaDescription":"Every Doloc Town region explained: the Outskirts, River Valley, Wetlands, Caves and the new 1.0 Old City Ruins — plus what resources and secrets each holds.",
+  "intro":"Exploration is the heart of Doloc Town. Five regions hold unique resources, foes and stories — including the brand-new Old City Ruins from the 1.0 release.",
+  "sections":[
+   {"type":"table","tag":"REGIONS","heading":"All Regions at a Glance",
+    "columns":["Region","What's there"],
+    "rows":[["The Outskirts","Starting wasteland, basics and early resources"],
+    ["River Valley","Lush and thriving — why? (a core mystery)"],
+    ["Wetlands","Treacherous, home to the boss that drops the Medium E-chip ⚠️"],
+    ["Caves","Mysterious, resource-rich underground"],
+    ["Old City Ruins (1.0)","New area: fierce enemies, new NPCs, side quests, resources"]]},
+   {"type":"list","tag":"SAFETY","heading":"Surviving the Wilderness","body":"The wilds are dangerous — come prepared.",
+    "items":["Mark your path home or you can end up stranded at night.","Stay alert for vicious creatures and hostiles in ruins.","Upgrade your drone with weapon and lighting modules before long trips.","Bring food — cooking buffs keep you alive and fast."]},
+   {"type":"steps","tag":"1.0","heading":"Exploring the Old City Ruins (New in 1.0)","body":"The final major area of the 1.0 release.",
+    "items":[["Unlock through the story","Many paths across Doloc Town lead toward the ruined city."],
+    ["Expect fierce new enemies","New foes and creatures await."],
+    ["Meet new NPCs and companions","Mysterious companions join the cast."],
+    ["Gather new resources","Old City materials feed endgame crafting."]]},
+   {"type":"note","tag":"MYSTERY","heading":"The Three Mysteries","body":"Why does the River Valley stay lush in a ruined world? What happened to the town's vanished leader? And why do so many pre-apocalypse tech pieces carry the mark of 'Eden'? The 1.0 story answers them."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Exploration)","url":STEAM_URL},
+   {"label":"Official 1.0 announcement","url":NEWS_URL}
+  ]
+ },
+ {
+  "slug":"friendship",
+  "title":"Doloc Town Friendship Guide: Villagers, Gifts & Festivals",
+  "metaTitle":"Doloc Town Friendship Guide: All Villagers, Gifts & Festivals (No Romance)",
+  "metaDescription":"Build friendships in Doloc Town: villager profiles, gift tips, heart events and seasonal festivals. Note: Doloc Town has no romance or marriage system.",
+  "intro":"Doloc Town is friendship-focused by design — there is no romance or marriage mechanic. Raise hearts, attend festivals and unlock recipes and story from every resident.",
+  "sections":[
+   {"type":"note","tag":"OFFICIAL","heading":"No Romance — Friendship Only","body":"The developers have confirmed Doloc Town has no romance/marriage system. Social gameplay is friendship-based: gifts, festivals, heart events and personal storylines. Plan your 'relationship' guides accordingly."},
+   {"type":"table","tag":"VILLAGERS","heading":"Known Villagers (Community-Sourced)",
+    "columns":["Villager","Role / Notes"],
+    "rows":[["Kasia","Shop street, 2nd floor; max friendship unlocks the Blooming Friendship achievement"],
+    ["Guildmaster Bellad","Hands out quests and Tech Points"],
+    ["Kumasang","Roaming NPC in the River Valley; key source of rare materials ⚠️"],
+    ["+ more","⚠️ Full villager list being verified in 1.0"]]},
+   {"type":"steps","tag":"HEARTS","heading":"How to Raise Friendship",
+    "items":[["Talk daily","Simple and free."],
+    ["Give gifts","Each villager has preferences — experiment."],
+    ["Complete quests","Quests raise hearts and pay well."],
+    ["Attend festivals","Seasonal events give big friendship boosts."]]},
+   {"type":"list","tag":"REWARDS","heading":"What Friendship Unlocks","body":"Hearts are a progression system, not just flavor.",
+    "items":["Unique recipes per friend (e.g., the Alchemy Station).","Personal storyline scenes.","Festival participation rewards.","⚠️ Exact heart thresholds being verified in 1.0."]},
+   {"type":"faq","tag":"QUICK","heading":"Quick Answers",
+    "items":[["Is there romance in Doloc Town?","No. The developers confirmed there is no romance or marriage system; relationships are friendship-based."],
+    ["Do friendships matter?","Yes — friends unlock recipes, storylines and festival content."],
+    ["When is the next festival?","The 1.0 release adds the Mushroom Fest alongside the seasonal festivals."]]}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Friendship & Festivals)","url":STEAM_URL},
+   {"label":"Ingame News on 1.0 (no romance)","url":"https://ingamenews.com/gaming-news/doloc-town-1-0-release-date-set-for-august-6/"}
+  ]
+ },
+]
+
+P1 = [
+ {
+  "slug":"farming",
+  "title":"Doloc Town Farming Guide: Crops, Seasons & Soil",
+  "metaTitle":"Doloc Town Farming Guide: Crops, Seasons, Trees & Soil",
+  "metaDescription":"Everything about Doloc Town farming: seasonal crops, fruit trees, herbs, mushrooms, planters and soil, plus tool upgrades and harvest tips.",
+  "intro":"Farming is the foundation of your wasteland farm. Learn what to plant, when, and how to protect it from extreme weather.",
+  "sections":[
+   {"type":"list","tag":"CROPS","heading":"Crop Basics","body":"Self-sufficiency starts with the right plants.",
+    "items":["Seasonal crops rotate with the calendar.","Fruit trees take 7 days and produce forever once mature.","Herbs grow in 2 days — fast filler crops.","Mushrooms are an autumn forage bonus.","A sickle harvests whole groups at once."]},
+   {"type":"table","tag":"GROWTH","heading":"Crop Growth Times",
+    "columns":["Crop type","Time","Notes"],
+    "rows":[["Herbs","2 days","Fast, low investment"],
+    ["Seasonal crops","Varies","Match the season"],
+    ["Fruit trees","7 days","Permanent producer"],
+    ["Mushrooms","Autumn forage","Free bonus ⚠️"]]},
+   {"type":"steps","tag":"PROTECT","heading":"Protecting Crops from Weather",
+    "items":[["Watch the forecast","Acid rain, heat and storms all threaten fields."],
+    ["Build covers","Shield exposed plots before storms."],
+    ["Use the Rain gene","Auto-watering mutation keeps soil moist."],
+    ["Automate in 1.0","Drone stations handle seeding, nurturing and harvest."]]},
+   {"type":"note","tag":"TIP","heading":"Drought Strategy","body":"In drought month (Month 4) crops wither and prices spike. Stockpile your harvest before the drought and sell high during it."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Farming)","url":STEAM_URL},
+   {"label":"Mejoress Doloc Town guide","url":MEJORESS}
+  ]
+ },
+ {
+  "slug":"cooking",
+  "title":"Doloc Town Cooking Guide: Recipes, Buffs & Ingredients",
+  "metaTitle":"Doloc Town Cooking Guide: 80+ Recipes, Food Buffs & Ingredients",
+  "metaDescription":"Doloc Town cooking explained: how to unlock 80+ recipes, what food buffs do, and how cooking fuels exploration and combat.",
+  "intro":"Cooking turns your harvest into survival power. With 80+ recipes, the right meal can restore energy or buff your speed and defense.",
+  "sections":[
+   {"type":"list","tag":"BASICS","heading":"Cooking Basics","body":"Food is the wasteland's best friend.",
+    "items":["80+ recipes across the game.","Meals restore 50-100 energy.","Some meals add buffs: speed, defense and more.","Recipes unlock through friendship and the tech tree."]},
+   {"type":"table","tag":"BUFFS","heading":"What Food Buffs Do",
+    "columns":["Effect","Use case"],
+    "rows":[["Energy restore","Keep working all day"],
+    ["Speed buff","Faster farming and exploration"],
+    ["Defense buff","Safer ruin diving"],
+    ["⚠️ Full table","Being verified in 1.0"]]},
+   {"type":"steps","tag":"KITCHEN","heading":"Stocking a Kitchen",
+    "items":[["Plant a variety of crops","Recipes need many ingredients."],
+    ["Raise friendship","Friends unlock unique recipes (e.g., Alchemy Station)."],
+    ["Fish and ranch","Protein sources round out the pantry."],
+    ["Cook before big trips","Buffs are cheap insurance."]]}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Cooking)","url":STEAM_URL},
+   {"label":"Mejoress Doloc Town guide","url":MEJORESS}
+  ]
+ },
+ {
+  "slug":"ranching",
+  "title":"Doloc Town Ranching Guide: Barns, Fences & Animals",
+  "metaTitle":"Doloc Town Ranching Guide: Barns, Fences, Animals & Products",
+  "metaDescription":"Doloc Town ranching explained: build barns and fences, feed and clean animals, and collect milk, eggs and other products.",
+  "intro":"Ranching brings heartwarming moments and steady supplies. Build barns and fences, tend your animals, and collect fresh products.",
+  "sections":[
+   {"type":"steps","tag":"SETUP","heading":"Setting Up a Ranch",
+    "items":[["Build a barn","Shelter for your animals."],
+    ["Build fences","Keep livestock where you want them."],
+    ["Acquire animals","From the shop / events ⚠️"],
+    ["Feed daily","Happy animals produce more."]]},
+   {"type":"list","tag":"CARE","heading":"Daily Care Checklist","body":"Tending is simple but consistent.",
+    "items":["Feed every day.","Clean enclosures regularly.","Collect products (milk, eggs, more).","Watch for surprises — the game rewards attentive ranchers."]},
+   {"type":"note","tag":"TIP","heading":"Why Ranch?","body":"Milk and eggs are invaluable provisions in the wastes — cooking ingredients, gift items and reliable income."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Ranching)","url":STEAM_URL}
+  ]
+ },
+ {
+  "slug":"characters",
+  "title":"Doloc Town Characters: Villager Profiles & Secrets",
+  "metaTitle":"Doloc Town Characters: Villager Profiles & Hidden Stories",
+  "metaDescription":"Meet the villagers of Doloc Town: Kasia, Guildmaster Bellad, Kumasang and more — plus the secrets hidden beneath their lighthearted daily lives.",
+  "intro":"Every resident of Doloc Town hides a story. Visit each one, nurture connections and uncover the secrets beneath their daily lives.",
+  "sections":[
+   {"type":"table","tag":"CAST","heading":"Known Characters (Community-Sourced)",
+    "columns":["Character","About"],
+    "rows":[["Kasia","Shop street, 2nd floor; farming girl; Blooming Friendship achievement"],
+    ["Guildmaster Bellad","Runs the Guild; quests pay Tech Points"],
+    ["Kumasang","River Valley roamer; rare materials ⚠️"],
+    ["The vanished leader","Central mystery — what happened? (answered in 1.0)"],
+    ["Old City NPCs","New companions in 1.0 ⚠️"]]},
+   {"type":"note","tag":"MYSTERY","heading":"Secrets of the Town","body":"Why does the River Valley stay lush? What became of the fabled leader? Why do pre-apocalypse tech pieces carry the mark of 'Eden'? The answers unlock in the 1.0 story."},
+   {"type":"list","tag":"SOCIAL","heading":"Social Tips","body":"Make every heart count.",
+    "items":["Talk to everyone daily.","Gift according to taste.","Do quests — they're the best heart investment.","Attend every festival."]}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Story & Characters)","url":STEAM_URL},
+   {"label":"Doloc Town Huiji Wiki (Chinese)","url":"https://doloctown.huijiwiki.com/"}
+  ]
+ },
+ {
+  "slug":"story",
+  "title":"Doloc Town Story Guide: Mysteries & the 1.0 Ending",
+  "metaTitle":"Doloc Town Story: The 3 Mysteries & Complete 1.0 Ending",
+  "metaDescription":"The Doloc Town story explained: the lush River Valley, the vanished leader, the 'Eden' mark, and how the 1.0 release completes the storyline.",
+  "intro":"Doloc Town hides a full narrative under its cozy surface. The 1.0 release finally completes the story — here's what to look for.",
+  "sections":[
+   {"type":"list","tag":"SETUP","heading":"Your Story Setup","body":"The premise in one paragraph.",
+    "items":["You are a young scavenger fleeing enemies in the wasteland.","You stumble upon a small settlement called Doloc Town.","You begin building the farm of your dreams from scratch.","Slowly, the town's mysteries surface."]},
+   {"type":"table","tag":"MYSTERIES","heading":"The Three Core Mysteries",
+    "columns":["Mystery","Question"],
+    "rows":[["The lush valley","Why does the River Valley stay thriving in a ruined world?"],
+    ["The vanished leader","What became of the town's fabled leader?"],
+    ["The Eden mark","Why do so many pre-apocalypse tech pieces carry 'Eden'?"]]},
+   {"type":"steps","tag":"1.0","heading":"The 1.0 Complete Storyline","body":"The full release delivers the conclusion players have been building toward.",
+    "items":[["Concluding main story quests","The narrative now has a proper ending."],
+    ["Final area: Old City Ruins","Paths across the town lead toward the ruined city."],
+    ["Character storylines","More personal stories for the residents."],
+    ["Answers to the mysteries","The 1.0 ending ties the threads together."]]},
+   {"type":"note","tag":"SPOILER","heading":"Spoiler Policy","body":"We keep this page spoiler-light. Deep-dive spoiler sections will be added after verification — and clearly labeled."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Story)","url":STEAM_URL},
+   {"label":"Official 1.0 announcement","url":NEWS_URL}
+  ]
+ },
+ {
+  "slug":"weather",
+  "title":"Doloc Town Weather Guide: Acid Rain, Storms & Drought",
+  "metaTitle":"Doloc Town Weather Guide: Acid Rain, Thunderstorms & Drought Strategies",
+  "metaDescription":"Master Doloc Town extreme weather: protect crops from acid rain and heat, harness storms for power and profit from drought prices.",
+  "intro":"Extreme weather defines Doloc Town. Learn each threat — and how to turn it into an advantage.",
+  "sections":[
+   {"type":"table","tag":"THREATS","heading":"Weather Threats & Counters",
+    "columns":["Weather","Risk","Counter"],
+    "rows":[["Acid rain","Erodes crops","Covers; collect acid"],
+    ["Scorching heat","Bakes soil","Timed watering; heat-resistant genes"],
+    ["Thunderstorm","Field damage","Harness lightning for power"],
+    ["Torrential rain","Flooding","Free irrigation"],
+    ["Drought (Month 4)","Wither + price spike","Stockpile, sell high"]]},
+   {"type":"steps","tag":"POWER","heading":"Turning Storms into Power","body":"Weather is an energy source.",
+    "items":[["Install lightning capture","Thunderstorms charge your farm's power."],
+    ["Let rain irrigate","Skip manual watering during downpours."],
+    ["Time the drought","Hoarding before Month 4 pays off."]]},
+   {"type":"note","tag":"TIP","heading":"Farm Like the Weather Knows","body":"Check the forecast daily. A storm tomorrow means water today is wasted — but charging today is priceless."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Weather)","url":STEAM_URL},
+   {"label":"Mejoress Doloc Town guide","url":MEJORESS}
+  ]
+ },
+]
+
+P2 = [
+ {
+  "slug":"achievements",
+  "title":"Doloc Town Achievements: All 80 (1.0)",
+  "metaTitle":"Doloc Town Achievements: Full List of All 80 (1.0)",
+  "metaDescription":"All 80 Doloc Town achievements — 43 base plus 37 new in 1.0 — with tips for the ones players struggle with.",
+  "intro":"Doloc Town has 80 Steam achievements in total: 43 from the base game plus 37 added in the 1.0 release. Here's what we know so far.",
+  "sections":[
+   {"type":"table","tag":"KNOWN","heading":"Known Achievements (Community-Sourced)",
+    "columns":["Achievement","How to get it"],
+    "rows":[["Blooming Friendship","Reach max friendship with Kasia"],
+    ["Eight Elixir","Drink 8 bottles of water in a day ⚠️"],
+    ["A False Heir","Use the wrong pickaxe ⚠️"],
+    ["Adventurer","Complete 5 quests ⚠️"],
+    ["Art of Fishing","Fish the farthest point of a lake ⚠️"],
+    ["Culinary Enthusiast","Cook 10 recipes ⚠️"],
+    ["Doloc, Our New Home","Read the River Valley sign ⚠️"]]},
+   {"type":"list","tag":"COUNTS","heading":"Achievement Counts",
+    "items":["43 base achievements (Early Access era).","37 new achievements in the 1.0 release (August 6, 2026).","80 total.","Chapter selection lets you go back to mop up missed achievements ⚠️."]},
+   {"type":"note","tag":"1.0","heading":"Note","body":"The full English 80-achievement checklist with unlock conditions is being compiled from 1.0 play and will replace the partial table above."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Reviews/Achievements)","url":STEAM_URL},
+   {"label":"vgtimes 1.0 news (37 new → 80 total)","url":"https://vgtimes.com/gaming-news/163288-post-apocalyptic-farming-sim-doloc-town-leaves-early-access-with-version-10.html"}
+  ]
+ },
+ {
+  "slug":"mods",
+  "title":"Doloc Town Mods & Steam Workshop Guide",
+  "metaTitle":"Doloc Town Mods: Steam Workshop & Popular Mods",
+  "metaDescription":"Doloc Town mods: how to access the Steam Workshop, install mods and find popular community content.",
+  "intro":"Extend your Doloc Town run with community mods from the Steam Workshop.",
+  "sections":[
+   {"type":"list","tag":"HOW","heading":"How to Install Mods","body":"Workshop mods are one-click.",
+    "items":["Open the Steam Workshop for Doloc Town.","Subscribe to a mod.","Steam downloads it automatically.","Enable it in the game's mod menu ⚠️."]},
+   {"type":"note","tag":"NOTE","heading":"Workshop Status","body":"⚠️ Workshop availability and the current top mods are being verified. This page will be expanded with an actual mod list once confirmed."}
+  ],
+  "sources":[
+   {"label":"Official Steam page","url":STEAM_URL}
+  ]
+ },
+ {
+  "slug":"update-log",
+  "title":"Doloc Town Update Log: 1.0 & Early Access History",
+  "metaTitle":"Doloc Town Update Log: 1.0 Full Release Notes & EA History",
+  "metaDescription":"Every major Doloc Town update: the 1.0 full release (Aug 6, 2026) and the Early Access updates that built it.",
+  "intro":"Track every major Doloc Town update, from the first Early Access build to the 1.0 full release.",
+  "sections":[
+   {"type":"timeline","tag":"HISTORY","heading":"Release Timeline",
+    "items":[["May 8, 2025","Early Access launch on PC."],
+    ["2025-12","First major EA update."],
+    ["Feb 2026","Third major EA update — gene system introduced."],
+    ["Jul 2026","1.0 pre-launch update."],
+    ["Aug 6, 2026","1.0 full release."]]},
+   {"type":"list","tag":"1.0","heading":"1.0 Full Release Highlights","body":"The complete 1.0 changelog, per the official announcement.",
+    "items":["New area: Old City Ruins (third large map area).","Complete main story ending.","Farming automation system (solar + wind → drone stations).","Mushroom Fest festival.","Additional character storylines.","New tools, combat drones, fish and accessories.","37 new achievements (80 total).","Season-themed weather changes and expanded localization."]}
+  ],
+  "sources":[
+   {"label":"Official 1.0 announcement","url":NEWS_URL},
+   {"label":"vgtimes 1.0 news","url":"https://vgtimes.com/gaming-news/163288-post-apocalyptic-farming-sim-doloc-town-leaves-early-access-with-version-10.html"}
+  ]
+ },
+ {
+  "slug":"faq",
+  "title":"Doloc Town FAQ: 1.0 Answers to Common Questions",
+  "metaTitle":"Doloc Town FAQ: Multiplayer, Steam Deck, Price & More (1.0)",
+  "metaDescription":"Doloc Town frequently asked questions: is it multiplayer, is it Steam Deck verified, how much does it cost, how long is it, and more.",
+  "intro":"Quick, sourced answers to the questions players ask most about Doloc Town.",
+  "sections":[
+   {"type":"faq","tag":"FAQ","heading":"Frequently Asked Questions",
+    "items":[["Is Doloc Town multiplayer / co-op?","No. The developers have stated the 1.0 release is a single-player experience; co-op and multiplayer will be discussed later based on community feedback."],
+    ["Is Doloc Town Steam Deck Verified?","It is listed as 'Playable' on Steam Deck, not 'Verified'. The team plans to address known issues and pursue Verified status in future updates."],
+    ["How much does Doloc Town cost?","¥58.00 on Steam, with a 20% launch discount (¥46.40) running until August 19, 2026."],
+    ["How long is the game?","30+ hours for the core story; 100+ hours with all the extras."],
+    ["Is there romance in Doloc Town?","No — the developers confirmed there is no romance/marriage system. Social play is friendship-based."],
+    ["What platforms is it on?","PC (Windows) via Steam. Minimum specs: i3 6100, 8GB RAM, GTX 460, DX11, 2GB storage."],
+    ["Is there farming automation?","Yes — new in 1.0. Solar and wind power drive farming drone stations that seed, nurture and harvest automatically."],
+    ["What's new in 1.0?","Old City Ruins, complete story ending, farming automation, Mushroom Fest, new tools/drones/fish/accessories and 37 new achievements."]]}
+  ],
+  "sources":[
+   {"label":"Official Steam page","url":STEAM_URL},
+   {"label":"Official 1.0 announcement","url":NEWS_URL},
+   {"label":"GameGrin pre-release Q&A (co-op)","url":"https://www.gamegrin.com/news/everything-you-need-to-know-about-doloc-town-ahead-of-release/"}
+  ]
+ },
+ {
+  "slug":"system-requirements",
+  "title":"Doloc Town System Requirements",
+  "metaTitle":"Doloc Town System Requirements: Minimum & Recommended",
+  "metaDescription":"Doloc Town minimum system requirements: Windows 10, i3 6100, 8GB RAM, GTX 460, DX11, 2GB storage.",
+  "intro":"The official Doloc Town system requirements, straight from the Steam page.",
+  "sections":[
+   {"type":"table","tag":"MIN","heading":"Minimum Requirements (Official)",
+    "columns":["Component","Requirement"],
+    "rows":[["OS","Windows 10"],
+    ["Processor","Intel i3 6100"],
+    ["Memory","8 GB RAM"],
+    ["Graphics","NVIDIA GeForce GTX 460"],
+    ["DirectX","Version 11"],
+    ["Storage","2 GB available space"]]},
+   {"type":"note","tag":"NOTE","heading":"Note","body":"Only minimum requirements are listed on the official Steam page; recommended specs have not been published. The game is lightweight enough to run on modest hardware — and is 'Playable' on Steam Deck."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (System Requirements)","url":STEAM_URL}
+  ]
+ },
+ {
+  "slug":"steam-deck",
+  "title":"Doloc Town on Steam Deck: Compatibility Guide",
+  "metaTitle":"Doloc Town Steam Deck: Playable Status & Settings",
+  "metaDescription":"Doloc Town on Steam Deck: currently 'Playable' (not Verified), known considerations and what the devs plan next.",
+  "intro":"Doloc Town runs on Steam Deck, but it's officially 'Playable' rather than 'Verified'. Here's what that means.",
+  "sections":[
+   {"type":"list","tag":"STATUS","heading":"Current Status",
+    "items":["Officially listed as 'Playable' on Steam Deck.","Not 'Verified' as of the 1.0 release.","The team says issues are likely pending optimizations, not bugs.","They plan to address known issues and pursue Verified status in future updates."]},
+   {"type":"note","tag":"TIP","heading":"Tip","body":"If you hit trouble on Deck, check for updates first — the devs have said pending optimizations are the usual cause."}
+  ],
+  "sources":[
+   {"label":"Official Steam page (Steam Deck tag)","url":STEAM_URL},
+   {"label":"Official Steam FAQ discussion","url":"https://steamcommunity.com/app/2285550/discussions/0/591776209704113701/"}
+  ]
+ },
+]
+
+# meta: icon mapping
+ICON = {
+ "how-to-play":"how-to-play","automation":"automation","gene-system":"gene-system","fishing":"fishing",
+ "drone-combat":"drone-combat","exploration":"exploration","friendship":"friendship","farming":"farming",
+ "cooking":"cooking","ranching":"ranching","characters":"characters","story":"story","weather":"weather",
+ "achievements":"achievements","mods":"mods","update-log":"update-log","faq":"faq",
+ "system-requirements":"system-requirements","steam-deck":"steam-deck",
+}
+for p in P0 + P1 + P2:
+    p["meta"] = {"icon": ICON.get(p["slug"],"faq")}
+    site["pages"].append(p)
+
+# heroImage
+HERO = {
+ "how-to-play":"/images/how-to-play.jpg","automation":"/images/automation.jpg","gene-system":"/images/gene-system.jpg",
+ "fishing":"/images/fishing.jpg","drone-combat":"/images/drone-combat.jpg","exploration":"/images/exploration.jpg",
+ "friendship":"/images/friendship.jpg","farming":"/images/farming.jpg","cooking":"/images/cooking.jpg",
+ "ranching":"/images/ranching.jpg","characters":"/images/characters.jpg","story":"/images/story.jpg",
+ "weather":"/images/weather.jpg","achievements":"/images/achievements.jpg","mods":"/images/mods.jpg",
+ "update-log":"/images/update-log.jpg","faq":"/images/faq.jpg","system-requirements":"/images/system-requirements.jpg",
+ "steam-deck":"/images/steam-deck.jpg",
+}
+for p in site["pages"]:
+    if p["slug"] in HERO:
+        p["heroImage"] = HERO[p["slug"]]
+
+out = ROOT / "site.base.json"
+out.write_text(json.dumps(site, ensure_ascii=False, indent=1), encoding="utf-8")
+print("pages:", len(site["pages"]))
+print("written:", out)
