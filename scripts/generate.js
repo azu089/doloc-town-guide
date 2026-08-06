@@ -149,10 +149,15 @@ function langSwitcher(lang, slug){
 function header(lang, active){
   const s = siteI18n(lang);
   const prefix = lang === DEF ? "" : `/${lang}`;
-  const guideItems = DATA.pages.map(p => {
-    const m = metaOf(p.slug);
-    return `<a href="${prefix}/${p.slug}" class="${p.slug===active?"active":""}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(pageOf(p,lang).title)}</span></a>`;
-  }).join("");
+  const P0 = ["how-to-play","farming","automation","gene-system","fishing","drone-combat","exploration","friendship","weather"];
+  const P1 = ["cooking","ranching","characters","story"];
+  const P2 = ["achievements","mods","update-log","faq","system-requirements","steam-deck"];
+  const drop = (title, slugs) => `<div class="dd-group"><b class="dd-title">${esc(title)}</b>${slugs.map(slug=>{
+    const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
+    const m=metaOf(slug);
+    return `<a href="${prefix}/${slug}" class="${slug===active?"active":""}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(pageOf(p,lang).title)}</span></a>`;
+  }).join("")}</div>`;
+  const guides = `<div class="dd-menu dd-manual">${drop(lang==="en"?"Core guides":lang==="ja"?"コア攻略":lang==="ko"?"핵심 가이드":lang==="es"?"Guías principales":"核心攻略", P0)}${drop(lang==="en"?"Deep dives":lang==="ja"?"深掘り":lang==="ko"?"심층 가이드":lang==="es"?"A fondo":"深度拆解", P1)}${drop(lang==="en"?"Quick answers":lang==="ja"?"クイック回答":lang==="ko"?"빠른 답변":lang==="es"?"Respuestas rápidas":"快速答案", P2)}</div>`;
   const searchPh = lang==="en"?"Search guides…":lang==="ja"?"ガイドを検索…":lang==="ko"?"공략 검색…":lang==="es"?"Buscar guías…":"搜索攻略…";
   const searchLabel = lang==="en"?"Search guides":lang==="ja"?"ガイドを検索":lang==="ko"?"공략 검색":lang==="es"?"Buscar guías":"搜索攻略";
   return `<header class="site-header">
@@ -162,7 +167,7 @@ function header(lang, active){
       <a href="${prefix}/" class="${active===""?"active":""}">${esc(s.navHome)}</a>
       <details class="dd">
         <summary>${esc(s.navGuides)} <span class="caret">▾</span></summary>
-        <div class="dd-menu dd-grid">${guideItems}</div>
+        ${guides}
       </details>
     </nav>
     <form class="site-search" action="https://www.google.com/search" method="get" target="_blank" rel="noopener" role="search">
@@ -276,76 +281,99 @@ function renderHome(lang){
   const gintro = (DATA.game.introI18n && DATA.game.introI18n[lang]) || DATA.game.intro;
   const statsArr = (DATA.game.statsI18n && DATA.game.statsI18n[lang]) || DATA.game.stats || [];
   const stats = statsArr.map(st=>`<div class="stat"><b>${esc(st.value)}</b><span>${esc(st.label)}</span></div>`).join("");
-  const cards = DATA.pages.map((p,i) => {
-    const m = metaOf(p.slug);
-    const t = Object.assign(pageOf(p, lang), {slug: p.slug});
-    return `<a class="file-card reveal" href="${prefix}/${p.slug}">
-      <span class="file-icon">${SVG[m.icon]}</span>
-      <h3>${esc(t.title)}</h3>
-      <p>${esc(t.metaDescription)}</p>
-      <span class="file-open">${esc(s.readGuide)}</span>
-    </a>`;
-  }).join("");
   const _faqSec = (pageOf(DATA.pages.find(p=>p.slug==="faq"), lang).sections||[]).find(x=>x.type==="faq");
   const faqItems = _faqSec?.items || [];
   const faqHtml = faqItems.map(([q,a])=>`<details class="faq"><summary>${esc(q)}<span class="pm">+</span></summary><div class="faq-a">${esc(a)}</div></details>`).join("");
   const keyFactsArr = (DATA.game.keyFactsI18n && DATA.game.keyFactsI18n[lang]) || DATA.game.keyFacts || [];
   const keyFacts = keyFactsArr.map(f=>`<li>${esc(f)}</li>`).join("");
-  const sproutCards = [
-    ["farming", lang==="en"?"Vertical farms & crops":lang==="ja"?"垂直農場と作物":lang==="ko"?"수직 농장과 작물":lang==="es"?"Granjas verticales y cultivos":"垂直农场与作物", lang==="en"?"Stack platforms, planters, seasons and harvests.":lang==="ja"?"プラットフォームを積み、季節と収穫を管理。":lang==="ko"?"플랫폼을 쌓고 계절과 수확을 관리하세요.":lang==="es"?"Apila plataformas, cultiva y cosecha por estaciones.":"堆叠平台、管理季节与收成。"],
-    ["automation", lang==="en"?"Farming automation (1.0)":lang==="ja"?"農業オートメーション（1.0）":lang==="ko"?"농업 자동화 (1.0)":lang==="es"?"Automatización agrícola (1.0)":"农业自动化（1.0）", lang==="en"?"Solar, wind and drone stations do the chores.":lang==="ja"?"太陽光・風力とドローン基地が作業を代行。":lang==="ko"?"태양광·풍력과 드론 기지가 일을 대신합니다.":lang==="es"?"Paneles solares, viento y estaciones de drones.":"太阳能、风能与无人机站代劳。"],
-    ["gene-system", lang==="en"?"Crop gene system":lang==="ja"?"作物遺伝子システム":lang==="ko"?"작물 유전자 시스템":lang==="es"?"Sistema genético de cultivos":"作物基因系统", lang==="en"?"~20 mutations across 30+ crops.":lang==="ja"?"30以上の作物に約20の変異。":lang==="ko"?"30개 이상 작물에 약 20가지 변이.":lang==="es"?"~20 mutaciones en más de 30 cultivos.":"30+ 作物、约 20 种突变。"],
-    ["weather", lang==="en"?"Extreme weather":lang==="ja"?"過酷な天候":lang==="ko"?"극한 날씨":lang==="es"?"Clima extremo":"极端天气", lang==="en"?"Turn acid rain and storms to your advantage.":lang==="ja"?"酸性雨や嵐を味方に。":lang==="ko"?"산성비와 폭풍을 활용하세요.":lang==="es"?"Convierte la lluvia ácida y las tormentas en aliadas.":"把酸雨与雷暴变成优势。"],
-  ].map(([ic,t,d])=>`<a class="sprout-card reveal" href="${prefix}/${ic==="farming"?"farming":ic==="automation"?"automation":ic==="gene-system"?"gene-system":"weather"}"><span class="sprout-ic">${SVG[ic]}</span><b>${esc(t)}</b><p>${esc(d)}</p></a>`).join("");
-  const heroImg = "/images/hero.jpg";
+  const keyFactsFirst3 = keyFactsArr.slice(0,3).map(f=>`<div class="plot-note-card"><span class="plot-note-ic">${SVG.sprout}</span><p>${esc(f)}</p></div>`).join("");
+  // 地块分组：P0 核心地块 / P1 深度 / P2 答案
+  const P0 = ["how-to-play","farming","automation","gene-system","fishing","drone-combat","exploration","friendship","weather"];
+  const P1 = ["cooking","ranching","characters","story"];
+  const P2 = ["achievements","mods","update-log","faq","system-requirements","steam-deck"];
+  const plotCard = (p,i) => {
+    const m = metaOf(p.slug);
+    const t = Object.assign(pageOf(p, lang), {slug: p.slug});
+    return `<a class="plot-card reveal" href="${prefix}/${p.slug}">
+      <span class="plot-icon">${SVG[m.icon]}</span>
+      <h3>${esc(t.title)}</h3>
+      <p>${esc(t.metaDescription)}</p>
+      <span class="plot-open">${esc(s.readGuide)}</span>
+    </a>`;
+  };
+  const p0Cards = P0.map((slug,i)=>plotCard(DATA.pages.find(p=>p.slug===slug),i)).join("");
+  const p1Cards = P1.map((slug,i)=>plotCard(DATA.pages.find(p=>p.slug===slug),i)).join("");
+  const p2Cards = P2.map((slug,i)=>plotCard(DATA.pages.find(p=>p.slug===slug),i)).join("");
+  // 四季导航（前端切换 highlight）
+  const seasons = [
+    ["spring", lang==="en"?"Spring":lang==="ja"?"春":lang==="ko"?"봄":lang==="es"?"Primavera":"春", "🌱"],
+    ["summer", lang==="en"?"Summer":lang==="ja"?"夏":lang==="ko"?"여름":lang==="es"?"Verano":"夏", "☀️"],
+    ["autumn", lang==="en"?"Autumn":lang==="ja"?"秋":lang==="ko"?"가을":lang==="es"?"Otoño":"秋", "🍂"],
+    ["winter", lang==="en"?"Winter":lang==="ja"?"冬":lang==="ko"?"겨울":lang==="es"?"Invierno":"冬", "❄️"],
+  ].map(([k,n,e],i)=>`<button class="season-tab" data-season="${k}" ${i===0?'aria-pressed="true"':''}><span class="season-emoji" aria-hidden="true">${e}</span>${esc(n)}</button>`).join("");
   const badgeTxt = lang==="en" ? "Post-apocalyptic farming sim — 1.0 full release guides"
     : lang==="ja" ? "終末世界の農場シム — 1.0 完全版攻略"
     : lang==="ko" ? "포스트 아포칼립스 농장 시뮬 — 1.0 공략"
     : lang==="es" ? "Simulador de granja post-apocalíptico — guías 1.0"
     : "后末日农场模拟 — 1.0 完整攻略";
-  const h1Tail = lang==="en" ? "GUIDES" : lang==="ja" ? "攻略" : lang==="ko" ? "공략" : lang==="es" ? "GUÍAS" : "攻略";
   const body = `
-  <main class="container">
-    <section class="hero land-hero">
-      <div class="hero-copy">
+  <main>
+    <section class="pano-hero">
+      <img class="pano-bg" src="/images/hero-1280.jpg" srcset="/images/hero-640.jpg 640w, /images/hero-1280.jpg 1280w, /images/hero.jpg 1600w" sizes="100vw" alt="${esc(gname)} key art" loading="eager" width="1600" height="900" fetchpriority="high" />
+      <div class="pano-overlay"></div>
+      <div class="container pano-copy">
         <span class="evidence-tag"><span class="dot"></span> ${esc(badgeTxt)}</span>
-        <h1>${esc(gname)} <span class="stamp-hl">${esc(h1Tail)}</span></h1>
+        <h1>${esc(gname)} <span class="stamp-hl">${esc(s.harvest)}</span></h1>
         <p class="lead">${esc(s.tagline)}.</p>
-        <div class="stats">${stats}</div>
+        <div class="stats pano-stats">${stats}</div>
         <div class="cta-row">
           <a class="btn btn-primary" href="${esc(DATA.game.steamUrl)}" target="_blank" rel="noopener">${esc(s.startPlaying)}</a>
           <a class="btn btn-ghost" href="${prefix}/how-to-play">${esc(s.readGuide)}</a>
         </div>
       </div>
-      <div class="land-panel">
-        <div class="land-photo"><img src="/images/hero-1280.jpg" srcset="/images/hero-640.jpg 640w, /images/hero-1280.jpg 1280w, /images/hero.jpg 1600w" sizes="(max-width: 560px) 92vw, (max-width: 960px) 60vw, 520px" alt="${esc(gname)} key art" loading="eager" width="1600" height="900" fetchpriority="high" /></div>
-        <div class="clue clue-a"><span class="clue-pin">${SVG.sprout}</span><b>${esc(keyFactsArr[0]||"")}</b></div>
-        <div class="clue clue-b"><span class="clue-pin">${SVG.sprout}</span><b>${esc(keyFactsArr[1]||"")}</b></div>
-        <div class="clue clue-c"><span class="clue-pin">${SVG.pin}</span><b>${esc(keyFactsArr[2]||"")}</b></div>
-        <div class="stamp" aria-hidden="true">${esc(s.harvest)}</div>
+    </section>
+    <section class="container">
+      <div class="season-bar reveal">
+        <span class="season-label">${esc(lang==="en"?"SEASONS":lang==="ja"?"季節":lang==="ko"?"계절":lang==="es"?"TEMPORADAS":"季节")}</span>
+        <div class="season-tabs">${seasons}</div>
       </div>
     </section>
-    <section class="section">
+    <section class="container section">
       <div class="sec-head reveal"><span class="mono">${esc(s.plotTag)} // 001</span><h2>${esc(s.guides)}</h2></div>
-      <div class="file-grid">${cards}</div>
+      <div class="plot-masonry">${p0Cards}</div>
     </section>
-    <section class="section">
-      <div class="sec-head reveal"><span class="mono">${esc(s.seasonTag)} // CORE</span><h2>${esc(s.latest)}</h2></div>
-      <div class="sprout-grid">${sproutCards}</div>
+    <section class="container section">
+      <div class="sec-head reveal"><span class="mono">${esc(s.seasonTag)} // DEEP</span><h2>${esc(s.latest)}</h2></div>
+      <div class="plot-row">${p1Cards}</div>
     </section>
-    <section class="section split">
+    <section class="container section">
+      <div class="sec-head reveal"><span class="mono">${esc(s.seedTag)} // ANSWERS</span><h2>${esc(lang==="en"?"Quick answers":lang==="ja"?"クイック回答":lang==="ko"?"빠른 답변":lang==="es"?"Respuestas rápidas":"快速答案")}</h2></div>
+      <div class="plot-row plot-row-3">${p2Cards}</div>
+    </section>
+    <section class="container section split">
       <div class="card grow-card reveal">
         <h2><span class="sec-tag">${esc(s.aboutGame)}</span></h2>
         <p class="sec-body">${esc(gintro)}</p>
-        <ul class="checks">${keyFacts}</ul>
+        <div class="plot-notes">${keyFactsFirst3}</div>
       </div>
       <div class="card grow-card reveal">
         <h2><span class="sec-tag">${esc(s.quickAnswers)}</span></h2>
         ${faqHtml}
       </div>
     </section>
-  </main>`;
-  return renderFull(lang, siteI18n(lang).name, `${esc(gname)} — ${esc(s.tagline)}`, [], "index", body, heroImg);
+  </main>
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var tabs = document.querySelectorAll('.season-tab');
+    tabs.forEach(function(t){
+      t.addEventListener('click', function(){
+        tabs.forEach(function(x){ x.setAttribute('aria-pressed','false'); x.classList.remove('on'); });
+        t.setAttribute('aria-pressed','true'); t.classList.add('on');
+      });
+    });
+  });
+  </script>`;
+  return renderFull(lang, siteI18n(lang).name, `${esc(gname)} — ${esc(s.tagline)}`, [], "index", body, "/images/hero.jpg");
 }
 function renderFull(lang, title, desc, extraLd, slug, body, ogImage){
   const s = siteI18n(lang);
@@ -357,17 +385,17 @@ function renderPage(lang, page){
   const t = Object.assign(pageOf(page, lang), {slug: page.slug});
   const prefix = lang === DEF ? "" : `/${lang}`;
   SEC_IDX = 0;
-  const toc = (t.sections||[]).filter(s=>s.heading).map((s,i)=>{
+  const toc = (t.sections||[]).filter(x=>x.heading).map((x,i)=>{
     SEC_IDX += 1;
-    return `<a href="#sec-${SEC_IDX}">${esc(s.heading)}</a>`;
+    return `<a href="#sec-${SEC_IDX}"><span class="toc-no">${String(SEC_IDX).padStart(2,"0")}</span>${esc(x.heading)}</a>`;
   }).join("");
   SEC_IDX = 0;
-  const sections2 = (t.sections||[]).map(s => renderSection(s, lang)).join("");
+  const sections2 = (t.sections||[]).map(x => renderSection(x, lang)).join("");
   const related = DATA.pages.filter(p=>p.slug!==page.slug).slice(0,6).map(p=>{
     const m = metaOf(p.slug);
     return `<a href="${prefix}/${p.slug}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(pageOf(p,lang).title)}</span></a>`;
   }).join("");
-  const sources = (page.sources||[]).map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc((s.labels && s.labels[lang]) || s.label)} ↗</a></li>`).join("");
+  const sources = (page.sources||[]).map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc((x.labels && x.labels[lang]) || x.label)} ↗</a></li>`).join("");
   const s = siteI18n(lang);
   const heroImg = t.heroImage;
   const srcsetOf = img => {
@@ -375,32 +403,43 @@ function renderPage(lang, page){
     const base = img.replace(/\.(jpg|jpeg|png|webp)$/i, "");
     return ` srcset="${base}-640.jpg 640w, ${base}-1280.jpg 1280w, ${img} 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 92vw, 820px"`;
   };
-  const pageHero = heroImg ? `<div class="page-hero-img"><img src="${heroImg}"${srcsetOf(heroImg)} alt="${esc(t.title)}" loading="lazy" width="1600" height="900" /></div>` : "";
+  const pageHero = heroImg ? `<div class="plot-hero-img"><img src="${heroImg}"${srcsetOf(heroImg)} alt="${esc(t.title)}" loading="lazy" width="1600" height="900" /></div>` : "";
   const noImgCls = heroImg ? "" : " noimg";
+  // 生长进度条（耕作手册特色组件）
+  const growthSteps = [
+    [lang==="en"?"Seed":lang==="ja"?"種":lang==="ko"?"씨앗":lang==="es"?"Semilla":"种子"],
+    [lang==="en"?"Sprout":lang==="ja"?"芽":lang==="ko"?"새싹":lang==="es"?"Brote":"嫩芽"],
+    [lang==="en"?"Grow":lang==="ja"?"育つ":lang==="ko"?"성장":lang==="es"?"Crecer":"生长"],
+    [lang==="en"?"Harvest":lang==="ja"?"収穫":lang==="ko"?"수확":lang==="es"?"Cosecha":"收获"],
+  ].map((n,i)=>`<div class="growth-step ${i===3?'done':''}"><span class="growth-dot"></span><span>${esc(n[0])}</span></div>`).join("");
   const body = `
   <main class="container">
     <nav class="crumbs"><a href="${prefix}/">${esc(s.navHome)}</a><span>›</span><span>${esc(t.title)}</span></nav>
-    <div class="article-wrap">
-      <article>
-        <div class="page-hero reveal${noImgCls}">
-          ${heroImg ? "" : `<span class="hero-ic" aria-hidden="true">${SVG[page.meta?.icon || "faq"]}</span>`}
-          <span class="hero-wm" aria-hidden="true">${esc(page.slug.toUpperCase())}</span>
-          <span class="evidence-tag">${esc(s.plotTag)} // ${esc(page.slug.toUpperCase())}</span>
-          <h1>${esc(t.title)}</h1>
-          <p class="intro">${esc(t.intro)}</p>
-          ${pageHero}
-        </div>
+    <div class="plot-hero reveal${noImgCls}">
+      ${heroImg ? "" : `<span class="hero-ic" aria-hidden="true">${SVG[page.meta?.icon || "faq"]}</span>`}
+      <span class="evidence-tag">${esc(s.plotTag)} // ${esc(page.slug.toUpperCase())}</span>
+      <h1>${esc(t.title)}</h1>
+      <p class="intro">${esc(t.intro)}</p>
+      ${pageHero}
+      <div class="growth-bar" aria-hidden="true">${growthSteps}</div>
+    </div>
+    <div class="manual-grid">
+      <div class="manual-main">
         ${toc ? `<nav class="toc reveal"><b class="toc-title">${esc(s.updated)}</b>${toc}</nav>` : ""}
         ${sections2}
         ${sources ? `<div class="sources reveal"><b>${esc(s.sources)}</b><ul>${sources}</ul></div>` : ""}
-      </article>
-      <aside class="grow-side">
-        <div class="case-meta reveal">
+      </div>
+      <aside class="manual-side">
+        <div class="plot-meta reveal">
           <span class="cm-tag">${esc(s.plotTag)}</span>
           <div class="cm-row"><span class="cm-k">${esc(lang==="en"?"Page":lang==="ja"?"ページ":lang==="ko"?"페이지":lang==="es"?"Página":"页面")}</span><b>${esc(t.title)}</b></div>
           <div class="cm-row"><span class="cm-k">${esc(lang==="en"?"Category":lang==="ja"?"分類":lang==="ko"?"분류":lang==="es"?"Categoría":"分类")}</span><b>${esc(t.title.split(":")[0].split("—")[0].trim())}</b></div>
           <div class="cm-row"><span class="cm-k">${esc(s.updated)}</span><b>${today}</b></div>
-          <div class="cm-stamp">${esc(s.harvest)}</div>
+          <div class="weather-card">
+            <span class="weather-ic">${SVG.weather}</span>
+            <div><b>${esc(lang==="en"?"Season tip":lang==="ja"?"季節のヒント":lang==="ko"?"계절 팁":lang==="es"?"Consejo de temporada":"季节提示")}</b>
+            <p>${esc(lang==="en"?"Check the forecast — storms charge power, rain irrigates free.":lang==="ja"?"予報を確認——嵐で充電、雨で無料灌漑。":lang==="ko"?"예보를 확인하세요——폭풍은 충전, 비는 무료 관개.":lang==="es"?"Mira el pronóstico: las tormentas cargan y la lluvia riega gratis.":"看天气预报——雷暴蓄电、雨水免费灌溉。")}</p></div>
+          </div>
         </div>
         <div class="related reveal">
           <b>${esc(s.moreGuides)}</b>
