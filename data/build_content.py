@@ -418,6 +418,7 @@ def apply_lang(lang, TR):
                     if "en" not in cand: sec = cand
                 if sec is None: continue
                 new_sec = {}
+                if "type" in en_sec: new_sec["type"] = en_sec["type"]
                 if "heading" in sec: new_sec["heading"] = sec["heading"]
                 if "body" in sec: new_sec["body"] = sec["body"]
                 if "columns" in sec: new_sec["columns"] = sec["columns"]
@@ -1315,6 +1316,7 @@ def apply_lang(lang, TR):
                     if "en" not in cand: sec = cand
                 if sec is None: continue
                 new_sec = {}
+                if "type" in en_sec: new_sec["type"] = en_sec["type"]
                 if "heading" in sec: new_sec["heading"] = sec["heading"]
                 if "body" in sec: new_sec["body"] = sec["body"]
                 if "columns" in sec: new_sec["columns"] = sec["columns"]
