@@ -2764,79 +2764,263 @@
   {
    "slug": "fishing",
    "title": "Doloc Town Fishing Guide: Ponds, Weather & Rare Fish",
-   "metaTitle": "Doloc Town Fishing Guide: Ponds, Weather, Rods & Rare Fish",
-   "metaDescription": "Doloc Town fishing explained: different ponds, rods and weather give different catches, plus how rare fish drop advanced parts for your drone.",
-   "intro": "Fishing is a full second career in Doloc Town. Different ponds, rods and weather change what you catch — and rare fish drop advanced drone parts.",
+   "metaTitle": "Doloc Town Fish Catalog: All Fish, Locations & Weather",
+   "metaDescription": "The full Doloc Town fish catalog: every fish, where to catch it, which rod and weather it needs, and the rare breeding-only fish.",
+   "intro": "Fishing is a full second career in Doloc Town. This catalog lists every confirmed fish — where it spawns, which season and weather it needs, and how to breed the rare tank-only species.",
    "sections": [
     {
-     "type": "list",
-     "tag": "BASICS",
-     "heading": "Fishing Basics",
-     "body": "Fishing is a full second career. No bait is required — just a rod, the right pond and the right weather.",
-     "items": [
-      "Different ponds yield different fish — map every body of water.",
-      "Rod quality changes what you can catch; upgrade before chasing rare fish.",
-      "Weather changes the catch table — storms often bring uncommon catches.",
-      "Rare fish drop advanced parts used in drone and tool upgrades, so fishing funds combat."
+     "type": "table",
+     "heading": "All-Year Fish",
+     "body": "These fish can be caught at any time of year. Locations are player-verified and compiled by 18183.",
+     "columns": [
+      "Fish",
+      "Time",
+      "Weather",
+      "Where to catch"
+     ],
+     "rows": [
+      [
+       "Carp",
+       "Any",
+       "Any",
+       "East Town Pond, Mountain Ponds, Deep Woods, Wetland Lily Pads, Hidden Cliff (Ridge Valley)"
+      ],
+      [
+       "Catfish",
+       "18:00–2:55",
+       "Any",
+       "East Town Pond, Mountain Ponds, Deep Woods, Wetland Lily Pads, Moss Cave Floor, Hidden Cliff"
+      ],
+      [
+       "Grass Carp",
+       "Any",
+       "Rain, Thunderstorm, Acid Rain",
+       "East Town Pond, Mountain Ponds, Deep Woods, Wetland Lily Pads, Hidden Cliff"
+      ],
+      [
+       "Sardine",
+       "Any",
+       "Any",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
+      ],
+      [
+       "Bass",
+       "Any",
+       "Any",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
+      ],
+      [
+       "Shrimp",
+       "Any",
+       "Any",
+       "Wetland shallows, Farm, Hovercraft Dock, Lily Pads, East Town Pond, Back Hills, Mountain Ponds, Deep Woods, Under Pier, West Grove, Valley Outpost, Mining Ruins, Hidden Cliff"
+      ],
+      [
+       "Shining Goldfish",
+       "Any",
+       "Any",
+       "Deep Woods"
+      ],
+      [
+       "Koi",
+       "Any",
+       "Any (needs Water Core)",
+       "East Town Pond, Mountain Ponds, Deep Woods, Wetland Lily Pads, Hidden Cliff"
+      ],
+      [
+       "Swamp Eel",
+       "Any",
+       "Any",
+       "Wetland Farm (under transport ship)"
+      ],
+      [
+       "Pike",
+       "6:00–18:55",
+       "Any",
+       "Wetland Lily Pads, Moss Cave Floor"
+      ],
+      [
+       "Aquatic Amoeba",
+       "Any",
+       "Any",
+       "Wetland shallows, Farm, Valley Junk Mountain"
+      ]
      ]
     },
     {
      "type": "table",
-     "tag": "CONDITIONS",
-     "heading": "What Changes Your Catch",
-     "body": "Four factors control the catch table.",
+     "heading": "Rainy Season Fish (Jan–Feb)",
+     "body": "These fish only appear in the rainy season. The bamboo rod is required for cod and tuna.",
      "columns": [
-      "Factor",
-      "Effect"
+      "Fish",
+      "Rod",
+      "Unlock",
+      "Where to catch"
      ],
      "rows": [
       [
-       "Pond / water type",
-       "Each body of water has its own fish pool"
+       "Rainbow Trout",
+       "Any",
+       "Water Core",
+       "Hidden Cliff, East Town Pond, Mountain Ponds, Deep Woods"
       ],
       [
-       "Rod tier",
-       "Better rods unlock better fish"
+       "Loach",
+       "Any",
+       "—",
+       "Valley Outpost, Mining Ruins, Wetland shallows, Back Hills, West Grove"
       ],
       [
-       "Weather",
-       "Storms and rain can change spawns"
+       "Cod",
+       "Bamboo rod",
+       "—",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
       ],
       [
-       "Time / season",
-       "Some fish are seasonal ⚠️"
+       "Tuna",
+       "Bamboo rod",
+       "Rock Core Sample",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
       ]
      ]
     },
     {
-     "type": "steps",
-     "tag": "FARM",
-     "heading": "How to Farm Fish Efficiently",
-     "body": "Treat fishing like a farm — a routine, not an idle minigame.",
-     "items": [
+     "type": "table",
+     "heading": "Dry Season Fish (Mar–Apr)",
+     "body": "These fish appear in the dry season — the hardest months for farming, but a good time to fish.",
+     "columns": [
+      "Fish",
+      "Time",
+      "Weather",
+      "Where to catch"
+     ],
+     "rows": [
       [
-       "Map the ponds",
-       "Visit every body of water and note what bites, at what hour and in what weather."
+       "Fang Fish",
+       "Any",
+       "Any (needs Water Core)",
+       "Hidden Cliff, East Town Pond, Mountain Ponds, Deep Woods"
       ],
       [
-       "Match rod to target",
-       "Upgrade before chasing rare fish — wasted casts waste daylight."
+       "River Snail",
+       "Any",
+       "Any",
+       "Valley Outpost, Mining Ruins, Wetland shallows, Back Hills, West Grove"
       ],
       [
-       "Fish through weather",
-       "Storms and rain often bring uncommon catches other players skip."
+       "Mimic Skeleton Fish",
+       "Any",
+       "Any",
+       "Town Dock Center, Under Pier"
       ],
       [
-       "Turn fish into parts",
-       "Rare fish fund drone and tool upgrades — the loop pays for itself."
+       "Eel",
+       "Any",
+       "Any (needs Rock Core Sample)",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
+      ],
+      [
+       "Glowing Eel",
+       "Any",
+       "Scorching sun (April)",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
       ]
+     ]
+    },
+    {
+     "type": "table",
+     "heading": "Single-Month & Breeding-Only Fish",
+     "body": "Two fish appear in specific months; the rest can only be bred in a fish tank from parents you catch.",
+     "columns": [
+      "Fish",
+      "How to get",
+      "Requirement"
+     ],
+     "rows": [
+      [
+       "Sturgeon",
+       "January or March",
+       "Water Core; Hidden Cliff, East Town Pond, Mountain Ponds, Deep Woods"
+      ],
+      [
+       "Salmon",
+       "January (Salmon Festival)",
+       "Bamboo rod; ponds + Town Dock Center, Under Pier"
+      ],
+      [
+       "Dark Skeleton Fish",
+       "Breed ≥3 Mimic Skeleton Fish",
+       "66.67% chance"
+      ],
+      [
+       "Silver-Glow Eel",
+       "Breed ≥6 Eels",
+       "50% chance"
+      ],
+      [
+       "Chum Salmon",
+       "Breed ≥6 Salmon",
+       "50% chance"
+      ],
+      [
+       "Red Cod",
+       "Breed ≥3 Cod",
+       "66.67% chance"
+      ],
+      [
+       "Blue Pike",
+       "Breed ≥3 Pike",
+       "66.67% chance"
+      ],
+      [
+       "Black-Back Sardine",
+       "Breed ≥5 Sardine + 1 Catfish",
+       "66.67% chance"
+      ],
+      [
+       "Emperor Tuna",
+       "Breed ≥5 Tuna + ≥2 Shining Goldfish",
+       "25% chance"
+      ],
+      [
+       "Leaf Slug",
+       "Breed ≥3 Grass Carp + ≥3 Aquatic Amoeba",
+       "50% chance"
+      ],
+      [
+       "Mist Eel",
+       "Breed ≥4 Loach + ≥4 Swamp Eel",
+       "50% chance"
+      ],
+      [
+       "Terror Fish",
+       "Breed exactly 3 Fang Fish + 3 Pike",
+       "25% chance"
+      ],
+      [
+       "Abyss Lantern Bass",
+       "Breed ≥4 Bass + ≥4 Glowing Eel",
+       "50% chance"
+      ]
+     ]
+    },
+    {
+     "type": "list",
+     "heading": "How to Fish Efficiently",
+     "body": "Turn fishing from a side activity into a reliable income and parts source.",
+     "items": [
+      "Map the ponds: each body of water has its own fish pool — check the tables above before choosing a spot",
+      "Upgrade your rod: higher-tier rods unlock better fish and make the fishing minigame more forgiving",
+      "Fish through weather: rain and thunderstorms bring uncommon catches that dry days don't",
+      "Watch the season: rainy season (Jan–Feb) and dry season (Mar–Apr) change the catch tables completely",
+      "Breed rare fish: the 13 tank-only species need specific parents — keep spares instead of selling everything",
+      "Rare fish drop advanced drone and tool parts, so a good fishing session funds your upgrades"
      ]
     },
     {
      "type": "note",
-     "tag": "1.0",
-     "heading": "New Fish in 1.0",
-     "body": "The 1.0 update adds new fish species. The complete English fish list with per-pond and per-weather tables is being compiled from hands-on play and will replace the summary above (⚠️)."
+     "heading": "Sources & Notes",
+     "body": "Fish locations, seasons, weather and breeding odds are player-verified and compiled from 18183's full catalog (L2). Some spawns may vary after patches — treat this as a field guide, not a fixed database. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client."
     }
    ],
    "sources": [
@@ -2856,361 +3040,1311 @@
    "i18n": {
     "zh-CN": {
      "title": "多洛可小镇钓鱼指南：池塘、天气与稀有鱼",
-     "metaTitle": "多洛可小镇钓鱼：池塘、天气、鱼竿与稀有鱼",
-     "metaDescription": "多洛可小镇钓鱼详解：不同池塘、鱼竿与天气出不同渔获，稀有鱼还会掉落无人机高级部件。",
-     "intro": "钓鱼是多洛可小镇的第二种全职事业。不同池塘、鱼竿与天气决定你能钓到什么——稀有鱼还会掉落无人机高级部件。",
+     "metaTitle": "多洛可小镇钓鱼图鉴：全部鱼类、钓点与天气（1.0）",
+     "metaDescription": "完整的多洛可小镇鱼类图鉴：每种鱼在哪里钓、需要什么鱼竿与天气，以及只能通过养殖获得的稀有鱼。",
+     "intro": "钓鱼是多洛可小镇的第二种全职事业。本图鉴列出每一条已确认的鱼——在哪里刷新、需要什么季节与天气，以及如何繁殖只能养在鱼缸里的稀有鱼。",
      "sections": [
       {
-       "type": "list",
-       "heading": "钓鱼基础",
-       "body": "无需鱼饵——只要鱼竿和正确的地点。",
-       "items": [
-        "不同池塘出不同鱼。",
-        "鱼竿品质决定你能钓到什么。",
-        "天气会改变渔获表。",
-        "稀有鱼掉落用于无人机与工具升级的高级部件。"
+       "type": "table",
+       "heading": "全年鱼类",
+       "body": "这些鱼全年任何时间都能钓到。钓点信息由玩家实测并经 18183 汇总。",
+       "columns": [
+        "鱼",
+        "时间",
+        "天气",
+        "钓点"
+       ],
+       "rows": [
+        [
+         "鲤鱼",
+         "任意",
+         "任意",
+         "东镇池塘、山间池塘、深林、湿地荷叶、隐崖（山脊谷地）"
+        ],
+        [
+         "鲶鱼",
+         "18:00–2:55",
+         "任意",
+         "东镇池塘、山间池塘、深林、湿地荷叶、苔藓洞穴地面、隐崖"
+        ],
+        [
+         "草鱼",
+         "任意",
+         "雨、雷暴、酸雨",
+         "东镇池塘、山间池塘、深林、湿地荷叶、隐崖"
+        ],
+        [
+         "沙丁鱼",
+         "任意",
+         "任意",
+         "湿地气垫船码头、城镇码头中心、桥墩下"
+        ],
+        [
+         "鲈鱼",
+         "任意",
+         "任意",
+         "湿地气垫船码头、城镇码头中心、桥墩下"
+        ],
+        [
+         "河虾",
+         "任意",
+         "任意",
+         "湿地浅滩、农场、气垫船码头、荷叶、东镇池塘、后山、山间池塘、深林、桥墩下、西树林、河谷前哨、采矿废墟、隐崖"
+        ],
+        [
+         "闪亮黄金鱼",
+         "任意",
+         "任意",
+         "深林"
+        ],
+        [
+         "锦鲤",
+         "任意",
+         "任意（需水核心）",
+         "东镇池塘、山间池塘、深林、湿地荷叶、隐崖"
+        ],
+        [
+         "黄鳝",
+         "任意",
+         "任意",
+         "湿地农场（运输船下）"
+        ],
+        [
+         "狗鱼",
+         "6:00–18:55",
+         "任意",
+         "湿地荷叶、苔藓洞穴地面"
+        ],
+        [
+         "水生变形虫",
+         "任意",
+         "任意",
+         "湿地浅滩、农场、河谷垃圾山"
+        ]
        ]
       },
       {
        "type": "table",
-       "heading": "什么影响你的渔获",
+       "heading": "雨季鱼类（1–2 月）",
+       "body": "这些鱼只在雨季出现。鳕鱼和金枪鱼需要竹竿。",
        "columns": [
-        "因素",
-        "影响"
+        "鱼",
+        "鱼竿",
+        "解锁",
+        "钓点"
        ],
        "rows": [
         [
-         "池塘 / 水域",
-         "每片水域有自己的鱼池"
+         "虹鳟鱼",
+         "任意",
+         "水核心",
+         "隐崖、东镇池塘、山间池塘、深林"
         ],
         [
-         "鱼竿等级",
-         "更好的鱼竿解锁更好的鱼"
+         "泥鳅",
+         "任意",
+         "—",
+         "河谷前哨、采矿废墟、湿地浅滩、后山、西树林"
         ],
         [
-         "天气",
-         "暴风雨可能改变出没种类"
+         "鳕鱼",
+         "竹竿",
+         "—",
+         "湿地气垫船码头、城镇码头中心、桥墩下"
         ],
         [
-         "时间 / 季节",
-         "部分鱼有季节限定 ⚠️"
+         "金枪鱼",
+         "竹竿",
+         "岩石核心样本",
+         "湿地气垫船码头、城镇码头中心、桥墩下"
         ]
        ]
       },
       {
-       "type": "steps",
-       "heading": "如何高效刷鱼",
-       "items": [
+       "type": "table",
+       "heading": "旱季鱼类（3–4 月）",
+       "body": "这些鱼在旱季出现——对种田来说是最难的月份，但却是钓鱼的好时机。",
+       "columns": [
+        "鱼",
+        "时间",
+        "天气",
+        "钓点"
+       ],
+       "rows": [
         [
-         "摸清池塘",
-         "走遍每片水域并记录咬钩情况。"
+         "牙鱼",
+         "任意",
+         "任意（需水核心）",
+         "隐崖、东镇池塘、山间池塘、深林"
         ],
         [
-         "鱼竿匹配目标",
-         "追稀有鱼前先升级。"
+         "田螺",
+         "任意",
+         "任意",
+         "河谷前哨、采矿废墟、湿地浅滩、后山、西树林"
         ],
         [
-         "趁天气钓鱼",
-         "暴风雨常带来不常见渔获。"
+         "拟态骨架鱼",
+         "任意",
+         "任意",
+         "城镇码头中心、桥墩下"
         ],
         [
-         "把鱼变成部件",
-         "稀有鱼为无人机与工具升级提供资金。"
+         "鳗鱼",
+         "任意",
+         "任意（需岩石核心样本）",
+         "湿地气垫船码头、城镇码头中心、桥墩下"
+        ],
+        [
+         "荧光鳗鱼",
+         "任意",
+         "酷暑（4月）",
+         "湿地气垫船码头、城镇码头中心、桥墩下"
         ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "单月鱼与只能繁殖的鱼",
+       "body": "两种鱼只在特定月份出现；其余只能在你钓到的亲本基础上于鱼缸中繁殖。",
+       "columns": [
+        "鱼",
+        "获得方式",
+        "条件"
+       ],
+       "rows": [
+        [
+         "鲟鱼",
+         "1 月或 3 月",
+         "水核心；隐崖、东镇池塘、山间池塘、深林"
+        ],
+        [
+         "鲑鱼",
+         "1 月（鲑鱼节）",
+         "竹竿；池塘 + 城镇码头中心、桥墩下"
+        ],
+        [
+         "暗色骨架鱼",
+         "繁殖 ≥3 条拟态骨架鱼",
+         "66.67% 概率"
+        ],
+        [
+         "银光鳗鱼",
+         "繁殖 ≥6 条鳗鱼",
+         "50% 概率"
+        ],
+        [
+         "大马哈鱼",
+         "繁殖 ≥6 条鲑鱼",
+         "50% 概率"
+        ],
+        [
+         "红鳕鱼",
+         "繁殖 ≥3 条鳕鱼",
+         "66.67% 概率"
+        ],
+        [
+         "蓝狗鱼",
+         "繁殖 ≥3 条狗鱼",
+         "66.67% 概率"
+        ],
+        [
+         "黑背沙丁鱼",
+         "繁殖 ≥5 条沙丁鱼 + 1 条鲶鱼",
+         "66.67% 概率"
+        ],
+        [
+         "帝王金枪鱼",
+         "繁殖 ≥5 条金枪鱼 + ≥2 条闪亮黄金鱼",
+         "25% 概率"
+        ],
+        [
+         "叶蛞蝓",
+         "繁殖 ≥3 条草鱼 + ≥3 条水生变形虫",
+         "50% 概率"
+        ],
+        [
+         "雾鳗",
+         "繁殖 ≥4 条泥鳅 + ≥4 条黄鳝",
+         "50% 概率"
+        ],
+        [
+         "恐鱼",
+         "繁殖恰好 3 条牙鱼 + 3 条狗鱼",
+         "25% 概率"
+        ],
+        [
+         "深渊灯笼鲈鱼",
+         "繁殖 ≥4 条鲈鱼 + ≥4 条荧光鳗鱼",
+         "50% 概率"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "heading": "高效钓鱼方法",
+       "body": "把钓鱼从副业变成稳定的收入与零件来源。",
+       "items": [
+        "摸清每个池塘：每片水域都有自己的鱼池——选点前先看上面的表",
+        "升级鱼竿：更高品质的鱼竿解锁更好的鱼，也让钓鱼小游戏更宽容",
+        "看天气钓鱼：雨天和雷暴会带来晴天没有的稀有渔获",
+        "盯紧季节：雨季（1–2 月）与旱季（3–4 月）会完全改变渔获表",
+        "繁殖稀有鱼：13 种鱼缸专属鱼需要特定亲本——留几条别全卖",
+        "稀有鱼掉落高级无人机与工具零件，一次好的钓鱼就够升级开支"
        ]
       },
       {
        "type": "note",
-       "heading": "1.0 新增鱼类",
-       "body": "1.0 更新加入了新鱼种。⚠️ 完整的英文鱼类列表（含每池塘×每天气对照表）正在整理，完成后会补到这里。"
+       "heading": "来源与说明",
+       "body": "钓点、季节、天气与繁殖概率由玩家实测，并整理自 18183 的完整图鉴（L2）。部分刷新点可能随补丁变化——请把它当作野外手册，而非固定数据库。⚠️ 中文名为游戏内中文图鉴译名，可能与英文客户端不同。"
       }
      ]
     },
     "zh-TW": {
      "title": "多洛可小鎮釣魚指南：池塘、天氣與稀有魚",
-     "metaTitle": "多洛可小鎮釣魚：池塘、天氣、魚竿與稀有魚",
-     "metaDescription": "多洛可小鎮釣魚詳解：不同池塘、魚竿與天氣出不同漁獲，稀有魚還會掉落無人機高級部件。",
-     "intro": "釣魚是多洛可小鎮的第二種全職事業。不同池塘、魚竿與天氣決定你能釣到什麼——稀有魚還會掉落無人機高級部件。",
+     "metaTitle": "多洛可小鎮釣魚圖鑑：全部魚類、釣點與天氣（1.0）",
+     "metaDescription": "完整的多洛可小鎮魚類圖鑑：每種魚在哪裏釣、需要什麼魚竿與天氣，以及只能通過養殖獲得的稀有魚。",
+     "intro": "釣魚是多洛可小鎮的第二種全職事業。本圖鑑列出每一條已確認的魚——在哪裏刷新、需要什麼季節與天氣，以及如何繁殖只能養在魚缸裏的稀有魚。",
      "sections": [
       {
-       "type": "list",
-       "heading": "釣魚基礎",
-       "body": "無需魚餌——只要魚竿和正確的地點。",
-       "items": [
-        "不同池塘出不同魚。",
-        "魚竿品質決定你能釣到什麼。",
-        "天氣會改變漁獲表。",
-        "稀有魚掉落用於無人機與工具升級的高級部件。"
+       "type": "table",
+       "heading": "全年魚類",
+       "body": "這些魚全年任何時間都能釣到。釣點信息由玩家實測並經 18183 彙總。",
+       "columns": [
+        "魚",
+        "時間",
+        "天氣",
+        "釣點"
+       ],
+       "rows": [
+        [
+         "鯉魚",
+         "任意",
+         "任意",
+         "東鎮池塘、山間池塘、深林、溼地荷葉、隱崖（山脊谷地）"
+        ],
+        [
+         "鯰魚",
+         "18:00–2:55",
+         "任意",
+         "東鎮池塘、山間池塘、深林、溼地荷葉、苔蘚洞穴地面、隱崖"
+        ],
+        [
+         "草魚",
+         "任意",
+         "雨、雷暴、酸雨",
+         "東鎮池塘、山間池塘、深林、溼地荷葉、隱崖"
+        ],
+        [
+         "沙丁魚",
+         "任意",
+         "任意",
+         "溼地氣墊船碼頭、城鎮碼頭中心、橋墩下"
+        ],
+        [
+         "鱸魚",
+         "任意",
+         "任意",
+         "溼地氣墊船碼頭、城鎮碼頭中心、橋墩下"
+        ],
+        [
+         "河蝦",
+         "任意",
+         "任意",
+         "溼地淺灘、農場、氣墊船碼頭、荷葉、東鎮池塘、後山、山間池塘、深林、橋墩下、西樹林、河谷前哨、採礦廢墟、隱崖"
+        ],
+        [
+         "閃亮黃金魚",
+         "任意",
+         "任意",
+         "深林"
+        ],
+        [
+         "錦鯉",
+         "任意",
+         "任意（需水核心）",
+         "東鎮池塘、山間池塘、深林、溼地荷葉、隱崖"
+        ],
+        [
+         "黃鱔",
+         "任意",
+         "任意",
+         "溼地農場（運輸船下）"
+        ],
+        [
+         "狗魚",
+         "6:00–18:55",
+         "任意",
+         "溼地荷葉、苔蘚洞穴地面"
+        ],
+        [
+         "水生變形蟲",
+         "任意",
+         "任意",
+         "溼地淺灘、農場、河谷垃圾山"
+        ]
        ]
       },
       {
        "type": "table",
-       "heading": "什麼影響你的漁獲",
+       "heading": "雨季魚類（1–2 月）",
+       "body": "這些魚只在雨季出現。鱈魚和金槍魚需要竹竿。",
        "columns": [
-        "因素",
-        "影響"
+        "魚",
+        "魚竿",
+        "解鎖",
+        "釣點"
        ],
        "rows": [
         [
-         "池塘 / 水域",
-         "每片水域有自己的魚池"
+         "虹鱒魚",
+         "任意",
+         "水核心",
+         "隱崖、東鎮池塘、山間池塘、深林"
         ],
         [
-         "魚竿等級",
-         "更好的魚竿解鎖更好的魚"
+         "泥鰍",
+         "任意",
+         "—",
+         "河谷前哨、採礦廢墟、溼地淺灘、後山、西樹林"
         ],
         [
-         "天氣",
-         "暴風雨可能改變出沒種類"
+         "鱈魚",
+         "竹竿",
+         "—",
+         "溼地氣墊船碼頭、城鎮碼頭中心、橋墩下"
         ],
         [
-         "時間 / 季節",
-         "部分魚有季節限定 ⚠️"
+         "金槍魚",
+         "竹竿",
+         "岩石核心樣本",
+         "溼地氣墊船碼頭、城鎮碼頭中心、橋墩下"
         ]
        ]
       },
       {
-       "type": "steps",
-       "heading": "如何高效刷魚",
-       "items": [
+       "type": "table",
+       "heading": "旱季魚類（3–4 月）",
+       "body": "這些魚在旱季出現——對種田來說是最難的月份，但卻是釣魚的好時機。",
+       "columns": [
+        "魚",
+        "時間",
+        "天氣",
+        "釣點"
+       ],
+       "rows": [
         [
-         "摸清池塘",
-         "走遍每片水域並記錄咬鉤情況。"
+         "牙魚",
+         "任意",
+         "任意（需水核心）",
+         "隱崖、東鎮池塘、山間池塘、深林"
         ],
         [
-         "魚竿匹配目標",
-         "追稀有魚前先升級。"
+         "田螺",
+         "任意",
+         "任意",
+         "河谷前哨、採礦廢墟、溼地淺灘、後山、西樹林"
         ],
         [
-         "趁天氣釣魚",
-         "暴風雨常帶來不常見漁獲。"
+         "擬態骨架魚",
+         "任意",
+         "任意",
+         "城鎮碼頭中心、橋墩下"
         ],
         [
-         "把魚變成部件",
-         "稀有魚爲無人機與工具升級提供資金。"
+         "鰻魚",
+         "任意",
+         "任意（需岩石核心樣本）",
+         "溼地氣墊船碼頭、城鎮碼頭中心、橋墩下"
+        ],
+        [
+         "熒光鰻魚",
+         "任意",
+         "酷暑（4月）",
+         "溼地氣墊船碼頭、城鎮碼頭中心、橋墩下"
         ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "單月魚與只能繁殖的魚",
+       "body": "兩種魚只在特定月份出現；其餘只能在你釣到的親本基礎上於魚缸中繁殖。",
+       "columns": [
+        "魚",
+        "獲得方式",
+        "條件"
+       ],
+       "rows": [
+        [
+         "鱘魚",
+         "1 月或 3 月",
+         "水核心；隱崖、東鎮池塘、山間池塘、深林"
+        ],
+        [
+         "鮭魚",
+         "1 月（鮭魚節）",
+         "竹竿；池塘 + 城鎮碼頭中心、橋墩下"
+        ],
+        [
+         "暗色骨架魚",
+         "繁殖 ≥3 條擬態骨架魚",
+         "66.67% 概率"
+        ],
+        [
+         "銀光鰻魚",
+         "繁殖 ≥6 條鰻魚",
+         "50% 概率"
+        ],
+        [
+         "大馬哈魚",
+         "繁殖 ≥6 條鮭魚",
+         "50% 概率"
+        ],
+        [
+         "紅鱈魚",
+         "繁殖 ≥3 條鱈魚",
+         "66.67% 概率"
+        ],
+        [
+         "藍狗魚",
+         "繁殖 ≥3 條狗魚",
+         "66.67% 概率"
+        ],
+        [
+         "黑背沙丁魚",
+         "繁殖 ≥5 條沙丁魚 + 1 條鯰魚",
+         "66.67% 概率"
+        ],
+        [
+         "帝王金槍魚",
+         "繁殖 ≥5 條金槍魚 + ≥2 條閃亮黃金魚",
+         "25% 概率"
+        ],
+        [
+         "葉蛞蝓",
+         "繁殖 ≥3 條草魚 + ≥3 條水生變形蟲",
+         "50% 概率"
+        ],
+        [
+         "霧鰻",
+         "繁殖 ≥4 條泥鰍 + ≥4 條黃鱔",
+         "50% 概率"
+        ],
+        [
+         "恐魚",
+         "繁殖恰好 3 條牙魚 + 3 條狗魚",
+         "25% 概率"
+        ],
+        [
+         "深淵燈籠鱸魚",
+         "繁殖 ≥4 條鱸魚 + ≥4 條熒光鰻魚",
+         "50% 概率"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "heading": "高效釣魚方法",
+       "body": "把釣魚從副業變成穩定的收入與零件來源。",
+       "items": [
+        "摸清每個池塘：每片水域都有自己的魚池——選點前先看上面的表",
+        "升級魚竿：更高品質的魚竿解鎖更好的魚，也讓釣魚小遊戲更寬容",
+        "看天氣釣魚：雨天和雷暴會帶來晴天沒有的稀有漁獲",
+        "盯緊季節：雨季（1–2 月）與旱季（3–4 月）會完全改變漁獲表",
+        "繁殖稀有魚：13 種魚缸專屬魚需要特定親本——留幾條別全賣",
+        "稀有魚掉落高級無人機與工具零件，一次好的釣魚就夠升級開支"
        ]
       },
       {
        "type": "note",
-       "heading": "1.0 新增魚類",
-       "body": "1.0 更新加入了新魚種。⚠️ 完整的英文魚類列表（含每池塘×每天氣對照表）正在整理，完成後會補到這裏。"
+       "heading": "來源與說明",
+       "body": "釣點、季節、天氣與繁殖概率由玩家實測，並整理自 18183 的完整圖鑑（L2）。部分刷新點可能隨補丁變化——請把它當作野外手冊，而非固定數據庫。⚠️ 中文名爲遊戲內中文圖鑑譯名，可能與英文客戶端不同。"
       }
      ]
     },
     "ja": {
      "title": "ドロックタウン釣りガイド：池・天候・レア魚",
-     "metaTitle": "ドロックタウン釣り：池・天候・竿・レア魚",
-     "metaDescription": "ドロックタウンの釣りを解説：池・竿・天候で獲れる魚が変わり、レア魚はドローンの高性能パーツを落とす。",
-     "intro": "釣りはドロックタウンで第二の本職。池・竿・天候で釣れるものが変わり、レア魚はドローン用の高度なパーツを落とす。",
+     "metaTitle": "ドロックタウン釣り図鑑：全魚種・釣り場・天候（1.0）",
+     "metaDescription": "ドロックタウンの完全魚図鑑：魚種ごとの釣り場・必要な竿と天候、繁殖限定のレア魚まで。",
+     "intro": "釣りはドロックタウンで第二の本職。本図鑑は確認済みの全魚種を網羅——出現場所、必要な季節と天候、そして水槽でしか作れないレア魚の繁殖方法。",
      "sections": [
       {
-       "type": "list",
-       "heading": "釣りの基本",
-       "body": "餌は不要——竿と正しい場所だけ。",
-       "items": [
-        "池ごとに獲れる魚が違う。",
-        "竿の品質で釣れる魚が変わる。",
-        "天候で釣果テーブルが変わる。",
-        "レア魚はドローン・道具強化の高度なパーツをドロップ。"
+       "type": "table",
+       "heading": "周年魚",
+       "body": "これらの魚は一年中いつでも釣れます。釣り場はプレイヤー検証済みで、18183 の図鑑を元に編集。",
+       "columns": [
+        "魚",
+        "時間",
+        "天候",
+        "釣り場"
+       ],
+       "rows": [
+        [
+         "コイ",
+         "任意",
+         "任意",
+         "東町の池、山の池、深い森、湿地のスイレンの葉、隠れ崖（リッジバレー）"
+        ],
+        [
+         "ナマズ",
+         "18:00–2:55",
+         "任意",
+         "東町の池、山の池、深い森、湿地のスイレンの葉、苔むした洞窟の床、隠れ崖"
+        ],
+        [
+         "ソウギョ",
+         "任意",
+         "雨、雷雨、酸性雨",
+         "東町の池、山の池、深い森、湿地のスイレンの葉、隠れ崖"
+        ],
+        [
+         "イワシ",
+         "任意",
+         "任意",
+         "湿地のホバークラフト桟橋、町のドック中央、桟橋の下"
+        ],
+        [
+         "スズキ",
+         "任意",
+         "任意",
+         "湿地のホバークラフト桟橋、町のドック中央、桟橋の下"
+        ],
+        [
+         "エビ",
+         "任意",
+         "任意",
+         "湿地の浅瀬、農場、ホバークラフト桟橋、スイレンの葉、東町の池、裏の丘、山の池、深い森、桟橋の下、西の林、谷の前哨、採掘遺跡、隠れ崖"
+        ],
+        [
+         "光る金魚",
+         "任意",
+         "任意",
+         "深い森"
+        ],
+        [
+         "ニシキゴイ",
+         "任意",
+         "任意（ウォーターコア必須）",
+         "東町の池、山の池、深い森、湿地のスイレンの葉、隠れ崖"
+        ],
+        [
+         "タウナギ",
+         "任意",
+         "任意",
+         "湿地農場（輸送船の下）"
+        ],
+        [
+         "カワカマス",
+         "6:00–18:55",
+         "任意",
+         "湿地のスイレンの葉、苔むした洞窟の床"
+        ],
+        [
+         "水生アメーバ",
+         "任意",
+         "任意",
+         "湿地の浅瀬、農場、谷のガラクタ山"
+        ]
        ]
       },
       {
        "type": "table",
-       "heading": "釣果を変える要素",
+       "heading": "雨季の魚（1〜2月）",
+       "body": "これらの魚は雨季にのみ出現。タラとマグロには竹の竿が必要。",
        "columns": [
-        "要素",
-        "影響"
+        "魚",
+        "竿",
+        "解放",
+        "釣り場"
        ],
        "rows": [
         [
-         "池 / 水域",
-         "水域ごとに魚のプールが違う"
+         "ニジマス",
+         "任意",
+         "ウォーターコア",
+         "隠れ崖、東町の池、山の池、深い森"
         ],
         [
-         "竿のランク",
-         "高ランクで良い魚が解禁"
+         "ドジョウ",
+         "任意",
+         "—",
+         "谷の前哨、採掘遺跡、湿地の浅瀬、裏の丘、西の林"
         ],
         [
-         "天候",
-         "嵐で出現が変わる場合あり"
+         "タラ",
+         "竹の竿",
+         "—",
+         "湿地のホバークラフト桟橋、町のドック中央、桟橋の下"
         ],
         [
-         "時間 / 季節",
-         "季節限定の魚も ⚠️"
+         "マグロ",
+         "竹の竿",
+         "ロックコアサンプル",
+         "湿地のホバークラフト桟橋、町のドック中央、桟橋の下"
         ]
        ]
       },
       {
-       "type": "steps",
-       "heading": "効率的な魚の稼ぎ方",
-       "items": [
+       "type": "table",
+       "heading": "乾季の魚（3〜4月）",
+       "body": "これらの魚は乾季に出現——農業には最も厳しい月ですが、釣りには好機。",
+       "columns": [
+        "魚",
+        "時間",
+        "天候",
+        "釣り場"
+       ],
+       "rows": [
         [
-         "池を把握",
-         "全水域を回って釣果を記録。"
+         "牙魚",
+         "任意",
+         "任意（ウォーターコア必須）",
+         "隠れ崖、東町の池、山の池、深い森"
         ],
         [
-         "竿を目標に合わせる",
-         "レア魚狙いの前に強化。"
+         "タニシ",
+         "任意",
+         "任意",
+         "谷の前哨、採掘遺跡、湿地の浅瀬、裏の丘、西の林"
         ],
         [
-         "天候を狙う",
-         "嵐はレアな釣果をもたらす。"
+         "擬態スケルトン魚",
+         "任意",
+         "任意",
+         "町のドック中央、桟橋の下"
         ],
         [
-         "魚をパーツに",
-         "レア魚がドローン・道具強化の資金に。"
+         "ウナギ",
+         "任意",
+         "任意（ロックコアサンプル必須）",
+         "湿地のホバークラフト桟橋、町のドック中央、桟橋の下"
+        ],
+        [
+         "光るウナギ",
+         "任意",
+         "灼熱の太陽（4月）",
+         "湿地のホバークラフト桟橋、町のドック中央、桟橋の下"
         ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "単月魚と繁殖限定魚",
+       "body": "2種は特定の月のみ出現。残りは釣った親魚から水槽で繁殖させます。",
+       "columns": [
+        "魚",
+        "入手方法",
+        "条件"
+       ],
+       "rows": [
+        [
+         "チョウザメ",
+         "1月または3月",
+         "ウォーターコア；隠れ崖、東町の池、山の池、深い森"
+        ],
+        [
+         "サケ",
+         "1月（サケ祭り）",
+         "竹の竿；池 + 町のドック中央、桟橋の下"
+        ],
+        [
+         "暗色スケルトン魚",
+         "擬態スケルトン魚を3匹以上で繁殖",
+         "66.67%"
+        ],
+        [
+         "銀光ウナギ",
+         "ウナギを6匹以上で繁殖",
+         "50%"
+        ],
+        [
+         "シロザケ",
+         "サケを6匹以上で繁殖",
+         "50%"
+        ],
+        [
+         "赤タラ",
+         "タラを3匹以上で繁殖",
+         "66.67%"
+        ],
+        [
+         "青カワカマス",
+         "カワカマスを3匹以上で繁殖",
+         "66.67%"
+        ],
+        [
+         "黒背イワシ",
+         "イワシ5匹以上 + ナマズ1匹で繁殖",
+         "66.67%"
+        ],
+        [
+         "帝王マグロ",
+         "マグロ5匹以上 + 光る金魚2匹以上で繁殖",
+         "25%"
+        ],
+        [
+         "葉ナメクジ",
+         "ソウギョ3匹以上 + 水生アメーバ3匹以上で繁殖",
+         "50%"
+        ],
+        [
+         "霧ウナギ",
+         "ドジョウ4匹以上 + タウナギ4匹以上で繁殖",
+         "50%"
+        ],
+        [
+         "恐怖魚",
+         "牙魚3匹 + カワカマス3匹ちょうどで繁殖",
+         "25%"
+        ],
+        [
+         "深淵ランタンスズキ",
+         "スズキ4匹以上 + 光るウナギ4匹以上で繁殖",
+         "50%"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "heading": "効率的な釣り方",
+       "body": "釣りを副業から、安定した収入とパーツ供給源に変える。",
+       "items": [
+        "池を把握する：水域ごとに魚種が違う——場所選びの前に上の表を確認",
+        "竿を強化する：上位の竿でより良い魚が解禁され、ミニゲームも寛容に",
+        "天候を活かす：雨と雷雨は晴れの日には出ない珍しい釣果をもたらす",
+        "季節に注意：雨季（1〜2月）と乾季（3〜4月）で釣果テーブルが完全に変わる",
+        "レア魚を繁殖する：水槽限定13種は特定の親魚が必要——全部売らずに残そう",
+        "レア魚はドローン・道具の高度なパーツを落とす——良い釣りは強化費の財源"
        ]
       },
       {
        "type": "note",
-       "heading": "1.0 の新魚",
-       "body": "1.0 で新しい魚種が追加。池×天候別の完全な英語リストを実機で編集中。完成後、上の要約を置き換える（⚠️）。"
+       "heading": "出典と注記",
+       "body": "釣り場・季節・天候・繁殖確率はプレイヤー検証済みで、18183 の完全図鑑（L2）を元に編集。パッチで出現が変わる可能性があります——固定データベースではなくフィールドガイドとして扱ってください。⚠️ 日本語名はゲーム内中国語図鑑の訳で、英語クライアントと異なる場合があります。"
       }
      ]
     },
     "ko": {
      "title": "돌록 타운 낚시 가이드: 연못·날씨·희귀어",
-     "metaTitle": "돌록 타운 낚시: 연못·날씨·낚싯대·희귀어",
-     "metaDescription": "돌록 타운 낚시 설명: 연못·낚싯대·날씨에 따라 잡히는 물고기가 다르고, 희귀어는 드론 고급 부품을 떨어뜨립니다.",
-     "intro": "낚시는 돌록 타운에서 두 번째 본업입니다. 연못·낚싯대·날씨에 따라 잡히는 것이 달라지고, 희귀어는 드론 고급 부품을 줍니다.",
+     "metaTitle": "돌록 타운 낚시 도감: 전체 어종·낚시터·날씨 (1.0)",
+     "metaDescription": "돌록 타운의 완전한 물고기 도감: 어종별 낚시터, 필요한 낚싯대와 날씨, 그리고 번식으로만 얻는 희귀어까지.",
+     "intro": "낚시는 돌록 타운에서 두 번째 본업입니다. 이 도감은 확인된 모든 물고기를 다룹니다——어디서 나오는지, 어떤 계절과 날씨가 필요한지, 그리고 수조에서만 키울 수 있는 희귀어 번식법까지.",
      "sections": [
       {
-       "type": "list",
-       "heading": "낚시의 기초",
-       "body": "미끼는 필요 없습니다——낚싯대와 올바른 장소만 있으면 됩니다.",
-       "items": [
-        "연못마다 잡히는 물고기가 다릅니다.",
-        "낚싯대 품질에 따라 잡을 수 있는 물고기가 달라집니다.",
-        "날씨가 낚시 테이블을 바꿉니다.",
-        "희귀어는 드론·도구 업그레이드용 고급 부품을 드롭합니다."
+       "type": "table",
+       "heading": "연중 어종",
+       "body": "이 물고기들은 연중 언제든 낚을 수 있습니다. 낚시터 정보는 플레이어 검증 후 18183 도감을 바탕으로 정리했습니다.",
+       "columns": [
+        "물고기",
+        "시간",
+        "날씨",
+        "낚시터"
+       ],
+       "rows": [
+        [
+         "잉어",
+         "모두",
+         "모두",
+         "동쪽 마을 연못, 산속 연못, 깊은 숲, 습지 수련 잎, 숨은 절벽(산등성이 계곡)"
+        ],
+        [
+         "메기",
+         "18:00–2:55",
+         "모두",
+         "동쪽 마을 연못, 산속 연못, 깊은 숲, 습지 수련 잎, 이끼 동굴 바닥, 숨은 절벽"
+        ],
+        [
+         "초어",
+         "모두",
+         "비, 뇌우, 산성비",
+         "동쪽 마을 연못, 산속 연못, 깊은 숲, 습지 수련 잎, 숨은 절벽"
+        ],
+        [
+         "정어리",
+         "모두",
+         "모두",
+         "습지 호버크래프트 부두, 마을 부두 중앙, 교각 아래"
+        ],
+        [
+         "배스",
+         "모두",
+         "모두",
+         "습지 호버크래프트 부두, 마을 부두 중앙, 교각 아래"
+        ],
+        [
+         "새우",
+         "모두",
+         "모두",
+         "습지 여울, 농장, 호버크래프트 부두, 수련 잎, 동쪽 마을 연못, 뒷동산, 산속 연못, 깊은 숲, 교각 아래, 서쪽 숲, 계곡 전초기지, 채굴 유적, 숨은 절벽"
+        ],
+        [
+         "반짝이는 금붕어",
+         "모두",
+         "모두",
+         "깊은 숲"
+        ],
+        [
+         "비단잉어",
+         "모두",
+         "모두 (물 코어 필요)",
+         "동쪽 마을 연못, 산속 연못, 깊은 숲, 습지 수련 잎, 숨은 절벽"
+        ],
+        [
+         "드렁허리",
+         "모두",
+         "모두",
+         "습지 농장(운송선 아래)"
+        ],
+        [
+         "강꼬치고기",
+         "6:00–18:55",
+         "모두",
+         "습지 수련 잎, 이끼 동굴 바닥"
+        ],
+        [
+         "수생 아메바",
+         "모두",
+         "모두",
+         "습지 여울, 농장, 계곡 쓰레기 산"
+        ]
        ]
       },
       {
        "type": "table",
-       "heading": "낚시 결과를 바꾸는 요소",
+       "heading": "우기 어종 (1–2월)",
+       "body": "이 물고기들은 우기에만 나타납니다. 대구와 참치는 대나무 낚싯대가 필요합니다.",
        "columns": [
-        "요소",
-        "영향"
+        "물고기",
+        "낚싯대",
+        "해금",
+        "낚시터"
        ],
        "rows": [
         [
-         "연못 / 수역",
-         "수역마다 고유한 물고기 풀"
+         "무지개송어",
+         "모두",
+         "물 코어",
+         "숨은 절벽, 동쪽 마을 연못, 산속 연못, 깊은 숲"
         ],
         [
-         "낚싯대 등급",
-         "더 좋은 낚싯대가 더 좋은 물고기 해금"
+         "미꾸라지",
+         "모두",
+         "—",
+         "계곡 전초기지, 채굴 유적, 습지 여울, 뒷동산, 서쪽 숲"
         ],
         [
-         "날씨",
-         "폭풍이 출현을 바꿀 수 있음"
+         "대구",
+         "대나무 낚싯대",
+         "—",
+         "습지 호버크래프트 부두, 마을 부두 중앙, 교각 아래"
         ],
         [
-         "시간 / 계절",
-         "일부 물고기는 계절 한정 ⚠️"
+         "참치",
+         "대나무 낚싯대",
+         "암석 코어 샘플",
+         "습지 호버크래프트 부두, 마을 부두 중앙, 교각 아래"
         ]
        ]
       },
       {
-       "type": "steps",
-       "heading": "효율적으로 물고기 파밍하기",
-       "items": [
+       "type": "table",
+       "heading": "건기 어종 (3–4월)",
+       "body": "이 물고기들은 건기에 나타납니다——농사에는 가장 힘든 달이지만 낚시에는 좋은 시기입니다.",
+       "columns": [
+        "물고기",
+        "시간",
+        "날씨",
+        "낚시터"
+       ],
+       "rows": [
         [
-         "연못 파악",
-         "모든 수역을 돌며 낚이는 것을 기록하세요."
+         "이빨고기",
+         "모두",
+         "모두 (물 코어 필요)",
+         "숨은 절벽, 동쪽 마을 연못, 산속 연못, 깊은 숲"
         ],
         [
-         "낚싯대를 목표에 맞추기",
-         "희귀어를 노리기 전에 업그레이드."
+         "다슬기",
+         "모두",
+         "모두",
+         "계곡 전초기지, 채굴 유적, 습지 여울, 뒷동산, 서쪽 숲"
         ],
         [
-         "날씨 노리기",
-         "폭풍은 흔치 않은 어획을 가져옵니다."
+         "위장 해골 물고기",
+         "모두",
+         "모두",
+         "마을 부두 중앙, 교각 아래"
         ],
         [
-         "물고기를 부품으로",
-         "희귀어가 드론·도구 강화의 자금이 됩니다."
+         "뱀장어",
+         "모두",
+         "모두 (암석 코어 샘플 필요)",
+         "습지 호버크래프트 부두, 마을 부두 중앙, 교각 아래"
+        ],
+        [
+         "발광 뱀장어",
+         "모두",
+         "작열하는 태양(4월)",
+         "습지 호버크래프트 부두, 마을 부두 중앙, 교각 아래"
         ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "단일 월 어종과 번식 전용 어종",
+       "body": "두 어종은 특정 달에만 나타나며, 나머지는 잡은 부모어로 수조에서 번식해야 합니다.",
+       "columns": [
+        "물고기",
+        "획득 방법",
+        "조건"
+       ],
+       "rows": [
+        [
+         "철갑상어",
+         "1월 또는 3월",
+         "물 코어; 숨은 절벽, 동쪽 마을 연못, 산속 연못, 깊은 숲"
+        ],
+        [
+         "연어",
+         "1월 (연어 축제)",
+         "대나무 낚싯대; 연못 + 마을 부두 중앙, 교각 아래"
+        ],
+        [
+         "어둠 해골 물고기",
+         "위장 해골 물고기 3마리 이상 번식",
+         "66.67% 확률"
+        ],
+        [
+         "은빛 뱀장어",
+         "뱀장어 6마리 이상 번식",
+         "50% 확률"
+        ],
+        [
+         "시베리아연어",
+         "연어 6마리 이상 번식",
+         "50% 확률"
+        ],
+        [
+         "붉은대구",
+         "대구 3마리 이상 번식",
+         "66.67% 확률"
+        ],
+        [
+         "파란강꼬치",
+         "강꼬치고기 3마리 이상 번식",
+         "66.67% 확률"
+        ],
+        [
+         "검은등 정어리",
+         "정어리 5마리 이상 + 메기 1마리 번식",
+         "66.67% 확률"
+        ],
+        [
+         "제왕참치",
+         "참치 5마리 이상 + 반짝이는 금붕어 2마리 이상 번식",
+         "25% 확률"
+        ],
+        [
+         "잎민달팽이",
+         "초어 3마리 이상 + 수생 아메바 3마리 이상 번식",
+         "50% 확률"
+        ],
+        [
+         "안개뱀장어",
+         "미꾸라지 4마리 이상 + 드렁허리 4마리 이상 번식",
+         "50% 확률"
+        ],
+        [
+         "공포어",
+         "이빨고기 정확히 3마리 + 강꼬치고기 3마리 번식",
+         "25% 확률"
+        ],
+        [
+         "심연 랜턴 배스",
+         "배스 4마리 이상 + 발광 뱀장어 4마리 이상 번식",
+         "50% 확률"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "heading": "효율적인 낚시법",
+       "body": "낚시를 부업에서 안정적인 수입과 부품 공급원으로 바꾸세요.",
+       "items": [
+        "연못을 파악하세요: 물가마다 어종이 다릅니다——자리 정하기 전에 위 표를 확인",
+        "낚싯대를 업그레이드하세요: 상위 낚싯대는 더 좋은 물고기를 해금하고 미니게임도 관대해집니다",
+        "날씨를 활용하세요: 비와 뇌우는 맑은 날에는 안 나오는 진귀한 어획을 줍니다",
+        "계절을 주시하세요: 우기(1–2월)와 건기(3–4월)는 어획표를 완전히 바꿉니다",
+        "희귀어를 번식하세요: 수조 전용 13종은 특정 부모어가 필요——전부 팔지 말고 여분을 남기세요",
+        "희귀어는 드론·도구 고급 부품을 줍니다——좋은 낚시 한 번이 강화 비용을 채웁니다"
        ]
       },
       {
        "type": "note",
-       "heading": "1.0의 새 물고기",
-       "body": "1.0 업데이트로 새로운 어종이 추가됐습니다. ⚠️ 연못×날씨별 완전한 영어 물고기 목록을 정리 중이며, 완성되면 추가합니다."
+       "heading": "출처 및 주의",
+       "body": "낚시터·계절·날씨·번식 확률은 플레이어 검증 후 18183의 완전 도감(L2)을 바탕으로 정리했습니다. 패치로 일부 출현이 달라질 수 있습니다——고정 데이터베이스가 아닌 현장 가이드로 다뤄주세요. ⚠️ 한국어 이름은 게임 내 중국어 도감의 번역이며 영어 클라이언트와 다를 수 있습니다."
       }
      ]
     },
     "es": {
      "title": "Guía de pesca de Doloc Town: estanques, clima y peces raros",
-     "metaTitle": "Pesca en Doloc Town: estanques, clima, cañas y peces raros",
-     "metaDescription": "La pesca de Doloc Town explicada: distintos estanques, cañas y clima dan capturas diferentes; los peces raros dan piezas avanzadas para el dron.",
-     "intro": "La pesca es una segunda carrera completa en Doloc Town. Estanques, cañas y clima cambian lo que pescas, y los peces raros dan piezas avanzadas.",
+     "metaTitle": "Pesca de Doloc Town: catálogo completo de peces (1.0)",
+     "metaDescription": "El catálogo completo de peces de Doloc Town: cada pez, dónde capturarlo, qué caña y clima necesita, y los raros que solo se crían.",
+     "intro": "La pesca es una segunda carrera completa en Doloc Town. Este catálogo reúne cada pez confirmado: dónde aparece, qué estación y clima necesita, y cómo criar las especies raras que solo viven en tanque.",
      "sections": [
       {
-       "type": "list",
-       "heading": "Bases de la pesca",
-       "body": "No necesitas cebo: solo una caña y el sitio adecuado.",
-       "items": [
-        "Cada estanque da peces distintos.",
-        "La calidad de la caña cambia lo que puedes pescar.",
-        "El clima cambia la tabla de capturas.",
-        "Los peces raros dan piezas avanzadas para el dron y las herramientas."
+       "type": "table",
+       "heading": "Peces de todo el año",
+       "body": "Estos peces pueden capturarse en cualquier época del año. Las ubicaciones están verificadas por jugadores y recopiladas por 18183.",
+       "columns": [
+        "Pez",
+        "Hora",
+        "Clima",
+        "Dónde capturarlo"
+       ],
+       "rows": [
+        [
+         "Carpa",
+         "Cualquiera",
+         "Cualquiera",
+         "Estanque del Este, Estanques de montaña, Bosque profundo, Nenúfares del humedal, Acantilado oculto (Valle de la Cresta)"
+        ],
+        [
+         "Bagre",
+         "18:00–2:55",
+         "Cualquiera",
+         "Estanque del Este, Estanques de montaña, Bosque profundo, Nenúfares del humedal, Suelo de la cueva musgosa, Acantilado oculto"
+        ],
+        [
+         "Carpa herbívora",
+         "Cualquiera",
+         "Lluvia, Tormenta eléctrica, Lluvia ácida",
+         "Estanque del Este, Estanques de montaña, Bosque profundo, Nenúfares del humedal, Acantilado oculto"
+        ],
+        [
+         "Sardina",
+         "Cualquiera",
+         "Cualquiera",
+         "Muelle de aerodeslizador del humedal, Centro del muelle de la ciudad, Bajo el muelle"
+        ],
+        [
+         "Lubina",
+         "Cualquiera",
+         "Cualquiera",
+         "Muelle de aerodeslizador del humedal, Centro del muelle de la ciudad, Bajo el muelle"
+        ],
+        [
+         "Camarón",
+         "Cualquiera",
+         "Cualquiera",
+         "Aguas poco profundas del humedal, Granja, Muelle de aerodeslizador, Nenúfares, Estanque del Este, Colinas traseras, Estanques de montaña, Bosque profundo, Bajo el muelle, Arboleda del oeste, Puesto avanzado del valle, Ruinas mineras, Acantilado oculto"
+        ],
+        [
+         "Pez dorado brillante",
+         "Cualquiera",
+         "Cualquiera",
+         "Bosque profundo"
+        ],
+        [
+         "Koi",
+         "Cualquiera",
+         "Cualquiera (necesita Núcleo de agua)",
+         "Estanque del Este, Estanques de montaña, Bosque profundo, Nenúfares del humedal, Acantilado oculto"
+        ],
+        [
+         "Anguila de pantano",
+         "Cualquiera",
+         "Cualquiera",
+         "Granja del humedal (bajo el barco de transporte)"
+        ],
+        [
+         "Lucio",
+         "6:00–18:55",
+         "Cualquiera",
+         "Nenúfares del humedal, Suelo de la cueva musgosa"
+        ],
+        [
+         "Ameba acuática",
+         "Cualquiera",
+         "Cualquiera",
+         "Aguas poco profundas del humedal, Granja, Montaña de chatarra del valle"
+        ]
        ]
       },
       {
        "type": "table",
-       "heading": "Qué cambia tu captura",
+       "heading": "Peces de la estación lluviosa (ene–feb)",
+       "body": "Estos peces solo aparecen en la estación lluviosa. El bacalao y el atún requieren la caña de bambú.",
        "columns": [
-        "Factor",
-        "Efecto"
+        "Pez",
+        "Caña",
+        "Desbloqueo",
+        "Dónde capturarlo"
        ],
        "rows": [
         [
-         "Estanque / agua",
-         "Cada masa de agua tiene su propia población"
+         "Trucha arcoíris",
+         "Cualquiera",
+         "Núcleo de agua",
+         "Acantilado oculto, Estanque del Este, Estanques de montaña, Bosque profundo"
         ],
         [
-         "Nivel de caña",
-         "Mejores cañas, mejores peces"
+         "Locha",
+         "Cualquiera",
+         "—",
+         "Puesto avanzado del valle, Ruinas mineras, Aguas poco profundas del humedal, Colinas traseras, Arboleda del oeste"
         ],
         [
-         "Clima",
-         "Las tormentas pueden cambiar los peces"
+         "Bacalao",
+         "Caña de bambú",
+         "—",
+         "Muelle de aerodeslizador del humedal, Centro del muelle de la ciudad, Bajo el muelle"
         ],
         [
-         "Hora / temporada",
-         "Algunos peces son de temporada ⚠️"
+         "Atún",
+         "Caña de bambú",
+         "Muestra de núcleo rocoso",
+         "Muelle de aerodeslizador del humedal, Centro del muelle de la ciudad, Bajo el muelle"
         ]
        ]
       },
       {
-       "type": "steps",
-       "heading": "Cómo pescar de forma eficiente",
-       "items": [
+       "type": "table",
+       "heading": "Peces de la estación seca (mar–abr)",
+       "body": "Estos peces aparecen en la estación seca — los meses más duros para la granja, pero un buen momento para pescar.",
+       "columns": [
+        "Pez",
+        "Hora",
+        "Clima",
+        "Dónde capturarlo"
+       ],
+       "rows": [
         [
-         "Mapea los estanques",
-         "Visita cada masa de agua y anota qué pica."
+         "Pez colmillo",
+         "Cualquiera",
+         "Cualquiera (necesita Núcleo de agua)",
+         "Acantilado oculto, Estanque del Este, Estanques de montaña, Bosque profundo"
         ],
         [
-         "Iguala la caña al objetivo",
-         "Mejora antes de buscar peces raros."
+         "Caracol de río",
+         "Cualquiera",
+         "Cualquiera",
+         "Puesto avanzado del valle, Ruinas mineras, Aguas poco profundas del humedal, Colinas traseras, Arboleda del oeste"
         ],
         [
-         "Pesca con clima",
-         "Las tormentas suelen traer capturas poco comunes."
+         "Pez esqueleto imitador",
+         "Cualquiera",
+         "Cualquiera",
+         "Centro del muelle de la ciudad, Bajo el muelle"
         ],
         [
-         "Convierte peces en piezas",
-         "Los peces raros financian mejoras del dron."
+         "Anguila",
+         "Cualquiera",
+         "Cualquiera (necesita Muestra de núcleo rocoso)",
+         "Muelle de aerodeslizador del humedal, Centro del muelle de la ciudad, Bajo el muelle"
+        ],
+        [
+         "Anguila brillante",
+         "Cualquiera",
+         "Sol abrasador (abril)",
+         "Muelle de aerodeslizador del humedal, Centro del muelle de la ciudad, Bajo el muelle"
         ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "Peces de un solo mes y solo cría",
+       "body": "Dos peces aparecen en meses concretos; el resto solo puede criarse en un tanque a partir de los padres que captures.",
+       "columns": [
+        "Pez",
+        "Cómo obtenerlo",
+        "Requisito"
+       ],
+       "rows": [
+        [
+         "Esturión",
+         "Enero o marzo",
+         "Núcleo de agua; Acantilado oculto, Estanque del Este, Estanques de montaña, Bosque profundo"
+        ],
+        [
+         "Salmón",
+         "Enero (Festival del Salmón)",
+         "Caña de bambú; estanques + Centro del muelle de la ciudad, Bajo el muelle"
+        ],
+        [
+         "Pez esqueleto oscuro",
+         "Cría con ≥3 peces esqueleto imitador",
+         "66,67 % de probabilidad"
+        ],
+        [
+         "Anguila de brillo plateado",
+         "Cría con ≥6 anguilas",
+         "50 % de probabilidad"
+        ],
+        [
+         "Salmón keta",
+         "Cría con ≥6 salmones",
+         "50 % de probabilidad"
+        ],
+        [
+         "Bacalao rojo",
+         "Cría con ≥3 bacalaos",
+         "66,67 % de probabilidad"
+        ],
+        [
+         "Lucio azul",
+         "Cría con ≥3 lucios",
+         "66,67 % de probabilidad"
+        ],
+        [
+         "Sardina de lomo negro",
+         "Cría con ≥5 sardinas + 1 bagre",
+         "66,67 % de probabilidad"
+        ],
+        [
+         "Atún emperador",
+         "Cría con ≥5 atunes + ≥2 peces dorado brillante",
+         "25 % de probabilidad"
+        ],
+        [
+         "Babosa hoja",
+         "Cría con ≥3 carpas herbívoras + ≥3 amebas acuáticas",
+         "50 % de probabilidad"
+        ],
+        [
+         "Anguila de niebla",
+         "Cría con ≥4 lochas + ≥4 anguilas de pantano",
+         "50 % de probabilidad"
+        ],
+        [
+         "Pez del terror",
+         "Cría con exactamente 3 peces colmillo + 3 lucios",
+         "25 % de probabilidad"
+        ],
+        [
+         "Lubina linterna abisal",
+         "Cría con ≥4 lubinas + ≥4 anguilas brillantes",
+         "50 % de probabilidad"
+        ]
+       ]
+      },
+      {
+       "type": "list",
+       "heading": "Cómo pescar de forma eficiente",
+       "body": "Convierte la pesca de actividad secundaria en una fuente fiable de ingresos y piezas.",
+       "items": [
+        "Conoce los estanques: cada masa de agua tiene su propia fauna — consulta las tablas antes de elegir sitio",
+        "Mejora tu caña: las cañas superiores desbloquean mejores peces y hacen el minijuego más permisivo",
+        "Pesca según el clima: la lluvia y las tormentas traen capturas poco comunes que no aparecen en días secos",
+        "Vigila la estación: la lluviosa (ene–feb) y la seca (mar–abr) cambian por completo las tablas de captura",
+        "Cría peces raros: las 13 especies de tanque necesitan padres concretos — guarda sobras en vez de venderlo todo",
+        "Los peces raros dan piezas avanzadas de dron y herramientas: una buena sesión de pesca financia tus mejoras"
        ]
       },
       {
        "type": "note",
-       "heading": "Peces nuevos en 1.0",
-       "body": "La actualización 1.0 añade nuevas especies. ⚠️ La lista completa en inglés con tablas por estanque y clima se está compilando y se añadirá aquí."
+       "heading": "Fuentes y notas",
+       "body": "Ubicaciones, estaciones, clima y probabilidades de cría están verificados por jugadores y recopilados del catálogo completo de 18183 (L2). Algunas apariciones pueden variar tras los parches: trátalo como una guía de campo, no como una base de datos fija. ⚠️ Los nombres en español son traducciones del catálogo chino del juego y pueden diferir del cliente en inglés."
       }
      ]
     }
@@ -4961,20 +6095,21 @@
    "slug": "farming",
    "title": "Doloc Town Farming Guide: Crops, Seasons & Soil",
    "metaTitle": "Doloc Town Farming Guide: Crops, Seasons, Trees & Soil",
-   "metaDescription": "Everything about Doloc Town farming: seasonal crops, fruit trees, herbs, mushrooms, planters and soil, plus tool upgrades and harvest tips.",
-   "intro": "Farming is the foundation of your wasteland farm. Learn what to plant, when, and how to protect it from extreme weather.",
+   "metaDescription": "Everything about Doloc Town farming: seasonal crops, fruit trees, herbs, mushrooms, planters and soil, plus the gene mutations and 1.0 automation that change how you farm.",
+   "intro": "Farming is the foundation of your wasteland farm. Learn what to plant, when, how to protect it from extreme weather — and how genes and 1.0 automation replace the busywork.",
    "sections": [
     {
      "type": "list",
      "tag": "CROPS",
      "heading": "Crop Basics",
-     "body": "Farming is the foundation of your wasteland farm. Learn what to plant, when, and how to protect it.",
+     "body": "Farming in Doloc Town is vertical: you stack planters on platforms and climb between them every day. Get the basics right and the rest of the game funds itself.",
      "items": [
-      "Seasonal crops rotate with the calendar — plant to the season.",
-      "Fruit trees take 7 days and produce forever once mature — plant them early.",
-      "Herbs grow in 2 days — fast filler crops that smooth cash flow.",
-      "Mushrooms are an autumn forage bonus — free calories.",
-      "A sickle harvests whole groups at once — upgrade it early."
+      "Seasonal crops rotate with the calendar — plant to the season and replant after each changeover.",
+      "Fruit trees take 7 days and produce forever once mature — plant them in week one.",
+      "Herbs grow in 2 days — fast filler crops that smooth cash flow between harvests.",
+      "Mushrooms are an autumn forage bonus — free calories that cost no water.",
+      "A sickle harvests whole groups at once — upgrade it early, it is the biggest time-saver in the game.",
+      "Crops can be gene-modified: the 1.0 store page confirms the genetics system covers upward of 30 different crops."
      ]
     },
     {
@@ -4990,22 +6125,103 @@
       [
        "Herbs",
        "2 days",
-       "Fast, low investment"
+       "Fast, low investment — good gap-fillers"
       ],
       [
        "Seasonal crops",
        "Varies",
-       "Match the season"
+       "Match the season; replant after changeover"
       ],
       [
        "Fruit trees",
        "7 days",
-       "Permanent producer — plant first"
+       "Permanent producer — plant first and let them pay forever"
       ],
       [
        "Mushrooms",
        "Autumn forage",
-       "Free bonus ⚠️"
+       "Free bonus, no watering ⚠️"
+      ],
+      [
+       "Gene-modified crops",
+       "Varies",
+       "Mutations can add drops, auto-harvest or weather resistance"
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "tag": "SEASON",
+     "heading": "The Farm Calendar: Seasons & Weather",
+     "body": "Doloc Town runs a two-season weather year on top of a four-month calendar. The rainy season (January–February) and dry season (March–April) change what you can grow and catch — and April is the drought month.",
+     "columns": [
+      "Period",
+      "What happens",
+      "Farmer's move"
+     ],
+     "rows": [
+      [
+       "Rainy season (Jan–Feb)",
+       "Heavy rain and thunderstorms; ponds fill; some fish only appear now",
+       "Let rain irrigate; bank thunderstorm power for 1.0 automation"
+      ],
+      [
+       "Dry season (Mar–Apr)",
+       "Less rain; crops start to struggle",
+       "Water more; lean on the Rain Falls Evenly gene or covers"
+      ],
+      [
+       "Drought (April)",
+       "Crops wither and shop prices spike",
+       "Sell stockpiles at the highest prices of the year"
+      ],
+      [
+       "Any season",
+       "Acid rain and heat waves can strike suddenly",
+       "Keep covers built; group vulnerable crops together"
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "tag": "GENE",
+     "heading": "Genes Every Farmer Should Know",
+     "body": "The genetics system (added in the February EA update) lets you install up to 3 gene modules per seed. These are the mutations most useful on the farm. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client.",
+     "columns": [
+      "Gene (translated)",
+      "Effect",
+      "Best for"
+     ],
+     "rows": [
+      [
+       "Rain Falls Evenly (雨露均沾)",
+       "Auto-waters surrounding crops",
+       "The single best early gene — replaces daily watering"
+      ],
+      [
+       "Spore Ejection (孢子喷射)",
+       "Mature plants drop fruit automatically",
+       "Idle-friendly plots; combine with auto-harvest"
+      ],
+      [
+       "Fractal Crop (分形作物)",
+       "Increases drop count",
+       "High-value crops where extra fruit = extra income"
+      ],
+      [
+       "Gift of Time (时间馈赠)",
+       "+1 fruit for every 28 days the plant survives",
+       "Long-lived plants — plant early and leave them"
+      ],
+      [
+       "Hope (希望)",
+       "Harvests drop seeds",
+       "Keeps a plot self-sustaining without re-seeding"
+      ],
+      [
+       "Constitution Boost (体质增强)",
+       "Survives off-season at -50% speed",
+       "Stretches a crop beyond its season"
       ]
      ]
     },
@@ -5025,7 +6241,7 @@
       ],
       [
        "Use the Rain gene",
-       "Auto-watering mutation keeps soil moist through dry spells."
+       "Rain Falls Evenly keeps soil moist through dry spells automatically."
       ],
       [
        "Automate in 1.0",
@@ -5034,10 +6250,54 @@
      ]
     },
     {
+     "type": "list",
+     "tag": "AUTO",
+     "heading": "From Hand-Farming to Automation (1.0)",
+     "body": "The 1.0 release turns you from a farmer into a farm manager. The upgrade path is: energy first, stations second, then let the drones work.",
+     "items": [
+      "Build solar panels and wind turbines to generate clean energy for your farm.",
+      "Construct farm drone stations — the control points that let drones work the fields.",
+      "Assign automation tasks: drones handle seeding, nurturing and harvesting end to end.",
+      "Vertical stacking matters: leave clear flight lanes between platforms so drones can reach every planter.",
+      "The industrial zone adds conveyor-belt production lines that open up previously unreachable areas."
+     ]
+    },
+    {
      "type": "note",
      "tag": "TIP",
      "heading": "Drought Strategy & Common Mistakes",
-     "body": "In drought month (Month 4) crops wither and prices spike. Stockpile before the drought and sell high during it. Common mistakes: planting one giant flat field (a single storm wipes it), ignoring fruit trees early (they are free money later), and never upgrading the sickle (group harvest is a huge time saver)."
+     "body": "In drought month (April) crops wither and prices spike. Stockpile before the drought and sell high during it. Common mistakes: planting one giant flat field (a single storm wipes it), ignoring fruit trees early (they are free money later), never upgrading the sickle (group harvest is a huge time saver), watering everything by hand when the Rain gene exists, and skipping Bellad's quests (tech points are the only reliable early income)."
+    },
+    {
+     "type": "faq",
+     "tag": "FAQ",
+     "heading": "Quick Answers",
+     "items": [
+      [
+       "Do I have to water every day?",
+       "Early on, yes — but the Rain Falls Evenly gene auto-waters surrounding crops, and 1.0 drone stations fully take over."
+      ],
+      [
+       "When should I plant fruit trees?",
+       "Week one. They take 7 days to mature and then produce forever — the earlier they go in, the more free income you bank."
+      ],
+      [
+       "What is the drought month?",
+       "April, in the dry season. Crops wither and shop prices spike — stockpile before it and sell during it."
+      ],
+      [
+       "How do gene modules work?",
+       "Each seed holds up to 3 gene modules chosen from a pool of around 20 mutations; install them with the gene reader/synthesizer and observe the synergy on your farm."
+      ],
+      [
+       "How many crops can be gene-modified?",
+       "The official store page says the genetics system covers upward of 30 different crops."
+      ],
+      [
+       "Does 1.0 fully automate farming?",
+       "Yes — solar/wind energy plus drone stations handle seeding, nurturing and harvesting, freeing you to explore, fish and quest."
+      ]
+     ]
     }
    ],
    "sources": [
@@ -5048,6 +6308,10 @@
     {
      "label": "Mejoress Doloc Town guide",
      "url": "https://www.mejoress.com/en/doloc-town-guide/"
+    },
+    {
+     "label": "Doloc Town Huiji Wiki (Chinese, gene system)",
+     "url": "https://doloctown.huijiwiki.com/"
     }
    ],
    "meta": {
@@ -5058,19 +6322,20 @@
     "zh-CN": {
      "title": "多洛可小镇种田指南：作物、季节与土壤",
      "metaTitle": "多洛可小镇种田指南：作物、季节、果树与土壤",
-     "metaDescription": "多洛可小镇种田全解：季节作物、果树、香草、蘑菇与花盆土壤，以及工具升级与收获技巧。",
-     "intro": "种田是废土农场的根基。学会种什么、何时种、如何抵御极端天气。",
+     "metaDescription": "多洛可小镇种田全解：季节作物、果树、香草、蘑菇、花盆与土壤，加上改变种田方式的基因突变与 1.0 自动化。",
+     "intro": "种田是废土农场的根基。学会计什么、什么时候种、如何抵御极端天气——以及基因与 1.0 自动化如何替你省掉杂活。",
      "sections": [
       {
        "type": "list",
        "heading": "作物基础",
-       "body": "自给自足从正确的植物开始。",
+       "body": "多洛可小镇的种田是垂直的：你把花盆堆在平台上，每天在层与层之间攀爬。基础打对，游戏其余部分就会自己运转。",
        "items": [
-        "季节作物随日历轮换。",
-        "果树 7 天成熟，之后永久结果。",
-        "香草 2 天成熟——快速填充作物。",
-        "蘑菇是秋季采集的额外收获。",
-        "镰刀可群体收割。"
+        "季节作物随日历轮换——按季节种植，换季时补种",
+        "果树 7 天成熟、成熟后永久产出——第一周就种下",
+        "香草 2 天成熟——快速填充作物，平滑两次收获之间的现金流",
+        "蘑菇是秋季采集福利——免费的卡路里，不耗水",
+        "镰刀可以一次收割整片——尽早升级，它是全游戏最大的省时工具",
+        "作物可被基因改造：1.0 商店页确认基因系统覆盖 30 多种作物"
        ]
       },
       {
@@ -5079,76 +6344,199 @@
        "columns": [
         "作物类型",
         "时间",
-        "备注"
+        "说明"
        ],
        "rows": [
         [
          "香草",
          "2 天",
-         "快、投入低"
+         "快、投入低——很好的填空作物"
         ],
         [
          "季节作物",
-         "视季节而定",
-         "与季节匹配"
+         "视情况",
+         "跟随季节；换季后补种"
         ],
         [
          "果树",
          "7 天",
-         "永久产出"
+         "永久产出——先种，让它一直给你赚钱"
         ],
         [
          "蘑菇",
          "秋季采集",
-         "免费额外 ⚠️"
+         "免费福利，不用浇水 ⚠️"
+        ],
+        [
+         "基因改造作物",
+         "视情况",
+         "突变可增加掉落、自动收获或抗天气"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "农事日历：季节与天气",
+       "body": "多洛可小镇在四个月历之上运行两季天气年。雨季（1–2 月）与旱季（3–4 月）会改变你能种和能钓到的东西——4 月是旱灾月。",
+       "columns": [
+        "时段",
+        "会发生什么",
+        "农夫的应对"
+       ],
+       "rows": [
+        [
+         "雨季（1–2 月）",
+         "暴雨与雷暴；池塘水满；部分鱼只在这时出现",
+         "让雨水免费灌溉；为 1.0 自动化储备雷暴电力"
+        ],
+        [
+         "旱季（3–4 月）",
+         "降雨减少；作物开始吃力",
+         "多浇水；依赖「雨露均沾」基因或遮盖"
+        ],
+        [
+         "旱灾（4 月）",
+         "作物枯萎、商店价格飙升",
+         "在全年最高价时卖出囤货"
+        ],
+        [
+         "任何季节",
+         "酸雨与热浪可能突袭",
+         "保持遮盖；把脆弱作物集中种植"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "农民必知的基因",
+       "body": "基因系统（2 月 EA 更新加入）允许每颗种子安装最多 3 个基因模块。以下是农场上最有用的突变。⚠️ 中文名为游戏内中文图鉴的官方名；英文名是翻译，可能与英文客户端不同。",
+       "columns": [
+        "基因（中文名）",
+        "效果",
+        "最适合"
+       ],
+       "rows": [
+        [
+         "雨露均沾",
+         "自动给周围作物浇水",
+         "早期最强基因——取代每日浇水"
+        ],
+        [
+         "孢子喷射",
+         "成熟植株自动掉落果实",
+         "挂机友好地块；搭配自动收获"
+        ],
+        [
+         "分形作物",
+         "增加掉落数量",
+         "高价值作物——多一颗果就是多一份收入"
+        ],
+        [
+         "时间馈赠",
+         "植株每存活 28 天 +1 果实",
+         "长寿作物——早种早享受"
+        ],
+        [
+         "希望",
+         "收获时掉落种子",
+         "让地块自给自足，无需补种"
+        ],
+        [
+         "体质增强",
+         "非宜季以 -50% 速度存活",
+         "把作物延展出其季节"
         ]
        ]
       },
       {
        "type": "steps",
        "heading": "保护作物免受天气影响",
+       "body": "天气防护是策略，不是事后补救。",
        "items": [
         [
-         "看天气预报",
-         "酸雨、酷热与雷暴都会威胁农田。"
+         "每天看天气预报",
+         "酸雨、酷热与雷暴都会威胁农田——提前知道要发生什么。"
         ],
         [
          "建造遮盖",
-         "风暴前遮挡露天地块。"
+         "风暴前给露天地块遮护；把脆弱作物集中种植。"
         ],
         [
-         "使用雨露均沾基因",
-         "自动浇灌突变保持土壤湿润。"
+         "使用「雨」基因",
+         "「雨露均沾」在干旱期自动保持土壤湿润。"
         ],
         [
          "1.0 自动化",
-         "无人机站处理播种、培育与收获。"
+         "无人机站负责播种、培育与收割——这是终局。"
         ]
        ]
       },
       {
+       "type": "list",
+       "heading": "从手工种田到自动化（1.0）",
+       "body": "1.0 把你从农民变成农场经理。升级路径是：先能源、再站点，然后让无人机干活。",
+       "items": [
+        "建造太阳能板与风力涡轮机，为农场生成清洁能源",
+        "建造农场无人机站——让无人机在田间作业的控制点",
+        "指派自动化任务：无人机端到端处理播种、培育与收割",
+        "垂直堆叠很关键：平台之间留出清晰航线，无人机才能到达每个花盆",
+        "工业区新增传送带生产线，打开此前无法到达的区域"
+       ]
+      },
+      {
        "type": "note",
-       "heading": "旱季策略",
-       "body": "旱季（4 月）作物枯萎、物价飙升。旱季前囤货，旱季中高价卖出。"
+       "heading": "旱季策略与常见错误",
+       "body": "旱灾月（4 月）作物枯萎、价格飙升。旱灾前囤货，旱灾中高价卖出。常见错误：种一整片巨大的平地（一场风暴全毁）、早期忽略果树（它们后来是免费的钱）、从不升级镰刀（群体收割是巨大的省时工具）、在有「雨露均沾」基因时还全手工浇水、跳过 Bellad 的任务（科技点是唯一可靠的早期收入）。"
+      },
+      {
+       "type": "faq",
+       "heading": "常见问题速答",
+       "items": [
+        [
+         "每天都要浇水吗？",
+         "前期是的——但「雨露均沾」基因会自动给周围作物浇水，1.0 无人机站则完全接管。"
+        ],
+        [
+         "什么时候种果树？",
+         "第一周。它们 7 天成熟后永久产出——种得越早，攒下的免费收入越多。"
+        ],
+        [
+         "旱灾月是哪个月？",
+         "4 月，在旱季。作物枯萎、商店价格飙升——之前囤货，期间卖出。"
+        ],
+        [
+         "基因模块怎么用？",
+         "每颗种子可装最多 3 个基因模块，从约 20 种突变中挑选；用基因读取器/合成器安装，在农场上观察协同效果。"
+        ],
+        [
+         "多少作物可以被基因改造？",
+         "官方商店页称基因系统覆盖 30 多种作物。"
+        ],
+        [
+         "1.0 能完全自动种田吗？",
+         "能——太阳能/风能 + 无人机站负责播种、培育与收割，让你腾出手去探索、钓鱼和做任务。"
+        ]
+       ]
       }
      ]
     },
     "zh-TW": {
      "title": "多洛可小鎮種田指南：作物、季節與土壤",
      "metaTitle": "多洛可小鎮種田指南：作物、季節、果樹與土壤",
-     "metaDescription": "多洛可小鎮種田全解：季節作物、果樹、香草、蘑菇與花盆土壤，以及工具升級與收穫技巧。",
-     "intro": "種田是廢土農場的根基。學會種什麼、何時種、如何抵禦極端天氣。",
+     "metaDescription": "多洛可小鎮種田全解：季節作物、果樹、香草、蘑菇、花盆與土壤，加上改變種田方式的基因突變與 1.0 自動化。",
+     "intro": "種田是廢土農場的根基。學會計什麼、什麼時候種、如何抵禦極端天氣——以及基因與 1.0 自動化如何替你省掉雜活。",
      "sections": [
       {
        "type": "list",
        "heading": "作物基礎",
-       "body": "自給自足從正確的植物開始。",
+       "body": "多洛可小鎮的種田是垂直的：你把花盆堆在平臺上，每天在層與層之間攀爬。基礎打對，遊戲其餘部分就會自己運轉。",
        "items": [
-        "季節作物隨日曆輪換。",
-        "果樹 7 天成熟，之後永久結果。",
-        "香草 2 天成熟——快速填充作物。",
-        "蘑菇是秋季採集的額外收穫。",
-        "鐮刀可羣體收割。"
+        "季節作物隨日曆輪換——按季節種植，換季時補種",
+        "果樹 7 天成熟、成熟後永久產出——第一週就種下",
+        "香草 2 天成熟——快速填充作物，平滑兩次收穫之間的現金流",
+        "蘑菇是秋季採集福利——免費的卡路里，不耗水",
+        "鐮刀可以一次收割整片——儘早升級，它是全遊戲最大的省時工具",
+        "作物可被基因改造：1.0 商店頁確認基因系統覆蓋 30 多種作物"
        ]
       },
       {
@@ -5157,76 +6545,199 @@
        "columns": [
         "作物類型",
         "時間",
-        "備註"
+        "說明"
        ],
        "rows": [
         [
          "香草",
          "2 天",
-         "快、投入低"
+         "快、投入低——很好的填空作物"
         ],
         [
          "季節作物",
-         "視季節而定",
-         "與季節匹配"
+         "視情況",
+         "跟隨季節；換季後補種"
         ],
         [
          "果樹",
          "7 天",
-         "永久產出"
+         "永久產出——先種，讓它一直給你賺錢"
         ],
         [
          "蘑菇",
          "秋季採集",
-         "免費額外 ⚠️"
+         "免費福利，不用澆水 ⚠️"
+        ],
+        [
+         "基因改造作物",
+         "視情況",
+         "突變可增加掉落、自動收穫或抗天氣"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "農事日曆：季節與天氣",
+       "body": "多洛可小鎮在四個月曆之上運行兩季天氣年。雨季（1–2 月）與旱季（3–4 月）會改變你能種和能釣到的東西——4 月是旱災月。",
+       "columns": [
+        "時段",
+        "會發生什麼",
+        "農夫的應對"
+       ],
+       "rows": [
+        [
+         "雨季（1–2 月）",
+         "暴雨與雷暴；池塘水滿；部分魚只在這時出現",
+         "讓雨水免費灌溉；爲 1.0 自動化儲備雷暴電力"
+        ],
+        [
+         "旱季（3–4 月）",
+         "降雨減少；作物開始喫力",
+         "多澆水；依賴「雨露均霑」基因或遮蓋"
+        ],
+        [
+         "旱災（4 月）",
+         "作物枯萎、商店價格飆升",
+         "在全年最高價時賣出囤貨"
+        ],
+        [
+         "任何季節",
+         "酸雨與熱浪可能突襲",
+         "保持遮蓋；把脆弱作物集中種植"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "農民必知的基因",
+       "body": "基因系統（2 月 EA 更新加入）允許每顆種子安裝最多 3 個基因模塊。以下是農場上最有用的突變。⚠️ 中文名爲遊戲內中文圖鑑的官方名；英文名是翻譯，可能與英文客戶端不同。",
+       "columns": [
+        "基因（中文名）",
+        "效果",
+        "最適合"
+       ],
+       "rows": [
+        [
+         "雨露均霑",
+         "自動給周圍作物澆水",
+         "早期最強基因——取代每日澆水"
+        ],
+        [
+         "孢子噴射",
+         "成熟植株自動掉落果實",
+         "掛機友好地塊；搭配自動收穫"
+        ],
+        [
+         "分形作物",
+         "增加掉落數量",
+         "高價值作物——多一顆果就是多一份收入"
+        ],
+        [
+         "時間饋贈",
+         "植株每存活 28 天 +1 果實",
+         "長壽作物——早種早享受"
+        ],
+        [
+         "希望",
+         "收穫時掉落種子",
+         "讓地塊自給自足，無需補種"
+        ],
+        [
+         "體質增強",
+         "非宜季以 -50% 速度存活",
+         "把作物延展出其季節"
         ]
        ]
       },
       {
        "type": "steps",
        "heading": "保護作物免受天氣影響",
+       "body": "天氣防護是策略，不是事後補救。",
        "items": [
         [
-         "看天氣預報",
-         "酸雨、酷熱與雷暴都會威脅農田。"
+         "每天看天氣預報",
+         "酸雨、酷熱與雷暴都會威脅農田——提前知道要發生什麼。"
         ],
         [
          "建造遮蓋",
-         "風暴前遮擋露天地塊。"
+         "風暴前給露天地塊遮護；把脆弱作物集中種植。"
         ],
         [
-         "使用雨露均霑基因",
-         "自動澆灌突變保持土壤溼潤。"
+         "使用「雨」基因",
+         "「雨露均霑」在乾旱期自動保持土壤溼潤。"
         ],
         [
          "1.0 自動化",
-         "無人機站處理播種、培育與收穫。"
+         "無人機站負責播種、培育與收割——這是終局。"
         ]
        ]
       },
       {
+       "type": "list",
+       "heading": "從手工種田到自動化（1.0）",
+       "body": "1.0 把你從農民變成農場經理。升級路徑是：先能源、再站點，然後讓無人機幹活。",
+       "items": [
+        "建造太陽能板與風力渦輪機，爲農場生成清潔能源",
+        "建造農場無人機站——讓無人機在田間作業的控制點",
+        "指派自動化任務：無人機端到端處理播種、培育與收割",
+        "垂直堆疊很關鍵：平臺之間留出清晰航線，無人機才能到達每個花盆",
+        "工業區新增傳送帶生產線，打開此前無法到達的區域"
+       ]
+      },
+      {
        "type": "note",
-       "heading": "旱季策略",
-       "body": "旱季（4 月）作物枯萎、物價飆升。旱季前囤貨，旱季中高價賣出。"
+       "heading": "旱季策略與常見錯誤",
+       "body": "旱災月（4 月）作物枯萎、價格飆升。旱災前囤貨，旱災中高價賣出。常見錯誤：種一整片巨大的平地（一場風暴全毀）、早期忽略果樹（它們後來是免費的錢）、從不升級鐮刀（羣體收割是巨大的省時工具）、在有「雨露均霑」基因時還全手工澆水、跳過 Bellad 的任務（科技點是唯一可靠的早期收入）。"
+      },
+      {
+       "type": "faq",
+       "heading": "常見問題速答",
+       "items": [
+        [
+         "每天都要澆水嗎？",
+         "前期是的——但「雨露均霑」基因會自動給周圍作物澆水，1.0 無人機站則完全接管。"
+        ],
+        [
+         "什麼時候種果樹？",
+         "第一週。它們 7 天成熟後永久產出——種得越早，攢下的免費收入越多。"
+        ],
+        [
+         "旱災月是哪個月？",
+         "4 月，在旱季。作物枯萎、商店價格飆升——之前囤貨，期間賣出。"
+        ],
+        [
+         "基因模塊怎麼用？",
+         "每顆種子可裝最多 3 個基因模塊，從約 20 種突變中挑選；用基因讀取器/合成器安裝，在農場上觀察協同效果。"
+        ],
+        [
+         "多少作物可以被基因改造？",
+         "官方商店頁稱基因系統覆蓋 30 多種作物。"
+        ],
+        [
+         "1.0 能完全自動種田嗎？",
+         "能——太陽能/風能 + 無人機站負責播種、培育與收割，讓你騰出手去探索、釣魚和做任務。"
+        ]
+       ]
       }
      ]
     },
     "ja": {
      "title": "ドロックタウン農業ガイド：作物・季節・土壌",
-     "metaTitle": "ドロックタウン農業：作物・季節・果樹・土壌",
-     "metaDescription": "ドロックタウンの農業を徹底解説：季節作物、果樹、ハーブ、キノコ、プランターと土壌、道具強化、収穫のコツ。",
-     "intro": "農業は荒廃地農場の土台。何をいつ植え、異常気象からどう守るか。",
+     "metaTitle": "ドロックタウン農業ガイド：作物・季節・果樹・土壌",
+     "metaDescription": "ドロックタウンの農業を完全解説：季節作物、果樹、ハーブ、キノコ、プランターと土壌、そして農業を変える遺伝子変異と1.0自動化まで。",
+     "intro": "農業は荒廃地農場の基盤。何をいつ植え、異常気象からどう守るか——そして遺伝子と1.0自動化が雑務をどう肩代わりするかを学ぼう。",
      "sections": [
       {
        "type": "list",
        "heading": "作物の基本",
-       "body": "自給自足は正しい植物選びから。",
+       "body": "ドロックタウンの農業は縦型。プランターをプラットフォームに積み、毎日その間を登り降りします。基本を押さえれば、ゲームの残りは自然と回り始めます。",
        "items": [
-        "季節作物はカレンダーで入れ替わる。",
-        "果樹は7日で成熟し、その後は永続的に実る。",
-        "ハーブは2日で育つ——速いフィラー作物。",
-        "キノコは秋の採取ボーナス。",
-        "鎌でまとめて収穫できる。"
+        "季節作物はカレンダーで入れ替わる——季節に合わせて植え、切替後は植え直す",
+        "果樹は7日で成熟し、その後は永久に実る——第1週に植える",
+        "ハーブは2日で育つ——収穫の合間のキャッシュフローを滑らかにする快速作物",
+        "キノコは秋の採取ボーナス——水を使わない無料カロリー",
+        "鎌は一度にまとめて収穫できる——早めに強化。ゲーム最大の時短アイテム",
+        "作物は遺伝子改造できる：1.0ストアページは30種類以上の作物に対応と明記"
        ]
       },
       {
@@ -5235,76 +6746,199 @@
        "columns": [
         "作物種",
         "時間",
-        "メモ"
+        "備考"
        ],
        "rows": [
         [
          "ハーブ",
          "2日",
-         "速い・低投資"
+         "速く低投資——隙間埋めに最適"
         ],
         [
          "季節作物",
-         "季節により変動",
-         "季節に合わせる"
+         "変動",
+         "季節に合わせる；切替後は植え直し"
         ],
         [
          "果樹",
          "7日",
-         "永続的な生産者"
+         "永久生産——最初に植えてずっと稼がせる"
         ],
         [
          "キノコ",
          "秋の採取",
-         "無料ボーナス ⚠️"
+         "無料ボーナス、水不要 ⚠️"
+        ],
+        [
+         "遺伝子改造作物",
+         "変動",
+         "変異で収穫数増・自動収穫・耐候性など"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "農業カレンダー：季節と天候",
+       "body": "ドロックタウンは4か月カレンダーの上に2季の天候年があります。雨季（1〜2月）と乾季（3〜4月）で育てられるもの・釣れるものが変わり——4月は干ばつの月。",
+       "columns": [
+        "時期",
+        "何が起きるか",
+        "農家の行動"
+       ],
+       "rows": [
+        [
+         "雨季（1〜2月）",
+         "大雨と雷雨；池が満ち、一部の魚はこの時期だけ",
+         "雨水で灌漑；1.0自動化に備えて雷の電力も確保"
+        ],
+        [
+         "乾季（3〜4月）",
+         "雨が減り、作物が苦しみ始める",
+         "多めに水やり；「雨露均等」遺伝子かカバーに頼る"
+        ],
+        [
+         "干ばつ（4月）",
+         "作物が枯れ、商店価格が高騰",
+         "年間最高値で備蓄を売る"
+        ],
+        [
+         "どの季節も",
+         "酸性雨と熱波が突然襲うことがある",
+         "カバーを常設；弱い作物はまとめて育てる"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "農家が知るべき遺伝子",
+       "body": "遺伝子システム（2月のEAアップデートで追加）は、種ごとに最大3つの遺伝子モジュールを装着可能。以下は農場で最も有用な変異です。⚠️ 日本語名はゲーム内中国語図鑑の訳で、英語クライアントと異なる場合があります。",
+       "columns": [
+        "遺伝子（日本語名）",
+        "効果",
+        "最適"
+       ],
+       "rows": [
+        [
+         "雨露均等",
+         "周囲の作物に自動で水やり",
+         "序盤最強——毎日の水やりを不要に"
+        ],
+        [
+         "胞子噴射",
+         "成熟した植物が実を自動で落とす",
+         "放置向け区画；自動収穫と併用"
+        ],
+        [
+         "フラクタル作物",
+         "収穫数が増加",
+         "高価値作物——実1個分が収入になる"
+        ],
+        [
+         "時間の贈り物",
+         "生存28日ごとに+1果実",
+         "長寿作物——早く植えて放置"
+        ],
+        [
+         "希望",
+         "収穫時に種をドロップ",
+         "再播種なしで区画を持続させる"
+        ],
+        [
+         "体力強化",
+         "非シーズンでも-50%速度で生存",
+         "作物の旬を超えて育てる"
         ]
        ]
       },
       {
        "type": "steps",
        "heading": "天候から作物を守る",
+       "body": "天候対策は戦略であって後付けではありません。",
        "items": [
         [
-         "予報を確認",
-         "酸性雨・猛暑・雷雨がすべて脅威。"
+         "毎日天気予報を確認",
+         "酸性雨・酷暑・嵐はすべて畑を脅かす——何が来るか知っておく。"
         ],
         [
-         "カバーを建てる",
-         "嵐の前に露地区画を覆う。"
+         "カバーを作る",
+         "嵐の前に露出した区画を守り、弱い作物はまとめて育てる。"
         ],
         [
-         "雨露均等の遺伝子",
-         "自動潅水で土を湿らせる。"
+         "「雨」遺伝子を使う",
+         "「雨露均等」が乾燥期も土壌を自動で湿らせる。"
         ],
         [
-         "1.0 で自動化",
-         "ドローン基地が播種・育成・収穫を処理。"
+         "1.0で自動化",
+         "ドローン基地が播種・育成・収穫を担う——終盤の形。"
         ]
+       ]
+      },
+      {
+       "type": "list",
+       "heading": "手作業から自動化へ（1.0）",
+       "body": "1.0は農家をファームマネージャーに変えます。強化の順序は：まずエネルギー、次に基地、そしてドローンに働かせる。",
+       "items": [
+        "ソーラーパネルと風力タービンで農場のクリーンエネルギーを発電",
+        "農場ドローン基地を建設——ドローンが農地で作業するための制御点",
+        "自動化作業を割り当て：ドローンが播種・育成・収穫を一貫処理",
+        "縦積みが重要：プラットフォーム間に飛行経路を確保し、全プランターへ到達させる",
+        "工業地帯はコンベア生産ラインを追加し、従来到達不能だった地域を開放"
        ]
       },
       {
        "type": "note",
        "heading": "乾季の戦略とよくある失敗",
-       "body": "乾季（4月）は作物が枯れ、物価が高騰。乾季前に備蓄し、乾季中に高値で売る。よくある失敗：巨大な一枚畑（嵐ひとつで全滅）、果樹を後回し（後で無料の収入源）、鎌のアップグレードを怠る（群収穫が大きな時間節約）。"
+       "body": "干ばつ月（4月）は作物が枯れ、価格が高騰。干ばつ前に備蓄し、その間に高値で売る。よくある失敗：巨大な一枚畑（嵐ひとつで全滅）、果樹を後回し（後で無料の収入源）、鎌の強化を怠る（群収穫は大きな時短）、「雨露均等」があるのに全部手で水やり、Belladのクエストを飛ばす（技術ポイントが唯一の安定した序盤収入）。"
+      },
+      {
+       "type": "faq",
+       "heading": "よくある質問",
+       "items": [
+        [
+         "毎日水やりが必要？",
+         "序盤は必要——ただ「雨露均等」遺伝子が周囲を自動で濡らし、1.0のドローン基地が完全に肩代わりします。"
+        ],
+        [
+         "果樹はいつ植える？",
+         "第1週。7日で成熟してから永久に実る——早いほど無料収入が貯まる。"
+        ],
+        [
+         "干ばつ月はいつ？",
+         "4月、乾季の最中。作物が枯れ、商店価格が高騰——前に備蓄し、その間に売る。"
+        ],
+        [
+         "遺伝子モジュールの使い方は？",
+         "各シードに最大3つのモジュールを約20種の変異から装着。遺伝子リーダー/合成機で組み込み、農場でシナジーを観察する。"
+        ],
+        [
+         "遺伝子改造できる作物はいくつ？",
+         "公式ストアページは30種類以上の作物に対応と明記。"
+        ],
+        [
+         "1.0で完全自動化できる？",
+         "できる——ソーラー/風力＋ドローン基地が播種・育成・収穫を担い、探索・釣り・クエストに時間を使えます。"
+        ]
+       ]
       }
      ]
     },
     "ko": {
      "title": "돌록 타운 농사 가이드: 작물·계절·토양",
-     "metaTitle": "돌록 타운 농사: 작물·계절·과일나무·토양",
-     "metaDescription": "돌록 타운 농사 총정리: 계절 작물, 과일나무, 허브, 버섯, 화분과 토양, 도구 업그레이드와 수확 팁.",
-     "intro": "농사는 황무지 농장의 기반입니다. 무엇을 언제 심고 극한 날씨에서 어떻게 지킬지 배우세요.",
+     "metaTitle": "돌록 타운 농사 가이드: 작물·계절·과일나무·토양",
+     "metaDescription": "돌록 타운 농사의 모든 것: 계절 작물, 과일나무, 허브, 버섯, 화분과 토양, 그리고 농사를 바꾸는 유전자 변이와 1.0 자동화까지.",
+     "intro": "농사는 황무지 농장의 기반입니다. 무엇을 언제 심고, 극한 날씨에서 어떻게 보호할지——그리고 유전자와 1.0 자동화가 잡일을 어떻게 대신하는지 배우세요.",
      "sections": [
       {
        "type": "list",
        "heading": "작물의 기초",
-       "body": "자급자족은 올바른 식물 선택에서 시작됩니다.",
+       "body": "돌록 타운의 농사는 수직입니다. 화분을 플랫폼에 쌓고 매일 그 사이를 오르내리죠. 기본을 익히면 게임의 나머지는 저절로 돌아갑니다.",
        "items": [
-        "계절 작물은 달력에 따라 바뀝니다.",
-        "과일나무는 7일 만에 성숙하고 이후 영구적으로 열매를 맺습니다.",
-        "허브는 2일 만에 자랍니다——빠른 채움 작물.",
-        "버섯은 가을 채집 보너스입니다.",
-        "낫으로 한꺼번에 수확할 수 있습니다."
+        "계절 작물은 달력에 따라 바뀝니다——계절에 맞게 심고, 바뀐 뒤에는 다시 심으세요",
+        "과일나무는 7일 만에 자라며 성숙 후에는 영구히 열매를 맺습니다——첫 주에 심으세요",
+        "허브는 2일 만에 자랍니다——수확 사이 현금 흐름을 매끄럽게 하는 빠른 작물",
+        "버섯은 가을 채집 보너스——물이 들지 않는 무료 칼로리",
+        "낫은 한 번에 여러 그루를 수확합니다——일찍 업그레이드하세요. 게임 최고의 시간 절약 도구",
+        "작물은 유전자 개조가 가능합니다: 1.0 스토어 페이지는 유전자 시스템이 30종 이상의 작물을 지원한다고 명시"
        ]
       },
       {
@@ -5313,76 +6947,199 @@
        "columns": [
         "작물 종류",
         "시간",
-        "메모"
+        "설명"
        ],
        "rows": [
         [
          "허브",
          "2일",
-         "빠르고 저투자"
+         "빠르고 투자가 적음——빈자리 채우기 좋음"
         ],
         [
          "계절 작물",
-         "계절에 따라 다름",
-         "계절에 맞추기"
+         "상이함",
+         "계절에 맞추기; 바뀐 뒤 다시 심기"
         ],
         [
          "과일나무",
          "7일",
-         "영구 생산"
+         "영구 생산——먼저 심고 계속 벌게 하세요"
         ],
         [
          "버섯",
          "가을 채집",
-         "무료 보너스 ⚠️"
+         "무료 보너스, 물 불필요 ⚠️"
+        ],
+        [
+         "유전자 개조 작물",
+         "상이함",
+         "변이로 수확량 증가·자동 수확·날씨 저항 등"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "농사 달력: 계절과 날씨",
+       "body": "돌록 타운은 4개월 달력 위에 두 계절의 날씨 연도가 돌아갑니다. 우기(1–2월)와 건기(3–4월)는 기르고 낚을 수 있는 것을 바꾸며——4월은 가뭄의 달입니다.",
+       "columns": [
+        "시기",
+        "무슨 일이 일어나나",
+        "농부의 대응"
+       ],
+       "rows": [
+        [
+         "우기 (1–2월)",
+         "폭우와 뇌우; 연못이 차고 일부 물고기는 이때만",
+         "빗물로 관개; 1.0 자동화용 번개 전력도 비축"
+        ],
+        [
+         "건기 (3–4월)",
+         "비가 줄고 작물이 힘들어지기 시작",
+         "물을 더 주고 '고루 내리는 비' 유전자나 덮개에 의존"
+        ],
+        [
+         "가뭄 (4월)",
+         "작물이 시들고 상점 가격이 치솟음",
+         "연중 최고가에 비축분 판매"
+        ],
+        [
+         "어느 계절이든",
+         "산성비와 폭염이 갑자기 덮칠 수 있음",
+         "덮개를 항상 유지; 약한 작물은 모아서 재배"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "농부가 알아야 할 유전자",
+       "body": "유전자 시스템(2월 EA 업데이트로 추가)은 씨앗마다 최대 3개의 유전자 모듈을 장착하게 합니다. 다음은 농장에서 가장 유용한 변이들입니다. ⚠️ 한국어 이름은 게임 내 중국어 도감의 번역이며 영어 클라이언트와 다를 수 있습니다.",
+       "columns": [
+        "유전자 (한국어 이름)",
+        "효과",
+        "최적"
+       ],
+       "rows": [
+        [
+         "고루 내리는 비",
+         "주변 작물에 자동으로 물 주기",
+         "초반 최강——매일 물 주기를 대체"
+        ],
+        [
+         "포자 분사",
+         "성숙한 식물이 열매를 자동으로 떨어뜨림",
+         "방치 친화 구획; 자동 수확과 병행"
+        ],
+        [
+         "프랙탈 작물",
+         "수확량 증가",
+         "고가 작물——열매 하나가 수입 하나"
+        ],
+        [
+         "시간의 선물",
+         "생존 28일마다 +1 열매",
+         "장수 작물——일찍 심고 방치"
+        ],
+        [
+         "희망",
+         "수확 시 씨앗 드랍",
+         "다시 씨 뿌리지 않고 구획 유지"
+        ],
+        [
+         "체력 강화",
+         "비시즌에도 -50% 속도로 생존",
+         "작물의 제철을 넘어 재배"
         ]
        ]
       },
       {
        "type": "steps",
        "heading": "날씨에서 작물 보호하기",
+       "body": "날씨 대비는 전략이지 사후 약방문이 아닙니다.",
        "items": [
         [
-         "예보 확인",
-         "산성비·폭염·뇌우 모두 위협입니다."
+         "매일 일기예보 확인",
+         "산성비·폭염·폭풍 모두 밭을 위협합니다——무엇이 오는지 아세요."
         ],
         [
-         "덮개 건설",
-         "폭풍 전에 노지 구획을 가립니다."
+         "덮개 만들기",
+         "폭풍 전에 노출된 구획을 보호하고, 약한 작물은 모아서 심으세요."
         ],
         [
-         "고루 내리는 비 유전자",
-         "자동 관수로 흙을 촉촉하게."
+         "'비' 유전자 사용",
+         "'고루 내리는 비'가 건조기에도 토양을 자동으로 촉촉하게 유지합니다."
         ],
         [
-         "1.0 자동화",
-         "드론 기지가 파종·육성·수확을 처리합니다."
+         "1.0에서 자동화",
+         "드론 스테이션이 파종·육성·수확을 담당합니다——엔드게임. "
         ]
        ]
       },
       {
+       "type": "list",
+       "heading": "손농사에서 자동화까지 (1.0)",
+       "body": "1.0은 농부를 팜 매니저로 바꿉니다. 업그레이드 순서: 에너지 먼저, 스테이션 다음, 그리고 드론에게 일을 맡기세요.",
+       "items": [
+        "태양광 패널과 풍력 터빈을 건설해 농장의 청정 에너지를 생산",
+        "농장 드론 스테이션 건설——드론이 밭에서 일하게 하는 제어 지점",
+        "자동화 작업 지정: 드론이 파종·육성·수확을 처음부터 끝까지 처리",
+        "수직 적층이 핵심: 플랫폼 사이에 비행 경로를 남겨 드론이 모든 화분에 닿게 하세요",
+        "공업 지구는 컨베이어 생산 라인을 추가해 이전에는 닿을 수 없던 지역을 엽니다"
+       ]
+      },
+      {
        "type": "note",
-       "heading": "가뭄 전략",
-       "body": "가뭄(4월)에는 작물이 시들고 물가가 급등합니다. 가뭄 전에 비축하고 가뭄 중에 높은 가격으로 파세요."
+       "heading": "가뭄 전략과 흔한 실수",
+       "body": "가뭄 달(4월)에는 작물이 시들고 가격이 치솟습니다. 가뭄 전에 비축하고 그동안 높은 가격에 파세요. 흔한 실수: 거대한 평지 한 판(폭풍 하나로 전멸), 과일나무를 미루기(나중에 공짜 돈), 낫 업그레이드 안 하기(집단 수확이 큰 시간 절약), '고루 내리는 비' 유전자가 있는데 전부 손으로 물주기, Bellad 퀘스트 건너뛰기(기술 포인트가 유일한 안정적인 초반 수입)."
+      },
+      {
+       "type": "faq",
+       "heading": "빠른 답변",
+       "items": [
+        [
+         "매일 물을 줘야 하나요?",
+         "초반에는 그렇습니다——하지만 '고루 내리는 비' 유전자가 주변 작물에 자동으로 물을 주고, 1.0 드론 스테이션이 완전히 대신합니다."
+        ],
+        [
+         "과일나무는 언제 심나요?",
+         "첫 주. 7일 만에 자란 뒤 영구히 열매를 맺습니다——일찍 심을수록 공짜 수입이 쌓입니다."
+        ],
+        [
+         "가뭄 달은 언제인가요?",
+         "4월, 건기 중간입니다. 작물이 시들고 상점 가격이 치솟습니다——미리 비축하고 그동안 파세요."
+        ],
+        [
+         "유전자 모듈은 어떻게 쓰나요?",
+         "씨앗마다 약 20종 변이 풀에서 최대 3개 모듈을 장착합니다. 유전자 리더/합성기로 설치하고 농장에서 시너지를 관찰하세요."
+        ],
+        [
+         "유전자 개조 가능한 작물은 몇 종인가요?",
+         "공식 스토어 페이지는 유전자 시스템이 30종 이상의 작물을 지원한다고 밝힙니다."
+        ],
+        [
+         "1.0에서 농사가 완전 자동화되나요?",
+         "네——태양광/풍력 + 드론 스테이션이 파종·육성·수확을 처리해 탐험·낚시·퀘스트에 시간을 쓸 수 있습니다."
+        ]
+       ]
       }
      ]
     },
     "es": {
-     "title": "Guía de cultivo de Doloc Town: cosechas, temporadas y suelo",
-     "metaTitle": "Cultivo en Doloc Town: cosechas, temporadas, árboles y suelo",
-     "metaDescription": "Todo sobre cultivar en Doloc Town: cosechas de temporada, árboles frutales, hierbas, setas, maceteros, mejoras de herramientas y consejos.",
-     "intro": "Cultivar es la base de tu granja en el páramo. Aprende qué plantar, cuándo y cómo protegerlo del clima extremo.",
+     "title": "Guía de agricultura de Doloc Town: cultivos, estaciones y suelo",
+     "metaTitle": "Guía de granja de Doloc Town: cultivos y estaciones",
+     "metaDescription": "Todo sobre la agricultura de Doloc Town: cultivos de temporada, árboles frutales, hierbas, setas, macetas y suelo, más las mutaciones genéticas y la automatización 1.0 que cambian tu granja.",
+     "intro": "La agricultura es la base de tu granja en el páramo. Aprende qué plantar, cuándo, cómo protegerlo del clima extremo — y cómo los genes y la automatización 1.0 eliminan el trabajo repetitivo.",
      "sections": [
       {
        "type": "list",
        "heading": "Bases de las cosechas",
-       "body": "La autosuficiencia empieza con las plantas adecuadas.",
+       "body": "La agricultura en Doloc Town es vertical: apilas maceteros en plataformas y trepas entre ellos cada día. Domina lo básico y el resto del juego se financia solo.",
        "items": [
-        "Las cosechas de temporada rotan con el calendario.",
-        "Los árboles frutales tardan 7 días y producen para siempre.",
-        "Las hierbas crecen en 2 días: cosechas de relleno rápidas.",
-        "Las setas son un bono de recolección de otoño.",
-        "La hoz cosecha grupos enteros a la vez."
+        "Los cultivos de temporada rotan con el calendario: planta según la estación y vuelve a plantar tras cada cambio",
+        "Los árboles frutales tardan 7 días y producen para siempre al madurar: plántalos en la primera semana",
+        "Las hierbas crecen en 2 días: cultivos rápidos que suavizan el flujo de dinero entre cosechas",
+        "Las setas son un extra de recolección de otoño: calorías gratis que no gastan agua",
+        "La hoz cosecha grupos enteros a la vez: mejórala pronto, es el mayor ahorro de tiempo del juego",
+        "Los cultivos pueden modificarse genéticamente: la tienda oficial 1.0 confirma que el sistema genético cubre más de 30 cultivos"
        ]
       },
       {
@@ -5397,51 +7154,173 @@
         [
          "Hierbas",
          "2 días",
-         "Rápidas y baratas"
+         "Rápidas, poca inversión: buenas para llenar huecos"
         ],
         [
-         "Cosechas de temporada",
-         "Varía",
-         "Ajusta a la temporada"
+         "Cultivos de temporada",
+         "Variable",
+         "Ajusta a la estación; replanta tras el cambio"
         ],
         [
          "Árboles frutales",
          "7 días",
-         "Productor permanente"
+         "Productor permanente: plántalo primero y déjalo rentar para siempre"
         ],
         [
          "Setas",
          "Recolección de otoño",
-         "Bono gratis ⚠️"
+         "Extra gratis, sin riego ⚠️"
+        ],
+        [
+         "Cultivos modificados genéticamente",
+         "Variable",
+         "Las mutaciones añaden cosechas, auto-recolección o resistencia al clima"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "Calendario agrícola: estaciones y clima",
+       "body": "Doloc Town combina un calendario de cuatro meses con un año climático de dos estaciones. La lluviosa (ene–feb) y la seca (mar–abr) cambian lo que puedes cultivar y pescar — y abril es el mes de la sequía.",
+       "columns": [
+        "Periodo",
+        "Qué ocurre",
+        "Movimiento del granjero"
+       ],
+       "rows": [
+        [
+         "Estación lluviosa (ene–feb)",
+         "Lluvias fuertes y tormentas; los estanques se llenan; algunos peces solo aparecen ahora",
+         "Deja que la lluvia riegue; guarda energía de tormenta para la automatización 1.0"
+        ],
+        [
+         "Estación seca (mar–abr)",
+         "Menos lluvia; los cultivos empiezan a sufrir",
+         "Riega más; apóyate en el gen Lluvia o en cubiertas"
+        ],
+        [
+         "Sequía (abril)",
+         "Los cultivos se marchitan y los precios se disparan",
+         "Vende tus reservas a los precios más altos del año"
+        ],
+        [
+         "Cualquier estación",
+         "La lluvia ácida y las olas de calor pueden llegar de repente",
+         "Mantén cubiertas; agrupa los cultivos vulnerables"
+        ]
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "Genes que todo granjero debería conocer",
+       "body": "El sistema genético (añadido en la actualización EA de febrero) permite instalar hasta 3 módulos genéticos por semilla. Estas son las mutaciones más útiles para la granja. ⚠️ Los nombres en español son traducciones del catálogo chino del juego y pueden diferir del cliente en inglés.",
+       "columns": [
+        "Gen (traducción)",
+        "Efecto",
+        "Ideal para"
+       ],
+       "rows": [
+        [
+         "Lluvia (雨露均沾)",
+         "Riega automáticamente los cultivos cercanos",
+         "El mejor gen inicial: sustituye el riego diario"
+        ],
+        [
+         "Eyección de esporas (孢子喷射)",
+         "Las plantas maduras sueltan fruta automáticamente",
+         "Parcelas sin mantenimiento; combínalo con auto-recolección"
+        ],
+        [
+         "Cultivo fractal (分形作物)",
+         "Aumenta la cantidad cosechada",
+         "Cultivos de alto valor donde cada fruta extra es ingreso extra"
+        ],
+        [
+         "Regalo del tiempo (时间馈赠)",
+         "+1 fruta por cada 28 días que sobrevive la planta",
+         "Plantas longevas: plántalas pronto y déjalas"
+        ],
+        [
+         "Esperanza (希望)",
+         "Las cosechas sueltan semillas",
+         "Mantiene una parcela autosuficiente sin resembrar"
+        ],
+        [
+         "Impulso de constitución (体质增强)",
+         "Sobrevive fuera de temporada al -50 % de velocidad",
+         "Alarga un cultivo más allá de su estación"
         ]
        ]
       },
       {
        "type": "steps",
        "heading": "Proteger los cultivos del clima",
+       "body": "La protección contra el clima es una estrategia, no una ocurrencia posterior.",
        "items": [
         [
-         "Mira el pronóstico",
-         "Lluvia ácida, calor y tormentas amenazan."
+         "Revisa el pronóstico a diario",
+         "La lluvia ácida, el calor y las tormentas amenazan los campos: sabe lo que viene."
         ],
         [
          "Construye cubiertas",
-         "Protege las parcelas antes de las tormentas."
+         "Protege las parcelas expuestas antes de las tormentas; agrupa los cultivos vulnerables."
         ],
         [
          "Usa el gen Lluvia",
-         "Riego automático que mantiene el suelo húmedo."
+         "Lluvia mantiene el suelo húmedo automáticamente durante las sequías."
         ],
         [
          "Automatiza en 1.0",
-         "Las estaciones de drones hacen siembra, cuidado y cosecha."
+         "Las estaciones de drones gestionan siembra, cuidado y cosecha: el final del juego."
         ]
        ]
       },
       {
+       "type": "list",
+       "heading": "De la agricultura manual a la automatización (1.0)",
+       "body": "El 1.0 te convierte de granjero en gestor de granja. La ruta de mejora es: energía primero, estaciones después, y luego deja trabajar a los drones.",
+       "items": [
+        "Construye paneles solares y turbinas eólicas para generar energía limpia para tu granja",
+        "Construye estaciones de drones agrícolas: los puntos de control que dejan trabajar a los drones",
+        "Asigna tareas de automatización: los drones hacen siembra, cuidado y cosecha de principio a fin",
+        "El apilado vertical importa: deja pasillos de vuelo claros entre plataformas para que los drones lleguen a cada macetero",
+        "La zona industrial añade líneas de producción con cintas transportadoras que abren áreas antes inaccesibles"
+       ]
+      },
+      {
        "type": "note",
-       "heading": "Estrategia de sequía",
-       "body": "En el mes de sequía (mes 4) los cultivos se marchitan y los precios suben. Acumula antes de la sequía y vende caro durante ella."
+       "heading": "Estrategia de sequía y errores comunes",
+       "body": "En el mes de la sequía (abril) los cultivos se marchitan y los precios se disparan. Acumula reservas antes de la sequía y vende caro durante ella. Errores comunes: plantar un único campo plano gigante (una tormenta lo borra), ignorar los árboles frutales al principio (son dinero gratis después), no mejorar nunca la hoz (la cosecha en grupo ahorra muchísimo tiempo), regar todo a mano cuando existe el gen Lluvia, y saltarse las misiones de Bellad (los puntos de tecnología son el único ingreso inicial fiable)."
+      },
+      {
+       "type": "faq",
+       "heading": "Respuestas rápidas",
+       "items": [
+        [
+         "¿Tengo que regar todos los días?",
+         "Al principio sí — pero el gen Lluvia riega automáticamente los cultivos cercanos y las estaciones de drones del 1.0 lo asumen por completo."
+        ],
+        [
+         "¿Cuándo planto los árboles frutales?",
+         "En la primera semana. Tardan 7 días en madurar y luego producen para siempre: cuanto antes, más ingreso gratis acumulas."
+        ],
+        [
+         "¿Cuál es el mes de la sequía?",
+         "Abril, en la estación seca. Los cultivos se marchitan y los precios se disparan: acumula antes y vende durante."
+        ],
+        [
+         "¿Cómo funcionan los módulos genéticos?",
+         "Cada semilla admite hasta 3 módulos de un grupo de unas 20 mutaciones; instálalos con el lector/sintetizador y observa la sinergia en tu granja."
+        ],
+        [
+         "¿Cuántos cultivos pueden modificarse genéticamente?",
+         "La tienda oficial dice que el sistema genético cubre más de 30 cultivos."
+        ],
+        [
+         "¿El 1.0 automatiza del todo la granja?",
+         "Sí: la energía solar/eólica más las estaciones de drones gestionan siembra, cuidado y cosecha, y te dejan tiempo para explorar, pescar y hacer misiones."
+        ]
+       ]
       }
      ]
     }

@@ -596,79 +596,263 @@
   {
    "slug": "fishing",
    "title": "Doloc Town Fishing Guide: Ponds, Weather & Rare Fish",
-   "metaTitle": "Doloc Town Fishing Guide: Ponds, Weather, Rods & Rare Fish",
-   "metaDescription": "Doloc Town fishing explained: different ponds, rods and weather give different catches, plus how rare fish drop advanced parts for your drone.",
-   "intro": "Fishing is a full second career in Doloc Town. Different ponds, rods and weather change what you catch — and rare fish drop advanced drone parts.",
+   "metaTitle": "Doloc Town Fish Catalog: All Fish, Locations & Weather",
+   "metaDescription": "The full Doloc Town fish catalog: every fish, where to catch it, which rod and weather it needs, and the rare breeding-only fish.",
+   "intro": "Fishing is a full second career in Doloc Town. This catalog lists every confirmed fish — where it spawns, which season and weather it needs, and how to breed the rare tank-only species.",
    "sections": [
     {
-     "type": "list",
-     "tag": "BASICS",
-     "heading": "Fishing Basics",
-     "body": "Fishing is a full second career. No bait is required — just a rod, the right pond and the right weather.",
-     "items": [
-      "Different ponds yield different fish — map every body of water.",
-      "Rod quality changes what you can catch; upgrade before chasing rare fish.",
-      "Weather changes the catch table — storms often bring uncommon catches.",
-      "Rare fish drop advanced parts used in drone and tool upgrades, so fishing funds combat."
+     "type": "table",
+     "heading": "All-Year Fish",
+     "body": "These fish can be caught at any time of year. Locations are player-verified and compiled by 18183.",
+     "columns": [
+      "Fish",
+      "Time",
+      "Weather",
+      "Where to catch"
+     ],
+     "rows": [
+      [
+       "Carp",
+       "Any",
+       "Any",
+       "East Town Pond, Mountain Ponds, Deep Woods, Wetland Lily Pads, Hidden Cliff (Ridge Valley)"
+      ],
+      [
+       "Catfish",
+       "18:00–2:55",
+       "Any",
+       "East Town Pond, Mountain Ponds, Deep Woods, Wetland Lily Pads, Moss Cave Floor, Hidden Cliff"
+      ],
+      [
+       "Grass Carp",
+       "Any",
+       "Rain, Thunderstorm, Acid Rain",
+       "East Town Pond, Mountain Ponds, Deep Woods, Wetland Lily Pads, Hidden Cliff"
+      ],
+      [
+       "Sardine",
+       "Any",
+       "Any",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
+      ],
+      [
+       "Bass",
+       "Any",
+       "Any",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
+      ],
+      [
+       "Shrimp",
+       "Any",
+       "Any",
+       "Wetland shallows, Farm, Hovercraft Dock, Lily Pads, East Town Pond, Back Hills, Mountain Ponds, Deep Woods, Under Pier, West Grove, Valley Outpost, Mining Ruins, Hidden Cliff"
+      ],
+      [
+       "Shining Goldfish",
+       "Any",
+       "Any",
+       "Deep Woods"
+      ],
+      [
+       "Koi",
+       "Any",
+       "Any (needs Water Core)",
+       "East Town Pond, Mountain Ponds, Deep Woods, Wetland Lily Pads, Hidden Cliff"
+      ],
+      [
+       "Swamp Eel",
+       "Any",
+       "Any",
+       "Wetland Farm (under transport ship)"
+      ],
+      [
+       "Pike",
+       "6:00–18:55",
+       "Any",
+       "Wetland Lily Pads, Moss Cave Floor"
+      ],
+      [
+       "Aquatic Amoeba",
+       "Any",
+       "Any",
+       "Wetland shallows, Farm, Valley Junk Mountain"
+      ]
      ]
     },
     {
      "type": "table",
-     "tag": "CONDITIONS",
-     "heading": "What Changes Your Catch",
-     "body": "Four factors control the catch table.",
+     "heading": "Rainy Season Fish (Jan–Feb)",
+     "body": "These fish only appear in the rainy season. The bamboo rod is required for cod and tuna.",
      "columns": [
-      "Factor",
-      "Effect"
+      "Fish",
+      "Rod",
+      "Unlock",
+      "Where to catch"
      ],
      "rows": [
       [
-       "Pond / water type",
-       "Each body of water has its own fish pool"
+       "Rainbow Trout",
+       "Any",
+       "Water Core",
+       "Hidden Cliff, East Town Pond, Mountain Ponds, Deep Woods"
       ],
       [
-       "Rod tier",
-       "Better rods unlock better fish"
+       "Loach",
+       "Any",
+       "—",
+       "Valley Outpost, Mining Ruins, Wetland shallows, Back Hills, West Grove"
       ],
       [
-       "Weather",
-       "Storms and rain can change spawns"
+       "Cod",
+       "Bamboo rod",
+       "—",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
       ],
       [
-       "Time / season",
-       "Some fish are seasonal ⚠️"
+       "Tuna",
+       "Bamboo rod",
+       "Rock Core Sample",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
       ]
      ]
     },
     {
-     "type": "steps",
-     "tag": "FARM",
-     "heading": "How to Farm Fish Efficiently",
-     "body": "Treat fishing like a farm — a routine, not an idle minigame.",
-     "items": [
+     "type": "table",
+     "heading": "Dry Season Fish (Mar–Apr)",
+     "body": "These fish appear in the dry season — the hardest months for farming, but a good time to fish.",
+     "columns": [
+      "Fish",
+      "Time",
+      "Weather",
+      "Where to catch"
+     ],
+     "rows": [
       [
-       "Map the ponds",
-       "Visit every body of water and note what bites, at what hour and in what weather."
+       "Fang Fish",
+       "Any",
+       "Any (needs Water Core)",
+       "Hidden Cliff, East Town Pond, Mountain Ponds, Deep Woods"
       ],
       [
-       "Match rod to target",
-       "Upgrade before chasing rare fish — wasted casts waste daylight."
+       "River Snail",
+       "Any",
+       "Any",
+       "Valley Outpost, Mining Ruins, Wetland shallows, Back Hills, West Grove"
       ],
       [
-       "Fish through weather",
-       "Storms and rain often bring uncommon catches other players skip."
+       "Mimic Skeleton Fish",
+       "Any",
+       "Any",
+       "Town Dock Center, Under Pier"
       ],
       [
-       "Turn fish into parts",
-       "Rare fish fund drone and tool upgrades — the loop pays for itself."
+       "Eel",
+       "Any",
+       "Any (needs Rock Core Sample)",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
+      ],
+      [
+       "Glowing Eel",
+       "Any",
+       "Scorching sun (April)",
+       "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
       ]
+     ]
+    },
+    {
+     "type": "table",
+     "heading": "Single-Month & Breeding-Only Fish",
+     "body": "Two fish appear in specific months; the rest can only be bred in a fish tank from parents you catch.",
+     "columns": [
+      "Fish",
+      "How to get",
+      "Requirement"
+     ],
+     "rows": [
+      [
+       "Sturgeon",
+       "January or March",
+       "Water Core; Hidden Cliff, East Town Pond, Mountain Ponds, Deep Woods"
+      ],
+      [
+       "Salmon",
+       "January (Salmon Festival)",
+       "Bamboo rod; ponds + Town Dock Center, Under Pier"
+      ],
+      [
+       "Dark Skeleton Fish",
+       "Breed ≥3 Mimic Skeleton Fish",
+       "66.67% chance"
+      ],
+      [
+       "Silver-Glow Eel",
+       "Breed ≥6 Eels",
+       "50% chance"
+      ],
+      [
+       "Chum Salmon",
+       "Breed ≥6 Salmon",
+       "50% chance"
+      ],
+      [
+       "Red Cod",
+       "Breed ≥3 Cod",
+       "66.67% chance"
+      ],
+      [
+       "Blue Pike",
+       "Breed ≥3 Pike",
+       "66.67% chance"
+      ],
+      [
+       "Black-Back Sardine",
+       "Breed ≥5 Sardine + 1 Catfish",
+       "66.67% chance"
+      ],
+      [
+       "Emperor Tuna",
+       "Breed ≥5 Tuna + ≥2 Shining Goldfish",
+       "25% chance"
+      ],
+      [
+       "Leaf Slug",
+       "Breed ≥3 Grass Carp + ≥3 Aquatic Amoeba",
+       "50% chance"
+      ],
+      [
+       "Mist Eel",
+       "Breed ≥4 Loach + ≥4 Swamp Eel",
+       "50% chance"
+      ],
+      [
+       "Terror Fish",
+       "Breed exactly 3 Fang Fish + 3 Pike",
+       "25% chance"
+      ],
+      [
+       "Abyss Lantern Bass",
+       "Breed ≥4 Bass + ≥4 Glowing Eel",
+       "50% chance"
+      ]
+     ]
+    },
+    {
+     "type": "list",
+     "heading": "How to Fish Efficiently",
+     "body": "Turn fishing from a side activity into a reliable income and parts source.",
+     "items": [
+      "Map the ponds: each body of water has its own fish pool — check the tables above before choosing a spot",
+      "Upgrade your rod: higher-tier rods unlock better fish and make the fishing minigame more forgiving",
+      "Fish through weather: rain and thunderstorms bring uncommon catches that dry days don't",
+      "Watch the season: rainy season (Jan–Feb) and dry season (Mar–Apr) change the catch tables completely",
+      "Breed rare fish: the 13 tank-only species need specific parents — keep spares instead of selling everything",
+      "Rare fish drop advanced drone and tool parts, so a good fishing session funds your upgrades"
      ]
     },
     {
      "type": "note",
-     "tag": "1.0",
-     "heading": "New Fish in 1.0",
-     "body": "The 1.0 update adds new fish species. The complete English fish list with per-pond and per-weather tables is being compiled from hands-on play and will replace the summary above (⚠️)."
+     "heading": "Sources & Notes",
+     "body": "Fish locations, seasons, weather and breeding odds are player-verified and compiled from 18183's full catalog (L2). Some spawns may vary after patches — treat this as a field guide, not a fixed database. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client."
     }
    ],
    "sources": [
@@ -1044,20 +1228,21 @@
    "slug": "farming",
    "title": "Doloc Town Farming Guide: Crops, Seasons & Soil",
    "metaTitle": "Doloc Town Farming Guide: Crops, Seasons, Trees & Soil",
-   "metaDescription": "Everything about Doloc Town farming: seasonal crops, fruit trees, herbs, mushrooms, planters and soil, plus tool upgrades and harvest tips.",
-   "intro": "Farming is the foundation of your wasteland farm. Learn what to plant, when, and how to protect it from extreme weather.",
+   "metaDescription": "Everything about Doloc Town farming: seasonal crops, fruit trees, herbs, mushrooms, planters and soil, plus the gene mutations and 1.0 automation that change how you farm.",
+   "intro": "Farming is the foundation of your wasteland farm. Learn what to plant, when, how to protect it from extreme weather — and how genes and 1.0 automation replace the busywork.",
    "sections": [
     {
      "type": "list",
      "tag": "CROPS",
      "heading": "Crop Basics",
-     "body": "Farming is the foundation of your wasteland farm. Learn what to plant, when, and how to protect it.",
+     "body": "Farming in Doloc Town is vertical: you stack planters on platforms and climb between them every day. Get the basics right and the rest of the game funds itself.",
      "items": [
-      "Seasonal crops rotate with the calendar — plant to the season.",
-      "Fruit trees take 7 days and produce forever once mature — plant them early.",
-      "Herbs grow in 2 days — fast filler crops that smooth cash flow.",
-      "Mushrooms are an autumn forage bonus — free calories.",
-      "A sickle harvests whole groups at once — upgrade it early."
+      "Seasonal crops rotate with the calendar — plant to the season and replant after each changeover.",
+      "Fruit trees take 7 days and produce forever once mature — plant them in week one.",
+      "Herbs grow in 2 days — fast filler crops that smooth cash flow between harvests.",
+      "Mushrooms are an autumn forage bonus — free calories that cost no water.",
+      "A sickle harvests whole groups at once — upgrade it early, it is the biggest time-saver in the game.",
+      "Crops can be gene-modified: the 1.0 store page confirms the genetics system covers upward of 30 different crops."
      ]
     },
     {
@@ -1073,22 +1258,103 @@
       [
        "Herbs",
        "2 days",
-       "Fast, low investment"
+       "Fast, low investment — good gap-fillers"
       ],
       [
        "Seasonal crops",
        "Varies",
-       "Match the season"
+       "Match the season; replant after changeover"
       ],
       [
        "Fruit trees",
        "7 days",
-       "Permanent producer — plant first"
+       "Permanent producer — plant first and let them pay forever"
       ],
       [
        "Mushrooms",
        "Autumn forage",
-       "Free bonus ⚠️"
+       "Free bonus, no watering ⚠️"
+      ],
+      [
+       "Gene-modified crops",
+       "Varies",
+       "Mutations can add drops, auto-harvest or weather resistance"
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "tag": "SEASON",
+     "heading": "The Farm Calendar: Seasons & Weather",
+     "body": "Doloc Town runs a two-season weather year on top of a four-month calendar. The rainy season (January–February) and dry season (March–April) change what you can grow and catch — and April is the drought month.",
+     "columns": [
+      "Period",
+      "What happens",
+      "Farmer's move"
+     ],
+     "rows": [
+      [
+       "Rainy season (Jan–Feb)",
+       "Heavy rain and thunderstorms; ponds fill; some fish only appear now",
+       "Let rain irrigate; bank thunderstorm power for 1.0 automation"
+      ],
+      [
+       "Dry season (Mar–Apr)",
+       "Less rain; crops start to struggle",
+       "Water more; lean on the Rain Falls Evenly gene or covers"
+      ],
+      [
+       "Drought (April)",
+       "Crops wither and shop prices spike",
+       "Sell stockpiles at the highest prices of the year"
+      ],
+      [
+       "Any season",
+       "Acid rain and heat waves can strike suddenly",
+       "Keep covers built; group vulnerable crops together"
+      ]
+     ]
+    },
+    {
+     "type": "table",
+     "tag": "GENE",
+     "heading": "Genes Every Farmer Should Know",
+     "body": "The genetics system (added in the February EA update) lets you install up to 3 gene modules per seed. These are the mutations most useful on the farm. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client.",
+     "columns": [
+      "Gene (translated)",
+      "Effect",
+      "Best for"
+     ],
+     "rows": [
+      [
+       "Rain Falls Evenly (雨露均沾)",
+       "Auto-waters surrounding crops",
+       "The single best early gene — replaces daily watering"
+      ],
+      [
+       "Spore Ejection (孢子喷射)",
+       "Mature plants drop fruit automatically",
+       "Idle-friendly plots; combine with auto-harvest"
+      ],
+      [
+       "Fractal Crop (分形作物)",
+       "Increases drop count",
+       "High-value crops where extra fruit = extra income"
+      ],
+      [
+       "Gift of Time (时间馈赠)",
+       "+1 fruit for every 28 days the plant survives",
+       "Long-lived plants — plant early and leave them"
+      ],
+      [
+       "Hope (希望)",
+       "Harvests drop seeds",
+       "Keeps a plot self-sustaining without re-seeding"
+      ],
+      [
+       "Constitution Boost (体质增强)",
+       "Survives off-season at -50% speed",
+       "Stretches a crop beyond its season"
       ]
      ]
     },
@@ -1108,7 +1374,7 @@
       ],
       [
        "Use the Rain gene",
-       "Auto-watering mutation keeps soil moist through dry spells."
+       "Rain Falls Evenly keeps soil moist through dry spells automatically."
       ],
       [
        "Automate in 1.0",
@@ -1117,10 +1383,54 @@
      ]
     },
     {
+     "type": "list",
+     "tag": "AUTO",
+     "heading": "From Hand-Farming to Automation (1.0)",
+     "body": "The 1.0 release turns you from a farmer into a farm manager. The upgrade path is: energy first, stations second, then let the drones work.",
+     "items": [
+      "Build solar panels and wind turbines to generate clean energy for your farm.",
+      "Construct farm drone stations — the control points that let drones work the fields.",
+      "Assign automation tasks: drones handle seeding, nurturing and harvesting end to end.",
+      "Vertical stacking matters: leave clear flight lanes between platforms so drones can reach every planter.",
+      "The industrial zone adds conveyor-belt production lines that open up previously unreachable areas."
+     ]
+    },
+    {
      "type": "note",
      "tag": "TIP",
      "heading": "Drought Strategy & Common Mistakes",
-     "body": "In drought month (Month 4) crops wither and prices spike. Stockpile before the drought and sell high during it. Common mistakes: planting one giant flat field (a single storm wipes it), ignoring fruit trees early (they are free money later), and never upgrading the sickle (group harvest is a huge time saver)."
+     "body": "In drought month (April) crops wither and prices spike. Stockpile before the drought and sell high during it. Common mistakes: planting one giant flat field (a single storm wipes it), ignoring fruit trees early (they are free money later), never upgrading the sickle (group harvest is a huge time saver), watering everything by hand when the Rain gene exists, and skipping Bellad's quests (tech points are the only reliable early income)."
+    },
+    {
+     "type": "faq",
+     "tag": "FAQ",
+     "heading": "Quick Answers",
+     "items": [
+      [
+       "Do I have to water every day?",
+       "Early on, yes — but the Rain Falls Evenly gene auto-waters surrounding crops, and 1.0 drone stations fully take over."
+      ],
+      [
+       "When should I plant fruit trees?",
+       "Week one. They take 7 days to mature and then produce forever — the earlier they go in, the more free income you bank."
+      ],
+      [
+       "What is the drought month?",
+       "April, in the dry season. Crops wither and shop prices spike — stockpile before it and sell during it."
+      ],
+      [
+       "How do gene modules work?",
+       "Each seed holds up to 3 gene modules chosen from a pool of around 20 mutations; install them with the gene reader/synthesizer and observe the synergy on your farm."
+      ],
+      [
+       "How many crops can be gene-modified?",
+       "The official store page says the genetics system covers upward of 30 different crops."
+      ],
+      [
+       "Does 1.0 fully automate farming?",
+       "Yes — solar/wind energy plus drone stations handle seeding, nurturing and harvesting, freeing you to explore, fish and quest."
+      ]
+     ]
     }
    ],
    "sources": [
@@ -1131,6 +1441,10 @@
     {
      "label": "Mejoress Doloc Town guide",
      "url": "https://www.mejoress.com/en/doloc-town-guide/"
+    },
+    {
+     "label": "Doloc Town Huiji Wiki (Chinese, gene system)",
+     "url": "https://doloctown.huijiwiki.com/"
     }
    ],
    "meta": {
