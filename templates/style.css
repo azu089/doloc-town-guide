@@ -232,32 +232,14 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
 .pano-stats .stat b{color:#F0B457}
 
 /* ---------- season bar (四季导航, 田园特色) ---------- */
-.season-bar{margin:26px 0 6px;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.season-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;color:var(--amber-soft);text-transform:uppercase}
-.season-tabs{display:flex;gap:8px;flex-wrap:wrap}
-.season-tab{display:inline-flex;align-items:center;gap:7px;background:transparent;border:1px solid var(--line-strong);color:var(--muted);border-radius:999px;padding:8px 15px;font-size:.85rem;font-weight:600;cursor:pointer;transition:.16s;font-family:var(--body)}
-.season-tab:hover{color:var(--text);border-color:rgba(127,176,105,.5)}
-.season-tab[aria-pressed="true"],.season-tab.on{background:rgba(127,176,105,.18);color:var(--sprout);border-color:rgba(127,176,105,.55)}
 .season-emoji{font-size:1rem}
 
 /* ---------- plot masonry (地块网格, 错落) ---------- */
-.plot-masonry{columns:3;column-gap:16px}
-.plot-card{display:inline-block;width:100%;margin:0 0 16px;break-inside:avoid;position:relative;background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:var(--radius-sm);padding:20px 18px;color:var(--text);transition:.18s;overflow:hidden}
-.plot-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sprout),var(--amber));opacity:0;transition:.2s}
-.plot-card:hover{transform:translateY(-4px);border-color:rgba(217,119,6,.45);box-shadow:0 20px 44px -24px rgba(0,0,0,.85)}
-.plot-card:hover::before{opacity:1}
 .plot-icon{width:30px;height:30px;color:var(--sprout);display:block;margin-bottom:8px}
 .plot-icon svg{width:30px;height:30px}
-.plot-card h3{font-family:var(--display);font-size:1.04rem;line-height:1.28;margin-bottom:6px}
-.plot-card p{color:var(--muted);font-size:.83rem;line-height:1.5}
 .plot-open{display:block;margin-top:10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-soft);opacity:0;transform:translateX(-4px);transition:.18s}
-.plot-card:hover .plot-open{opacity:1;transform:none}
 
 /* ---------- plot row (深度/答案区) ---------- */
-.plot-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.plot-row-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.plot-row .plot-card{display:flex;flex-direction:column}
-.plot-row .plot-card p{flex:1}
 
 /* ---------- plot notes (首页关键事实卡) ---------- */
 .plot-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:4px}
@@ -314,9 +296,6 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
 
 /* ---------- responsive ---------- */
 @media (max-width:1024px){
-  .plot-masonry{columns:2}
-  .plot-row{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .plot-row-3{grid-template-columns:repeat(2,minmax(0,1fr))}
   .dd-manual{min-width:0;grid-template-columns:1fr;width:min(92vw,340px)}
 }
 @media (max-width:900px){
@@ -325,9 +304,6 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
   .pano-hero{min-height:66vh}
 }
 @media (max-width:640px){
-  .plot-masonry{columns:1}
-  .plot-row{grid-template-columns:1fr}
-  .plot-row-3{grid-template-columns:1fr}
   .plot-notes{grid-template-columns:1fr}
   .growth-step{font-size:.6rem}
 }
@@ -413,3 +389,56 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
 /* 农舍便签 */
 .barn-note{background:linear-gradient(160deg,rgba(244,238,220,.06),rgba(22,33,26,.5));border-left:3px solid var(--amber)}
 .barn-pin{position:absolute;top:12px;right:16px;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f5c34c,#b8860b);box-shadow:0 2px 5px rgba(0,0,0,.4)}
+/* ============================================================
+   Doloc — Seasonal Farmstead home (v3, 2026-08-07)
+   真四季切换 + 农场地块布局（替代卡片网格）
+   ============================================================ */
+:root{--season-acc:var(--sprout);--season-soft:#A8D08D}
+/* ---------- season box (真切换) ---------- */
+.season-box{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin:28px 0 6px;box-shadow:var(--shadow)}
+.season-tabs{display:flex;gap:10px;flex-wrap:wrap}
+.season-tab{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.04);border:1.5px solid var(--line-strong);color:var(--muted);border-radius:999px;padding:10px 18px;font-size:.9rem;font-weight:700;cursor:pointer;transition:.18s;font-family:var(--body)}
+.season-tab:hover{color:var(--text);border-color:var(--season-acc);transform:translateY(-2px)}
+.season-tab[aria-pressed="true"],.season-tab.on{color:#12200F;background:var(--season-acc);border-color:var(--season-acc);box-shadow:0 8px 22px -10px var(--season-acc)}
+.season-emoji{font-size:1.1rem}
+.season-panels{margin-top:18px}
+.season-panel{display:none;animation:fadeUp .4s ease}
+.season-panel[data-active]{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.season-panel-head{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+.season-emoji-lg{font-size:2.2rem;line-height:1}
+.season-panel-head h3{font-family:var(--display);font-size:1.35rem;color:var(--text)}
+.season-tip{font-size:.92rem;margin-top:3px;font-weight:600}
+.season-tasks{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.season-task{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+.task-dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;margin-top:6px}
+.season-task p{color:var(--muted);font-size:.84rem;line-height:1.45}
+.season-guides b{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-soft);margin-bottom:9px}
+.season-guides{display:flex;flex-wrap:wrap;gap:8px}
+.season-guide{display:inline-flex;align-items:center;gap:8px;color:var(--muted);background:rgba(127,176,105,.08);border:1px solid rgba(127,176,105,.25);border-radius:999px;padding:7px 14px;font-size:.84rem;transition:.15s}
+.season-guide:hover{color:var(--text);border-color:var(--season-acc);background:rgba(127,176,105,.14)}
+
+/* ---------- farm beds (田垄分区, 非网格) ---------- */
+.farm-beds{display:flex;flex-direction:column;gap:18px}
+.farm-bed{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;position:relative;overflow:hidden}
+.farm-bed::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(0deg,rgba(127,176,105,.03) 0 3px,transparent 3px 42px)}
+.bed-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.bed-emoji{font-size:1.3rem}
+.bed-head h3{font-family:var(--display);font-size:1.15rem;color:var(--text)}
+.bed-count{font-family:var(--mono);font-size:.66rem;color:var(--amber-soft);background:rgba(217,119,6,.12);border:1px solid rgba(217,119,6,.3);border-radius:999px;padding:3px 9px;margin-left:auto}
+.bed-plots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.farm-plot{position:relative;display:flex;align-items:center;gap:13px;background:rgba(255,255,255,.035);border:1px solid var(--line);border-left:4px solid var(--plot-acc,var(--sprout));border-radius:11px;padding:14px 16px;color:var(--text);transition:.18s;overflow:hidden}
+.farm-plot:hover{transform:translateX(5px);border-color:var(--plot-acc,var(--sprout));background:rgba(127,176,105,.07);box-shadow:0 14px 30px -18px rgba(0,0,0,.8)}
+.plot-rail{position:absolute;top:0;bottom:0;left:0;width:4px;background:var(--plot-acc,var(--sprout));opacity:.85}
+.plot-ic{width:26px;height:26px;color:var(--plot-acc,var(--sprout));flex:0 0 auto}
+.plot-ic svg{width:26px;height:26px}
+.plot-tx{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}
+.plot-tx b{font-family:var(--display);font-size:.97rem;color:var(--text);line-height:1.25}
+.plot-tx span{color:var(--muted);font-size:.79rem;line-height:1.4}
+.plot-go{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-soft);flex:0 0 auto;opacity:0;transform:translateX(-4px);transition:.18s}
+.farm-plot:hover .plot-go{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .season-tasks{grid-template-columns:1fr}
+  .bed-plots{grid-template-columns:1fr}
+}

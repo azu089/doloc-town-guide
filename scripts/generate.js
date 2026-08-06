@@ -300,30 +300,80 @@ function renderHome(lang){
   const keyFactsArr = (DATA.game.keyFactsI18n && DATA.game.keyFactsI18n[lang]) || DATA.game.keyFacts || [];
   const keyFacts = keyFactsArr.map(f=>`<li>${esc(f)}</li>`).join("");
   const keyFactsFirst3 = keyFactsArr.slice(0,3).map(f=>`<div class="plot-note-card"><span class="plot-note-ic">${SVG.sprout}</span><p>${esc(f)}</p></div>`).join("");
-  // 地块分组：P0 核心地块 / P1 深度 / P2 答案
-  const P0 = ["how-to-play","farming","automation","gene-system","fishing","drone-combat","exploration","friendship","weather"];
-  const P1 = ["cooking","ranching","characters","story"];
-  const P2 = ["achievements","mods","update-log","faq","system-requirements","steam-deck"];
-  const plotCard = (p,i) => {
-    const m = metaOf(p.slug);
-    const t = Object.assign(pageOf(p, lang), {slug: p.slug});
-    return `<a class="plot-card reveal" href="${prefix}/${p.slug}">
-      <span class="plot-icon">${SVG[m.icon]}</span>
-      <h3>${esc(t.title)}</h3>
-      <p>${esc(t.metaDescription)}</p>
-      <span class="plot-open">${esc(s.readGuide)}</span>
+  // ---- 四季数据：每个季节有主题色 / 农事历 / 推荐攻略 ----
+  const L = (en, zh, ja, ko, es) => lang==="zh-CN"||lang==="zh-TW" ? zh : lang==="ja" ? ja : lang==="ko" ? ko : lang==="es" ? es : en;
+  const SEASONS = [
+    {key:"spring", name:L("Spring","春","春","봄","Primavera"), emoji:"🌱",
+     accent:"#7FB069", soft:"#A8D08D",
+     tip:L("Sow fast crops and prep soil.","播种速生作物、翻整土地。","速成作物を蒔き、土を整える。","속성 작물을 심고 흙을 정비하세요.","Siembra cultivos rápidos y prepara el suelo."),
+     tasks:[L("Plant herbs — 2-day filler crops","种香草——2 天速生填充作物","ハーブを植える——2日で育つフィラー作物","허브 심기——2일 속성 필러 작물","Planta hierbas: cultivos de relleno de 2 días"),
+            L("Clear new plots for the season","为季节清理新地块","季節の新しい区画を整地","계절용 새 구획 정리","Limpia nuevas parcelas para la temporada"),
+            L("Save seed mother plants early","尽早保存种子母本","種子母体を早めに確保","종자 모본을 일찍 확보","Guarda plantas madre pronto")],
+     guides:["how-to-play","farming","gene-system"]},
+    {key:"summer", name:L("Summer","夏","夏","여름","Verano"), emoji:"☀️",
+     accent:"#D97706", soft:"#F0B457",
+     tip:L("Storms charge power — build lightning capture.","雷暴可蓄电——建闪电收集。","嵐で充電——落雷キャプチャを建てる。","폭풍이 충전——번개 포집을 지으세요.","Las tormentas cargan: construye captura de rayos."),
+     tasks:[L("Let torrential rain irrigate for free","让暴雨免费灌溉","豪雨に無料灌漑を任せる","폭우로 무료 관개","Deja que la lluvia torrencial riegue gratis"),
+            L("Upgrade drone battery before storms","雷暴前升级无人机电池","嵐の前にドローンのバッテリー強化","폭풍 전 드론 배터리 강화","Mejora la batería del dron antes de las tormentas"),
+            L("Fish through weather for rare catches","趁天气钓鱼拿稀有渔获","天候を狙ってレア魚","날씨를 노려 희귀어","Pesca con clima para capturas raras")],
+     guides:["weather","drone-combat","fishing"]},
+    {key:"autumn", name:L("Autumn","秋","秋","가을","Otoño"), emoji:"🍂",
+     accent:"#9A6A4F", soft:"#C29A7D",
+     tip:L("Harvest, cook, and attend the Mushroom Fest.","收获、烹饪、参加蘑菇节。","収穫、料理、キノコ祭りへ。","수확, 요리, 버섯 축제 참여.","Cosecha, cocina y acude al Festival de las Setas."),
+     tasks:[L("Collect autumn mushroom forage","收集秋季蘑菇","秋のキノコ採取","가을 버섯 채집","Recoge setas de otoño"),
+            L("Cook buff meals before big explorations","探索前做增益餐","探索前にバフ料理","탐험 전 버프 요리","Cocina buffs antes de explorar"),
+            L("Raise friendship at the festival","在节日提升好感","祭りで友好度アップ","축제에서 우정 올리기","Sube amistad en el festival")],
+     guides:["cooking","friendship","exploration"]},
+    {key:"winter", name:L("Winter","冬","冬","겨울","Invierno"), emoji:"❄️",
+     accent:"#5C8AC9", soft:"#9DB8E0",
+     tip:L("Drought hits in Month 4 — stockpile and sell high.","4 月旱季来袭——囤货高价卖。","4月の乾季——備蓄して高値で売る。","4월 가뭄——비축 후 고가 판매.","La sequía llega en el mes 4: acumula y vende caro."),
+     tasks:[L("Stockpile before Month 4 prices spike","4 月前囤货应对涨价","4月の値上がり前に備蓄","4월 가격 급등 전 비축","Acumula antes de la subida del mes 4"),
+            L("Push the 1.0 story through Old City Ruins","推进 1.0 旧城废墟剧情","旧市街遺跡のストーリーを進める","구시가지 유적 스토리 진행","Avanza la historia 1.0 en las Ruinas"),
+            L("Use automated stations for indoor growing","用自动站做室内种植","自動基地で屋内栽培","자동 기지로 실내 재배","Usa estaciones para cultivar en interior")],
+     guides:["story","automation","achievements"]},
+  ];
+  // 季节 tab（含主题色变量名，供 JS 切换）
+  const seasonTabs = SEASONS.map((se,i)=>`<button class="season-tab" data-season="${se.key}" data-accent="${se.accent}" data-soft="${se.soft}" ${i===0?'aria-pressed="true"':''}><span class="season-emoji" aria-hidden="true">${se.emoji}</span>${esc(se.name)}</button>`).join("");
+  // 每季节：农事历卡片（含任务 + 推荐攻略链接）
+  const seasonPanel = (se, i) => {
+    const gs = se.guides.map(slug=>{
+      const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
+      const t=Object.assign(pageOf(p,lang),{slug});
+      return `<a class="season-guide" href="${prefix}/${slug}"><span class="nav-ic">${SVG[metaOf(slug).icon]}</span><span>${esc(t.title)}</span></a>`;
+    }).join("");
+    const tasks = se.tasks.map(t=>`<li class="season-task"><span class="task-dot" style="background:${se.accent}"></span><p>${esc(t)}</p></li>`).join("");
+    return `<div class="season-panel" data-panel="${se.key}" ${i===0?'data-active="1"':''}>
+      <div class="season-panel-head"><span class="season-emoji-lg" aria-hidden="true">${se.emoji}</span><div><h3>${esc(se.name)} ${L("Farm Calendar","农事历","農事暦","농사 달력","Calendario de granja")}</h3><p class="season-tip" style="color:${se.accent}">${esc(se.tip)}</p></div></div>
+      <ul class="season-tasks">${tasks}</ul>
+      <div class="season-guides"><b>${esc(L("This season's guides","本季攻略","今シーズンの攻略","이번 시즌 가이드","Guías de esta temporada"))}</b>${gs}</div>
+    </div>`;
+  };
+  const seasonPanels = SEASONS.map((se,i)=>seasonPanel(se,i)).join("");
+  // ---- 攻略区：按季节分组的「田垄」（非方块网格）----
+  const farmPlot = (slug) => {
+    const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
+    const m=metaOf(slug); const t=Object.assign(pageOf(p,lang),{slug});
+    return `<a class="farm-plot" href="${prefix}/${slug}" style="--plot-acc:${t.seasonAccent||"var(--sprout)"}">
+      <span class="plot-rail"></span>
+      <span class="plot-ic">${SVG[m.icon]}</span>
+      <span class="plot-tx"><b>${esc(t.title)}</b><span>${esc(t.metaDescription)}</span></span>
+      <span class="plot-go">${esc(s.readGuide)}</span>
     </a>`;
   };
-  const p0Cards = P0.map((slug,i)=>plotCard(DATA.pages.find(p=>p.slug===slug),i)).join("");
-  const p1Cards = P1.map((slug,i)=>plotCard(DATA.pages.find(p=>p.slug===slug),i)).join("");
-  const p2Cards = P2.map((slug,i)=>plotCard(DATA.pages.find(p=>p.slug===slug),i)).join("");
-  // 四季导航（前端切换 highlight）
-  const seasons = [
-    ["spring", lang==="en"?"Spring":lang==="ja"?"春":lang==="ko"?"봄":lang==="es"?"Primavera":"春", "🌱"],
-    ["summer", lang==="en"?"Summer":lang==="ja"?"夏":lang==="ko"?"여름":lang==="es"?"Verano":"夏", "☀️"],
-    ["autumn", lang==="en"?"Autumn":lang==="ja"?"秋":lang==="ko"?"가을":lang==="es"?"Otoño":"秋", "🍂"],
-    ["winter", lang==="en"?"Winter":lang==="ja"?"冬":lang==="ko"?"겨울":lang==="es"?"Invierno":"冬", "❄️"],
-  ].map(([k,n,e],i)=>`<button class="season-tab" data-season="${k}" ${i===0?'aria-pressed="true"':''}><span class="season-emoji" aria-hidden="true">${e}</span>${esc(n)}</button>`).join("");
+  // 地块按「农场分区」：种下去 → 自动化 → 战斗探索 → 收获生活
+  const BEDS = [
+    {label:L("Plant & Grow","种植与生长","植えて育てる","심고 기르기","Plantar y crecer"), emoji:"🌱", slugs:["how-to-play","farming","gene-system","weather"]},
+    {label:L("Automate & Power","自动化与能源","自動化とエネルギー","자동화와 에너지","Automatizar y energía"), emoji:"⚙️", slugs:["automation","fishing","drone-combat"]},
+    {label:L("Explore & Fight","探索与战斗","探索と戦闘","탐험과 전투","Explorar y luchar"), emoji:"🗺️", slugs:["exploration","story","characters"]},
+    {label:L("Harvest & Live","收获与生活","収穫と生活","수확과 생활","Cosechar y vivir"), emoji:"🍲", slugs:["cooking","ranching","friendship","achievements","mods","update-log","faq","system-requirements","steam-deck"]},
+  ];
+  const bedHtml = BEDS.map((bed,bi)=>{
+    const plots = bed.slugs.map(slug=>farmPlot(slug)).join("");
+    return `<div class="farm-bed reveal">
+      <div class="bed-head"><span class="bed-emoji" aria-hidden="true">${bed.emoji}</span><h3>${esc(bed.label)}</h3><span class="bed-count">${bed.slugs.length}</span></div>
+      <div class="bed-plots">${plots}</div>
+    </div>`;
+  }).join("");
   const badgeTxt = lang==="en" ? "Post-apocalyptic farming sim — 1.0 full release guides"
     : lang==="ja" ? "終末世界の農場シム — 1.0 完全版攻略"
     : lang==="ko" ? "포스트 아포칼립스 농장 시뮬 — 1.0 공략"
@@ -346,22 +396,14 @@ function renderHome(lang){
       </div>
     </section>
     <section class="container">
-      <div class="season-bar reveal">
-        <span class="season-label">${esc(lang==="en"?"SEASONS":lang==="ja"?"季節":lang==="ko"?"계절":lang==="es"?"TEMPORADAS":"季节")}</span>
-        <div class="season-tabs">${seasons}</div>
+      <div class="season-box reveal">
+        <div class="season-tabs">${seasonTabs}</div>
+        <div class="season-panels">${seasonPanels}</div>
       </div>
     </section>
     <section class="container section">
-      <div class="sec-head reveal"><span class="mono">${esc(s.plotTag)} // 001</span><h2>${esc(s.guides)}</h2></div>
-      <div class="plot-masonry">${p0Cards}</div>
-    </section>
-    <section class="container section">
-      <div class="sec-head reveal"><span class="mono">${esc(s.seasonTag)} // DEEP</span><h2>${esc(s.latest)}</h2></div>
-      <div class="plot-row">${p1Cards}</div>
-    </section>
-    <section class="container section">
-      <div class="sec-head reveal"><span class="mono">${esc(s.seedTag)} // ANSWERS</span><h2>${esc(lang==="en"?"Quick answers":lang==="ja"?"クイック回答":lang==="ko"?"빠른 답변":lang==="es"?"Respuestas rápidas":"快速答案")}</h2></div>
-      <div class="plot-row plot-row-3">${p2Cards}</div>
+      <div class="sec-head reveal"><span class="mono">${esc(s.plotTag)} // FARM</span><h2>${esc(L("The Farmstead Guides","农场攻略图","農場攻略図","농장 가이드 지도","Guías de la granja"))}</h2></div>
+      <div class="farm-beds">${bedHtml}</div>
     </section>
     <section class="container section split">
       <div class="card grow-card reveal">
@@ -377,11 +419,18 @@ function renderHome(lang){
   </main>
   <script>
   document.addEventListener('DOMContentLoaded', function(){
+    var root = document.documentElement;
     var tabs = document.querySelectorAll('.season-tab');
+    var panels = document.querySelectorAll('.season-panel');
     tabs.forEach(function(t){
       t.addEventListener('click', function(){
         tabs.forEach(function(x){ x.setAttribute('aria-pressed','false'); x.classList.remove('on'); });
         t.setAttribute('aria-pressed','true'); t.classList.add('on');
+        // 切主题色
+        root.style.setProperty('--season-acc', t.dataset.accent);
+        root.style.setProperty('--season-soft', t.dataset.soft);
+        // 切农事历面板
+        panels.forEach(function(p){ if(p.dataset.panel===t.dataset.season){ p.setAttribute('data-active','1'); } else { p.removeAttribute('data-active'); } });
       });
     });
   });
