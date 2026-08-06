@@ -114,7 +114,7 @@ a{color:var(--sprout);text-decoration:none}
 /* (hero v1 removed) */
 
 /* ---------- sections / cards ---------- */
-.section{margin:26px 0 8px}
+.section{margin-top:26px;margin-bottom:8px}
 .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px}
 .mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;color:var(--amber-soft);text-transform:uppercase}
 .sec-head h2{font-family:var(--display);font-size:1.7rem;color:var(--text)}
