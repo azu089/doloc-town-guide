@@ -167,138 +167,164 @@
      "type": "steps",
      "tag": "CORE LOOP",
      "heading": "The Five-Step Core Loop",
-     "body": "Every session follows the same rhythm. Master it and the wasteland becomes a farm.",
+     "body": "Every Doloc Town session follows the same rhythm. Once the loop clicks, the wasteland stops being hostile and starts being your farm.",
      "items": [
       [
        "Clear the ruins",
-       "Break debris and abandoned structures in the wasteland to open paths and reveal resources."
+       "Break debris and abandoned structures with your starting tools. Clearing opens build space, reveals buried resources and extends your reach. Prioritise plots closest to your home base first."
       ],
       [
        "Gather resources",
-       "Collect 40+ minerals, plants, scraps and machine parts. Out here even junk has a purpose."
+       "Collect 40+ minerals, plants, scraps and machine parts. Even junk has a purpose: scrap feeds crafting, plants feed cooking, and minerals upgrade your tech tree. Learn which spots respawn daily."
       ],
       [
        "Farm vertically",
-       "Craft planters and stack platforms to build your farm upward — more space for crops and survival."
+       "Craft planters and stack platforms to build upward. A single horizontal field is a drought risk and a storm magnet; vertical layers give you room to spread crops, protect them and add automation later."
       ],
       [
        "Build and upgrade",
-       "Spend resources on the tech tree, blueprints, buildings and your home."
+       "Spend resources on the tech tree, blueprints, buildings and your home. Tech Points come from Guildmaster Bellad's quests — always keep one quest active."
       ],
       [
        "Explore new regions",
-       "Use upgraded tools and your drone to reach places you couldn't before, including the 1.0 Old City Ruins."
+       "Use upgraded tools and your drone to reach new areas, including the 1.0 Old City Ruins. Exploration feeds back into the loop with new seeds, fish and materials."
       ]
      ]
     },
     {
      "type": "list",
      "tag": "PLATFORMS",
-     "heading": "Vertical Farming Basics",
-     "body": "Doloc Town's signature is building up, not out.",
+     "heading": "Vertical Farming: How It Actually Works",
+     "body": "The side-scrolling view is not a gimmick — it is the whole farm system.",
      "items": [
-      "Craft planters and place them on stacked platforms to expand your farm vertically.",
-      "Jump and climb between levels — platforming is part of the farming.",
-      "Protect crops from acid rain, scorching heat and thunderstorms with covers and placement.",
-      "Sow, water and harvest by hand at first; drones take over after 1.0 automation."
+      "Platforms stack freely; each level you climb adds buildable surface.",
+      "Jump and climb between levels — platforming is part of the daily loop, not a loading screen.",
+      "Planters sit on platforms; group crops by season so you can re-plant in one pass.",
+      "Build covers or use the Rain gene so storms and acid rain do not wipe a whole layer.",
+      "Leave vertical gaps for drone flight paths — automation in 1.0 needs clear lanes."
      ]
     },
     {
      "type": "table",
      "tag": "WEATHER",
-     "heading": "Weather Effects at a Glance",
-     "body": "Extreme weather is dangerous — but you can weaponize it.",
+     "heading": "Weather Effects & How to Weaponize Them",
+     "body": "Extreme weather is the game's signature. It kills careless farms and powers clever ones.",
      "columns": [
       "Weather",
-      "Effect on crops",
-      "How to turn it to your advantage"
+      "What it does",
+      "Turn it into an advantage"
      ],
      "rows": [
       [
        "Acid rain",
-       "Erodes unprotected crops",
-       "Build covers; collect acid as a resource"
+       "Erodes uncovered crops over time",
+       "Build covers; collect acid as a crafting resource"
       ],
       [
        "Scorching heat",
-       "Bakes the earth, dries soil",
-       "Time watering; plant heat-resistant gene strains"
+       "Bakes soil dry, slows growth",
+       "Water on a timer; plant heat-resistant gene strains"
       ],
       [
        "Thunderstorm",
        "Damages exposed fields",
-       "Harness lightning to power your farm"
+       "Harness lightning to charge farm power (key for 1.0 automation)"
       ],
       [
        "Torrential rain",
        "Floods low plots",
-       "Let it irrigate fields for free"
+       "Let it irrigate for free; save watering energy"
       ],
       [
        "Drought (Month 4)",
        "Crops wither, prices spike",
-       "Stockpile and sell high during the price surge"
+       "Stockpile before Month 4, sell during the spike"
       ]
      ]
     },
     {
      "type": "steps",
      "tag": "FIRST WEEK",
-     "heading": "First Week Priorities (Do This First)",
-     "body": "These five moves set up the whole run.",
+     "heading": "First Week: The 5 Moves That Set Up the Run",
+     "body": "Do these in order and the first season stops being a scramble.",
      "items": [
       [
-       "Clear your starting plot",
-       "More build space = more crops = faster progress."
+       "Clear your starting plot fully",
+       "Hidden corners hide scrap that funds your first planter batch."
       ],
       [
-       "Build a planter and plant fast crops",
-       "Quick harvests fund everything else."
+       "Plant fast crops first",
+       "Quick harvests generate the capital for tools and seeds."
       ],
       [
-       "Talk to the townsfolk daily",
-       "Friendship unlocks recipes, tech and story — including Blooming Friendship."
+       "Talk to every villager daily",
+       "Friendship unlocks recipes, tech and story; it also triggers Blooming Friendship."
       ],
       [
-       "Unlock the Guildmaster's quests",
-       "Bellad's tasks pay Tech Points for the tech tree."
+       "Open Bellad's quests immediately",
+       "Quest rewards are Tech Points — the only reliable early tech income."
       ],
       [
-       "Start a stockpile before Month 4",
-       "Drought prices make a hoard profitable."
+       "Start stockpiling before Month 4",
+       "Drought prices make a small hoard very profitable."
       ]
      ]
     },
     {
+     "type": "note",
+     "tag": "COMMON MISTAKES",
+     "heading": "Common Mistakes New Players Make (Avoid These)",
+     "body": "The most common early run-enders, from community reports: watering everything by hand every single day (automate or use the Rain gene), planting one giant flat field (a single storm wipes it), ignoring friendship (you lock yourself out of recipes), skipping Bellad's quests (you fall behind the tech tree), and hoarding nothing before Month 4 (you sell at the worst prices of the year)."
+    },
+    {
      "type": "list",
      "tag": "COMBAT",
-     "heading": "Drone Combat for Beginners",
-     "body": "Your drone is your weapon and your survival tool.",
+     "heading": "Drone Combat: Controls, Then Strategy",
+     "body": "Your drone is both weapon and survival tool. Learn the controls, then the builds.",
      "items": [
-      "RMB locks on, LMB shoots, Space dodges, R reloads.",
-      "Upgrade chassis, barrels and batteries for fire rate, damage and energy.",
-      "Charge beam (F) breaks shields on armored Scavenger Bugs.",
-      "Fit weapon and lighting modules before exploring ruins."
+      "RMB locks on, LMB fires, Space dodges, R reloads.",
+      "Upgrade chassis (survivability), barrel (damage) and battery (uptime) — in that order early on.",
+      "Charge beam (F) breaks shields on armoured Scavenger Bugs; normal fire bounces off.",
+      "Fit weapon and lighting modules before exploring ruins at night.",
+      "Rare fish drop advanced parts — fishing funds your combat build."
      ]
     },
     {
-     "type": "note",
+     "type": "timeline",
      "tag": "1.0",
      "heading": "What the 1.0 Release Changes for New Players",
-     "body": "The 1.0 update (August 6, 2026) adds a complete story ending, the Old City Ruins region, farming automation (solar + wind → drone stations), the Mushroom Fest and 37 new achievements. If you are starting now, you can automate chores much earlier than Early Access players could. ⚠️ Exact unlock order is still being verified in 1.0."
+     "body": "The August 6, 2026 1.0 release reshapes the early game.",
+     "items": [
+      [
+       "Aug 6, 2026",
+       "1.0 launches: complete story ending, Old City Ruins, farming automation, Mushroom Fest, 37 new achievements."
+      ],
+      [
+       "New players",
+       "You can reach automation earlier than EA players — solar/wind power → drone stations handle chores."
+      ],
+      [
+       "Old City Ruins",
+       "New region with fierce enemies, new NPCs, side quests and resources; many paths lead there."
+      ],
+      [
+       "⚠️ Verification",
+       "Exact unlock order and build costs are still being verified in 1.0; details marked with ⚠️ are community-sourced."
+      ]
+     ]
     },
     {
      "type": "faq",
      "tag": "QUICK",
-     "heading": "Quick Answers",
+     "heading": "Quick Answers for New Players",
      "items": [
       [
        "Is Doloc Town single-player?",
-       "Yes. The developers have confirmed the 1.0 release is a single-player experience; co-op/multiplayer may be discussed later based on community feedback."
+       "Yes. The developers confirmed the 1.0 release is a single-player experience; co-op/multiplayer may be discussed later based on community feedback."
       ],
       [
-       "Do I need to water every day?",
-       "Yes at the start — but the 'Rain' mutation auto-waters neighbors, and 1.0 drone stations automate watering entirely."
+       "Do I have to water every day?",
+       "Yes at the start — but the Rain gene auto-waters neighbours, and 1.0 drone stations automate watering entirely."
       ],
       [
        "Can I build anywhere?",
@@ -307,6 +333,10 @@
       [
        "How long is Doloc Town?",
        "30+ hours for the core story, 100+ hours with fishing, ranching, genes and collections."
+      ],
+      [
+       "Should I buy it on sale?",
+       "It is ¥58 normally with a 20% launch discount (¥46.40) until August 19, 2026 — a good entry point."
       ]
      ]
     }
@@ -337,23 +367,23 @@
      "type": "steps",
      "tag": "1.0",
      "heading": "How Farming Automation Works",
-     "body": "Automation has three layers: energy, stations and drones.",
+     "body": "Automation has three layers: energy, stations and drones. Each layer feeds the next, so build in this order.",
      "items": [
       [
        "Harness solar and wind power",
-       "Build solar panels and wind turbines to generate clean energy for your farm."
+       "Build solar panels and wind turbines to generate clean energy. Solar shines in clear weather; wind keeps producing through storms — a mix is the safest early setup."
       ],
       [
        "Build farming drone stations",
-       "Stations are the control point that lets drones run farm operations."
+       "Stations are the control points that let drones run farm operations. They consume energy, so size them to your power output."
       ],
       [
        "Assign automated tasks",
-       "Drones handle seeding, nurturing plants and gathering yields end-to-end."
+       "Drones handle seeding, nurturing plants and gathering yields end-to-end. Start with one repetitive chore (watering) and expand."
       ],
       [
        "Free up your time",
-       "While drones work, explore, talk to townsfolk or push the story."
+       "While drones work, explore, talk to townsfolk or push the story — this is the point of the whole system."
       ]
      ]
     },
@@ -361,11 +391,11 @@
      "type": "list",
      "tag": "ENERGY",
      "heading": "Solar vs Wind: What to Build First",
-     "body": "Start with whichever matches your weather, then balance.",
+     "body": "Your weather pattern decides the optimal first build.",
      "items": [
-      "Solar panels shine in clear weather and pair with sunny seasons.",
-      "Wind turbines keep producing through storms — great in storm-heavy months.",
-      "A mix of both keeps energy stable across all weather.",
+      "Clear-weather seasons favour solar panels — cheap and predictable.",
+      "Storm-heavy months favour wind turbines — they never idle.",
+      "A mixed array keeps energy stable through the year and powers a bigger station network.",
       "⚠️ Exact build costs and energy values are being verified in 1.0."
      ]
     },
@@ -373,26 +403,27 @@
      "type": "steps",
      "tag": "INDUSTRIAL",
      "heading": "The Industrial Zone & Conveyor Belts",
-     "body": "Automation isn't only for crops.",
+     "body": "Automation is not only for crops.",
      "items": [
       [
        "Start the generator in the industrial area",
-       "This powers the new conveyor-belt production line."
+       "This powers the new conveyor-belt production line added in 1.0."
       ],
       [
        "Build conveyor belts",
-       "Move materials automatically between stations."
+       "Move materials automatically between stations and storage."
       ],
       [
        "Unlock previously unreachable areas",
-       "The industrial line grants access to new parts of the map."
+       "The industrial line grants access to new parts of the map and new resources."
       ]
      ]
     },
     {
      "type": "table",
      "tag": "ROADMAP",
-     "heading": "Automation Roadmap (Draft)",
+     "heading": "Automation Roadmap (Community Draft)",
+     "body": "A rough order that most players report working — verify exact costs in your save.",
      "columns": [
       "Stage",
       "What you get",
@@ -423,9 +454,15 @@
     },
     {
      "type": "note",
+     "tag": "COMMON MISTAKES",
+     "heading": "Common Automation Mistakes",
+     "body": "Do not rush stations before you have stable power — a station that idles half the day wastes the whole point. Do not automate your only income crop first; automate a low-value filler crop to learn the system risk-free. And leave clear lanes for drones when you build platforms, or they cannot reach their plots."
+    },
+    {
+     "type": "note",
      "tag": "1.0",
      "heading": "Why This Page Matters",
-     "body": "English guides for Doloc Town automation are virtually non-existent — most coverage stops at Early Access basics. This page is one of the first 1.0-specific automation references in English. Details marked ⚠️ will be updated after hands-on verification."
+     "body": "English guides for Doloc Town automation are practically non-existent — most coverage stops at Early Access basics. This is one of the first 1.0-specific automation references in English. Details marked ⚠️ will be updated after hands-on verification."
     }
    ],
    "sources": [
@@ -454,50 +491,59 @@
      "type": "list",
      "tag": "BASICS",
      "heading": "How the Gene System Works",
-     "body": "Every seed can carry up to three gene modules. The right combo turns a plain crop into a self-watering, self-replicating machine.",
+     "body": "Reclaim pre-apocalypse tech and rewrite the genetics of 30+ crops. Every seed carries up to three gene modules; the right combo turns a plain crop into a self-watering, self-replicating machine.",
      "items": [
       "Use gene readers, replicators and synthesizers to inspect and breed seeds.",
       "Unlock seed mother plants via the shop, Aurora seed research and wild mothers.",
-      "Stack up to 3 modules per seed — synergy matters more than raw power.",
-      "⚠️ Exact module sources are still being verified in 1.0."
+      "Stack up to 3 modules per seed — synergy matters more than raw numbers.",
+      "Gene lab locations and module sources are still being verified in 1.0 (⚠️)."
      ]
     },
     {
      "type": "table",
      "tag": "MUTATIONS",
      "heading": "Known Gene Mutations (Community-Verified)",
+     "body": "These mutations are widely reported by the community; the full 1.0 list is being compiled.",
      "columns": [
       "Mutation",
-      "Effect"
+      "Effect",
+      "Best use"
      ],
      "rows": [
       [
        "Spore Burst",
-       "Mature plants drop fruit automatically"
+       "Mature plants drop fruit automatically",
+       "Hands-free harvest plots"
       ],
       [
        "Fractal Crop",
-       "Extra drops per harvest"
+       "Extra drops per harvest",
+       "High-value cash crops"
       ],
       [
        "Gift of Time",
-       "+1 fruit every 28 days of survival"
+       "+1 fruit every 28 days of survival",
+       "Long-running farm plots"
       ],
       [
        "Hope",
-       "Harvests drop seeds"
+       "Harvests drop seeds",
+       "Self-sustaining fields"
       ],
       [
        "Rain",
-       "Auto-waters nearby crops"
+       "Auto-waters nearby crops",
+       "Dry-season insurance; pairs with Spore Burst"
       ],
       [
        "Constitution",
-       "Survives off-season at -50% speed"
+       "Survives off-season at -50% speed",
+       "Year-round greenhouse rows"
       ],
       [
        "+ ~14 more",
-       "⚠️ Full list being verified in 1.0"
+       "⚠️ Full list being verified in 1.0",
+       "—"
       ]
      ]
     },
@@ -521,15 +567,15 @@
       ],
       [
        "Plant and observe",
-       "Watch mutation synergy on your farm."
+       "Watch the synergy on your farm; record which combos thrive in which season."
       ]
      ]
     },
     {
      "type": "note",
      "tag": "TIPS",
-     "heading": "Pro Tips",
-     "body": "Pair Rain with auto-harvest mutations for a nearly hands-free plot. Gift of Time rewards long runs — plant it early. ⚠️ Community-sourced; verify in your own save."
+     "heading": "Pro Tips & Common Mistakes",
+     "body": "Pair Rain with auto-harvest mutations for a nearly hands-free plot — the community's favourite combo. Gift of Time rewards long runs, so plant it early. Common mistakes: over-stacking redundant modules instead of building synergy, and ignoring the mother-plant research track (it gates the best modules). ⚠️ Community-sourced; verify in your own save."
     }
    ],
    "sources": [
@@ -558,18 +604,19 @@
      "type": "list",
      "tag": "BASICS",
      "heading": "Fishing Basics",
-     "body": "No bait required — just a rod and the right spot.",
+     "body": "Fishing is a full second career. No bait is required — just a rod, the right pond and the right weather.",
      "items": [
-      "Different ponds yield different fish.",
-      "Rod quality changes what you can catch.",
-      "Weather changes the catch table.",
-      "Rare fish drop advanced parts used in drone and tool upgrades."
+      "Different ponds yield different fish — map every body of water.",
+      "Rod quality changes what you can catch; upgrade before chasing rare fish.",
+      "Weather changes the catch table — storms often bring uncommon catches.",
+      "Rare fish drop advanced parts used in drone and tool upgrades, so fishing funds combat."
      ]
     },
     {
      "type": "table",
      "tag": "CONDITIONS",
      "heading": "What Changes Your Catch",
+     "body": "Four factors control the catch table.",
      "columns": [
       "Factor",
       "Effect"
@@ -597,22 +644,23 @@
      "type": "steps",
      "tag": "FARM",
      "heading": "How to Farm Fish Efficiently",
+     "body": "Treat fishing like a farm — a routine, not an idle minigame.",
      "items": [
       [
        "Map the ponds",
-       "Visit every body of water and note what bites."
+       "Visit every body of water and note what bites, at what hour and in what weather."
       ],
       [
        "Match rod to target",
-       "Upgrade before chasing rare fish."
+       "Upgrade before chasing rare fish — wasted casts waste daylight."
       ],
       [
        "Fish through weather",
-       "Storms often bring uncommon catches."
+       "Storms and rain often bring uncommon catches other players skip."
       ],
       [
        "Turn fish into parts",
-       "Rare fish fund drone and tool upgrades."
+       "Rare fish fund drone and tool upgrades — the loop pays for itself."
       ]
      ]
     },
@@ -620,7 +668,7 @@
      "type": "note",
      "tag": "1.0",
      "heading": "New Fish in 1.0",
-     "body": "The 1.0 update adds new fish species. ⚠️ The complete English fish list with per-pond and per-weather tables is being compiled and will be added here."
+     "body": "The 1.0 update adds new fish species. The complete English fish list with per-pond and per-weather tables is being compiled from hands-on play and will replace the summary above (⚠️)."
     }
    ],
    "sources": [
@@ -649,7 +697,7 @@
      "type": "list",
      "tag": "CONTROLS",
      "heading": "Drone Combat Controls",
-     "body": "Four inputs cover everything in a fight.",
+     "body": "Four inputs cover everything in a fight — learn them before worrying about builds.",
      "items": [
       "RMB: lock on target",
       "LMB: fire",
@@ -661,31 +709,38 @@
     {
      "type": "table",
      "tag": "UPGRADES",
-     "heading": "Core Upgrades",
+     "heading": "Core Upgrades & What Each Changes",
+     "body": "Every upgrade changes how fights play, not just numbers.",
      "columns": [
       "Part",
-      "What it changes"
+      "What it changes",
+      "Priority"
      ],
      "rows": [
       [
        "Chassis",
-       "Health, mobility, survivability"
+       "Health, mobility, survivability",
+       "2nd"
       ],
       [
        "Barrel",
-       "Fire rate and damage"
+       "Fire rate and damage",
+       "3rd"
       ],
       [
        "Battery",
-       "Energy capacity and uptime"
+       "Energy capacity and uptime",
+       "1st — downtime kills"
       ],
       [
        "Weapon module",
-       "Active combat skill"
+       "Active combat skill",
+       "Build-dependent"
       ],
       [
        "Lighting module",
-       "Visibility in dark ruins"
+       "Visibility in dark ruins",
+       "Before night runs"
       ]
      ]
     },
@@ -693,6 +748,7 @@
      "type": "table",
      "tag": "MODULES",
      "heading": "Notable Modules (Community-Sourced)",
+     "body": "Modules define your combat identity.",
      "columns": [
       "Module",
       "Effect"
@@ -720,10 +776,11 @@
      "type": "steps",
      "tag": "BUILD",
      "heading": "Build Order for Combat",
+     "body": "A reliable early progression.",
      "items": [
       [
        "Upgrade battery first",
-       "Downtime kills; energy wins fights."
+       "Running out of energy mid-fight is the #1 new-player death."
       ],
       [
        "Then barrel",
@@ -742,8 +799,8 @@
     {
      "type": "note",
      "tag": "TIP",
-     "heading": "Fighting Scavenger Bugs",
-     "body": "Armored Scavenger Bugs ignore normal fire. Charge the beam (F) to break their shield, then unload. ⚠️ Details from community guides; verify in 1.0."
+     "heading": "Fighting Scavenger Bugs (And Avoiding Mistakes)",
+     "body": "Armoured Scavenger Bugs ignore normal fire. Charge the beam (F) to break their shield, then unload. Common mistakes: panic-dodging into walls, reloading in the open, and fighting at night without a lighting module. ⚠️ Details from community guides; verify in 1.0."
     }
    ],
    "sources": [
@@ -772,30 +829,37 @@
      "type": "table",
      "tag": "REGIONS",
      "heading": "All Regions at a Glance",
+     "body": "Five regions, each with its own resources, foes and story.",
      "columns": [
       "Region",
-      "What's there"
+      "What's there",
+      "Why visit"
      ],
      "rows": [
       [
        "The Outskirts",
-       "Starting wasteland, basics and early resources"
+       "Starting wasteland, basics, early resources",
+       "Home base and first farm"
       ],
       [
        "River Valley",
-       "Lush and thriving — why? (a core mystery)"
+       "Lush and thriving — why? (core mystery)",
+       "Rare materials, Kumasang, story"
       ],
       [
        "Wetlands",
-       "Treacherous, home to the boss that drops the Medium E-chip ⚠️"
+       "Treacherous; boss drops Medium E-chip ⚠️",
+       "Combat modules, rare loot"
       ],
       [
        "Caves",
-       "Mysterious, resource-rich underground"
+       "Mysterious, resource-rich underground",
+       "Minerals and hidden tech"
       ],
       [
        "Old City Ruins (1.0)",
-       "New area: fierce enemies, new NPCs, side quests, resources"
+       "Fierce enemies, new NPCs, side quests",
+       "Endgame story + resources"
       ]
      ]
     },
@@ -803,12 +867,13 @@
      "type": "list",
      "tag": "SAFETY",
      "heading": "Surviving the Wilderness",
-     "body": "The wilds are dangerous — come prepared.",
+     "body": "The wilds are dangerous — preparation is the difference between a haul and a respawn.",
      "items": [
       "Mark your path home or you can end up stranded at night.",
       "Stay alert for vicious creatures and hostiles in ruins.",
       "Upgrade your drone with weapon and lighting modules before long trips.",
-      "Bring food — cooking buffs keep you alive and fast."
+      "Bring food — cooking buffs keep you alive and fast.",
+      "Know your exit route before you commit to a deep dive."
      ]
     },
     {
@@ -823,11 +888,11 @@
       ],
       [
        "Expect fierce new enemies",
-       "New foes and creatures await."
+       "New foes and creatures await — upgrade before you go."
       ],
       [
        "Meet new NPCs and companions",
-       "Mysterious companions join the cast."
+       "Mysterious companions join the cast and open new quests."
       ],
       [
        "Gather new resources",
@@ -838,8 +903,8 @@
     {
      "type": "note",
      "tag": "MYSTERY",
-     "heading": "The Three Mysteries",
-     "body": "Why does the River Valley stay lush in a ruined world? What happened to the town's vanished leader? And why do so many pre-apocalypse tech pieces carry the mark of 'Eden'? The 1.0 story answers them."
+     "heading": "The Three Mysteries (And Common Mistakes)",
+     "body": "Why does the River Valley stay lush in a ruined world? What happened to the town's vanished leader? Why do so many pre-apocalypse tech pieces carry the mark of 'Eden'? The 1.0 story answers them. Common mistake: rushing past lore objects — several story beats are missable if you sprint the region."
     }
    ],
    "sources": [
@@ -868,12 +933,13 @@
      "type": "note",
      "tag": "OFFICIAL",
      "heading": "No Romance — Friendship Only",
-     "body": "The developers have confirmed Doloc Town has no romance/marriage system. Social gameplay is friendship-based: gifts, festivals, heart events and personal storylines. Plan your 'relationship' guides accordingly."
+     "body": "The developers have confirmed Doloc Town has no romance or marriage system. Social gameplay is friendship-based: gifts, festivals, heart events and personal storylines. Plan your relationship guides accordingly — there is no dating, only deepening friendship."
     },
     {
      "type": "table",
      "tag": "VILLAGERS",
      "heading": "Known Villagers (Community-Sourced)",
+     "body": "These are the villagers players report most often; the full 1.0 list is being verified.",
      "columns": [
       "Villager",
       "Role / Notes"
@@ -881,7 +947,7 @@
      "rows": [
       [
        "Kasia",
-       "Shop street, 2nd floor; max friendship unlocks the Blooming Friendship achievement"
+       "Shop street, 2nd floor; max friendship unlocks Blooming Friendship"
       ],
       [
        "Guildmaster Bellad",
@@ -900,23 +966,24 @@
     {
      "type": "steps",
      "tag": "HEARTS",
-     "heading": "How to Raise Friendship",
+     "heading": "How to Raise Friendship (A Routine)",
+     "body": "Friendship is a daily routine, not a grind.",
      "items": [
       [
        "Talk daily",
-       "Simple and free."
+       "Simple, free, and the base of every heart."
       ],
       [
        "Give gifts",
-       "Each villager has preferences — experiment."
+       "Each villager has preferences — experiment and note what lands."
       ],
       [
        "Complete quests",
-       "Quests raise hearts and pay well."
+       "Quests raise hearts and pay well — the best investment per minute."
       ],
       [
        "Attend festivals",
-       "Seasonal events give big friendship boosts."
+       "Seasonal events give big friendship boosts; the 1.0 Mushroom Fest is new."
       ]
      ]
     },
@@ -924,13 +991,19 @@
      "type": "list",
      "tag": "REWARDS",
      "heading": "What Friendship Unlocks",
-     "body": "Hearts are a progression system, not just flavor.",
+     "body": "Hearts are a progression system, not flavour.",
      "items": [
       "Unique recipes per friend (e.g., the Alchemy Station).",
-      "Personal storyline scenes.",
+      "Personal storyline scenes that deepen the town's mysteries.",
       "Festival participation rewards.",
       "⚠️ Exact heart thresholds being verified in 1.0."
      ]
+    },
+    {
+     "type": "note",
+     "tag": "MISTAKES",
+     "heading": "Common Mistakes",
+     "body": "Ignoring one villager 'because they are far away' locks you out of their recipes. Gifting the same item to everyone misses preferences and wastes gifts. Skipping festivals is the biggest loss — they are the highest-value friendship events in the calendar."
     },
     {
      "type": "faq",
@@ -978,13 +1051,13 @@
      "type": "list",
      "tag": "CROPS",
      "heading": "Crop Basics",
-     "body": "Self-sufficiency starts with the right plants.",
+     "body": "Farming is the foundation of your wasteland farm. Learn what to plant, when, and how to protect it.",
      "items": [
-      "Seasonal crops rotate with the calendar.",
-      "Fruit trees take 7 days and produce forever once mature.",
-      "Herbs grow in 2 days — fast filler crops.",
-      "Mushrooms are an autumn forage bonus.",
-      "A sickle harvests whole groups at once."
+      "Seasonal crops rotate with the calendar — plant to the season.",
+      "Fruit trees take 7 days and produce forever once mature — plant them early.",
+      "Herbs grow in 2 days — fast filler crops that smooth cash flow.",
+      "Mushrooms are an autumn forage bonus — free calories.",
+      "A sickle harvests whole groups at once — upgrade it early."
      ]
     },
     {
@@ -1010,7 +1083,7 @@
       [
        "Fruit trees",
        "7 days",
-       "Permanent producer"
+       "Permanent producer — plant first"
       ],
       [
        "Mushrooms",
@@ -1023,30 +1096,31 @@
      "type": "steps",
      "tag": "PROTECT",
      "heading": "Protecting Crops from Weather",
+     "body": "Weather protection is a strategy, not an afterthought.",
      "items": [
       [
-       "Watch the forecast",
-       "Acid rain, heat and storms all threaten fields."
+       "Watch the forecast daily",
+       "Acid rain, heat and storms all threaten fields — know what is coming."
       ],
       [
        "Build covers",
-       "Shield exposed plots before storms."
+       "Shield exposed plots before storms; group vulnerable crops together."
       ],
       [
        "Use the Rain gene",
-       "Auto-watering mutation keeps soil moist."
+       "Auto-watering mutation keeps soil moist through dry spells."
       ],
       [
        "Automate in 1.0",
-       "Drone stations handle seeding, nurturing and harvest."
+       "Drone stations handle seeding, nurturing and harvest — the endgame."
       ]
      ]
     },
     {
      "type": "note",
      "tag": "TIP",
-     "heading": "Drought Strategy",
-     "body": "In drought month (Month 4) crops wither and prices spike. Stockpile your harvest before the drought and sell high during it."
+     "heading": "Drought Strategy & Common Mistakes",
+     "body": "In drought month (Month 4) crops wither and prices spike. Stockpile before the drought and sell high during it. Common mistakes: planting one giant flat field (a single storm wipes it), ignoring fruit trees early (they are free money later), and never upgrading the sickle (group harvest is a huge time saver)."
     }
    ],
    "sources": [
@@ -1075,10 +1149,10 @@
      "type": "list",
      "tag": "BASICS",
      "heading": "Cooking Basics",
-     "body": "Food is the wasteland's best friend.",
+     "body": "Cooking turns your harvest into survival power.",
      "items": [
       "80+ recipes across the game.",
-      "Meals restore 50-100 energy.",
+      "Meals restore 50-100 energy — enough to keep working all day.",
       "Some meals add buffs: speed, defense and more.",
       "Recipes unlock through friendship and the tech tree."
      ]
@@ -1087,6 +1161,7 @@
      "type": "table",
      "tag": "BUFFS",
      "heading": "What Food Buffs Do",
+     "body": "Match the meal to the day's plan.",
      "columns": [
       "Effect",
       "Use case"
@@ -1094,15 +1169,15 @@
      "rows": [
       [
        "Energy restore",
-       "Keep working all day"
+       "Keep farming or exploring all day"
       ],
       [
        "Speed buff",
-       "Faster farming and exploration"
+       "Faster harvesting and travel"
       ],
       [
        "Defense buff",
-       "Safer ruin diving"
+       "Safer ruin diving and boss fights"
       ],
       [
        "⚠️ Full table",
@@ -1113,15 +1188,16 @@
     {
      "type": "steps",
      "tag": "KITCHEN",
-     "heading": "Stocking a Kitchen",
+     "heading": "Stocking a Kitchen (A Routine)",
+     "body": "A stocked kitchen is a survival plan.",
      "items": [
       [
        "Plant a variety of crops",
-       "Recipes need many ingredients."
+       "Recipes need many ingredients — diversity beats volume."
       ],
       [
        "Raise friendship",
-       "Friends unlock unique recipes (e.g., Alchemy Station)."
+       "Friends unlock unique recipes (e.g., the Alchemy Station)."
       ],
       [
        "Fish and ranch",
@@ -1129,9 +1205,15 @@
       ],
       [
        "Cook before big trips",
-       "Buffs are cheap insurance."
+       "Buffs are cheap insurance — never leave without food."
       ]
      ]
+    },
+    {
+     "type": "note",
+     "tag": "MISTAKES",
+     "heading": "Common Mistakes",
+     "body": "Selling every harvest instead of keeping ingredients for recipes. Ignoring friendship-gated recipes (some of the best buffs are behind hearts). And cooking only energy meals — the speed and defense buffs save more time than raw calories."
     }
    ],
    "sources": [
@@ -1160,14 +1242,15 @@
      "type": "steps",
      "tag": "SETUP",
      "heading": "Setting Up a Ranch",
+     "body": "Ranching is a steady-income system that compounds.",
      "items": [
       [
        "Build a barn",
-       "Shelter for your animals."
+       "Shelter for your animals — build it before buying stock."
       ],
       [
        "Build fences",
-       "Keep livestock where you want them."
+       "Keep livestock where you want them; unfenced animals wander."
       ],
       [
        "Acquire animals",
@@ -1175,7 +1258,7 @@
       ],
       [
        "Feed daily",
-       "Happy animals produce more."
+       "Happy animals produce more — feeding is non-negotiable."
       ]
      ]
     },
@@ -1183,10 +1266,10 @@
      "type": "list",
      "tag": "CARE",
      "heading": "Daily Care Checklist",
-     "body": "Tending is simple but consistent.",
+     "body": "Simple but consistent.",
      "items": [
       "Feed every day.",
-      "Clean enclosures regularly.",
+      "Clean enclosures regularly — dirty pens reduce output.",
       "Collect products (milk, eggs, more).",
       "Watch for surprises — the game rewards attentive ranchers."
      ]
@@ -1195,7 +1278,7 @@
      "type": "note",
      "tag": "TIP",
      "heading": "Why Ranch?",
-     "body": "Milk and eggs are invaluable provisions in the wastes — cooking ingredients, gift items and reliable income."
+     "body": "Milk and eggs are invaluable provisions: cooking ingredients, gift items and reliable income. Common mistake: scaling animals faster than feed production — a starving herd produces nothing."
     }
    ],
    "sources": [
@@ -1220,6 +1303,7 @@
      "type": "table",
      "tag": "CAST",
      "heading": "Known Characters (Community-Sourced)",
+     "body": "Every resident hides a story; this is the community-confirmed core cast.",
      "columns": [
       "Character",
       "About"
@@ -1251,7 +1335,7 @@
      "type": "note",
      "tag": "MYSTERY",
      "heading": "Secrets of the Town",
-     "body": "Why does the River Valley stay lush? What became of the fabled leader? Why do pre-apocalypse tech pieces carry the mark of 'Eden'? The answers unlock in the 1.0 story."
+     "body": "Why does the River Valley stay lush? What became of the fabled leader? Why do pre-apocalypse tech pieces carry 'Eden'? The answers unlock in the 1.0 story — and they are tied to specific villagers, so talk to everyone."
     },
     {
      "type": "list",
@@ -1259,10 +1343,10 @@
      "heading": "Social Tips",
      "body": "Make every heart count.",
      "items": [
-      "Talk to everyone daily.",
-      "Gift according to taste.",
-      "Do quests — they're the best heart investment.",
-      "Attend every festival."
+      "Talk to everyone daily — even the ones 'far away'.",
+      "Gift according to taste; note preferences as you learn them.",
+      "Do quests — they are the best heart investment.",
+      "Attend every festival for the biggest boosts."
      ]
     }
    ],
@@ -1297,7 +1381,7 @@
       "You are a young scavenger fleeing enemies in the wasteland.",
       "You stumble upon a small settlement called Doloc Town.",
       "You begin building the farm of your dreams from scratch.",
-      "Slowly, the town's mysteries surface."
+      "Slowly, the town's mysteries surface as you rebuild."
      ]
     },
     {
@@ -1339,7 +1423,7 @@
       ],
       [
        "Character storylines",
-       "More personal stories for the residents."
+       "More personal stories for the residents — talk to everyone."
       ],
       [
        "Answers to the mysteries",
@@ -1350,8 +1434,8 @@
     {
      "type": "note",
      "tag": "SPOILER",
-     "heading": "Spoiler Policy",
-     "body": "We keep this page spoiler-light. Deep-dive spoiler sections will be added after verification — and clearly labeled."
+     "heading": "Spoiler Policy & Common Mistakes",
+     "body": "This page stays spoiler-light. Deep-dive spoiler sections will be added after verification — clearly labelled. Common mistake: sprinting the main quest and missing the missable story beats tied to side characters; the mysteries are best experienced by exploring regions fully before advancing."
     }
    ],
    "sources": [
@@ -1380,6 +1464,7 @@
      "type": "table",
      "tag": "THREATS",
      "heading": "Weather Threats & Counters",
+     "body": "Learn each threat, then turn it into an advantage.",
      "columns": [
       "Weather",
       "Risk",
@@ -1417,19 +1502,19 @@
      "type": "steps",
      "tag": "POWER",
      "heading": "Turning Storms into Power",
-     "body": "Weather is an energy source.",
+     "body": "Weather is an energy source, not just a threat.",
      "items": [
       [
        "Install lightning capture",
-       "Thunderstorms charge your farm's power."
+       "Thunderstorms charge your farm's power — key for 1.0 automation."
       ],
       [
        "Let rain irrigate",
-       "Skip manual watering during downpours."
+       "Skip manual watering during downpours; save the effort."
       ],
       [
        "Time the drought",
-       "Hoarding before Month 4 pays off."
+       "Hoarding before Month 4 pays off with the price spike."
       ]
      ]
     },
@@ -1437,7 +1522,7 @@
      "type": "note",
      "tag": "TIP",
      "heading": "Farm Like the Weather Knows",
-     "body": "Check the forecast daily. A storm tomorrow means water today is wasted — but charging today is priceless."
+     "body": "Check the forecast daily. If a storm is coming tomorrow, watering today is wasted — but charging today is priceless. Common mistake: treating weather as random instead of a calendar you can plan around."
     }
    ],
    "sources": [
@@ -1466,6 +1551,7 @@
      "type": "table",
      "tag": "KNOWN",
      "heading": "Known Achievements (Community-Sourced)",
+     "body": "These are the achievements players report most; the full 1.0 list is being compiled.",
      "columns": [
       "Achievement",
       "How to get it"
@@ -1504,7 +1590,8 @@
     {
      "type": "list",
      "tag": "COUNTS",
-     "heading": "Achievement Counts",
+     "heading": "Achievement Counts & Structure",
+     "body": "The achievement list has a clear shape.",
      "items": [
       "43 base achievements (Early Access era).",
       "37 new achievements in the 1.0 release (August 6, 2026).",
@@ -1516,7 +1603,7 @@
      "type": "note",
      "tag": "1.0",
      "heading": "Note",
-     "body": "The full English 80-achievement checklist with unlock conditions is being compiled from 1.0 play and will replace the partial table above."
+     "body": "The full English 80-achievement checklist with unlock conditions is being compiled from 1.0 play and will replace the partial table above. If you are hunting 100%, start with the daily-routine achievements (drink water, cook, fish) — they come naturally and are easy to miss-track."
     }
    ],
    "sources": [
@@ -1557,7 +1644,7 @@
      "type": "note",
      "tag": "NOTE",
      "heading": "Workshop Status",
-     "body": "⚠️ Workshop availability and the current top mods are being verified. This page will be expanded with an actual mod list once confirmed."
+     "body": "⚠️ Workshop availability and the current top mods are being verified. This page will be expanded with an actual mod list once confirmed. Before modding, back up your save — mods can change game behaviour and some players report compatibility issues after major updates."
     }
    ],
    "sources": [
@@ -1582,6 +1669,7 @@
      "type": "timeline",
      "tag": "HISTORY",
      "heading": "Release Timeline",
+     "body": "From first Early Access to 1.0.",
      "items": [
       [
        "May 8, 2025",
@@ -1620,6 +1708,12 @@
       "37 new achievements (80 total).",
       "Season-themed weather changes and expanded localization."
      ]
+    },
+    {
+     "type": "note",
+     "tag": "TIP",
+     "heading": "Why Track Updates",
+     "body": "Knowing when the game changed helps you find current guides and avoid outdated advice — most English guides still describe Early Access, so a 1.0-aware site like this is the reliable source."
     }
    ],
    "sources": [
@@ -1648,6 +1742,7 @@
      "type": "faq",
      "tag": "FAQ",
      "heading": "Frequently Asked Questions",
+     "body": "Sourced answers to the questions players ask most.",
      "items": [
       [
        "Is Doloc Town multiplayer / co-op?",
@@ -1680,6 +1775,10 @@
       [
        "What's new in 1.0?",
        "Old City Ruins, complete story ending, farming automation, Mushroom Fest, new tools/drones/fish/accessories and 37 new achievements."
+      ],
+      [
+       "Does it run on a low-end PC?",
+       "Minimum is modest (i3 6100, GTX 460), and it runs on Steam Deck as Playable — a broad range of hardware is supported."
       ]
      ]
     }
@@ -1714,6 +1813,7 @@
      "type": "table",
      "tag": "MIN",
      "heading": "Minimum Requirements (Official)",
+     "body": "Straight from the Steam page.",
      "columns": [
       "Component",
       "Requirement"
@@ -1748,8 +1848,8 @@
     {
      "type": "note",
      "tag": "NOTE",
-     "heading": "Note",
-     "body": "Only minimum requirements are listed on the official Steam page; recommended specs have not been published. The game is lightweight enough to run on modest hardware — and is 'Playable' on Steam Deck."
+     "heading": "Notes & Common Questions",
+     "body": "Only minimum requirements are listed on the official Steam page; recommended specs have not been published. The game is lightweight enough to run on modest hardware — and is 'Playable' on Steam Deck. If you are near the minimum, close background apps and expect lower performance in the later regions."
     }
    ],
    "sources": [
@@ -1774,6 +1874,7 @@
      "type": "list",
      "tag": "STATUS",
      "heading": "Current Status",
+     "body": "Officially 'Playable', not yet 'Verified'.",
      "items": [
       "Officially listed as 'Playable' on Steam Deck.",
       "Not 'Verified' as of the 1.0 release.",
@@ -1785,7 +1886,7 @@
      "type": "note",
      "tag": "TIP",
      "heading": "Tip",
-     "body": "If you hit trouble on Deck, check for updates first — the devs have said pending optimizations are the usual cause."
+     "body": "If you hit trouble on Deck, check for updates first — the devs have said pending optimizations are the usual cause. Consider capping framerate and lowering shadows in heavy areas for a smoother handheld experience."
     }
    ],
    "sources": [

@@ -234,45 +234,58 @@ document.addEventListener('DOMContentLoaded', function(){
 </footer>`;
 }
 
-/* ---------- section renderer (Ruins & Roots components) ---------- */
+/* ---------- section renderer (Farmstead Manual components — 田园农具语言, 全局独立) ---------- */
 let SEC_IDX = 0;
 function secId(){ SEC_IDX += 1; return "sec-" + SEC_IDX; }
 function renderSection(s, lang){
   const id = secId();
   const st = siteI18n(lang);
+  const tag = esc(s.tag || st.seedTag);
   switch(s.type){
     case "steps": {
-      const items = (s.items||[]).map((it,i)=>`<li class="step-item"><span class="step-no">${String(i+1).padStart(2,"0")}</span><div><b>${esc(it[0])}</b>${it[1]?`<p>${esc(it[1])}</p>`:""}</div></li>`).join("");
-      return `<section class="card grow-card reveal" id="${id}"><h2><span class="sec-tag">${esc(s.tag||st.seedTag)}</span>${esc(s.heading)}</h2>${s.body?`<p class="sec-body">${esc(s.body)}</p>`:""}<ol class="steps">${items}</ol></section>`;
+      // 生长步骤：纵向生长线（种子→嫩芽→开花→结果），每步一块田垄
+      const items = (s.items||[]).map((it,i)=>{
+        const phase = ["seed","sprout","grow","fruit","harvest"][i%5];
+        return `<li class="furrow-item">
+          <span class="furrow-phase furrow-${phase}" aria-hidden="true"><span class="furrow-dot"></span></span>
+          <div class="furrow-body"><b>${esc(it[0])}</b>${it[1]?`<p>${esc(it[1])}</p>`:""}</div>
+        </li>`;
+      }).join("");
+      return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}<ol class="furrows">${items}</ol></section>`;
     }
     case "list": {
-      const items = (s.items||[]).map(it=>`<li>${esc(it)}</li>`).join("");
-      return `<section class="card grow-card reveal" id="${id}"><h2><span class="sec-tag">${esc(s.tag||st.growTag)}</span>${esc(s.heading)}</h2>${s.body?`<p class="sec-body">${esc(s.body)}</p>`:""}<ul class="checks">${items}</ul></section>`;
+      // 种子清单：每项一块「秧苗牌」
+      const items = (s.items||[]).map(it=>`<li class="seed-item"><span class="seed-mark" aria-hidden="true">${SVG.sprout}</span><p>${esc(it)}</p></li>`).join("");
+      return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}<ul class="seed-list">${items}</ul></section>`;
     }
     case "table": {
+      // 季节表：表头季节色，行 hover 生长感
       const headRow = (s.columns||[]).map(c=>`<th>${esc(c)}</th>`).join("");
       const rows = (s.rows||[]).map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("");
-      return `<section class="card grow-card reveal" id="${id}"><h2><span class="sec-tag">${esc(s.tag||st.seasonTag)}</span>${esc(s.heading)}</h2>${s.body?`<p class="sec-body">${esc(s.body)}</p>`:""}<div class="tbl-wrap"><table><thead><tr>${headRow}</tr></thead><tbody>${rows}</tbody></table></div></section>`;
+      return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}<div class="harvest-table"><table><thead><tr>${headRow}</tr></thead><tbody>${rows}</tbody></table></div></section>`;
     }
     case "faq": {
-      const items = (s.items||[]).map(([q,a])=>`<details class="faq"><summary>${esc(q)}<span class="pm">+</span></summary><div class="faq-a">${esc(a)}</div></details>`).join("");
-      return `<section class="card grow-card reveal" id="${id}"><h2><span class="sec-tag">${esc(s.tag||"QA")}</span>${esc(s.heading)}</h2>${items}</section>`;
+      // 收获问答：手风琴带叶片标记
+      const items = (s.items||[]).map(([q,a])=>`<details class="harvest-faq"><summary><span class="harvest-leaf" aria-hidden="true">${SVG.sprout}</span><span>${esc(q)}</span><span class="pm">+</span></summary><div class="harvest-a">${esc(a)}</div></details>`).join("");
+      return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${items}</section>`;
     }
     case "evidence": {
-      const items = (s.items||[]).map(([label,txt])=>`<div class="evidence"><span class="ev-tag">${esc(label)}</span><p>${esc(txt)}</p></div>`).join("");
-      return `<section class="card grow-card reveal" id="${id}"><h2><span class="sec-tag">${esc(s.tag||st.plotTag)}</span>${esc(s.heading)}</h2>${s.body?`<p class="sec-body">${esc(s.body)}</p>`:""}<div class="evidence-stack">${items}</div></section>`;
+      // 田野笔记：手写笔记卡
+      const items = (s.items||[]).map(([label,txt])=>`<div class="field-note"><span class="field-label">${esc(label)}</span><p>${esc(txt)}</p></div>`).join("");
+      return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}<div class="field-notes">${items}</div></section>`;
     }
     case "timeline": {
-      const items = (s.items||[]).map(([t,txt])=>`<li class="tl-item"><span class="tl-time">${esc(t)}</span><p>${esc(txt)}</p></li>`).join("");
-      return `<section class="card grow-card reveal" id="${id}"><h2><span class="sec-tag">${esc(s.tag||st.seasonTag)}</span>${esc(s.heading)}</h2>${s.body?`<p class="sec-body">${esc(s.body)}</p>`:""}<ul class="timeline">${items}</ul></section>`;
+      // 季节时间线：横向四季
+      const items = (s.items||[]).map(([t,txt])=>`<li class="season-tl"><span class="season-tl-time">${esc(t)}</span><p>${esc(txt)}</p></li>`).join("");
+      return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}<ul class="season-timeline">${items}</ul></section>`;
     }
     case "note": {
-      return `<section class="card grow-card reveal plot-note" id="${id}"><h2><span class="sec-tag">${esc(s.tag||st.plotTag)}</span>${esc(s.heading)}</h2>${s.body?`<p class="sec-body">${esc(s.body)}</p>`:""}</section>`;
+      // 农舍便签：黄纸便签+图钉
+      return `<section class="furrow-block reveal barn-note" id="${id}"><div class="barn-pin" aria-hidden="true"></div><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}</section>`;
     }
     default: return "";
   }
 }
-
 /* ---------- home ---------- */
 function renderHome(lang){
   const s = siteI18n(lang);

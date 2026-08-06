@@ -351,3 +351,65 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
 @media (max-width:560px){
   .dd-manual{grid-template-columns:1fr}
 }
+
+/* ============================================================
+   Doloc — Farmstead content components (v2 content layer)
+   内容区块组件语言：田垄/秧苗/收获表/田野笔记/农舍便签
+   ============================================================ */
+.furrow-block{position:relative;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel-2),var(--panel));padding:22px 24px;margin-bottom:22px;overflow:hidden}
+.furrow-block::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(90deg,rgba(127,176,105,.04) 0 2px,transparent 2px 28px)}
+.furrow-head{display:flex;align-items:baseline;gap:12px;margin-bottom:8px}
+.furrow-tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sprout);background:rgba(127,176,105,.1);border:1px solid rgba(127,176,105,.28);border-radius:6px;padding:3px 8px;white-space:nowrap}
+.furrow-head h2{font-family:var(--display);font-size:1.22rem;color:var(--text);scroll-margin-top:90px}
+.furrow-lead{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+/* 生长步骤（纵向生长线） */
+.furrows{list-style:none;display:flex;flex-direction:column;gap:0;padding-left:6px}
+.furrow-item{position:relative;display:flex;gap:16px;padding:0 0 20px 6px}
+.furrow-item:not(:last-child)::before{content:"";position:absolute;left:15px;top:26px;bottom:4px;width:2px;background:linear-gradient(180deg,rgba(127,176,105,.5),rgba(217,119,6,.25))}
+.furrow-phase{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 auto;position:relative;background:var(--panel-3);border:2px solid var(--line-strong)}
+.furrow-dot{width:10px;height:10px;border-radius:50%;background:var(--muted-2)}
+.furrow-seed .furrow-dot{background:#8a7a5a}
+.furrow-sprout .furrow-dot{background:var(--sprout);box-shadow:0 0 0 4px rgba(127,176,105,.15)}
+.furrow-grow .furrow-dot{background:#A3C93E}
+.furrow-fruit .furrow-dot{background:var(--amber-soft);box-shadow:0 0 0 4px rgba(240,180,87,.15)}
+.furrow-harvest .furrow-dot{background:var(--amber);box-shadow:0 0 0 4px rgba(217,119,6,.15)}
+.furrow-body b{color:var(--text);font-size:.95rem}
+.furrow-body p{color:var(--muted);font-size:.88rem;margin-top:2px}
+/* 种子清单 */
+.seed-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.seed-item{display:flex;gap:11px;align-items:flex-start;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:9px;padding:10px 13px;transition:.15s}
+.seed-item:hover{border-color:rgba(127,176,105,.4);background:rgba(127,176,105,.06)}
+.seed-mark{width:18px;height:18px;color:var(--sprout);flex:0 0 auto;margin-top:2px}
+.seed-mark svg{width:18px;height:18px}
+.seed-item p{color:var(--muted);font-size:.9rem;line-height:1.5}
+/* 收获表 */
+.harvest-table{border-radius:11px;overflow:hidden;border:1px solid var(--line);margin-top:6px}
+.harvest-table table{width:100%;border-collapse:collapse;font-size:.86rem}
+.harvest-table th{text-align:left;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#E8DFC4;background:linear-gradient(90deg,var(--moss-dark),var(--moss));padding:11px 13px;border:0;white-space:nowrap}
+.harvest-table td{padding:11px 13px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top}
+.harvest-table tbody tr:last-child td{border-bottom:0}
+.harvest-table tbody tr:hover td{background:rgba(127,176,105,.06)}
+/* 收获问答 */
+.harvest-faq{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:11px;margin-top:10px;overflow:hidden}
+.harvest-faq summary{list-style:none;display:flex;align-items:center;gap:11px;cursor:pointer;padding:14px 16px;font-weight:600;color:var(--text);font-size:.92rem;transition:.15s}
+.harvest-faq summary::-webkit-details-marker{display:none}
+.harvest-faq summary:hover{background:rgba(127,176,105,.07)}
+.harvest-leaf{width:17px;height:17px;color:var(--sprout);flex:0 0 auto}
+.harvest-leaf svg{width:17px;height:17px}
+.harvest-faq .pm{margin-left:auto;font-family:var(--mono);color:var(--amber-soft);font-size:1.1rem;flex:0 0 auto;transition:transform .2s}
+.harvest-faq[open] .pm{transform:rotate(45deg)}
+.harvest-a{padding:0 16px 15px 44px;color:var(--muted);font-size:.9rem;line-height:1.6}
+/* 田野笔记 */
+.field-notes{display:flex;flex-direction:column;gap:11px;margin-top:6px}
+.field-note{display:flex;gap:12px;align-items:flex-start;background:rgba(244,238,220,.04);border-left:3px solid var(--amber);border-radius:9px;padding:12px 14px}
+.field-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-soft);background:rgba(217,119,6,.1);border-radius:6px;padding:3px 8px;white-space:nowrap;flex:0 0 auto}
+.field-note p{color:var(--muted);font-size:.88rem}
+/* 季节时间线 */
+.season-timeline{list-style:none;display:flex;flex-direction:column;gap:0;margin-top:8px;border-left:2px solid var(--line-strong);padding-left:18px}
+.season-tl{position:relative;padding:8px 0 16px}
+.season-tl::before{content:"";position:absolute;left:-24px;top:15px;width:9px;height:9px;border-radius:50%;background:var(--sprout);box-shadow:0 0 0 3px rgba(127,176,105,.18)}
+.season-tl-time{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:var(--amber-soft);text-transform:uppercase}
+.season-tl p{color:var(--muted);font-size:.9rem;margin-top:2px}
+/* 农舍便签 */
+.barn-note{background:linear-gradient(160deg,rgba(244,238,220,.06),rgba(22,33,26,.5));border-left:3px solid var(--amber)}
+.barn-pin{position:absolute;top:12px;right:16px;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f5c34c,#b8860b);box-shadow:0 2px 5px rgba(0,0,0,.4)}
