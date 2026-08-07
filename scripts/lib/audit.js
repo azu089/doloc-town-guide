@@ -118,7 +118,9 @@ function auditSite(root) {
     //   台湾读者一眼看出是机器转的。台湾标准字形要用 s2tw（简→繁）或 t2tw（繁→台湾正体）。
     //   2026-08-08 实测：三站 zh-TW 共 200+ 处，Meccha 更是每页都有。
     if (lang && lang.startsWith("zh-TW")) {
-      const bad = textOf(html).match(/[爲覈裏祕啓着喫羣纔僞峯麪衆牀汙]/g);
+      // ⚠️ 字表要和转换器对齐：逐字跑过 t2tw 才敢列。汙 是台湾正体（t2tw 不动它），
+      //    会被转换的是 污 → 汙，别把两者写反。
+      const bad = textOf(html).match(/[爲覈裏祕啓着喫羣纔僞峯麪衆牀污]/g);
       if (bad) F("zhtw-nonstandard-glyph", `${rel} (${[...new Set(bad)].join("")} 共 ${bad.length} 处，应改用 OpenCC s2tw/t2tw)`);
     }
 
