@@ -1,0 +1,32 @@
+name: build-audit
+# 在 Cloudflare Pages 之前跑一遍构建 + 审计。
+# CF Pages 只 clone 本仓库，所以 checkout 出来的就是构建机看到的全部文件——
+# 凡是「本地有、仓库没有」的依赖（指向仓库外的 require、未提交的数据文件）都会在这里暴露。
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch: {}
+jobs:
+  build-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build
+        run: node scripts/generate.js
+
+      - name: Audit
+        run: node scripts/lib/audit.js .
+
+      - name: Assert no drift
+        # 构建应当是幂等的：同一份输入重跑两次，产物必须一致。
+        # 不一致说明生成器里混进了时间戳/随机数这类非确定性因素。
+        run: |
+          find public -name '*.html' | sort | xargs shasum > /tmp/a.sha
+          node scripts/generate.js >/dev/null
+          find public -name '*.html' | sort | xargs shasum > /tmp/b.sha
+          diff /tmp/a.sha /tmp/b.sha && echo "✓ 构建确定性 OK"
