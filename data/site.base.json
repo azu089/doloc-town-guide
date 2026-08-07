@@ -19,7 +19,8 @@
    "es"
   ],
   "defaultLanguage": "en",
-  "i18n": {}
+  "i18n": {},
+  "awinVerification": "awin"
  },
  "game": {
   "name": "Doloc Town",
