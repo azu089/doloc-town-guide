@@ -68,6 +68,50 @@ const siteI18n = lang => {
   };
 };
 
+/* ---------- 鱼类筛选器文案（6 语） ----------
+ * 术语全部沿用 data 层已有译法（水核心/竹竿/钓点…），不另造词。
+ * 地点分组（池塘/码头海域/浅滩/洞穴）是对已有钓点字段的归类，不是新事实。
+ */
+const FISH_UI = {
+  "en":    { title:"What can I catch right now?", lead:"Filter the 33 confirmed fish by season, spot and unlock. Every row below stays on the page — this only narrows what you see.",
+             search:"Search fish name", period:"Season", loc:"Spot", req:"Unlock needed", reset:"Reset",
+             all:"All", allyear:"All year", rainy:"Rainy (Jan–Feb)", dry:"Dry (Mar–Apr)", single:"Single month", breed:"Breeding only",
+             pond:"Ponds", sea:"Docks & sea", shallow:"Shallows", cave:"Caves",
+             none:"Nothing needed", watercore:"Water Core", bamboo:"Bamboo rod", rockcore:"Rock Core Sample",
+             count:"Showing {n} of {t} fish", noMatch:"No fish match these filters." },
+  "zh-CN": { title:"现在能钓到什么？", lead:"按季节、钓点和解锁条件筛选 33 种已确认鱼类。下方所有行都仍在页面上，筛选只是收窄显示范围。",
+             search:"搜索鱼名", period:"季节", loc:"钓点", req:"需要解锁", reset:"重置",
+             all:"全部", allyear:"全年", rainy:"雨季（1–2 月）", dry:"旱季（3–4 月）", single:"单月限定", breed:"仅可繁殖",
+             pond:"池塘", sea:"码头与海域", shallow:"浅滩", cave:"洞穴",
+             none:"无需解锁", watercore:"水核心", bamboo:"竹竿", rockcore:"岩石核心样本",
+             count:"显示 {n} / {t} 种", noMatch:"没有符合条件的鱼。" },
+  "zh-TW": { title:"現在能釣到什麼？", lead:"按季節、釣點和解鎖條件篩選 33 種已確認魚類。下方所有行都仍在頁面上，篩選只是收窄顯示範圍。",
+             search:"搜尋魚名", period:"季節", loc:"釣點", req:"需要解鎖", reset:"重設",
+             all:"全部", allyear:"全年", rainy:"雨季（1–2 月）", dry:"旱季（3–4 月）", single:"單月限定", breed:"僅可繁殖",
+             pond:"池塘", sea:"碼頭與海域", shallow:"淺灘", cave:"洞穴",
+             none:"無需解鎖", watercore:"水核心", bamboo:"竹竿", rockcore:"岩石核心樣本",
+             count:"顯示 {n} / {t} 種", noMatch:"沒有符合條件的魚。" },
+  "ja":    { title:"今どの魚が釣れる？", lead:"確認済み 33 種を季節・釣り場・解放条件で絞り込み。下の行はすべてページに残ります——表示範囲を狭めるだけです。",
+             search:"魚名で検索", period:"季節", loc:"釣り場", req:"必要な解放", reset:"リセット",
+             all:"すべて", allyear:"周年", rainy:"雨季（1〜2月）", dry:"乾季（3〜4月）", single:"単月限定", breed:"繁殖限定",
+             pond:"池", sea:"桟橋・海", shallow:"浅瀬", cave:"洞窟",
+             none:"解放不要", watercore:"ウォーターコア", bamboo:"竹の竿", rockcore:"ロックコアサンプル",
+             count:"{t} 種中 {n} 種を表示", noMatch:"条件に合う魚がありません。" },
+  "ko":    { title:"지금 어떤 물고기를 잡을 수 있나요?", lead:"확인된 33종을 계절·낚시터·해금 조건으로 필터링합니다. 아래 모든 행은 페이지에 그대로 남아 있으며, 표시 범위만 좁힙니다.",
+             search:"물고기 이름 검색", period:"계절", loc:"낚시터", req:"필요한 해금", reset:"초기화",
+             all:"전체", allyear:"연중", rainy:"우기 (1–2월)", dry:"건기 (3–4월)", single:"단일 월 한정", breed:"번식 전용",
+             pond:"연못", sea:"부두·바다", shallow:"얕은 물", cave:"동굴",
+             none:"해금 불필요", watercore:"물 코어", bamboo:"대나무 낚싯대", rockcore:"암석 코어 샘플",
+             count:"{t}종 중 {n}종 표시", noMatch:"조건에 맞는 물고기가 없습니다." },
+  "es":    { title:"¿Qué puedo pescar ahora?", lead:"Filtra los 33 peces confirmados por estación, lugar y desbloqueo. Todas las filas siguen en la página: esto solo acota lo que ves.",
+             search:"Buscar nombre de pez", period:"Estación", loc:"Lugar", req:"Desbloqueo necesario", reset:"Restablecer",
+             all:"Todos", allyear:"Todo el año", rainy:"Lluviosa (ene–feb)", dry:"Seca (mar–abr)", single:"Un solo mes", breed:"Solo cría",
+             pond:"Estanques", sea:"Muelles y mar", shallow:"Aguas someras", cave:"Cuevas",
+             none:"Sin requisitos", watercore:"Núcleo de agua", bamboo:"Caña de bambú", rockcore:"Muestra de núcleo rocoso",
+             count:"Mostrando {n} de {t} peces", noMatch:"Ningún pez coincide con estos filtros." },
+};
+const fishUi = lang => FISH_UI[lang] || FISH_UI.en;
+
 /* ---------- SVG icons (Ruins & Roots line icons, stroke currentColor) ---------- */
 const SVG = {
   logo: '<svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="3" width="34" height="34" rx="9" fill="#1C2A1E"/><path d="M20 32C14 27 10 22 10 16.5A6.5 6.5 0 0 1 16.5 10c2.2 0 4 1 5.5 2.8C23.5 11 25.3 10 27.5 10a6.5 6.5 0 0 1 6.5 6.5C34 22 30 27 20 32z" fill="none" stroke="#7FB069" stroke-width="2.4" stroke-linejoin="round"/><path d="M20 32v-8" stroke="#D97706" stroke-width="2.2" stroke-linecap="round"/><circle cx="20" cy="19" r="2.4" fill="#D97706"/></svg>',
@@ -234,6 +278,61 @@ document.addEventListener('DOMContentLoaded', function(){
     }, {rootMargin:'-15% 0px -70% 0px', threshold:0});
     tocTargets.forEach(function(s){ if (s) tocObs.observe(s); });
   }
+
+  /* ---- 鱼类筛选器（渐进增强：JS 没跑 = 页面完全等同于改动前）---- */
+  var ff = document.querySelector('.ff');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.harvest-table.filterable tbody tr'));
+  if (ff && rows.length) {
+    ff.removeAttribute('hidden');
+    var state = { period:'all', loc:'all', req:'all', q:'' };
+    var countEl = ff.querySelector('.ff-count');
+    var tpl = countEl ? countEl.getAttribute('data-tpl') : '';
+
+    function matches(tr){
+      if (state.period !== 'all' && tr.getAttribute('data-period') !== state.period) return false;
+      // loc/req 是空格分隔的多值
+      if (state.loc !== 'all' && (' '+(tr.getAttribute('data-loc')||'')+' ').indexOf(' '+state.loc+' ') < 0) return false;
+      if (state.req !== 'all' && (' '+(tr.getAttribute('data-req')||'')+' ').indexOf(' '+state.req+' ') < 0) return false;
+      if (state.q && (tr.cells[0].textContent||'').toLowerCase().indexOf(state.q) < 0) return false;
+      return true;
+    }
+    function apply(){
+      var shown = 0;
+      rows.forEach(function(tr){
+        var ok = matches(tr);
+        tr.hidden = !ok;
+        if (ok) shown++;
+      });
+      // 整张表都被筛没了就收起该表、显示空态
+      document.querySelectorAll('.harvest-table.filterable').forEach(function(box){
+        var any = Array.prototype.slice.call(box.querySelectorAll('tbody tr')).some(function(tr){ return !tr.hidden; });
+        var tbl = box.querySelector('table'), empty = box.querySelector('.table-empty');
+        if (tbl) tbl.hidden = !any;
+        if (empty) empty.hidden = any;
+      });
+      if (countEl) countEl.textContent = tpl.replace('{n}', shown).replace('{t}', rows.length);
+    }
+    ff.addEventListener('click', function(e){
+      var chip = e.target.closest('.ff-chip');
+      if (chip) {
+        var g = chip.closest('.ff-group');
+        g.querySelectorAll('.ff-chip').forEach(function(c){ c.classList.toggle('on', c === chip); });
+        state[g.getAttribute('data-key')] = chip.getAttribute('data-v');
+        apply(); return;
+      }
+      if (e.target.closest('.ff-reset')) {
+        state = { period:'all', loc:'all', req:'all', q:'' };
+        ff.querySelectorAll('.ff-group').forEach(function(g){
+          g.querySelectorAll('.ff-chip').forEach(function(c,i){ c.classList.toggle('on', i === 0); });
+        });
+        var inp = ff.querySelector('.ff-input'); if (inp) inp.value = '';
+        apply();
+      }
+    });
+    var input = ff.querySelector('.ff-input');
+    if (input) input.addEventListener('input', function(){ state.q = this.value.trim().toLowerCase(); apply(); });
+    apply();
+  }
 });
 </script>
 </footer>`;
@@ -263,11 +362,42 @@ function renderSection(s, lang){
       const items = (s.items||[]).map(it=>`<li class="seed-item"><span class="seed-mark" aria-hidden="true">${SVG.sprout}</span><p>${esc(it)}</p></li>`).join("");
       return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}<ul class="seed-list">${items}</ul></section>`;
     }
+    case "fishfilter": {
+      // 鱼类筛选器（Doloc 专属组件）——「农事记录板」形态：木牌标签 + 田垄分隔
+      // ⚠️ 渐进增强：默认 hidden，只有 JS 跑起来才显示。没有 JS 时页面完全等同于改动前。
+      const u = fishUi(lang);
+      const group = (key, opts) => `<div class="ff-group" data-key="${key}">
+        <span class="ff-label">${esc(u[key])}</span>
+        <div class="ff-chips">${opts.map((o,i)=>
+          `<button type="button" class="ff-chip${i===0?" on":""}" data-v="${o}">${esc(u[o])}</button>`
+        ).join("")}</div>
+      </div>`;
+      return `<section class="ff reveal" id="${id}" hidden>
+        <div class="ff-head"><span class="furrow-tag">${esc(st.seasonTag)}</span><h2>${esc(u.title)}</h2></div>
+        <p class="ff-lead">${esc(u.lead)}</p>
+        <div class="ff-search"><span class="ff-search-ic" aria-hidden="true">${SVG.fishing || ""}</span>
+          <input type="search" class="ff-input" placeholder="${esc(u.search)}" aria-label="${esc(u.search)}" />
+        </div>
+        ${group("period", ["all","allyear","rainy","dry","single","breed"])}
+        ${group("loc",    ["all","pond","sea","shallow","cave"])}
+        ${group("req",    ["all","none","watercore","bamboo","rockcore"])}
+        <div class="ff-foot"><span class="ff-count" data-tpl="${esc(u.count)}"></span>
+          <button type="button" class="ff-reset">${esc(u.reset)}</button></div>
+      </section>`;
+    }
     case "table": {
       // 季节表：表头季节色，行 hover 生长感
+      // rowAttrs（目前只有 fishing 有）：把语义标签挂到 <tr> 上供筛选器用。
+      // ⚠️ 表格本身完全不变——SEO 与 AI 抓取读到的仍是完整 33 行，筛选纯属渐进增强。
       const headRow = (s.columns||[]).map(c=>`<th>${esc(c)}</th>`).join("");
-      const rows = (s.rows||[]).map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("");
-      return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}<div class="harvest-table"><table><thead><tr>${headRow}</tr></thead><tbody>${rows}</tbody></table></div></section>`;
+      const attrsOf = i => {
+        const a = (s.rowAttrs||[])[i];
+        if (!a) return "";
+        return " " + Object.entries(a).map(([k,v])=>`data-${k}="${esc(v)}"`).join(" ");
+      };
+      const rows = (s.rows||[]).map((r,i)=>`<tr${attrsOf(i)}>${r.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("");
+      const cls = s.rowAttrs ? "harvest-table filterable" : "harvest-table";
+      return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}<div class="${cls}"><table><thead><tr>${headRow}</tr></thead><tbody>${rows}</tbody></table><p class="table-empty" hidden>${esc(fishUi(lang).noMatch)}</p></div></section>`;
     }
     case "faq": {
       // 收获问答：手风琴带叶片标记

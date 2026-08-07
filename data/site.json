@@ -2771,6 +2771,9 @@
    "intro": "Fishing is a full second career in Doloc Town. This catalog lists every confirmed fish — where it spawns, which season and weather it needs, and how to breed the rare tank-only species.",
    "sections": [
     {
+     "type": "fishfilter"
+    },
+    {
      "type": "table",
      "heading": "All-Year Fish",
      "body": "These fish can be caught at any time of year. Locations are player-verified and compiled by 18183.",
@@ -2847,6 +2850,96 @@
        "Any",
        "Wetland shallows, Farm, Valley Junk Mountain"
       ]
+     ],
+     "rowAttrs": [
+      {
+       "period": "allyear",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "pond"
+      },
+      {
+       "period": "allyear",
+       "how": "catch",
+       "time": "night",
+       "weather": "any",
+       "req": "none",
+       "loc": "pond cave"
+      },
+      {
+       "period": "allyear",
+       "how": "catch",
+       "time": "any",
+       "weather": "rain",
+       "req": "none",
+       "loc": "pond"
+      },
+      {
+       "period": "allyear",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "sea"
+      },
+      {
+       "period": "allyear",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "sea"
+      },
+      {
+       "period": "allyear",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "pond sea shallow"
+      },
+      {
+       "period": "allyear",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "pond"
+      },
+      {
+       "period": "allyear",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "watercore",
+       "loc": "pond"
+      },
+      {
+       "period": "allyear",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "shallow"
+      },
+      {
+       "period": "allyear",
+       "how": "catch",
+       "time": "day",
+       "weather": "any",
+       "req": "none",
+       "loc": "pond cave"
+      },
+      {
+       "period": "allyear",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "shallow"
+      }
      ]
     },
     {
@@ -2884,6 +2977,40 @@
        "Rock Core Sample",
        "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
       ]
+     ],
+     "rowAttrs": [
+      {
+       "period": "rainy",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "watercore",
+       "loc": "pond"
+      },
+      {
+       "period": "rainy",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "shallow"
+      },
+      {
+       "period": "rainy",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "bamboo",
+       "loc": "sea"
+      },
+      {
+       "period": "rainy",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "bamboo rockcore",
+       "loc": "sea"
+      }
      ]
     },
     {
@@ -2927,6 +3054,48 @@
        "Scorching sun (April)",
        "Wetland Hovercraft Dock, Town Dock Center, Under Pier"
       ]
+     ],
+     "rowAttrs": [
+      {
+       "period": "dry",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "watercore",
+       "loc": "pond"
+      },
+      {
+       "period": "dry",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "shallow"
+      },
+      {
+       "period": "dry",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "sea"
+      },
+      {
+       "period": "dry",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "rockcore",
+       "loc": "sea"
+      },
+      {
+       "period": "dry",
+       "how": "catch",
+       "time": "any",
+       "weather": "sun",
+       "req": "none",
+       "loc": "sea"
+      }
      ]
     },
     {
@@ -3004,6 +3173,112 @@
        "Breed ≥4 Bass + ≥4 Glowing Eel",
        "50% chance"
       ]
+     ],
+     "rowAttrs": [
+      {
+       "period": "single",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "watercore",
+       "loc": "pond"
+      },
+      {
+       "period": "single",
+       "how": "catch",
+       "time": "any",
+       "weather": "any",
+       "req": "bamboo",
+       "loc": "pond sea"
+      },
+      {
+       "period": "breed",
+       "how": "breed",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "none"
+      },
+      {
+       "period": "breed",
+       "how": "breed",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "none"
+      },
+      {
+       "period": "breed",
+       "how": "breed",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "none"
+      },
+      {
+       "period": "breed",
+       "how": "breed",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "none"
+      },
+      {
+       "period": "breed",
+       "how": "breed",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "none"
+      },
+      {
+       "period": "breed",
+       "how": "breed",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "none"
+      },
+      {
+       "period": "breed",
+       "how": "breed",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "none"
+      },
+      {
+       "period": "breed",
+       "how": "breed",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "none"
+      },
+      {
+       "period": "breed",
+       "how": "breed",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "none"
+      },
+      {
+       "period": "breed",
+       "how": "breed",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "none"
+      },
+      {
+       "period": "breed",
+       "how": "breed",
+       "time": "any",
+       "weather": "any",
+       "req": "none",
+       "loc": "none"
+      }
      ]
     },
     {
@@ -3046,6 +3321,9 @@
      "metaDescription": "完整的多洛可小镇鱼类图鉴：每种鱼在哪里钓、需要什么鱼竿与天气，以及只能通过养殖获得的稀有鱼。",
      "intro": "钓鱼是多洛可小镇的第二种全职事业。本图鉴列出每一条已确认的鱼——在哪里刷新、需要什么季节与天气，以及如何繁殖只能养在鱼缸里的稀有鱼。",
      "sections": [
+      {
+       "type": "fishfilter"
+      },
       {
        "type": "table",
        "heading": "全年鱼类",
@@ -3123,6 +3401,96 @@
          "任意",
          "湿地浅滩、农场、河谷垃圾山"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "night",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond cave"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "rain",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond sea shallow"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "day",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond cave"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        }
        ]
       },
       {
@@ -3160,6 +3528,40 @@
          "岩石核心样本",
          "湿地气垫船码头、城镇码头中心、桥墩下"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo",
+         "loc": "sea"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo rockcore",
+         "loc": "sea"
+        }
        ]
       },
       {
@@ -3203,6 +3605,48 @@
          "酷暑（4月）",
          "湿地气垫船码头、城镇码头中心、桥墩下"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "rockcore",
+         "loc": "sea"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "sun",
+         "req": "none",
+         "loc": "sea"
+        }
        ]
       },
       {
@@ -3280,6 +3724,112 @@
          "繁殖 ≥4 条鲈鱼 + ≥4 条荧光鳗鱼",
          "50% 概率"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "single",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "single",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo",
+         "loc": "pond sea"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        }
        ]
       },
       {
@@ -3308,6 +3858,9 @@
      "metaDescription": "完整的多洛可小鎮魚類圖鑑：每種魚在哪裏釣、需要什麼魚竿與天氣，以及只能通過養殖獲得的稀有魚。",
      "intro": "釣魚是多洛可小鎮的第二種全職事業。本圖鑑列出每一條已確認的魚——在哪裏刷新、需要什麼季節與天氣，以及如何繁殖只能養在魚缸裏的稀有魚。",
      "sections": [
+      {
+       "type": "fishfilter"
+      },
       {
        "type": "table",
        "heading": "全年魚類",
@@ -3385,6 +3938,96 @@
          "任意",
          "溼地淺灘、農場、河谷垃圾山"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "night",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond cave"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "rain",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond sea shallow"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "day",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond cave"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        }
        ]
       },
       {
@@ -3422,6 +4065,40 @@
          "岩石核心樣本",
          "溼地氣墊船碼頭、城鎮碼頭中心、橋墩下"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo",
+         "loc": "sea"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo rockcore",
+         "loc": "sea"
+        }
        ]
       },
       {
@@ -3465,6 +4142,48 @@
          "酷暑（4月）",
          "溼地氣墊船碼頭、城鎮碼頭中心、橋墩下"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "rockcore",
+         "loc": "sea"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "sun",
+         "req": "none",
+         "loc": "sea"
+        }
        ]
       },
       {
@@ -3542,6 +4261,112 @@
          "繁殖 ≥4 條鱸魚 + ≥4 條熒光鰻魚",
          "50% 概率"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "single",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "single",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo",
+         "loc": "pond sea"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        }
        ]
       },
       {
@@ -3570,6 +4395,9 @@
      "metaDescription": "ドロックタウンの完全魚図鑑：魚種ごとの釣り場・必要な竿と天候、繁殖限定のレア魚まで。",
      "intro": "釣りはドロックタウンで第二の本職。本図鑑は確認済みの全魚種を網羅——出現場所、必要な季節と天候、そして水槽でしか作れないレア魚の繁殖方法。",
      "sections": [
+      {
+       "type": "fishfilter"
+      },
       {
        "type": "table",
        "heading": "周年魚",
@@ -3647,6 +4475,96 @@
          "任意",
          "湿地の浅瀬、農場、谷のガラクタ山"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "night",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond cave"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "rain",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond sea shallow"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "day",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond cave"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        }
        ]
       },
       {
@@ -3684,6 +4602,40 @@
          "ロックコアサンプル",
          "湿地のホバークラフト桟橋、町のドック中央、桟橋の下"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo",
+         "loc": "sea"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo rockcore",
+         "loc": "sea"
+        }
        ]
       },
       {
@@ -3727,6 +4679,48 @@
          "灼熱の太陽（4月）",
          "湿地のホバークラフト桟橋、町のドック中央、桟橋の下"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "rockcore",
+         "loc": "sea"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "sun",
+         "req": "none",
+         "loc": "sea"
+        }
        ]
       },
       {
@@ -3804,6 +4798,112 @@
          "スズキ4匹以上 + 光るウナギ4匹以上で繁殖",
          "50%"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "single",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "single",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo",
+         "loc": "pond sea"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        }
        ]
       },
       {
@@ -3832,6 +4932,9 @@
      "metaDescription": "돌록 타운의 완전한 물고기 도감: 어종별 낚시터, 필요한 낚싯대와 날씨, 그리고 번식으로만 얻는 희귀어까지.",
      "intro": "낚시는 돌록 타운에서 두 번째 본업입니다. 이 도감은 확인된 모든 물고기를 다룹니다——어디서 나오는지, 어떤 계절과 날씨가 필요한지, 그리고 수조에서만 키울 수 있는 희귀어 번식법까지.",
      "sections": [
+      {
+       "type": "fishfilter"
+      },
       {
        "type": "table",
        "heading": "연중 어종",
@@ -3909,6 +5012,96 @@
          "모두",
          "습지 여울, 농장, 계곡 쓰레기 산"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "night",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond cave"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "rain",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond sea shallow"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "day",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond cave"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        }
        ]
       },
       {
@@ -3946,6 +5139,40 @@
          "암석 코어 샘플",
          "습지 호버크래프트 부두, 마을 부두 중앙, 교각 아래"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo",
+         "loc": "sea"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo rockcore",
+         "loc": "sea"
+        }
        ]
       },
       {
@@ -3989,6 +5216,48 @@
          "작열하는 태양(4월)",
          "습지 호버크래프트 부두, 마을 부두 중앙, 교각 아래"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "rockcore",
+         "loc": "sea"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "sun",
+         "req": "none",
+         "loc": "sea"
+        }
        ]
       },
       {
@@ -4066,6 +5335,112 @@
          "배스 4마리 이상 + 발광 뱀장어 4마리 이상 번식",
          "50% 확률"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "single",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "single",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo",
+         "loc": "pond sea"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        }
        ]
       },
       {
@@ -4094,6 +5469,9 @@
      "metaDescription": "El catálogo completo de peces de Doloc Town: cada pez, dónde capturarlo, qué caña y clima necesita, y los raros que solo se crían.",
      "intro": "La pesca es una segunda carrera completa en Doloc Town. Este catálogo reúne cada pez confirmado: dónde aparece, qué estación y clima necesita, y cómo criar las especies raras que solo viven en tanque.",
      "sections": [
+      {
+       "type": "fishfilter"
+      },
       {
        "type": "table",
        "heading": "Peces de todo el año",
@@ -4171,6 +5549,96 @@
          "Cualquiera",
          "Aguas poco profundas del humedal, Granja, Montaña de chatarra del valle"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "night",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond cave"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "rain",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond sea shallow"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "day",
+         "weather": "any",
+         "req": "none",
+         "loc": "pond cave"
+        },
+        {
+         "period": "allyear",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        }
        ]
       },
       {
@@ -4208,6 +5676,40 @@
          "Muestra de núcleo rocoso",
          "Muelle de aerodeslizador del humedal, Centro del muelle de la ciudad, Bajo el muelle"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo",
+         "loc": "sea"
+        },
+        {
+         "period": "rainy",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo rockcore",
+         "loc": "sea"
+        }
        ]
       },
       {
@@ -4251,6 +5753,48 @@
          "Sol abrasador (abril)",
          "Muelle de aerodeslizador del humedal, Centro del muelle de la ciudad, Bajo el muelle"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "shallow"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "sea"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "rockcore",
+         "loc": "sea"
+        },
+        {
+         "period": "dry",
+         "how": "catch",
+         "time": "any",
+         "weather": "sun",
+         "req": "none",
+         "loc": "sea"
+        }
        ]
       },
       {
@@ -4328,6 +5872,112 @@
          "Cría con ≥4 lubinas + ≥4 anguilas brillantes",
          "50 % de probabilidad"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "period": "single",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "watercore",
+         "loc": "pond"
+        },
+        {
+         "period": "single",
+         "how": "catch",
+         "time": "any",
+         "weather": "any",
+         "req": "bamboo",
+         "loc": "pond sea"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        },
+        {
+         "period": "breed",
+         "how": "breed",
+         "time": "any",
+         "weather": "any",
+         "req": "none",
+         "loc": "none"
+        }
        ]
       },
       {

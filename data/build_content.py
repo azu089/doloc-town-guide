@@ -6889,6 +6889,63 @@ for p in d["pages"]:
     if zc:
         p["i18n"]["zh-TW"] = json.loads(cc.convert(json.dumps(zc, ensure_ascii=False)))
 
+
+# ================= fishing: 行属性（前端筛选器用） =================
+# 原则：属性【全部机械推导自已有英文单元格】，不新增任何事实。
+# 推导一次后按索引复制给每个语言——属性是语义标签，与语言无关（翻译会替换行文本但顺序不变）。
+# ⚠️ 天气/需求扫描必须【排除鱼名列】：Rainbow Trout 的 "Rain" 不是天气条件（踩过这个坑）。
+_FISH_LOC = {
+  "pond":    ["East Town Pond","Mountain Ponds","Deep Woods","Lily Pads","Hidden Cliff","Ridge Valley","ponds"],
+  "sea":     ["Hovercraft Dock","Town Dock Center","Under Pier"],
+  "shallow": ["Wetland shallows","Farm","Back Hills","West Grove","Valley Outpost","Mining Ruins","Junk Mountain"],
+  "cave":    ["Moss Cave"],
+}
+_FISH_PERIOD = {0: "allyear", 1: "rainy", 2: "dry", 3: "single"}
+
+def _fish_attrs(table_index, row, columns):
+    cell = {c: row[i] for i, c in enumerate(columns) if i < len(row)}
+    rest = " ".join(row[1:])                      # 排除鱼名列
+    how = "breed" if re.search(r"\bBreed\b", rest) else "catch"
+    t_ = cell.get("Time", "Any")
+    if re.search(r"\bRain\b|\bThunderstorm\b|Acid Rain", rest): weather = "rain"
+    elif re.search(r"\bScorching\b", rest):                        weather = "sun"
+    else:                                                            weather = "any"
+    req = [k for k, kw in (("watercore","Water Core"),("bamboo","Bamboo"),("rockcore","Rock Core")) if kw in rest]
+    loc = [k for k, vs in _FISH_LOC.items() if any(v.lower() in rest.lower() for v in vs)]
+    return {
+      "period":  "breed" if how == "breed" else _FISH_PERIOD.get(table_index, "allyear"),
+      "how":     how,
+      "time":    "night" if "18:00–2" in t_ else ("day" if "6:00–18" in t_ else "any"),
+      "weather": weather,
+      "req":     " ".join(req) or "none",
+      "loc":     " ".join(loc) or "none",
+    }
+
+_fp = next((x for x in d["pages"] if x["slug"] == "fishing"), None)
+if _fp:
+    _tables_en = [s for s in _fp["sections"] if s.get("type") == "table"]
+    _attrs_by_table = [
+      [_fish_attrs(i, r, s.get("columns", [])) for r in s.get("rows", [])]
+      for i, s in enumerate(_tables_en)
+    ]
+    def _attach(sections):
+        ti = 0
+        for s in sections:
+            if s.get("type") != "table": continue
+            if ti < len(_attrs_by_table) and len(s.get("rows", [])) == len(_attrs_by_table[ti]):
+                s["rowAttrs"] = _attrs_by_table[ti]
+            ti += 1
+    _attach(_fp["sections"])
+    for _lg, _t in (_fp.get("i18n") or {}).items():
+        _attach(_t.get("sections", []))
+    # 首节插入筛选器（幂等）
+    _fp["sections"] = [s for s in _fp["sections"] if s.get("type") != "fishfilter"]
+    _fp["sections"].insert(0, {"type": "fishfilter"})
+    for _lg, _t in (_fp.get("i18n") or {}).items():
+        _t["sections"] = [s for s in _t.get("sections", []) if s.get("type") != "fishfilter"]
+        _t["sections"].insert(0, {"type": "fishfilter"})
+    print("fishing rowAttrs:", sum(len(a) for a in _attrs_by_table), "行 ×", 1 + len(_fp.get("i18n") or {}), "语言")
+
 # ---------- write site.json ----------
 d["site"]["languages"] = ["en","zh-CN","zh-TW","ja","ko","es"]
 d["site"]["defaultLanguage"] = "en"

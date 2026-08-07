@@ -367,6 +367,46 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
 .harvest-table td{padding:11px 13px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top}
 .harvest-table tbody tr:last-child td{border-bottom:0}
 .harvest-table tbody tr:hover td{background:rgba(127,176,105,.06)}
+/* ---------- 鱼类筛选器「农事记录板」（Doloc 专属组件） ----------
+   渐进增强：HTML 里带 hidden，只有 JS 跑起来才 removeAttribute，所以无 JS 时完全不显示。
+   视觉走废墟田园：麻绳挂牌式分组标签 + 田垄细线分隔 + 苗绿激活态。 */
+.ff{border:1px solid var(--line-strong);border-radius:var(--radius);padding:20px 20px 16px;margin:26px 0 20px;
+    background:linear-gradient(160deg,rgba(51,71,46,.55),rgba(27,42,32,.65));box-shadow:inset 0 1px 0 rgba(240,180,87,.08)}
+.ff-head{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-bottom:8px}
+.ff-head h2{font-family:var(--display);font-size:1.18rem;margin:0;line-height:1.25}
+.ff-lead{color:var(--muted);font-size:.85rem;line-height:1.6;margin-bottom:15px}
+.ff-search{display:flex;align-items:center;gap:9px;background:rgba(22,33,26,.7);border:1px solid var(--line-strong);
+           border-radius:var(--radius-sm);padding:0 12px;margin-bottom:14px}
+.ff-search-ic{display:flex;width:16px;height:16px;color:var(--sprout);flex:0 0 auto}
+.ff-search-ic svg{width:100%;height:100%}
+.ff-input{flex:1;min-width:0;background:none;border:0;outline:none;color:var(--text);font:inherit;font-size:.88rem;padding:11px 0}
+.ff-input::placeholder{color:var(--muted-2)}
+.ff-input:focus-visible{outline:none}
+.ff-search:focus-within{border-color:rgba(127,176,105,.5)}
+/* 分组：左侧挂牌标签 + 右侧色片 */
+.ff-group{display:flex;gap:12px;align-items:baseline;padding:11px 0;border-top:1px dashed var(--line)}
+.ff-label{flex:0 0 92px;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-soft)}
+.ff-chips{display:flex;flex-wrap:wrap;gap:7px;min-width:0}
+.ff-chip{font:inherit;font-size:.8rem;line-height:1.2;color:var(--muted);cursor:pointer;
+         background:rgba(22,33,26,.6);border:1px solid var(--line-strong);border-radius:999px;padding:6px 12px;transition:.14s}
+.ff-chip:hover{color:var(--text);border-color:rgba(127,176,105,.45);background:rgba(127,176,105,.10)}
+.ff-chip.on{color:#16211A;background:var(--sprout);border-color:var(--sprout);font-weight:600}
+.ff-chip:focus-visible{outline:2px solid var(--amber-soft);outline-offset:2px}
+.ff-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+         padding-top:12px;margin-top:4px;border-top:1px dashed var(--line)}
+.ff-count{font-family:var(--mono);font-size:.76rem;color:var(--sprout)}
+.ff-reset{font:inherit;font-size:.78rem;color:var(--muted);background:none;border:0;cursor:pointer;
+          border-bottom:1px dashed var(--line-strong);padding:0 0 2px;transition:.14s}
+.ff-reset:hover{color:var(--amber-soft);border-bottom-color:var(--amber-soft)}
+.ff-reset:focus-visible{outline:2px solid var(--amber-soft);outline-offset:3px}
+/* 筛空时的表格空态 */
+.table-empty{padding:16px 14px;color:var(--muted-2);font-size:.85rem;text-align:center}
+@media (max-width:640px){
+  .ff{padding:16px 14px 13px}
+  .ff-group{flex-direction:column;gap:7px;align-items:stretch}   /* 375px 下标签换行到上方，避免挤压色片 */
+  .ff-label{flex:none}
+}
+
 /* 收获问答 */
 .harvest-faq{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:11px;margin-top:10px;overflow:hidden}
 .harvest-faq summary{list-style:none;display:flex;align-items:center;gap:11px;cursor:pointer;padding:14px 16px;font-weight:600;color:var(--text);font-size:.92rem;transition:.15s}
