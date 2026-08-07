@@ -272,6 +272,95 @@ const AFFILIATE_DISCLOSURE = {
 
 const affiliateDisclosure = lang => AFFILIATE_DISCLOSURE[lang] || AFFILIATE_DISCLOSURE.en;
 
+/* ---------- About 页编辑方针（E-E-A-T） ----------
+ * 2026 的 Google core update 打击「高产低监督的 AI 内容」，AdSense 审核也加入了 helpful content 信号；
+ * 而「被 AI 引用」比排名更重要之后，把**怎么核实的**讲清楚本身就是信任信号。
+ *
+ * ⚠️ 这段文案描述的是本项目真实在执行的做法（来源分级、拿不到就标注待补、每页列来源）。
+ *    如果哪天不这么做了，必须同步删掉——写了做不到比不写更伤。
+ */
+const EDITORIAL = {
+  "en": {
+    h: "How we verify what's on this site",
+    items: [
+      "<b>Sources first.</b> Every guide page lists the sources it was checked against at the bottom. We prefer official material (the Steam store page, developer and publisher announcements), then established wikis and reputable gaming media.",
+      "<b>Claims get graded before they get published.</b> Numbers and mechanics are weighed by how reliable their source is. Marketing copy and figures we cannot trace back to a source do not go on the page.",
+      "<b>We say when we don't know.</b> If something cannot be verified yet — a chapter no one has documented, a stat no one has published — we mark it as unverified and leave it open instead of guessing. Gaps are never filled with generated text.",
+      "<b>Pages are revised when the game changes.</b> Patches and content updates are tracked, and affected pages are rewritten rather than left stale.",
+      "<b>We are independent.</b> This is an unofficial fan site with no affiliation to the game's developer or publisher, and no relationship that would influence what we write."
+    ],
+    fix: n => `Found something wrong? Corrections are welcome — email us and we will check the source and fix or retract it.`
+  },
+  "zh-CN": {
+    h: "本站的内容核实方式",
+    items: [
+      "<b>来源优先。</b>每个攻略页底部都列出该页核实时使用的来源。优先采用官方material（Steam 商店页、开发商与发行商公告），其次是成熟 wiki 与有公信力的游戏媒体。",
+      "<b>先定级再发布。</b>数据与玩法机制会按来源可靠程度评估后才写进页面。营销话术、以及无法追溯到来源的数字，一律不采用。",
+      "<b>不知道就说不知道。</b>暂时无法核实的内容——还没人记录的章节、还没人公布的数值——会明确标注为未核实并留白，而不是猜一个填上。空缺绝不用 AI 生成内容补齐。",
+      "<b>游戏更新则页面重写。</b>补丁与内容更新会被跟踪，受影响的页面会重写，而不是放着过期。",
+      "<b>本站独立运营。</b>这是非官方粉丝攻略站，与游戏开发商、发行商无隶属关系，也不存在会影响内容立场的利益关系。"
+    ],
+    fix: n => `发现错误？欢迎指正——来信告诉我们，我们会核对来源并更正或撤下该内容。`
+  },
+  "zh-TW": {
+    h: "本站的內容核實方式",
+    items: [
+      "<b>來源優先。</b>每個攻略頁底部都列出該頁核實時使用的來源。優先採用官方資料（Steam 商店頁、開發商與發行商公告），其次是成熟 wiki 與有公信力的遊戲媒體。",
+      "<b>先定級再發布。</b>數據與玩法機制會按來源可靠程度評估後才寫進頁面。行銷話術、以及無法追溯到來源的數字，一律不採用。",
+      "<b>不知道就說不知道。</b>暫時無法核實的內容——還沒人記錄的章節、還沒人公布的數值——會明確標註為未核實並留白，而不是猜一個填上。空缺絕不用 AI 生成內容補齊。",
+      "<b>遊戲更新則頁面重寫。</b>修補與內容更新會被追蹤，受影響的頁面會重寫，而不是放著過期。",
+      "<b>本站獨立運營。</b>這是非官方粉絲攻略站，與遊戲開發商、發行商無隸屬關係，也不存在會影響內容立場的利益關係。"
+    ],
+    fix: n => `發現錯誤？歡迎指正——來信告訴我們，我們會核對來源並更正或撤下該內容。`
+  },
+  "ja": {
+    h: "本サイトの情報検証方針",
+    items: [
+      "<b>出典を最優先。</b>各攻略ページの末尾に、そのページの検証に使用した出典を明記しています。公式情報（Steam ストアページ、開発元・販売元の告知）を最優先し、次いで実績のある wiki と信頼できるゲームメディアを参照します。",
+      "<b>公開前に情報の確度を判定。</b>数値やゲームシステムは、出典の信頼度を評価したうえで掲載します。宣伝文句や、出典をたどれない数字は掲載しません。",
+      "<b>分からないことは「分からない」と書きます。</b>まだ検証できない情報（誰も記録していない章、公表されていない数値）は未確認と明記し、空欄のまま残します。推測や生成テキストで埋めることはありません。",
+      "<b>ゲームの更新に合わせてページを改訂。</b>パッチや追加コンテンツを追跡し、影響を受けるページは放置せず書き直します。",
+      "<b>独立した運営です。</b>本サイトは非公式のファンサイトであり、開発元・販売元とは無関係で、記述に影響するような利害関係もありません。"
+    ],
+    fix: n => `誤りを見つけた場合はご連絡ください。出典を確認のうえ、訂正または取り下げます。`
+  },
+  "ko": {
+    h: "이 사이트의 정보 검증 방식",
+    items: [
+      "<b>출처 우선.</b> 모든 공략 페이지 하단에 해당 페이지를 검증할 때 사용한 출처를 표기합니다. 공식 자료(Steam 상점 페이지, 개발사·퍼블리셔 공지)를 우선하고, 그다음으로 검증된 위키와 신뢰할 수 있는 게임 매체를 참고합니다.",
+      "<b>게재 전에 신뢰도를 판정합니다.</b> 수치와 게임 시스템은 출처의 신뢰도를 평가한 뒤에 페이지에 반영합니다. 마케팅 문구나 출처를 추적할 수 없는 수치는 사용하지 않습니다.",
+      "<b>모르는 것은 모른다고 씁니다.</b> 아직 검증할 수 없는 내용(아무도 기록하지 않은 챕터, 공개되지 않은 수치)은 미확인으로 명시하고 비워 둡니다. 빈칸을 추측이나 생성된 문장으로 채우지 않습니다.",
+      "<b>게임이 바뀌면 페이지를 다시 씁니다.</b> 패치와 콘텐츠 업데이트를 추적하고, 영향을 받는 페이지는 방치하지 않고 재작성합니다.",
+      "<b>독립적으로 운영됩니다.</b> 이 사이트는 비공식 팬 공략 사이트로, 게임 개발사·퍼블리셔와 제휴 관계가 없으며 서술에 영향을 줄 이해관계도 없습니다."
+    ],
+    fix: n => `잘못된 내용을 발견하셨다면 알려주세요. 출처를 확인한 뒤 정정하거나 삭제합니다.`
+  },
+  "es": {
+    h: "Cómo verificamos lo que publicamos",
+    items: [
+      "<b>Las fuentes primero.</b> Cada página de guía lista al final las fuentes con las que se contrastó. Damos prioridad al material oficial (la página de Steam, los anuncios del estudio y la distribuidora) y después a wikis consolidadas y medios de videojuegos con reputación.",
+      "<b>Cada dato se evalúa antes de publicarse.</b> Las cifras y las mecánicas se valoran según la fiabilidad de su fuente. No usamos textos promocionales ni cifras que no podamos rastrear hasta un origen concreto.",
+      "<b>Decimos cuándo no lo sabemos.</b> Si algo aún no se puede verificar —un capítulo que nadie ha documentado, un dato que nadie ha publicado— lo marcamos como no verificado y lo dejamos abierto en lugar de suponerlo. Nunca rellenamos huecos con texto generado.",
+      "<b>Revisamos las páginas cuando el juego cambia.</b> Seguimos los parches y las actualizaciones de contenido, y reescribimos las páginas afectadas en vez de dejarlas obsoletas.",
+      "<b>Somos independientes.</b> Este es un sitio de fans no oficial, sin vinculación con el estudio ni la distribuidora, y sin ninguna relación que condicione lo que escribimos."
+    ],
+    fix: n => `¿Has visto un error? Escríbenos: comprobaremos la fuente y lo corregiremos o lo retiraremos.`
+  }
+};
+
+/**
+ * 编辑方针 HTML 片段（插进各站 About 页）。
+ * 只给结构，不给样式类——各站自己传 wrapper class，保持视觉独立。
+ */
+function editorialPolicy(lang, { siteName, contactEmail, headingTag = "h2", headingStyle = "font-size:1.05rem;margin:20px 0 10px" }) {
+  const t = EDITORIAL[lang] || EDITORIAL.en;
+  const li = t.items.map(i => `<li style="margin:0 0 10px">${i}</li>`).join("");
+  const mail = contactEmail ? ` <a href="mailto:${contactEmail}">${contactEmail}</a>` : "";
+  return `<${headingTag} style="${headingStyle}">${t.h}</${headingTag}>` +
+    `<ul style="margin:0 0 12px;padding-left:1.15em">${li}</ul>` +
+    `<p style="opacity:.85">${t.fix(siteName)}${mail}</p>`;
+}
+
 /* ---------- 产物文件 ---------- */
 
 /**
@@ -359,7 +448,7 @@ function writeLlmsTxt(outDir, { siteName, domain, summary, pages, groups = {}, n
 
 module.exports = {
   esc, clean, createUrl, hreflangTags, ld,
-  picture, toWebp, webpSrcset, heroPreload, staticDesc,
+  picture, toWebp, webpSrcset, heroPreload, staticDesc, editorialPolicy,
   createLastmod, LASTMOD_TOKEN,
   hostKey, createAffiliate, affiliateDisclosure, AFFILIATE_DISCLOSURE,
   writeSitemap, writeRobots, writeAds, writeHeaders, writeIndexNowKey, writeLlmsTxt

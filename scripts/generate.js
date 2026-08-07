@@ -540,7 +540,8 @@ function genStatic(lang){
   const dir = path.join(OUT, lang === DEF ? "" : lang);
   const aboutPoints = (DATA.game.aboutPointsI18n && DATA.game.aboutPointsI18n[lang]) || DATA.game.aboutPoints || [];
   const aboutBody = `<p>${esc(s.aboutText)}</p><h2 style="font-size:1.05rem;margin:18px 0 8px">${esc(s.aboutSources)}</h2><ul class="checks">${aboutPoints.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
-  writePage(path.join(dir,"about.html"), "about", lang, renderStatic(lang,"about", s.aboutTitle, aboutBody));
+  writePage(path.join(dir,"about.html"), "about", lang, renderStatic(lang,"about", s.aboutTitle,
+    aboutBody + `<section class="card">` + KIT.editorialPolicy(lang, { siteName: s.name, contactEmail: `contact@${DATA.site.domain}` }) + `</section>`));
   const privacyBody = lang==="zh-CN"||lang==="zh-TW"
     ? `<p>这是游戏攻略网站，我们尊重访问者隐私。以下说明我们收集什么、如何使用。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">我们收集什么</h2><p>我们使用 Google Analytics（GA4）进行匿名流量统计：页面浏览、来源、设备类型和大致地区。我们不收集姓名、邮箱等个人身份信息，不出售数据。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookie</h2><p>Google Analytics 会使用 Cookie 进行会话统计。你可以在浏览器中禁用，或安装 Google Analytics 的停用插件。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">第三方服务</h2><p>字体来自 Google Fonts，站点由 Cloudflare CDN 提供服务；两者可能记录标准访问日志（IP、UA、时间）。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">联系我们</h2><p>隐私问题请邮件 <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a>。</p><p style="margin-top:14px;opacity:.75">生效日期：${today}</p>`
     : lang==="ko"
