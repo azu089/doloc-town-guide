@@ -126,6 +126,10 @@ function createLastmod({ manifestPath, today }) {
   let prev = {};
   try { prev = JSON.parse(fs.readFileSync(manifestPath, "utf8")); } catch { /* 首次构建：全部记为今天 */ }
   const next = {};
+  // 「本次构建真的变了」的页面。⚠️ 别用 date === today 来数：today 走的是 UTC
+  // (new Date().toISOString())，东八区 00:00-08:00 之间 today 会等于昨天，于是所有
+  // 昨天改过的页面都被算成"本次改的"——2026-08-08 实测报出「变更 150/150 页」，实际只有 6 页。
+  const changedKeys = new Set();
 
   /** 剔除易变位后再哈希：lastmod 占位符本身、CSS 指纹（样式改动不算内容改动） */
   const stableHash = html => crypto.createHash("md5")
@@ -139,7 +143,9 @@ function createLastmod({ manifestPath, today }) {
     stamp(key, html) {
       const hash = stableHash(html);
       const old = prev[key];
-      const date = (old && old.hash === hash) ? old.date : today;
+      const unchanged = Boolean(old) && old.hash === hash;
+      if (!unchanged) changedKeys.add(key);
+      const date = unchanged ? old.date : today;
       next[key] = { hash, date };
       return String(html).split(LASTMOD_TOKEN).join(date);
     },
@@ -154,8 +160,7 @@ function createLastmod({ manifestPath, today }) {
       const sorted = {};
       for (const k of Object.keys(next).sort()) sorted[k] = next[k];
       fs.writeFileSync(manifestPath, JSON.stringify(sorted, null, 2) + "\n");
-      const changed = Object.keys(next).filter(k => next[k].date === today).length;
-      return { total: Object.keys(next).length, changed };
+      return { total: Object.keys(next).length, changed: changedKeys.size, changedKeys: [...changedKeys] };
     },
     TOKEN: LASTMOD_TOKEN
   };

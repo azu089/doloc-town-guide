@@ -114,6 +114,14 @@ function auditSite(root) {
       if (r < 0.25) F("lang-contamination", `${rel} (lang=${lang} 但正文 CJK 占比仅 ${(r * 100).toFixed(0)}%)`);
     }
 
+    // — 坑：OpenCC 用 s2t 转繁体，出来的是「大陆繁体」字形（爲/覈/裏/祕/啓/着/喫/羣/纔/僞/峯），
+    //   台湾读者一眼看出是机器转的。台湾标准字形要用 s2tw（简→繁）或 t2tw（繁→台湾正体）。
+    //   2026-08-08 实测：三站 zh-TW 共 200+ 处，Meccha 更是每页都有。
+    if (lang && lang.startsWith("zh-TW")) {
+      const bad = textOf(html).match(/[爲覈裏祕啓着喫羣纔僞峯麪衆牀汙]/g);
+      if (bad) F("zhtw-nonstandard-glyph", `${rel} (${[...new Set(bad)].join("")} 共 ${bad.length} 处，应改用 OpenCC s2tw/t2tw)`);
+    }
+
     // — 图片：无尺寸会造成 CLS；WebP 兄弟文件缺失说明忘了跑 build-webp
     for (const img of html.match(/<img [^>]*>/g) || []) {
       if (!/alt="/.test(img)) F("img-no-alt", rel);

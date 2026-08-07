@@ -2558,23 +2558,27 @@
     {
      "type": "table",
      "heading": "Price & Bundles",
-     "body": "Official pricing as of August 2026, checked against the Steam store page and the official 1.0 announcement.",
+     "body": "Official pricing checked against the Steam store page and Steam's own regional price data on August 8, 2026.",
      "columns": [
       "Item",
       "Detail"
      ],
      "rows": [
       [
-       "Standard price (CN)",
-       "¥58.00 on Steam"
+       "Standard price",
+       "US$19.99 on Steam"
       ],
       [
        "Launch discount",
-       "20% off → ¥46.40 during the 1.0 launch promotion (until August 19, 2026)"
+       "20% off → US$15.99. Steam shows \"Offer ends August 19\""
+      ],
+      [
+       "Other regions",
+       "CN¥58.00 · JP¥2,000 · KR₩20,000 · 19,99€ (EU) — the same 20% launch discount applies in every region"
       ],
       [
        "Supporter Pack",
-       "Optional bundle with extra digital content — check the Steam page for current contents"
+       "Bundle of 3: the game + Digital Artbook + Original Soundtrack, US$22.92 → US$19.32 (16% off)"
       ],
       [
        "Platforms",
@@ -2589,11 +2593,12 @@
     {
      "type": "list",
      "heading": "Where to Buy Online",
-     "body": "Beyond Steam, Doloc Town is sold at these storefronts. Humble and Green Man Gaming are authorized retailers; isThereAnyDeal tracks live prices across stores. Buying through any of them supports the same developers.",
+     "body": "Beyond Steam, Doloc Town is sold at these storefronts. Humble, Green Man Gaming and GamersGate are authorized retailers selling Steam keys; isThereAnyDeal tracks live prices across all of them. Stock and prices are set per region, so what you see can differ from what we checked.",
      "items": [
       "Steam — the official storefront and home of the 1.0 launch discount",
       "Humble Store — authorized store with regional pricing",
       "Green Man Gaming — authorized store with frequent discounts",
+      "GamersGate — authorized store, 20% off (US$19.99 → US$15.99), but it showed \"Out of stock\" when we checked on August 8, 2026; keys there are region-locked to the country you buy from",
       "isThereAnyDeal — live price comparison across all tracked stores"
      ]
     },
@@ -2603,7 +2608,8 @@
      "body": "What you need to know before buying.",
      "items": [
       "Buy on Steam — the official store page is the main place to get Doloc Town",
-      "The 1.0 launch promotion takes 20% off, so ¥46.40 until August 19, 2026",
+      "The 1.0 launch promotion takes 20% off, so US$15.99 until August 19, 2026",
+      "Authorized key stores (Humble, Green Man Gaming, GamersGate) sell the same Steam key; GamersGate was out of stock on August 8, 2026",
       "Doloc Town is a single-player game — there is no multiplayer or co-op at 1.0",
       "The Supporter Pack is optional and not required to play the full game",
       "Official 1.0 system language support covers 9 languages, including English, Chinese and Japanese"
@@ -2620,11 +2626,15 @@
       ],
       [
        "How much does Doloc Town cost?",
-       "¥58.00 standard (regional pricing varies). The 1.0 launch discount makes it ¥46.40 until August 19, 2026."
+       "US$19.99 standard. The 1.0 launch discount takes 20% off — US$15.99 until August 19, 2026. Regional prices: CN¥58.00, JP¥2,000, KR₩20,000, 19,99€ in the EU, all with the same 20% off."
+      ],
+      [
+       "Can I buy Doloc Town on GamersGate?",
+       "GamersGate lists it as an authorized retailer at 20% off (US$19.99 → US$15.99), but it showed \"Out of stock\" in both its US and Singapore storefronts when we checked on August 8, 2026 — so Steam is the reliable route right now. GamersGate keys are also region-locked to the country you buy from."
       ],
       [
        "Is there a Supporter Pack?",
-       "Yes — an optional bundle with extra digital content. Check the Steam page for the current contents and price."
+       "Yes — a 3-item bundle: the game plus the Digital Artbook and the Original Soundtrack, US$22.92 down to US$19.32 (16% off) on Steam. It is optional and not needed to play the full game."
       ],
       [
        "Is Doloc Town multiplayer?",
@@ -2670,6 +2680,17 @@
       "ja": "Green Man Gaming — ドロックタウン",
       "ko": "Green Man Gaming — 돌록 타운",
       "es": "Green Man Gaming — Doloc Town"
+     }
+    },
+    {
+     "label": "GamersGate — Doloc Town (Steam key, authorized retailer)",
+     "url": "https://www.gamersgate.com/product/doloc-town/",
+     "labels": {
+      "zh-CN": "GamersGate — 多洛可小镇（Steam key，授权零售商）",
+      "zh-TW": "GamersGate — 多洛可小鎮（Steam key，授權零售商）",
+      "ja": "GamersGate — ドロックタウン（Steam キー、正規販売店）",
+      "ko": "GamersGate — 돌록 타운 (Steam 키, 공식 인증 판매처)",
+      "es": "GamersGate — Doloc Town (clave de Steam, tienda autorizada)"
      }
     },
     {

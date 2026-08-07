@@ -7,7 +7,7 @@ import opencc
 ROOT = Path(__file__).parent
 BASE = ROOT / "site.base.json"
 d = json.loads(BASE.read_text(encoding="utf-8"))
-cc = opencc.OpenCC("s2t")
+cc = opencc.OpenCC("s2tw")
 
 # ---------- site i18n ----------
 SITE_I18N = {
@@ -6528,7 +6528,7 @@ ZH["where-to-buy"] = {
  "sections": [
   {
    "heading": "价格与捆绑包",
-   "body": "截至 2026 年 8 月的官方价格，已核对 Steam 商店页与官方 1.0 公告。",
+   "body": "2026 年 8 月 8 日核对 Steam 商店页与 Steam 各区官方价格数据。",
    "columns": [
     "项目",
     "详情"
@@ -6540,11 +6540,15 @@ ZH["where-to-buy"] = {
     ],
     [
      "首发折扣",
-     "1.0 首发促销 20% 折扣 → ¥46.40（至 2026 年 8 月 19 日）"
+     "20% 折扣 → ¥46.40（Steam 标注促销至 8 月 19 日）"
+    ],
+    [
+     "其他区价格",
+     "美区 US$19.99 · 日区 2,000 日元 · 韩区 20,000 韩元 · 欧区 19,99€——各区同为 20% 首发折扣"
     ],
     [
      "支援者包",
-     "可选捆绑包，含额外数字内容——当前内容见 Steam 页面"
+     "三件套捆绑包：本体 + 数字艺术设定集 + 原声带，US$22.92 → US$19.32（16% 折扣）"
     ],
     [
      "平台",
@@ -6559,11 +6563,12 @@ ZH["where-to-buy"] = {
   {
    "type": "list",
    "heading": "线上购买渠道",
-   "body": "除 Steam 外，Doloc Town 还在以下商店销售。Humble 与 Green Man Gaming 是授权零售商；isThereAnyDeal 实时追踪各商店价格。从任意渠道购买都同样支持开发者。",
+   "body": "除 Steam 外，Doloc Town 还在以下商店销售。Humble、Green Man Gaming 与 GamersGate 都是卖 Steam key 的授权零售商；isThereAnyDeal 实时追踪各商店价格。库存与价格按地区分别设定，你看到的可能与我们核对时不同。",
    "items": [
     "Steam——官方商店，1.0 首发折扣的主渠道",
     "Humble Store——授权商店，支持区域定价",
     "Green Man Gaming——授权商店，常有折扣",
+    "GamersGate——授权商店，8 折（US$19.99 → US$15.99）；但我们 2026 年 8 月 8 日核对时显示「缺货」，且其 key 锁定购买时所在的国家/地区",
     "isThereAnyDeal——全商店实时比价工具"
    ]
   },
@@ -6572,7 +6577,8 @@ ZH["where-to-buy"] = {
    "body": "购买前需要知道的信息。",
    "items": [
     "在 Steam 购买——官方商店页是获得多洛可小镇的主要渠道",
-    "1.0 首发促销 20% 折扣，至 2026 年 8 月 19 日 ¥46.40",
+    "1.0 首发促销 20% 折扣，至 2026 年 8 月 19 日 ¥46.40（美区 US$15.99）",
+    "授权 key 商店（Humble / Green Man Gaming / GamersGate）卖的是同一把 Steam key；GamersGate 在 8 月 8 日缺货",
     "多洛可小镇是单人游戏——1.0 没有多人或合作模式",
     "支援者包是可选项，不是游玩完整游戏所必需的",
     "官方 1.0 语言支持 9 种，包括英语、中文与日语"
@@ -6587,11 +6593,15 @@ ZH["where-to-buy"] = {
     ],
     [
      "多洛可小镇多少钱？",
-     "标准价 ¥58.00（区域定价不同）。1.0 首发折扣至 2026 年 8 月 19 日 ¥46.40。"
+     "国区标准价 ¥58.00，1.0 首发 20% 折扣至 2026 年 8 月 19 日为 ¥46.40。其他区：美区 US$19.99、日区 2,000 日元、韩区 20,000 韩元、欧区 19,99€，折扣同为 20%。"
+    ],
+    [
+     "能在 GamersGate 买到多洛可小镇吗？",
+     "GamersGate 作为授权零售商有上架，标 8 折（US$19.99 → US$15.99），但我们 2026 年 8 月 8 日核对时，美区与新加坡区都显示「缺货」——所以现在稳妥的渠道还是 Steam。另外 GamersGate 的 key 锁定购买时所在的国家/地区。"
     ],
     [
      "有支援者包吗？",
-     "有——可选捆绑包，含额外数字内容。当前内容与价格见 Steam 页面。"
+     "有——三件套捆绑包：本体 + 数字艺术设定集 + 原声带，Steam 上 US$22.92 降至 US$19.32（16% 折扣）。可选，不影响游玩完整游戏。"
     ],
     [
      "多洛可小镇能联机吗？",
@@ -6617,23 +6627,27 @@ JA["where-to-buy"] = {
  "sections": [
   {
    "heading": "価格とバンドル",
-   "body": "2026年8月時点の公式価格（Steam ストアと公式 1.0 アナウンスで確認）。",
+   "body": "2026年8月8日に Steam ストアページと Steam の地域別公式価格データで確認。",
    "columns": [
     "項目",
     "詳細"
    ],
    "rows": [
     [
-     "標準価格（中国）",
-     "Steam で ¥58.00"
+     "標準価格（日本）",
+     "Steam で 2,000円"
     ],
     [
      "発売記念割引",
-     "1.0 発売記念20%オフ → ¥46.40（2026年8月19日まで）"
+     "20%オフ → 1,600円（Steam の表示は「8月19日まで」）"
+    ],
+    [
+     "他地域の価格",
+     "米国 US$19.99 ・ 中国 58元 ・ 韓国 20,000ウォン ・ 欧州 19,99€ — いずれも同じ20%オフ"
     ],
     [
      "サポーターパック",
-     "追加デジタルコンテンツ付きの任意バンドル——内容は Steam ページで確認"
+     "3点セット：本編 + デジタルアートブック + オリジナルサウンドトラック、US$22.92 → US$19.32（16%オフ）"
     ],
     [
      "対応機種",
@@ -6648,11 +6662,12 @@ JA["where-to-buy"] = {
   {
    "type": "list",
    "heading": "オンライン購入先",
-   "body": "Steam 以外では、以下のストアでドロックタウンを購入できます。Humble と Green Man Gaming は正規小売店、isThereAnyDeal は各ストアの価格をリアルタイム比較します。どの店で買っても同じ開発者を支援します。",
+   "body": "Steam 以外では、以下のストアでドロックタウンを購入できます。Humble・Green Man Gaming・GamersGate はいずれも Steam キーを扱う正規小売店、isThereAnyDeal は各ストアの価格をリアルタイム比較します。在庫と価格は地域ごとに設定されるため、表示は当サイトの確認時と異なる場合があります。",
    "items": [
     "Steam——公式ストア、1.0発売記念割引の主な窓口",
     "Humble Store——正規店、地域価格に対応",
     "Green Man Gaming——正規店、頻繁に割引",
+    "GamersGate——正規店、20%オフ（US$19.99 → US$15.99）。ただし2026年8月8日の確認時は「在庫切れ」表示で、キーは購入した国・地域にロックされます",
     "isThereAnyDeal——全ストアの価格をリアルタイム比較"
    ]
   },
@@ -6661,7 +6676,8 @@ JA["where-to-buy"] = {
    "body": "購入前に知っておきたい情報。",
    "items": [
     "Steam で購入 — 公式ストアがドロックタウンの主な入手先",
-    "1.0 発売記念20%オフで、2026年8月19日まで ¥46.40",
+    "1.0 発売記念20%オフで、2026年8月19日まで 1,600円（米国は US$15.99）",
+    "正規キーストア（Humble / Green Man Gaming / GamersGate）が売るのは同じ Steam キー。GamersGate は8月8日時点で在庫切れ",
     "ドロックタウンはシングルプレイゲーム — 1.0 にマルチや協力プレイはありません",
     "サポーターパックは任意で、本編プレイに必須ではありません",
     "公式 1.0 の言語対応は9言語（英語・中国語・日本語含む）"
@@ -6676,11 +6692,15 @@ JA["where-to-buy"] = {
     ],
     [
      "いくら？",
-     "標準 ¥58.00（地域価格あり）。1.0 発売記念割引で2026年8月19日まで ¥46.40。"
+     "日本は標準2,000円、1.0 発売記念20%オフで2026年8月19日まで1,600円。他地域は米国 US$19.99、中国 58元、韓国 20,000ウォン、欧州 19,99€（割引率はいずれも20%）。"
+    ],
+    [
+     "GamersGate で買える？",
+     "GamersGate は正規小売店として20%オフ（US$19.99 → US$15.99）で掲載していますが、2026年8月8日に確認した時点では米国・シンガポールのどちらのストアでも「在庫切れ」でした。確実なのは今のところ Steam です。なお GamersGate のキーは購入した国・地域にロックされます。"
     ],
     [
      "サポーターパックは？",
-     "あります — 追加デジタルコンテンツ付きの任意バンドル。内容と価格は Steam ページで。"
+     "あります — 3点セット（本編 + デジタルアートブック + オリジナルサウンドトラック）で、Steam では US$22.92 → US$19.32（16%オフ）。任意購入で、本編プレイには不要です。"
     ],
     [
      "マルチプレイは？",
@@ -6706,23 +6726,27 @@ KO["where-to-buy"] = {
  "sections": [
   {
    "heading": "가격 & 번들",
-   "body": "2026년 8월 기준 공식 가격 (Steam 상점 및 공식 1.0 발표 확인).",
+   "body": "2026년 8월 8일 Steam 상점 페이지와 Steam 지역별 공식 가격 데이터로 확인.",
    "columns": [
     "항목",
     "내용"
    ],
    "rows": [
     [
-     "표준 가격(중국)",
-     "Steam ¥58.00"
+     "표준 가격(한국)",
+     "Steam 20,000원"
     ],
     [
      "출시 할인",
-     "1.0 출시 20% 할인 → ¥46.40 (2026년 8월 19일까지)"
+     "20% 할인 → 16,000원 (Steam 표기 \"8월 19일까지\")"
+    ],
+    [
+     "다른 지역 가격",
+     "미국 US$19.99 · 중국 58위안 · 일본 2,000엔 · 유럽 19,99€ — 모두 동일하게 20% 할인"
     ],
     [
      "서포터 팩",
-     "추가 디지털 콘텐츠 포함 선택 번들 — 내용은 Steam 페이지에서 확인"
+     "3종 번들: 본편 + 디지털 아트북 + 오리지널 사운드트랙, US$22.92 → US$19.32 (16% 할인)"
     ],
     [
      "플랫폼",
@@ -6737,11 +6761,12 @@ KO["where-to-buy"] = {
   {
    "type": "list",
    "heading": "온라인 구매처",
-   "body": "Steam 외에도 다음 스토어에서 돌록 타운을 구매할 수 있습니다. Humble과 Green Man Gaming은 공인 리테일러이며, isThereAnyDeal은 모든 스토어의 실시간 가격을 비교합니다. 어느 곳에서 사든 같은 개발자를 지원합니다.",
+   "body": "Steam 외에도 다음 스토어에서 돌록 타운을 구매할 수 있습니다. Humble·Green Man Gaming·GamersGate는 모두 Steam 키를 파는 공인 리테일러이며, isThereAnyDeal은 모든 스토어의 실시간 가격을 비교합니다. 재고와 가격은 지역별로 정해지므로 표시 내용이 저희가 확인한 시점과 다를 수 있습니다.",
    "items": [
     "Steam — 공식 스토어, 1.0 출시 할인의 주요 채널",
     "Humble Store — 공인 스토어, 지역별 가격 지원",
     "Green Man Gaming — 공인 스토어, 잦은 할인",
+    "GamersGate — 공인 스토어, 20% 할인 (US$19.99 → US$15.99). 다만 2026년 8월 8일 확인 시 \"품절\" 표시였고, 키는 구매한 국가·지역에 잠깁니다",
     "isThereAnyDeal — 전체 스토어 실시간 가격 비교"
    ]
   },
@@ -6750,7 +6775,8 @@ KO["where-to-buy"] = {
    "body": "구매 전 알아야 할 정보.",
    "items": [
     "Steam에서 구매 — 공식 스토어가 돌록 타운의 주요 판매처",
-    "1.0 출시 20% 할인으로 2026년 8월 19일까지 ¥46.40",
+    "1.0 출시 20% 할인으로 2026년 8월 19일까지 16,000원 (미국은 US$15.99)",
+    "공인 키 스토어(Humble / Green Man Gaming / GamersGate)가 파는 것은 같은 Steam 키. GamersGate는 8월 8일 기준 품절",
     "돌록 타운은 싱글 플레이 게임 — 1.0에 멀티나 협동 없음",
     "서포터 팩은 선택 사항이며 본편 플레이에 필수 아님",
     "공식 1.0 언어 지원 9개: 영어, 중국어, 일본어 포함"
@@ -6765,11 +6791,15 @@ KO["where-to-buy"] = {
     ],
     [
      "얼마인가요?",
-     "표준 ¥58.00 (지역 가격 상이). 1.0 출시 할인으로 2026년 8월 19일까지 ¥46.40."
+     "한국은 표준 20,000원, 1.0 출시 20% 할인으로 2026년 8월 19일까지 16,000원. 다른 지역은 미국 US$19.99, 중국 58위안, 일본 2,000엔, 유럽 19,99€ (할인율은 모두 20%)."
+    ],
+    [
+     "GamersGate에서 살 수 있나요?",
+     "GamersGate는 공인 리테일러로 20% 할인 (US$19.99 → US$15.99)에 올려두었지만, 2026년 8월 8일 확인 시 미국·싱가포르 스토어 모두 \"품절\"이었습니다. 지금 확실한 경로는 Steam입니다. 또한 GamersGate 키는 구매한 국가·지역에 잠깁니다."
     ],
     [
      "서포터 팩이 있나요?",
-     "네 — 추가 디지털 콘텐츠가 포함된 선택 번들입니다. 내용과 가격은 Steam 페이지에서."
+     "네 — 3종 번들(본편 + 디지털 아트북 + 오리지널 사운드트랙)로 Steam에서 US$22.92 → US$19.32 (16% 할인). 선택 사항이며 본편 플레이에 필수는 아닙니다."
     ],
     [
      "멀티플레이 되나요?",
@@ -6795,23 +6825,27 @@ ES["where-to-buy"] = {
  "sections": [
   {
    "heading": "Precio y paquetes",
-   "body": "Precio oficial a agosto de 2026, verificado en la tienda de Steam y el anuncio oficial de 1.0.",
+   "body": "Precio oficial verificado el 8 de agosto de 2026 en la tienda de Steam y en los datos de precio por región de Steam.",
    "columns": [
     "Elemento",
     "Detalle"
    ],
    "rows": [
     [
-     "Precio estándar (CN)",
-     "¥58.00 en Steam"
+     "Precio estándar (España / UE)",
+     "19,99€ en Steam"
     ],
     [
      "Descuento de lanzamiento",
-     "20% de descuento → ¥46.40 durante la promoción de 1.0 (hasta el 19 de agosto de 2026)"
+     "20% de descuento → 15,99€ (Steam indica «hasta el 19 de agosto»)"
+    ],
+    [
+     "Precios en otras regiones",
+     "EE. UU. US$19.99 · China 58 CNY · Japón 2000 JPY · Corea 20 000 KRW — con el mismo 20% de descuento"
     ],
     [
      "Paquete de apoyo",
-     "Paquete opcional con contenido digital extra — consulta el contenido actual en Steam"
+     "Pack de 3: el juego + Libro de arte digital + Banda sonora original, US$22.92 → US$19.32 (16% de descuento)"
     ],
     [
      "Plataformas",
@@ -6826,11 +6860,12 @@ ES["where-to-buy"] = {
   {
    "type": "list",
    "heading": "Dónde comprarlo online",
-   "body": "Además de Steam, Doloc Town se vende en estas tiendas. Humble y Green Man Gaming son minoristas autorizados; isThereAnyDeal compara precios en vivo en todas las tiendas. Comprar en cualquiera apoya a los mismos desarrolladores.",
+   "body": "Además de Steam, Doloc Town se vende en estas tiendas. Humble, Green Man Gaming y GamersGate son minoristas autorizados que venden claves de Steam; isThereAnyDeal compara precios en vivo en todas ellas. El stock y los precios se fijan por región, así que lo que veas puede diferir de lo que comprobamos.",
    "items": [
     "Steam: la tienda oficial y el hogar del descuento de lanzamiento 1.0",
     "Humble Store: tienda autorizada con precios regionales",
     "Green Man Gaming: tienda autorizada con descuentos frecuentes",
+    "GamersGate: tienda autorizada, 20% de descuento (US$19.99 → US$15.99), pero aparecía «Agotado» cuando lo comprobamos el 8 de agosto de 2026; sus claves quedan bloqueadas al país donde compras",
     "isThereAnyDeal: comparador de precios en vivo de todas las tiendas"
    ]
   },
@@ -6839,7 +6874,8 @@ ES["where-to-buy"] = {
    "body": "Lo que necesitas saber antes de comprar.",
    "items": [
     "Cómpralo en Steam — la tienda oficial es el lugar principal para conseguir Doloc Town",
-    "La promoción de lanzamiento de 1.0 ofrece un 20 % de descuento: ¥46.40 hasta el 19 de agosto de 2026",
+    "La promoción de lanzamiento de 1.0 ofrece un 20 % de descuento: 15,99€ hasta el 19 de agosto de 2026",
+    "Las tiendas de claves autorizadas (Humble, Green Man Gaming, GamersGate) venden la misma clave de Steam; GamersGate estaba agotado el 8 de agosto de 2026",
     "Doloc Town es un juego de un jugador — no hay multijugador ni cooperativo en 1.0",
     "El paquete de apoyo es opcional y no es necesario para jugar al juego completo",
     "El 1.0 oficial admite 9 idiomas, incluidos inglés, chino y japonés"
@@ -6854,11 +6890,15 @@ ES["where-to-buy"] = {
     ],
     [
      "¿Cuánto cuesta?",
-     "¥58.00 estándar (el precio regional varía). El descuento de lanzamiento de 1.0 lo deja en ¥46.40 hasta el 19 de agosto de 2026."
+     "19,99€ estándar en la UE; el descuento de lanzamiento de 1.0 lo deja en 15,99€ hasta el 19 de agosto de 2026. En otras regiones: EE. UU. US$19.99, China 58 CNY, Japón 2000 JPY, Corea 20 000 KRW, todas con el mismo 20%."
+    ],
+    [
+     "¿Puedo comprar Doloc Town en GamersGate?",
+     "GamersGate lo tiene como minorista autorizado con un 20% de descuento (US$19.99 → US$15.99), pero aparecía «Agotado» tanto en su tienda de EE. UU. como en la de Singapur cuando lo comprobamos el 8 de agosto de 2026, así que Steam es la vía fiable ahora mismo. Además, las claves de GamersGate quedan bloqueadas al país donde compras."
     ],
     [
      "¿Hay paquete de apoyo?",
-     "Sí — un paquete opcional con contenido digital extra. Consulta el contenido y precio actuales en Steam."
+     "Sí — un pack de 3: el juego más el Libro de arte digital y la Banda sonora original, de US$22.92 a US$19.32 (16% de descuento) en Steam. Es opcional y no hace falta para jugar al juego completo."
     ],
     [
      "¿Doloc Town es multijugador?",

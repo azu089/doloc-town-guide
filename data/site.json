@@ -204,7 +204,7 @@
     "privacyTitle": "隱私政策",
     "contactTitle": "聯繫我們",
     "footerNote": "非官方粉絲站——遊戲及相關資產歸其所有者所有。",
-    "footerSource": "信息覈對自 Steam 官方商店頁、官方 1.0 公告、發行商與媒體報道。",
+    "footerSource": "信息核對自 Steam 官方商店頁、官方 1.0 公告、發行商與媒體報道。",
     "quickAnswers": "常見問題速答",
     "guides": "全部攻略",
     "aboutGame": "關於這款遊戲",
@@ -212,7 +212,7 @@
     "getOnSteam": "在 Steam 獲取 ↗",
     "readGuide": "閱讀攻略 →",
     "moreGuides": "更多攻略",
-    "sources": "來源與事實覈對",
+    "sources": "來源與事實核對",
     "plotTag": "田野筆記",
     "growTag": "生長",
     "seasonTag": "季節",
@@ -221,7 +221,7 @@
     "latest": "核心系統",
     "harvest": "豐收",
     "seedTag": "種子",
-    "aboutText": "多洛可小鎮攻略站是非官方粉絲資源站。我們針對 Steam 官方商店頁、官方 1.0 公告與權威媒體逐頁覈對信息，並將仍在驗證中的內容明確標註。目標是給英文社區提供準確、實用、親測的攻略。",
+    "aboutText": "多洛可小鎮攻略站是非官方粉絲資源站。我們針對 Steam 官方商店頁、官方 1.0 公告與權威媒體逐頁核對信息，並將仍在驗證中的內容明確標註。目標是給英文社區提供準確、實用、親測的攻略。",
     "aboutSources": "我們的信息來源"
    }
   },
@@ -888,7 +888,7 @@
      "title": "多洛可小鎮怎麼玩：新手指南（1.0）",
      "metaTitle": "多洛可小鎮怎麼玩：完整新手入門指南（1.0）",
      "metaDescription": "多洛可小鎮怎麼玩？本指南講清「清障→收集→種田→建造→探索」循環、垂直農場、極端天氣利用、無人機戰鬥基礎與 1.0 自動化。",
-     "intro": "多洛可小鎮把橫版平臺跳躍與後末日農場模擬結合在一起。你從拾荒者起步，最終成爲農場大亨——這裏是從第一天到無人機時代的完整循環。",
+     "intro": "多洛可小鎮把橫版平臺跳躍與後末日農場模擬結合在一起。你從拾荒者起步，最終成為農場大亨——這裡是從第一天到無人機時代的完整循環。",
      "sections": [
       {
        "type": "steps",
@@ -926,7 +926,7 @@
         "跳躍與攀爬穿梭各層——平臺跳躍是每日循環的一部分。",
         "花盆放在平臺上；按季節分組種植，便於一次換季補種。",
         "用遮蓋或「雨露均霑」基因，讓風暴與酸雨不會毀掉整層。",
-        "爲無人機飛行留出垂直空隙——1.0 自動化需要清晰航線。"
+        "為無人機飛行留出垂直空隙——1.0 自動化需要清晰航線。"
        ]
       },
       {
@@ -936,13 +936,13 @@
        "columns": [
         "天氣",
         "影響",
-        "轉化爲優勢"
+        "轉化為優勢"
        ],
        "rows": [
         [
          "酸雨",
          "侵蝕無遮蓋的作物",
-         "建造遮蓋；收集酸液作爲製作資源"
+         "建造遮蓋；收集酸液作為製作資源"
         ],
         [
          "酷熱",
@@ -977,7 +977,7 @@
         ],
         [
          "先種速生作物",
-         "快速收成爲工具與種子提供資金。"
+         "快速收成為工具與種子提供資金。"
         ],
         [
          "每天與所有村民對話",
@@ -996,7 +996,7 @@
       {
        "type": "note",
        "heading": "新手常見錯誤（避免這些）",
-       "body": "社區報告中最常見的毀局行爲：每天手動給所有作物澆水（用自動化或雨露均霑基因）、種一大片平地（一場風暴全毀）、忽略好感（把自己鎖在食譜之外）、跳過 Bellad 任務（科技樹落後）、4 月前什麼都不囤（在最差的價格賣出）。"
+       "body": "社區報告中最常見的毀局行為：每天手動給所有作物澆水（用自動化或雨露均霑基因）、種一大片平地（一場風暴全毀）、忽略好感（把自己鎖在食譜之外）、跳過 Bellad 任務（科技樹落後）、4 月前什麼都不囤（在最差的價格賣出）。"
       },
       {
        "type": "list",
@@ -1007,7 +1007,7 @@
         "按順序升級：底盤（生存）、槍管（傷害）、電池（續航）。",
         "蓄力光束（F）破裝甲 Scavenger Bugs 的盾；普通射擊會被彈開。",
         "夜間探索廢墟前裝好武器與照明模塊。",
-        "稀有魚掉高級部件——釣魚爲戰鬥供血。"
+        "稀有魚掉高級部件——釣魚為戰鬥供血。"
        ]
       },
       {
@@ -1025,11 +1025,11 @@
         ],
         [
          "舊城廢墟",
-         "新區域：兇悍新敵人、新 NPC、支線與資源；許多道路通向那裏。"
+         "新區域：兇悍新敵人、新 NPC、支線與資源；許多道路通向那裡。"
         ],
         [
          "⚠️ 驗證中",
-         "精確解鎖順序與建造費用仍在 1.0 實測；標註 ⚠️ 的爲社區來源。"
+         "精確解鎖順序與建造費用仍在 1.0 實測；標註 ⚠️ 的為社區來源。"
         ]
        ]
       },
@@ -1824,7 +1824,7 @@
      "title": "多洛可小鎮農業自動化指南（1.0）",
      "metaTitle": "多洛可小鎮農業自動化：太陽能、風能與無人機站（1.0）",
      "metaDescription": "多洛可小鎮 1.0 農業自動化詳解：建造太陽能與風能、部署農場無人機站，讓無人機自動播種、培育與收割。",
-     "intro": "1.0 把你從農民變成農場經理。這裏是發電、部署無人機站、實現整條作物流水線自動化的方法。",
+     "intro": "1.0 把你從農民變成農場經理。這裡是發電、部署無人機站、實現整條作物流水線自動化的方法。",
      "sections": [
       {
        "type": "steps",
@@ -1833,7 +1833,7 @@
        "items": [
         [
          "利用太陽能與風能",
-         "建造太陽能板與風力渦輪機，爲農場生成清潔能源。"
+         "建造太陽能板與風力渦輪機，為農場生成清潔能源。"
         ],
         [
          "建造農場無人機站",
@@ -1866,8 +1866,8 @@
        "body": "自動化不止用於作物。",
        "items": [
         [
-         "啓動工業區發電機",
-         "爲新的傳送帶生產線供電。"
+         "啟動工業區發電機",
+         "為新的傳送帶生產線供電。"
         ],
         [
          "建造傳送帶",
@@ -1913,11 +1913,11 @@
       {
        "type": "note",
        "heading": "常見自動化錯誤",
-       "body": "不要在電力穩定前急着建站——一個半天閒置的站點違背了整個系統的意義。不要第一個就自動化你的唯一收入作物；先自動化低價值填充作物來無風險地學習系統。堆平臺時給無人機留出清晰航線，否則它們夠不到自己的地塊。"
+       "body": "不要在電力穩定前急著建站——一個半天閒置的站點違背了整個系統的意義。不要第一個就自動化你的唯一收入作物；先自動化低價值填充作物來無風險地學習系統。堆平臺時給無人機留出清晰航線，否則它們夠不到自己的地塊。"
       },
       {
        "type": "note",
-       "heading": "爲什麼這個頁面重要",
+       "heading": "為什麼這個頁面重要",
        "body": "多洛可小鎮自動化的英文攻略幾乎不存在——多數內容停在 EA 基礎階段。本頁是第一批 1.0 專屬自動化英文參考之一。標 ⚠️ 的細節將在親測後更新。"
       }
      ]
@@ -3862,8 +3862,8 @@
     "zh-TW": {
      "title": "多洛可小鎮釣魚指南：池塘、天氣與稀有魚",
      "metaTitle": "多洛可小鎮釣魚圖鑑：全部魚類、釣點與天氣（1.0）",
-     "metaDescription": "完整的多洛可小鎮魚類圖鑑：每種魚在哪裏釣、需要什麼魚竿與天氣，以及只能通過養殖獲得的稀有魚。",
-     "intro": "釣魚是多洛可小鎮的第二種全職事業。本圖鑑列出每一條已確認的魚——在哪裏刷新、需要什麼季節與天氣，以及如何繁殖只能養在魚缸裏的稀有魚。",
+     "metaDescription": "完整的多洛可小鎮魚類圖鑑：每種魚在哪裡釣、需要什麼魚竿與天氣，以及只能通過養殖獲得的稀有魚。",
+     "intro": "釣魚是多洛可小鎮的第二種全職事業。本圖鑑列出每一條已確認的魚——在哪裡刷新、需要什麼季節與天氣，以及如何繁殖只能養在魚缸裡的稀有魚。",
      "sections": [
       {
        "type": "fishfilter"
@@ -4392,7 +4392,7 @@
       {
        "type": "note",
        "heading": "來源與說明",
-       "body": "釣點、季節、天氣與繁殖概率由玩家實測，並整理自 18183 的完整圖鑑（L2）。部分刷新點可能隨補丁變化——請把它當作野外手冊，而非固定數據庫。⚠️ 中文名爲遊戲內中文圖鑑譯名，可能與英文客戶端不同。"
+       "body": "釣點、季節、天氣與繁殖概率由玩家實測，並整理自 18183 的完整圖鑑（L2）。部分刷新點可能隨補丁變化——請把它當作野外手冊，而非固定數據庫。⚠️ 中文名為遊戲內中文圖鑑譯名，可能與英文客戶端不同。"
       }
      ]
     },
@@ -6337,7 +6337,7 @@
      "title": "多洛可小鎮無人機戰鬥指南：升級與模塊",
      "metaTitle": "多洛可小鎮無人機戰鬥：出裝、升級與最佳模塊",
      "metaDescription": "掌握多洛可小鎮無人機戰鬥：底盤、槍管與電池升級，戰術電容、影子射手等戰術模塊，以及如何擊破裝甲敵人。",
-     "intro": "你的無人機是一套可打造的作戰平臺。升級底盤、槍管與電池，裝配戰術模塊，學會擊破裝甲敵人——這裏是完整的戰鬥圖景。",
+     "intro": "你的無人機是一套可打造的作戰平臺。升級底盤、槍管與電池，裝配戰術模塊，學會擊破裝甲敵人——這裡是完整的戰鬥圖景。",
      "sections": [
       {
        "type": "list",
@@ -6447,7 +6447,7 @@
         "永遠在掩體後換彈；開闊地換彈會捱打。",
         "向開闊方向閃避，別撞牆——慌閃撞牆是經典死法。",
         "夜跑廢墟前裝照明模塊，沒有就別打夜戰。",
-        "溼地 Boss 掉落中型E芯片——爲更高階出裝刷它 ⚠️。"
+        "溼地 Boss 掉落中型E芯片——為更高階出裝刷它 ⚠️。"
        ]
       },
       {
@@ -7283,8 +7283,8 @@
     "zh-TW": {
      "title": "多洛可小鎮探索指南：全部 5 個區域",
      "metaTitle": "多洛可小鎮區域：全部 5 個區域與舊城廢墟（1.0）",
-     "metaDescription": "多洛可小鎮全部區域詳解：外圍、河谷、溼地、洞穴，以及 1.0 新增的舊城廢墟——每個區域的資源、祕密與出發準備。",
-     "intro": "探索是多洛可小鎮的核心。五大區域藏着獨特的資源、敵人與故事——包括 1.0 發售新增的舊城廢墟。這裏講清每個區域的價值，以及如何活着回來。",
+     "metaDescription": "多洛可小鎮全部區域詳解：外圍、河谷、溼地、洞穴，以及 1.0 新增的舊城廢墟——每個區域的資源、秘密與出發準備。",
+     "intro": "探索是多洛可小鎮的核心。五大區域藏著獨特的資源、敵人與故事——包括 1.0 發售新增的舊城廢墟。這裡講清每個區域的價值，以及如何活著回來。",
      "sections": [
       {
        "type": "table",
@@ -7293,7 +7293,7 @@
        "columns": [
         "區域",
         "有什麼",
-        "爲什麼去"
+        "為什麼去"
        ],
        "rows": [
         [
@@ -7303,7 +7303,7 @@
         ],
         [
          "河谷",
-         "鬱鬱蔥蔥——爲什麼？（核心謎團）",
+         "鬱鬱蔥蔥——為什麼？（核心謎團）",
          "稀有材料、庫瑪桑、劇情"
         ],
         [
@@ -7313,7 +7313,7 @@
         ],
         [
          "洞穴",
-         "神祕的富礦地下",
+         "神秘的富礦地下",
          "礦物與隱藏科技"
         ],
         [
@@ -7328,7 +7328,7 @@
        "heading": "荒野生存",
        "body": "野外很危險——準備是否充分，決定你滿載而歸還是重生回城。",
        "items": [
-        "標記回家的路，否則可能夜裏流落在外。",
+        "標記回家的路，否則可能夜裡流落在外。",
         "警惕兇猛的生物與廢墟中的敵對者。",
         "長途出行前給無人機裝好武器與照明模塊。",
         "帶上食物——烹飪增益讓你活得更久、跑得更快。",
@@ -7339,7 +7339,7 @@
       {
        "type": "steps",
        "heading": "探索舊城廢墟（1.0 新增）",
-       "body": "1.0 發售的重大新區域——官方公告稱其爲遊戲「第三大區域」。",
+       "body": "1.0 發售的重大新區域——官方公告稱其為遊戲「第三大區域」。",
        "items": [
         [
          "隨劇情解鎖",
@@ -7351,7 +7351,7 @@
         ],
         [
          "遇見新 NPC 與同伴",
-         "神祕同伴加入陣容並開啓新任務。"
+         "神秘同伴加入陣容並開啟新任務。"
         ],
         [
          "收集新資源",
@@ -7370,7 +7370,7 @@
       {
        "type": "table",
        "heading": "關鍵資源分佈",
-       "body": "釣魚點、採集點與稀有掉落分佈在地圖各處——以下是已覈實的重點。",
+       "body": "釣魚點、採集點與稀有掉落分佈在地圖各處——以下是已核實的重點。",
        "columns": [
         "資源",
         "區域",
@@ -7407,7 +7407,7 @@
       {
        "type": "note",
        "heading": "三大謎團（與常見錯誤）",
-       "body": "在毀滅的世界裏，河谷爲何依舊蔥鬱？小鎮消失的領袖去了哪裏？爲什麼那麼多前末世科技件都帶着「Eden」印記？1.0 的劇情會給出答案——而且答案與特定村民綁定，所以要和每個人交談。常見錯誤：匆匆掠過劇情物件——一路狂奔會錯過好幾處劇情節點。"
+       "body": "在毀滅的世界裡，河谷為何依舊蔥鬱？小鎮消失的領袖去了哪裡？為什麼那麼多前末世科技件都帶著「Eden」印記？1.0 的劇情會給出答案——而且答案與特定村民綁定，所以要和每個人交談。常見錯誤：匆匆掠過劇情物件——一路狂奔會錯過好幾處劇情節點。"
       },
       {
        "type": "faq",
@@ -7416,18 +7416,18 @@
        "items": [
         [
          "遊戲有多少個區域？",
-         "五個基礎區域（外圍、河谷、溼地、洞穴）加 1.0 的舊城廢墟。舊城廢墟被官方稱爲遊戲第三大區域。"
+         "五個基礎區域（外圍、河谷、溼地、洞穴）加 1.0 的舊城廢墟。舊城廢墟被官方稱為遊戲第三大區域。"
         ],
         [
          "1.0 舊城廢墟有什麼新東西？",
          "重大新區域：兇悍敵人、新 NPC 與同伴、支線任務與終局製作資源。"
         ],
         [
-         "在哪裏能找到庫瑪桑？",
+         "在哪裡能找到庫瑪桑？",
          "庫瑪桑是河谷的遊走 NPC，是稀有材料的來源 ⚠️。"
         ],
         [
-         "夜裏能探索廢墟嗎？",
+         "夜裡能探索廢墟嗎？",
          "可以，但先給無人機裝照明模塊——沒燈夜戰是經典失誤。"
         ],
         [
@@ -8136,7 +8136,7 @@
       {
        "type": "note",
        "heading": "官方確認：只有友誼，沒有戀愛",
-       "body": "官方已確認多洛可小鎮沒有戀愛/結婚機制。社交玩法以友誼爲基礎：禮物、節日、心動事件與個人劇情。請據此規劃「關係」攻略。"
+       "body": "官方已確認多洛可小鎮沒有戀愛/結婚機制。社交玩法以友誼為基礎：禮物、節日、心動事件與個人劇情。請據此規劃「關係」攻略。"
       },
       {
        "type": "table",
@@ -8200,7 +8200,7 @@
       {
        "type": "note",
        "heading": "常見錯誤",
-       "body": "因爲「離得遠」而忽略某個村民，會把自己鎖在他的食譜之外。給所有人都送同一件禮物會錯過偏好、浪費禮物。錯過節日損失最大——它們是日曆上價值最高的好感事件。"
+       "body": "因為「離得遠」而忽略某個村民，會把自己鎖在他的食譜之外。給所有人都送同一件禮物會錯過偏好、浪費禮物。錯過節日損失最大——它們是日曆上價值最高的好感事件。"
       },
       {
        "type": "faq",
@@ -8208,7 +8208,7 @@
        "items": [
         [
          "多洛可小鎮有戀愛嗎？",
-         "沒有。官方確認沒有戀愛/結婚機制，關係以友誼爲基礎。"
+         "沒有。官方確認沒有戀愛/結婚機制，關係以友誼為基礎。"
         ],
         [
          "好感重要嗎？",
@@ -9012,11 +9012,11 @@
         [
          "雨季（1–2 月）",
          "暴雨與雷暴；池塘水滿；部分魚只在這時出現",
-         "讓雨水免費灌溉；爲 1.0 自動化儲備雷暴電力"
+         "讓雨水免費灌溉；為 1.0 自動化儲備雷暴電力"
         ],
         [
          "旱季（3–4 月）",
-         "降雨減少；作物開始喫力",
+         "降雨減少；作物開始吃力",
          "多澆水；依賴「雨露均霑」基因或遮蓋"
         ],
         [
@@ -9034,7 +9034,7 @@
       {
        "type": "table",
        "heading": "農民必知的基因",
-       "body": "基因系統（2 月 EA 更新加入）允許每顆種子安裝最多 3 個基因模塊。以下是農場上最有用的突變。⚠️ 中文名爲遊戲內中文圖鑑的官方名；英文名是翻譯，可能與英文客戶端不同。",
+       "body": "基因系統（2 月 EA 更新加入）允許每顆種子安裝最多 3 個基因模塊。以下是農場上最有用的突變。⚠️ 中文名為遊戲內中文圖鑑的官方名；英文名是翻譯，可能與英文客戶端不同。",
        "columns": [
         "基因（中文名）",
         "效果",
@@ -9101,7 +9101,7 @@
        "heading": "從手工種田到自動化（1.0）",
        "body": "1.0 把你從農民變成農場經理。升級路徑是：先能源、再站點，然後讓無人機幹活。",
        "items": [
-        "建造太陽能板與風力渦輪機，爲農場生成清潔能源",
+        "建造太陽能板與風力渦輪機，為農場生成清潔能源",
         "建造農場無人機站——讓無人機在田間作業的控制點",
         "指派自動化任務：無人機端到端處理播種、培育與收割",
         "垂直堆疊很關鍵：平臺之間留出清晰航線，無人機才能到達每個花盆",
@@ -9111,7 +9111,7 @@
       {
        "type": "note",
        "heading": "旱季策略與常見錯誤",
-       "body": "旱災月（4 月）作物枯萎、價格飆升。旱災前囤貨，旱災中高價賣出。常見錯誤：種一整片巨大的平地（一場風暴全毀）、早期忽略果樹（它們後來是免費的錢）、從不升級鐮刀（羣體收割是巨大的省時工具）、在有「雨露均霑」基因時還全手工澆水、跳過 Bellad 的任務（科技點是唯一可靠的早期收入）。"
+       "body": "旱災月（4 月）作物枯萎、價格飆升。旱災前囤貨，旱災中高價賣出。常見錯誤：種一整片巨大的平地（一場風暴全毀）、早期忽略果樹（它們後來是免費的錢）、從不升級鐮刀（群體收割是巨大的省時工具）、在有「雨露均霑」基因時還全手工澆水、跳過 Bellad 的任務（科技點是唯一可靠的早期收入）。"
       },
       {
        "type": "faq",
@@ -10003,7 +10003,7 @@
      "title": "多洛可小鎮烹飪指南：食譜、增益與食材",
      "metaTitle": "多洛可小鎮烹飪指南：食譜、增益與食物",
      "metaDescription": "多洛可小鎮烹飪全解：如何解鎖 80+ 食譜、食物增益的作用，以及烹飪如何支撐探索、種田與戰鬥。",
-     "intro": "烹飪把收成變成生存力。80+ 道食譜在手，一頓合適的飯就能恢復體力或疊加速度與防禦增益——學會做什麼、何時喫、爲什麼重要。",
+     "intro": "烹飪把收成變成生存力。80+ 道食譜在手，一頓合適的飯就能恢復體力或疊加速度與防禦增益——學會做什麼、何時吃、為什麼重要。",
      "sections": [
       {
        "type": "list",
@@ -10605,7 +10605,7 @@
       },
       {
        "type": "note",
-       "heading": "爲什麼要畜牧？",
+       "heading": "為什麼要畜牧？",
        "body": "奶與蛋是廢土中的寶貴補給——烹飪食材、禮物與穩定收入。"
       }
      ]
@@ -10984,10 +10984,10 @@
      ]
     },
     "zh-TW": {
-     "title": "多洛可小鎮角色：村民檔案與祕密",
+     "title": "多洛可小鎮角色：村民檔案與秘密",
      "metaTitle": "多洛可小鎮角色：村民、好感與隱藏故事",
-     "metaDescription": "認識多洛可小鎮的村民：卡莎、公會會長貝拉、庫瑪桑等——好感如何解鎖食譜與劇情，以及他們日常之下的祕密。",
-     "intro": "多洛可小鎮的每一位居民都藏着故事。拜訪每一個人、經營羈絆、揭開他們日常之下的祕密——好感是遊戲的社交系統，回報是食譜、劇情與節日獎勵。",
+     "metaDescription": "認識多洛可小鎮的村民：卡莎、公會會長貝拉、庫瑪桑等——好感如何解鎖食譜與劇情，以及他們日常之下的秘密。",
+     "intro": "多洛可小鎮的每一位居民都藏著故事。拜訪每一個人、經營羈絆、揭開他們日常之下的秘密——好感是遊戲的社交系統，回報是食譜、劇情與節日獎勵。",
      "sections": [
       {
        "type": "table",
@@ -10996,7 +10996,7 @@
        "columns": [
         "角色",
         "關於",
-        "爲什麼重要"
+        "為什麼重要"
        ],
        "rows": [
         [
@@ -11022,7 +11022,7 @@
         [
          "舊城 NPC",
          "1.0 新同伴 ⚠️",
-         "在廢墟開啓新任務"
+         "在廢墟開啟新任務"
         ]
        ]
       },
@@ -11067,19 +11067,19 @@
       {
        "type": "note",
        "heading": "官方口徑：只有友誼，沒有戀愛",
-       "body": "開發者已確認：多洛可小鎮沒有戀愛或結婚系統。社交玩法就是友誼：禮物、節日、心事件與個人故事。別爲這款遊戲做「戀愛攻略」內容——它並不存在。"
+       "body": "開發者已確認：多洛可小鎮沒有戀愛或結婚系統。社交玩法就是友誼：禮物、節日、心事件與個人故事。別為這款遊戲做「戀愛攻略」內容——它並不存在。"
       },
       {
        "type": "note",
-       "heading": "小鎮的祕密",
-       "body": "河谷爲何依舊蔥鬱？傳說中的領袖怎麼了？爲什麼前末世科技件帶「Eden」印記？1.0 劇情會揭曉答案——答案與特定村民綁定，所以要和每個人交談。"
+       "heading": "小鎮的秘密",
+       "body": "河谷為何依舊蔥鬱？傳說中的領袖怎麼了？為什麼前末世科技件帶「Eden」印記？1.0 劇情會揭曉答案——答案與特定村民綁定，所以要和每個人交談。"
       },
       {
        "type": "list",
        "heading": "常見錯誤",
        "body": "",
        "items": [
-        "因爲「離得遠」就忽略某個村民，會永久錯過他的食譜。",
+        "因為「離得遠」就忽略某個村民，會永久錯過他的食譜。",
         "給所有人送同樣的禮物，會錯失偏好並浪費禮物。",
         "錯過節日是最大損失——它們是日曆上價值最高的好感事件。",
         "跳過貝拉的任務會讓科技樹缺乏唯一可靠的早期收入。"
@@ -11562,7 +11562,7 @@
      "title": "多洛可小鎮劇情指南：謎團與 1.0 結局",
      "metaTitle": "多洛可小鎮劇情：三大謎團與完整 1.0 結局",
      "metaDescription": "多洛可小鎮劇情詳解：繁茂的河谷、失蹤的鎮長、「Eden」印記，以及 1.0 如何補完整個故事線。",
-     "intro": "多洛可小鎮在溫馨表面下藏着完整敘事。1.0 終於補完劇情——這裏是值得留意的線索。",
+     "intro": "多洛可小鎮在溫馨表面下藏著完整敘事。1.0 終於補完劇情——這裡是值得留意的線索。",
      "sections": [
       {
        "type": "list",
@@ -11572,7 +11572,7 @@
         "你是年輕的拾荒者，在廢土中被敵人追殺。",
         "你偶然發現一個叫多洛可小鎮的定居點。",
         "你從零開始建造夢想中的農場。",
-        "漸漸地，小鎮的祕密浮出水面。"
+        "漸漸地，小鎮的秘密浮出水面。"
        ]
       },
       {
@@ -11585,7 +11585,7 @@
        "rows": [
         [
          "繁茂的河谷",
-         "在毀滅的世界裏，河谷爲何依然生機勃勃？"
+         "在毀滅的世界裡，河谷為何依然生機勃勃？"
         ],
         [
          "失蹤的鎮長",
@@ -11593,7 +11593,7 @@
         ],
         [
          "Eden 印記",
-         "爲什麼那麼多前末世科技帶着「Eden」？"
+         "為什麼那麼多前末世科技帶著「Eden」？"
         ]
        ]
       },
@@ -12210,7 +12210,7 @@
         [
          "旱季（3–4 月）",
          "雨少、更熱",
-         "作物開始喫力",
+         "作物開始吃力",
          "多澆水；用遮蓋與「雨露均霑」基因"
         ],
         [
@@ -12249,7 +12249,7 @@
       {
        "type": "list",
        "heading": "天氣就緒的農場配置",
-       "body": "把農場建得讓天氣成爲紅利而非災難。",
+       "body": "把農場建得讓天氣成為紅利而非災難。",
        "items": [
         "每天早上看天氣預報——雷暴與酸雨會提前一天預警。",
         "給露天地塊建遮蓋，把脆弱作物集中種植。",
@@ -12923,7 +12923,7 @@
      "title": "多洛可小鎮成就：全部 80 個（1.0）",
      "metaTitle": "多洛可小鎮成就：全部 80 個完整列表（1.0）",
      "metaDescription": "多洛可小鎮全部 80 個成就——基礎 43 + 1.0 新增 37——含已知成就列表與 100% 收集清單。",
-     "intro": "多洛可小鎮共有 80 個 Steam 成就：基礎遊戲 43 個，加上 1.0 發售（2026 年 8 月 6 日）新增的 37 個。這裏給出已覈實的數量與目前已知的一切。",
+     "intro": "多洛可小鎮共有 80 個 Steam 成就：基礎遊戲 43 個，加上 1.0 發售（2026 年 8 月 6 日）新增的 37 個。這裡給出已核實的數量與目前已知的一切。",
      "sections": [
       {
        "type": "table",
@@ -12990,7 +12990,7 @@
       {
        "type": "list",
        "heading": "如何跟進完整 80 個",
-       "body": "1.0 玩家陸續完成時，去哪裏跟進列表。",
+       "body": "1.0 玩家陸續完成時，去哪裡跟進列表。",
        "items": [
         "Doloc Town 的 Steam 商店頁成就列表（app 2285550）。",
         "Steam 社區指南——玩家寫的清單通常在發售後最快出現。",
@@ -13336,13 +13336,13 @@
         "打開多洛可小鎮的 Steam 創意工坊。",
         "訂閱模組。",
         "Steam 自動下載。",
-        "在遊戲模組菜單中啓用 ⚠️。"
+        "在遊戲模組菜單中啟用 ⚠️。"
        ]
       },
       {
        "type": "note",
        "heading": "備註",
-       "body": "⚠️ 創意工坊可用性與當前熱門模組正在覈實。確認後本頁將補上真實模組列表。"
+       "body": "⚠️ 創意工坊可用性與當前熱門模組正在核實。確認後本頁將補上真實模組列表。"
       }
      ]
     },
@@ -13596,8 +13596,8 @@
       },
       {
        "type": "note",
-       "heading": "爲什麼要跟蹤更新",
-       "body": "知道遊戲何時變化，能幫你找到當前有效的攻略、避開過時建議——多數英文攻略仍停留在 EA 階段，因此像本站這樣 1.0 感知的網站纔是可靠來源。"
+       "heading": "為什麼要跟蹤更新",
+       "body": "知道遊戲何時變化，能幫你找到當前有效的攻略、避開過時建議——多數英文攻略仍停留在 EA 階段，因此像本站這樣 1.0 感知的網站才是可靠來源。"
       }
      ]
     },
@@ -13898,7 +13898,7 @@
         ],
         [
          "多洛可小鎮通過 Steam Deck 認證了嗎？",
-         "目前標註爲「可玩」（Playable），不是「已驗證」（Verified）。團隊計劃在後續更新中修復已知問題並衝擊 Verified。"
+         "目前標註為「可玩」（Playable），不是「已驗證」（Verified）。團隊計劃在後續更新中修復已知問題並衝擊 Verified。"
         ],
         [
          "多洛可小鎮多少錢？",
@@ -13910,7 +13910,7 @@
         ],
         [
          "多洛可小鎮有戀愛嗎？",
-         "沒有——官方確認沒有戀愛/結婚機制，社交以友誼爲基礎。"
+         "沒有——官方確認沒有戀愛/結婚機制，社交以友誼為基礎。"
         ],
         [
          "支持哪些平臺？",
@@ -14433,14 +14433,14 @@
     "zh-TW": {
      "title": "多洛可小鎮 Steam Deck：兼容性指南",
      "metaTitle": "多洛可小鎮 Steam Deck：可玩狀態與設置",
-     "metaDescription": "多洛可小鎮 Steam Deck 兼容性：當前爲「可玩」（非「已驗證」）、已知注意事項與開發者的後續計劃。",
-     "intro": "多洛可小鎮可以在 Steam Deck 上運行，但官方標註爲「可玩」而非「已驗證」。以下是你需要知道的。",
+     "metaDescription": "多洛可小鎮 Steam Deck 兼容性：當前為「可玩」（非「已驗證」）、已知注意事項與開發者的後續計劃。",
+     "intro": "多洛可小鎮可以在 Steam Deck 上運行，但官方標註為「可玩」而非「已驗證」。以下是你需要知道的。",
      "sections": [
       {
        "type": "list",
        "heading": "當前狀態",
        "items": [
-        "官方在 Steam Deck 上標註爲「可玩」。",
+        "官方在 Steam Deck 上標註為「可玩」。",
         "截至 1.0 發佈仍非「已驗證」。",
         "團隊表示問題多半源於待優化的內容，而非 Bug。",
         "他們計劃在後續更新中修復已知問題並衝擊 Verified。"
@@ -14534,23 +14534,27 @@
     {
      "type": "table",
      "heading": "Price & Bundles",
-     "body": "Official pricing as of August 2026, checked against the Steam store page and the official 1.0 announcement.",
+     "body": "Official pricing checked against the Steam store page and Steam's own regional price data on August 8, 2026.",
      "columns": [
       "Item",
       "Detail"
      ],
      "rows": [
       [
-       "Standard price (CN)",
-       "¥58.00 on Steam"
+       "Standard price",
+       "US$19.99 on Steam"
       ],
       [
        "Launch discount",
-       "20% off → ¥46.40 during the 1.0 launch promotion (until August 19, 2026)"
+       "20% off → US$15.99. Steam shows \"Offer ends August 19\""
+      ],
+      [
+       "Other regions",
+       "CN¥58.00 · JP¥2,000 · KR₩20,000 · 19,99€ (EU) — the same 20% launch discount applies in every region"
       ],
       [
        "Supporter Pack",
-       "Optional bundle with extra digital content — check the Steam page for current contents"
+       "Bundle of 3: the game + Digital Artbook + Original Soundtrack, US$22.92 → US$19.32 (16% off)"
       ],
       [
        "Platforms",
@@ -14565,11 +14569,12 @@
     {
      "type": "list",
      "heading": "Where to Buy Online",
-     "body": "Beyond Steam, Doloc Town is sold at these storefronts. Humble and Green Man Gaming are authorized retailers; isThereAnyDeal tracks live prices across stores. Buying through any of them supports the same developers.",
+     "body": "Beyond Steam, Doloc Town is sold at these storefronts. Humble, Green Man Gaming and GamersGate are authorized retailers selling Steam keys; isThereAnyDeal tracks live prices across all of them. Stock and prices are set per region, so what you see can differ from what we checked.",
      "items": [
       "Steam — the official storefront and home of the 1.0 launch discount",
       "Humble Store — authorized store with regional pricing",
       "Green Man Gaming — authorized store with frequent discounts",
+      "GamersGate — authorized store, 20% off (US$19.99 → US$15.99), but it showed \"Out of stock\" when we checked on August 8, 2026; keys there are region-locked to the country you buy from",
       "isThereAnyDeal — live price comparison across all tracked stores"
      ]
     },
@@ -14579,7 +14584,8 @@
      "body": "What you need to know before buying.",
      "items": [
       "Buy on Steam — the official store page is the main place to get Doloc Town",
-      "The 1.0 launch promotion takes 20% off, so ¥46.40 until August 19, 2026",
+      "The 1.0 launch promotion takes 20% off, so US$15.99 until August 19, 2026",
+      "Authorized key stores (Humble, Green Man Gaming, GamersGate) sell the same Steam key; GamersGate was out of stock on August 8, 2026",
       "Doloc Town is a single-player game — there is no multiplayer or co-op at 1.0",
       "The Supporter Pack is optional and not required to play the full game",
       "Official 1.0 system language support covers 9 languages, including English, Chinese and Japanese"
@@ -14596,11 +14602,15 @@
       ],
       [
        "How much does Doloc Town cost?",
-       "¥58.00 standard (regional pricing varies). The 1.0 launch discount makes it ¥46.40 until August 19, 2026."
+       "US$19.99 standard. The 1.0 launch discount takes 20% off — US$15.99 until August 19, 2026. Regional prices: CN¥58.00, JP¥2,000, KR₩20,000, 19,99€ in the EU, all with the same 20% off."
+      ],
+      [
+       "Can I buy Doloc Town on GamersGate?",
+       "GamersGate lists it as an authorized retailer at 20% off (US$19.99 → US$15.99), but it showed \"Out of stock\" in both its US and Singapore storefronts when we checked on August 8, 2026 — so Steam is the reliable route right now. GamersGate keys are also region-locked to the country you buy from."
       ],
       [
        "Is there a Supporter Pack?",
-       "Yes — an optional bundle with extra digital content. Check the Steam page for the current contents and price."
+       "Yes — a 3-item bundle: the game plus the Digital Artbook and the Original Soundtrack, US$22.92 down to US$19.32 (16% off) on Steam. It is optional and not needed to play the full game."
       ],
       [
        "Is Doloc Town multiplayer?",
@@ -14649,6 +14659,17 @@
      }
     },
     {
+     "label": "GamersGate — Doloc Town (Steam key, authorized retailer)",
+     "url": "https://www.gamersgate.com/product/doloc-town/",
+     "labels": {
+      "zh-CN": "GamersGate — 多洛可小镇（Steam key，授权零售商）",
+      "zh-TW": "GamersGate — 多洛可小鎮（Steam key，授權零售商）",
+      "ja": "GamersGate — ドロックタウン（Steam キー、正規販売店）",
+      "ko": "GamersGate — 돌록 타운 (Steam 키, 공식 인증 판매처)",
+      "es": "GamersGate — Doloc Town (clave de Steam, tienda autorizada)"
+     }
+    },
+    {
      "label": "isThereAnyDeal — Doloc Town prices",
      "url": "https://isthereanydeal.com/product/01961f57-3655-7097-a075-9645a29770a9/",
      "labels": {
@@ -14673,7 +14694,7 @@
       {
        "type": "table",
        "heading": "价格与捆绑包",
-       "body": "截至 2026 年 8 月的官方价格，已核对 Steam 商店页与官方 1.0 公告。",
+       "body": "2026 年 8 月 8 日核对 Steam 商店页与 Steam 各区官方价格数据。",
        "columns": [
         "项目",
         "详情"
@@ -14685,11 +14706,15 @@
         ],
         [
          "首发折扣",
-         "1.0 首发促销 20% 折扣 → ¥46.40（至 2026 年 8 月 19 日）"
+         "20% 折扣 → ¥46.40（Steam 标注促销至 8 月 19 日）"
+        ],
+        [
+         "其他区价格",
+         "美区 US$19.99 · 日区 2,000 日元 · 韩区 20,000 韩元 · 欧区 19,99€——各区同为 20% 首发折扣"
         ],
         [
          "支援者包",
-         "可选捆绑包，含额外数字内容——当前内容见 Steam 页面"
+         "三件套捆绑包：本体 + 数字艺术设定集 + 原声带，US$22.92 → US$19.32（16% 折扣）"
         ],
         [
          "平台",
@@ -14704,11 +14729,12 @@
       {
        "type": "list",
        "heading": "线上购买渠道",
-       "body": "除 Steam 外，Doloc Town 还在以下商店销售。Humble 与 Green Man Gaming 是授权零售商；isThereAnyDeal 实时追踪各商店价格。从任意渠道购买都同样支持开发者。",
+       "body": "除 Steam 外，Doloc Town 还在以下商店销售。Humble、Green Man Gaming 与 GamersGate 都是卖 Steam key 的授权零售商；isThereAnyDeal 实时追踪各商店价格。库存与价格按地区分别设定，你看到的可能与我们核对时不同。",
        "items": [
         "Steam——官方商店，1.0 首发折扣的主渠道",
         "Humble Store——授权商店，支持区域定价",
         "Green Man Gaming——授权商店，常有折扣",
+        "GamersGate——授权商店，8 折（US$19.99 → US$15.99）；但我们 2026 年 8 月 8 日核对时显示「缺货」，且其 key 锁定购买时所在的国家/地区",
         "isThereAnyDeal——全商店实时比价工具"
        ]
       },
@@ -14718,7 +14744,8 @@
        "body": "购买前需要知道的信息。",
        "items": [
         "在 Steam 购买——官方商店页是获得多洛可小镇的主要渠道",
-        "1.0 首发促销 20% 折扣，至 2026 年 8 月 19 日 ¥46.40",
+        "1.0 首发促销 20% 折扣，至 2026 年 8 月 19 日 ¥46.40（美区 US$15.99）",
+        "授权 key 商店（Humble / Green Man Gaming / GamersGate）卖的是同一把 Steam key；GamersGate 在 8 月 8 日缺货",
         "多洛可小镇是单人游戏——1.0 没有多人或合作模式",
         "支援者包是可选项，不是游玩完整游戏所必需的",
         "官方 1.0 语言支持 9 种，包括英语、中文与日语"
@@ -14734,11 +14761,15 @@
         ],
         [
          "多洛可小镇多少钱？",
-         "标准价 ¥58.00（区域定价不同）。1.0 首发折扣至 2026 年 8 月 19 日 ¥46.40。"
+         "国区标准价 ¥58.00，1.0 首发 20% 折扣至 2026 年 8 月 19 日为 ¥46.40。其他区：美区 US$19.99、日区 2,000 日元、韩区 20,000 韩元、欧区 19,99€，折扣同为 20%。"
+        ],
+        [
+         "能在 GamersGate 买到多洛可小镇吗？",
+         "GamersGate 作为授权零售商有上架，标 8 折（US$19.99 → US$15.99），但我们 2026 年 8 月 8 日核对时，美区与新加坡区都显示「缺货」——所以现在稳妥的渠道还是 Steam。另外 GamersGate 的 key 锁定购买时所在的国家/地区。"
         ],
         [
          "有支援者包吗？",
-         "有——可选捆绑包，含额外数字内容。当前内容与价格见 Steam 页面。"
+         "有——三件套捆绑包：本体 + 数字艺术设定集 + 原声带，Steam 上 US$22.92 降至 US$19.32（16% 折扣）。可选，不影响游玩完整游戏。"
         ],
         [
          "多洛可小镇能联机吗？",
@@ -14757,15 +14788,15 @@
      ]
     },
     "zh-TW": {
-     "title": "在哪裏購買多洛可小鎮（價格、折扣與平臺）",
-     "metaTitle": "在哪裏購買多洛可小鎮：價格與平臺（2026）",
-     "metaDescription": "在哪裏購買多洛可小鎮、Steam 各區價格、首發折扣、支援者包以及支持哪些平臺。",
-     "intro": "多洛可小鎮 1.0 於 2026 年 8 月 6 日發售。這裏告訴你確切在哪裏買、多少錢，以及捆綁包裏有什麼。",
+     "title": "在哪裡購買多洛可小鎮（價格、折扣與平臺）",
+     "metaTitle": "在哪裡購買多洛可小鎮：價格與平臺（2026）",
+     "metaDescription": "在哪裡購買多洛可小鎮、Steam 各區價格、首發折扣、支援者包以及支持哪些平臺。",
+     "intro": "多洛可小鎮 1.0 於 2026 年 8 月 6 日發售。這裡告訴你確切在哪裡買、多少錢，以及捆綁包裡有什麼。",
      "sections": [
       {
        "type": "table",
        "heading": "價格與捆綁包",
-       "body": "截至 2026 年 8 月的官方價格，已覈對 Steam 商店頁與官方 1.0 公告。",
+       "body": "2026 年 8 月 8 日核對 Steam 商店頁與 Steam 各區官方價格數據。",
        "columns": [
         "項目",
         "詳情"
@@ -14777,11 +14808,15 @@
         ],
         [
          "首發折扣",
-         "1.0 首發促銷 20% 折扣 → ¥46.40（至 2026 年 8 月 19 日）"
+         "20% 折扣 → ¥46.40（Steam 標註促銷至 8 月 19 日）"
+        ],
+        [
+         "其他區價格",
+         "美區 US$19.99 · 日區 2,000 日元 · 韓區 20,000 韓元 · 歐區 19,99€——各區同為 20% 首發折扣"
         ],
         [
          "支援者包",
-         "可選捆綁包，含額外數字內容——當前內容見 Steam 頁面"
+         "三件套捆綁包：本體 + 數字藝術設定集 + 原聲帶，US$22.92 → US$19.32（16% 折扣）"
         ],
         [
          "平臺",
@@ -14796,11 +14831,12 @@
       {
        "type": "list",
        "heading": "線上購買渠道",
-       "body": "除 Steam 外，Doloc Town 還在以下商店銷售。Humble 與 Green Man Gaming 是授權零售商；isThereAnyDeal 實時追蹤各商店價格。從任意渠道購買都同樣支持開發者。",
+       "body": "除 Steam 外，Doloc Town 還在以下商店銷售。Humble、Green Man Gaming 與 GamersGate 都是賣 Steam key 的授權零售商；isThereAnyDeal 實時追蹤各商店價格。庫存與價格按地區分別設定，你看到的可能與我們核對時不同。",
        "items": [
         "Steam——官方商店，1.0 首發折扣的主渠道",
         "Humble Store——授權商店，支持區域定價",
         "Green Man Gaming——授權商店，常有折扣",
+        "GamersGate——授權商店，8 折（US$19.99 → US$15.99）；但我們 2026 年 8 月 8 日核對時顯示「缺貨」，且其 key 鎖定購買時所在的國家/地區",
         "isThereAnyDeal——全商店實時比價工具"
        ]
       },
@@ -14810,7 +14846,8 @@
        "body": "購買前需要知道的信息。",
        "items": [
         "在 Steam 購買——官方商店頁是獲得多洛可小鎮的主要渠道",
-        "1.0 首發促銷 20% 折扣，至 2026 年 8 月 19 日 ¥46.40",
+        "1.0 首發促銷 20% 折扣，至 2026 年 8 月 19 日 ¥46.40（美區 US$15.99）",
+        "授權 key 商店（Humble / Green Man Gaming / GamersGate）賣的是同一把 Steam key；GamersGate 在 8 月 8 日缺貨",
         "多洛可小鎮是單人遊戲——1.0 沒有多人或合作模式",
         "支援者包是可選項，不是遊玩完整遊戲所必需的",
         "官方 1.0 語言支持 9 種，包括英語、中文與日語"
@@ -14821,20 +14858,24 @@
        "heading": "購買常見問題",
        "items": [
         [
-         "在哪裏購買多洛可小鎮？",
+         "在哪裡購買多洛可小鎮？",
          "在 Steam——store.steampowered.com/app/2285550。這是 PC 版的主要商店。"
         ],
         [
          "多洛可小鎮多少錢？",
-         "標準價 ¥58.00（區域定價不同）。1.0 首發折扣至 2026 年 8 月 19 日 ¥46.40。"
+         "國區標準價 ¥58.00，1.0 首發 20% 折扣至 2026 年 8 月 19 日為 ¥46.40。其他區：美區 US$19.99、日區 2,000 日元、韓區 20,000 韓元、歐區 19,99€，折扣同為 20%。"
+        ],
+        [
+         "能在 GamersGate 買到多洛可小鎮嗎？",
+         "GamersGate 作為授權零售商有上架，標 8 折（US$19.99 → US$15.99），但我們 2026 年 8 月 8 日核對時，美區與新加坡區都顯示「缺貨」——所以現在穩妥的渠道還是 Steam。另外 GamersGate 的 key 鎖定購買時所在的國家/地區。"
         ],
         [
          "有支援者包嗎？",
-         "有——可選捆綁包，含額外數字內容。當前內容與價格見 Steam 頁面。"
+         "有——三件套捆綁包：本體 + 數字藝術設定集 + 原聲帶，Steam 上 US$22.92 降至 US$19.32（16% 折扣）。可選，不影響遊玩完整遊戲。"
         ],
         [
          "多洛可小鎮能聯機嗎？",
-         "不能——開發者確認 1.0 爲純單人體驗。合作模式未來不排除。"
+         "不能——開發者確認 1.0 為純單人體驗。合作模式未來不排除。"
         ],
         [
          "支持哪些語言？",
@@ -14857,23 +14898,27 @@
       {
        "type": "table",
        "heading": "価格とバンドル",
-       "body": "2026年8月時点の公式価格（Steam ストアと公式 1.0 アナウンスで確認）。",
+       "body": "2026年8月8日に Steam ストアページと Steam の地域別公式価格データで確認。",
        "columns": [
         "項目",
         "詳細"
        ],
        "rows": [
         [
-         "標準価格（中国）",
-         "Steam で ¥58.00"
+         "標準価格（日本）",
+         "Steam で 2,000円"
         ],
         [
          "発売記念割引",
-         "1.0 発売記念20%オフ → ¥46.40（2026年8月19日まで）"
+         "20%オフ → 1,600円（Steam の表示は「8月19日まで」）"
+        ],
+        [
+         "他地域の価格",
+         "米国 US$19.99 ・ 中国 58元 ・ 韓国 20,000ウォン ・ 欧州 19,99€ — いずれも同じ20%オフ"
         ],
         [
          "サポーターパック",
-         "追加デジタルコンテンツ付きの任意バンドル——内容は Steam ページで確認"
+         "3点セット：本編 + デジタルアートブック + オリジナルサウンドトラック、US$22.92 → US$19.32（16%オフ）"
         ],
         [
          "対応機種",
@@ -14888,11 +14933,12 @@
       {
        "type": "list",
        "heading": "オンライン購入先",
-       "body": "Steam 以外では、以下のストアでドロックタウンを購入できます。Humble と Green Man Gaming は正規小売店、isThereAnyDeal は各ストアの価格をリアルタイム比較します。どの店で買っても同じ開発者を支援します。",
+       "body": "Steam 以外では、以下のストアでドロックタウンを購入できます。Humble・Green Man Gaming・GamersGate はいずれも Steam キーを扱う正規小売店、isThereAnyDeal は各ストアの価格をリアルタイム比較します。在庫と価格は地域ごとに設定されるため、表示は当サイトの確認時と異なる場合があります。",
        "items": [
         "Steam——公式ストア、1.0発売記念割引の主な窓口",
         "Humble Store——正規店、地域価格に対応",
         "Green Man Gaming——正規店、頻繁に割引",
+        "GamersGate——正規店、20%オフ（US$19.99 → US$15.99）。ただし2026年8月8日の確認時は「在庫切れ」表示で、キーは購入した国・地域にロックされます",
         "isThereAnyDeal——全ストアの価格をリアルタイム比較"
        ]
       },
@@ -14902,7 +14948,8 @@
        "body": "購入前に知っておきたい情報。",
        "items": [
         "Steam で購入 — 公式ストアがドロックタウンの主な入手先",
-        "1.0 発売記念20%オフで、2026年8月19日まで ¥46.40",
+        "1.0 発売記念20%オフで、2026年8月19日まで 1,600円（米国は US$15.99）",
+        "正規キーストア（Humble / Green Man Gaming / GamersGate）が売るのは同じ Steam キー。GamersGate は8月8日時点で在庫切れ",
         "ドロックタウンはシングルプレイゲーム — 1.0 にマルチや協力プレイはありません",
         "サポーターパックは任意で、本編プレイに必須ではありません",
         "公式 1.0 の言語対応は9言語（英語・中国語・日本語含む）"
@@ -14918,11 +14965,15 @@
         ],
         [
          "いくら？",
-         "標準 ¥58.00（地域価格あり）。1.0 発売記念割引で2026年8月19日まで ¥46.40。"
+         "日本は標準2,000円、1.0 発売記念20%オフで2026年8月19日まで1,600円。他地域は米国 US$19.99、中国 58元、韓国 20,000ウォン、欧州 19,99€（割引率はいずれも20%）。"
+        ],
+        [
+         "GamersGate で買える？",
+         "GamersGate は正規小売店として20%オフ（US$19.99 → US$15.99）で掲載していますが、2026年8月8日に確認した時点では米国・シンガポールのどちらのストアでも「在庫切れ」でした。確実なのは今のところ Steam です。なお GamersGate のキーは購入した国・地域にロックされます。"
         ],
         [
          "サポーターパックは？",
-         "あります — 追加デジタルコンテンツ付きの任意バンドル。内容と価格は Steam ページで。"
+         "あります — 3点セット（本編 + デジタルアートブック + オリジナルサウンドトラック）で、Steam では US$22.92 → US$19.32（16%オフ）。任意購入で、本編プレイには不要です。"
         ],
         [
          "マルチプレイは？",
@@ -14949,23 +15000,27 @@
       {
        "type": "table",
        "heading": "가격 & 번들",
-       "body": "2026년 8월 기준 공식 가격 (Steam 상점 및 공식 1.0 발표 확인).",
+       "body": "2026년 8월 8일 Steam 상점 페이지와 Steam 지역별 공식 가격 데이터로 확인.",
        "columns": [
         "항목",
         "내용"
        ],
        "rows": [
         [
-         "표준 가격(중국)",
-         "Steam ¥58.00"
+         "표준 가격(한국)",
+         "Steam 20,000원"
         ],
         [
          "출시 할인",
-         "1.0 출시 20% 할인 → ¥46.40 (2026년 8월 19일까지)"
+         "20% 할인 → 16,000원 (Steam 표기 \"8월 19일까지\")"
+        ],
+        [
+         "다른 지역 가격",
+         "미국 US$19.99 · 중국 58위안 · 일본 2,000엔 · 유럽 19,99€ — 모두 동일하게 20% 할인"
         ],
         [
          "서포터 팩",
-         "추가 디지털 콘텐츠 포함 선택 번들 — 내용은 Steam 페이지에서 확인"
+         "3종 번들: 본편 + 디지털 아트북 + 오리지널 사운드트랙, US$22.92 → US$19.32 (16% 할인)"
         ],
         [
          "플랫폼",
@@ -14980,11 +15035,12 @@
       {
        "type": "list",
        "heading": "온라인 구매처",
-       "body": "Steam 외에도 다음 스토어에서 돌록 타운을 구매할 수 있습니다. Humble과 Green Man Gaming은 공인 리테일러이며, isThereAnyDeal은 모든 스토어의 실시간 가격을 비교합니다. 어느 곳에서 사든 같은 개발자를 지원합니다.",
+       "body": "Steam 외에도 다음 스토어에서 돌록 타운을 구매할 수 있습니다. Humble·Green Man Gaming·GamersGate는 모두 Steam 키를 파는 공인 리테일러이며, isThereAnyDeal은 모든 스토어의 실시간 가격을 비교합니다. 재고와 가격은 지역별로 정해지므로 표시 내용이 저희가 확인한 시점과 다를 수 있습니다.",
        "items": [
         "Steam — 공식 스토어, 1.0 출시 할인의 주요 채널",
         "Humble Store — 공인 스토어, 지역별 가격 지원",
         "Green Man Gaming — 공인 스토어, 잦은 할인",
+        "GamersGate — 공인 스토어, 20% 할인 (US$19.99 → US$15.99). 다만 2026년 8월 8일 확인 시 \"품절\" 표시였고, 키는 구매한 국가·지역에 잠깁니다",
         "isThereAnyDeal — 전체 스토어 실시간 가격 비교"
        ]
       },
@@ -14994,7 +15050,8 @@
        "body": "구매 전 알아야 할 정보.",
        "items": [
         "Steam에서 구매 — 공식 스토어가 돌록 타운의 주요 판매처",
-        "1.0 출시 20% 할인으로 2026년 8월 19일까지 ¥46.40",
+        "1.0 출시 20% 할인으로 2026년 8월 19일까지 16,000원 (미국은 US$15.99)",
+        "공인 키 스토어(Humble / Green Man Gaming / GamersGate)가 파는 것은 같은 Steam 키. GamersGate는 8월 8일 기준 품절",
         "돌록 타운은 싱글 플레이 게임 — 1.0에 멀티나 협동 없음",
         "서포터 팩은 선택 사항이며 본편 플레이에 필수 아님",
         "공식 1.0 언어 지원 9개: 영어, 중국어, 일본어 포함"
@@ -15010,11 +15067,15 @@
         ],
         [
          "얼마인가요?",
-         "표준 ¥58.00 (지역 가격 상이). 1.0 출시 할인으로 2026년 8월 19일까지 ¥46.40."
+         "한국은 표준 20,000원, 1.0 출시 20% 할인으로 2026년 8월 19일까지 16,000원. 다른 지역은 미국 US$19.99, 중국 58위안, 일본 2,000엔, 유럽 19,99€ (할인율은 모두 20%)."
+        ],
+        [
+         "GamersGate에서 살 수 있나요?",
+         "GamersGate는 공인 리테일러로 20% 할인 (US$19.99 → US$15.99)에 올려두었지만, 2026년 8월 8일 확인 시 미국·싱가포르 스토어 모두 \"품절\"이었습니다. 지금 확실한 경로는 Steam입니다. 또한 GamersGate 키는 구매한 국가·지역에 잠깁니다."
         ],
         [
          "서포터 팩이 있나요?",
-         "네 — 추가 디지털 콘텐츠가 포함된 선택 번들입니다. 내용과 가격은 Steam 페이지에서."
+         "네 — 3종 번들(본편 + 디지털 아트북 + 오리지널 사운드트랙)로 Steam에서 US$22.92 → US$19.32 (16% 할인). 선택 사항이며 본편 플레이에 필수는 아닙니다."
         ],
         [
          "멀티플레이 되나요?",
@@ -15041,23 +15102,27 @@
       {
        "type": "table",
        "heading": "Precio y paquetes",
-       "body": "Precio oficial a agosto de 2026, verificado en la tienda de Steam y el anuncio oficial de 1.0.",
+       "body": "Precio oficial verificado el 8 de agosto de 2026 en la tienda de Steam y en los datos de precio por región de Steam.",
        "columns": [
         "Elemento",
         "Detalle"
        ],
        "rows": [
         [
-         "Precio estándar (CN)",
-         "¥58.00 en Steam"
+         "Precio estándar (España / UE)",
+         "19,99€ en Steam"
         ],
         [
          "Descuento de lanzamiento",
-         "20% de descuento → ¥46.40 durante la promoción de 1.0 (hasta el 19 de agosto de 2026)"
+         "20% de descuento → 15,99€ (Steam indica «hasta el 19 de agosto»)"
+        ],
+        [
+         "Precios en otras regiones",
+         "EE. UU. US$19.99 · China 58 CNY · Japón 2000 JPY · Corea 20 000 KRW — con el mismo 20% de descuento"
         ],
         [
          "Paquete de apoyo",
-         "Paquete opcional con contenido digital extra — consulta el contenido actual en Steam"
+         "Pack de 3: el juego + Libro de arte digital + Banda sonora original, US$22.92 → US$19.32 (16% de descuento)"
         ],
         [
          "Plataformas",
@@ -15072,11 +15137,12 @@
       {
        "type": "list",
        "heading": "Dónde comprarlo online",
-       "body": "Además de Steam, Doloc Town se vende en estas tiendas. Humble y Green Man Gaming son minoristas autorizados; isThereAnyDeal compara precios en vivo en todas las tiendas. Comprar en cualquiera apoya a los mismos desarrolladores.",
+       "body": "Además de Steam, Doloc Town se vende en estas tiendas. Humble, Green Man Gaming y GamersGate son minoristas autorizados que venden claves de Steam; isThereAnyDeal compara precios en vivo en todas ellas. El stock y los precios se fijan por región, así que lo que veas puede diferir de lo que comprobamos.",
        "items": [
         "Steam: la tienda oficial y el hogar del descuento de lanzamiento 1.0",
         "Humble Store: tienda autorizada con precios regionales",
         "Green Man Gaming: tienda autorizada con descuentos frecuentes",
+        "GamersGate: tienda autorizada, 20% de descuento (US$19.99 → US$15.99), pero aparecía «Agotado» cuando lo comprobamos el 8 de agosto de 2026; sus claves quedan bloqueadas al país donde compras",
         "isThereAnyDeal: comparador de precios en vivo de todas las tiendas"
        ]
       },
@@ -15086,7 +15152,8 @@
        "body": "Lo que necesitas saber antes de comprar.",
        "items": [
         "Cómpralo en Steam — la tienda oficial es el lugar principal para conseguir Doloc Town",
-        "La promoción de lanzamiento de 1.0 ofrece un 20 % de descuento: ¥46.40 hasta el 19 de agosto de 2026",
+        "La promoción de lanzamiento de 1.0 ofrece un 20 % de descuento: 15,99€ hasta el 19 de agosto de 2026",
+        "Las tiendas de claves autorizadas (Humble, Green Man Gaming, GamersGate) venden la misma clave de Steam; GamersGate estaba agotado el 8 de agosto de 2026",
         "Doloc Town es un juego de un jugador — no hay multijugador ni cooperativo en 1.0",
         "El paquete de apoyo es opcional y no es necesario para jugar al juego completo",
         "El 1.0 oficial admite 9 idiomas, incluidos inglés, chino y japonés"
@@ -15102,11 +15169,15 @@
         ],
         [
          "¿Cuánto cuesta?",
-         "¥58.00 estándar (el precio regional varía). El descuento de lanzamiento de 1.0 lo deja en ¥46.40 hasta el 19 de agosto de 2026."
+         "19,99€ estándar en la UE; el descuento de lanzamiento de 1.0 lo deja en 15,99€ hasta el 19 de agosto de 2026. En otras regiones: EE. UU. US$19.99, China 58 CNY, Japón 2000 JPY, Corea 20 000 KRW, todas con el mismo 20%."
+        ],
+        [
+         "¿Puedo comprar Doloc Town en GamersGate?",
+         "GamersGate lo tiene como minorista autorizado con un 20% de descuento (US$19.99 → US$15.99), pero aparecía «Agotado» tanto en su tienda de EE. UU. como en la de Singapur cuando lo comprobamos el 8 de agosto de 2026, así que Steam es la vía fiable ahora mismo. Además, las claves de GamersGate quedan bloqueadas al país donde compras."
         ],
         [
          "¿Hay paquete de apoyo?",
-         "Sí — un paquete opcional con contenido digital extra. Consulta el contenido y precio actuales en Steam."
+         "Sí — un pack de 3: el juego más el Libro de arte digital y la Banda sonora original, de US$22.92 a US$19.32 (16% de descuento) en Steam. Es opcional y no hace falta para jugar al juego completo."
         ],
         [
          "¿Doloc Town es multijugador?",
@@ -15322,7 +15393,7 @@
     "zh-TW": {
      "title": "多洛可小鎮通關要多久？",
      "metaTitle": "多洛可小鎮時長：通關要多久（2026）",
-     "metaDescription": "多洛可小鎮通關時長：核心遊戲 30+ 小時、100% 完成 100+ 小時，來源爲官方商店頁。",
+     "metaDescription": "多洛可小鎮通關時長：核心遊戲 30+ 小時、100% 完成 100+ 小時，來源為官方商店頁。",
      "intro": "多洛可小鎮是內容深厚的農場模擬，通關時間取決於你想做多少事。官方商店頁給出了明確數字。",
      "sections": [
       {
