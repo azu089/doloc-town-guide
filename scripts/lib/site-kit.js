@@ -147,7 +147,13 @@ function createLastmod({ manifestPath, today }) {
     dateFor(key) { return (next[key] || prev[key] || {}).date || today; },
     save() {
       fs.mkdirSync(path.dirname(manifestPath), { recursive: true });
-      fs.writeFileSync(manifestPath, JSON.stringify(next, Object.keys(next).sort(), 2) + "\n");
+      // ⚠️ 别写成 JSON.stringify(next, Object.keys(next).sort(), 2)：
+      //    第二个参数是 replacer 白名单且对所有嵌套层生效，白名单里只有 URL 键、
+      //    没有 hash/date，会把每个条目存成 {}，lastmod 于是静默退化成「永远是今天」。
+      //    要排序就自己建有序对象。
+      const sorted = {};
+      for (const k of Object.keys(next).sort()) sorted[k] = next[k];
+      fs.writeFileSync(manifestPath, JSON.stringify(sorted, null, 2) + "\n");
       const changed = Object.keys(next).filter(k => next[k].date === today).length;
       return { total: Object.keys(next).length, changed };
     },
