@@ -199,6 +199,79 @@ function staticDesc(slug, lang, siteName, fallbackTitle) {
   return t ? t(siteName) : `${fallbackTitle} — ${siteName}`;
 }
 
+/* ---------- 联盟链接（affiliate） ----------
+ * 为什么这层必须共用：
+ *   1. Google 链接垃圾政策要求联盟链接带 rel="sponsored"（或 nofollow）。漏了是人工处罚风险，
+ *      这条没有任何设计自由度，三站必须一致。
+ *   2. 各联盟网络链接格式不同：Humble 是加 query 参数，Impact/Partnerize/Awin 是整条包一层跳转链接。
+ *      所以配置用「模板」而不是写死参数名——拿到哪种格式都能填进去。
+ *   3. 没配 ID 时原样返回原链接。注册联盟前后不用改任何内容，只改 site.json 一处。
+ *
+ * site.json 配置示例（拿到联盟 ID 后再填，键是商店域名，不带 www）：
+ *   "affiliates": {
+ *     "humblebundle.com":   { "type": "param", "param": "partner", "value": "yourid" },
+ *     "greenmangaming.com": { "type": "wrap",  "template": "https://prf.hn/click/camref:xxx/destination:{url}" }
+ *   }
+ *   type=param → 在原 URL 上加 ?param=value
+ *   type=wrap  → 用 template 包一层，{url} 会被替换成 encodeURIComponent(原URL)，{raw} 是不编码的原URL
+ */
+
+/** 取域名并去掉 www.，用作 affiliates 配置的键 */
+function hostKey(url) {
+  try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return ""; }
+}
+
+function createAffiliate(config = {}) {
+  const rules = config || {};
+  const ruleFor = url => rules[hostKey(url)] || null;
+
+  /** 把原始商店 URL 转成带联盟追踪的 URL；没配规则就原样返回 */
+  function apply(url) {
+    const r = ruleFor(url);
+    if (!r) return String(url);
+    if (r.type === "param" && r.param && r.value) {
+      const u = new URL(url);
+      u.searchParams.set(r.param, r.value);
+      return u.toString();
+    }
+    if (r.type === "wrap" && r.template) {
+      return r.template
+        .replace("{url}", encodeURIComponent(String(url)))
+        .replace("{raw}", String(url));
+    }
+    return String(url);
+  }
+
+  return {
+    apply,
+    /** 这条链接是否会被计佣（决定要不要 rel="sponsored" 和是否触发页面披露） */
+    isPartner: url => Boolean(ruleFor(url)),
+    /**
+     * 渲染一条外链。联盟链接自动带 rel="sponsored nofollow noopener"，
+     * 普通来源链接保持 rel="noopener"（不加 nofollow，来源可信度是本项目的护城河）
+     */
+    anchor({ url, text, suffix = "" }) {
+      const partner = Boolean(ruleFor(url));
+      const rel = partner ? "sponsored nofollow noopener" : "noopener";
+      return `<a href="${esc(apply(url))}" target="_blank" rel="${rel}">${esc(text)}${suffix}</a>`;
+    },
+    /** 页面里有任何一条联盟链接就必须显示披露（FTC 要求） */
+    needsDisclosure: urls => (urls || []).some(u => Boolean(ruleFor(u)))
+  };
+}
+
+/** FTC 联盟披露文案。必须出现在含联盟链接的页面上，且要在链接附近可见 */
+const AFFILIATE_DISCLOSURE = {
+  "en": "Some store links on this page are affiliate links: if you buy through them we may earn a small commission at no extra cost to you. This never changes which stores we list, the prices we quote, or what we write about the game.",
+  "zh-CN": "本页部分商店链接为联盟链接：通过这些链接购买，我们可能获得少量佣金，你不会因此多付钱。这不会影响我们列出哪些商店、标注什么价格，也不会影响我们对游戏的评价。",
+  "zh-TW": "本頁部分商店連結為聯盟連結：透過這些連結購買，我們可能獲得少量佣金，你不會因此多付錢。這不會影響我們列出哪些商店、標註什麼價格，也不會影響我們對遊戲的評價。",
+  "ja": "このページの一部のストアリンクはアフィリエイトリンクです：リンク経由でご購入いただくと、当サイトに少額の紹介料が入る場合があります（追加費用はかかりません）。掲載するストア・記載する価格・ゲームの評価が変わることはありません。",
+  "ko": "이 페이지의 일부 상점 링크는 제휴 링크입니다: 이 링크를 통해 구매하시면 추가 비용 없이 소액의 수수료를 받을 수 있습니다. 어떤 상점을 소개할지, 어떤 가격을 표기할지, 게임을 어떻게 평가할지에는 영향을 주지 않습니다.",
+  "es": "Algunos enlaces a tiendas de esta página son enlaces de afiliado: si compras a través de ellos podemos ganar una pequeña comisión sin coste adicional para ti. Esto nunca cambia qué tiendas incluimos, los precios que indicamos ni lo que escribimos sobre el juego."
+};
+
+const affiliateDisclosure = lang => AFFILIATE_DISCLOSURE[lang] || AFFILIATE_DISCLOSURE.en;
+
 /* ---------- 产物文件 ---------- */
 
 /**
@@ -288,5 +361,6 @@ module.exports = {
   esc, clean, createUrl, hreflangTags, ld,
   picture, toWebp, webpSrcset, heroPreload, staticDesc,
   createLastmod, LASTMOD_TOKEN,
+  hostKey, createAffiliate, affiliateDisclosure, AFFILIATE_DISCLOSURE,
   writeSitemap, writeRobots, writeAds, writeHeaders, writeIndexNowKey, writeLlmsTxt
 };

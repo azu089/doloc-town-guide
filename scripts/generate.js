@@ -12,6 +12,8 @@ const ROOT = path.join(__dirname, "..");
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "site.json"), "utf8"));
 const OUT = path.join(ROOT, "public");
 const KIT = require("./lib/site-kit");   // 共用基建：URL/图片/sitemap/lastmod
+// 联盟链接：site.json 的 affiliates 没配 ID 时原样输出原链接，配了才加追踪参数 + rel="sponsored"
+const AFF = KIT.createAffiliate(DATA.site.affiliates);
 const esc = KIT.esc;
 const clean = KIT.clean;
 const LANGS = DATA.site.languages || ["en"];
@@ -457,7 +459,11 @@ function renderPage(lang, page){
     const m = metaOf(p.slug);
     return `<a href="${prefix}/${p.slug}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(pageOf(p,lang).title)}</span></a>`;
   }).join("");
-  const sources = (page.sources||[]).map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc((x.labels && x.labels[lang]) || x.label)} ↗</a></li>`).join("");
+  const srcList = page.sources || [];
+  const sources = srcList.map(x=>`<li>${AFF.anchor({ url: x.url, text: (x.labels && x.labels[lang]) || x.label, suffix: " ↗" })}</li>`).join("");
+  // FTC：页面上只要有一条计佣链接就必须披露，且要显示在链接附近
+  const affNote = AFF.needsDisclosure(srcList.map(x=>x.url))
+    ? `<p class="aff-note">${esc(KIT.affiliateDisclosure(lang))}</p>` : "";
   const s = siteI18n(lang);
   const heroImg = t.heroImage;
   const srcsetOf = img => {
@@ -489,7 +495,7 @@ function renderPage(lang, page){
       <div class="manual-main">
         ${toc ? `<nav class="toc reveal"><b class="toc-title">${esc(s.updated)}</b>${toc}</nav>` : ""}
         ${sections2}
-        ${sources ? `<div class="sources reveal"><b>${esc(s.sources)}</b><ul>${sources}</ul></div>` : ""}
+        ${sources ? `<div class="sources reveal"><b>${esc(s.sources)}</b><ul>${sources}</ul>${affNote}</div>` : ""}
       </div>
       <aside class="manual-side">
         <div class="plot-meta reveal">

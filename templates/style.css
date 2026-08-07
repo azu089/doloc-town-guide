@@ -176,6 +176,8 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
 .sources ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
 .sources li a{font-size:.84rem;color:var(--muted);border-bottom:1px dashed rgba(127,176,105,.4);transition:.15s}
 .sources li a:hover{color:var(--sprout);border-bottom-color:var(--sprout)}
+/* 联盟披露（FTC）：只在页面含计佣链接时输出。ul 是 flex，这里要 width:100% 另起一行 */
+.aff-note{width:100%;margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);color:var(--muted);font-size:.76rem;line-height:1.6}
 
 /* sidebar */
 .related{border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px;background:rgba(255,255,255,.02)}
