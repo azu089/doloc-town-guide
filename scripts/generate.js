@@ -151,9 +151,9 @@ function langSwitcher(lang, slug){
 function header(lang, active){
   const s = siteI18n(lang);
   const prefix = lang === DEF ? "" : `/${lang}`;
-  const P0 = ["how-to-play","farming","automation","gene-system","fishing","drone-combat","exploration","friendship","weather"];
+  const P0 = ["how-to-play","where-to-buy","farming","automation","gene-system","fishing","drone-combat","exploration","friendship","weather"];
   const P1 = ["cooking","ranching","characters","story"];
-  const P2 = ["achievements","mods","update-log","faq","system-requirements","steam-deck"];
+  const P2 = ["achievements","how-long-to-beat","mods","update-log","faq","system-requirements","steam-deck"];
   const drop = (title, slugs) => `<div class="dd-group"><b class="dd-title">${esc(title)}</b>${slugs.map(slug=>{
     const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
     const m=metaOf(slug);
