@@ -205,6 +205,40 @@ function staticDesc(slug, lang, siteName, fallbackTitle) {
   return t ? t(siteName) : `${fallbackTitle} — ${siteName}`;
 }
 
+/* ---------- privacy / contact 正文 ----------
+ * 这两页的内容是**纯样板**（GA4 匿名统计 / Cookie / 第三方服务 / 联系方式），
+ * 三站各写一份纯属重复。更要命的是漏了某个语言就会出现
+ * 「lang=ja 但正文全英文」——审计里的 lang-contamination，也是本项目最高频的 P0。
+ * 放进共用层后，新站开箱即是全语言正确的。
+ * 各站仍可以自己写更详细的版本；这里只保证「不漏、不混排」的底线。
+ */
+const H2 = "font-size:1.05rem;margin:18px 0 8px";
+const STATIC_BODY = {
+  privacy: {
+    en: (n, d) => `<p>This is a game guide website and we respect visitor privacy.</p><h2 style="${H2}">What we collect</h2><p>We use Google Analytics (GA4) for anonymous traffic statistics: page views, referrers, device types and approximate regions. We do not collect names, email addresses or any personally identifiable information, and we do not sell data.</p><h2 style="${H2}">Cookies</h2><p>Google Analytics sets cookies for session statistics. You can disable cookies in your browser or install the Google Analytics opt-out add-on.</p><h2 style="${H2}">Third-party services</h2><p>The site is served via a CDN, which may record standard access logs (IP, user agent, time). Those services follow their own privacy policies.</p><h2 style="${H2}">Contact</h2><p>For privacy questions, email <a href="mailto:contact@${d}">contact@${d}</a>.</p>`,
+    "zh-CN": (n, d) => `<p>本网站是游戏攻略站，我们重视访问者隐私。</p><h2 style="${H2}">我们收集什么</h2><p>我们使用 Google Analytics（GA4）统计匿名流量：页面浏览量、来源渠道、设备类型与大致地区。我们不收集姓名、邮箱或任何个人身份信息，也不出售数据。</p><h2 style="${H2}">Cookie</h2><p>Google Analytics 会设置 Cookie 用于会话统计。你可以在浏览器中禁用 Cookie，或安装 Google Analytics 退出插件。</p><h2 style="${H2}">第三方服务</h2><p>本站通过 CDN 提供服务，可能记录标准访问日志（IP、UA、时间）。这些服务受其各自的隐私政策约束。</p><h2 style="${H2}">联系我们</h2><p>如有隐私问题，请发邮件至 <a href="mailto:contact@${d}">contact@${d}</a>。</p>`,
+    "zh-TW": (n, d) => `<p>本網站是遊戲攻略站，我們重視訪問者隱私。</p><h2 style="${H2}">我們收集什麼</h2><p>我們使用 Google Analytics（GA4）統計匿名流量：頁面瀏覽量、來源渠道、設備類型與大致地區。我們不收集姓名、郵箱或任何個人身份信息，也不出售數據。</p><h2 style="${H2}">Cookie</h2><p>Google Analytics 會設置 Cookie 用於會話統計。你可以在瀏覽器中停用 Cookie，或安裝 Google Analytics 退出外掛。</p><h2 style="${H2}">第三方服務</h2><p>本站透過 CDN 提供服務，可能記錄標準存取日誌（IP、UA、時間）。這些服務受其各自的隱私政策約束。</p><h2 style="${H2}">聯絡我們</h2><p>如有隱私問題，請發郵件至 <a href="mailto:contact@${d}">contact@${d}</a>。</p>`,
+    ja: (n, d) => `<p>本サイトはゲーム攻略サイトです。訪問者のプライバシーを尊重しています。</p><h2 style="${H2}">収集する情報</h2><p>Google Analytics（GA4）で匿名のアクセス統計（ページビュー、流入元、端末タイプ、おおよその地域）を取得しています。氏名・メールアドレスなどの個人情報は収集せず、データの販売も行いません。</p><h2 style="${H2}">Cookie</h2><p>Google Analytics はセッション統計のため Cookie を使用します。ブラウザで無効化するか、オプトアウトアドオンを利用できます。</p><h2 style="${H2}">第三者サービス</h2><p>本サイトは CDN を通じて配信されており、標準的なアクセスログ（IP・UA・時刻）が記録される場合があります。</p><h2 style="${H2}">お問い合わせ</h2><p><a href="mailto:contact@${d}">contact@${d}</a> までご連絡ください。</p>`,
+    ko: (n, d) => `<p>이 사이트는 게임 공략 사이트이며 방문자의 개인정보를 소중히 여깁니다.</p><h2 style="${H2}">수집하는 정보</h2><p>Google Analytics(GA4)로 익명 트래픽 통계(페이지뷰, 유입 경로, 기기 유형, 대략적인 지역)를 수집합니다. 이름·이메일 등 개인 식별 정보는 수집하지 않으며 데이터를 판매하지 않습니다.</p><h2 style="${H2}">쿠키</h2><p>Google Analytics는 세션 통계를 위해 쿠키를 사용합니다. 브라우저에서 비활성화하거나 옵트아웃 애드온을 설치할 수 있습니다.</p><h2 style="${H2}">제3자 서비스</h2><p>본 사이트는 CDN을 통해 제공되며 표준 접근 로그(IP, UA, 시간)가 기록될 수 있습니다.</p><h2 style="${H2}">문의</h2><p><a href="mailto:contact@${d}">contact@${d}</a> 로 보내주세요.</p>`,
+    es: (n, d) => `<p>Este es un sitio de guías de juegos y respetamos la privacidad de los visitantes.</p><h2 style="${H2}">Qué recopilamos</h2><p>Usamos Google Analytics (GA4) para estadísticas anónimas de tráfico: visitas, referencias, tipos de dispositivo y regiones aproximadas. No recopilamos nombres, correos ni información personal identificable, y no vendemos datos.</p><h2 style="${H2}">Cookies</h2><p>Google Analytics establece cookies para estadísticas de sesión. Puedes desactivarlas en tu navegador o instalar el complemento de exclusión.</p><h2 style="${H2}">Servicios de terceros</h2><p>El sitio se sirve mediante una CDN, que puede registrar registros de acceso estándar (IP, agente de usuario, hora).</p><h2 style="${H2}">Contacto</h2><p>Escríbenos a <a href="mailto:contact@${d}">contact@${d}</a>.</p>`
+  },
+  contact: {
+    en: (n, d) => `<p>Reach us at <a href="mailto:contact@${d}">contact@${d}</a>.</p><p>We usually reply within 2-3 business days. Corrections are especially welcome — tell us what is wrong and where you saw it, and we will check the source.</p>`,
+    "zh-CN": (n, d) => `<p>联系我们：<a href="mailto:contact@${d}">contact@${d}</a></p><p>我们通常会在 2-3 个工作日内回复。尤其欢迎内容纠错——告诉我们哪里有误、在哪一页看到的，我们会核对来源。</p>`,
+    "zh-TW": (n, d) => `<p>聯絡我們：<a href="mailto:contact@${d}">contact@${d}</a></p><p>我們通常會在 2-3 個工作天內回覆。尤其歡迎內容糾錯——告訴我們哪裡有誤、在哪一頁看到的，我們會核對來源。</p>`,
+    ja: (n, d) => `<p>お問い合わせ：<a href="mailto:contact@${d}">contact@${d}</a></p><p>通常 2〜3 営業日以内に返信します。誤りのご指摘は特に歓迎します。どのページのどの記述かをお知らせいただければ、出典を確認いたします。</p>`,
+    ko: (n, d) => `<p>문의：<a href="mailto:contact@${d}">contact@${d}</a></p><p>보통 2-3 영업일 내에 답변드립니다. 오류 제보를 특히 환영합니다. 어느 페이지의 어떤 내용인지 알려주시면 출처를 확인하겠습니다.</p>`,
+    es: (n, d) => `<p>Escríbenos a <a href="mailto:contact@${d}">contact@${d}</a>.</p><p>Normalmente respondemos en 2-3 días laborables. Las correcciones son especialmente bienvenidas: dinos qué está mal y en qué página, y comprobaremos la fuente.</p>`
+  }
+};
+
+/** privacy / contact 的样板正文；未覆盖的语言回退英文（回退时审计会报 lang-contamination，提醒你补） */
+function staticBody(slug, lang, { siteName, domain }) {
+  const g = STATIC_BODY[slug];
+  if (!g) return "";
+  return (g[lang] || g.en)(siteName, domain);
+}
+
 /* ---------- 联盟链接（affiliate） ----------
  * 为什么这层必须共用：
  *   1. Google 链接垃圾政策要求联盟链接带 rel="sponsored"（或 nofollow）。漏了是人工处罚风险，
@@ -454,7 +488,7 @@ function writeLlmsTxt(outDir, { siteName, domain, summary, pages, groups = {}, n
 
 module.exports = {
   esc, clean, createUrl, hreflangTags, ld,
-  picture, toWebp, webpSrcset, heroPreload, staticDesc, editorialPolicy,
+  picture, toWebp, webpSrcset, heroPreload, staticDesc, staticBody, editorialPolicy,
   createLastmod, LASTMOD_TOKEN,
   hostKey, createAffiliate, affiliateDisclosure, AFFILIATE_DISCLOSURE,
   writeSitemap, writeRobots, writeAds, writeHeaders, writeIndexNowKey, writeLlmsTxt

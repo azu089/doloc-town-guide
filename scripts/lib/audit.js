@@ -10,7 +10,7 @@
  *          不做「看起来该查」的检查，避免噪音把真问题淹掉。
  *
  * 用法：
- *   node packages/site-kit/audit.js site sites/kill-the-shadow sites/doloc-town
+ *   node packages/site-kit/audit.js sites/meccha-chameleon sites/kill-the-shadow sites/doloc-town
  *   node packages/site-kit/audit.js . --json      # CI 用，输出机器可读结果
  *
  * 退出码：0 = 全通过；1 = 有 FAIL（CI 应据此阻断部署）
