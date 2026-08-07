@@ -2579,6 +2579,17 @@
     },
     {
      "type": "list",
+     "heading": "Where to Buy Online",
+     "body": "Beyond Steam, Doloc Town is sold at these storefronts. Humble and Green Man Gaming are authorized retailers; isThereAnyDeal tracks live prices across stores. Buying through any of them supports the same developers.",
+     "items": [
+      "Steam — the official storefront and home of the 1.0 launch discount",
+      "Humble Store — authorized store with regional pricing",
+      "Green Man Gaming — authorized store with frequent discounts",
+      "isThereAnyDeal — live price comparison across all tracked stores"
+     ]
+    },
+    {
+     "type": "list",
      "heading": "The Straight Answer",
      "body": "What you need to know before buying.",
      "items": [
@@ -2629,6 +2640,39 @@
     {
      "label": "Official 1.0 announcement",
      "url": "https://steamcommunity.com/app/2285550/allnews/?l=english"
+    },
+    {
+     "label": "Humble Store — Doloc Town",
+     "url": "https://www.humblebundle.com/store/doloc-town",
+     "labels": {
+      "zh-CN": "Humble Store — 多洛可小镇",
+      "zh-TW": "Humble Store — 多洛可小鎮",
+      "ja": "Humble Store — ドロックタウン",
+      "ko": "Humble Store — 돌록 타운",
+      "es": "Humble Store — Doloc Town"
+     }
+    },
+    {
+     "label": "Green Man Gaming — Doloc Town",
+     "url": "https://www.greenmangaming.com/games/doloc-town-pc/",
+     "labels": {
+      "zh-CN": "Green Man Gaming — 多洛可小镇",
+      "zh-TW": "Green Man Gaming — 多洛可小鎮",
+      "ja": "Green Man Gaming — ドロックタウン",
+      "ko": "Green Man Gaming — 돌록 타운",
+      "es": "Green Man Gaming — Doloc Town"
+     }
+    },
+    {
+     "label": "isThereAnyDeal — Doloc Town prices",
+     "url": "https://isthereanydeal.com/product/01961f57-3655-7097-a075-9645a29770a9/",
+     "labels": {
+      "zh-CN": "isThereAnyDeal — 多洛可小镇实时比价",
+      "zh-TW": "isThereAnyDeal — 多洛可小鎮即時比價",
+      "ja": "isThereAnyDeal — ドロックタウン価格比較",
+      "ko": "isThereAnyDeal — 돌록 타운 가격 비교",
+      "es": "isThereAnyDeal — precios de Doloc Town"
+     }
     }
    ],
    "meta": {

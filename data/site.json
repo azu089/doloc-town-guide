@@ -12905,6 +12905,17 @@
     },
     {
      "type": "list",
+     "heading": "Where to Buy Online",
+     "body": "Beyond Steam, Doloc Town is sold at these storefronts. Humble and Green Man Gaming are authorized retailers; isThereAnyDeal tracks live prices across stores. Buying through any of them supports the same developers.",
+     "items": [
+      "Steam — the official storefront and home of the 1.0 launch discount",
+      "Humble Store — authorized store with regional pricing",
+      "Green Man Gaming — authorized store with frequent discounts",
+      "isThereAnyDeal — live price comparison across all tracked stores"
+     ]
+    },
+    {
+     "type": "list",
      "heading": "The Straight Answer",
      "body": "What you need to know before buying.",
      "items": [
@@ -12955,6 +12966,39 @@
     {
      "label": "Official 1.0 announcement",
      "url": "https://steamcommunity.com/app/2285550/allnews/?l=english"
+    },
+    {
+     "label": "Humble Store — Doloc Town",
+     "url": "https://www.humblebundle.com/store/doloc-town",
+     "labels": {
+      "zh-CN": "Humble Store — 多洛可小镇",
+      "zh-TW": "Humble Store — 多洛可小鎮",
+      "ja": "Humble Store — ドロックタウン",
+      "ko": "Humble Store — 돌록 타운",
+      "es": "Humble Store — Doloc Town"
+     }
+    },
+    {
+     "label": "Green Man Gaming — Doloc Town",
+     "url": "https://www.greenmangaming.com/games/doloc-town-pc/",
+     "labels": {
+      "zh-CN": "Green Man Gaming — 多洛可小镇",
+      "zh-TW": "Green Man Gaming — 多洛可小鎮",
+      "ja": "Green Man Gaming — ドロックタウン",
+      "ko": "Green Man Gaming — 돌록 타운",
+      "es": "Green Man Gaming — Doloc Town"
+     }
+    },
+    {
+     "label": "isThereAnyDeal — Doloc Town prices",
+     "url": "https://isthereanydeal.com/product/01961f57-3655-7097-a075-9645a29770a9/",
+     "labels": {
+      "zh-CN": "isThereAnyDeal — 多洛可小镇实时比价",
+      "zh-TW": "isThereAnyDeal — 多洛可小鎮即時比價",
+      "ja": "isThereAnyDeal — ドロックタウン価格比較",
+      "ko": "isThereAnyDeal — 돌록 타운 가격 비교",
+      "es": "isThereAnyDeal — precios de Doloc Town"
+     }
     }
    ],
    "meta": {
@@ -12996,6 +13040,17 @@
          "语言",
          "en / zh-CN / zh-TW / fr / de / ja / ko / pt-BR / ru（9 种）"
         ]
+       ]
+      },
+      {
+       "type": "list",
+       "heading": "线上购买渠道",
+       "body": "除 Steam 外，Doloc Town 还在以下商店销售。Humble 与 Green Man Gaming 是授权零售商；isThereAnyDeal 实时追踪各商店价格。从任意渠道购买都同样支持开发者。",
+       "items": [
+        "Steam——官方商店，1.0 首发折扣的主渠道",
+        "Humble Store——授权商店，支持区域定价",
+        "Green Man Gaming——授权商店，常有折扣",
+        "isThereAnyDeal——全商店实时比价工具"
        ]
       },
       {
@@ -13081,6 +13136,17 @@
       },
       {
        "type": "list",
+       "heading": "線上購買渠道",
+       "body": "除 Steam 外，Doloc Town 還在以下商店銷售。Humble 與 Green Man Gaming 是授權零售商；isThereAnyDeal 實時追蹤各商店價格。從任意渠道購買都同樣支持開發者。",
+       "items": [
+        "Steam——官方商店，1.0 首發折扣的主渠道",
+        "Humble Store——授權商店，支持區域定價",
+        "Green Man Gaming——授權商店，常有折扣",
+        "isThereAnyDeal——全商店實時比價工具"
+       ]
+      },
+      {
+       "type": "list",
        "heading": "直接回答",
        "body": "購買前需要知道的信息。",
        "items": [
@@ -13158,6 +13224,17 @@
          "言語",
          "en / zh-CN / zh-TW / fr / de / ja / ko / pt-BR / ru（9言語）"
         ]
+       ]
+      },
+      {
+       "type": "list",
+       "heading": "オンライン購入先",
+       "body": "Steam 以外では、以下のストアでドロックタウンを購入できます。Humble と Green Man Gaming は正規小売店、isThereAnyDeal は各ストアの価格をリアルタイム比較します。どの店で買っても同じ開発者を支援します。",
+       "items": [
+        "Steam——公式ストア、1.0発売記念割引の主な窓口",
+        "Humble Store——正規店、地域価格に対応",
+        "Green Man Gaming——正規店、頻繁に割引",
+        "isThereAnyDeal——全ストアの価格をリアルタイム比較"
        ]
       },
       {
@@ -13243,6 +13320,17 @@
       },
       {
        "type": "list",
+       "heading": "온라인 구매처",
+       "body": "Steam 외에도 다음 스토어에서 돌록 타운을 구매할 수 있습니다. Humble과 Green Man Gaming은 공인 리테일러이며, isThereAnyDeal은 모든 스토어의 실시간 가격을 비교합니다. 어느 곳에서 사든 같은 개발자를 지원합니다.",
+       "items": [
+        "Steam — 공식 스토어, 1.0 출시 할인의 주요 채널",
+        "Humble Store — 공인 스토어, 지역별 가격 지원",
+        "Green Man Gaming — 공인 스토어, 잦은 할인",
+        "isThereAnyDeal — 전체 스토어 실시간 가격 비교"
+       ]
+      },
+      {
+       "type": "list",
        "heading": "결론",
        "body": "구매 전 알아야 할 정보.",
        "items": [
@@ -13320,6 +13408,17 @@
          "Idiomas",
          "en / zh-CN / zh-TW / fr / de / ja / ko / pt-BR / ru (9 idiomas)"
         ]
+       ]
+      },
+      {
+       "type": "list",
+       "heading": "Dónde comprarlo online",
+       "body": "Además de Steam, Doloc Town se vende en estas tiendas. Humble y Green Man Gaming son minoristas autorizados; isThereAnyDeal compara precios en vivo en todas las tiendas. Comprar en cualquiera apoya a los mismos desarrolladores.",
+       "items": [
+        "Steam: la tienda oficial y el hogar del descuento de lanzamiento 1.0",
+        "Humble Store: tienda autorizada con precios regionales",
+        "Green Man Gaming: tienda autorizada con descuentos frecuentes",
+        "isThereAnyDeal: comparador de precios en vivo de todas las tiendas"
        ]
       },
       {
