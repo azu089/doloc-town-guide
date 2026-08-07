@@ -20,7 +20,14 @@
   ],
   "defaultLanguage": "en",
   "i18n": {},
-  "awinVerification": "awin"
+  "awinVerification": "awin",
+  "affiliates": {
+   "gamersgate.com": {
+    "type": "param",
+    "param": "aff",
+    "value": "01352e74c147aa8c9ae9c2793e51726c1e005035"
+   }
+  }
  },
  "game": {
   "name": "Doloc Town",
