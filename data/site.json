@@ -3,11 +3,12 @@
   "name": "Doloc Town Guide",
   "domain": "doloctownguides.com",
   "tagline": "1.0 Guide: Farming, Automation, Fishing, Genes & More",
-  "description": "The best Doloc Town 1.0 guides: how to play, farming automation, gene system, fishing, drone combat, friendship, story, achievements, weather and FAQs. Updated regularly.",
+  "description": "The best Doloc Town 1.0 guides: how to play, farming automation, gene system, fishing, drone combat, friendship, story, achievements and weather.",
   "language": "en",
   "gaId": "G-7D48WFYH1G",
   "gscVerification": "",
   "adsenseId": "",
+  "indexNowKey": "366b38216c2f8a74bbc1f31b6c669ceb",
   "ogImage": "/images/hero.jpg",
   "languages": [
    "en",
@@ -22,7 +23,7 @@
    "en": {
     "name": "Doloc Town Guide",
     "tagline": "1.0 Guide: Farming, Automation, Fishing, Genes & More",
-    "description": "The best Doloc Town 1.0 guides: how to play, farming automation, gene system, fishing, drone combat, friendship, story, achievements, weather and FAQs. Updated regularly.",
+    "description": "The best Doloc Town 1.0 guides: how to play, farming automation, gene system, fishing, drone combat, friendship, story, achievements and weather.",
     "navHome": "Home",
     "navGuides": "Guides",
     "navAbout": "About",
@@ -124,7 +125,7 @@
    "ko": {
     "name": "돌록 타운 가이드",
     "tagline": "1.0 가이드: 농사, 자동화, 낚시, 유전자 등",
-    "description": "돌록 타운 1.0 가이드: 시작 방법, 농업 자동화, 유전자 시스템, 낚시, 드론 전투, 우정, 스토리, 업적, 날씨, FAQ. 정기 업데이트.",
+    "description": "돌록 타운 1.0 가이드: 시작 방법, 농업 자동화, 유전자 시스템, 낚시, 드론 전투, 우정, 스토리, 업적, 날씨, FAQ.",
     "navHome": "홈",
     "navGuides": "가이드",
     "navAbout": "소개",
@@ -158,7 +159,7 @@
    "es": {
     "name": "Guía de Doloc Town",
     "tagline": "Guía 1.0: Granja, Automatización, Pesca, Genes y más",
-    "description": "Las mejores guías de Doloc Town 1.0: cómo jugar, automatización agrícola, sistema genético, pesca, combate con drones, amistad, historia, logros, clima y FAQ. Actualizado regularmente.",
+    "description": "Las mejores guías de Doloc Town 1.0: cómo jugar, automatización agrícola, sistema genético, pesca, combate con drones, amistad, historia y clima.",
     "navHome": "Inicio",
     "navGuides": "Guías",
     "navAbout": "Acerca de",
@@ -502,7 +503,7 @@
    "slug": "how-to-play",
    "title": "How to Play Doloc Town",
    "metaTitle": "How to Play Doloc Town: Complete Beginner's Guide (1.0)",
-   "metaDescription": "New to Doloc Town? Learn the scavenge-farm-build-explore loop, vertical farms, extreme weather tricks, drone combat basics and 1.0 automation in this full beginner's guide.",
+   "metaDescription": "New to Doloc Town? Learn the scavenge-farm-build-explore loop, vertical farms, extreme weather tricks, drone combat and 1.0 automation.",
    "intro": "Doloc Town mixes a side-scrolling platformer with a post-apocalyptic farming sim. You start as a scavenger and end as a farming tycoon — here is the full loop, from day one to drones.",
    "sections": [
     {
@@ -4354,7 +4355,7 @@
    "slug": "drone-combat",
    "title": "Doloc Town Drone Combat Guide: Upgrades & Modules",
    "metaTitle": "Doloc Town Drone Combat: Builds, Upgrades & Best Modules",
-   "metaDescription": "Master Doloc Town drone combat: chassis, barrel and battery upgrades, tactical mods like Tactical Capacitor and Shadow Shooter, and how to beat armored enemies.",
+   "metaDescription": "Master Doloc Town drone combat: chassis, barrel and battery upgrades, tactical mods, and how to beat armored enemies.",
    "intro": "Your drone is a buildable combat platform. Upgrade its chassis, barrel and battery, fit tactical modules and learn to break armored enemies — here is the full combat picture.",
    "sections": [
     {
@@ -5130,7 +5131,7 @@
     "es": {
      "title": "Guía de combate con dron de Doloc Town: mejoras y módulos",
      "metaTitle": "Combate con dron de Doloc Town: builds y módulos",
-     "metaDescription": "Domina el combate con dron de Doloc Town: mejoras de chasis, cañón y batería, módulos tácticos como el Capacitor Táctico y el Disparador Sombra, y cómo vencer a los enemigos blindados.",
+     "metaDescription": "Domina el combate con dron de Doloc Town: mejoras de chasis, cañón y batería, módulos tácticos y cómo vencer a los enemigos blindados.",
      "intro": "Tu dron es una plataforma de combate personalizable. Mejora su chasis, cañón y batería, equipa módulos tácticos y aprende a romper enemigos blindados: aquí está el panorama completo del combate.",
      "sections": [
       {
@@ -6098,7 +6099,7 @@
     "es": {
      "title": "Guía de exploración de Doloc Town: las 5 regiones",
      "metaTitle": "Regiones de Doloc Town: las 5 zonas y las Ruinas (1.0)",
-     "metaDescription": "Todas las regiones de Doloc Town explicadas: las Afueras, el Valle del Río, los Humedales, las Cuevas y las Ruinas de la Ciudad Vieja del 1.0 — con recursos, secretos y qué llevar.",
+     "metaDescription": "Todas las regiones de Doloc Town: las Afueras, el Valle del Río, los Humedales, las Cuevas y las Ruinas de la Ciudad Vieja — recursos y secretos.",
      "intro": "La exploración es el corazón de Doloc Town. Cinco regiones guardan recursos, enemigos e historias únicos — incluida la nueva Ruinas de la Ciudad Vieja del 1.0. Aquí está el valor de cada zona y cómo sobrevivir a ella.",
      "sections": [
       {
@@ -6860,7 +6861,7 @@
    "slug": "farming",
    "title": "Doloc Town Farming Guide: Crops, Seasons & Soil",
    "metaTitle": "Doloc Town Farming Guide: Crops, Seasons, Trees & Soil",
-   "metaDescription": "Everything about Doloc Town farming: seasonal crops, fruit trees, herbs, mushrooms, planters and soil, plus the gene mutations and 1.0 automation that change how you farm.",
+   "metaDescription": "Everything about Doloc Town farming: seasonal crops, fruit trees, herbs, mushrooms, planters and soil, plus gene mutations and 1.0 automation.",
    "intro": "Farming is the foundation of your wasteland farm. Learn what to plant, when, how to protect it from extreme weather — and how genes and 1.0 automation replace the busywork.",
    "sections": [
     {
@@ -7891,7 +7892,7 @@
     "es": {
      "title": "Guía de agricultura de Doloc Town: cultivos, estaciones y suelo",
      "metaTitle": "Guía de granja de Doloc Town: cultivos y estaciones",
-     "metaDescription": "Todo sobre la agricultura de Doloc Town: cultivos de temporada, árboles frutales, hierbas, setas, macetas y suelo, más las mutaciones genéticas y la automatización 1.0 que cambian tu granja.",
+     "metaDescription": "Todo sobre la agricultura de Doloc Town: cultivos de temporada, árboles frutales, hierbas, setas, macetas y suelo, más genética y automatización 1.0.",
      "intro": "La agricultura es la base de tu granja en el páramo. Aprende qué plantar, cuándo, cómo protegerlo del clima extremo — y cómo los genes y la automatización 1.0 eliminan el trabajo repetitivo.",
      "sections": [
       {
@@ -9095,7 +9096,7 @@
    "slug": "characters",
    "title": "Doloc Town Characters: Villager Profiles & Secrets",
    "metaTitle": "Doloc Town Characters: Villagers, Friendship and Secrets",
-   "metaDescription": "Meet the villagers of Doloc Town: Kasia, Guildmaster Bellad, Kumasang and more — how friendship unlocks recipes and story, and the secrets beneath their daily lives.",
+   "metaDescription": "Meet the villagers of Doloc Town: Kasia, Guildmaster Bellad, Kumasang and more — how friendship unlocks recipes and story, and their secrets.",
    "intro": "Every resident of Doloc Town hides a story. Visit each one, nurture connections and uncover the secrets beneath their daily lives — friendship is the game's social system, and it pays in recipes, story and festival rewards.",
    "sections": [
     {
@@ -9639,7 +9640,7 @@
     "es": {
      "title": "Personajes de Doloc Town: perfiles de aldeanos y secretos",
      "metaTitle": "Personajes de Doloc Town: aldeanos y secretos",
-     "metaDescription": "Conoce a los aldeanos de Doloc Town: Kasia, el Maestro de Gremio Bellad, Kumasang y más — cómo la amistad desbloquea recetas e historias y los secretos bajo su vida diaria.",
+     "metaDescription": "Conoce a los aldeanos de Doloc Town: Kasia, el Maestro de Gremio Bellad, Kumasang y más — cómo la amistad desbloquea recetas e historias.",
      "intro": "Cada residente de Doloc Town esconde una historia. Visítalos a todos, cultiva vínculos y descubre los secretos bajo su vida diaria: la amistad es el sistema social del juego y paga con recetas, historias y recompensas de festival.",
      "sections": [
       {
@@ -10926,7 +10927,7 @@
     "es": {
      "title": "Guía del clima de Doloc Town: lluvia ácida, tormentas y sequía",
      "metaTitle": "Clima de Doloc Town: lluvia ácida y tormentas",
-     "metaDescription": "Domina el clima extremo de Doloc Town: protege los cultivos de la lluvia ácida y el calor, convierte las tormentas en energía y aprovecha los precios de la sequía con el calendario estacional.",
+     "metaDescription": "Domina el clima extremo de Doloc Town: protege los cultivos de la lluvia ácida y el calor, convierte tormentas en energía y usa el calendario estacional.",
      "intro": "El clima extremo define Doloc Town. Aprende cada amenaza, lee el calendario estacional y convierte cada tormenta en una ventaja.",
      "sections": [
       {

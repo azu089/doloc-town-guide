@@ -13,7 +13,7 @@ cc = opencc.OpenCC("s2t")
 SITE_I18N = {
  "en": {
   "name":"Doloc Town Guide","tagline":"1.0 Guide: Farming, Automation, Fishing, Genes & More",
-  "description":"The best Doloc Town 1.0 guides: how to play, farming automation, gene system, fishing, drone combat, friendship, story, achievements, weather and FAQs. Updated regularly.",
+  "description":"The best Doloc Town 1.0 guides: how to play, farming automation, gene system, fishing, drone combat, friendship, story, achievements and weather.",
   "navHome":"Home","navGuides":"Guides","navAbout":"About","navPrivacy":"Privacy","navContact":"Contact",
   "langLabel":"Language","aboutTitle":"About this site","privacyTitle":"Privacy Policy","contactTitle":"Contact",
   "footerNote":"Unofficial fan site — game and related assets belong to their respective owners.",
@@ -55,7 +55,7 @@ SITE_I18N = {
  },
  "ko": {
   "name":"돌록 타운 가이드","tagline":"1.0 가이드: 농사, 자동화, 낚시, 유전자 등",
-  "description":"돌록 타운 1.0 가이드: 시작 방법, 농업 자동화, 유전자 시스템, 낚시, 드론 전투, 우정, 스토리, 업적, 날씨, FAQ. 정기 업데이트.",
+  "description":"돌록 타운 1.0 가이드: 시작 방법, 농업 자동화, 유전자 시스템, 낚시, 드론 전투, 우정, 스토리, 업적, 날씨, FAQ.",
   "navHome":"홈","navGuides":"가이드","navAbout":"소개","navPrivacy":"개인정보","navContact":"문의",
   "langLabel":"언어","aboutTitle":"사이트 소개","privacyTitle":"개인정보 처리방침","contactTitle":"문의하기",
   "footerNote":"비공식 팬 사이트입니다. 게임 및 관련 자산은 각 권리자에게 귀속됩니다.",
@@ -69,7 +69,7 @@ SITE_I18N = {
  },
  "es": {
   "name":"Guía de Doloc Town","tagline":"Guía 1.0: Granja, Automatización, Pesca, Genes y más",
-  "description":"Las mejores guías de Doloc Town 1.0: cómo jugar, automatización agrícola, sistema genético, pesca, combate con drones, amistad, historia, logros, clima y FAQ. Actualizado regularmente.",
+  "description":"Las mejores guías de Doloc Town 1.0: cómo jugar, automatización agrícola, sistema genético, pesca, combate con drones, amistad, historia y clima.",
   "navHome":"Inicio","navGuides":"Guías","navAbout":"Acerca de","navPrivacy":"Privacidad","navContact":"Contacto",
   "langLabel":"Idioma","aboutTitle":"Acerca de este sitio","privacyTitle":"Política de privacidad","contactTitle":"Contacto",
   "footerNote":"Sitio de fans no oficial: el juego y sus recursos pertenecen a sus propietarios.",
@@ -3282,7 +3282,7 @@ KO["farming"] = {
 ES["farming"] = {
  "title": "Guía de agricultura de Doloc Town: cultivos, estaciones y suelo",
  "metaTitle": "Guía de granja de Doloc Town: cultivos y estaciones",
- "metaDescription": "Todo sobre la agricultura de Doloc Town: cultivos de temporada, árboles frutales, hierbas, setas, macetas y suelo, más las mutaciones genéticas y la automatización 1.0 que cambian tu granja.",
+ "metaDescription": "Todo sobre la agricultura de Doloc Town: cultivos de temporada, árboles frutales, hierbas, setas, macetas y suelo, más genética y automatización 1.0.",
  "intro": "La agricultura es la base de tu granja en el páramo. Aprende qué plantar, cuándo, cómo protegerlo del clima extremo — y cómo los genes y la automatización 1.0 eliminan el trabajo repetitivo.",
  "sections": [
   {
@@ -3963,7 +3963,7 @@ KO["exploration"] = {
 ES["exploration"] = {
  "title": "Guía de exploración de Doloc Town: las 5 regiones",
  "metaTitle": "Regiones de Doloc Town: las 5 zonas y las Ruinas (1.0)",
- "metaDescription": "Todas las regiones de Doloc Town explicadas: las Afueras, el Valle del Río, los Humedales, las Cuevas y las Ruinas de la Ciudad Vieja del 1.0 — con recursos, secretos y qué llevar.",
+ "metaDescription": "Todas las regiones de Doloc Town: las Afueras, el Valle del Río, los Humedales, las Cuevas y las Ruinas de la Ciudad Vieja — recursos y secretos.",
  "intro": "La exploración es el corazón de Doloc Town. Cinco regiones guardan recursos, enemigos e historias únicos — incluida la nueva Ruinas de la Ciudad Vieja del 1.0. Aquí está el valor de cada zona y cómo sobrevivir a ella.",
  "sections": [
   {
@@ -4433,7 +4433,7 @@ KO["characters"] = {
 ES["characters"] = {
  "title": "Personajes de Doloc Town: perfiles de aldeanos y secretos",
  "metaTitle": "Personajes de Doloc Town: aldeanos y secretos",
- "metaDescription": "Conoce a los aldeanos de Doloc Town: Kasia, el Maestro de Gremio Bellad, Kumasang y más — cómo la amistad desbloquea recetas e historias y los secretos bajo su vida diaria.",
+ "metaDescription": "Conoce a los aldeanos de Doloc Town: Kasia, el Maestro de Gremio Bellad, Kumasang y más — cómo la amistad desbloquea recetas e historias.",
  "intro": "Cada residente de Doloc Town esconde una historia. Visítalos a todos, cultiva vínculos y descubre los secretos bajo su vida diaria: la amistad es el sistema social del juego y paga con recetas, historias y recompensas de festival.",
  "sections": [
   {
@@ -5768,7 +5768,7 @@ KO["weather"] = {
 ES["weather"] = {
  "title": "Guía del clima de Doloc Town: lluvia ácida, tormentas y sequía",
  "metaTitle": "Clima de Doloc Town: lluvia ácida y tormentas",
- "metaDescription": "Domina el clima extremo de Doloc Town: protege los cultivos de la lluvia ácida y el calor, convierte las tormentas en energía y aprovecha los precios de la sequía con el calendario estacional.",
+ "metaDescription": "Domina el clima extremo de Doloc Town: protege los cultivos de la lluvia ácida y el calor, convierte tormentas en energía y usa el calendario estacional.",
  "intro": "El clima extremo define Doloc Town. Aprende cada amenaza, lee el calendario estacional y convierte cada tormenta en una ventaja.",
  "sections": [
   {
@@ -6366,7 +6366,7 @@ KO["drone-combat"] = {
 ES["drone-combat"] = {
  "title": "Guía de combate con dron de Doloc Town: mejoras y módulos",
  "metaTitle": "Combate con dron de Doloc Town: builds y módulos",
- "metaDescription": "Domina el combate con dron de Doloc Town: mejoras de chasis, cañón y batería, módulos tácticos como el Capacitor Táctico y el Disparador Sombra, y cómo vencer a los enemigos blindados.",
+ "metaDescription": "Domina el combate con dron de Doloc Town: mejoras de chasis, cañón y batería, módulos tácticos y cómo vencer a los enemigos blindados.",
  "intro": "Tu dron es una plataforma de combate personalizable. Mejora su chasis, cañón y batería, equipa módulos tácticos y aprende a romper enemigos blindados: aquí está el panorama completo del combate.",
  "sections": [
   {

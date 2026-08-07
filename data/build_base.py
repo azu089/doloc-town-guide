@@ -16,7 +16,7 @@ site = {
   "name": "Doloc Town Guide",
   "domain": "doloctownguides.com",
   "tagline": "1.0 Guide: Farming, Automation, Fishing, Genes & More",
-  "description": "The best Doloc Town 1.0 guides: how to play, farming automation, gene system, fishing, drone combat, friendship, story, achievements, weather and FAQs. Updated regularly.",
+  "description": "The best Doloc Town 1.0 guides: how to play, farming automation, gene system, fishing, drone combat, friendship, story, achievements and weather.",
   "language": "en",
   "gaId": "",
   "gscVerification": "",
@@ -71,7 +71,7 @@ P0 = [
   "slug":"how-to-play",
   "title":"How to Play Doloc Town",
   "metaTitle":"How to Play Doloc Town: Complete Beginner's Guide (1.0)",
-  "metaDescription":"New to Doloc Town? Learn the scavenge-farm-build-explore loop, vertical farms, extreme weather tricks, drone combat basics and 1.0 automation in this full beginner's guide.",
+  "metaDescription":"New to Doloc Town? Learn the scavenge-farm-build-explore loop, vertical farms, extreme weather tricks, drone combat and 1.0 automation.",
   "intro":"Doloc Town mixes a side-scrolling platformer with a post-apocalyptic farming sim. You start as a scavenger and end as a farming tycoon — here is the full loop, from day one to drones.",
   "sections":[
    {"type":"steps","tag":"CORE LOOP","heading":"The Five-Step Core Loop","body":"Every session follows the same rhythm. Master it and the wasteland becomes a farm.",
@@ -201,7 +201,7 @@ P0 = [
   "slug":"drone-combat",
   "title":"Doloc Town Drone Combat Guide: Upgrades & Modules",
   "metaTitle":"Doloc Town Drone Combat: Builds, Upgrades & Best Modules",
-  "metaDescription":"Master Doloc Town drone combat: chassis, barrel and battery upgrades, tactical mods like Tactical Capacitor and Shadow Shooter, and how to beat armored enemies.",
+  "metaDescription":"Master Doloc Town drone combat: chassis, barrel and battery upgrades, tactical mods, and how to beat armored enemies.",
   "intro":"Your drone is a buildable combat platform. Upgrade its chassis, barrel and battery, fit tactical modules and learn to break armored enemies.",
   "sections":[
    {"type":"list","tag":"CONTROLS","heading":"Drone Combat Controls","body":"Four inputs cover everything in a fight.",

@@ -11,18 +11,16 @@ const crypto = require("crypto");
 const ROOT = path.join(__dirname, "..");
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "site.json"), "utf8"));
 const OUT = path.join(ROOT, "public");
-const esc = s => String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-const clean = slug => String(slug).replace(/\.html$/,"");
+const KIT = require("./lib/site-kit");   // 共用基建：URL/图片/sitemap/lastmod
+const esc = KIT.esc;
+const clean = KIT.clean;
 const LANGS = DATA.site.languages || ["en"];
 const DEF = DATA.site.defaultLanguage || "en";
 const CSS_V = crypto.createHash("md5").update(fs.readFileSync(path.join(ROOT,"templates","style.css"),"utf8")).digest("hex").slice(0,8);
 const today = new Date().toISOString().slice(0,10);
-const urlOf = (slug, lang) => {
-  const base = `https://${DATA.site.domain}`;
-  const p = clean(slug);
-  const pathPart = lang === DEF ? (p === "index" ? "/" : `/${p}`) : (p === "index" ? `/${lang}/` : `/${lang}/${p}`);
-  return base + pathPart;
-};
+const urlOf = KIT.createUrl({ domain: DATA.site.domain, defaultLang: DEF });
+const LM = KIT.createLastmod({ manifestPath: path.join(ROOT,"data",".lastmod.json"), today });
+const HERO_SET = "/images/hero-640.jpg 640w, /images/hero-1280.jpg 1280w, /images/hero.jpg 1600w";
 const LANG_META = {
   "en":    { flag: "🇬🇧", name: "English",  html: "en" },
   "zh-CN": { flag: "🇨🇳", name: "简体中文", html: "zh-CN" },
@@ -132,7 +130,7 @@ ${gsc}
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css?v=${CSS_V}" />
+<link rel="stylesheet" href="/css/style.css?v=${CSS_V}" />${slug === "index" ? "\n" + KIT.heroPreload({ srcset: HERO_SET, sizes: "100vw" }) : ""}
 <script type="application/ld+json">${ld}</script>
 ${DATA.site.gaId ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(DATA.site.gaId)}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${esc(DATA.site.gaId)}');</script>` : ""}
@@ -384,7 +382,7 @@ function renderHome(lang){
   const body = `
   <main>
     <section class="pano-hero">
-      <img class="pano-bg" src="/images/hero-1280.jpg" srcset="/images/hero-640.jpg 640w, /images/hero-1280.jpg 1280w, /images/hero.jpg 1600w" sizes="100vw" alt="${esc(gname)} key art" loading="eager" width="1600" height="900" fetchpriority="high" />
+      ${KIT.picture({ src:"/images/hero-1280.jpg", srcset:HERO_SET, sizes:"100vw", attrs:`class="pano-bg" alt="${esc(gname)} key art" loading="eager" width="1600" height="900" fetchpriority="high"` })}
       <div class="pano-overlay"></div>
       <div class="container pano-copy">
         <span class="evidence-tag"><span class="dot"></span> ${esc(badgeTxt)}</span>
@@ -437,7 +435,7 @@ function renderHome(lang){
     });
   });
   </script>`;
-  return renderFull(lang, siteI18n(lang).name, `${esc(gname)} — ${esc(s.tagline)}`, [], "index", body, "/images/hero.jpg");
+  return renderFull(lang, siteI18n(lang).name, s.description, [], "index", body, "/images/hero.jpg");
 }
 function renderFull(lang, title, desc, extraLd, slug, body, ogImage){
   const s = siteI18n(lang);
@@ -463,11 +461,11 @@ function renderPage(lang, page){
   const s = siteI18n(lang);
   const heroImg = t.heroImage;
   const srcsetOf = img => {
-    if (!img) return "";
+    if (!img) return null;
     const base = img.replace(/\.(jpg|jpeg|png|webp)$/i, "");
-    return ` srcset="${base}-640.jpg 640w, ${base}-1280.jpg 1280w, ${img} 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 92vw, 820px"`;
+    return { srcset: `${base}-640.jpg 640w, ${base}-1280.jpg 1280w, ${img} 1600w`, sizes: "(max-width: 640px) 94vw, (max-width: 960px) 92vw, 820px" };
   };
-  const pageHero = heroImg ? `<div class="plot-hero-img"><img src="${heroImg}"${srcsetOf(heroImg)} alt="${esc(t.title)}" loading="lazy" width="1600" height="900" /></div>` : "";
+  const pageHero = heroImg ? `<div class="plot-hero-img">${KIT.picture({ ...srcsetOf(heroImg), src: heroImg, attrs: `alt="${esc(t.title)}" loading="lazy" width="1600" height="900"` })}</div>` : "";
   const noImgCls = heroImg ? "" : " noimg";
   // 生长进度条（耕作手册特色组件）
   const growthSteps = [
@@ -528,14 +526,15 @@ function gnameOf(lang){ return (DATA.game.nameI18n && DATA.game.nameI18n[lang]) 
 function renderStatic(lang, slug, title, body){
   const prefix = lang === DEF ? "" : `/${lang}`;
   const s = siteI18n(lang);
-  return renderFull(lang, title, title, [breadcrumbLd({slug,title}, lang)], slug, `<main class="container"><div class="article-wrap single"><article><div class="page-hero reveal"><span class="evidence-tag">${esc(s.plotTag)} // ${esc(slug.toUpperCase())}</span><h1>${esc(title)}</h1></div>${body}</article></div></main>`);
+  const desc = KIT.staticDesc(slug, lang, s.name, title);
+  return renderFull(lang, title, desc, [breadcrumbLd({slug,title}, lang)], slug, `<main class="container"><div class="article-wrap single"><article><div class="page-hero reveal"><span class="evidence-tag">${esc(s.plotTag)} // ${esc(slug.toUpperCase())}</span><h1>${esc(title)}</h1></div>${body}</article></div></main>`);
 }
 function genStatic(lang){
   const s = siteI18n(lang);
   const dir = path.join(OUT, lang === DEF ? "" : lang);
   const aboutPoints = (DATA.game.aboutPointsI18n && DATA.game.aboutPointsI18n[lang]) || DATA.game.aboutPoints || [];
   const aboutBody = `<p>${esc(s.aboutText)}</p><h2 style="font-size:1.05rem;margin:18px 0 8px">${esc(s.aboutSources)}</h2><ul class="checks">${aboutPoints.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
-  fs.writeFileSync(path.join(dir,"about.html"), renderStatic(lang,"about", s.aboutTitle, aboutBody));
+  writePage(path.join(dir,"about.html"), "about", lang, renderStatic(lang,"about", s.aboutTitle, aboutBody));
   const privacyBody = lang==="zh-CN"||lang==="zh-TW"
     ? `<p>这是游戏攻略网站，我们尊重访问者隐私。以下说明我们收集什么、如何使用。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">我们收集什么</h2><p>我们使用 Google Analytics（GA4）进行匿名流量统计：页面浏览、来源、设备类型和大致地区。我们不收集姓名、邮箱等个人身份信息，不出售数据。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookie</h2><p>Google Analytics 会使用 Cookie 进行会话统计。你可以在浏览器中禁用，或安装 Google Analytics 的停用插件。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">第三方服务</h2><p>字体来自 Google Fonts，站点由 Cloudflare CDN 提供服务；两者可能记录标准访问日志（IP、UA、时间）。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">联系我们</h2><p>隐私问题请邮件 <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a>。</p><p style="margin-top:14px;opacity:.75">生效日期：${today}</p>`
     : lang==="ko"
@@ -545,7 +544,7 @@ function genStatic(lang){
     : lang==="ja"
     ? `<p>これはゲーム攻略サイトです。訪問者のプライバシーを尊重します。以下、収集内容と利用方法を説明します。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">収集する情報</h2><p>Google Analytics（GA4）で匿名のトラフィック統計（ページビュー、参照元、端末種別、おおよその地域）を取得しています。氏名・メールアドレスなどの個人情報は収集せず、データの販売も行いません。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookie</h2><p>Google Analytics はセッション統計のため Cookie を使用します。ブラウザで無効化するか、Google Analytics のオプトアウトアドオンを利用できます。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">第三者サービス</h2><p>Google Fonts からフォントを、Cloudflare の CDN を利用しています。標準的なアクセスログ（IP・UA・時刻）を記録する場合があります。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">お問い合わせ</h2><p>プライバシーに関する質問は <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a> まで。</p><p style="margin-top:14px;opacity:.75">発効日：${today}</p>`
     : `<p>This is a game guide website and we respect visitor privacy. This policy explains what we collect and how it is used.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">What we collect</h2><p>We use Google Analytics (GA4) for anonymous traffic statistics: page views, referrers, device types and approximate regions. We do not collect names, email addresses or any personally identifiable information, and we do not sell data.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookies</h2><p>Google Analytics sets cookies for session statistics. You can disable cookies in your browser or install the Google Analytics opt-out add-on.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Third-party services</h2><p>Fonts are loaded from Google Fonts and the site is served via Cloudflare's CDN; both may record standard access logs (IP, user agent, time). Those services follow their own privacy policies.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Contact</h2><p>For privacy questions, email <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a>.</p><p style="margin-top:14px;opacity:.75">Effective date: ${today}</p>`;
-  fs.writeFileSync(path.join(dir,"privacy.html"), renderStatic(lang,"privacy", s.privacyTitle, privacyBody));
+  writePage(path.join(dir,"privacy.html"), "privacy", lang, renderStatic(lang,"privacy", s.privacyTitle, privacyBody));
   const contactPh = lang==="zh-CN"||lang==="zh-TW" ? "联系我们："
     : lang==="ja" ? "お問い合わせ："
     : lang==="ko" ? "문의하기: "
@@ -556,7 +555,7 @@ function genStatic(lang){
     : lang==="ko" ? "보통 2~3 영업일 내에 답변드립니다."
     : lang==="es" ? "Normalmente respondemos en 2-3 días laborables."
     : "We usually reply within 2-3 business days.";
-  fs.writeFileSync(path.join(dir,"contact.html"), renderStatic(lang,"contact", s.contactTitle, `<p>${contactPh} <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a></p><p style="margin-top:10px">${contactReply}</p>`));
+  writePage(path.join(dir,"contact.html"), "contact", lang, renderStatic(lang,"contact", s.contactTitle, `<p>${contactPh} <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a></p><p style="margin-top:10px">${contactReply}</p>`));
 }
 // 404 (default lang) — function so OUT exists when called
 function gen404(){
@@ -577,7 +576,7 @@ function gameLd(){
 }
 function articleLd(page, lang){
   const t = pageOf(page, lang);
-  return {"@context":"https://schema.org","@type":"Article",headline:t.title,description:t.metaDescription,mainEntityOfPage:urlOf(page.slug,lang),datePublished:isoDate(DATA.game.releaseDate),dateModified:today,inLanguage:LANG_META[lang]?.html||lang,publisher:{"@type":"Organization",name:siteI18n(lang).name}};
+  return {"@context":"https://schema.org","@type":"Article",headline:t.title,description:t.metaDescription,mainEntityOfPage:urlOf(page.slug,lang),datePublished:isoDate(DATA.game.releaseDate),dateModified:KIT.LASTMOD_TOKEN,inLanguage:LANG_META[lang]?.html||lang,publisher:{"@type":"Organization",name:siteI18n(lang).name}};
 }
 function faqLd(sections){
   const items = (sections||[]).filter(s=>s.type==="faq").flatMap(s=>s.items||[]);
@@ -589,6 +588,8 @@ function breadcrumbLd(page, lang){
 }
 
 /* ---------- build ---------- */
+// 写页面统一走这里：按「内容是否真变了」把 lastmod 占位符换成真实日期
+const writePage = (filePath, slug, lang, html) => fs.writeFileSync(filePath, LM.stamp(urlOf(slug, lang), html));
 fs.rmSync(OUT, {recursive:true, force:true});
 fs.mkdirSync(OUT, {recursive:true});
 // assets copy
@@ -610,24 +611,40 @@ fs.writeFileSync(path.join(OUT,"css","style.css"), fs.readFileSync(path.join(ROO
 for (const lang of LANGS) {
   const dir = path.join(OUT, lang === DEF ? "" : lang);
   fs.mkdirSync(dir, {recursive:true});
-  fs.writeFileSync(path.join(dir,"index.html"), renderHome(lang));
+  writePage(path.join(dir,"index.html"), "index", lang, renderHome(lang));
   for (const page of DATA.pages) {
     SEC_IDX = 0;
     const html = renderPage(lang, page);
-    fs.writeFileSync(path.join(dir, page.slug + ".html"), html);
+    writePage(path.join(dir, page.slug + ".html"), page.slug, lang, html);
   }
   genStatic(lang);
 }
 gen404();
 
-// sitemap
+// sitemap（lastmod 走 LM：内容没变就沿用旧日期，不再每次全站标记为当天）
 const urls = [];
 for (const lang of LANGS) {
-  urls.push(urlOf("index",lang));
-  for (const p of DATA.pages) urls.push(urlOf(p.slug,lang));
-  for (const sp of ["about","privacy","contact"]) urls.push(urlOf(sp,lang));
+  urls.push({ loc: urlOf("index",lang), priority: "1.0" });
+  for (const p of DATA.pages) urls.push({ loc: urlOf(p.slug,lang), priority: "0.8" });
+  for (const sp of ["about","privacy","contact"]) urls.push({ loc: urlOf(sp,lang), priority: "0.3" });
 }
-fs.writeFileSync(path.join(OUT,"sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u=>`  <url><loc>${u}</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq><priority>${u.endsWith("/")?"1.0":"0.8"}</priority></url>`).join("\n")}\n</urlset>\n`);
-fs.writeFileSync(path.join(OUT,"robots.txt"), `User-agent: *\nAllow: /\nSitemap: https://${DATA.site.domain}/sitemap.xml\n`);
-fs.writeFileSync(path.join(OUT,"ads.txt"), DATA.site.adsenseId ? `google.com, ${DATA.site.adsenseId}, DIRECT, f08c47fec0942fa0\n` : "");
-console.log(`✓ Generated ${LANGS.length} locales x ${1+DATA.pages.length+4} pages + sitemap (${today})`);
+const smN = KIT.writeSitemap(OUT, urls, LM);
+KIT.writeRobots(OUT, DATA.site.domain);
+KIT.writeAds(OUT, DATA.site.adsenseId);
+KIT.writeHeaders(OUT);
+KIT.writeIndexNowKey(OUT, DATA.site.indexNowKey);
+// llms.txt：给 AI agent 的机器可读入口（不是 SEO 手段，见 site-kit 注释）
+KIT.writeLlmsTxt(OUT, {
+  siteName: DATA.site.name,
+  domain: DATA.site.domain,
+  summary: `Unofficial ${DATA.game.name} guide site. Each page answers one question players actually search for, and lists the sources it was checked against. Available in ${LANGS.length} languages: ${LANGS.join(", ")}.`,
+  pages: DATA.pages.map(p => { const t = pageOf(p, DEF); return { slug: p.slug, title: t.title, desc: t.metaDescription }; }),
+  notes: [
+    "Facts are checked against the official Steam store page and reputable gaming media; every page lists its own sources at the bottom.",
+    "Anything we could not verify is explicitly marked as unverified — gaps are left open rather than filled with generated text.",
+    "Localised versions live under /<lang>/ (e.g. /ja/how-to-play) and are declared via hreflang on every page.",
+    "This is an unofficial fan site, not affiliated with the game's developer or publisher."
+  ]
+});
+const lm = LM.save();
+console.log(`✓ ${LANGS.length} locales × ${1+DATA.pages.length+3} pages｜sitemap ${smN} URL｜内容有变更 ${lm.changed}/${lm.total} 页`);
