@@ -153,9 +153,15 @@ function head(title, desc, extraLd, slug, lang, ogImage){
   // 值可以是任意字符串（拿到正式验证码就换成那个）；未配置时不输出。
   const awin = DATA.site.awinVerification ? `<meta name="awin-site-verification" content="${esc(DATA.site.awinVerification)}" />` : "";
   // Impact（Humble Bundle 联盟）所有权验证。
-  // ⚠️ 属性名是 `value` 不是 `content` —— 这是 Impact 后台给的原文，看着像笔误但它的校验器认这个。
-  //    改成 content 会验不过，别"顺手修正"。
-  const impact = DATA.site.impactVerification ? `<meta name="impact-site-verification" value="${esc(DATA.site.impactVerification)}" />` : "";
+  // ⚠️ 两处刻意和本文件其它 meta 不一致，都别"顺手修正"：
+  //    1. 属性名是 `value` 不是 `content`
+  //    2. 单引号 + 不自闭合
+  //    这是 Impact 后台给的原文格式。理论上 HTML 等价，但验证器若做字符串精确匹配就只认原样，
+  //    照抄的成本是零，赌它按标准解析的成本是一轮部署 + 一次失败重试。
+  //    值是 UUID（十六进制+连字符），单引号属性不会被内容破坏；仍然转义 ' 以防将来换成别的值。
+  const impact = DATA.site.impactVerification
+    ? `<meta name='impact-site-verification' value='${esc(DATA.site.impactVerification).replace(/'/g, "&#39;")}'>`
+    : "";
   const og = ogImage || DATA.site.ogImage || "/images/hero.jpg";
   const htmlLang = LANG_META[lang]?.html || lang;
   return `<!DOCTYPE html>
