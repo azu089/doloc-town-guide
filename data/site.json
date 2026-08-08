@@ -15748,6 +15748,5282 @@
      ]
     }
    }
+  },
+  {
+   "slug": "gifts",
+   "title": "Doloc Town Gift Guide: Every Villager's Loves, Likes & Dislikes",
+   "metaTitle": "Doloc Town Gifts: Villager Loves, Likes & Dislikes",
+   "metaDescription": "Which gifts each Doloc Town villager loves, likes and dislikes — plus the 12/13 universal gift and the three items you should never hand over.",
+   "intro": "Give the right item and friendship jumps; give the wrong one and you have wasted a day. This page maps 65 items against the 13 villagers the community has actually tested, from both directions: look up an item to see who wants it, or look up a villager to see what to bring.",
+   "sections": [
+    {
+     "type": "note",
+     "heading": "Where This Data Comes From",
+     "body": "Every row below comes from the community Steam guide \"Doloc Town - Character Gifts\" by rockechic, read directly from its two data tables. Two limits you should know before you spend a gift: the author states it is \"still a work in progress\" and was built during Early Access, so it predates 1.0 (5 August 2026) by more than a year; and 12 of the 25 characters have no data at all. An item that is not listed may simply be untested — it is not proof that it is safe. Item and villager names are kept exactly as they appear in the English client."
+    },
+    {
+     "type": "list",
+     "heading": "Three Things Worth Knowing First",
+     "items": [
+      "Fern Fossil is the one true catch-all: 12 of the 13 villagers with data like it and nobody dislikes it. Honey is second at 10/13, also with zero dislikes.",
+      "Never gift Bamboo Tube, Bottled Water, Copper Ingot. Each is disliked by 12 of 13 villagers and loved by none — they are the worst thing you can hand over.",
+      "Combat Chip is the trap: Mody loves it, but 8 other villagers dislike it. There is no safe blanket gift among the machine parts."
+     ]
+    },
+    {
+     "type": "giftfilter"
+    },
+    {
+     "type": "table",
+     "heading": "Look Up an Item — Who Wants It?",
+     "body": "Sorted by how decisive the answer is: universal gifts first, then the items to avoid, then the ones villagers disagree about.",
+     "columns": [
+      "Item",
+      "Loved by",
+      "Liked by",
+      "Disliked by",
+      "Verdict"
+     ],
+     "rows": [
+      [
+       "Fern Fossil",
+       "—",
+       "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+       "—",
+       "Universal"
+      ],
+      [
+       "Honey",
+       "Kasia",
+       "Alchemy, Claud, Cod, Dada, Hult, Lank, Mody, Orlando, Zenis",
+       "—",
+       "Universal"
+      ],
+      [
+       "Bamboo Tube",
+       "—",
+       "—",
+       "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+       "Never gift"
+      ],
+      [
+       "Bottled Water",
+       "—",
+       "—",
+       "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+       "Never gift"
+      ],
+      [
+       "Copper Ingot",
+       "—",
+       "—",
+       "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+       "Never gift"
+      ],
+      [
+       "Spaghetti",
+       "Hult, Orlando",
+       "Alchemy, Claud, Dada, Kasia, Lank, Mody, Zenis",
+       "Cod",
+       "Divisive"
+      ],
+      [
+       "Iced Tea",
+       "—",
+       "Claud, Cod, Hult, Lank, Mody, Orlando, Villain, Zenis",
+       "Alchemy",
+       "Divisive"
+      ],
+      [
+       "Coffee",
+       "—",
+       "Claud, Cod, Hult, Lank, Mody, Orlando, Zenis",
+       "Alchemy",
+       "Divisive"
+      ],
+      [
+       "33 FCS",
+       "—",
+       "Cod, Mody",
+       "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+       "Divisive"
+      ],
+      [
+       "Combat Chip",
+       "Mody",
+       "Cod",
+       "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+       "Divisive"
+      ],
+      [
+       "Cucumber",
+       "Cod",
+       "Alchemy",
+       "Orlando",
+       "Divisive"
+      ],
+      [
+       "Pepper",
+       "Hult",
+       "Alchemy",
+       "Zenis",
+       "Divisive"
+      ],
+      [
+       "Thermos",
+       "Claud, Lank",
+       "—",
+       "Dada",
+       "Divisive"
+      ],
+      [
+       "Tomato",
+       "Orlando",
+       "Alchemy",
+       "Cod",
+       "Divisive"
+      ],
+      [
+       "Beer",
+       "—",
+       "Hult, Merlin, Villain, Zenis",
+       "—",
+       "Limited data (4/13)"
+      ],
+      [
+       "Blueberry",
+       "—",
+       "Alchemy, Kasia, Zenis",
+       "—",
+       "Limited data (3/13)"
+      ],
+      [
+       "Cake",
+       "Dada, Kasia, Zenis",
+       "—",
+       "—",
+       "Limited data (3/13)"
+      ],
+      [
+       "Candied Blueberry",
+       "—",
+       "Alchemy, Kasia, Zenis",
+       "—",
+       "Limited data (3/13)"
+      ],
+      [
+       "Agave Wine",
+       "Villain, Zenis",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Aged Beer",
+       "Claud, Villain",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Aged Rice Wine",
+       "Merlin, Villain",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Beryl",
+       "Merlin",
+       "Dada",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Candied Wax Apple",
+       "—",
+       "Kasia, Lank",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Crawlus",
+       "Kasia, Merlin",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Delicious Meat Bun",
+       "Claud, Merlin",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Delicious Stew",
+       "Claud",
+       "Hult",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Flute",
+       "Alchemy, Orlando",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Game Console",
+       "Dada, Villain",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Gel",
+       "—",
+       "Cod, Hult",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Hamburger",
+       "Dada, Lank",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Jam Bread",
+       "—",
+       "Claud, Orlando",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Key",
+       "Hult, Zenis",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Large Iced Tea",
+       "Orlando",
+       "Claud",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Meat-Shaped Stone",
+       "Merlin",
+       "Dada",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Mint Tea",
+       "Mody",
+       "Claud",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Mushroom Meat Soup",
+       "Alchemy, Dada",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Old Chip",
+       "Sacco",
+       "Villain",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Rice Wine",
+       "Merlin, Villain",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "Wool Fabric",
+       "Alchemy, Zenis",
+       "—",
+       "—",
+       "Limited data (2/13)"
+      ],
+      [
+       "66 FCS",
+       "Cod",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Aged Grape Wine",
+       "Villain",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Amber",
+       "Merlin",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Ammonite Fossil",
+       "—",
+       "Dada",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Battery",
+       "—",
+       "Villain",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Bug Honey",
+       "Kasia",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Candied Strawberry",
+       "Alchemy",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Century Egg",
+       "Merlin",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Corn",
+       "Lank",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Feather",
+       "Kasia",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Grape Wine",
+       "Villain",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Kasia's Cake",
+       "Kasia",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Large Coffee",
+       "Orlando",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Large Mechanical Scrap",
+       "Lank",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Laser Core",
+       "—",
+       "Cod",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Marsh Beast Horn",
+       "Orlando",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Obsidian",
+       "Merlin",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Pickled Fruits",
+       "Kasia",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Popcorn",
+       "Kasia",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Potato",
+       "—",
+       "Alchemy",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Pumpkin",
+       "Dada",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Pumpkin Pie",
+       "Dada",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Shiitake",
+       "Dada",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Succulent",
+       "Alchemy",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Turnip",
+       "Claud",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Wasp's Eye",
+       "Mody",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ]
+     ],
+     "rowAttrs": [
+      {
+       "v": "universal"
+      },
+      {
+       "v": "universal"
+      },
+      {
+       "v": "never"
+      },
+      {
+       "v": "never"
+      },
+      {
+       "v": "never"
+      },
+      {
+       "v": "mixed"
+      },
+      {
+       "v": "mixed"
+      },
+      {
+       "v": "mixed"
+      },
+      {
+       "v": "mixed"
+      },
+      {
+       "v": "mixed"
+      },
+      {
+       "v": "mixed"
+      },
+      {
+       "v": "mixed"
+      },
+      {
+       "v": "mixed"
+      },
+      {
+       "v": "mixed"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
+      }
+     ]
+    },
+    {
+     "type": "table",
+     "heading": "Look Up a Villager — What Should I Bring?",
+     "body": "The 13 villagers with community-tested data. The other 12 characters (Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch) have no gift data recorded yet.",
+     "columns": [
+      "Villager",
+      "Loves",
+      "Likes",
+      "Dislikes"
+     ],
+     "rows": [
+      [
+       "Alchemy",
+       "Flute, Succulent, Candied Strawberry, Wool Fabric, Mushroom Meat Soup",
+       "Tomato, Blueberry, Pepper, Potato, Spaghetti, Candied Blueberry, Fern Fossil, Honey, Cucumber",
+       "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water, Iced Tea, Coffee"
+      ],
+      [
+       "Claud",
+       "Aged Beer, Turnip, Thermos, Delicious Meat Bun, Delicious Stew",
+       "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Large Iced Tea, Mint Tea, Jam Bread",
+       "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+      ],
+      [
+       "Cod",
+       "Cucumber, 66 FCS",
+       "Combat Chip, 33 FCS, Fern Fossil, Iced Tea, Honey, Coffee, Laser Core, Gel",
+       "Tomato, Copper Ingot, Spaghetti, Bamboo Tube, Bottled Water"
+      ],
+      [
+       "Dada",
+       "Game Console, Pumpkin, Pumpkin Pie, Shiitake, Cake, Hamburger, Mushroom Meat Soup",
+       "Spaghetti, Fern Fossil, Honey, Meat-Shaped Stone, Ammonite Fossil, Beryl",
+       "Copper Ingot, Bamboo Tube, Bottled Water, Thermos"
+      ],
+      [
+       "Hult",
+       "Pepper, Spaghetti, Key",
+       "Fern Fossil, Iced Tea, Honey, Coffee, Beer, Gel, Delicious Stew",
+       "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+      ],
+      [
+       "Kasia",
+       "Honey, Kasia's Cake, Feather, Pickled Fruits, Crawlus, Bug Honey, Cake, Popcorn",
+       "Blueberry, Spaghetti, Candied Blueberry, Fern Fossil, Candied Wax Apple",
+       "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+      ],
+      [
+       "Lank",
+       "Large Mechanical Scrap, Corn, Thermos, Hamburger",
+       "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Candied Wax Apple",
+       "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+      ],
+      [
+       "Merlin",
+       "Aged Rice Wine, Century Egg, Crawlus, Rice Wine, Beryl, Amber, Meat-Shaped Stone, Obsidian, Delicious Meat Bun",
+       "Beer",
+       "—"
+      ],
+      [
+       "Mody",
+       "Combat Chip, Mint Tea, Wasp's Eye",
+       "33 FCS, Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee",
+       "Copper Ingot, Bamboo Tube, Bottled Water"
+      ],
+      [
+       "Orlando",
+       "Tomato, Spaghetti, Large Coffee, Marsh Beast Horn, Large Iced Tea, Flute",
+       "Fern Fossil, Iced Tea, Honey, Coffee, Jam Bread",
+       "Copper Ingot, Bamboo Tube, Bottled Water, Cucumber"
+      ],
+      [
+       "Sacco",
+       "Old Chip",
+       "Fern Fossil",
+       "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+      ],
+      [
+       "Villain",
+       "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+       "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
+       "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+      ],
+      [
+       "Zenis",
+       "Wool Fabric, Agave Wine, Cake, Key",
+       "Spaghetti, Blueberry, Candied Blueberry, Fern Fossil, Iced Tea, Honey, Coffee, Beer",
+       "Combat Chip, Pepper, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+      ]
+     ]
+    },
+    {
+     "type": "faq",
+     "heading": "Quick Answers",
+     "items": [
+      [
+       "What is the best all-purpose gift in Doloc Town?",
+       "Fern Fossil. Of the 13 villagers with tested data, 12 like it and none dislike it. Honey is a close second at 10/13 with no dislikes."
+      ],
+      [
+       "What should I never give as a gift?",
+       "Bamboo Tube, Bottled Water, Copper Ingot. Each is disliked by 12 of 13 villagers and loved by nobody."
+      ],
+      [
+       "Is there romance or marriage in Doloc Town?",
+       "No. The developers confirmed Doloc Town has no romance or marriage system — gifts raise friendship only."
+      ],
+      [
+       "Why do some villagers have no gifts listed?",
+       "The community guide this data comes from was built during Early Access and is explicitly unfinished. 12 characters have no entries at all, and an unlisted item may simply be untested rather than neutral."
+      ]
+     ]
+    }
+   ],
+   "meta": {
+    "icon": "friendship"
+   },
+   "sources": [
+    {
+     "label": "Steam Community guide: Doloc Town - Character Gifts (community-tested, Early Access era)",
+     "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3487656041"
+    },
+    {
+     "label": "Official Steam page — Doloc Town",
+     "url": "https://store.steampowered.com/app/2285550/Doloc_Town/"
+    }
+   ],
+   "i18n": {
+    "zh-CN": {
+     "title": "多洛可小镇送礼指南：每位村民的喜好与雷区",
+     "metaTitle": "多洛可小镇送礼：村民喜好、讨厌物一览",
+     "metaDescription": "多洛可小镇每位村民爱什么、喜欢什么、讨厌什么——外加 12/13 的万能礼物，以及绝对不能送的三样东西。",
+     "intro": "送对了好感度猛涨，送错了白费一天。本页把 65 件物品和社区实测过的 13 位村民做了双向对照：可以按物品查谁想要，也可以按村民查该带什么。",
+     "sections": [
+      {
+       "type": "note",
+       "heading": "这些数据从哪来",
+       "body": "下面每一行都来自社区 Steam 攻略《Doloc Town - Character Gifts》（作者 rockechic），从它的两张数据表逐行读出。花礼物之前先知道两个局限：作者自述这份表\"仍在完善中\"、是抢先体验期做的，比 1.0（2026 年 8 月 5 日）早了一年多；而且 25 个角色里有 12 个完全没有数据。某个物品没被列出，可能只是没人测过——**不等于送了安全**。物品名与村民名保持英文客户端里的原样。"
+      },
+      {
+       "type": "list",
+       "heading": "先看这三条",
+       "items": [
+        "Fern Fossil 是唯一真正的万能礼物：13 位有数据的村民里有 12 位喜欢，而且没有一个人讨厌。Honey 第二，10/13，同样零讨厌。",
+        "绝对别送 Bamboo Tube, Bottled Water, Copper Ingot。这三样每一样都被 13 人中的 12 人讨厌，没有任何人喜欢——是你能递出去的最差选择。",
+        "Combat Chip 是个陷阱：Mody 爱它，但另外 8 位村民讨厌它。机械零件里没有可以无脑群发的礼物。"
+       ]
+      },
+      {
+       "type": "giftfilter"
+      },
+      {
+       "type": "table",
+       "heading": "按物品查——谁会要它？",
+       "body": "按结论的确定程度排序：万能礼物在最前，其次是该避开的，最后是村民意见不一的。",
+       "columns": [
+        "物品",
+        "谁爱它",
+        "谁喜欢",
+        "谁讨厌",
+        "判定"
+       ],
+       "rows": [
+        [
+         "Fern Fossil",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "—",
+         "万能"
+        ],
+        [
+         "Honey",
+         "Kasia",
+         "Alchemy, Claud, Cod, Dada, Hult, Lank, Mody, Orlando, Zenis",
+         "—",
+         "万能"
+        ],
+        [
+         "Bamboo Tube",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "绝对别送"
+        ],
+        [
+         "Bottled Water",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "绝对别送"
+        ],
+        [
+         "Copper Ingot",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "绝对别送"
+        ],
+        [
+         "Spaghetti",
+         "Hult, Orlando",
+         "Alchemy, Claud, Dada, Kasia, Lank, Mody, Zenis",
+         "Cod",
+         "有分歧"
+        ],
+        [
+         "Iced Tea",
+         "—",
+         "Claud, Cod, Hult, Lank, Mody, Orlando, Villain, Zenis",
+         "Alchemy",
+         "有分歧"
+        ],
+        [
+         "Coffee",
+         "—",
+         "Claud, Cod, Hult, Lank, Mody, Orlando, Zenis",
+         "Alchemy",
+         "有分歧"
+        ],
+        [
+         "33 FCS",
+         "—",
+         "Cod, Mody",
+         "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+         "有分歧"
+        ],
+        [
+         "Combat Chip",
+         "Mody",
+         "Cod",
+         "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+         "有分歧"
+        ],
+        [
+         "Cucumber",
+         "Cod",
+         "Alchemy",
+         "Orlando",
+         "有分歧"
+        ],
+        [
+         "Pepper",
+         "Hult",
+         "Alchemy",
+         "Zenis",
+         "有分歧"
+        ],
+        [
+         "Thermos",
+         "Claud, Lank",
+         "—",
+         "Dada",
+         "有分歧"
+        ],
+        [
+         "Tomato",
+         "Orlando",
+         "Alchemy",
+         "Cod",
+         "有分歧"
+        ],
+        [
+         "Beer",
+         "—",
+         "Hult, Merlin, Villain, Zenis",
+         "—",
+         "数据有限 (4/13)"
+        ],
+        [
+         "Blueberry",
+         "—",
+         "Alchemy, Kasia, Zenis",
+         "—",
+         "数据有限 (3/13)"
+        ],
+        [
+         "Cake",
+         "Dada, Kasia, Zenis",
+         "—",
+         "—",
+         "数据有限 (3/13)"
+        ],
+        [
+         "Candied Blueberry",
+         "—",
+         "Alchemy, Kasia, Zenis",
+         "—",
+         "数据有限 (3/13)"
+        ],
+        [
+         "Agave Wine",
+         "Villain, Zenis",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Aged Beer",
+         "Claud, Villain",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Aged Rice Wine",
+         "Merlin, Villain",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Beryl",
+         "Merlin",
+         "Dada",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Candied Wax Apple",
+         "—",
+         "Kasia, Lank",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Crawlus",
+         "Kasia, Merlin",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Delicious Meat Bun",
+         "Claud, Merlin",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Delicious Stew",
+         "Claud",
+         "Hult",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Flute",
+         "Alchemy, Orlando",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Game Console",
+         "Dada, Villain",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Gel",
+         "—",
+         "Cod, Hult",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Hamburger",
+         "Dada, Lank",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Jam Bread",
+         "—",
+         "Claud, Orlando",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Key",
+         "Hult, Zenis",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Large Iced Tea",
+         "Orlando",
+         "Claud",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Meat-Shaped Stone",
+         "Merlin",
+         "Dada",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Mint Tea",
+         "Mody",
+         "Claud",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Mushroom Meat Soup",
+         "Alchemy, Dada",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Old Chip",
+         "Sacco",
+         "Villain",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Rice Wine",
+         "Merlin, Villain",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "Wool Fabric",
+         "Alchemy, Zenis",
+         "—",
+         "—",
+         "数据有限 (2/13)"
+        ],
+        [
+         "66 FCS",
+         "Cod",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Aged Grape Wine",
+         "Villain",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Amber",
+         "Merlin",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Ammonite Fossil",
+         "—",
+         "Dada",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Battery",
+         "—",
+         "Villain",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Bug Honey",
+         "Kasia",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Candied Strawberry",
+         "Alchemy",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Century Egg",
+         "Merlin",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Corn",
+         "Lank",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Feather",
+         "Kasia",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Grape Wine",
+         "Villain",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Kasia's Cake",
+         "Kasia",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Large Coffee",
+         "Orlando",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Large Mechanical Scrap",
+         "Lank",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Laser Core",
+         "—",
+         "Cod",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Marsh Beast Horn",
+         "Orlando",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Obsidian",
+         "Merlin",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Pickled Fruits",
+         "Kasia",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Popcorn",
+         "Kasia",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Potato",
+         "—",
+         "Alchemy",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Pumpkin",
+         "Dada",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Pumpkin Pie",
+         "Dada",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Shiitake",
+         "Dada",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Succulent",
+         "Alchemy",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Turnip",
+         "Claud",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Wasp's Eye",
+         "Mody",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ]
+       ],
+       "rowAttrs": [
+        {
+         "v": "universal"
+        },
+        {
+         "v": "universal"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        }
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "按村民查——该带什么？",
+       "body": "社区已实测的 13 位村民。另外 12 个角色（Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch）目前没有任何礼物数据。",
+       "columns": [
+        "村民",
+        "爱",
+        "喜欢",
+        "讨厌"
+       ],
+       "rows": [
+        [
+         "Alchemy",
+         "Flute, Succulent, Candied Strawberry, Wool Fabric, Mushroom Meat Soup",
+         "Tomato, Blueberry, Pepper, Potato, Spaghetti, Candied Blueberry, Fern Fossil, Honey, Cucumber",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water, Iced Tea, Coffee"
+        ],
+        [
+         "Claud",
+         "Aged Beer, Turnip, Thermos, Delicious Meat Bun, Delicious Stew",
+         "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Large Iced Tea, Mint Tea, Jam Bread",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Cod",
+         "Cucumber, 66 FCS",
+         "Combat Chip, 33 FCS, Fern Fossil, Iced Tea, Honey, Coffee, Laser Core, Gel",
+         "Tomato, Copper Ingot, Spaghetti, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Dada",
+         "Game Console, Pumpkin, Pumpkin Pie, Shiitake, Cake, Hamburger, Mushroom Meat Soup",
+         "Spaghetti, Fern Fossil, Honey, Meat-Shaped Stone, Ammonite Fossil, Beryl",
+         "Copper Ingot, Bamboo Tube, Bottled Water, Thermos"
+        ],
+        [
+         "Hult",
+         "Pepper, Spaghetti, Key",
+         "Fern Fossil, Iced Tea, Honey, Coffee, Beer, Gel, Delicious Stew",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Kasia",
+         "Honey, Kasia's Cake, Feather, Pickled Fruits, Crawlus, Bug Honey, Cake, Popcorn",
+         "Blueberry, Spaghetti, Candied Blueberry, Fern Fossil, Candied Wax Apple",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Lank",
+         "Large Mechanical Scrap, Corn, Thermos, Hamburger",
+         "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Candied Wax Apple",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Merlin",
+         "Aged Rice Wine, Century Egg, Crawlus, Rice Wine, Beryl, Amber, Meat-Shaped Stone, Obsidian, Delicious Meat Bun",
+         "Beer",
+         "—"
+        ],
+        [
+         "Mody",
+         "Combat Chip, Mint Tea, Wasp's Eye",
+         "33 FCS, Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee",
+         "Copper Ingot, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Orlando",
+         "Tomato, Spaghetti, Large Coffee, Marsh Beast Horn, Large Iced Tea, Flute",
+         "Fern Fossil, Iced Tea, Honey, Coffee, Jam Bread",
+         "Copper Ingot, Bamboo Tube, Bottled Water, Cucumber"
+        ],
+        [
+         "Sacco",
+         "Old Chip",
+         "Fern Fossil",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Villain",
+         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+         "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Zenis",
+         "Wool Fabric, Agave Wine, Cake, Key",
+         "Spaghetti, Blueberry, Candied Blueberry, Fern Fossil, Iced Tea, Honey, Coffee, Beer",
+         "Combat Chip, Pepper, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ]
+       ]
+      },
+      {
+       "type": "faq",
+       "heading": "快速解答",
+       "items": [
+        [
+         "多洛可小镇最万能的礼物是什么？",
+         "Fern Fossil。在 13 位有实测数据的村民里，12 位喜欢它，没有一个人讨厌。Honey 紧随其后，10/13，同样零讨厌。"
+        ],
+        [
+         "什么东西绝对不能送？",
+         "Bamboo Tube, Bottled Water, Copper Ingot。这三样每样都被 13 人中的 12 人讨厌，且无人喜欢。"
+        ],
+        [
+         "多洛可小镇有恋爱或结婚系统吗？",
+         "没有。开发者已确认本作没有恋爱与结婚系统，送礼只提升友谊好感度。"
+        ],
+        [
+         "为什么有些村民没有礼物数据？",
+         "这份数据来自的社区攻略是抢先体验期做的，作者自述尚未完成。有 12 个角色完全没有条目；而某个物品没被列出，可能只是没人测过，不代表它是中性的。"
+        ]
+       ]
+      }
+     ]
+    },
+    "ja": {
+     "title": "ドロックタウン 贈り物ガイド：住民ごとの好みと地雷",
+     "metaTitle": "ドロックタウン 贈り物：住民の好き嫌い一覧",
+     "metaDescription": "ドロックタウンの住民が何を愛し、何を好み、何を嫌うか。12/13 の万能ギフトと、絶対に渡してはいけない 3 品も掲載。",
+     "intro": "正しい品を渡せば友好度は跳ね上がり、間違えれば一日を無駄にする。本ページは 65 品とコミュニティが実際に検証した住民 13 人を双方向で対照した。品物から「誰が欲しがるか」を引くことも、住民から「何を持っていくか」を引くこともできる。",
+     "sections": [
+      {
+       "type": "note",
+       "heading": "このデータの出どころ",
+       "body": "以下の各行はコミュニティ製 Steam ガイド『Doloc Town - Character Gifts』（作者 rockechic）の2 枚のデータ表から直接読み取ったもの。贈り物を使う前に 2 つの限界を知っておきたい。作者自身が「まだ作成途中」と述べており、アーリーアクセス期に作られたため 1.0（2026 年 8 月 5 日）より 1 年以上前のものだ。さらに 25 人のうち 12 人はデータが一切ない。表に無い物品は単に未検証かもしれず、**安全である証拠にはならない**。物品名と住民名は英語クライアントの表記のまま。"
+      },
+      {
+       "type": "list",
+       "heading": "まず知っておきたい 3 点",
+       "items": [
+        "Fern Fossil こそ唯一の万能ギフト。データのある 13 人中 12 人が好み、嫌う人はゼロ。次点は Honey で 10/13、こちらも嫌う人なし。",
+        "Bamboo Tube, Bottled Water, Copper Ingot は絶対に贈らないこと。どれも 13 人中 12 人に嫌われ、好む人は一人もいない——渡せる中で最悪の品だ。",
+        "Combat Chip は罠だ——Mody は喜ぶが、他の 8 人は嫌う。機械部品に「全員に配れる」贈り物は存在しない。"
+       ]
+      },
+      {
+       "type": "giftfilter"
+      },
+      {
+       "type": "table",
+       "heading": "品物から引く——誰が欲しがる？",
+       "body": "結論の確度順に並べた。万能ギフトが先、次に避けるべき品、最後に住民の評価が割れる品。",
+       "columns": [
+        "品物",
+        "愛する人",
+        "好む人",
+        "嫌う人",
+        "判定"
+       ],
+       "rows": [
+        [
+         "Fern Fossil",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "—",
+         "万能"
+        ],
+        [
+         "Honey",
+         "Kasia",
+         "Alchemy, Claud, Cod, Dada, Hult, Lank, Mody, Orlando, Zenis",
+         "—",
+         "万能"
+        ],
+        [
+         "Bamboo Tube",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "絶対に贈らない"
+        ],
+        [
+         "Bottled Water",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "絶対に贈らない"
+        ],
+        [
+         "Copper Ingot",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "絶対に贈らない"
+        ],
+        [
+         "Spaghetti",
+         "Hult, Orlando",
+         "Alchemy, Claud, Dada, Kasia, Lank, Mody, Zenis",
+         "Cod",
+         "賛否両論"
+        ],
+        [
+         "Iced Tea",
+         "—",
+         "Claud, Cod, Hult, Lank, Mody, Orlando, Villain, Zenis",
+         "Alchemy",
+         "賛否両論"
+        ],
+        [
+         "Coffee",
+         "—",
+         "Claud, Cod, Hult, Lank, Mody, Orlando, Zenis",
+         "Alchemy",
+         "賛否両論"
+        ],
+        [
+         "33 FCS",
+         "—",
+         "Cod, Mody",
+         "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+         "賛否両論"
+        ],
+        [
+         "Combat Chip",
+         "Mody",
+         "Cod",
+         "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+         "賛否両論"
+        ],
+        [
+         "Cucumber",
+         "Cod",
+         "Alchemy",
+         "Orlando",
+         "賛否両論"
+        ],
+        [
+         "Pepper",
+         "Hult",
+         "Alchemy",
+         "Zenis",
+         "賛否両論"
+        ],
+        [
+         "Thermos",
+         "Claud, Lank",
+         "—",
+         "Dada",
+         "賛否両論"
+        ],
+        [
+         "Tomato",
+         "Orlando",
+         "Alchemy",
+         "Cod",
+         "賛否両論"
+        ],
+        [
+         "Beer",
+         "—",
+         "Hult, Merlin, Villain, Zenis",
+         "—",
+         "データ不足 (4/13)"
+        ],
+        [
+         "Blueberry",
+         "—",
+         "Alchemy, Kasia, Zenis",
+         "—",
+         "データ不足 (3/13)"
+        ],
+        [
+         "Cake",
+         "Dada, Kasia, Zenis",
+         "—",
+         "—",
+         "データ不足 (3/13)"
+        ],
+        [
+         "Candied Blueberry",
+         "—",
+         "Alchemy, Kasia, Zenis",
+         "—",
+         "データ不足 (3/13)"
+        ],
+        [
+         "Agave Wine",
+         "Villain, Zenis",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Aged Beer",
+         "Claud, Villain",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Aged Rice Wine",
+         "Merlin, Villain",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Beryl",
+         "Merlin",
+         "Dada",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Candied Wax Apple",
+         "—",
+         "Kasia, Lank",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Crawlus",
+         "Kasia, Merlin",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Delicious Meat Bun",
+         "Claud, Merlin",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Delicious Stew",
+         "Claud",
+         "Hult",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Flute",
+         "Alchemy, Orlando",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Game Console",
+         "Dada, Villain",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Gel",
+         "—",
+         "Cod, Hult",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Hamburger",
+         "Dada, Lank",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Jam Bread",
+         "—",
+         "Claud, Orlando",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Key",
+         "Hult, Zenis",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Large Iced Tea",
+         "Orlando",
+         "Claud",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Meat-Shaped Stone",
+         "Merlin",
+         "Dada",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Mint Tea",
+         "Mody",
+         "Claud",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Mushroom Meat Soup",
+         "Alchemy, Dada",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Old Chip",
+         "Sacco",
+         "Villain",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Rice Wine",
+         "Merlin, Villain",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "Wool Fabric",
+         "Alchemy, Zenis",
+         "—",
+         "—",
+         "データ不足 (2/13)"
+        ],
+        [
+         "66 FCS",
+         "Cod",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Aged Grape Wine",
+         "Villain",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Amber",
+         "Merlin",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Ammonite Fossil",
+         "—",
+         "Dada",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Battery",
+         "—",
+         "Villain",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Bug Honey",
+         "Kasia",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Candied Strawberry",
+         "Alchemy",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Century Egg",
+         "Merlin",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Corn",
+         "Lank",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Feather",
+         "Kasia",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Grape Wine",
+         "Villain",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Kasia's Cake",
+         "Kasia",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Large Coffee",
+         "Orlando",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Large Mechanical Scrap",
+         "Lank",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Laser Core",
+         "—",
+         "Cod",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Marsh Beast Horn",
+         "Orlando",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Obsidian",
+         "Merlin",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Pickled Fruits",
+         "Kasia",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Popcorn",
+         "Kasia",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Potato",
+         "—",
+         "Alchemy",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Pumpkin",
+         "Dada",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Pumpkin Pie",
+         "Dada",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Shiitake",
+         "Dada",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Succulent",
+         "Alchemy",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Turnip",
+         "Claud",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Wasp's Eye",
+         "Mody",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ]
+       ],
+       "rowAttrs": [
+        {
+         "v": "universal"
+        },
+        {
+         "v": "universal"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        }
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "住民から引く——何を持っていく？",
+       "body": "コミュニティ検証済みの住民 13 人。残る 12 人（Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch）は贈り物データが未記録。",
+       "columns": [
+        "住民",
+        "愛する",
+        "好む",
+        "嫌う"
+       ],
+       "rows": [
+        [
+         "Alchemy",
+         "Flute, Succulent, Candied Strawberry, Wool Fabric, Mushroom Meat Soup",
+         "Tomato, Blueberry, Pepper, Potato, Spaghetti, Candied Blueberry, Fern Fossil, Honey, Cucumber",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water, Iced Tea, Coffee"
+        ],
+        [
+         "Claud",
+         "Aged Beer, Turnip, Thermos, Delicious Meat Bun, Delicious Stew",
+         "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Large Iced Tea, Mint Tea, Jam Bread",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Cod",
+         "Cucumber, 66 FCS",
+         "Combat Chip, 33 FCS, Fern Fossil, Iced Tea, Honey, Coffee, Laser Core, Gel",
+         "Tomato, Copper Ingot, Spaghetti, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Dada",
+         "Game Console, Pumpkin, Pumpkin Pie, Shiitake, Cake, Hamburger, Mushroom Meat Soup",
+         "Spaghetti, Fern Fossil, Honey, Meat-Shaped Stone, Ammonite Fossil, Beryl",
+         "Copper Ingot, Bamboo Tube, Bottled Water, Thermos"
+        ],
+        [
+         "Hult",
+         "Pepper, Spaghetti, Key",
+         "Fern Fossil, Iced Tea, Honey, Coffee, Beer, Gel, Delicious Stew",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Kasia",
+         "Honey, Kasia's Cake, Feather, Pickled Fruits, Crawlus, Bug Honey, Cake, Popcorn",
+         "Blueberry, Spaghetti, Candied Blueberry, Fern Fossil, Candied Wax Apple",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Lank",
+         "Large Mechanical Scrap, Corn, Thermos, Hamburger",
+         "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Candied Wax Apple",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Merlin",
+         "Aged Rice Wine, Century Egg, Crawlus, Rice Wine, Beryl, Amber, Meat-Shaped Stone, Obsidian, Delicious Meat Bun",
+         "Beer",
+         "—"
+        ],
+        [
+         "Mody",
+         "Combat Chip, Mint Tea, Wasp's Eye",
+         "33 FCS, Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee",
+         "Copper Ingot, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Orlando",
+         "Tomato, Spaghetti, Large Coffee, Marsh Beast Horn, Large Iced Tea, Flute",
+         "Fern Fossil, Iced Tea, Honey, Coffee, Jam Bread",
+         "Copper Ingot, Bamboo Tube, Bottled Water, Cucumber"
+        ],
+        [
+         "Sacco",
+         "Old Chip",
+         "Fern Fossil",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Villain",
+         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+         "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Zenis",
+         "Wool Fabric, Agave Wine, Cake, Key",
+         "Spaghetti, Blueberry, Candied Blueberry, Fern Fossil, Iced Tea, Honey, Coffee, Beer",
+         "Combat Chip, Pepper, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ]
+       ]
+      },
+      {
+       "type": "faq",
+       "heading": "クイック回答",
+       "items": [
+        [
+         "ドロックタウンで最も万能な贈り物は？",
+         "Fern Fossil。検証データのある住民 13 人中 12 人が好み、嫌う人はいない。次点は Honey で 10/13、こちらも嫌う人なし。"
+        ],
+        [
+         "絶対に贈ってはいけない物は？",
+         "Bamboo Tube, Bottled Water, Copper Ingot。いずれも 13 人中 12 人に嫌われ、好む人は皆無。"
+        ],
+        [
+         "ドロックタウンに恋愛や結婚はある？",
+         "ない。開発者が本作に恋愛・結婚システムは無いと明言している。贈り物は友好度のみを上げる。"
+        ],
+        [
+         "贈り物データが無い住民がいるのはなぜ？",
+         "元になったコミュニティガイドはアーリーアクセス期に作られ、作者自身が未完成と述べている。12 人は項目自体が無く、表に無い品は「中立」ではなく単に未検証の可能性がある。"
+        ]
+       ]
+      }
+     ]
+    },
+    "ko": {
+     "title": "돌록 타운 선물 가이드: 주민별 선호 아이템과 지뢰",
+     "metaTitle": "돌록 타운 선물: 주민 선호·비선호 정리",
+     "metaDescription": "돌록 타운 주민이 무엇을 아주 좋아하고, 좋아하고, 싫어하는지 정리했다. 12/13의 만능 선물과 절대 주면 안 되는 세 가지도 함께.",
+     "intro": "제대로 주면 호감도가 크게 오르고, 잘못 주면 하루를 날린다. 이 문서는 아이템 65종과 커뮤니티가 실제로 검증한 주민 13명을 양방향으로 대조했다. 아이템으로 누가 원하는지 찾을 수도, 주민으로 무엇을 가져갈지 찾을 수도 있다.",
+     "sections": [
+      {
+       "type": "note",
+       "heading": "이 데이터의 출처",
+       "body": "아래 모든 행은 커뮤니티 Steam 가이드 《Doloc Town - Character Gifts》(작성자 rockechic)의 데이터 표 두 장에서 그대로 옮긴 것이다. 선물을 쓰기 전에 알아둘 한계가 두 가지 있다. 작성자 본인이 \"아직 작업 중\"이라고 밝혔고 얼리 액세스 시기에 만든 자료라 1.0(2026년 8월 5일)보다 1년 이상 앞선다. 게다가 캐릭터 25명 중 12명은 데이터가 전혀 없다. 목록에 없는 물건은 그냥 아직 검증되지 않았을 수 있으며 **안전하다는 뜻이 아니다**. 아이템명과 주민 이름은 영어 클라이언트 표기 그대로 두었다."
+      },
+      {
+       "type": "list",
+       "heading": "먼저 알아둘 세 가지",
+       "items": [
+        "Fern Fossil이야말로 진짜 만능 선물이다. 데이터가 있는 주민 13명 중 12명이 좋아하고 싫어하는 사람은 한 명도 없다. 2위는 Honey로 10/13, 역시 싫어하는 사람이 없다.",
+        "Bamboo Tube, Bottled Water, Copper Ingot은 절대 주지 말 것. 각각 13명 중 12명이 싫어하고 좋아하는 사람은 아무도 없다. 건넬 수 있는 것 중 최악이다.",
+        "Combat Chip이(가) 바로 함정이다. 좋아하는 주민은 Mody 한 명뿐이고, 나머지 8명은 싫어한다. 기계 부품 중에는 아무에게나 돌려도 되는 선물이 없다."
+       ]
+      },
+      {
+       "type": "giftfilter"
+      },
+      {
+       "type": "table",
+       "heading": "아이템으로 찾기 — 누가 원하나?",
+       "body": "결론이 확실한 순서로 정렬했다. 만능 선물이 먼저, 그다음 피해야 할 것, 마지막이 주민마다 갈리는 것.",
+       "columns": [
+        "아이템",
+        "아주 좋아함",
+        "좋아함",
+        "싫어함",
+        "판정"
+       ],
+       "rows": [
+        [
+         "Fern Fossil",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "—",
+         "만능"
+        ],
+        [
+         "Honey",
+         "Kasia",
+         "Alchemy, Claud, Cod, Dada, Hult, Lank, Mody, Orlando, Zenis",
+         "—",
+         "만능"
+        ],
+        [
+         "Bamboo Tube",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "절대 금지"
+        ],
+        [
+         "Bottled Water",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "절대 금지"
+        ],
+        [
+         "Copper Ingot",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "절대 금지"
+        ],
+        [
+         "Spaghetti",
+         "Hult, Orlando",
+         "Alchemy, Claud, Dada, Kasia, Lank, Mody, Zenis",
+         "Cod",
+         "호불호"
+        ],
+        [
+         "Iced Tea",
+         "—",
+         "Claud, Cod, Hult, Lank, Mody, Orlando, Villain, Zenis",
+         "Alchemy",
+         "호불호"
+        ],
+        [
+         "Coffee",
+         "—",
+         "Claud, Cod, Hult, Lank, Mody, Orlando, Zenis",
+         "Alchemy",
+         "호불호"
+        ],
+        [
+         "33 FCS",
+         "—",
+         "Cod, Mody",
+         "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+         "호불호"
+        ],
+        [
+         "Combat Chip",
+         "Mody",
+         "Cod",
+         "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+         "호불호"
+        ],
+        [
+         "Cucumber",
+         "Cod",
+         "Alchemy",
+         "Orlando",
+         "호불호"
+        ],
+        [
+         "Pepper",
+         "Hult",
+         "Alchemy",
+         "Zenis",
+         "호불호"
+        ],
+        [
+         "Thermos",
+         "Claud, Lank",
+         "—",
+         "Dada",
+         "호불호"
+        ],
+        [
+         "Tomato",
+         "Orlando",
+         "Alchemy",
+         "Cod",
+         "호불호"
+        ],
+        [
+         "Beer",
+         "—",
+         "Hult, Merlin, Villain, Zenis",
+         "—",
+         "데이터 부족 (4/13)"
+        ],
+        [
+         "Blueberry",
+         "—",
+         "Alchemy, Kasia, Zenis",
+         "—",
+         "데이터 부족 (3/13)"
+        ],
+        [
+         "Cake",
+         "Dada, Kasia, Zenis",
+         "—",
+         "—",
+         "데이터 부족 (3/13)"
+        ],
+        [
+         "Candied Blueberry",
+         "—",
+         "Alchemy, Kasia, Zenis",
+         "—",
+         "데이터 부족 (3/13)"
+        ],
+        [
+         "Agave Wine",
+         "Villain, Zenis",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Aged Beer",
+         "Claud, Villain",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Aged Rice Wine",
+         "Merlin, Villain",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Beryl",
+         "Merlin",
+         "Dada",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Candied Wax Apple",
+         "—",
+         "Kasia, Lank",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Crawlus",
+         "Kasia, Merlin",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Delicious Meat Bun",
+         "Claud, Merlin",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Delicious Stew",
+         "Claud",
+         "Hult",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Flute",
+         "Alchemy, Orlando",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Game Console",
+         "Dada, Villain",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Gel",
+         "—",
+         "Cod, Hult",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Hamburger",
+         "Dada, Lank",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Jam Bread",
+         "—",
+         "Claud, Orlando",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Key",
+         "Hult, Zenis",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Large Iced Tea",
+         "Orlando",
+         "Claud",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Meat-Shaped Stone",
+         "Merlin",
+         "Dada",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Mint Tea",
+         "Mody",
+         "Claud",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Mushroom Meat Soup",
+         "Alchemy, Dada",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Old Chip",
+         "Sacco",
+         "Villain",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Rice Wine",
+         "Merlin, Villain",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "Wool Fabric",
+         "Alchemy, Zenis",
+         "—",
+         "—",
+         "데이터 부족 (2/13)"
+        ],
+        [
+         "66 FCS",
+         "Cod",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Aged Grape Wine",
+         "Villain",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Amber",
+         "Merlin",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Ammonite Fossil",
+         "—",
+         "Dada",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Battery",
+         "—",
+         "Villain",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Bug Honey",
+         "Kasia",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Candied Strawberry",
+         "Alchemy",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Century Egg",
+         "Merlin",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Corn",
+         "Lank",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Feather",
+         "Kasia",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Grape Wine",
+         "Villain",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Kasia's Cake",
+         "Kasia",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Large Coffee",
+         "Orlando",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Large Mechanical Scrap",
+         "Lank",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Laser Core",
+         "—",
+         "Cod",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Marsh Beast Horn",
+         "Orlando",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Obsidian",
+         "Merlin",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Pickled Fruits",
+         "Kasia",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Popcorn",
+         "Kasia",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Potato",
+         "—",
+         "Alchemy",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Pumpkin",
+         "Dada",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Pumpkin Pie",
+         "Dada",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Shiitake",
+         "Dada",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Succulent",
+         "Alchemy",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Turnip",
+         "Claud",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Wasp's Eye",
+         "Mody",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ]
+       ],
+       "rowAttrs": [
+        {
+         "v": "universal"
+        },
+        {
+         "v": "universal"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        }
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "주민으로 찾기 — 무엇을 가져갈까?",
+       "body": "커뮤니티가 검증한 주민 13명. 나머지 12명(Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch)은 아직 선물 데이터가 없다.",
+       "columns": [
+        "주민",
+        "아주 좋아함",
+        "좋아함",
+        "싫어함"
+       ],
+       "rows": [
+        [
+         "Alchemy",
+         "Flute, Succulent, Candied Strawberry, Wool Fabric, Mushroom Meat Soup",
+         "Tomato, Blueberry, Pepper, Potato, Spaghetti, Candied Blueberry, Fern Fossil, Honey, Cucumber",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water, Iced Tea, Coffee"
+        ],
+        [
+         "Claud",
+         "Aged Beer, Turnip, Thermos, Delicious Meat Bun, Delicious Stew",
+         "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Large Iced Tea, Mint Tea, Jam Bread",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Cod",
+         "Cucumber, 66 FCS",
+         "Combat Chip, 33 FCS, Fern Fossil, Iced Tea, Honey, Coffee, Laser Core, Gel",
+         "Tomato, Copper Ingot, Spaghetti, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Dada",
+         "Game Console, Pumpkin, Pumpkin Pie, Shiitake, Cake, Hamburger, Mushroom Meat Soup",
+         "Spaghetti, Fern Fossil, Honey, Meat-Shaped Stone, Ammonite Fossil, Beryl",
+         "Copper Ingot, Bamboo Tube, Bottled Water, Thermos"
+        ],
+        [
+         "Hult",
+         "Pepper, Spaghetti, Key",
+         "Fern Fossil, Iced Tea, Honey, Coffee, Beer, Gel, Delicious Stew",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Kasia",
+         "Honey, Kasia's Cake, Feather, Pickled Fruits, Crawlus, Bug Honey, Cake, Popcorn",
+         "Blueberry, Spaghetti, Candied Blueberry, Fern Fossil, Candied Wax Apple",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Lank",
+         "Large Mechanical Scrap, Corn, Thermos, Hamburger",
+         "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Candied Wax Apple",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Merlin",
+         "Aged Rice Wine, Century Egg, Crawlus, Rice Wine, Beryl, Amber, Meat-Shaped Stone, Obsidian, Delicious Meat Bun",
+         "Beer",
+         "—"
+        ],
+        [
+         "Mody",
+         "Combat Chip, Mint Tea, Wasp's Eye",
+         "33 FCS, Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee",
+         "Copper Ingot, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Orlando",
+         "Tomato, Spaghetti, Large Coffee, Marsh Beast Horn, Large Iced Tea, Flute",
+         "Fern Fossil, Iced Tea, Honey, Coffee, Jam Bread",
+         "Copper Ingot, Bamboo Tube, Bottled Water, Cucumber"
+        ],
+        [
+         "Sacco",
+         "Old Chip",
+         "Fern Fossil",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Villain",
+         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+         "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Zenis",
+         "Wool Fabric, Agave Wine, Cake, Key",
+         "Spaghetti, Blueberry, Candied Blueberry, Fern Fossil, Iced Tea, Honey, Coffee, Beer",
+         "Combat Chip, Pepper, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ]
+       ]
+      },
+      {
+       "type": "faq",
+       "heading": "빠른 답변",
+       "items": [
+        [
+         "돌록 타운에서 가장 무난한 선물은?",
+         "Fern Fossil이다. 검증 데이터가 있는 주민 13명 중 12명이 좋아하고 싫어하는 사람은 없다. 그다음은 Honey로 10/13, 역시 싫어하는 사람이 없다."
+        ],
+        [
+         "절대 주면 안 되는 것은?",
+         "Bamboo Tube, Bottled Water, Copper Ingot. 각각 주민 13명 중 12명이 싫어하고 좋아하는 사람은 아무도 없다."
+        ],
+        [
+         "돌록 타운에 연애나 결혼이 있나요?",
+         "없다. 개발진이 본작에 연애·결혼 시스템이 없다고 확인했다. 선물은 우정 호감도만 올린다."
+        ],
+        [
+         "선물 데이터가 없는 주민은 왜 그런가요?",
+         "출처인 커뮤니티 가이드는 얼리 액세스 시기에 작성됐고 작성자 본인이 미완성이라고 밝혔다. 12명은 항목 자체가 없으며, 목록에 없는 아이템은 중립이 아니라 그냥 미검증일 수 있다."
+        ]
+       ]
+      }
+     ]
+    },
+    "es": {
+     "title": "Guía de regalos de Doloc Town: gustos y rechazos de cada aldeano",
+     "metaTitle": "Regalos de Doloc Town: gustos y rechazos por aldeano",
+     "metaDescription": "Qué adora, qué le gusta y qué rechaza cada aldeano de Doloc Town — más el regalo universal (12/13) y los tres objetos que nunca debes entregar.",
+     "intro": "Acierta con el objeto y la amistad sube de golpe; falla y habrás perdido el día. Esta página cruza 65 objetos con los 13 aldeanos que la comunidad ha probado, en ambos sentidos: busca un objeto para ver quién lo quiere, o un aldeano para ver qué llevarle.",
+     "sections": [
+      {
+       "type": "note",
+       "heading": "De dónde salen estos datos",
+       "body": "Cada fila procede de la guía comunitaria de Steam \"Doloc Town - Character Gifts\" de rockechic, leída directamente de sus dos tablas. Dos límites antes de gastar un regalo: el autor indica que \"sigue en proceso\" y la creó durante el Acceso Anticipado, más de un año antes de la 1.0 (5 de agosto de 2026); y 12 de los 25 personajes no tienen datos. Que un objeto no aparezca puede significar solo que nadie lo ha probado — no que sea seguro. Los nombres se mantienen como aparecen en el cliente en inglés."
+      },
+      {
+       "type": "list",
+       "heading": "Tres cosas que conviene saber antes",
+       "items": [
+        "Fern Fossil es el único regalo realmente universal: a 12 de los 13 aldeanos con datos les gusta y a nadie le disgusta. Honey va segundo con 10/13, también sin rechazos.",
+        "Nunca regales Bamboo Tube, Bottled Water, Copper Ingot. A cada uno lo rechazan 12 de 13 aldeanos y no le gusta a ninguno — es lo peor que puedes entregar.",
+        "Combat Chip es la trampa: a Mody le encanta, pero a otros 8 aldeanos no. No hay regalo universal entre las piezas de máquina."
+       ]
+      },
+      {
+       "type": "giftfilter"
+      },
+      {
+       "type": "table",
+       "heading": "Buscar por objeto — ¿quién lo quiere?",
+       "body": "Ordenado por lo concluyente de la respuesta: primero los regalos universales, luego los que hay que evitar y por último aquellos en los que los aldeanos discrepan.",
+       "columns": [
+        "Objeto",
+        "Lo adoran",
+        "Les gusta",
+        "Lo rechazan",
+        "Veredicto"
+       ],
+       "rows": [
+        [
+         "Fern Fossil",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "—",
+         "Universal"
+        ],
+        [
+         "Honey",
+         "Kasia",
+         "Alchemy, Claud, Cod, Dada, Hult, Lank, Mody, Orlando, Zenis",
+         "—",
+         "Universal"
+        ],
+        [
+         "Bamboo Tube",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "Nunca"
+        ],
+        [
+         "Bottled Water",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "Nunca"
+        ],
+        [
+         "Copper Ingot",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "Nunca"
+        ],
+        [
+         "Spaghetti",
+         "Hult, Orlando",
+         "Alchemy, Claud, Dada, Kasia, Lank, Mody, Zenis",
+         "Cod",
+         "Divisivo"
+        ],
+        [
+         "Iced Tea",
+         "—",
+         "Claud, Cod, Hult, Lank, Mody, Orlando, Villain, Zenis",
+         "Alchemy",
+         "Divisivo"
+        ],
+        [
+         "Coffee",
+         "—",
+         "Claud, Cod, Hult, Lank, Mody, Orlando, Zenis",
+         "Alchemy",
+         "Divisivo"
+        ],
+        [
+         "33 FCS",
+         "—",
+         "Cod, Mody",
+         "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+         "Divisivo"
+        ],
+        [
+         "Combat Chip",
+         "Mody",
+         "Cod",
+         "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+         "Divisivo"
+        ],
+        [
+         "Cucumber",
+         "Cod",
+         "Alchemy",
+         "Orlando",
+         "Divisivo"
+        ],
+        [
+         "Pepper",
+         "Hult",
+         "Alchemy",
+         "Zenis",
+         "Divisivo"
+        ],
+        [
+         "Thermos",
+         "Claud, Lank",
+         "—",
+         "Dada",
+         "Divisivo"
+        ],
+        [
+         "Tomato",
+         "Orlando",
+         "Alchemy",
+         "Cod",
+         "Divisivo"
+        ],
+        [
+         "Beer",
+         "—",
+         "Hult, Merlin, Villain, Zenis",
+         "—",
+         "Datos limitados (4/13)"
+        ],
+        [
+         "Blueberry",
+         "—",
+         "Alchemy, Kasia, Zenis",
+         "—",
+         "Datos limitados (3/13)"
+        ],
+        [
+         "Cake",
+         "Dada, Kasia, Zenis",
+         "—",
+         "—",
+         "Datos limitados (3/13)"
+        ],
+        [
+         "Candied Blueberry",
+         "—",
+         "Alchemy, Kasia, Zenis",
+         "—",
+         "Datos limitados (3/13)"
+        ],
+        [
+         "Agave Wine",
+         "Villain, Zenis",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Aged Beer",
+         "Claud, Villain",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Aged Rice Wine",
+         "Merlin, Villain",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Beryl",
+         "Merlin",
+         "Dada",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Candied Wax Apple",
+         "—",
+         "Kasia, Lank",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Crawlus",
+         "Kasia, Merlin",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Delicious Meat Bun",
+         "Claud, Merlin",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Delicious Stew",
+         "Claud",
+         "Hult",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Flute",
+         "Alchemy, Orlando",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Game Console",
+         "Dada, Villain",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Gel",
+         "—",
+         "Cod, Hult",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Hamburger",
+         "Dada, Lank",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Jam Bread",
+         "—",
+         "Claud, Orlando",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Key",
+         "Hult, Zenis",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Large Iced Tea",
+         "Orlando",
+         "Claud",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Meat-Shaped Stone",
+         "Merlin",
+         "Dada",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Mint Tea",
+         "Mody",
+         "Claud",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Mushroom Meat Soup",
+         "Alchemy, Dada",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Old Chip",
+         "Sacco",
+         "Villain",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Rice Wine",
+         "Merlin, Villain",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "Wool Fabric",
+         "Alchemy, Zenis",
+         "—",
+         "—",
+         "Datos limitados (2/13)"
+        ],
+        [
+         "66 FCS",
+         "Cod",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Aged Grape Wine",
+         "Villain",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Amber",
+         "Merlin",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Ammonite Fossil",
+         "—",
+         "Dada",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Battery",
+         "—",
+         "Villain",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Bug Honey",
+         "Kasia",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Candied Strawberry",
+         "Alchemy",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Century Egg",
+         "Merlin",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Corn",
+         "Lank",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Feather",
+         "Kasia",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Grape Wine",
+         "Villain",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Kasia's Cake",
+         "Kasia",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Large Coffee",
+         "Orlando",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Large Mechanical Scrap",
+         "Lank",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Laser Core",
+         "—",
+         "Cod",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Marsh Beast Horn",
+         "Orlando",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Obsidian",
+         "Merlin",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Pickled Fruits",
+         "Kasia",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Popcorn",
+         "Kasia",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Potato",
+         "—",
+         "Alchemy",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Pumpkin",
+         "Dada",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Pumpkin Pie",
+         "Dada",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Shiitake",
+         "Dada",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Succulent",
+         "Alchemy",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Turnip",
+         "Claud",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Wasp's Eye",
+         "Mody",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ]
+       ],
+       "rowAttrs": [
+        {
+         "v": "universal"
+        },
+        {
+         "v": "universal"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        }
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "Buscar por aldeano — ¿qué le llevo?",
+       "body": "Los 13 aldeanos con datos probados por la comunidad. Los otros 12 personajes (Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch) todavía no tienen datos de regalos.",
+       "columns": [
+        "Aldeano",
+        "Adora",
+        "Le gusta",
+        "Rechaza"
+       ],
+       "rows": [
+        [
+         "Alchemy",
+         "Flute, Succulent, Candied Strawberry, Wool Fabric, Mushroom Meat Soup",
+         "Tomato, Blueberry, Pepper, Potato, Spaghetti, Candied Blueberry, Fern Fossil, Honey, Cucumber",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water, Iced Tea, Coffee"
+        ],
+        [
+         "Claud",
+         "Aged Beer, Turnip, Thermos, Delicious Meat Bun, Delicious Stew",
+         "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Large Iced Tea, Mint Tea, Jam Bread",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Cod",
+         "Cucumber, 66 FCS",
+         "Combat Chip, 33 FCS, Fern Fossil, Iced Tea, Honey, Coffee, Laser Core, Gel",
+         "Tomato, Copper Ingot, Spaghetti, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Dada",
+         "Game Console, Pumpkin, Pumpkin Pie, Shiitake, Cake, Hamburger, Mushroom Meat Soup",
+         "Spaghetti, Fern Fossil, Honey, Meat-Shaped Stone, Ammonite Fossil, Beryl",
+         "Copper Ingot, Bamboo Tube, Bottled Water, Thermos"
+        ],
+        [
+         "Hult",
+         "Pepper, Spaghetti, Key",
+         "Fern Fossil, Iced Tea, Honey, Coffee, Beer, Gel, Delicious Stew",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Kasia",
+         "Honey, Kasia's Cake, Feather, Pickled Fruits, Crawlus, Bug Honey, Cake, Popcorn",
+         "Blueberry, Spaghetti, Candied Blueberry, Fern Fossil, Candied Wax Apple",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Lank",
+         "Large Mechanical Scrap, Corn, Thermos, Hamburger",
+         "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Candied Wax Apple",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Merlin",
+         "Aged Rice Wine, Century Egg, Crawlus, Rice Wine, Beryl, Amber, Meat-Shaped Stone, Obsidian, Delicious Meat Bun",
+         "Beer",
+         "—"
+        ],
+        [
+         "Mody",
+         "Combat Chip, Mint Tea, Wasp's Eye",
+         "33 FCS, Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee",
+         "Copper Ingot, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Orlando",
+         "Tomato, Spaghetti, Large Coffee, Marsh Beast Horn, Large Iced Tea, Flute",
+         "Fern Fossil, Iced Tea, Honey, Coffee, Jam Bread",
+         "Copper Ingot, Bamboo Tube, Bottled Water, Cucumber"
+        ],
+        [
+         "Sacco",
+         "Old Chip",
+         "Fern Fossil",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Villain",
+         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+         "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Zenis",
+         "Wool Fabric, Agave Wine, Cake, Key",
+         "Spaghetti, Blueberry, Candied Blueberry, Fern Fossil, Iced Tea, Honey, Coffee, Beer",
+         "Combat Chip, Pepper, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ]
+       ]
+      },
+      {
+       "type": "faq",
+       "heading": "Respuestas rápidas",
+       "items": [
+        [
+         "¿Cuál es el mejor regalo para todos en Doloc Town?",
+         "Fern Fossil. De los 13 aldeanos con datos probados, a 12 les gusta y a ninguno le disgusta. Honey queda segundo con 10/13, también sin rechazos."
+        ],
+        [
+         "¿Qué no debo regalar nunca?",
+         "Bamboo Tube, Bottled Water, Copper Ingot. A cada uno lo rechazan 12 de 13 aldeanos y no le gusta a nadie."
+        ],
+        [
+         "¿Hay romance o matrimonio en Doloc Town?",
+         "No. Los desarrolladores confirmaron que Doloc Town no tiene sistema de romance ni de matrimonio; los regalos solo suben la amistad."
+        ],
+        [
+         "¿Por qué algunos aldeanos no tienen regalos listados?",
+         "La guía comunitaria de la que proceden los datos se hizo durante el Acceso Anticipado y su autor la declara inacabada. 12 personajes no tienen ninguna entrada, y que un objeto no aparezca puede significar solo que nadie lo ha probado."
+        ]
+       ]
+      }
+     ]
+    },
+    "zh-TW": {
+     "title": "多洛可小鎮送禮指南：每位村民的喜好與雷區",
+     "metaTitle": "多洛可小鎮送禮：村民喜好、討厭物一覽",
+     "metaDescription": "多洛可小鎮每位村民愛什麼、喜歡什麼、討厭什麼——外加 12/13 的萬能禮物，以及絕對不能送的三樣東西。",
+     "intro": "送對了好感度猛漲，送錯了白費一天。本頁把 65 件物品和社區實測過的 13 位村民做了雙向對照：可以按物品查誰想要，也可以按村民查該帶什麼。",
+     "sections": [
+      {
+       "type": "note",
+       "heading": "這些數據從哪來",
+       "body": "下面每一行都來自社區 Steam 攻略《Doloc Town - Character Gifts》（作者 rockechic），從它的兩張數據表逐行讀出。花禮物之前先知道兩個侷限：作者自述這份表\"仍在完善中\"、是搶先體驗期做的，比 1.0（2026 年 8 月 5 日）早了一年多；而且 25 個角色裡有 12 個完全沒有數據。某個物品沒被列出，可能只是沒人測過——**不等於送了安全**。物品名與村民名保持英文客戶端裡的原樣。"
+      },
+      {
+       "type": "list",
+       "heading": "先看這三條",
+       "items": [
+        "Fern Fossil 是唯一真正的萬能禮物：13 位有數據的村民裡有 12 位喜歡，而且沒有一個人討厭。Honey 第二，10/13，同樣零討厭。",
+        "絕對別送 Bamboo Tube, Bottled Water, Copper Ingot。這三樣每一樣都被 13 人中的 12 人討厭，沒有任何人喜歡——是你能遞出去的最差選擇。",
+        "Combat Chip 是個陷阱：Mody 愛它，但另外 8 位村民討厭它。機械零件裡沒有可以無腦群發的禮物。"
+       ]
+      },
+      {
+       "type": "giftfilter"
+      },
+      {
+       "type": "table",
+       "heading": "按物品查——誰會要它？",
+       "body": "按結論的確定程度排序：萬能禮物在最前，其次是該避開的，最後是村民意見不一的。",
+       "columns": [
+        "物品",
+        "誰愛它",
+        "誰喜歡",
+        "誰討厭",
+        "判定"
+       ],
+       "rows": [
+        [
+         "Fern Fossil",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "—",
+         "萬能"
+        ],
+        [
+         "Honey",
+         "Kasia",
+         "Alchemy, Claud, Cod, Dada, Hult, Lank, Mody, Orlando, Zenis",
+         "—",
+         "萬能"
+        ],
+        [
+         "Bamboo Tube",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "絕對別送"
+        ],
+        [
+         "Bottled Water",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "絕對別送"
+        ],
+        [
+         "Copper Ingot",
+         "—",
+         "—",
+         "Alchemy, Claud, Cod, Dada, Hult, Kasia, Lank, Mody, Orlando, Sacco, Villain, Zenis",
+         "絕對別送"
+        ],
+        [
+         "Spaghetti",
+         "Hult, Orlando",
+         "Alchemy, Claud, Dada, Kasia, Lank, Mody, Zenis",
+         "Cod",
+         "有分歧"
+        ],
+        [
+         "Iced Tea",
+         "—",
+         "Claud, Cod, Hult, Lank, Mody, Orlando, Villain, Zenis",
+         "Alchemy",
+         "有分歧"
+        ],
+        [
+         "Coffee",
+         "—",
+         "Claud, Cod, Hult, Lank, Mody, Orlando, Zenis",
+         "Alchemy",
+         "有分歧"
+        ],
+        [
+         "33 FCS",
+         "—",
+         "Cod, Mody",
+         "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+         "有分歧"
+        ],
+        [
+         "Combat Chip",
+         "Mody",
+         "Cod",
+         "Alchemy, Claud, Hult, Kasia, Lank, Sacco, Villain, Zenis",
+         "有分歧"
+        ],
+        [
+         "Cucumber",
+         "Cod",
+         "Alchemy",
+         "Orlando",
+         "有分歧"
+        ],
+        [
+         "Pepper",
+         "Hult",
+         "Alchemy",
+         "Zenis",
+         "有分歧"
+        ],
+        [
+         "Thermos",
+         "Claud, Lank",
+         "—",
+         "Dada",
+         "有分歧"
+        ],
+        [
+         "Tomato",
+         "Orlando",
+         "Alchemy",
+         "Cod",
+         "有分歧"
+        ],
+        [
+         "Beer",
+         "—",
+         "Hult, Merlin, Villain, Zenis",
+         "—",
+         "數據有限 (4/13)"
+        ],
+        [
+         "Blueberry",
+         "—",
+         "Alchemy, Kasia, Zenis",
+         "—",
+         "數據有限 (3/13)"
+        ],
+        [
+         "Cake",
+         "Dada, Kasia, Zenis",
+         "—",
+         "—",
+         "數據有限 (3/13)"
+        ],
+        [
+         "Candied Blueberry",
+         "—",
+         "Alchemy, Kasia, Zenis",
+         "—",
+         "數據有限 (3/13)"
+        ],
+        [
+         "Agave Wine",
+         "Villain, Zenis",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Aged Beer",
+         "Claud, Villain",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Aged Rice Wine",
+         "Merlin, Villain",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Beryl",
+         "Merlin",
+         "Dada",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Candied Wax Apple",
+         "—",
+         "Kasia, Lank",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Crawlus",
+         "Kasia, Merlin",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Delicious Meat Bun",
+         "Claud, Merlin",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Delicious Stew",
+         "Claud",
+         "Hult",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Flute",
+         "Alchemy, Orlando",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Game Console",
+         "Dada, Villain",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Gel",
+         "—",
+         "Cod, Hult",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Hamburger",
+         "Dada, Lank",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Jam Bread",
+         "—",
+         "Claud, Orlando",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Key",
+         "Hult, Zenis",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Large Iced Tea",
+         "Orlando",
+         "Claud",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Meat-Shaped Stone",
+         "Merlin",
+         "Dada",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Mint Tea",
+         "Mody",
+         "Claud",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Mushroom Meat Soup",
+         "Alchemy, Dada",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Old Chip",
+         "Sacco",
+         "Villain",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Rice Wine",
+         "Merlin, Villain",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "Wool Fabric",
+         "Alchemy, Zenis",
+         "—",
+         "—",
+         "數據有限 (2/13)"
+        ],
+        [
+         "66 FCS",
+         "Cod",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Aged Grape Wine",
+         "Villain",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Amber",
+         "Merlin",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Ammonite Fossil",
+         "—",
+         "Dada",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Battery",
+         "—",
+         "Villain",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Bug Honey",
+         "Kasia",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Candied Strawberry",
+         "Alchemy",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Century Egg",
+         "Merlin",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Corn",
+         "Lank",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Feather",
+         "Kasia",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Grape Wine",
+         "Villain",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Kasia's Cake",
+         "Kasia",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Large Coffee",
+         "Orlando",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Large Mechanical Scrap",
+         "Lank",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Laser Core",
+         "—",
+         "Cod",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Marsh Beast Horn",
+         "Orlando",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Obsidian",
+         "Merlin",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Pickled Fruits",
+         "Kasia",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Popcorn",
+         "Kasia",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Potato",
+         "—",
+         "Alchemy",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Pumpkin",
+         "Dada",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Pumpkin Pie",
+         "Dada",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Shiitake",
+         "Dada",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Succulent",
+         "Alchemy",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Turnip",
+         "Claud",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Wasp's Eye",
+         "Mody",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ]
+       ],
+       "rowAttrs": [
+        {
+         "v": "universal"
+        },
+        {
+         "v": "universal"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "never"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "mixed"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
+        }
+       ]
+      },
+      {
+       "type": "table",
+       "heading": "按村民查——該帶什麼？",
+       "body": "社區已實測的 13 位村民。另外 12 個角色（Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch）目前沒有任何禮物數據。",
+       "columns": [
+        "村民",
+        "愛",
+        "喜歡",
+        "討厭"
+       ],
+       "rows": [
+        [
+         "Alchemy",
+         "Flute, Succulent, Candied Strawberry, Wool Fabric, Mushroom Meat Soup",
+         "Tomato, Blueberry, Pepper, Potato, Spaghetti, Candied Blueberry, Fern Fossil, Honey, Cucumber",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water, Iced Tea, Coffee"
+        ],
+        [
+         "Claud",
+         "Aged Beer, Turnip, Thermos, Delicious Meat Bun, Delicious Stew",
+         "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Large Iced Tea, Mint Tea, Jam Bread",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Cod",
+         "Cucumber, 66 FCS",
+         "Combat Chip, 33 FCS, Fern Fossil, Iced Tea, Honey, Coffee, Laser Core, Gel",
+         "Tomato, Copper Ingot, Spaghetti, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Dada",
+         "Game Console, Pumpkin, Pumpkin Pie, Shiitake, Cake, Hamburger, Mushroom Meat Soup",
+         "Spaghetti, Fern Fossil, Honey, Meat-Shaped Stone, Ammonite Fossil, Beryl",
+         "Copper Ingot, Bamboo Tube, Bottled Water, Thermos"
+        ],
+        [
+         "Hult",
+         "Pepper, Spaghetti, Key",
+         "Fern Fossil, Iced Tea, Honey, Coffee, Beer, Gel, Delicious Stew",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Kasia",
+         "Honey, Kasia's Cake, Feather, Pickled Fruits, Crawlus, Bug Honey, Cake, Popcorn",
+         "Blueberry, Spaghetti, Candied Blueberry, Fern Fossil, Candied Wax Apple",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Lank",
+         "Large Mechanical Scrap, Corn, Thermos, Hamburger",
+         "Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee, Candied Wax Apple",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Merlin",
+         "Aged Rice Wine, Century Egg, Crawlus, Rice Wine, Beryl, Amber, Meat-Shaped Stone, Obsidian, Delicious Meat Bun",
+         "Beer",
+         "—"
+        ],
+        [
+         "Mody",
+         "Combat Chip, Mint Tea, Wasp's Eye",
+         "33 FCS, Spaghetti, Fern Fossil, Iced Tea, Honey, Coffee",
+         "Copper Ingot, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Orlando",
+         "Tomato, Spaghetti, Large Coffee, Marsh Beast Horn, Large Iced Tea, Flute",
+         "Fern Fossil, Iced Tea, Honey, Coffee, Jam Bread",
+         "Copper Ingot, Bamboo Tube, Bottled Water, Cucumber"
+        ],
+        [
+         "Sacco",
+         "Old Chip",
+         "Fern Fossil",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Villain",
+         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+         "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
+         "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ],
+        [
+         "Zenis",
+         "Wool Fabric, Agave Wine, Cake, Key",
+         "Spaghetti, Blueberry, Candied Blueberry, Fern Fossil, Iced Tea, Honey, Coffee, Beer",
+         "Combat Chip, Pepper, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
+        ]
+       ]
+      },
+      {
+       "type": "faq",
+       "heading": "快速解答",
+       "items": [
+        [
+         "多洛可小鎮最萬能的禮物是什麼？",
+         "Fern Fossil。在 13 位有實測數據的村民裡，12 位喜歡它，沒有一個人討厭。Honey 緊隨其後，10/13，同樣零討厭。"
+        ],
+        [
+         "什麼東西絕對不能送？",
+         "Bamboo Tube, Bottled Water, Copper Ingot。這三樣每樣都被 13 人中的 12 人討厭，且無人喜歡。"
+        ],
+        [
+         "多洛可小鎮有戀愛或結婚系統嗎？",
+         "沒有。開發者已確認本作沒有戀愛與結婚系統，送禮只提升友誼好感度。"
+        ],
+        [
+         "為什麼有些村民沒有禮物數據？",
+         "這份數據來自的社區攻略是搶先體驗期做的，作者自述尚未完成。有 12 個角色完全沒有條目；而某個物品沒被列出，可能只是沒人測過，不代表它是中性的。"
+        ]
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "slug": "romance",
+   "title": "Is There Romance in Doloc Town? The Straight Answer",
+   "metaTitle": "Doloc Town Romance: Is There Dating or Marriage?",
+   "metaDescription": "No — Doloc Town has no romance or marriage system. The developers confirmed relationships are friendship-only. Here is what the social system actually does.",
+   "intro": "Short answer: there is no dating, no courtship and no marriage in Doloc Town. The developers confirmed the social system is friendship-based. If you arrived here from a search expecting a romance guide, this page explains what exists instead — and it is a real progression system worth investing in.",
+   "sections": [
+    {
+     "type": "note",
+     "heading": "The Answer",
+     "body": "Doloc Town has no romance and no marriage mechanic. There are no bachelors or bachelorettes, no heart events that lead to a relationship, and no wedding. The developers stated this directly for the 1.0 release. Any guide promising a romance route is describing a different game — or guessing."
+    },
+    {
+     "type": "list",
+     "heading": "What You Get Instead",
+     "body": "Friendship in Doloc Town is a progression system, not decoration.",
+     "items": [
+      "Hearts with every resident, raised by talking, gifting and completing quests.",
+      "Unique recipes gated behind individual friendships — ignore a villager and you lose their recipe permanently.",
+      "Personal storyline scenes that fill in the town's history and its mysteries.",
+      "Festivals, which are the highest-value friendship events in the calendar.",
+      "Kasia's max-friendship achievement, Blooming Friendship — the closest thing to a relationship milestone in the game."
+     ]
+    },
+    {
+     "type": "steps",
+     "heading": "If You Want To Get Closer To Someone",
+     "body": "The mechanics reward routine over grinding.",
+     "items": [
+      [
+       "Talk to them every day",
+       "Free, takes seconds, and it is the base of every heart."
+      ],
+      [
+       "Give what they actually like",
+       "Preferences differ sharply — the gift guide lists who wants what."
+      ],
+      [
+       "Take their quests",
+       "Quests raise friendship faster per minute than anything else."
+      ],
+      [
+       "Show up to festivals",
+       "Seasonal events give the biggest single boosts, including the 1.0 Mushroom Fest."
+      ]
+     ]
+    },
+    {
+     "type": "faq",
+     "heading": "Quick Answers",
+     "items": [
+      [
+       "Can you get married in Doloc Town?",
+       "No. There is no marriage system. The developers confirmed the game is friendship-based only."
+      ],
+      [
+       "Are there romanceable characters?",
+       "No. Villagers have friendship hearts and personal storylines, but no romance route."
+      ],
+      [
+       "Will romance be added later?",
+       "Nothing has been announced. Treat any claim otherwise as unverified until the developers say so."
+      ],
+      [
+       "What is the closest thing to a relationship?",
+       "Maxing a villager's friendship. For Kasia this unlocks the Blooming Friendship achievement."
+      ]
+     ]
+    }
+   ],
+   "meta": {
+    "icon": "friendship"
+   },
+   "sources": [
+    {
+     "label": "Official Steam page — Doloc Town (friendship & festivals)",
+     "url": "https://store.steampowered.com/app/2285550/Doloc_Town/"
+    },
+    {
+     "label": "Developer statement on 1.0: no romance or marriage system",
+     "url": "https://store.steampowered.com/news/app/2285550"
+    }
+   ],
+   "i18n": {
+    "zh-CN": {
+     "title": "多洛可小镇有恋爱系统吗？直接答案",
+     "metaTitle": "多洛可小镇恋爱：能谈恋爱或结婚吗？",
+     "metaDescription": "没有——多洛可小镇没有恋爱与结婚系统，开发者已确认社交是纯友谊向。本页说明实际的社交机制是什么。",
+     "intro": "简短回答：多洛可小镇没有约会、没有追求、也没有结婚。开发者已确认社交系统是友谊向的。如果你是搜「恋爱攻略」来的，这一页告诉你实际存在的是什么——那是一套值得投入的真实养成系统。",
+     "sections": [
+      {
+       "type": "note",
+       "heading": "答案",
+       "body": "多洛可小镇没有恋爱、也没有结婚机制。没有可攻略对象，没有通向恋爱关系的剧情事件，没有婚礼。开发者在 1.0 发布时直接说明了这一点。任何承诺「恋爱路线」的攻略，要么写的是别的游戏，要么是在猜。"
+      },
+      {
+       "type": "list",
+       "heading": "实际有的是什么",
+       "body": "多洛可小镇的友谊是一套养成系统，不是装饰。",
+       "items": [
+        "和每位居民都有好感度，靠聊天、送礼、做委托提升。",
+        "专属食谱锁在各自的友谊进度后面——忽略某个村民，就永久失去他的food谱。",
+        "个人剧情场景，补完小镇的历史与谜团。",
+        "节日活动，是日历上友谊收益最高的事件。",
+        "卡莎的满好感成就 Blooming Friendship——游戏里最接近「关系里程碑」的东西。"
+       ]
+      },
+      {
+       "type": "steps",
+       "heading": "想和某人更亲近",
+       "body": "这套机制奖励日常习惯，不奖励硬刷。",
+       "items": [
+        [
+         "每天和他说话",
+         "免费、几秒钟，是所有好感度的地基。"
+        ],
+        [
+         "送他真正喜欢的东西",
+         "各人偏好差异极大——送礼指南列了谁要什么。"
+        ],
+        [
+         "接他的委托",
+         "按每分钟收益算，委托涨好感最快。"
+        ],
+        [
+         "节日一定到场",
+         "季节活动单次加成最大，包括 1.0 新增的蘑菇节。"
+        ]
+       ]
+      },
+      {
+       "type": "faq",
+       "heading": "快速解答",
+       "items": [
+        [
+         "多洛可小镇能结婚吗？",
+         "不能。没有结婚系统。开发者已确认本作只有友谊向社交。"
+        ],
+        [
+         "有可攻略的角色吗？",
+         "没有。村民有友谊好感度和个人剧情，但没有恋爱路线。"
+        ],
+        [
+         "以后会加入恋爱系统吗？",
+         "官方没有任何相关公告。在开发者明说之前，任何相反说法都视为未经证实。"
+        ],
+        [
+         "最接近「恋爱关系」的是什么？",
+         "把某位村民的友谊刷满。卡莎刷满会解锁 Blooming Friendship 成就。"
+        ]
+       ]
+      }
+     ]
+    },
+    "ja": {
+     "title": "ドロックタウンに恋愛要素はある？——結論から",
+     "metaTitle": "ドロックタウンの恋愛：交際や結婚はできる？",
+     "metaDescription": "無い——ドロックタウンに恋愛・結婚システムは存在しない。開発者が友情のみと明言している。実際の社交システムを解説。",
+     "intro": "結論から言うと、ドロックタウンにデートも求愛も結婚も無い。開発者が社交システムは友情ベースだと明言している。恋愛攻略を探して辿り着いたなら、このページが「代わりに何があるか」を説明する——投資する価値のある本物の育成システムだ。",
+     "sections": [
+      {
+       "type": "note",
+       "heading": "結論",
+       "body": "ドロックタウンに恋愛も結婚も無い。攻略対象キャラも、交際に至るイベントも、結婚式も存在しない。開発者が 1.0 に際して明言している。恋愛ルートを謳うガイドは、別のゲームの話をしているか、推測で書いている。"
+      },
+      {
+       "type": "list",
+       "heading": "代わりにあるもの",
+       "body": "ドロックタウンの友情は飾りではなく育成システムだ。",
+       "items": [
+        "住民全員との好感度。会話・贈り物・クエストで上がる。",
+        "個別の友情の先にある専用レシピ——無視した住民のレシピは永久に手に入らない。",
+        "町の歴史と謎を埋める個人ストーリー。",
+        "カレンダー上で友好度の効率が最も高いイベント、祭り。",
+        "カシアの好感度最大実績 Blooming Friendship——本作で「関係の到達点」に最も近いもの。"
+       ]
+      },
+      {
+       "type": "steps",
+       "heading": "誰かと親しくなりたいなら",
+       "body": "この仕組みは作業量ではなく日課を評価する。",
+       "items": [
+        [
+         "毎日話しかける",
+         "無料で数秒。すべての好感度の土台。"
+        ],
+        [
+         "本当に好きな物を贈る",
+         "好みの差が大きい——贈り物ガイドに誰が何を欲しがるかを載せた。"
+        ],
+        [
+         "クエストを受ける",
+         "時間あたりの好感度上昇は最も効率が良い。"
+        ],
+        [
+         "祭りには必ず出る",
+         "季節イベントの一回あたりの上昇が最大。1.0 のキノコ祭も含む。"
+        ]
+       ]
+      },
+      {
+       "type": "faq",
+       "heading": "クイック回答",
+       "items": [
+        [
+         "ドロックタウンで結婚できる？",
+         "できない。結婚システムは無い。開発者が友情のみと確認している。"
+        ],
+        [
+         "攻略できるキャラはいる？",
+         "いない。住民には友情の好感度と個人ストーリーがあるが、恋愛ルートは無い。"
+        ],
+        [
+         "今後追加される？",
+         "公式発表は一切ない。開発者が明言するまで、それ以外の主張は未確認として扱うこと。"
+        ],
+        [
+         "「関係」に最も近いものは？",
+         "住民の友情を最大まで上げること。カシアの場合は Blooming Friendship 実績が解除される。"
+        ]
+       ]
+      }
+     ]
+    },
+    "ko": {
+     "title": "돌록 타운에 연애 요소가 있나? 결론부터",
+     "metaTitle": "돌록 타운 연애: 연애나 결혼이 가능한가?",
+     "metaDescription": "없다 — 돌록 타운에는 연애·결혼 시스템이 없다. 개발진이 우정 기반이라고 확인했다. 실제 사교 시스템이 무엇인지 정리했다.",
+     "intro": "결론부터 말하면 돌록 타운에는 데이트도, 구애도, 결혼도 없다. 개발진이 사교 시스템은 우정 기반이라고 확인했다. 연애 공략을 찾다가 이 페이지에 왔다면, 대신 무엇이 있는지 알려주겠다. 투자할 가치가 있는 진짜 육성 시스템이다.",
+     "sections": [
+      {
+       "type": "note",
+       "heading": "결론",
+       "body": "돌록 타운에는 연애도 결혼도 없다. 공략 대상 캐릭터도, 연인 관계로 이어지는 이벤트도, 결혼식도 없다. 개발진이 1.0 출시에 맞춰 직접 밝힌 내용이다. 연애 루트를 약속하는 공략이 있다면 다른 게임 이야기이거나 추측이다."
+      },
+      {
+       "type": "list",
+       "heading": "대신 있는 것",
+       "body": "돌록 타운의 우정은 장식이 아니라 육성 시스템이다.",
+       "items": [
+        "모든 주민과의 호감도. 대화·선물·의뢰로 올린다.",
+        "개별 우정 뒤에 잠긴 전용 레시피 — 한 주민을 무시하면 그 레시피는 영영 얻지 못한다.",
+        "마을의 역사와 수수께끼를 채우는 개인 스토리 장면.",
+        "달력에서 우정 효율이 가장 높은 이벤트인 축제.",
+        "카시아의 호감도 최대 도전과제 Blooming Friendship — 이 게임에서 '관계의 도달점'에 가장 가까운 것."
+       ]
+      },
+      {
+       "type": "steps",
+       "heading": "누군가와 더 가까워지고 싶다면",
+       "body": "이 시스템은 노가다가 아니라 꾸준함을 보상한다.",
+       "items": [
+        [
+         "매일 말을 건다",
+         "공짜고 몇 초면 된다. 모든 호감도의 토대다."
+        ],
+        [
+         "진짜 좋아하는 것을 준다",
+         "취향 차이가 크다 — 선물 가이드에 누가 무엇을 원하는지 정리해뒀다."
+        ],
+        [
+         "의뢰를 받는다",
+         "시간 대비 호감도 상승은 의뢰가 가장 빠르다."
+        ],
+        [
+         "축제에는 꼭 참석한다",
+         "계절 이벤트가 한 번에 주는 상승폭이 가장 크다. 1.0의 버섯 축제 포함."
+        ]
+       ]
+      },
+      {
+       "type": "faq",
+       "heading": "빠른 답변",
+       "items": [
+        [
+         "돌록 타운에서 결혼할 수 있나요?",
+         "없다. 결혼 시스템이 없다. 개발진이 우정 기반이라고 확인했다."
+        ],
+        [
+         "공략 가능한 캐릭터가 있나요?",
+         "없다. 주민에게는 우정 호감도와 개인 스토리가 있지만 연애 루트는 없다."
+        ],
+        [
+         "나중에 추가되나요?",
+         "공식 발표가 전혀 없다. 개발진이 밝히기 전까지는 미확인으로 봐야 한다."
+        ],
+        [
+         "'연인 관계'에 가장 가까운 것은?",
+         "주민의 우정을 최대치까지 올리는 것. 카시아의 경우 Blooming Friendship 도전과제가 해금된다."
+        ]
+       ]
+      }
+     ]
+    },
+    "es": {
+     "title": "¿Hay romance en Doloc Town? La respuesta directa",
+     "metaTitle": "Romance en Doloc Town: ¿se puede tener pareja o casarse?",
+     "metaDescription": "No — Doloc Town no tiene sistema de romance ni matrimonio. Los desarrolladores confirmaron que las relaciones son solo de amistad. Esto es lo que sí existe.",
+     "intro": "Respuesta corta: en Doloc Town no hay citas, ni cortejo, ni matrimonio. Los desarrolladores confirmaron que el sistema social se basa en la amistad. Si llegaste buscando una guía de romance, esta página explica qué existe en su lugar — y es un sistema de progresión que merece la pena.",
+     "sections": [
+      {
+       "type": "note",
+       "heading": "La respuesta",
+       "body": "Doloc Town no tiene romance ni matrimonio. No hay personajes cortejables, ni eventos que lleven a una relación, ni boda. Los desarrolladores lo indicaron directamente para la 1.0. Cualquier guía que prometa una ruta romántica habla de otro juego o está adivinando."
+      },
+      {
+       "type": "list",
+       "heading": "Lo que sí obtienes",
+       "body": "La amistad en Doloc Town es un sistema de progresión, no un adorno.",
+       "items": [
+        "Corazones con cada residente, que suben al hablar, regalar y completar encargos.",
+        "Recetas únicas tras cada amistad — si ignoras a un aldeano pierdes su receta para siempre.",
+        "Escenas de historia personal que rellenan el pasado del pueblo y sus misterios.",
+        "Festivales, los eventos de amistad más rentables del calendario.",
+        "El logro de amistad máxima de Kasia, Blooming Friendship — lo más parecido a un hito de relación."
+       ]
+      },
+      {
+       "type": "steps",
+       "heading": "Si quieres acercarte a alguien",
+       "body": "Las mecánicas premian la rutina, no el farmeo.",
+       "items": [
+        [
+         "Háblale todos los días",
+         "Gratis, cuesta segundos y es la base de cada corazón."
+        ],
+        [
+         "Regálale lo que de verdad le gusta",
+         "Las preferencias varían mucho — la guía de regalos indica quién quiere qué."
+        ],
+        [
+         "Acepta sus encargos",
+         "Los encargos suben la amistad más rápido por minuto que cualquier otra cosa."
+        ],
+        [
+         "Acude a los festivales",
+         "Los eventos de temporada dan el mayor impulso, incluida la Fiesta de las Setas de la 1.0."
+        ]
+       ]
+      },
+      {
+       "type": "faq",
+       "heading": "Respuestas rápidas",
+       "items": [
+        [
+         "¿Se puede uno casar en Doloc Town?",
+         "No. No hay sistema de matrimonio. Los desarrolladores confirmaron que el juego es solo de amistad."
+        ],
+        [
+         "¿Hay personajes romanceables?",
+         "No. Los aldeanos tienen corazones de amistad e historias personales, pero ninguna ruta romántica."
+        ],
+        [
+         "¿Se añadirá el romance más adelante?",
+         "No se ha anunciado nada. Considera no verificada cualquier afirmación en contra hasta que lo digan los desarrolladores."
+        ],
+        [
+         "¿Qué es lo más parecido a una relación?",
+         "Llevar la amistad de un aldeano al máximo. Con Kasia desbloquea el logro Blooming Friendship."
+        ]
+       ]
+      }
+     ]
+    },
+    "zh-TW": {
+     "title": "多洛可小鎮有戀愛系統嗎？直接答案",
+     "metaTitle": "多洛可小鎮戀愛：能談戀愛或結婚嗎？",
+     "metaDescription": "沒有——多洛可小鎮沒有戀愛與結婚系統，開發者已確認社交是純友誼向。本頁說明實際的社交機制是什麼。",
+     "intro": "簡短回答：多洛可小鎮沒有約會、沒有追求、也沒有結婚。開發者已確認社交系統是友誼向的。如果你是搜「戀愛攻略」來的，這一頁告訴你實際存在的是什麼——那是一套值得投入的真實養成系統。",
+     "sections": [
+      {
+       "type": "note",
+       "heading": "答案",
+       "body": "多洛可小鎮沒有戀愛、也沒有結婚機制。沒有可攻略對象，沒有通向戀愛關係的劇情事件，沒有婚禮。開發者在 1.0 發佈時直接說明了這一點。任何承諾「戀愛路線」的攻略，要麼寫的是別的遊戲，要麼是在猜。"
+      },
+      {
+       "type": "list",
+       "heading": "實際有的是什麼",
+       "body": "多洛可小鎮的友誼是一套養成系統，不是裝飾。",
+       "items": [
+        "和每位居民都有好感度，靠聊天、送禮、做委託提升。",
+        "專屬食譜鎖在各自的友誼進度後面——忽略某個村民，就永久失去他的food譜。",
+        "個人劇情場景，補完小鎮的歷史與謎團。",
+        "節日活動，是日曆上友誼收益最高的事件。",
+        "卡莎的滿好感成就 Blooming Friendship——遊戲裡最接近「關係里程碑」的東西。"
+       ]
+      },
+      {
+       "type": "steps",
+       "heading": "想和某人更親近",
+       "body": "這套機制獎勵日常習慣，不獎勵硬刷。",
+       "items": [
+        [
+         "每天和他說話",
+         "免費、幾秒鐘，是所有好感度的地基。"
+        ],
+        [
+         "送他真正喜歡的東西",
+         "各人偏好差異極大——送禮指南列了誰要什麼。"
+        ],
+        [
+         "接他的委託",
+         "按每分鐘收益算，委託漲好感最快。"
+        ],
+        [
+         "節日一定到場",
+         "季節活動單次加成最大，包括 1.0 新增的蘑菇節。"
+        ]
+       ]
+      },
+      {
+       "type": "faq",
+       "heading": "快速解答",
+       "items": [
+        [
+         "多洛可小鎮能結婚嗎？",
+         "不能。沒有結婚系統。開發者已確認本作只有友誼向社交。"
+        ],
+        [
+         "有可攻略的角色嗎？",
+         "沒有。村民有友誼好感度和個人劇情，但沒有戀愛路線。"
+        ],
+        [
+         "以後會加入戀愛系統嗎？",
+         "官方沒有任何相關公告。在開發者明說之前，任何相反說法都視為未經證實。"
+        ],
+        [
+         "最接近「戀愛關係」的是什麼？",
+         "把某位村民的友誼刷滿。卡莎刷滿會解鎖 Blooming Friendship 成就。"
+        ]
+       ]
+      }
+     ]
+    }
+   }
   }
  ]
 }

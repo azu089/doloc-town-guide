@@ -6986,6 +6986,23 @@ if _fp:
         _t["sections"].insert(0, {"type": "fishfilter"})
     print("fishing rowAttrs:", sum(len(a) for a in _attrs_by_table), "行 ×", 1 + len(_fp.get("i18n") or {}), "语言")
 
+# ---------- gifts / romance 两页（数据驱动，见 gifts_pages.py）----------
+# 放在所有 apply_lang 之后自己注入 + 自己转 zh-TW：
+# 上面那个 zh-TW 转换只在 L491 跑过一次，而 apply_lang("zh-CN") 后面又跑了几轮，
+# 依赖它会拿不到繁体。这里全程自理，和既有流程解耦。
+import gifts_pages as GP
+
+d["pages"] = [p for p in d["pages"] if p["slug"] not in ("gifts", "romance")]  # 幂等
+_new = GP.en_pages()
+for _p in _new:
+    _p["i18n"] = {}
+    for _lg in ("zh-CN", "ja", "ko", "es"):
+        _p["i18n"][_lg] = GP.translations(_lg)[_p["slug"]]
+    _p["i18n"]["zh-TW"] = json.loads(cc.convert(json.dumps(_p["i18n"]["zh-CN"], ensure_ascii=False)))
+d["pages"].extend(_new)
+print("gifts/romance:", ", ".join(f"{p['slug']}({len(p['sections'])}节×{1+len(p['i18n'])}语)" for p in _new))
+print("  物品", len(GP.ITEMS), "件 / 村民", GP.N, "位有数据 +", len(GP.UNTESTED), "位未测出")
+
 # ---------- write site.json ----------
 d["site"]["languages"] = ["en","zh-CN","zh-TW","ja","ko","es"]
 d["site"]["defaultLanguage"] = "en"

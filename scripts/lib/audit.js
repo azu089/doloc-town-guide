@@ -109,9 +109,15 @@ function auditSite(root) {
 
     // — 坑（本项目 P0 惯犯）：加语言/改语言代码后，硬编码 lang==="zh" 失效 → 整页回落英文
     if (isCJK(lang)) {
+      // ⚠️ 量的是**散文**，先把 <table> 剔掉。数据表里大量是不该翻译的专有名词
+      //   （游戏物品名/角色名——官方本地化拿不到就必须保留英文，翻了就是编造）。
+      //   2026-08-08 实测 Doloc gifts 页：整页 CJK 只有 22-26%，剔掉表格后是 68-74%。
+      //   连 ja 都只高出阈值 1 个百分点，再多几行就会误伤。
+      //   本检查要抓的是「lang==="zh" 硬编码导致正文回退英文」，散文才是判据。
       const main = (html.match(/<main[\s\S]*?<\/main>/) || [""])[0];
-      const r = cjkRatio(textOf(main));
-      if (r < 0.25) F("lang-contamination", `${rel} (lang=${lang} 但正文 CJK 占比仅 ${(r * 100).toFixed(0)}%)`);
+      const prose = main.replace(/<table[\s\S]*?<\/table>/g, "");
+      const r = cjkRatio(textOf(prose));
+      if (r < 0.25) F("lang-contamination", `${rel} (lang=${lang} 但散文 CJK 占比仅 ${(r * 100).toFixed(0)}%)`);
     }
 
     // — 坑：OpenCC 用 s2t 转繁体，出来的是「大陆繁体」字形（爲/覈/裏/祕/啓/着/喫/羣/纔/僞/峯），

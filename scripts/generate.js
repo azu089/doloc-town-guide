@@ -112,6 +112,36 @@ const FISH_UI = {
 };
 const fishUi = lang => FISH_UI[lang] || FISH_UI.en;
 
+/* 礼物筛选器文案。分档词要和 data/gifts_pages.py 的 VERDICT_W 对得上，
+   否则筛选按钮和表格里的判定词会自说自话。 */
+const GIFT_UI = {
+  "en":    { title:"I'm holding an item — who wants it?", lead:"Filter 65 items by how safe they are to give. Every row stays on the page — this only narrows what you see.",
+             search:"Search item name", v:"Verdict", reset:"Reset",
+             all:"All", universal:"Universal", never:"Never gift", mixed:"Divisive", limited:"Limited data",
+             count:"Showing {n} of {t} items", noMatch:"No items match these filters." },
+  "zh-CN": { title:"我手上有个东西——该给谁？", lead:"按「送出去有多安全」筛选 65 件物品。所有行都仍在页面上，筛选只是收窄显示范围。",
+             search:"搜索物品名", v:"判定", reset:"重置",
+             all:"全部", universal:"万能", never:"绝对别送", mixed:"有分歧", limited:"数据有限",
+             count:"显示 {t} 件中的 {n} 件", noMatch:"没有物品符合当前筛选。" },
+  "zh-TW": { title:"我手上有個東西——該給誰？", lead:"按「送出去有多安全」篩選 65 件物品。所有列都仍在頁面上，篩選只是收窄顯示範圍。",
+             search:"搜尋物品名", v:"判定", reset:"重設",
+             all:"全部", universal:"萬能", never:"絕對別送", mixed:"有分歧", limited:"資料有限",
+             count:"顯示 {t} 件中的 {n} 件", noMatch:"沒有物品符合目前篩選。" },
+  "ja":    { title:"手持ちの品——誰にあげる？", lead:"「渡して安全か」で 65 品を絞り込む。全行はページに残ったまま、表示範囲が狭まるだけ。",
+             search:"品名で検索", v:"判定", reset:"リセット",
+             all:"すべて", universal:"万能", never:"絶対に贈らない", mixed:"賛否両論", limited:"データ不足",
+             count:"{t} 品中 {n} 品を表示", noMatch:"条件に合う品がありません。" },
+  "ko":    { title:"이 아이템, 누구한테 주지?", lead:"'줘도 안전한 정도'로 아이템 65종을 걸러낸다. 모든 행은 페이지에 그대로 남아 있고 보이는 범위만 좁아진다.",
+             search:"아이템 이름 검색", v:"판정", reset:"초기화",
+             all:"전체", universal:"만능", never:"절대 금지", mixed:"호불호", limited:"데이터 부족",
+             count:"{t}종 중 {n}종 표시", noMatch:"조건에 맞는 아이템이 없습니다." },
+  "es":    { title:"Tengo un objeto — ¿a quién se lo doy?", lead:"Filtra 65 objetos por lo seguro que es regalarlos. Todas las filas siguen en la página; esto solo acota lo que ves.",
+             search:"Buscar objeto", v:"Veredicto", reset:"Reiniciar",
+             all:"Todos", universal:"Universal", never:"Nunca", mixed:"Divisivo", limited:"Datos limitados",
+             count:"Mostrando {n} de {t} objetos", noMatch:"Ningún objeto coincide con estos filtros." },
+};
+const giftUi = lang => GIFT_UI[lang] || GIFT_UI.en;
+
 /* ---------- SVG icons (Ruins & Roots line icons, stroke currentColor) ---------- */
 const SVG = {
   logo: '<svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="3" width="34" height="34" rx="9" fill="#1C2A1E"/><path d="M20 32C14 27 10 22 10 16.5A6.5 6.5 0 0 1 16.5 10c2.2 0 4 1 5.5 2.8C23.5 11 25.3 10 27.5 10a6.5 6.5 0 0 1 6.5 6.5C34 22 30 27 20 32z" fill="none" stroke="#7FB069" stroke-width="2.4" stroke-linejoin="round"/><path d="M20 32v-8" stroke="#D97706" stroke-width="2.2" stroke-linecap="round"/><circle cx="20" cy="19" r="2.4" fill="#D97706"/></svg>',
@@ -209,7 +239,7 @@ function header(lang, active){
   const s = siteI18n(lang);
   const prefix = lang === DEF ? "" : `/${lang}`;
   const P0 = ["how-to-play","where-to-buy","farming","automation","gene-system","fishing","drone-combat","exploration","friendship","weather"];
-  const P1 = ["cooking","ranching","characters","story"];
+  const P1 = ["cooking","ranching","characters","story","gifts","romance"];
   const P2 = ["achievements","how-long-to-beat","mods","update-log","faq","system-requirements","steam-deck"];
   const drop = (title, slugs) => `<div class="dd-group"><b class="dd-title">${esc(title)}</b>${slugs.map(slug=>{
     const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
@@ -294,15 +324,21 @@ document.addEventListener('DOMContentLoaded', function(){
   var rows = Array.prototype.slice.call(document.querySelectorAll('.harvest-table.filterable tbody tr'));
   if (ff && rows.length) {
     ff.removeAttribute('hidden');
-    var state = { period:'all', loc:'all', req:'all', q:'' };
+    /* 筛选维度不写死，从 DOM 里的 .ff-group[data-key] 读出来。
+       这样鱼类（period/loc/req）和礼物（v）共用同一段代码，将来加第三个表也不用改这里。
+       匹配一律用「空格分隔的多值包含」——单值属性走这条同样成立，行为与改动前一致。 */
+    var keys = Array.prototype.slice.call(ff.querySelectorAll('.ff-group'))
+                 .map(function(g){ return g.getAttribute('data-key'); });
+    function fresh(){ var s = { q:'' }; keys.forEach(function(k){ s[k] = 'all'; }); return s; }
+    var state = fresh();
     var countEl = ff.querySelector('.ff-count');
     var tpl = countEl ? countEl.getAttribute('data-tpl') : '';
 
     function matches(tr){
-      if (state.period !== 'all' && tr.getAttribute('data-period') !== state.period) return false;
-      // loc/req 是空格分隔的多值
-      if (state.loc !== 'all' && (' '+(tr.getAttribute('data-loc')||'')+' ').indexOf(' '+state.loc+' ') < 0) return false;
-      if (state.req !== 'all' && (' '+(tr.getAttribute('data-req')||'')+' ').indexOf(' '+state.req+' ') < 0) return false;
+      for (var i = 0; i < keys.length; i++) {
+        var k = keys[i], v = state[k];
+        if (v !== 'all' && (' '+(tr.getAttribute('data-'+k)||'')+' ').indexOf(' '+v+' ') < 0) return false;
+      }
       if (state.q && (tr.cells[0].textContent||'').toLowerCase().indexOf(state.q) < 0) return false;
       return true;
     }
@@ -331,7 +367,7 @@ document.addEventListener('DOMContentLoaded', function(){
         apply(); return;
       }
       if (e.target.closest('.ff-reset')) {
-        state = { period:'all', loc:'all', req:'all', q:'' };
+        state = fresh();
         ff.querySelectorAll('.ff-group').forEach(function(g){
           g.querySelectorAll('.ff-chip').forEach(function(c,i){ c.classList.toggle('on', i === 0); });
         });
@@ -395,6 +431,24 @@ function renderSection(s, lang){
           <button type="button" class="ff-reset">${esc(u.reset)}</button></div>
       </section>`;
     }
+    case "giftfilter": {
+      // 礼物筛选器。和 fishfilter 同一套 DOM 约定（.ff / .ff-group[data-key] / .ff-chip[data-v]），
+      // 底部那段 JS 已泛化成按 data-key 读取，所以这里只要把组名对上 rowAttrs 的键即可。
+      // ⚠️ 同样是渐进增强：默认 hidden，JS 没跑时页面等同于没有筛选器。
+      const u = giftUi(lang);
+      const chips = ["all","universal","never","mixed","limited"].map((o,i)=>
+        `<button type="button" class="ff-chip${i===0?" on":""}" data-v="${o}">${esc(u[o])}</button>`).join("");
+      return `<section class="ff reveal" id="${id}" hidden>
+        <div class="ff-head"><span class="furrow-tag">${esc(st.seasonTag)}</span><h2>${esc(u.title)}</h2></div>
+        <p class="ff-lead">${esc(u.lead)}</p>
+        <div class="ff-search"><span class="ff-search-ic" aria-hidden="true">${SVG.friendship || ""}</span>
+          <input type="search" class="ff-input" placeholder="${esc(u.search)}" aria-label="${esc(u.search)}" />
+        </div>
+        <div class="ff-group" data-key="v"><span class="ff-label">${esc(u.v)}</span><div class="ff-chips">${chips}</div></div>
+        <div class="ff-foot"><span class="ff-count" data-tpl="${esc(u.count)}"></span>
+          <button type="button" class="ff-reset">${esc(u.reset)}</button></div>
+      </section>`;
+    }
     case "table": {
       // 季节表：表头季节色，行 hover 生长感
       // rowAttrs（目前只有 fishing 有）：把语义标签挂到 <tr> 上供筛选器用。
@@ -407,7 +461,10 @@ function renderSection(s, lang){
       };
       const rows = (s.rows||[]).map((r,i)=>`<tr${attrsOf(i)}>${r.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("");
       const cls = s.rowAttrs ? "harvest-table filterable" : "harvest-table";
-      return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}<div class="${cls}"><table><thead><tr>${headRow}</tr></thead><tbody>${rows}</tbody></table><p class="table-empty" hidden>${esc(fishUi(lang).noMatch)}</p></div></section>`;
+      // 空态文案跟着表的种类走：礼物表的 rowAttrs 用 v 这个键（判定档），鱼表用 period/loc/req。
+      const isGift = !!(s.rowAttrs && s.rowAttrs[0] && "v" in s.rowAttrs[0]);
+      const noMatch = (isGift ? giftUi(lang) : fishUi(lang)).noMatch;
+      return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}<div class="${cls}"><table><thead><tr>${headRow}</tr></thead><tbody>${rows}</tbody></table><p class="table-empty" hidden>${esc(noMatch)}</p></div></section>`;
     }
     case "faq": {
       // 收获问答：手风琴带叶片标记
@@ -510,7 +567,7 @@ function renderHome(lang){
     {label:L("Plant & Grow","种植与生长","植えて育てる","심고 기르기","Plantar y crecer"), emoji:"🌱", slugs:["how-to-play","farming","gene-system","weather"]},
     {label:L("Automate & Power","自动化与能源","自動化とエネルギー","자동화와 에너지","Automatizar y energía"), emoji:"⚙️", slugs:["automation","fishing","drone-combat"]},
     {label:L("Explore & Fight","探索与战斗","探索と戦闘","탐험과 전투","Explorar y luchar"), emoji:"🗺️", slugs:["exploration","story","characters"]},
-    {label:L("Harvest & Live","收获与生活","収穫と生活","수확과 생활","Cosechar y vivir"), emoji:"🍲", slugs:["cooking","ranching","friendship","achievements","mods","update-log","faq","system-requirements","steam-deck"]},
+    {label:L("Harvest & Live","收获与生活","収穫と生活","수확과 생활","Cosechar y vivir"), emoji:"🍲", slugs:["cooking","ranching","friendship","gifts","romance","achievements","mods","update-log","faq","system-requirements","steam-deck"]},
   ];
   const bedHtml = BEDS.map((bed,bi)=>{
     const plots = bed.slugs.map(slug=>farmPlot(slug)).join("");
