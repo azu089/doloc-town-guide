@@ -276,13 +276,20 @@ function staticBody(slug, lang, { siteName, domain }) {
  *      所以配置用「模板」而不是写死参数名——拿到哪种格式都能填进去。
  *   3. 没配 ID 时原样返回原链接。注册联盟前后不用改任何内容，只改 site.json 一处。
  *
- * site.json 配置示例（拿到联盟 ID 后再填，键是商店域名，不带 www）：
+ * site.json 配置示例（键是商店域名，不带 www）：
  *   "affiliates": {
+ *     "gamersgate.com":     { "type": "param", "param": "aff", "value": "01352e74..." },   // 任意 URL 加 ?aff=<ID>
  *     "humblebundle.com":   { "type": "param", "param": "partner", "value": "yourid" },
- *     "greenmangaming.com": { "type": "wrap",  "template": "https://prf.hn/click/camref:xxx/destination:{url}" }
+ *     "greenmangaming.com": { "type": "wrap",  "template": "https://prf.hn/click/camref:xxx/destination:{url}" },
+ *     "fanatical.com":      { "type": "wrap",  "template": "https://www.awin1.com/cread.php?awinmid=118821&awinaffid=3026091&ued={url}" }
  *   }
  *   type=param → 在原 URL 上加 ?param=value
  *   type=wrap  → 用 template 包一层，{url} 会被替换成 encodeURIComponent(原URL)，{raw} 是不编码的原URL
+ *
+ *   Awin 格式（Fanatical 等商户走 Awin）：https://www.awin1.com/cread.php?awinmid=<商户ID>&awinaffid=<发布商ID>&ued=<urlencoded 商品URL>
+ *     - 本项目 awinaffid = 3026091（Awin 后台 publisher ID，ui.awin.com/dashboard/awin/publisher/3026091）
+ *     - Fanatical awinmid = 118821（ui.awin.com/awin/affiliate/3026091/merchant-profile/118821）
+ *     - 新商户：Awin 后台「广告商名录」搜商户 → merchant-profile/<id> → 待批准后把 awinmid 换成新值
  */
 
 /** 取域名并去掉 www.，用作 affiliates 配置的键 */

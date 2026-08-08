@@ -26,6 +26,10 @@
    "52204e18-a636-4ab6-91dc-3353c91138c0"
   ],
   "affiliates": {
+   "fanatical.com": {
+    "type": "wrap",
+    "template": "https://www.awin1.com/cread.php?awinmid=118821&awinaffid=3026091&ued={url}"
+   },
    "gamersgate.com": {
     "type": "param",
     "param": "aff",
