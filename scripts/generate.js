@@ -189,9 +189,14 @@ function head(title, desc, extraLd, slug, lang, ogImage){
   //    这是 Impact 后台给的原文格式。理论上 HTML 等价，但验证器若做字符串精确匹配就只认原样，
   //    照抄的成本是零，赌它按标准解析的成本是一轮部署 + 一次失败重试。
   //    值是 UUID（十六进制+连字符），单引号属性不会被内容破坏；仍然转义 ' 以防将来换成别的值。
-  const impact = DATA.site.impactVerification
-    ? `<meta name='impact-site-verification' value='${esc(DATA.site.impactVerification).replace(/'/g, "&#39;")}'>`
-    : "";
+  // impactVerification 支持单值或数组：Humble 主流程 + Connect channels 渠道表单会生成不同 UUID，
+  // 都放上，无论 Impact 查哪个都通过。
+  const _impVals = Array.isArray(DATA.site.impactVerification)
+    ? DATA.site.impactVerification.filter(Boolean)
+    : (DATA.site.impactVerification ? [DATA.site.impactVerification] : []);
+  const impact = _impVals.map(v =>
+    `<meta name='impact-site-verification' value='${esc(v).replace(/'/g, "&#39;")}'>`
+  ).join("");
   const og = ogImage || DATA.site.ogImage || "/images/hero.jpg";
   const htmlLang = LANG_META[lang]?.html || lang;
   return `<!DOCTYPE html>
