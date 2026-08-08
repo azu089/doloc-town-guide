@@ -131,9 +131,33 @@ function createLastmod({ manifestPath, today }) {
   // 昨天改过的页面都被算成"本次改的"——2026-08-08 实测报出「变更 150/150 页」，实际只有 6 页。
   const changedKeys = new Set();
 
-  /** 剔除易变位后再哈希：lastmod 占位符本身、CSS 指纹（样式改动不算内容改动） */
+  /**
+   * 只哈希「对读者和搜索引擎有意义的部分」：<title> + meta description + <body>。
+   *
+   * 为什么不哈希整篇 HTML（2026-08-08 加 Impact 验证 meta 时发现）：
+   *   往 <head> 塞一个联盟所有权验证 meta，整篇 HTML 就变了 → 150 个页面的 lastmod
+   *   全部跳到今天 → 等于告诉 Google「150 页内容都更新了」，而可见内容一个字没动。
+   *   lastmod 谎报多了，Google 会干脆忽略整个站的 lastmod（官方明说会这么做），
+   *   那就把这个信号彻底废掉了。而我们接 4 个联盟，这种 head 标签还会再加好几次。
+   *
+   * 保留 title/description 是因为它们**确实是内容**（决定 SERP 点击率），改了值得让爬虫重看；
+   * 验证 meta、分析脚本、CSS 指纹则不是。
+   */
+  const contentOf = html => {
+    const s = String(html);
+    const title = (s.match(/<title>([\s\S]*?)<\/title>/i) || [, ""])[1];
+    const desc = (s.match(/<meta\s+name="description"\s+content="([^"]*)"/i) || [, ""])[1];
+    // ⚠️ 本项目的生成器**不输出 `</body>`**（HTML5 允许省略）。
+    //    所以不能写 /<body>([\s\S]*)<\/body>/ —— 那样匹配失败会静默退回「哈希整篇」，
+    //    fix 看着生效实则没生效（2026-08-08 就是这么错了一版：加 head meta 仍报 150/150）。
+    //    正确做法：取 <body> 之后到结尾，再把可能存在的收尾标签去掉。
+    const i = s.search(/<body[^>]*>/i);
+    const body = i === -1 ? s
+      : s.slice(i).replace(/^<body[^>]*>/i, "").replace(/<\/body>\s*<\/html>\s*$|<\/html>\s*$/i, "");
+    return `${title}\n${desc}\n${body}`;
+  };
   const stableHash = html => crypto.createHash("md5")
-    .update(String(html)
+    .update(contentOf(html)
       .replace(new RegExp(LASTMOD_TOKEN, "g"), "")
       .replace(/style\.css\?v=[a-f0-9]+/g, "style.css")
     ).digest("hex");

@@ -152,6 +152,10 @@ function head(title, desc, extraLd, slug, lang, ogImage){
   // Awin 联盟所有权验证：官方要求是「源代码里出现 Awin 字样」，没有规定 meta 名称，这里用描述性名字。
   // 值可以是任意字符串（拿到正式验证码就换成那个）；未配置时不输出。
   const awin = DATA.site.awinVerification ? `<meta name="awin-site-verification" content="${esc(DATA.site.awinVerification)}" />` : "";
+  // Impact（Humble Bundle 联盟）所有权验证。
+  // ⚠️ 属性名是 `value` 不是 `content` —— 这是 Impact 后台给的原文，看着像笔误但它的校验器认这个。
+  //    改成 content 会验不过，别"顺手修正"。
+  const impact = DATA.site.impactVerification ? `<meta name="impact-site-verification" value="${esc(DATA.site.impactVerification)}" />` : "";
   const og = ogImage || DATA.site.ogImage || "/images/hero.jpg";
   const htmlLang = LANG_META[lang]?.html || lang;
   return `<!DOCTYPE html>
@@ -168,7 +172,7 @@ ${hreflang(slug)}
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-${gsc}${awin}
+${gsc}${awin}${impact}
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="${esc(siteI18n(lang).name)}" />
 <meta property="og:title" content="${esc(title)}" />
