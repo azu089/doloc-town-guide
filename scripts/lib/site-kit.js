@@ -457,6 +457,17 @@ function writeRobots(outDir, domain) {
     `User-agent: *\nAllow: /\nSitemap: https://${domain}/sitemap.xml\n`);
 }
 
+/**
+ * 广告网络配置（site.json → site 对象）：
+ *   "adsenseId": "ca-pub-xxxx",          // 非空时：注入 adsbygoogle 脚本 + 生成 ads.txt（阶段 1 再用）
+ *   "adsterra": "<Adsterra 后台给的完整脚本 HTML>",  // 非空时：在 </body> 前原样注入
+ *     - 手册（2026-08 航海关卡 6）：新站早期 AdSense 审核严 → 先用 Adsterra（门槛低、审核 1-3 分钟）
+ *     - 广告形式选 Native Banner 或 Banner；别选 Popunder（影响体验）
+ *     - 接入步骤：adsterra.com 注册 Publisher → 创建广告单元（审核通过拿 32 位 appkey）
+ *       → 后台复制广告脚本（含 appkey）→ 整段粘到 site.json 的 "adsterra" 字段
+ *     - 未配置时两处都不输出任何东西，站点输出与改动前逐字节一致
+ */
+
 /** 未接 AdSense 时不写空文件——空 ads.txt 无意义，直接不生成 */
 function writeAds(outDir, adsenseId) {
   const p = path.join(outDir, "ads.txt");
