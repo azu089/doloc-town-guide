@@ -2247,6 +2247,9 @@
    "intro": "Reclaim pre-apocalypse tech and rewrite the genetics of 30+ crops. Gene modules stack up to three per seed and unlock mutations that change how your farm behaves.",
    "sections": [
     {
+     "type": "genefilter"
+    },
+    {
      "type": "list",
      "tag": "BASICS",
      "heading": "How the Gene System Works",
@@ -2304,6 +2307,29 @@
        "⚠️ Full list being verified in 1.0",
        "—"
       ]
+     ],
+     "rowAttrs": [
+      {
+       "effect": "harvest"
+      },
+      {
+       "effect": "yield"
+      },
+      {
+       "effect": "yield"
+      },
+      {
+       "effect": "seeds"
+      },
+      {
+       "effect": "water"
+      },
+      {
+       "effect": "survival"
+      },
+      {
+       "effect": "unlisted"
+      }
      ]
     },
     {
@@ -2359,6 +2385,9 @@
      "intro": "夺回末世前的科技，改写 30+ 种作物的基因。每颗种子最多 3 个基因模块，组合出改变农场运作方式的突变。",
      "sections": [
       {
+       "type": "genefilter"
+      },
+      {
        "type": "list",
        "heading": "基因系统如何运作",
        "body": "每颗种子可携带最多三个基因模块。正确组合能把普通作物变成自动浇水、自动复制的机器。",
@@ -2405,6 +2434,29 @@
          "+ 约 14 种",
          "⚠️ 完整列表正在 1.0 实测"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "effect": "harvest"
+        },
+        {
+         "effect": "yield"
+        },
+        {
+         "effect": "yield"
+        },
+        {
+         "effect": "seeds"
+        },
+        {
+         "effect": "water"
+        },
+        {
+         "effect": "survival"
+        },
+        {
+         "effect": "unlisted"
+        }
        ]
       },
       {
@@ -2443,6 +2495,9 @@
      "metaDescription": "多洛可小鎮作物基因系統詳解：基因模塊、孢子噴射與雨露均霑等約 20 種突變、種子母本研究與培育更強作物的方法。",
      "intro": "奪回末世前的科技，改寫 30+ 種作物的基因。每顆種子最多 3 個基因模塊，組合出改變農場運作方式的突變。",
      "sections": [
+      {
+       "type": "genefilter"
+      },
       {
        "type": "list",
        "heading": "基因系統如何運作",
@@ -2490,6 +2545,29 @@
          "+ 約 14 種",
          "⚠️ 完整列表正在 1.0 實測"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "effect": "harvest"
+        },
+        {
+         "effect": "yield"
+        },
+        {
+         "effect": "yield"
+        },
+        {
+         "effect": "seeds"
+        },
+        {
+         "effect": "water"
+        },
+        {
+         "effect": "survival"
+        },
+        {
+         "effect": "unlisted"
+        }
        ]
       },
       {
@@ -2528,6 +2606,9 @@
      "metaDescription": "ドロックタウンの作物遺伝子システム：遺伝子モジュール、胞子噴射や雨露均等など約20の変異、種子母体、より強い作物の育成法。",
      "intro": "終末以前の技術を取り戻し、30種類以上の作物の遺伝子を書き換える。種子1つに最大3つの遺伝子モジュール。組み合わせ次第で農場が変わる。",
      "sections": [
+      {
+       "type": "genefilter"
+      },
       {
        "type": "list",
        "heading": "遺伝子システムの仕組み",
@@ -2575,6 +2656,29 @@
          "+約14種",
          "⚠️ 完全リストは 1.0 で検証中"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "effect": "harvest"
+        },
+        {
+         "effect": "yield"
+        },
+        {
+         "effect": "yield"
+        },
+        {
+         "effect": "seeds"
+        },
+        {
+         "effect": "water"
+        },
+        {
+         "effect": "survival"
+        },
+        {
+         "effect": "unlisted"
+        }
        ]
       },
       {
@@ -2613,6 +2717,9 @@
      "metaDescription": "돌록 타운 작물 유전자 시스템: 유전자 모듈, 포자 분사와 고루 내리는 비 등 약 20종 돌연변이, 종자 모본 연구와 강한 작물 육성법.",
      "intro": "종말 이전의 기술을 되찾아 30종 이상의 작물 유전자를 다시 씁니다. 씨앗 하나에 최대 3개의 유전자 모듈. 조합에 따라 농장이 달라집니다.",
      "sections": [
+      {
+       "type": "genefilter"
+      },
       {
        "type": "list",
        "heading": "유전자 시스템 작동 방식",
@@ -2660,6 +2767,29 @@
          "+약 14종",
          "⚠️ 전체 목록 1.0에서 검증 중"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "effect": "harvest"
+        },
+        {
+         "effect": "yield"
+        },
+        {
+         "effect": "yield"
+        },
+        {
+         "effect": "seeds"
+        },
+        {
+         "effect": "water"
+        },
+        {
+         "effect": "survival"
+        },
+        {
+         "effect": "unlisted"
+        }
        ]
       },
       {
@@ -2698,6 +2828,9 @@
      "metaDescription": "Cómo funciona el sistema genético de cultivos: módulos genéticos, ~20 mutaciones como Rociado de esporas y Lluvia, y cómo criar semillas más fuertes.",
      "intro": "Recupera la tecnología de antes del apocalipsis y reescribe la genética de más de 30 cultivos. Cada semilla admite hasta tres módulos genéticos.",
      "sections": [
+      {
+       "type": "genefilter"
+      },
       {
        "type": "list",
        "heading": "Cómo funciona el sistema genético",
@@ -2745,6 +2878,29 @@
          "+ ~14 más",
          "⚠️ Lista completa en verificación (1.0)"
         ]
+       ],
+       "rowAttrs": [
+        {
+         "effect": "harvest"
+        },
+        {
+         "effect": "yield"
+        },
+        {
+         "effect": "yield"
+        },
+        {
+         "effect": "seeds"
+        },
+        {
+         "effect": "water"
+        },
+        {
+         "effect": "survival"
+        },
+        {
+         "effect": "unlisted"
+        }
        ]
       },
       {

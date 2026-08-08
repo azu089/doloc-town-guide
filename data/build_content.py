@@ -6986,6 +6986,53 @@ if _fp:
         _t["sections"].insert(0, {"type": "fishfilter"})
     print("fishing rowAttrs:", sum(len(a) for a in _attrs_by_table), "行 ×", 1 + len(_fp.get("i18n") or {}), "语言")
 
+# ================= gene-system: 行属性（前端筛选器用） =================
+# 原则：属性全部机械推导自已有英文单元格（Effect/Best use），不新增任何事实；
+# 推导一次后按索引复制给每个语言（翻译会替换行文本但顺序不变，行数必须相等才挂）。
+# ⚠️ 排除名称列（Mutation）：名称里的词不做归类依据。
+# 第 7 行「+ ~14 more」是待验证占位 → unlisted（筛选器提供 unlisted 选项，可单独筛出）。
+def _gene_attrs(row, columns):
+    rest = " ".join(row[1:])   # Effect + Best use（排除名称列）
+    if re.search(r"Auto-waters|auto-water|waters nearby|waters surrounding", rest, re.I):
+        effect = "water"
+    elif re.search(r"drop fruit automatically|automatically", rest, re.I):
+        effect = "harvest"
+    elif re.search(r"Extra drops|\+1 fruit|Increases drop", rest, re.I):
+        effect = "yield"
+    elif re.search(r"drop seeds|self-sustaining", rest, re.I):
+        effect = "seeds"
+    elif re.search(r"off-season|Survives", rest, re.I):
+        effect = "survival"
+    else:
+        effect = "unlisted"
+    return {"effect": effect}
+
+_gp = next((x for x in d["pages"] if x["slug"] == "gene-system"), None)
+if _gp:
+    _tables_en = [s for s in _gp["sections"] if s.get("type") == "table"]
+    _gene_attrs_by_table = [
+      [_gene_attrs(r, s.get("columns", [])) for r in s.get("rows", [])]
+      for s in _tables_en
+    ]
+    def _attach_gene(sections):
+        ti = 0
+        for s in sections:
+            if s.get("type") != "table": continue
+            if ti < len(_gene_attrs_by_table) and len(s.get("rows", [])) == len(_gene_attrs_by_table[ti]):
+                s["rowAttrs"] = _gene_attrs_by_table[ti]
+            ti += 1
+    _attach_gene(_gp["sections"])
+    for _lg, _t in (_gp.get("i18n") or {}).items():
+        _attach_gene(_t.get("sections", []))
+    # 首节插入筛选器（幂等）
+    _gp["sections"] = [s for s in _gp["sections"] if s.get("type") != "genefilter"]
+    _gp["sections"].insert(0, {"type": "genefilter"})
+    for _lg, _t in (_gp.get("i18n") or {}).items():
+        _t["sections"] = [s for s in _t.get("sections", []) if s.get("type") != "genefilter"]
+        _t["sections"].insert(0, {"type": "genefilter"})
+    print("gene rowAttrs:", sum(len(a) for a in _gene_attrs_by_table), "行 ×", 1 + len(_gp.get("i18n") or {}), "语言")
+
+
 # ---------- gifts / romance 两页（数据驱动，见 gifts_pages.py）----------
 # 放在所有 apply_lang 之后自己注入 + 自己转 zh-TW：
 # 上面那个 zh-TW 转换只在 L491 跑过一次，而 apply_lang("zh-CN") 后面又跑了几轮，

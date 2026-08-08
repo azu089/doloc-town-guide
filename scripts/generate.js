@@ -142,6 +142,38 @@ const GIFT_UI = {
 };
 const giftUi = lang => GIFT_UI[lang] || GIFT_UI.en;
 
+/* 基因筛选器文案（6 语）。
+ * 效果分档（water/harvest/yield/seeds/survival）是从基因表已有英文单元格机械推导的归类，
+ * 不是新事实（与鱼类筛选器同一原则）。第 7 行「+ ~14 more」待验证占位归 unlisted。
+ */
+const GENE_UI = {
+  "en":    { title:"Which gene should I use?", lead:"Filter the 6 confirmed mutations by what they do. All rows stay on the page — this only narrows what you see.",
+             search:"Search gene name", effect:"Effect type", reset:"Reset",
+             all:"All", water:"Auto-water", harvest:"Auto-harvest", yield:"Extra yield", seeds:"Self-seed", survival:"Off-season", unlisted:"Unverified",
+             count:"Showing {n} of {t} genes", noMatch:"No genes match these filters." },
+  "zh-CN": { title:"该用哪种基因？", lead:"按效果筛选 6 种已确认的突变。所有行都仍在页面上，筛选只是收窄显示范围。",
+             search:"搜索基因名", effect:"效果类型", reset:"重置",
+             all:"全部", water:"自动浇水", harvest:"自动收获", yield:"增产", seeds:"自留种", survival:"耐非宜季", unlisted:"待验证",
+             count:"显示 {n} / {t} 种", noMatch:"没有符合条件的基因。" },
+  "zh-TW": { title:"該用哪種基因？", lead:"按效果篩選 6 種已確認的突變。所有列都仍在頁面上，篩選只是收窄顯示範圍。",
+             search:"搜尋基因名", effect:"效果類型", reset:"重設",
+             all:"全部", water:"自動澆水", harvest:"自動收穫", yield:"增產", seeds:"自留種", survival:"耐非宜季", unlisted:"待驗證",
+             count:"顯示 {n} / {t} 種", noMatch:"沒有符合條件的基因。" },
+  "ja":    { title:"どの遺伝子を使うべき？", lead:"確認済みの 6 つの変異を効果で絞り込む。全行はページに残ったまま、表示範囲が狭まるだけ。",
+             search:"遺伝子名で検索", effect:"効果タイプ", reset:"リセット",
+             all:"すべて", water:"自動潅水", harvest:"自動収穫", yield:"増収", seeds:"自家採種", survival:"シーズン外耐性", unlisted:"未検証",
+             count:"{t} 種中 {n} 種を表示", noMatch:"条件に合う遺伝子がありません。" },
+  "ko":    { title:"어떤 유전자를 써야 할까?", lead:"확인된 6종 변이를 효과별로 필터링합니다. 모든 행은 페이지에 그대로 남아 있으며, 표시 범위만 좁힙니다.",
+             search:"유전자 이름 검색", effect:"효과 유형", reset:"초기화",
+             all:"전체", water:"자동 물주기", harvest:"자동 수확", yield:"증산", seeds:"자가 채종", survival:"비수기 생존", unlisted:"미검증",
+             count:"{t}종 중 {n}종 표시", noMatch:"조건에 맞는 유전자가 없습니다." },
+  "es":    { title:"¿Qué gen debería usar?", lead:"Filtra las 6 mutaciones confirmadas por su efecto. Todas las filas siguen en la página; esto solo acota lo que ves.",
+             search:"Buscar gen", effect:"Tipo de efecto", reset:"Restablecer",
+             all:"Todos", water:"Auto-riego", harvest:"Auto-cosecha", yield:"Rendimiento extra", seeds:"Auto-semilla", survival:"Fuera de temporada", unlisted:"Sin verificar",
+             count:"Mostrando {n} de {t} genes", noMatch:"Ningún gen coincide con estos filtros." },
+};
+const geneUi = lang => GENE_UI[lang] || GENE_UI.en;
+
 /* ---------- SVG icons (Ruins & Roots line icons, stroke currentColor) ---------- */
 const SVG = {
   logo: '<svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="3" width="34" height="34" rx="9" fill="#1C2A1E"/><path d="M20 32C14 27 10 22 10 16.5A6.5 6.5 0 0 1 16.5 10c2.2 0 4 1 5.5 2.8C23.5 11 25.3 10 27.5 10a6.5 6.5 0 0 1 6.5 6.5C34 22 30 27 20 32z" fill="none" stroke="#7FB069" stroke-width="2.4" stroke-linejoin="round"/><path d="M20 32v-8" stroke="#D97706" stroke-width="2.2" stroke-linecap="round"/><circle cx="20" cy="19" r="2.4" fill="#D97706"/></svg>',
@@ -454,6 +486,24 @@ function renderSection(s, lang){
           <button type="button" class="ff-reset">${esc(u.reset)}</button></div>
       </section>`;
     }
+    case "genefilter": {
+      // 基因筛选器。与 fishfilter/giftfilter 同一套 DOM 约定（.ff / .ff-group[data-key] / .ff-chip[data-v]），
+      // 底部 JS 已泛化：这里只需把 data-key="effect" 对上 rowAttrs 的 effect 键。
+      // ⚠️ 渐进增强：默认 hidden，JS 没跑时页面等同于没有筛选器。
+      const u = geneUi(lang);
+      const chips = ["all","water","harvest","yield","seeds","survival","unlisted"].map((o,i)=>
+        `<button type="button" class="ff-chip${i===0?" on":""}" data-v="${o}">${esc(u[o])}</button>`).join("");
+      return `<section class="ff reveal" id="${id}" hidden>
+        <div class="ff-head"><span class="furrow-tag">${esc(st.seasonTag)}</span><h2>${esc(u.title)}</h2></div>
+        <p class="ff-lead">${esc(u.lead)}</p>
+        <div class="ff-search"><span class="ff-search-ic" aria-hidden="true">${SVG["gene-system"] || ""}</span>
+          <input type="search" class="ff-input" placeholder="${esc(u.search)}" aria-label="${esc(u.search)}" />
+        </div>
+        <div class="ff-group" data-key="effect"><span class="ff-label">${esc(u.effect)}</span><div class="ff-chips">${chips}</div></div>
+        <div class="ff-foot"><span class="ff-count" data-tpl="${esc(u.count)}"></span>
+          <button type="button" class="ff-reset">${esc(u.reset)}</button></div>
+      </section>`;
+    }
     case "table": {
       // 季节表：表头季节色，行 hover 生长感
       // rowAttrs（目前只有 fishing 有）：把语义标签挂到 <tr> 上供筛选器用。
@@ -468,7 +518,8 @@ function renderSection(s, lang){
       const cls = s.rowAttrs ? "harvest-table filterable" : "harvest-table";
       // 空态文案跟着表的种类走：礼物表的 rowAttrs 用 v 这个键（判定档），鱼表用 period/loc/req。
       const isGift = !!(s.rowAttrs && s.rowAttrs[0] && "v" in s.rowAttrs[0]);
-      const noMatch = (isGift ? giftUi(lang) : fishUi(lang)).noMatch;
+      const isGene = !!(s.rowAttrs && s.rowAttrs[0] && "effect" in s.rowAttrs[0]);
+      const noMatch = (isGift ? giftUi(lang) : isGene ? geneUi(lang) : fishUi(lang)).noMatch;
       return `<section class="furrow-block reveal" id="${id}"><div class="furrow-head"><span class="furrow-tag">${tag}</span><h2>${esc(s.heading)}</h2></div>${s.body?`<p class="furrow-lead">${esc(s.body)}</p>`:""}<div class="${cls}"><table><thead><tr>${headRow}</tr></thead><tbody>${rows}</tbody></table><p class="table-empty" hidden>${esc(noMatch)}</p></div></section>`;
     }
     case "faq": {
