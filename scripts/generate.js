@@ -294,7 +294,7 @@ function footer(lang){
         <p>${esc(s.footerSource)} · ${today}</p>
       </div>
     </div>
-    ${DATA.site.adsenseId ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(DATA.site.adsenseId)}" crossorigin="anonymous"></script>` : ""}
+    ${DATA.site.adsenseId ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(DATA.site.adsenseId)}" crossorigin="anonymous"></script>` : ""}\n    ${DATA.site.adsterra ? DATA.site.adsterra : ""}
   </div>
 <script>
 document.addEventListener('click', function(e){
