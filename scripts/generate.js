@@ -693,7 +693,7 @@ function renderHome(lang){
     });
   });
   </script>`;
-  return renderFull(lang, siteI18n(lang).name, s.description, [], "index", body, "/images/hero.jpg");
+  return renderFull(lang, siteI18n(lang).name, s.description, [gameLd()], "index", body, "/images/hero.jpg");
 }
 function renderFull(lang, title, desc, extraLd, slug, body, ogImage){
   const s = siteI18n(lang);
