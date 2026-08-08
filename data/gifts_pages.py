@@ -2,7 +2,11 @@
 """gifts / romance 两页的内容生成（数据驱动，禁止手写表格）。
 
 来源：Steam 社区攻略《Doloc Town - Character Gifts》（作者 rockechic）[L2]
-      正文是两张表格图片，2026-08-08 逐行读出到 work/gifts-raw.json。
+      正文是两张表格图片，2026-08-08 逐行读出到 data/gifts-raw.json。
+
+⚠️ 数据文件必须放 data/ 不能放 work/：work/ 在 .gitignore 里，
+   而 Cloudflare Pages 只 clone 仓库、在构建机上跑 build_content.py，
+   放 work/ 会导致线上构建 FileNotFoundError（2026-08-08 差点踩中）。
 
 ⚠️ 三条纪律，改这个文件前先读：
 1. **物品名与村民名一律保持英文原文**。官方中/日/韩本地化名我们没有，
@@ -17,7 +21,7 @@ from pathlib import Path
 from collections import defaultdict
 
 ROOT = Path(__file__).parent
-RAW = json.loads((ROOT.parent / "work" / "gifts-raw.json").read_text(encoding="utf-8"))
+RAW = json.loads((ROOT / "gifts-raw.json").read_text(encoding="utf-8"))
 SRC = RAW["_source"]
 VILL = {k: v for k, v in RAW["villagers"].items()
         if v["loves"] or v["likes"] or v["dislikes"]}

@@ -1,0 +1,38 @@
+{
+  "_source": {
+    "title": "Doloc Town - Character Gifts",
+    "author": "rockechic",
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3487656041",
+    "grade": "L2",
+    "caveat_verbatim": "Still a work in progress :) I originally created this when the game was just released in early access, so it doesn't include any new characters added after May. The question mark (?) is a neutral response. If an item is not listed, it is either a neutral response or it hasn't been tested yet.",
+    "extracted": "2026-08-08 从攻略内嵌的两张表格图片逐行读出（正文是图片，不是文本）",
+    "warning": "抢先体验期数据；游戏 2026-08-05 才 1.0，间隔约 14 个月，1.0 可能已变动。上站必须标注。"
+  },
+  "villagers": {
+    "Alchemy":  {"loves": ["Flute","Succulent","Candied Strawberry","Wool Fabric","Mushroom Meat Soup"], "likes": ["Tomato","Blueberry","Pepper","Potato","Spaghetti","Candied Blueberry","Fern Fossil","Honey","Cucumber"], "dislikes": ["Combat Chip","Copper Ingot","33 FCS","Bamboo Tube","Bottled Water","Iced Tea","Coffee"]},
+    "Claud":    {"loves": ["Aged Beer","Turnip","Thermos","Delicious Meat Bun","Delicious Stew"], "likes": ["Spaghetti","Fern Fossil","Iced Tea","Honey","Coffee","Large Iced Tea","Mint Tea","Jam Bread"], "dislikes": ["Combat Chip","Copper Ingot","33 FCS","Bamboo Tube","Bottled Water"]},
+    "Cod":      {"loves": ["Cucumber","66 FCS"], "likes": ["Combat Chip","33 FCS","Fern Fossil","Iced Tea","Honey","Coffee","Laser Core","Gel"], "dislikes": ["Tomato","Copper Ingot","Spaghetti","Bamboo Tube","Bottled Water"]},
+    "Dada":     {"loves": ["Game Console","Pumpkin","Pumpkin Pie","Shiitake","Cake","Hamburger","Mushroom Meat Soup"], "likes": ["Spaghetti","Fern Fossil","Honey","Meat-Shaped Stone","Ammonite Fossil","Beryl"], "dislikes": ["Copper Ingot","Bamboo Tube","Bottled Water","Thermos"]},
+    "Gabryl":   {"loves": [], "likes": [], "dislikes": []},
+    "Gerald":   {"loves": [], "likes": [], "dislikes": []},
+    "Hult":     {"loves": ["Pepper","Spaghetti","Key"], "likes": ["Fern Fossil","Iced Tea","Honey","Coffee","Beer","Gel","Delicious Stew"], "dislikes": ["Combat Chip","Copper Ingot","33 FCS","Bamboo Tube","Bottled Water"]},
+    "Kasia":    {"loves": ["Honey","Kasia's Cake","Feather","Pickled Fruits","Crawlus","Bug Honey","Cake","Popcorn"], "likes": ["Blueberry","Spaghetti","Candied Blueberry","Fern Fossil","Candied Wax Apple"], "dislikes": ["Combat Chip","Copper Ingot","33 FCS","Bamboo Tube","Bottled Water"]},
+    "Kel":      {"loves": [], "likes": [], "dislikes": []},
+    "Kuma":     {"loves": [], "likes": [], "dislikes": []},
+    "Lank":     {"loves": ["Large Mechanical Scrap","Corn","Thermos","Hamburger"], "likes": ["Spaghetti","Fern Fossil","Iced Tea","Honey","Coffee","Candied Wax Apple"], "dislikes": ["Combat Chip","Copper Ingot","33 FCS","Bamboo Tube","Bottled Water"]},
+    "Licca":    {"loves": [], "likes": [], "dislikes": []},
+    "Lightman": {"loves": [], "likes": [], "dislikes": []},
+    "Loveyer":  {"loves": [], "likes": [], "dislikes": []},
+    "Merlin":   {"loves": ["Aged Rice Wine","Century Egg","Crawlus","Rice Wine","Beryl","Amber","Meat-Shaped Stone","Obsidian","Delicious Meat Bun"], "likes": ["Beer"], "dislikes": []},
+    "Mira":     {"loves": [], "likes": [], "dislikes": []},
+    "Mody":     {"loves": ["Combat Chip","Mint Tea","Wasp's Eye"], "likes": ["33 FCS","Spaghetti","Fern Fossil","Iced Tea","Honey","Coffee"], "dislikes": ["Copper Ingot","Bamboo Tube","Bottled Water"]},
+    "Orlando":  {"loves": ["Tomato","Spaghetti","Large Coffee","Marsh Beast Horn","Large Iced Tea","Flute"], "likes": ["Fern Fossil","Iced Tea","Honey","Coffee","Jam Bread"], "dislikes": ["Copper Ingot","Bamboo Tube","Bottled Water","Cucumber"]},
+    "Paiea":    {"loves": [], "likes": [], "dislikes": []},
+    "Pike":     {"loves": [], "likes": [], "dislikes": []},
+    "Sacco":    {"loves": ["Old Chip"], "likes": ["Fern Fossil"], "dislikes": ["Combat Chip","Copper Ingot","33 FCS","Bamboo Tube","Bottled Water"]},
+    "Shylock":  {"loves": [], "likes": [], "dislikes": []},
+    "Villain":  {"loves": ["Aged Rice Wine","Aged Beer","Aged Grape Wine","Agave Wine","Grape Wine","Rice Wine","Game Console"], "likes": ["Fern Fossil","Iced Tea","Beer","Old Chip","Battery"], "dislikes": ["Combat Chip","Copper Ingot","33 FCS","Bamboo Tube","Bottled Water"]},
+    "Witch":    {"loves": [], "likes": [], "dislikes": []},
+    "Zenis":    {"loves": ["Wool Fabric","Agave Wine","Cake","Key"], "likes": ["Spaghetti","Blueberry","Candied Blueberry","Fern Fossil","Iced Tea","Honey","Coffee","Beer"], "dislikes": ["Combat Chip","Pepper","Copper Ingot","33 FCS","Bamboo Tube","Bottled Water"]}
+  }
+}
