@@ -281,7 +281,9 @@ function header(lang, active){
   const drop = (title, slugs) => `<div class="dd-group"><b class="dd-title">${esc(title)}</b>${slugs.map(slug=>{
     const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
     const m=metaOf(slug);
-    return `<a href="${prefix}/${slug}" class="${slug===active?"active":""}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(pageOf(p,lang).title)}</span></a>`;
+    const _t = pageOf(p,lang).title;
+    const _disp = _t.replace(/\s*Doloc Town\s*/g," ").replace(/\s+/g," ").trim() || _t;
+    return `<a href="${prefix}/${slug}" class="${slug===active?"active":""}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(_disp)}</span></a>`;
   }).join("")}</div>`;
   const guides = `<div class="dd-menu dd-manual">${drop(lang==="en"?"Core guides":lang==="ja"?"コア攻略":lang==="ko"?"핵심 가이드":lang==="es"?"Guías principales":"核心攻略", P0)}${drop(lang==="en"?"Deep dives":lang==="ja"?"深掘り":lang==="ko"?"심층 가이드":lang==="es"?"A fondo":"深度拆解", P1)}${drop(lang==="en"?"Quick answers":lang==="ja"?"クイック回答":lang==="ko"?"빠른 답변":lang==="es"?"Respuestas rápidas":"快速答案", P2)}</div>`;
   const searchPh = lang==="en"?"Search guides…":lang==="ja"?"ガイドを検索…":lang==="ko"?"공략 검색…":lang==="es"?"Buscar guías…":"搜索攻略…";
