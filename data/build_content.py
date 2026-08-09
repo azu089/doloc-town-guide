@@ -1086,8 +1086,8 @@ KO.update({
  },
  "faq": {
   "title":"돌록 타운 FAQ: 1.0 자주 묻는 질문",
-  "metaTitle":"돌록 타운 FAQ: 멀티, Steam Deck, 가격 등 (1.0)",
-  "metaDescription":"돌록 타운 자주 묻는 질문: 멀티플레이인가요, Steam Deck 검증됐나요, 가격, 분량 등.",
+  "metaTitle":"돌록 타운 FAQ: 멀티, 연애, Steam Deck, 가격 등 (1.0)",
+  "metaDescription":"돌록 타운 자주 묻는 질문: 멀티플레이인가요, 연애가 있나요, Steam Deck 검증됐나요, 가격, 분량 등 간결한 답변.",
   "intro":"돌록 타운에 대해 플레이어들이 가장 많이 묻는 질문에 대한 출처가 있는 간결한 답변.",
   "sections":[
    {"heading":"자주 묻는 질문",

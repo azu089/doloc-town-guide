@@ -262,8 +262,8 @@ P0 = [
  {
   "slug":"friendship",
   "title":"Doloc Town Friendship Guide: Villagers, Gifts & Festivals",
-  "metaTitle":"Doloc Town Friendship Guide: All Villagers, Gifts & Festivals (No Romance)",
-  "metaDescription":"Build friendships in Doloc Town: villager profiles, gift tips, heart events and seasonal festivals. Note: Doloc Town has no romance or marriage system.",
+  "metaTitle":"Doloc Town Romance: The Straight Answer + Friendship Guide",
+  "metaDescription":"Doloc Town has NO romance or marriage system (confirmed) — but friendship, gifts and heart events matter. Villager profiles, gift tiers and festival guide.",
   "intro":"Doloc Town is friendship-focused by design — there is no romance or marriage mechanic. Raise hearts, attend festivals and unlock recipes and story from every resident.",
   "sections":[
    {"type":"note","tag":"OFFICIAL","heading":"No Romance — Friendship Only","body":"The developers have confirmed Doloc Town has no romance/marriage system. Social gameplay is friendship-based: gifts, festivals, heart events and personal storylines. Plan your 'relationship' guides accordingly."},
@@ -507,8 +507,8 @@ P2 = [
  {
   "slug":"faq",
   "title":"Doloc Town FAQ: 1.0 Answers to Common Questions",
-  "metaTitle":"Doloc Town FAQ: Multiplayer, Steam Deck, Price & More (1.0)",
-  "metaDescription":"Doloc Town frequently asked questions: is it multiplayer, is it Steam Deck verified, how much does it cost, how long is it, and more.",
+  "metaTitle":"Doloc Town FAQ: Multiplayer, Romance, Steam Deck & Price (1.0)",
+  "metaDescription":"Doloc Town FAQ: is it multiplayer, is there romance, is it Steam Deck verified, price, length and more — quick answers from the 1.0 version.",
   "intro":"Quick, sourced answers to the questions players ask most about Doloc Town.",
   "sections":[
    {"type":"faq","tag":"FAQ","heading":"Frequently Asked Questions",

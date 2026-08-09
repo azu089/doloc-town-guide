@@ -248,7 +248,7 @@ _T = {  # 每语言的固定文案
 _R = {
  "en": {"title":"Is There Romance in Doloc Town? The Straight Answer",
    "mt":"Doloc Town Romance: Is There Dating or Marriage?",
-   "md":"No — Doloc Town has no romance or marriage system. The developers confirmed relationships are friendship-only. Here is what the social system actually does.",
+   "md":"Doloc Town has no romance or marriage system (developers confirmed friendship-only). What the social system actually does: gift tiers, heart events and festival reactions.",
    "intro":"Short answer: there is no dating, no courtship and no marriage in Doloc Town. The developers confirmed the social system is friendship-based. If you arrived here from a search expecting a romance guide, this page explains what exists instead — and it is a real progression system worth investing in.",
    "h_ans":"The Answer", "b_ans":"Doloc Town has no romance and no marriage mechanic. There are no bachelors or bachelorettes, no heart events that lead to a relationship, and no wedding. The developers stated this directly for the 1.0 release. Any guide promising a romance route is describing a different game — or guessing.",
    "h_instead":"What You Get Instead", "b_instead":"Friendship in Doloc Town is a progression system, not decoration.",
