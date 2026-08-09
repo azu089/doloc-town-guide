@@ -533,22 +533,10 @@ function writeLlmsTxt(outDir, { siteName, domain, summary, pages, groups = {}, n
   fs.writeFileSync(path.join(outDir, "llms.txt"), out);
 }
 
-
-/**
- * Cloudflare Pages `_redirects`
- * www -> apex 301：避免 www/apex 双版本重复内容（GSC 会报「网页会自动重定向/备用网页」）。
- * Pages 支持域级规则：https://www.<domain>/* https://<domain>/:splat 301
- */
-function writeRedirects(outDir, domain, extraLines = "") {
-  const lines = [`https://www.${domain}/* https://${domain}/:splat 301`];
-  if (extraLines) lines.push(extraLines);
-  fs.writeFileSync(path.join(outDir, "_redirects"), lines.join("\n") + "\n");
-}
-
 module.exports = {
   esc, clean, createUrl, hreflangTags, ld,
   picture, toWebp, webpSrcset, heroPreload, staticDesc, staticBody, editorialPolicy,
   createLastmod, LASTMOD_TOKEN,
   hostKey, createAffiliate, affiliateDisclosure, AFFILIATE_DISCLOSURE,
-  writeSitemap, writeRobots, writeAds, writeHeaders, writeRedirects, writeIndexNowKey, writeLlmsTxt
+  writeSitemap, writeRobots, writeAds, writeHeaders, writeIndexNowKey, writeLlmsTxt
 };

@@ -899,7 +899,6 @@ const smN = KIT.writeSitemap(OUT, urls, LM);
 KIT.writeRobots(OUT, DATA.site.domain);
 KIT.writeAds(OUT, DATA.site.adsenseId);
 KIT.writeHeaders(OUT);
-KIT.writeRedirects(OUT, DATA.site.domain);
 KIT.writeIndexNowKey(OUT, DATA.site.indexNowKey);
 // llms.txt：给 AI agent 的机器可读入口（不是 SEO 手段，见 site-kit 注释）
 KIT.writeLlmsTxt(OUT, {
