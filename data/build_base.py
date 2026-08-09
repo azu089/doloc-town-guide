@@ -471,8 +471,8 @@ P2 = [
  {
   "slug":"mods",
   "title":"Doloc Town Mods & Steam Workshop Guide",
-  "metaTitle":"Doloc Town Mods: Steam Workshop & Popular Mods",
-  "metaDescription":"Doloc Town mods: how to access the Steam Workshop, install mods and find popular community content.",
+  "metaTitle":"Doloc Town Mods: Steam Workshop Install & Status (1.0)",
+  "metaDescription":"Doloc Town mods: install from the Steam Workshop, whether mods affect saves and achievements, and the 1.0 workshop status.",
   "intro":"Extend your Doloc Town run with community mods from the Steam Workshop.",
   "sections":[
    {"type":"list","tag":"HOW","heading":"How to Install Mods","body":"Workshop mods are one-click.",
