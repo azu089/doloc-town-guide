@@ -484,3 +484,16 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
   .season-tasks{grid-template-columns:1fr}
   .bed-plots{grid-template-columns:1fr}
 }
+
+/* ============ Amazon 联盟推荐（页脚内） ============ */
+.amazon-gear { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(127,127,127,0.22); }
+.amazon-gear h3 { font-size: 15px; margin: 0 0 10px; letter-spacing: .3px; }
+.amazon-gear-links { display: flex; flex-wrap: wrap; gap: 8px 12px; }
+.amazon-gear-links a {
+  font-size: 13px; text-decoration: none;
+  border: 1px solid rgba(127,127,127,0.35); border-radius: 999px;
+  padding: 4px 13px; transition: border-color .2s, color .2s, background .2s;
+}
+.amazon-gear-links a:hover { border-color: currentColor; background: rgba(127,127,127,0.08); }
+.amazon-gear .aff-note { font-size: 12px; opacity: .65; margin: 10px 0 0; }
+@media (max-width: 640px){ .amazon-gear-links a { font-size: 12px; padding: 3px 11px; } }

@@ -274,6 +274,35 @@ function langSwitcher(lang, slug){
     <div class="dd-menu dd-lang">${items}</div>
   </details>`;
 }
+
+function renderAmazonAffiliate(lang) {
+  const AMZ = {
+    "en":    { title: "Game Gear", note: "As an Amazon Associate we earn from qualifying purchases. Prices and availability may change.", items: [["Gaming Keyboard","gaming keyboard"],["Gaming Mouse","gaming mouse"],["Headset","gaming headset"],["Controller","game controller"],["Monitor","gaming monitor"]] },
+    "zh-CN": { title: "游戏装备", note: "作为亚马逊联盟伙伴，我们会从符合条件的购买中获得佣金。价格与库存可能随时变化。", items: [["游戏键盘","gaming keyboard"],["游戏鼠标","gaming mouse"],["耳机","gaming headset"],["手柄","game controller"],["显示器","gaming monitor"]] },
+    "zh-TW": { title: "遊戲裝備", note: "作為亞馬遜聯盟夥伴，我們會從符合條件的購買中獲得佣金。價格與庫存可能隨時變化。", items: [["遊戲鍵盤","gaming keyboard"],["遊戲滑鼠","gaming mouse"],["耳機","gaming headset"],["手把","game controller"],["顯示器","gaming monitor"]] },
+    "ja":    { title: "ゲームギア", note: "Amazonアソシエイトとして、適格購入から手数料を得ることがあります。価格と在庫は変動します。", items: [["ゲーミングキーボード","gaming keyboard"],["ゲーミングマウス","gaming mouse"],["ヘッドセット","gaming headset"],["コントローラー","game controller"],["モニター","gaming monitor"]] },
+    "ko":    { title: "게임 장비", note: "Amazon 어소시에이트로서 적격 구매로부터 수수료를 받습니다. 가격과 재고는 변동될 수 있습니다.", items: [["게이밍 키보드","gaming keyboard"],["게이밍 마우스","gaming mouse"],["헤드셋","gaming headset"],["컨트롤러","game controller"],["모니터","gaming monitor"]] },
+    "es":    { title: "Equipo de juego", note: "Como afiliado de Amazon, ganamos con las compras que califican. El precio y la disponibilidad pueden cambiar.", items: [["Teclado gamer","gaming keyboard"],["Ratón gamer","gaming mouse"],["Auriculares","gaming headset"],["Mando","game controller"],["Monitor","gaming monitor"]] },
+    "fr":    { title: "Équipement de jeu", note: "En tant que partenaire Amazon, nous touchons une commission sur les achats éligibles. Prix et disponibilité peuvent changer.", items: [["Clavier gamer","gaming keyboard"],["Souris gamer","gaming mouse"],["Casque","gaming headset"],["Manette","game controller"],["Écran","gaming monitor"]] },
+    "de":    { title: "Gaming-Ausrüstung", note: "Als Amazon-Partner verdienen wir an qualifizierten Käufen. Preise und Verfügbarkeit können sich ändern.", items: [["Gaming-Tastatur","gaming keyboard"],["Gaming-Maus","gaming mouse"],["Headset","gaming headset"],["Controller","game controller"],["Monitor","gaming monitor"]] },
+    "it":    { title: "Accessori gaming", note: "In qualità di affiliato Amazon, guadagniamo dagli acquisti idonei. Prezzi e disponibilità possono cambiare.", items: [["Tastiera gaming","gaming keyboard"],["Mouse gaming","gaming mouse"],["Cuffie","gaming headset"],["Controller","game controller"],["Monitor","gaming monitor"]] },
+    "pl":    { title: "Sprzęt gamingowy", note: "Jako partner Amazon zarabiamy na kwalifikowanych zakupach. Ceny i dostępność mogą się zmieniać.", items: [["Klawiatura gamingowa","gaming keyboard"],["Mysz gamingowa","gaming mouse"],["Słuchawki","gaming headset"],["Pad","game controller"],["Monitor","gaming monitor"]] },
+    "pt-BR": { title: "Equipamentos de jogo", note: "Como associado da Amazon, ganhamos com compras qualificadas. Preços e disponibilidade podem mudar.", items: [["Teclado gamer","gaming keyboard"],["Mouse gamer","gaming mouse"],["Headset","gaming headset"],["Controle","game controller"],["Monitor","gaming monitor"]] },
+    "ru":    { title: "Игровое оборудование", note: "Как партнёр Amazon мы получаем комиссию с соответствующих покупок. Цены и наличие могут меняться.", items: [["Игровая клавиатура","gaming keyboard"],["Игровая мышь","gaming mouse"],["Гарнитура","gaming headset"],["Геймпад","game controller"],["Монитор","gaming monitor"]] },
+    "uk":    { title: "Ігрове обладнання", note: "Як партнер Amazon ми отримуємо комісію з відповідних покупок. Ціни та наявність можуть змінюватися.", items: [["Ігрова клавіатура","gaming keyboard"],["Ігрова миша","gaming mouse"],["Гарнітура","gaming headset"],["Геймпад","game controller"],["Монітор","gaming monitor"]] },
+    "vi":    { title: "Thiết bị chơi game", note: "Là cộng tác viên Amazon, chúng tôi nhận hoa hồng từ các giao dịch mua đủ điều kiện. Giá và tình trạng hàng có thể thay đổi.", items: [["Bàn phím gaming","gaming keyboard"],["Chuột gaming","gaming mouse"],["Tai nghe","gaming headset"],["Tay cầm","game controller"],["Màn hình","gaming monitor"]] },
+  };
+  const t = AMZ[lang] || AMZ.en;
+  const tag = "cozysimhub20-20";
+  const links = t.items.map(it => `<a href="https://www.amazon.com/s?k=${encodeURIComponent(it[1])}&tag=${tag}" target="_blank" rel="sponsored noopener nofollow">${esc(it[0])}</a>`).join("");
+  return `<div class="amazon-gear">
+    <h3>${esc(t.title)}</h3>
+    <div class="amazon-gear-links">${links}</div>
+    <p class="aff-note">${esc(t.note)}</p>
+  </div>`;
+}
+
+
 function header(lang, active){
   const s = siteI18n(lang);
   const prefix = lang === DEF ? "" : `/${lang}`;
@@ -422,6 +451,7 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });
 </script>
+${renderAmazonAffiliate(lang)}
 </footer>`;
 }
 
