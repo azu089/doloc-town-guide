@@ -197,6 +197,7 @@ const SVG = {
   "system-requirements": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M8 20h8m-4-3.5V20"/><path d="M7 8h4M7 11h7"/></svg>',
   "steam-deck": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M8.5 10h.01M12 10h.01M15.5 10h.01M9.5 13.5c.8.8 4.2.8 5 0"/></svg>',
   "where-to-buy": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/></svg>',
+  "make-money": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9.5 9.5c.6-1 3-1 3.4.3.3 1-1.7 1.7-2.6 2.1-1 .4-2.3.9-2.3 2.2 0 1.2 1.3 2 2.8 2 1.7 0 3.4-.8 3.4-1.8"/><path d="M12 6.5v1.5M12 16v1.5"/></svg>',
   "how-long-to-beat": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
   "up": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m-6 6 6-6 6 6"/></svg>',
   "pin": '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg>',
@@ -306,7 +307,7 @@ function renderAmazonAffiliate(lang) {
 function header(lang, active){
   const s = siteI18n(lang);
   const prefix = lang === DEF ? "" : `/${lang}`;
-  const P0 = ["how-to-play","where-to-buy","farming","automation","gene-system","fishing","drone-combat","exploration","friendship","weather"];
+  const P0 = ["how-to-play","make-money","where-to-buy","farming","automation","gene-system","fishing","drone-combat","exploration","friendship","weather"];
   const P1 = ["cooking","ranching","characters","story","gifts","romance"];
   const P2 = ["achievements","how-long-to-beat","mods","update-log","faq","system-requirements","steam-deck"];
   const drop = (title, slugs) => `<div class="dd-group"><b class="dd-title">${esc(title)}</b>${slugs.map(slug=>{
@@ -654,7 +655,7 @@ function renderHome(lang){
   };
   // 地块按「农场分区」：种下去 → 自动化 → 战斗探索 → 收获生活
   const BEDS = [
-    {label:L("Plant & Grow","种植与生长","植えて育てる","심고 기르기","Plantar y crecer"), emoji:"🌱", slugs:["how-to-play","farming","gene-system","weather"]},
+    {label:L("Plant & Grow","种植与生长","植えて育てる","심고 기르기","Plantar y crecer"), emoji:"🌱", slugs:["how-to-play","make-money","farming","gene-system","weather"]},
     {label:L("Automate & Power","自动化与能源","自動化とエネルギー","자동화와 에너지","Automatizar y energía"), emoji:"⚙️", slugs:["automation","fishing","drone-combat"]},
     {label:L("Explore & Fight","探索与战斗","探索と戦闘","탐험과 전투","Explorar y luchar"), emoji:"🗺️", slugs:["exploration","story","characters"]},
     {label:L("Harvest & Live","收获与生活","収穫と生活","수확과 생활","Cosechar y vivir"), emoji:"🍲", slugs:["cooking","ranching","friendship","gifts","romance","achievements","mods","update-log","faq","system-requirements","steam-deck"]},

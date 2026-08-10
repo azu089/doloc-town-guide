@@ -284,6 +284,34 @@
      ]
     },
     {
+     "type": "steps",
+     "tag": "DAY ONE",
+     "heading": "Day One: What to Do First",
+     "body": "The first in-game day sets your momentum more than any other. This priority list is community-verified for 1.0 — exact shop prices are player-reported. [L2]",
+     "items": [
+      [
+       "Unlock the backpack upgrade first",
+       "Community reports: find the tech merchant and buy the first backpack tier — it roughly doubles your slots and stops the constant trips home."
+      ],
+      [
+       "Do a villager quest on day one",
+       "Quests pay cash and Tech Points — the best minute-for-minute investment in the whole opening."
+      ],
+      [
+       "Plant Endyams early",
+       "A slow-maturing staple that pays off all season — community consensus is to get it in the ground on day one."
+      ],
+      [
+       "Clear your starting plot fully",
+       "Hidden corners hide scrap that funds your first planter batch."
+      ],
+      [
+       "Pick up the free fishing rod",
+       "The Lightman fishing tutorial hands you a rod — free gear, no reason to skip it."
+      ]
+     ]
+    },
+    {
      "type": "note",
      "tag": "COMMON MISTAKES",
      "heading": "Common Mistakes New Players Make (Avoid These)",
@@ -860,6 +888,19 @@
       "Watch the season: rainy season (Jan–Feb) and dry season (Mar–Apr) change the catch tables completely",
       "Breed rare fish: the 13 tank-only species need specific parents — keep spares instead of selling everything",
       "Rare fish drop advanced drone and tool parts, so a good fishing session funds your upgrades"
+     ]
+    },
+    {
+     "type": "list",
+     "heading": "Fishing Tips: Common Failures & Fixes",
+     "body": "A lot of early fishing frustration comes down to rod level and timing, not luck. These tips come from community experience — treat the numbers as player-reported until we verify them in 1.0. [L2]",
+     "items": [
+      "Do the Lightman fishing tutorial first — it gives you a free rod, so you are not stuck with the starting stick.",
+      "Upgrade your rod early: community reports say a Level 2 rod (~1,000 coins) can catch every fish in the game, and higher-tier rods make the minigame noticeably more forgiving.",
+      "Controller players report the most failures: if a catch keeps slipping on a gamepad, upgrade the rod before assuming your timing is the problem.",
+      "Fish through weather: rain and thunderstorms bring catches that dry days never do — check the tables above before choosing a spot.",
+      "Dry your catch instead of selling raw: fish + dryer is the easiest early money loop (see our money-making guide).",
+      "Keep one of each species: rare fish drop advanced drone and tool parts, and 13 tank-only species need specific parents to breed."
      ]
     },
     {
@@ -2843,6 +2884,145 @@
    "meta": {
     "icon": "how-long-to-beat"
    }
+  },
+  {
+   "slug": "make-money",
+   "title": "How to Make Money Fast in Doloc Town",
+   "meta": {
+    "icon": "make-money"
+   },
+   "metaTitle": "Doloc Town Money Guide: Fast Income (1.0)",
+   "metaDescription": "Fast ways to make money in Doloc Town: process crops and fish for +10-20%, dry your catch, sell into the drought spike and the Day-1 moves that set up income.",
+   "intro": "Money in Doloc Town is rarely about selling raw crops. Processing, weather timing and one early upgrade change the math completely — here is what the community has figured out.",
+   "heroImage": null,
+   "seasonAccent": null,
+   "sections": [
+    {
+     "type": "list",
+     "tag": "THE LOOP",
+     "heading": "The Money Loop, From Zero",
+     "body": "Income in Doloc Town compounds: each layer multiplies what the last one earned. Build them in this order.",
+     "items": [
+      "Buy the backpack upgrade on day one — community reports say the first tier from the tech merchant roughly doubles your slots, which stops the hours lost walking home.",
+      "Run villager quests — they pay cash and Tech Points, the two things early money-making scales with.",
+      "Plant Endyams early — a slow staple that keeps paying all season; get it in the ground on day one.",
+      "Fish through weather and dry the catch — the easiest loop in the game (detailed below).",
+      "Process crops instead of selling raw — pickling, drying and weaving each add 10-20% value."
+     ]
+    },
+    {
+     "type": "table",
+     "tag": "PROCESSING",
+     "heading": "Processing: The 10-20% Value Add",
+     "body": "Community reports (L2) put the margin from processing at 10-20% per item. The machines run around the clock, so the margin compounds while you do anything else. Exact 1.0 margins are pending our own testing.",
+     "columns": [
+      "Input",
+      "Process",
+      "Result"
+     ],
+     "rows": [
+      [
+       "Blueberries",
+       "Pickle jar",
+       "+10-20% value [L2]"
+      ],
+      [
+       "Fish",
+       "Dryer",
+       "+10-20% value [L2] — the easiest loop"
+      ],
+      [
+       "Fiber",
+       "Loom",
+       "+10-20% value [L2]"
+      ],
+      [
+       "Any surplus crop",
+       "Process before selling",
+       "Margin compounds 24/7 [L2]"
+      ]
+     ]
+    },
+    {
+     "type": "steps",
+     "tag": "STARTER LOOP",
+     "heading": "The Easiest Starter Loop: Fish, Dry, Sell",
+     "body": "This is the community's most-recommended early routine: low risk, no seed cost, and it funds everything else.",
+     "items": [
+      [
+       "Get the free rod",
+       "Do the Lightman fishing tutorial — it gives you a rod so you start the loop with zero cost."
+      ],
+      [
+       "Fish through weather",
+       "Rain and thunderstorms bring catches dry days never do — check the fishing guide's tables first."
+      ],
+      [
+       "Dry instead of selling raw",
+       "A dryer adds 10-20% value [L2]; the loop becomes fish → dry → sell."
+      ],
+      [
+       "Upgrade the rod when you can",
+       "A Level 2 rod (~1,000 coins) can catch every fish per community reports [L2]."
+      ],
+      [
+       "Keep breeding pairs",
+       "13 tank-only species need specific parents — keep spares, sell the surplus."
+      ]
+     ]
+    },
+    {
+     "type": "list",
+     "tag": "WEATHER TIMING",
+     "heading": "Weather Timing: Buy Low, Sell High",
+     "body": "The calendar is the real market. Work with it and prices work for you.",
+     "items": [
+      "Drought (Month 4) spikes prices — stockpile before it and sell into the spike.",
+      "Rainy season (Jan-Feb) reshuffles the fish tables — fish the uncommon catches while they last.",
+      "Thunderstorms charge your farm's power — in 1.0 that cuts the running costs of automation.",
+      "Plant for the season — off-season crops wither, so rotate what you grow with the calendar."
+     ]
+    },
+    {
+     "type": "note",
+     "tag": "MISTAKES",
+     "heading": "Common Money Mistakes",
+     "body": "Community reports flag these as the ways players leave money on the table: selling everything raw (you skip the 10-20% processing margin), not stockpiling before Month 4 (you sell at the worst prices of the year), skipping quests (you miss Tech Points, the income multiplier), selling every fish (you lose the breeding pairs for 13 tank-only species), and delaying the backpack upgrade (hours lost running home)."
+    },
+    {
+     "type": "note",
+     "tag": "SOURCES",
+     "heading": "Sources & Verification",
+     "body": "The 10-20% processing margins, the Level 2 rod and the Day-1 backpack tips are community-reported (L2, e.g. grindnstrat and Steam discussions). We have not verified exact margins in the 1.0 client yet — treat specific numbers as player-reported and confirm in your own save."
+    },
+    {
+     "type": "faq",
+     "tag": "QUICK",
+     "heading": "Quick Answers",
+     "items": [
+      [
+       "What is the fastest way to make money in Doloc Town?",
+       "The community consensus is fish → dry → sell: no seed cost, works from day one, and the dryer adds 10-20% value [L2]."
+      ],
+      [
+       "How much value does processing add?",
+       "Pickling, drying and weaving each add roughly 10-20% per item, per community reports [L2]."
+      ],
+      [
+       "When should I sell my stockpile?",
+       "Stockpile before the Month 4 drought and sell into the price spike — that is the calendar's biggest payout."
+      ],
+      [
+       "Is the backpack upgrade worth it?",
+       "Yes — the first tier roughly doubles your slots and is the community's most-recommended first purchase [L2]."
+      ],
+      [
+       "Do I need money for automation?",
+       "Later, yes: solar/wind power and drone stations cost materials and Tech Points, so early income funds the 1.0 endgame."
+      ]
+     ]
+    }
+   ]
   }
  ]
 }
