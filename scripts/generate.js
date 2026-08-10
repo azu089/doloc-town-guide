@@ -785,6 +785,7 @@ function renderPage(lang, page){
       <div class="manual-main">
         ${toc ? `<nav class="toc reveal"><b class="toc-title">${esc(s.updated)}</b>${toc}</nav>` : ""}
         ${sections2}
+        ${renderAmazonAffiliate(lang)}
         ${sources ? `<div class="sources reveal"><b>${esc(s.sources)}</b><ul>${sources}</ul>${affNote}</div>` : ""}
       </div>
       <aside class="manual-side">

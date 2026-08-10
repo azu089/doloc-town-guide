@@ -338,12 +338,17 @@ ZH.update({
  "mods": {
   "title":"多洛可小镇模组与 Steam 创意工坊指南",
   "metaTitle":"多洛可小镇模组：Steam 创意工坊与热门模组",
-  "metaDescription":"多洛可小镇模组：如何进入 Steam 创意工坊、安装模组并找到热门社区内容。",
-  "intro":"用社区模组扩展你的多洛可小镇之旅。",
+  "metaDescription":"多洛可小镇 Steam 创意工坊：如何安装模组、热门社区模组（QoL/烹饪/钓鱼/DTMAPI）、风险与 FAQ。",
+  "intro":"多洛可小镇有活跃的 Steam 创意工坊，已有 67+ 社区模组。这里教你如何安装、哪些热门、需要注意什么。",
   "sections":[
-   {"heading":"如何安装模组","body":"创意工坊模组一键搞定。",
-    "items":["打开多洛可小镇的 Steam 创意工坊。","订阅模组。","Steam 自动下载。","在游戏模组菜单中启用 ⚠️。"]},
-   {"heading":"备注","body":"⚠️ 创意工坊可用性与当前热门模组正在核实。确认后本页将补上真实模组列表。"}
+   {"heading":"如何安装模组","body":"创意工坊模组一键搞定，多洛可小镇有官方创意工坊。",
+    "items":["打开多洛可小镇的 Steam 创意工坊（steamcommunity.com/app/2285550/workshop）。","浏览或搜索模组，点「订阅」。","Steam 自动下载，游戏中即可使用。","部分模组依赖框架（如 DTMAPI）——先看模组说明并安装依赖 ⚠️。","装模组前备份存档——模组会改变游戏行为，大版本更新后可能失效。"]},
+   {"heading":"创意工坊已上线","body":"已核实：多洛可小镇有活跃的 Steam 创意工坊（2026 年 8 月）。",
+    "items":["67+ 社区模组，其中中文模组 32+。","热门模组：魔法存储 Magic Storage、多洛可QoL（烹饪预览/批量烹饪/委托面板）、Maple 鱼类扩充、DTMAPI 框架、价格助手、时间停止按钮、韩语翻译修正等。","常见分类：QoL（便利性）、烹饪、钓鱼、UI、玩法、视觉、翻译。","模组数量常变——以创意工坊页当前列表为准。"]},
+   {"heading":"模组 FAQ","body":"","items":[
+     ["模组安全吗？","社区模组是玩家自制——自行承担风险。装前备份存档，并查看模组说明的依赖项。"],
+     ["需要 DTMAPI 吗？","部分模组把 DTMAPI（框架模组）列为依赖。模组有要求就先订阅它。"],
+     ["更新后模组还能用吗？","大版本更新可能让模组失效，直到作者更新。留意创意工坊的兼容性说明。"]]}
   ]
  },
  "update-log": {
@@ -720,11 +725,17 @@ JA.update({
  "mods": {
   "title":"ドロックタウンモッド＆Steamワークショップガイド",
   "metaTitle":"ドロックタウンモッド：Steamワークショップと人気MOD",
-  "metaDescription":"ドロックタウンのモッド：Steamワークショップの使い方、MODのインストール方法、人気のコミュニティコンテンツ。",
-  "intro":"コミュニティMODでドロックタウンの旅を拡張。",
+  "metaDescription":"ドロックタウンのSteamワークショップ：MODの入れ方、人気MOD（QoL・料理・釣り・DTMAPI）、リスクとFAQ。",
+  "intro":"ドロックタウンには活発なSteamワークショップがあり、67以上のコミュニティMODがあります。入れ方・人気MOD・注意点を解説。",
   "sections":[
-   {"heading":"MODのインストール方法","body":"ワークショップMODはワンクリック。",
-    "items":["ドロックタウンのSteamワークショップを開く。","MODを購読。","Steamが自動ダウンロード。","ゲーム内MODメニューで有効化 ⚠️。"]},
+   {"heading":"MODのインストール方法","body":"ワークショップMODはワンクリック。ドロックタウンには公式ワークショップがあります。",
+    "items":["ドロックタウンのSteamワークショップを開く（steamcommunity.com/app/2285550/workshop）。","MODを探して「購読」をクリック。","Steamが自動ダウンロードし、ゲーム内で使える。","一部MODはフレームワーク（例：DTMAPI）が前提——説明を読んで依存を先に導入 ⚠️。","導入前にセーブをバックアップ——MODは挙動を変え、大型アップデート後に壊れることがある。"]},
+   {"heading":"ワークショップ稼働中","body":"確認済み：ドロックタウンに活発なSteamワークショップがあります（2026年8月時点）。",
+    "items":["67以上のコミュニティMOD、中国語MODは32以上。","人気MOD：魔法収納Magic Storage、ドロックQoL（料理プレビュー/一括調理/依頼ボード）、Mapleの魚追加、DTMAPIフレームワーク、価格アシスタント、時間停止ボタン、韓国語翻訳修正など。","分類はQoL・料理・釣り・UI・ゲームプレイ・ビジュアル・翻訳など。","MOD数は頻繁に変わる——ワークショップの最新リストを確認。"]},
+   {"heading":"MOD FAQ","body":"","items":[
+     ["MODは安全？","コミュニティMODはユーザー作成——自己責任で。導入前にセーブをバックアップし、説明の依存関係を確認。"] ,
+     ["DTMAPIは必要？","一部MODがDTMAPI（フレームワークMOD）を依存に指定。要求されたら先に購読。"] ,
+     ["アップデート後も動く？","大型アップデートでMODが壊れることがあり、作者の更新待ち。ワークショップの互換性メモを確認。"]]}
   ]
  },
  "update-log": {
@@ -1064,12 +1075,17 @@ KO.update({
  "mods": {
   "title":"돌록 타운 모드 & Steam 워크숍 가이드",
   "metaTitle":"돌록 타운 모드: Steam 워크숍과 인기 모드",
-  "metaDescription":"돌록 타운 모드: Steam 워크숍 이용법, 모드 설치법, 인기 커뮤니티 콘텐츠 찾기.",
-  "intro":"커뮤니티 모드로 돌록 타운 여정을 확장하세요.",
+  "metaDescription":"돌록 타운 Steam 워크숍: 모드 설치법, 인기 커뮤니티 모드(QoL·요리·낚시·DTMAPI), 주의사항과 FAQ.",
+  "intro":"돌록 타운에는 활발한 Steam 워크숍이 있고 67개 이상의 커뮤니티 모드가 있습니다. 설치법, 인기 모드, 주의점을 안내합니다.",
   "sections":[
-   {"heading":"모드 설치법","body":"워크숍 모드는 원클릭입니다.",
-    "items":["돌록 타운의 Steam 워크숍을 엽니다.","모드를 구독합니다.","Steam이 자동으로 다운로드합니다.","게임 내 모드 메뉴에서 활성화 ⚠️."]},
-   {"heading":"메모","body":"⚠️ 워크숍 지원 여부와 현재 인기 모드를 확인 중입니다. 확인되면 실제 모드 목록으로 확장합니다."}
+   {"heading":"모드 설치법","body":"워크숍 모드는 원클릭입니다. 돌록 타운에는 공식 워크숍이 있습니다.",
+    "items":["돌록 타운의 Steam 워크숍을 엽니다(steamcommunity.com/app/2285550/workshop).","모드를 찾아 '구독'을 클릭합니다.","Steam이 자동 다운로드하고 게임에서 바로 사용할 수 있습니다.","일부 모드는 프레임워크(예: DTMAPI)가 필요 — 설명을 읽고 의존성을 먼저 설치 ⚠️.","모드 설치 전 세이브를 백업하세요 — 모드는 게임 동작을 바꾸고 대형 업데이트 후 깨질 수 있습니다."]},
+   {"heading":"워크숍 운영 중","body":"확인됨: 돌록 타운에 활발한 Steam 워크숍이 있습니다(2026년 8월 기준).",
+    "items":["67개 이상 커뮤니티 모드, 중국어 모드 32개 이상.","인기 모드: Magic Storage, 돌록 QoL(요리 미리보기/일괄 요리/의뢰 보드), Maple 물고기 확장, DTMAPI 프레임워크, 가격 도우미, 시간 정지 버튼, 한국어 번역 수정 등.","분류: QoL·요리·낚시·UI·게임플레이·비주얼·번역.","모드 수는 자주 바뀝니다 — 워크숍의 최신 목록을 확인하세요."]},
+   {"heading":"모드 FAQ","body":"","items":[
+     ["모드가 안전한가요?","커뮤니티 모드는 유저 제작 — 책임은 본인에게. 설치 전 세이브를 백업하고 설명의 의존성을 확인하세요."],
+     ["DTMAPI가 필요한가요?","일부 모드가 DTMAPI(프레임워크 모드)를 의존성으로 요구합니다. 요구하면 먼저 구독하세요."],
+     ["업데이트 후에도 되나요?","대형 업데이트로 모드가 깨질 수 있고 작가의 업데이트를 기다려야 합니다. 워크숍의 호환성 메모를 확인하세요."]]}
   ]
  },
  "update-log": {
@@ -1411,12 +1427,17 @@ ES.update({
  "mods": {
   "title":"Guía de mods y Steam Workshop de Doloc Town",
   "metaTitle":"Mods de Doloc Town: Steam Workshop y mods populares",
-  "metaDescription":"Mods de Doloc Town: cómo acceder al Steam Workshop, instalar mods y encontrar contenido popular de la comunidad.",
-  "intro":"Amplía tu partida de Doloc Town con mods de la comunidad desde el Steam Workshop.",
+  "metaDescription":"Steam Workshop de Doloc Town: cómo instalar mods, mods populares (QoL, cocina, pesca, DTMAPI), riesgos y FAQ.",
+  "intro":"Doloc Town tiene un Steam Workshop activo con más de 67 mods de la comunidad. Aquí te explicamos cómo instalarlos, cuáles son populares y qué tener en cuenta.",
   "sections":[
-   {"heading":"Cómo instalar mods","body":"Los mods del Workshop son de un clic.",
-    "items":["Abre el Steam Workshop de Doloc Town.","Suscríbete a un mod.","Steam lo descarga automáticamente.","Actívalo en el menú de mods del juego ⚠️."]},
-   {"heading":"Nota","body":"⚠️ La disponibilidad del Workshop y los mejores mods se están verificando. Esta página se ampliará con una lista real de mods."}
+   {"heading":"Cómo instalar mods","body":"Los mods del Workshop son de un clic. Doloc Town tiene Workshop oficial.",
+    "items":["Abre el Steam Workshop de Doloc Town (steamcommunity.com/app/2285550/workshop).","Busca o explora mods y pulsa Suscribirse.","Steam los descarga automáticamente y aparecen en el juego.","Algunos mods necesitan un framework (p. ej. DTMAPI) — lee la descripción e instala las dependencias primero ⚠️.","Haz copia de tu partida antes de modificar — los mods cambian el comportamiento y pueden romperse tras grandes actualizaciones."]},
+   {"heading":"El Workshop está activo","body":"Verificado: Doloc Town tiene un Steam Workshop activo (agosto de 2026).",
+    "items":["Más de 67 mods de la comunidad, con 32+ en chino.","Populares: Magic Storage, Doloc QoL (vista previa de cocina, cocina por lotes, panel de encargos), expansión de peces de Maple, framework DTMAPI, asistente de precios, botón de parar el tiempo y correcciones de traducción al coreano.","Categorías habituales: QoL, cocina, pesca, interfaz, jugabilidad, visuales y traducción.","El número de mods cambia a menudo — consulta la lista actual en el Workshop."]},
+   {"heading":"FAQ de mods","body":"","items":[
+     ["¿Son seguros los mods?","Los mods de la comunidad los crean usuarios — instálalos bajo tu responsabilidad. Haz copia de seguridad y revisa las dependencias."],
+     ["¿Necesito DTMAPI?","Algunos mods listan DTMAPI (un mod framework) como dependencia. Suscríbete primero si un mod lo pide."],
+     ["¿Funcionarán tras las actualizaciones?","Las grandes actualizaciones pueden romper los mods hasta que sus autores los actualicen. Consulta las notas de compatibilidad del Workshop."]]}
   ]
  },
  "update-log": {
