@@ -225,16 +225,11 @@
     "aboutSources": "我們的信息來源"
    }
   },
-  "awinVerification": "awin",
   "impactVerification": [
    "f793db74-21b5-4e7d-9f63-21cd04b23100",
    "52204e18-a636-4ab6-91dc-3353c91138c0"
   ],
   "affiliates": {
-   "fanatical.com": {
-    "type": "wrap",
-    "template": "https://www.awin1.com/cread.php?awinmid=118821&awinaffid=3026091&ued={url}"
-   },
    "gamersgate.com": {
     "type": "param",
     "param": "aff",
@@ -10272,7 +10267,7 @@
         ],
         [
          "早期烹飪值得嗎？",
-         "值得——熟食按背包格算的能量效率高於生食材，增益還能回本。"
+         "值得——熟食按揹包格算的能量效率高於生食材，增益還能回本。"
         ]
        ]
       }
