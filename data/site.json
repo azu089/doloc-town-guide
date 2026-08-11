@@ -3096,8 +3096,8 @@
   {
    "slug": "fishing",
    "title": "Doloc Town Fishing Guide: Ponds, Weather & Rare Fish",
-   "metaTitle": "Doloc Town Fish Catalog: All Fish, Locations & Weather",
-   "metaDescription": "The full Doloc Town fish catalog: every fish, where to catch it, which rod and weather it needs, and the rare breeding-only fish.",
+   "metaTitle": "Doloc Town Fish Chart: All 33 Fish, Locations & Weather",
+   "metaDescription": "Every Doloc Town fish in one searchable chart: all 33 species, time, weather and pond, plus the rare breeding-only fish.",
    "intro": "Fishing is a full second career in Doloc Town. This catalog lists every confirmed fish — where it spawns, which season and weather it needs, and how to breed the rare tank-only species.",
    "sections": [
     {
@@ -3660,8 +3660,8 @@
    "i18n": {
     "zh-CN": {
      "title": "多洛可小镇钓鱼指南：池塘、天气与稀有鱼",
-     "metaTitle": "多洛可小镇钓鱼图鉴：全部鱼类、钓点与天气（1.0）",
-     "metaDescription": "完整的多洛可小镇鱼类图鉴：每种鱼在哪里钓、需要什么鱼竿与天气，以及只能通过养殖获得的稀有鱼。",
+     "metaTitle": "多洛可小镇鱼图鉴：33 种鱼、钓点与天气（可筛选）",
+     "metaDescription": "多洛可小镇全部 33 种鱼一表收录：时间、天气、钓点与只能养殖获得的稀有鱼，支持搜索筛选快速查找。",
      "intro": "钓鱼是多洛可小镇的第二种全职事业。本图鉴列出每一条已确认的鱼——在哪里刷新、需要什么季节与天气，以及如何繁殖只能养在鱼缸里的稀有鱼。",
      "sections": [
       {
@@ -4210,8 +4210,8 @@
     },
     "zh-TW": {
      "title": "多洛可小鎮釣魚指南：池塘、天氣與稀有魚",
-     "metaTitle": "多洛可小鎮釣魚圖鑑：全部魚類、釣點與天氣（1.0）",
-     "metaDescription": "完整的多洛可小鎮魚類圖鑑：每種魚在哪裡釣、需要什麼魚竿與天氣，以及只能通過養殖獲得的稀有魚。",
+     "metaTitle": "多洛可小鎮魚圖鑑：33 種魚、釣點與天氣（可篩選）",
+     "metaDescription": "多洛可小鎮全部 33 種魚一表收錄：時間、天氣、釣點與只能養殖獲得的稀有魚，支持搜索篩選快速查找。",
      "intro": "釣魚是多洛可小鎮的第二種全職事業。本圖鑑列出每一條已確認的魚——在哪裡刷新、需要什麼季節與天氣，以及如何繁殖只能養在魚缸裡的稀有魚。",
      "sections": [
       {
@@ -15758,8 +15758,8 @@
   {
    "slug": "how-long-to-beat",
    "title": "How Long Does Doloc Town Take to Beat?",
-   "metaTitle": "Doloc Town Length: How Long to Beat (2026)",
-   "metaDescription": "How long Doloc Town takes to beat: 30+ hours of core gameplay and 100+ hours for 100% completion, per the official store page.",
+   "metaTitle": "Doloc Town Length: 30–100+ Hours to Beat (2026)",
+   "metaDescription": "How long Doloc Town takes to beat: 30+ hours core, 40–60 relaxed, 100+ for 100% completion — official store numbers.",
    "intro": "Doloc Town is a deep farming sim, so play time depends on how much you want to do. The official store page gives clear numbers.",
    "sections": [
     {
@@ -15861,8 +15861,8 @@
    "i18n": {
     "zh-CN": {
      "title": "多洛可小镇通关要多久？",
-     "metaTitle": "多洛可小镇时长：通关要多久（2026）",
-     "metaDescription": "多洛可小镇通关时长：核心游戏 30+ 小时、100% 完成 100+ 小时，来源为官方商店页。",
+     "metaTitle": "多洛可小镇通关时长：主线 30+ 小时、100% 要 100+ 小时",
+     "metaDescription": "多洛可小镇通关要多久：核心主线 30+ 小时、休闲 40-60、100% 完成 100+ 小时——官方商店页数字。",
      "intro": "多洛可小镇是内容深厚的农场模拟，通关时间取决于你想做多少事。官方商店页给出了明确数字。",
      "sections": [
       {
@@ -15950,8 +15950,8 @@
     },
     "zh-TW": {
      "title": "多洛可小鎮通關要多久？",
-     "metaTitle": "多洛可小鎮時長：通關要多久（2026）",
-     "metaDescription": "多洛可小鎮通關時長：核心遊戲 30+ 小時、100% 完成 100+ 小時，來源為官方商店頁。",
+     "metaTitle": "多洛可小鎮通關時長：主線 30+ 小時、100% 要 100+ 小時",
+     "metaDescription": "多洛可小鎮通關要多久：核心主線 30+ 小時、休閒 40-60、100% 完成 100+ 小時——官方商店頁數字。",
      "intro": "多洛可小鎮是內容深厚的農場模擬，通關時間取決於你想做多少事。官方商店頁給出了明確數字。",
      "sections": [
       {
