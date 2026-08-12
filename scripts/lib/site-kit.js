@@ -563,7 +563,8 @@ function decisionEventsScript() {
       } catch (_) {}
     }
     var root = toolRoot(e.target);
-    var control = e.target.closest && e.target.closest('button,[role="button"],input[type="checkbox"],input[type="radio"]');
+    // 表单控件统一由 change 记录，避免 checkbox/radio 的 click + change 双计数。
+    var control = e.target.closest && e.target.closest('button,[role="button"]');
     if (root && control) send('tool_interaction', {
       tool_name: root.getAttribute('data-tool') || root.id || (root.className || '').toString().split(/\\s+/)[0] || 'interactive_tool',
       interaction_type: control.type || control.tagName.toLowerCase(),
