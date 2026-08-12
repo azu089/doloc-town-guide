@@ -1,7 +1,7 @@
 // ⚠️ 自动生成，请勿直接编辑此文件。
 // 唯一事实来源：packages/site-kit/index.js
 // 修改后运行：node packages/site-kit/sync.js
-// （项目根不是 git 仓库、三站各自独立仓库，所以基建必须复制进各仓库才能被 CF Pages 构建到）
+// （项目根不是 git 仓库、站点各自独立仓库，所以基建必须复制进各仓库才能被 CF Pages 构建到）
 /**
  * site-kit —— 三站共用的「无设计自由度」基建层
  *

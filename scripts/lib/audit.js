@@ -2,7 +2,7 @@
 // ⚠️ 自动生成，请勿直接编辑此文件。
 // 唯一事实来源：packages/site-kit/audit.js
 // 修改后运行：node packages/site-kit/sync.js
-// （项目根不是 git 仓库、三站各自独立仓库，所以基建必须复制进各仓库才能被 CF Pages 构建到）
+// （项目根不是 git 仓库、站点各自独立仓库，所以基建必须复制进各仓库才能被 CF Pages 构建到）
 /**
  * 站点静态审计 —— G4「开发者视角」那一半的自动化实现。
  *
@@ -167,6 +167,9 @@ function auditSite(root) {
   else {
     const locs = [...fs.readFileSync(smPath, "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)]
       .map(m => new URL(m[1]).pathname.replace(/\/$/, "") || "/");
+    const locCounts = new Map();
+    for (const loc of locs) locCounts.set(loc, (locCounts.get(loc) || 0) + 1);
+    for (const [loc, count] of locCounts) if (count > 1) F("dup-sitemap-url", `${count}× ${loc}`);
     const sm = new Set(locs);
     for (const s of slugs) if (!sm.has(s) && !/\/404$/.test(s)) F("not-in-sitemap", s);
     for (const s of sm) if (!slugs.has(s)) F("sitemap-dead", s);
