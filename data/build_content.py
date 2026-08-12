@@ -358,7 +358,7 @@ ZH.update({
   "intro":"追踪多洛可小镇的每一次重大更新，从第一个 EA 版本到 1.0 正式版。",
   "sections":[
    {"heading":"发布时间线",
-    "items":[["2025-05-08","EA 抢先体验上线。"],["2025-12","第一次重大 EA 更新。"],["2026-02","第三次重大 EA 更新——引入基因系统。"],["2026-07","1.0 预热更新。"],["2026-08-06","1.0 正式版。"]]},
+    "items":[["2025-05-08","EA 抢先体验上线。"],["2025-12","第一次重大 EA 更新。"],["2026-02","第三次重大 EA 更新——引入基因系统。"],["2026-07","1.0 预热更新。"],["2026-08-06","1.0 正式版。"],["2026-08-10","官方公告：1.0 正式发售 4 天后销量突破 15 万份。"]]},
    {"heading":"1.0 正式版亮点","body":"完整的 1.0 变更清单，依据官方公告。",
     "items":["新区域：旧城废墟（第三大区域）。","完整主线结局。","农业自动化系统（太阳能+风能→无人机站）。","蘑菇节。","更多角色剧情线。","新工具、战斗无人机、鱼与配件。","37 个新成就（共 80 个）。","季节天气变化与更多本地化。"]},
    {"heading":"为什么要跟踪更新","body":"知道游戏何时变化，能帮你找到当前有效的攻略、避开过时建议——多数英文攻略仍停留在 EA 阶段，因此像本站这样 1.0 感知的网站才是可靠来源。"}
@@ -745,7 +745,7 @@ JA.update({
   "intro":"最初のEAビルドから1.0正式版までの主要アップデートを追跡。",
   "sections":[
    {"heading":"リリースタイムライン",
-    "items":[["2025-05-08","アーリーアクセス開始。"],["2025-12","最初の大型EAアップデート。"],["2026-02","3回目の大型EAアップデート——遺伝子システム導入。"],["2026-07","1.0プレローンチ更新。"],["2026-08-06","1.0正式版。"]]},
+    "items":[["2025-05-08","アーリーアクセス開始。"],["2025-12","最初の大型EAアップデート。"],["2026-02","3回目の大型EAアップデート——遺伝子システム導入。"],["2026-07","1.0プレローンチ更新。"],["2026-08-06","1.0正式版。"],["2026-08-10","公式発表：1.0 正式リリースから4日で15万本突破。"]]},
    {"heading":"1.0正式版ハイライト","body":"公式発表に基づく完全な1.0変更リスト。",
     "items":["新地域：旧市街遺跡（3つ目の大型マップ地域）。","完全なメインストーリー結末。","農業オートメーション（太陽光+風力→ドローン基地）。","キノコ祭り。","追加のキャラクターストーリー。","新ツール・戦闘ドローン・魚・アクセサリー。","新実績37個（合計80個）。","季節の天候変化とローカライズ拡張。"]}
   ]
@@ -1095,7 +1095,7 @@ KO.update({
   "intro":"첫 EA 빌드부터 1.0 정식 출시까지의 주요 업데이트를 추적합니다.",
   "sections":[
    {"heading":"출시 타임라인",
-    "items":[["2025-05-08","얼리 액세스 출시."],["2025-12","첫 대형 EA 업데이트."],["2026-02","세 번째 대형 EA 업데이트——유전자 시스템 도입."],["2026-07","1.0 사전 출시 업데이트."],["2026-08-06","1.0 정식 출시."]]},
+    "items":[["2025-05-08","얼리 액세스 출시."],["2025-12","첫 대형 EA 업데이트."],["2026-02","세 번째 대형 EA 업데이트——유전자 시스템 도입."],["2026-07","1.0 사전 출시 업데이트."],["2026-08-06","1.0 정식 출시."],["2026-08-10","공식 발표: 1.0 정식 출시 4일 만에 15만 장 돌파."]]},
    {"heading":"1.0 정식 출시 하이라이트","body":"공식 발표 기준 완전한 1.0 변경 목록.",
     "items":["새 지역: 구시가지 유적 (세 번째 대형 맵 지역).","완전한 메인 스토리 결말.","농업 자동화 시스템 (태양광+풍력→드론 기지).","버섯 축제.","추가 캐릭터 스토리.","새 도구·전투 드론·물고기·액세서리.","신규 업적 37개 (총 80개).","계절 날씨 변화와 현지화 확장."]}
   ]
@@ -1447,7 +1447,7 @@ ES.update({
   "intro":"Sigue cada actualización importante de Doloc Town, desde el primer Early Access hasta el 1.0.",
   "sections":[
    {"heading":"Cronología de lanzamientos",
-    "items":[["8 may 2025","Lanzamiento en Early Access."],["Dic 2025","Primera gran actualización de EA."],["Feb 2026","Tercera gran actualización: sistema genético."],["Jul 2026","Actualización previa al 1.0."],["6 ago 2026","Lanzamiento completo 1.0."]]},
+    "items":[["8 may 2025","Lanzamiento en Early Access."],["Dic 2025","Primera gran actualización de EA."],["Feb 2026","Tercera gran actualización: sistema genético."],["Jul 2026","Actualización previa al 1.0."],["6 ago 2026","Lanzamiento completo 1.0."],["10 ago 2026","Anuncio oficial: más de 150 000 copias vendidas, 4 días después del lanzamiento de 1.0."]]},
    {"heading":"Destacados del lanzamiento 1.0","body":"El registro completo del 1.0, según el anuncio oficial.",
     "items":["Nueva área: Ruinas de la Ciudad Vieja (tercera gran zona).","Final completo de la historia principal.","Sistema de automatización agrícola (solar + viento → drones).","Festival de las Setas.","Historias de personajes adicionales.","Nuevas herramientas, drones de combate, peces y accesorios.","37 logros nuevos (80 en total).","Cambios de clima por temporada y más localización."]}
   ]

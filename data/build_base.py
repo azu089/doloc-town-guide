@@ -495,7 +495,7 @@ P2 = [
     ["2025-12","First major EA update."],
     ["Feb 2026","Third major EA update — gene system introduced."],
     ["Jul 2026","1.0 pre-launch update."],
-    ["Aug 6, 2026","1.0 full release."]]},
+    ["Aug 6, 2026","1.0 full release."],["Aug 10, 2026","150,000+ copies sold — 4 days after the 1.0 full release (official announcement)."]]},
    {"type":"list","tag":"1.0","heading":"1.0 Full Release Highlights","body":"The complete 1.0 changelog, per the official announcement.",
     "items":["New area: Old City Ruins (third large map area).","Complete main story ending.","Farming automation system (solar + wind → drone stations).","Mushroom Fest festival.","Additional character storylines.","New tools, combat drones, fish and accessories.","37 new achievements (80 total).","Season-themed weather changes and expanded localization."]}
   ],
