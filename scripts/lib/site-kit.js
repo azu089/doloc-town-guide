@@ -533,10 +533,60 @@ function writeLlmsTxt(outDir, { siteName, domain, summary, pages, groups = {}, n
   fs.writeFileSync(path.join(outDir, "llms.txt"), out);
 }
 
+/**
+ * GA4 决策事件：统一记录商业出口和交互工具使用。
+ * 不采集表单内容或个人信息；gtag 不可用时静默跳过。
+ */
+function decisionEventsScript() {
+  return `<script>
+(function(){
+  function send(name, params){
+    if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+  }
+  function toolRoot(el){
+    return el && el.closest && el.closest('.ff,.ach,.tool-shell,.tool-panel,.tracker,[data-tool]');
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (a) {
+      try {
+        var u = new URL(a.href, location.href);
+        if (u.origin !== location.origin) {
+          var affiliate = /(^|\\s)sponsored(\\s|$)/.test(a.rel || '') ||
+            /amazon\.|amzn\.|gamersgate\.|humblebundle\.|greenmangaming\.|prf\.hn/.test(u.hostname);
+          send(affiliate ? 'affiliate_click' : 'outbound_click', {
+            link_domain: u.hostname,
+            link_url: u.origin + u.pathname,
+            page_path: location.pathname
+          });
+        }
+      } catch (_) {}
+    }
+    var root = toolRoot(e.target);
+    var control = e.target.closest && e.target.closest('button,[role="button"],input[type="checkbox"],input[type="radio"]');
+    if (root && control) send('tool_interaction', {
+      tool_name: root.getAttribute('data-tool') || root.id || (root.className || '').toString().split(/\\s+/)[0] || 'interactive_tool',
+      interaction_type: control.type || control.tagName.toLowerCase(),
+      page_path: location.pathname
+    });
+  });
+  document.addEventListener('change', function(e){
+    var root = toolRoot(e.target);
+    if (root && /^(INPUT|SELECT)$/.test(e.target.tagName)) send('tool_interaction', {
+      tool_name: root.getAttribute('data-tool') || root.id || (root.className || '').toString().split(/\\s+/)[0] || 'interactive_tool',
+      interaction_type: e.target.type || e.target.tagName.toLowerCase(),
+      page_path: location.pathname
+    });
+  });
+})();
+</script>`;
+}
+
 module.exports = {
   esc, clean, createUrl, hreflangTags, ld,
   picture, toWebp, webpSrcset, heroPreload, staticDesc, staticBody, editorialPolicy,
   createLastmod, LASTMOD_TOKEN,
   hostKey, createAffiliate, affiliateDisclosure, AFFILIATE_DISCLOSURE,
-  writeSitemap, writeRobots, writeAds, writeHeaders, writeIndexNowKey, writeLlmsTxt
+  writeSitemap, writeRobots, writeAds, writeHeaders, writeIndexNowKey, writeLlmsTxt,
+  decisionEventsScript
 };
