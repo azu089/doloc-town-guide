@@ -23,6 +23,8 @@ const today = new Date().toISOString().slice(0,10);
 const urlOf = KIT.createUrl({ domain: DATA.site.domain, defaultLang: DEF });
 const LM = KIT.createLastmod({ manifestPath: path.join(ROOT,"data",".lastmod.json"), today });
 const HERO_SET = "/images/hero-640.jpg 640w, /images/hero-1280.jpg 1280w, /images/hero.jpg 1600w";
+const UPDATED_LABEL = { en:"Updated", "zh-CN":"更新于", "zh-TW":"更新於", ja:"更新日", ko:"업데이트", es:"Actualizado" };
+const updLabel = lang => UPDATED_LABEL[lang] || "Updated";
 const LANG_META = {
   "en":    { flag: "🇬🇧", name: "English",  html: "en" },
   "zh-CN": { flag: "🇨🇳", name: "简体中文", html: "zh-CN" },
@@ -794,7 +796,7 @@ function renderPage(lang, page){
           <span class="cm-tag">${esc(s.plotTag)}</span>
           <div class="cm-row"><span class="cm-k">${esc(lang==="en"?"Page":lang==="ja"?"ページ":lang==="ko"?"페이지":lang==="es"?"Página":"页面")}</span><b>${esc(t.title)}</b></div>
           <div class="cm-row"><span class="cm-k">${esc(lang==="en"?"Category":lang==="ja"?"分類":lang==="ko"?"분류":lang==="es"?"Categoría":"分类")}</span><b>${esc(t.title.split(":")[0].split("—")[0].trim())}</b></div>
-          <div class="cm-row"><span class="cm-k">${esc(s.updated)}</span><b>${today}</b></div>
+          <div class="cm-row"><span class="cm-k">${esc(updLabel(lang))}</span><b>${today}</b></div>
           <div class="weather-card">
             <span class="weather-ic">${SVG.weather}</span>
             <div><b>${esc(lang==="en"?"Season tip":lang==="ja"?"季節のヒント":lang==="ko"?"계절 팁":lang==="es"?"Consejo de temporada":"季节提示")}</b>
