@@ -66,7 +66,7 @@ function auditSite(root) {
   const F = (code, detail) => fail.push({ code, detail });
   const W = (code, detail) => warn.push({ code, detail });
 
-  const titles = new Map(), descs = new Map(), slugs = new Set(), inbound = new Map();
+  const titles = new Map(), descs = new Map(), slugs = new Set(), noindexSlugs = new Set(), inbound = new Map();
   let pages = 0;
 
   for (const f of files) {
@@ -75,6 +75,7 @@ function auditSite(root) {
     const is404 = /(^|\/)404\.html$/.test(rel);
     const slug = "/" + rel.replace(/index\.html$/, "").replace(/\.html$/, "").replace(/\/$/, "");
     slugs.add(slug === "/" ? "/" : slug);
+    if (/<meta name="robots" content="[^"]*noindex/i.test(html)) noindexSlugs.add(slug === "/" ? "/" : slug);
     if (is404) continue;
     pages++;
 
@@ -171,7 +172,7 @@ function auditSite(root) {
     for (const loc of locs) locCounts.set(loc, (locCounts.get(loc) || 0) + 1);
     for (const [loc, count] of locCounts) if (count > 1) F("dup-sitemap-url", `${count}× ${loc}`);
     const sm = new Set(locs);
-    for (const s of slugs) if (!sm.has(s) && !/\/404$/.test(s)) F("not-in-sitemap", s);
+    for (const s of slugs) if (!sm.has(s) && !noindexSlugs.has(s) && !/\/404$/.test(s)) F("not-in-sitemap", s);
     for (const s of sm) if (!slugs.has(s)) F("sitemap-dead", s);
     if (/<changefreq>/.test(fs.readFileSync(smPath, "utf8"))) W("changefreq", "Google 已不使用，可移除");
   }
