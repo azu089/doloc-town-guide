@@ -883,7 +883,7 @@
         ],
         [
          "4 月前开始准备作物防护",
-         "旱季物价让小额准备作物防护非常划算。"
+         "旱季前请保护作物并规划浇水。"
         ]
        ]
       },
@@ -917,7 +917,7 @@
       {
        "type": "steps",
        "heading": "新手常见错误（避免这些）",
-       "body": "社区报告中最常见的毁局行为：每天手动给所有作物浇水（用自动化或雨露均沾基因）、种一大片平地（一场风暴全毁）、忽略好感（把自己锁在食谱之外）、跳过 Bellad 任务（科技树落后）、4 月前什么都不囤（在最差的价格卖出）。"
+       "body": "社区报告中最常见的毁局行为：每天手动给所有作物浇水（用自动化或雨露均沾基因）、种一大片平地（一场风暴全毁）、忽略好感（把自己锁在食谱之外）、跳过 Bellad 任务（科技树落后）、4 月前没有保护作物并规划浇水。"
       },
       {
        "type": "note",
@@ -1099,7 +1099,7 @@
         ],
         [
          "4 月前開始準備作物防護",
-         "旱季物價讓小額準備作物防護非常划算。"
+         "旱季前請保護作物並規劃澆水。"
         ]
        ]
       },
@@ -1133,7 +1133,7 @@
       {
        "type": "steps",
        "heading": "新手常見錯誤（避免這些）",
-       "body": "社區報告中最常見的毀局行為：每天手動給所有作物澆水（用自動化或雨露均霑基因）、種一大片平地（一場風暴全毀）、忽略好感（把自己鎖在食譜之外）、跳過 Bellad 任務（科技樹落後）、4 月前什麼都不囤（在最差的價格賣出）。"
+       "body": "社區報告中最常見的毀局行為：每天手動給所有作物澆水（用自動化或雨露均霑基因）、種一大片平地（一場風暴全毀）、忽略好感（把自己鎖在食譜之外）、跳過 Bellad 任務（科技樹落後）、4 月前沒有保護作物並規劃澆水。"
       },
       {
        "type": "note",
@@ -1287,7 +1287,7 @@
         ],
         [
          "乾季（4月）",
-         "Harsh Dry Season で作物保護が必要",
+         "Harsh Dry Season で作物保護と水やりが必要",
          "4月前に作物保護と水やりを準備する"
         ]
        ]
@@ -1504,7 +1504,7 @@
         [
          "가뭄(4월)",
          "작물 시들고 작물 부담 증가",
-         "4월 전 작물 보호와 물주기 준비"
+         "4월 전 작물 보호 준비, 급등기에 판매"
         ]
        ]
       },
@@ -1565,7 +1565,7 @@
       {
        "type": "note",
        "heading": "초보자의 흔한 실수 (피해야 할 것)",
-       "body": "커뮤니티가 보고한 가장 흔한 런 파괴 요인: 매일 모든 작물에 손으로 물주기(자동화나 '고루 내리는 비' 유전자 사용), 거대한 평지 한 판(폭풍 하나로 전멸), 우정 무시(레시피가 영구히 잠김), Bellad 퀘스트 방치(테크 트리에서 뒤처짐), 4월 전에 작물 보호와 물주기를 준비하지 않음."
+       "body": "커뮤니티가 보고한 가장 흔한 런 파괴 요인: 매일 모든 작물에 손으로 물주기(자동화나 '고루 내리는 비' 유전자 사용), 거대한 평지 한 판(폭풍 하나로 전멸), 우정 무시(레시피가 영구히 잠김), Bellad 퀘스트 방치(테크 트리에서 뒤처짐), 4월 전에 아무것도 작물 보호 준비 안 함(1년 중 최악의 가격에 판매)."
       },
       {
        "type": "list",
@@ -9856,8 +9856,8 @@
         ],
         [
          "干ばつ（4月）",
-         "作物が枯れ、作物保護と水やりが必要",
-         "年間厳しい作物条件で作物保護を準備を売る"
+         "Harsh Dry Season で作物保護と水やりが必要",
+         "Harsh Dry Season に備えて作物保護と水やりを計画する"
         ],
         [
          "どの季節も",
@@ -9962,7 +9962,7 @@
         ],
         [
          "干ばつ月はいつ？",
-         "4月、乾季の最中。作物が枯れ、作物保護と水やりが必要——前に作物保護を準備し、その間に売る。"
+         "4月は Harsh Dry Season。事前に作物保護と水やりを準備する。"
         ],
         [
          "遺伝子モジュールの使い方は？",
@@ -10276,7 +10276,7 @@
         ],
         [
          "Sequía (abril)",
-         "Los cultivos necesitan protección y riego planificado",
+         "Harsh Dry Season exige protección de cultivos y riego planificado",
          "Protege los cultivos y planifica el riego"
         ],
         [
@@ -10366,7 +10366,7 @@
       {
        "type": "note",
        "heading": "Estrategia de sequía y errores comunes",
-       "body": "En el mes de la sequía (abril) Los cultivos necesitan protección y riego planificado. Protege los cultivos y planifica el riego antes de Harsh Dry Season. Errores comunes: plantar un único campo plano gigante (una tormenta lo borra), ignorar los árboles frutales al principio (son dinero gratis después), no mejorar nunca la hoz (la cosecha en grupo ahorra muchísimo tiempo), regar todo a mano cuando existe el gen Lluvia, y saltarse las misiones de Bellad (los puntos de tecnología son el único ingreso inicial fiable)."
+       "body": "El mes 4 es Harsh Dry Season. Protege los cultivos y planifica el riego antes de la temporada. Errores comunes: plantar un único campo plano gigante (una tormenta lo borra), ignorar los árboles frutales al principio (son dinero gratis después), no mejorar nunca la hoz (la cosecha en grupo ahorra muchísimo tiempo), regar todo a mano cuando existe el gen Lluvia, y saltarse las misiones de Bellad (los puntos de tecnología son el único ingreso inicial fiable)."
       },
       {
        "type": "faq",
@@ -10382,7 +10382,7 @@
         ],
         [
          "¿Cuál es el mes de la sequía?",
-         "Abril, en la estación seca. Los cultivos necesitan protección y riego planificado: protege los cultivos antes y vende durante."
+         "Abril, en la estación seca. Harsh Dry Season exige protección de cultivos y riego planificado: protege los cultivos y planifica el riego antes de la temporada."
         ],
         [
          "¿Cómo funcionan los módulos genéticos?",
@@ -13094,7 +13094,7 @@
          "干ばつ（4月）",
          "枯死、作物への負担",
          "最も厳しい農業月",
-         "年間厳しい作物条件で作物保護を準備を売る"
+         "Harsh Dry Season に備えて作物保護と水やりを計画する"
         ],
         [
          "どの季節も",
@@ -13119,7 +13119,7 @@
         ],
         [
          "干ばつのタイミング",
-         "第4月前に作物保護を準備し、作物への負担期に売る。"
+         "第4月前に作物保護と水やりを準備する。"
         ]
        ]
       },
@@ -13132,7 +13132,7 @@
         "露出区画にカバーを建て、弱い作物はまとめて育てる。",
         "「雨露均等」遺伝子で乾燥期も自動散水。",
         "雷雨の電力を1.0ドローン基地と工業地帯に。",
-        "干ばつ前に作物保護を準備、干ばつ中に売却。"
+        "Harsh Dry Season 前に作物保護と水やりを準備する。"
        ]
       },
       {
@@ -13155,11 +13155,11 @@
         ],
         [
          "干ばつはいつ？",
-         "4月、乾季の終わり。作物が枯れ、作物保護と水やりが必要。"
+         "4月、乾季の終わり。Harsh Dry Season で作物保護と水やりが必要。"
         ],
         [
-         "干ばつでどう稼ぐ？",
-         "第4月前に作物保護を準備し、作物への負担期に売る。"
+         "Harsh Dry Season にどう備える？",
+         "第4月前に作物保護と水やりを準備する。"
         ],
         [
          "雨季はある？",
@@ -13475,7 +13475,7 @@
         ],
         [
          "¿Cuándo es la sequía?",
-         "Abril, al final de la estación seca. Los cultivos necesitan protección y riego planificado."
+         "Abril, al final de la estación seca. Harsh Dry Season exige protección de cultivos y riego planificado."
         ],
         [
          "¿Cómo saco provecho de la sequía?",
@@ -14397,7 +14397,7 @@
         "Abre el Steam Workshop de Doloc Town (steamcommunity.com/app/2285550/workshop).",
         "Busca o explora mods y pulsa Suscribirse.",
         "Steam los descarga automáticamente y aparecen en el juego.",
-        "Algunos mods necesitan un framework (p. ej. DTMAPI) — lee la descripción e instala las dependencias primero ⚠️.",
+        "Los mods funcionales no tienen soporte oficial; consulta las FAQ oficiales del 3 de agosto antes de cambiar el juego.",
         "Haz copia de tu partida antes de modificar — los mods cambian el comportamiento y pueden romperse tras grandes actualizaciones."
        ]
       },
@@ -16858,7 +16858,7 @@
         "ストーリーを早く：メインクエストと街の依頼に集中し、ルーチン農作業は自動化に任せる",
         "100%を目指す：実績・遺伝子ラボ・魚図鑑を並行で — 最後にまとめない",
         "季節の天候を利用：嵐で水やり、雷雨で蓄電 — 戦わず活用する",
-        "4月の Harsh Dry Season 前に作物保護と水やりを準備し作物は枯れる"
+        "4月の干ばつ前に作物保護を準備 — Harsh Dry Season に備えて作物保護と水やりが必要"
        ]
       },
       {
@@ -17054,7 +17054,7 @@
         "Para terminar la historia rápido: céntrate en las misiones principales y deja que la automatización haga las tareas rutinarias",
         "Para el 100%: trabaja logros, el laboratorio genético y el catálogo de peces en paralelo — no lo dejes para el final",
         "El clima de temporada importa: usa las tormentas para regar y las eléctricas para almacenar energía en vez de combatirlas",
-        "Prepara protección para cultivos y planifica el riego antes de Harsh Dry Season"
+        "Prepara protección para los cultivos y planifica el riego antes de Harsh Dry Season"
        ]
       },
       {
@@ -17579,7 +17579,7 @@
       },
       {
        "heading": "흔한 돈 버는 실수",
-       "body": "커뮤니티가 지적하는 돈을 놓치는 패턴: 원자재를 전부 그대로 판매(10-20% 가공 마진 포기), 4월 전 작물 보호와 물주기를 준비하지 않음, 퀘스트 건너뛰기(수입 증폭기인 기술 포인트를 놓침), 물고기를 전부 판매(수조 전용 13종의 번식 쌍 상실), 가방 업그레이드 미루기(왕복에 몇 시간 낭비).",
+       "body": "커뮤니티가 지적하는 돈을 놓치는 패턴: 원자재를 전부 그대로 판매(10-20% 가공 마진 포기), 4월 전 작물 보호 준비 안 함(연중 최악의 가격으로 판매), 퀘스트 건너뛰기(수입 증폭기인 기술 포인트를 놓침), 물고기를 전부 판매(수조 전용 13종의 번식 쌍 상실), 가방 업그레이드 미루기(왕복에 몇 시간 낭비).",
        "type": "note"
       },
       {
@@ -17599,8 +17599,8 @@
          "절임·건조·직조 각각 품목당 약 10-20%, 커뮤니티 보고 기준 [L2]."
         ],
         [
-         "4번째 달에 어떻게 대비하나요?",
-         "4번째 달 Harsh Dry Season 전에 작물 보호와 물주기를 준비하세요."
+         "작물 보호 준비물은 언제 팔아야 하나요?",
+         "4월 가뭄 전에 작물 보호 준비하고 작물 부담 증가기에 판매 — 달력에서 가장 큰 수익 기회입니다."
         ],
         [
          "가방 업그레이드는 가치 있나요?",
@@ -17732,8 +17732,8 @@
          "Encurtir, secar y tejer añaden cada uno un 10-20% por artículo, según la comunidad [L2]."
         ],
         [
-         "¿Cuándo vendo mi reserva?",
-         "Antes del mes 4, prepara protección para los cultivos y planifica el riego."
+         "¿Cómo me preparo para el mes 4?",
+         "Antes del mes 4, protege los cultivos y planifica el riego."
         ],
         [
          "¿Merece la pena la mochila?",

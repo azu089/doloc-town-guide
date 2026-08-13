@@ -114,8 +114,8 @@ ZH = {
     "columns":["天气","影响","转化为优势"],
     "rows":[["酸雨","侵蚀无遮盖的作物","建造遮盖；收集酸液作为制作资源"],["酷热","烤干土壤、拖慢生长","按时浇水；种植耐热基因品种"],["雷暴","破坏露天农田","用闪电给农场充电（1.0 自动化关键）"],["暴雨","淹没低处地块","让雨水免费灌溉；省下浇水体力"],["旱季（4月）","作物枯萎、作物压力增加","4 月前准备作物防护，旺季卖出"]]},
    {"heading":"第一周：奠定整局的 5 步","body":"按顺序做，第一个季节就不再手忙脚乱。",
-    "items":[["完整清理起始地块","隐藏角落的废料能换来第一批花盆。"],["先种速生作物","快速收成为工具与种子提供资金。"],["每天与所有村民对话","好感解锁食谱、科技与剧情；也触发 Blooming Friendship。"],["立刻开 Bellad 的任务","任务奖励科技点——早期唯一可靠的科技收入。"],["4 月前开始准备作物防护","旱季物价让小额准备作物防护非常划算。"]]},
-   {"heading":"新手常见错误（避免这些）","body":"社区报告中最常见的毁局行为：每天手动给所有作物浇水（用自动化或雨露均沾基因）、种一大片平地（一场风暴全毁）、忽略好感（把自己锁在食谱之外）、跳过 Bellad 任务（科技树落后）、4 月前什么都不囤（在最差的价格卖出）。"},
+    "items":[["完整清理起始地块","隐藏角落的废料能换来第一批花盆。"],["先种速生作物","快速收成为工具与种子提供资金。"],["每天与所有村民对话","好感解锁食谱、科技与剧情；也触发 Blooming Friendship。"],["立刻开 Bellad 的任务","任务奖励科技点——早期唯一可靠的科技收入。"],["4 月前开始准备作物防护","旱季前请保护作物并规划浇水。"]]},
+   {"heading":"新手常见错误（避免这些）","body":"社区报告中最常见的毁局行为：每天手动给所有作物浇水（用自动化或雨露均沾基因）、种一大片平地（一场风暴全毁）、忽略好感（把自己锁在食谱之外）、跳过 Bellad 任务（科技树落后）、4 月前没有保护作物并规划浇水。"},
    {"heading":"无人机战斗：先操作，后策略","body":"无人机既是武器也是生存工具。先学操作，再学出装。",
     "items":["RMB 锁定、LMB 射击、Space 闪避、R 换弹。","按顺序升级：底盘（生存）、枪管（伤害）、电池（续航）。","蓄力光束（F）破装甲 Scavenger Bugs 的盾；普通射击会被弹开。","夜间探索废墟前装好武器与照明模块。","稀有鱼掉高级部件——钓鱼为战斗供血。"]},
    {"heading":"1.0 给新玩家带来的变化","body":"2026 年 8 月 6 日的 1.0 重构了前期体验。",
@@ -512,7 +512,7 @@ JA = {
     "items":["プランターを作り、積んだプラットフォームに置いて垂直に農場を拡張。","ジャンプと登攀で階層を行き来——プラットフォーム操作も農業の一部。","酸性雨・猛暑・雷雨から作物をカバーと配置で守る。","最初は手作業の播種・水やり・収穫。1.0 の自動化でドローンが担当。"]},
    {"heading":"天候の影響まとめ","body":"異常気象は危険——だが武器にできる。",
     "columns":["天候","作物への影響","活用法"],
-    "rows":[["酸性雨","無防備な作物を侵食","カバーを建てる。酸を資源として回収"],["猛暑","地面を焼き、土を乾かす","水やりのタイミング調整。耐熱遺伝子品種"],["雷雨","露地を荒らす","落雷を農場の電力に変換"],["豪雨","低い区画を水没","雨に灌漑を任せる"],["乾季（4月）","作物が枯れ、物価が高騰","作物保護を準備して水やりを計画る"]]},
+    "rows":[["酸性雨","無防備な作物を侵食","カバーを建てる。酸を資源として回収"],["猛暑","地面を焼き、土を乾かす","水やりのタイミング調整。耐熱遺伝子品種"],["雷雨","露地を荒らす","落雷を農場の電力に変換"],["豪雨","低い区画を水没","雨に灌漑を任せる"],["乾季（4月）","Harsh Dry Season で作物保護と水やりが必要","作物保護を準備して水やりを計画る"]]},
    {"heading":"最初の1週間の優先事項","body":"この5つでランの土台が決まる。",
     "items":[["開始区画を撤去","建築スペース=作物=速度。"],["プランターを作り速成作物を植える","早い収穫がすべての資金になる。"],["毎日住民と話す","友好度でレシピ・テック・ストーリーが解放（Blooming Friendship 含む）。"],["ギルドマスターのクエストを開く","Bellad のクエストでテックポイント獲得。"],["4月前に作物保護を準備開始","乾季の物価高で作物保護を準備が利益になる。"]]},
    {"heading":"ドローン戦闘入門","body":"ドローンは武器であり、生存ツール。",
@@ -827,7 +827,7 @@ JA.update({
     "ストーリーを早く：メインクエストと街の依頼に集中し、ルーチン農作業は自動化に任せる",
     "100%を目指す：実績・遺伝子ラボ・魚図鑑を並行で — 最後にまとめない",
     "季節の天候を利用：嵐で水やり、雷雨で蓄電 — 戦わず活用する",
-    "4月の干ばつ前に作物保護を準備 — 価格が高騰し作物は枯れる",
+    "4月の干ばつ前に作物保護を準備 — Harsh Dry Season に備えて作物保護と水やりが必要",
    ]},
    {"heading":"時間FAQ","items":[
     ["クリア時間は？","公式ストアでコア30時間以上、全収集で100時間以上の追加コンテンツと記載。"],
@@ -1206,7 +1206,7 @@ ES = {
     "items":["Crea maceteros y colócalos en plataformas apiladas para expandir la granja en vertical.","Salta y trepa entre niveles: el plataformeo también es parte de cultivar.","Protege los cultivos de la lluvia ácida, el calor abrasador y las tormentas.","Siembra, riega y cosecha a mano al principio; los drones lo harán con la automatización 1.0."]},
    {"heading":"Efectos del clima de un vistazo","body":"El clima extremo es peligroso, pero puedes convertirlo en ventaja.",
     "columns":["Clima","Efecto en cultivos","Cómo aprovecharlo"],
-    "rows":[["Lluvia ácida","Erosiona cultivos sin proteger","Construye cubiertas; recoge el ácido"],["Calor abrasador","Quema la tierra","Riega con timing; usa cepas resistentes"],["Tormenta","Daña campos abiertos","Aprovecha los rayos para dar energía"],["Lluvia torrencial","Inunda parcelas bajas","Deja que riegue gratis"],["Sequía (mes 4)","Los cultivos se marchitan, los precios suben","Acumula y planifica el riego"]]},
+    "rows":[["Lluvia ácida","Erosiona cultivos sin proteger","Construye cubiertas; recoge el ácido"],["Calor abrasador","Quema la tierra","Riega con timing; usa cepas resistentes"],["Tormenta","Daña campos abiertos","Aprovecha los rayos para dar energía"],["Lluvia torrencial","Inunda parcelas bajas","Deja que riegue gratis"],["Sequía (mes 4)","Harsh Dry Season exige protección de cultivos y riego planificado","Acumula y planifica el riego"]]},
    {"heading":"Prioridades de la primera semana (haz esto primero)","body":"Estos cinco pasos marcan toda la partida.",
     "items":[["Limpia tu parcela inicial","Más espacio = más cultivos = más progreso."],["Crea un macetero y planta rápido","Las cosechas rápidas financian todo lo demás."],["Habla con los vecinos a diario","La amistad desbloquea recetas, tecnología e historia."],["Abre las misiones del Maestro de Gremio","Las misiones de Bellad dan Puntos de Tecnología."],["Empieza a proteger los cultivos antes del mes 4","Harsh Dry Season exige proteger cultivos y planificar el riego."]]},
    {"heading":"Combate con drones para principiantes","body":"Tu dron es tu arma y tu herramienta de supervivencia.",
@@ -1404,7 +1404,7 @@ ES.update({
   "sections":[
    {"heading":"Amenazas climáticas y contramedidas",
     "columns":["Clima","Riesgo","Contramedida"],
-    "rows":[["Lluvia ácida","Erosiona cultivos","Cubiertas; recoge ácido"],["Calor abrasador","Quema el suelo","Riego con timing; genes resistentes"],["Tormenta","Daño al campo","Aprovecha los rayos para energía"],["Lluvia torrencial","Inundaciones","Riego gratuito"],["Sequía (mes 4)","Marchitez + precios altos","Acumula, planifica el riego"]]},
+    "rows":[["Lluvia ácida","Erosiona cultivos","Cubiertas; recoge ácido"],["Calor abrasador","Quema el suelo","Riego con timing; genes resistentes"],["Tormenta","Daño al campo","Aprovecha los rayos para energía"],["Lluvia torrencial","Inundaciones","Riego gratuito"],["Sequía (mes 4)","Marchitez + precios altos","Protege los cultivos y planifica el riego"]]},
    {"heading":"Convertir tormentas en energía","body":"El clima es una fuente de energía.",
     "items":[["Instala captura de rayos","Las tormentas cargan la granja."],["Deja que la lluvia riegue","Salta el riego manual durante los aguaceros."],["Aprovecha la sequía","Acumular antes del mes 4 da beneficios."]]},
    {"heading":"Cultiva como si conocieras el clima","body":"Mira el pronóstico a diario. Si mañana hay tormenta, regar hoy es desperdicio; pero cargar hoy no tiene precio."}
@@ -1431,7 +1431,7 @@ ES.update({
   "intro":"Doloc Town tiene un Steam Workshop activo con más de 67 mods de la comunidad. Aquí te explicamos cómo instalarlos, cuáles son populares y qué tener en cuenta.",
   "sections":[
    {"heading":"Cómo instalar mods","body":"Los mods del Workshop son de un clic. Doloc Town tiene Workshop oficial.",
-    "items":["Abre el Steam Workshop de Doloc Town (steamcommunity.com/app/2285550/workshop).","Busca o explora mods y pulsa Suscribirse.","Steam los descarga automáticamente y aparecen en el juego.","Algunos mods necesitan un framework (p. ej. DTMAPI) — lee la descripción e instala las dependencias primero ⚠️.","Haz copia de tu partida antes de modificar — los mods cambian el comportamiento y pueden romperse tras grandes actualizaciones."]},
+    "items":["Abre el Steam Workshop de Doloc Town (steamcommunity.com/app/2285550/workshop).","Busca o explora mods y pulsa Suscribirse.","Steam los descarga automáticamente y aparecen en el juego.","Los mods funcionales no tienen soporte oficial; consulta las FAQ oficiales del 3 de agosto antes de cambiar el juego.","Haz copia de tu partida antes de modificar — los mods cambian el comportamiento y pueden romperse tras grandes actualizaciones."]},
    {"heading":"El Workshop está activo","body":"Verificado: Doloc Town tiene un Steam Workshop activo (agosto de 2026).",
     "items":["Más de 67 mods de la comunidad, con 32+ en chino.","Populares: Magic Storage, Doloc QoL (vista previa de cocina, cocina por lotes, panel de encargos), expansión de peces de Maple, framework DTMAPI, asistente de precios, botón de parar el tiempo y correcciones de traducción al coreano.","Categorías habituales: QoL, cocina, pesca, interfaz, jugabilidad, visuales y traducción.","El número de mods cambia a menudo — consulta la lista actual en el Workshop."]},
    {"heading":"FAQ de mods","body":"","items":[
@@ -1531,7 +1531,7 @@ ES.update({
     "Para terminar la historia rápido: céntrate en las misiones principales y deja que la automatización haga las tareas rutinarias",
     "Para el 100%: trabaja logros, el laboratorio genético y el catálogo de peces en paralelo — no lo dejes para el final",
     "El clima de temporada importa: usa las tormentas para regar y las eléctricas para almacenar energía en vez de combatirlas",
-    "Acumula reservas antes de la sequía de abril — los precios suben y los cultivos se marchitan",
+    "Prepara protección para los cultivos y planifica el riego antes de Harsh Dry Season",
    ]},
    {"heading":"FAQ de duración","items":[
     ["¿Cuánto dura Doloc Town?","La tienda oficial indica más de 30 horas de juego principal y más de 100 de contenido adicional para el 100%."],
@@ -1587,7 +1587,7 @@ for _slug, _tr in ZH_P12.items():
     ZH.setdefault(_slug, _tr)
 
 # ---- JA flat supplement (en-heading aligned sections) ----
-JA_SUP = {"automation": {"sections": [{"en": "Common Automation Mistakes", "heading": "自動化のよくある失敗", "body": "電力が安定する前に基地を急がない——半日稼働しない基地は意味がなくなる。最初の自動化は唯一の収入作物ではなく、低価値のフィラー作物でシステムを学ぼう。プラットフォームを積むときはドローンの飛行経路を確保しないと、作物に到達できない。"}, {"en": "Why This Page Matters", "heading": "このページの重要性", "body": "ドロックタウンの自動化に関する英語ガイドはほぼ存在しない——多くは EA の基礎で止まっている。本ページは 1.0 専用の自動化英語リファレンスの最初の一つ。⚠️ 付きの詳細は実機検証後に更新。"}]}, "gene-system": {"sections": [{"en": "Pro Tips & Common Mistakes", "heading": "プロのコツとよくある失敗", "body": "「雨露均等」と自動収穫系の変異を組み合わせれば、ほぼ放置で済む区画——コミュニティのお気に入り。「時間の贈り物」は長期プレイ向きなので早めに植える。よくある失敗：冗長なモジュールを重ねてシナジーを組まない、母本研究トラックを無視する（最良モジュールの鍵）。⚠️ コミュニティ情報。自分のセーブで要検証。"}]}, "fishing": {"sections": [{"en": "New Fish in 1.0", "heading": "1.0 の新魚", "body": "1.0 で新しい魚種が追加。池×天候別の完全な英語リストを実機で編集中。完成後、上の要約を置き換える（⚠️）。"}]}, "drone-combat": {"sections": [{"en": "Fighting Scavenger Bugs (And Avoiding Mistakes)", "heading": "Scavenger Bugs 対策と失敗回避", "body": "装甲 Scavenger Bugs は通常攻撃を無視。チャージビーム（F）で盾を破ってから撃ち込む。よくある失敗：壁にパニック回避、オープンでリロード、照明モジュールなしで夜間戦闘。⚠️ コミュニティガイド由来。1.0 で要検証。"}]}, "exploration": {"sections": [{"en": "The Three Mysteries (And Common Mistakes)", "heading": "3つの謎とよくある失敗", "body": "滅びた世界でリバーバレーはなぜ緑か？消えた町長はどうなった？なぜ前終末テクノロジーに「Eden」の刻印が？1.0 のストーリーが答える。よくある失敗：伝承オブジェクトを急いで通り過ぎる——いくつかの物語は地域を走り抜けると取り逃す。"}]}, "friendship": {"sections": [{"en": "Common Mistakes", "heading": "よくある失敗", "body": "「遠いから」と一人の住民を無視すると、そのレシピが永久にロックされる。全員に同じ贈り物を渡すと好みを外し、贈り物を無駄にする。祭りを逃すのが最大の損失——カレンダーで最も価値の高い友好イベント。"}]}, "farming": {"sections": [{"en": "Drought Strategy & Common Mistakes", "heading": "乾季の戦略とよくある失敗", "body": "乾季（4月）は作物が枯れ、物価が高騰。乾季前に作物保護を準備し、乾季中に水やりを計画る。よくある失敗：巨大な一枚畑（嵐ひとつで全滅）、果樹を後回し（後で無料の収入源）、鎌のアップグレードを怠る（群収穫が大きな時間節約）。"}]}, "cooking": {"sections": [{"en": "Common Mistakes", "heading": "よくある失敗", "body": "収穫を全部売ってレシピ用の食材を残さない。好感度ゲートのレシピを無視する（最良のバフは好感度の先にある）。体力食しか作らない——速度と防御バフは単なるカロリーより時間を節約する。"}]}, "ranching": {"sections": [{"en": "Why Ranch?", "heading": "なぜ牧場か？", "body": "牛乳と卵は荒廃地の貴重な作物保護を準備——料理食材・贈り物・安定した収入源。よくある失敗：飼料生産より速く動物を増やす——飢えた群れは何も産まない。"}]}, "characters": {"sections": [{"en": "Secrets of the Town", "heading": "町の秘密", "body": "リバーバレーはなぜ緑？伝説の町長は何処へ？前終末テクノロジーの「Eden」刻印は？答えは 1.0 のストーリーに——特定の住民と結びついているので、全員と話そう。"}, {"en": "Social Tips", "heading": "社交のコツ", "body": "すべてのハートを活かす。", "items": ["毎日みんなと話す——「遠い」相手も。", "好みに合わせて贈り物。覚えた好みは記録しよう。", "クエストをやる——友好への最良の投資。", "祭りは全部参加し、最大のボーナスを得る。"]}]}, "story": {"sections": [{"en": "Spoiler Policy & Common Mistakes", "heading": "ネタバレ方針とよくある失敗", "body": "本ページは軽いネタバレに留める。深掘りネタバレ節は検証後に追加——明確にラベル付けする。よくある失敗：メインクエストを速攻してサイドキャラクターに結びついた取り逃し可能な展開を飛ばす。謎は地域を完全に探索してから進めるのが最良。"}]}, "weather": {"sections": [{"en": "Farm Like the Weather Knows", "heading": "天候を知る農場経営", "body": "毎日予報を確認。明日嵐なら今日の水やりは無駄——だが今日の充電は貴重。よくある失敗：天候をランダムイベントと見なすのではなく、計画できるカレンダーとして扱う。"}]}, "achievements": {"sections": [{"en": "Achievement Counts & Structure", "heading": "実績数と構造", "body": "実績リストの構造は明確。", "items": ["基礎43個（EA時代）。", "1.0（2026年8月6日）で37個追加。", "合計80個。", "チャプター選択で取り逃した実績を回収可 ⚠️。"]}, {"en": "Note", "heading": "メモ", "body": "解除条件付きの完全な英語80実績チェックリストを実機で編集中。完成後、上の不完全な表を置き換える。100%を目指すなら日常型実績（水を飲む、料理、釣り）から——自然に達成するが、進捗を見失いやすい。"}]}, "mods": {"sections": [{"en": "Workshop Status", "heading": "ワークショップの状況", "body": "⚠️ ワークショップの対応状況と現在のトップMODを確認中。確認後、実際のMODリストに拡張する。MOD導入前にセーブをバックアップ——MODはゲーム挙動を変え、大規模アップデート後に互換性の問題を報告するプレイヤーもいる。"}]}, "update-log": {"sections": [{"en": "Why Track Updates", "heading": "なぜ更新を追うか", "body": "ゲームがいつ変わったかを知れば、現在有効な攻略を見つけ、時代遅れの助言を避けられる——多くの英語攻略は EA のままだ。日付付きの Steam 公式発表を情報源にしてください。"}]}, "system-requirements": {"sections": [{"en": "Notes & Common Questions", "heading": "メモとよくある質問", "body": "公式Steamページには最低のみ記載。推奨は未公表。ゲームは軽量で低スペックでも動作し、Steam Deckでは「Playable」。最低構成に近い場合はバックグラウンドアプリを閉じ、後半地域では性能低下を想定。"}]}, "steam-deck": {"sections": [{"en": "Tip", "heading": "ヒント", "body": "Deckで問題が出たら先にアップデート確認——開発者曰く、最適化待ちが原因であることが多い。重い地域ではフレームレート上限とシャドウ低減で、より滑らかな携帯体験に。"}]}}
+JA_SUP = {"automation": {"sections": [{"en": "Common Automation Mistakes", "heading": "自動化のよくある失敗", "body": "電力が安定する前に基地を急がない——半日稼働しない基地は意味がなくなる。最初の自動化は唯一の収入作物ではなく、低価値のフィラー作物でシステムを学ぼう。プラットフォームを積むときはドローンの飛行経路を確保しないと、作物に到達できない。"}, {"en": "Why This Page Matters", "heading": "このページの重要性", "body": "ドロックタウンの自動化に関する英語ガイドはほぼ存在しない——多くは EA の基礎で止まっている。本ページは 1.0 専用の自動化英語リファレンスの最初の一つ。⚠️ 付きの詳細は実機検証後に更新。"}]}, "gene-system": {"sections": [{"en": "Pro Tips & Common Mistakes", "heading": "プロのコツとよくある失敗", "body": "「雨露均等」と自動収穫系の変異を組み合わせれば、ほぼ放置で済む区画——コミュニティのお気に入り。「時間の贈り物」は長期プレイ向きなので早めに植える。よくある失敗：冗長なモジュールを重ねてシナジーを組まない、母本研究トラックを無視する（最良モジュールの鍵）。⚠️ コミュニティ情報。自分のセーブで要検証。"}]}, "fishing": {"sections": [{"en": "New Fish in 1.0", "heading": "1.0 の新魚", "body": "1.0 で新しい魚種が追加。池×天候別の完全な英語リストを実機で編集中。完成後、上の要約を置き換える（⚠️）。"}]}, "drone-combat": {"sections": [{"en": "Fighting Scavenger Bugs (And Avoiding Mistakes)", "heading": "Scavenger Bugs 対策と失敗回避", "body": "装甲 Scavenger Bugs は通常攻撃を無視。チャージビーム（F）で盾を破ってから撃ち込む。よくある失敗：壁にパニック回避、オープンでリロード、照明モジュールなしで夜間戦闘。⚠️ コミュニティガイド由来。1.0 で要検証。"}]}, "exploration": {"sections": [{"en": "The Three Mysteries (And Common Mistakes)", "heading": "3つの謎とよくある失敗", "body": "滅びた世界でリバーバレーはなぜ緑か？消えた町長はどうなった？なぜ前終末テクノロジーに「Eden」の刻印が？1.0 のストーリーが答える。よくある失敗：伝承オブジェクトを急いで通り過ぎる——いくつかの物語は地域を走り抜けると取り逃す。"}]}, "friendship": {"sections": [{"en": "Common Mistakes", "heading": "よくある失敗", "body": "「遠いから」と一人の住民を無視すると、そのレシピが永久にロックされる。全員に同じ贈り物を渡すと好みを外し、贈り物を無駄にする。祭りを逃すのが最大の損失——カレンダーで最も価値の高い友好イベント。"}]}, "farming": {"sections": [{"en": "Drought Strategy & Common Mistakes", "heading": "乾季の戦略とよくある失敗", "body": "乾季（4月）はHarsh Dry Season で作物保護と水やりが必要。乾季前に作物保護を準備し、乾季中に水やりを計画る。よくある失敗：巨大な一枚畑（嵐ひとつで全滅）、果樹を後回し（後で無料の収入源）、鎌のアップグレードを怠る（群収穫が大きな時間節約）。"}]}, "cooking": {"sections": [{"en": "Common Mistakes", "heading": "よくある失敗", "body": "収穫を全部売ってレシピ用の食材を残さない。好感度ゲートのレシピを無視する（最良のバフは好感度の先にある）。体力食しか作らない——速度と防御バフは単なるカロリーより時間を節約する。"}]}, "ranching": {"sections": [{"en": "Why Ranch?", "heading": "なぜ牧場か？", "body": "牛乳と卵は荒廃地の貴重な作物保護を準備——料理食材・贈り物・安定した収入源。よくある失敗：飼料生産より速く動物を増やす——飢えた群れは何も産まない。"}]}, "characters": {"sections": [{"en": "Secrets of the Town", "heading": "町の秘密", "body": "リバーバレーはなぜ緑？伝説の町長は何処へ？前終末テクノロジーの「Eden」刻印は？答えは 1.0 のストーリーに——特定の住民と結びついているので、全員と話そう。"}, {"en": "Social Tips", "heading": "社交のコツ", "body": "すべてのハートを活かす。", "items": ["毎日みんなと話す——「遠い」相手も。", "好みに合わせて贈り物。覚えた好みは記録しよう。", "クエストをやる——友好への最良の投資。", "祭りは全部参加し、最大のボーナスを得る。"]}]}, "story": {"sections": [{"en": "Spoiler Policy & Common Mistakes", "heading": "ネタバレ方針とよくある失敗", "body": "本ページは軽いネタバレに留める。深掘りネタバレ節は検証後に追加——明確にラベル付けする。よくある失敗：メインクエストを速攻してサイドキャラクターに結びついた取り逃し可能な展開を飛ばす。謎は地域を完全に探索してから進めるのが最良。"}]}, "weather": {"sections": [{"en": "Farm Like the Weather Knows", "heading": "天候を知る農場経営", "body": "毎日予報を確認。明日嵐なら今日の水やりは無駄——だが今日の充電は貴重。よくある失敗：天候をランダムイベントと見なすのではなく、計画できるカレンダーとして扱う。"}]}, "achievements": {"sections": [{"en": "Achievement Counts & Structure", "heading": "実績数と構造", "body": "実績リストの構造は明確。", "items": ["基礎43個（EA時代）。", "1.0（2026年8月6日）で37個追加。", "合計80個。", "チャプター選択で取り逃した実績を回収可 ⚠️。"]}, {"en": "Note", "heading": "メモ", "body": "解除条件付きの完全な英語80実績チェックリストを実機で編集中。完成後、上の不完全な表を置き換える。100%を目指すなら日常型実績（水を飲む、料理、釣り）から——自然に達成するが、進捗を見失いやすい。"}]}, "mods": {"sections": [{"en": "Workshop Status", "heading": "ワークショップの状況", "body": "⚠️ ワークショップの対応状況と現在のトップMODを確認中。確認後、実際のMODリストに拡張する。MOD導入前にセーブをバックアップ——MODはゲーム挙動を変え、大規模アップデート後に互換性の問題を報告するプレイヤーもいる。"}]}, "update-log": {"sections": [{"en": "Why Track Updates", "heading": "なぜ更新を追うか", "body": "ゲームがいつ変わったかを知れば、現在有効な攻略を見つけ、時代遅れの助言を避けられる——多くの英語攻略は EA のままだ。日付付きの Steam 公式発表を情報源にしてください。"}]}, "system-requirements": {"sections": [{"en": "Notes & Common Questions", "heading": "メモとよくある質問", "body": "公式Steamページには最低のみ記載。推奨は未公表。ゲームは軽量で低スペックでも動作し、Steam Deckでは「Playable」。最低構成に近い場合はバックグラウンドアプリを閉じ、後半地域では性能低下を想定。"}]}, "steam-deck": {"sections": [{"en": "Tip", "heading": "ヒント", "body": "Deckで問題が出たら先にアップデート確認——開発者曰く、最適化待ちが原因であることが多い。重い地域ではフレームレート上限とシャドウ低減で、より滑らかな携帯体験に。"}]}}
 for _slug, _sup in JA_SUP.items():
     _base = JA.setdefault(_slug, {})
     _secs = _base.setdefault("sections", [])
@@ -1601,7 +1601,7 @@ for _slug, _sup in JA_SUP.items():
     _base["sections"] = _kept + list(_en_map.values())
 
 # ---- JA full replacement for how-to-play & friendship ----
-JA_FULL = {"how-to-play": {"sections": [{"en": "The Five-Step Core Loop", "heading": "5ステップのコアループ", "body": "毎日のリズムは同じ。これを覚えれば荒廃地は農場になる。", "items": [["瓦礫を撤去する", "初期ツールで残骸と廃墟を壊す。撤去で建築スペースが開き、埋もれた資源が露出し、行動範囲が広がる。まず拠点に近い区画から。"], ["資源を採取する", "40種類以上の鉱物・植物・がらくた・機械部品を集める。がらくたは製作に、植物は料理に、鉱物はテックツリーに。毎日リスポーンする場所を覚えよう。"], ["垂直に農場を作る", "プランターを作りプラットフォームを積んで上へ建てる。平らな一枚畑は干ばつリスクと嵐の的。垂直に積むことで作物を分散・保護し、後から自動化も追加できる。"], ["建築とアップグレード", "資源をテックツリー・設計図・建物・自宅に投資。テックポイントはギルドマスター Bellad のクエストから——常に1つ進行させておく。"], ["新地域を探索する", "強化した道具とドローンで新エリアへ。1.0の旧市街遺跡も。探索は新種子・新魚・新材料としてループに還元される。"]]}, {"en": "Vertical Farming: How It Actually Works", "heading": "垂直農場：実際の仕組み", "body": "横スクロール視点はギミックではない——農場システムそのもの。", "items": ["プラットフォームは自由に積める。登るほど建築可能面が増える。", "ジャンプと登攀で階層を行き来——プラットフォーミングも日常の一部。", "プランターをプラットフォームに置き、季節ごとに作物をまとめて植え替える。", "カバーか「雨露均等」遺伝子で、嵐と酸性雨から一層まるごと守る。", "ドローンの飛行経路用に垂直の隙間を残す——1.0の自動化には通路が必要。"]}, {"en": "Weather Effects & How to Weaponize Them", "heading": "天候の影響と活用法", "body": "異常気象はこのゲームの看板。怠慢な農場を殺し、賢い農場を成功させる。", "columns": ["天候", "影響", "活用法"], "rows": [["酸性雨", "無防備な作物を侵食", "カバーを建てる。酸を製作資源として回収"], ["猛暑", "土を乾かし成長を遅らせる", "タイミング水やり。耐熱遺伝子品種"], ["雷雨", "露地を荒らす", "落雷で農場に充電（1.0自動化の鍵）"], ["豪雨", "低い区画を水没", "無料の灌漑に任せ、水やりの労力を節約"], ["乾季（4月）", "作物が枯れ、物価が高騰", "4月前に作物保護を準備し、高騰期に売る"]]}, {"en": "First Week: The 5 Moves That Set Up the Run", "heading": "最初の1週間：ランを決める5つの行動", "body": "この順でやれば最初の季節は慌てずに済む。", "items": [["開始区画を完全に撤去", "隠れた隅のがらくたが最初のプランター資金になる。"], ["速成作物を先に植える", "早い収穫が道具と種子の資金になる。"], ["毎日全員と話す", "友好度でレシピ・テック・ストーリー解放。Blooming Friendship も。"], ["すぐ Bellad のクエストを開く", "クエスト報酬=テックポイント。初期の唯一の安定収入源。"], ["4月前に作物保護を準備開始", "乾季の作物への負担で、小さな作物保護を準備が大きく報われる。"]]}, {"en": "Common Mistakes New Players Make (Avoid These)", "heading": "初心者のよくある失敗（避けること）", "body": "コミュニティ報告で最も多いラン崩壊要因：毎日すべての作物を手で水やり（自動化か「雨露均等」遺伝子を使う）、巨大な一枚畑（嵐ひとつで全滅）、友好度を無視（レシピがロックされる）、Bellad のクエストを放置（テックツリーで遅れる）、4月前に何も作物保護を準備しない（一年で最悪の価格で売る）。"}, {"en": "Drone Combat: Controls, Then Strategy", "heading": "ドローン戦闘：操作→戦略の順に", "body": "ドローンは武器であり生存ツール。操作を覚えてから出装を。", "items": ["RMB ロックオン / LMB 射撃 / Space 回避 / R リロード。", "序盤はシャーシ（生存）→バレル（火力）→バッテリー（持続）の順に強化。", "チャージビーム（F）で装甲 Scavenger Bugs の盾を破壊。通常弾は弾かれる。", "夜の廃墟探索前に武器・照明モジュールを装備。", "レア魚が高級パーツを落とす——釣りが戦闘を支える。"]}, {"en": "What the 1.0 Release Changes for New Players", "heading": "1.0で新規プレイヤーに変わること", "body": "2026年8月6日の1.0は序盤の体験を変える。", "items": [["2026-08-06", "1.0配信：完全なストーリー結末、旧市街遺跡、農業オートメーション、キノコ祭り、新実績37個。"], ["新規プレイヤー", "EAより早く自動化に到達できる——二段階自動化→ドローン基地が雑務を代行。"], ["旧市街遺跡", "新地域：凶暴な新敵、新NPC、サブクエスト、資源。多くの道が通じる。"], ["⚠️ 検証中", "正確な解放順と建造費は1.0で検証中。⚠️ 付きはコミュニティ情報。"]]}, {"en": "Quick Answers for New Players", "heading": "新規プレイヤーのよくある質問", "items": [["ドロックタウンはシングルプレイ？", "はい。開発者は1.0をシングルプレイ体験と明言。co-op/マルチはコミュニティの反応次第で将来検討。"], ["毎日水やりが必要？", "最初は必要。ただし「雨露均等」遺伝子で周囲に自動潅水、1.0のドローン基地なら完全自動。"], ["どこでも建築できる？", "農場エリア内でプラットフォームを積む。旧市街遺跡（1.0）で新築エリアと資源。"], ["プレイ時間は？", "メイン30時間+。釣り・牧場・遺伝子・収集で100時間+。"], ["今買うべき？", "通常¥58、発売記念-20%（¥46.40）が2026年8月19日まで——入りやすい時期。"]]}]}, "friendship": {"sections": [{"en": "No Romance — Friendship Only", "heading": "公式：恋愛なし、友好のみ", "body": "開発者は恋愛・結婚システムがないことを明言。ソーシャルは友好ベース：贈り物・祭り・ハートイベント・個人ストーリー。恋愛ガイドは作らないこと。"}, {"en": "Known Villagers (Community-Sourced)", "heading": "既知の住民（コミュニティ情報）", "body": "プレイヤーが最も頻繁に報告する住民。完全な 1.0 リストは検証中。", "columns": ["住民", "役割 / メモ"], "rows": [["カシア", "商店街2階。友好MAXで Blooming Friendship 実績"], ["ギルドマスター Bellad", "クエストとテックポイント"], ["クマサン", "リバーバレーの徘徊NPC。希少素材の重要供給源 ⚠️"], ["その他", "⚠️ 完全リストは 1.0 で検証中"]]}, {"en": "How to Raise Friendship (A Routine)", "heading": "友好度の上げ方（日常ルーティン）", "body": "友好度は毎日のルーティンであり、作業ではない。", "items": [["毎日話す", "簡単・無料・すべてのハートの土台。"], ["贈り物", "住民ごとに好み——試して何が当たるか記録。"], ["クエスト達成", "友好と報酬が両方貯まる——1分あたり最良の投資。"], ["祭りに参加", "季節イベントで大きな友好ボーナス。1.0のキノコ祭りも新登場。"]]}, {"en": "What Friendship Unlocks", "heading": "友好度で解放されるもの", "body": "ハートは進行システムであり、飾りではない。", "items": ["友人ごとの固有レシピ（錬金ステーション等）。", "町の謎を深める個人ストーリーシーン。", "祭りの参加報酬。", "⚠️ 正確なハート閾値は 1.0 で検証中。"]}, {"en": "Common Mistakes", "heading": "よくある失敗", "body": "「遠いから」と一人の住民を無視すると、そのレシピが永久にロックされる。全員に同じ贈り物を渡すと好みを外し、贈り物を無駄にする。祭りを逃すのが最大の損失——カレンダーで最も価値の高い友好イベント。"}, {"en": "Quick Answers", "heading": "よくある質問", "items": [["ドロックタウンに恋愛はある？", "ありません。開発者が恋愛・結婚システムなしと明言。関係は友好ベースです。"], ["友好度は重要？", "重要です。レシピ・ストーリー・祭りコンテンツが解放されます。"], ["次の祭りはいつ？", "1.0 で季節の祭りに加えてキノコ祭りが追加。"]]}]}}
+JA_FULL = {"how-to-play": {"sections": [{"en": "The Five-Step Core Loop", "heading": "5ステップのコアループ", "body": "毎日のリズムは同じ。これを覚えれば荒廃地は農場になる。", "items": [["瓦礫を撤去する", "初期ツールで残骸と廃墟を壊す。撤去で建築スペースが開き、埋もれた資源が露出し、行動範囲が広がる。まず拠点に近い区画から。"], ["資源を採取する", "40種類以上の鉱物・植物・がらくた・機械部品を集める。がらくたは製作に、植物は料理に、鉱物はテックツリーに。毎日リスポーンする場所を覚えよう。"], ["垂直に農場を作る", "プランターを作りプラットフォームを積んで上へ建てる。平らな一枚畑は干ばつリスクと嵐の的。垂直に積むことで作物を分散・保護し、後から自動化も追加できる。"], ["建築とアップグレード", "資源をテックツリー・設計図・建物・自宅に投資。テックポイントはギルドマスター Bellad のクエストから——常に1つ進行させておく。"], ["新地域を探索する", "強化した道具とドローンで新エリアへ。1.0の旧市街遺跡も。探索は新種子・新魚・新材料としてループに還元される。"]]}, {"en": "Vertical Farming: How It Actually Works", "heading": "垂直農場：実際の仕組み", "body": "横スクロール視点はギミックではない——農場システムそのもの。", "items": ["プラットフォームは自由に積める。登るほど建築可能面が増える。", "ジャンプと登攀で階層を行き来——プラットフォーミングも日常の一部。", "プランターをプラットフォームに置き、季節ごとに作物をまとめて植え替える。", "カバーか「雨露均等」遺伝子で、嵐と酸性雨から一層まるごと守る。", "ドローンの飛行経路用に垂直の隙間を残す——1.0の自動化には通路が必要。"]}, {"en": "Weather Effects & How to Weaponize Them", "heading": "天候の影響と活用法", "body": "異常気象はこのゲームの看板。怠慢な農場を殺し、賢い農場を成功させる。", "columns": ["天候", "影響", "活用法"], "rows": [["酸性雨", "無防備な作物を侵食", "カバーを建てる。酸を製作資源として回収"], ["猛暑", "土を乾かし成長を遅らせる", "タイミング水やり。耐熱遺伝子品種"], ["雷雨", "露地を荒らす", "落雷で農場に充電（1.0自動化の鍵）"], ["豪雨", "低い区画を水没", "無料の灌漑に任せ、水やりの労力を節約"], ["乾季（4月）", "Harsh Dry Season で作物保護と水やりが必要", "4月前に作物保護と水やりを準備する"]]}, {"en": "First Week: The 5 Moves That Set Up the Run", "heading": "最初の1週間：ランを決める5つの行動", "body": "この順でやれば最初の季節は慌てずに済む。", "items": [["開始区画を完全に撤去", "隠れた隅のがらくたが最初のプランター資金になる。"], ["速成作物を先に植える", "早い収穫が道具と種子の資金になる。"], ["毎日全員と話す", "友好度でレシピ・テック・ストーリー解放。Blooming Friendship も。"], ["すぐ Bellad のクエストを開く", "クエスト報酬=テックポイント。初期の唯一の安定収入源。"], ["4月前に作物保護を準備開始", "乾季の作物への負担で、小さな作物保護を準備が大きく報われる。"]]}, {"en": "Common Mistakes New Players Make (Avoid These)", "heading": "初心者のよくある失敗（避けること）", "body": "コミュニティ報告で最も多いラン崩壊要因：毎日すべての作物を手で水やり（自動化か「雨露均等」遺伝子を使う）、巨大な一枚畑（嵐ひとつで全滅）、友好度を無視（レシピがロックされる）、Bellad のクエストを放置（テックツリーで遅れる）、4月前に作物保護と水やりを準備しない。"}, {"en": "Drone Combat: Controls, Then Strategy", "heading": "ドローン戦闘：操作→戦略の順に", "body": "ドローンは武器であり生存ツール。操作を覚えてから出装を。", "items": ["RMB ロックオン / LMB 射撃 / Space 回避 / R リロード。", "序盤はシャーシ（生存）→バレル（火力）→バッテリー（持続）の順に強化。", "チャージビーム（F）で装甲 Scavenger Bugs の盾を破壊。通常弾は弾かれる。", "夜の廃墟探索前に武器・照明モジュールを装備。", "レア魚が高級パーツを落とす——釣りが戦闘を支える。"]}, {"en": "What the 1.0 Release Changes for New Players", "heading": "1.0で新規プレイヤーに変わること", "body": "2026年8月6日の1.0は序盤の体験を変える。", "items": [["2026-08-06", "1.0配信：完全なストーリー結末、旧市街遺跡、農業オートメーション、キノコ祭り、新実績37個。"], ["新規プレイヤー", "EAより早く自動化に到達できる——二段階自動化→ドローン基地が雑務を代行。"], ["旧市街遺跡", "新地域：凶暴な新敵、新NPC、サブクエスト、資源。多くの道が通じる。"], ["⚠️ 検証中", "正確な解放順と建造費は1.0で検証中。⚠️ 付きはコミュニティ情報。"]]}, {"en": "Quick Answers for New Players", "heading": "新規プレイヤーのよくある質問", "items": [["ドロックタウンはシングルプレイ？", "はい。開発者は1.0をシングルプレイ体験と明言。co-op/マルチはコミュニティの反応次第で将来検討。"], ["毎日水やりが必要？", "最初は必要。ただし「雨露均等」遺伝子で周囲に自動潅水、1.0のドローン基地なら完全自動。"], ["どこでも建築できる？", "農場エリア内でプラットフォームを積む。旧市街遺跡（1.0）で新築エリアと資源。"], ["プレイ時間は？", "メイン30時間+。釣り・牧場・遺伝子・収集で100時間+。"], ["今買うべき？", "通常¥58、発売記念-20%（¥46.40）が2026年8月19日まで——入りやすい時期。"]]}]}, "friendship": {"sections": [{"en": "No Romance — Friendship Only", "heading": "公式：恋愛なし、友好のみ", "body": "開発者は恋愛・結婚システムがないことを明言。ソーシャルは友好ベース：贈り物・祭り・ハートイベント・個人ストーリー。恋愛ガイドは作らないこと。"}, {"en": "Known Villagers (Community-Sourced)", "heading": "既知の住民（コミュニティ情報）", "body": "プレイヤーが最も頻繁に報告する住民。完全な 1.0 リストは検証中。", "columns": ["住民", "役割 / メモ"], "rows": [["カシア", "商店街2階。友好MAXで Blooming Friendship 実績"], ["ギルドマスター Bellad", "クエストとテックポイント"], ["クマサン", "リバーバレーの徘徊NPC。希少素材の重要供給源 ⚠️"], ["その他", "⚠️ 完全リストは 1.0 で検証中"]]}, {"en": "How to Raise Friendship (A Routine)", "heading": "友好度の上げ方（日常ルーティン）", "body": "友好度は毎日のルーティンであり、作業ではない。", "items": [["毎日話す", "簡単・無料・すべてのハートの土台。"], ["贈り物", "住民ごとに好み——試して何が当たるか記録。"], ["クエスト達成", "友好と報酬が両方貯まる——1分あたり最良の投資。"], ["祭りに参加", "季節イベントで大きな友好ボーナス。1.0のキノコ祭りも新登場。"]]}, {"en": "What Friendship Unlocks", "heading": "友好度で解放されるもの", "body": "ハートは進行システムであり、飾りではない。", "items": ["友人ごとの固有レシピ（錬金ステーション等）。", "町の謎を深める個人ストーリーシーン。", "祭りの参加報酬。", "⚠️ 正確なハート閾値は 1.0 で検証中。"]}, {"en": "Common Mistakes", "heading": "よくある失敗", "body": "「遠いから」と一人の住民を無視すると、そのレシピが永久にロックされる。全員に同じ贈り物を渡すと好みを外し、贈り物を無駄にする。祭りを逃すのが最大の損失——カレンダーで最も価値の高い友好イベント。"}, {"en": "Quick Answers", "heading": "よくある質問", "items": [["ドロックタウンに恋愛はある？", "ありません。開発者が恋愛・結婚システムなしと明言。関係は友好ベースです。"], ["友好度は重要？", "重要です。レシピ・ストーリー・祭りコンテンツが解放されます。"], ["次の祭りはいつ？", "1.0 で季節の祭りに加えてキノコ祭りが追加。"]]}]}}
 for _slug, _sup in JA_FULL.items():
     _base = JA.setdefault(_slug, {})
     # 完全替换 sections（旧结构不混用）
@@ -2975,8 +2975,8 @@ JA["farming"] = {
     ],
     [
      "干ばつ（4月）",
-     "作物が枯れ、商店価格が高騰",
-     "年間厳しい作物条件で作物保護を準備を売る"
+     "Harsh Dry Season で作物保護と水やりが必要",
+     "Harsh Dry Season に備えて作物保護と水やりを計画する"
     ],
     [
      "どの季節も",
@@ -3065,7 +3065,7 @@ JA["farming"] = {
   {
    "type": "note",
    "heading": "乾季の戦略とよくある失敗",
-   "body": "干ばつ月（4月）は作物が枯れ、価格が高騰。干ばつ前に作物保護を準備し、その間に水やりを計画る。よくある失敗：巨大な一枚畑（嵐ひとつで全滅）、果樹を後回し（後で無料の収入源）、鎌の強化を怠る（群収穫は大きな時短）、「雨露均等」があるのに全部手で水やり、Belladのクエストを飛ばす（技術ポイントが唯一の安定した序盤収入）。"
+   "body": "第4月は Harsh Dry Season。事前に作物保護と水やりを準備する。よくある失敗：巨大な一枚畑（嵐ひとつで全滅）、果樹を後回し（後で無料の収入源）、鎌の強化を怠る（群収穫は大きな時短）、「雨露均等」があるのに全部手で水やり、Belladのクエストを飛ばす（技術ポイントが唯一の安定した序盤収入）。"
   },
   {
    "type": "faq",
@@ -3081,7 +3081,7 @@ JA["farming"] = {
     ],
     [
      "干ばつ月はいつ？",
-     "4月、乾季の最中。作物が枯れ、商店価格が高騰——前に作物保護を準備し、その間に売る。"
+     "4月は Harsh Dry Season。事前に作物保護と水やりを準備する。"
     ],
     [
      "遺伝子モジュールの使い方は？",
@@ -3377,8 +3377,8 @@ ES["farming"] = {
     ],
     [
      "Sequía (abril)",
-     "Los cultivos se marchitan y los precios se disparan",
-     "Vende tus reservas a los precios más altos del año"
+     "Harsh Dry Season exige protección de cultivos y riego planificado",
+     "Protege los cultivos y planifica el riego"
     ],
     [
      "Cualquier estación",
@@ -3467,7 +3467,7 @@ ES["farming"] = {
   {
    "type": "note",
    "heading": "Estrategia de sequía y errores comunes",
-   "body": "En el mes de la sequía (abril) los cultivos se marchitan y los precios se disparan. Acumula reservas antes de la sequía y planifica el riego durante ella. Errores comunes: plantar un único campo plano gigante (una tormenta lo borra), ignorar los árboles frutales al principio (son dinero gratis después), no mejorar nunca la hoz (la cosecha en grupo ahorra muchísimo tiempo), regar todo a mano cuando existe el gen Lluvia, y saltarse las misiones de Bellad (los puntos de tecnología son el único ingreso inicial fiable)."
+   "body": "El mes 4 es Harsh Dry Season. Protege los cultivos y planifica el riego antes de la temporada. Errores comunes: plantar un único campo plano gigante (una tormenta lo borra), ignorar los árboles frutales al principio (son dinero gratis después), no mejorar nunca la hoz (la cosecha en grupo ahorra muchísimo tiempo), regar todo a mano cuando existe el gen Lluvia, y saltarse las misiones de Bellad (los puntos de tecnología son el único ingreso inicial fiable)."
   },
   {
    "type": "faq",
@@ -3483,7 +3483,7 @@ ES["farming"] = {
     ],
     [
      "¿Cuál es el mes de la sequía?",
-     "Abril, en la estación seca. Los cultivos se marchitan y los precios se disparan: protege los cultivos antes y vende durante."
+     "Abril, en la estación seca. Harsh Dry Season exige protección de cultivos y riego planificado: protege los cultivos y planifica el riego antes de la temporada."
     ],
     [
      "¿Cómo funcionan los módulos genéticos?",
@@ -5566,7 +5566,7 @@ JA["weather"] = {
      "干ばつ（4月）",
      "枯死、作物への負担",
      "最も厳しい農業月",
-     "年間厳しい作物条件で作物保護を準備を売る"
+     "Harsh Dry Season に備えて作物保護と水やりを計画する"
     ],
     [
      "どの季節も",
@@ -5591,7 +5591,7 @@ JA["weather"] = {
     ],
     [
      "干ばつのタイミング",
-     "第4月前に作物保護を準備し、作物への負担期に売る。"
+     "第4月前に作物保護と水やりを準備する。"
     ]
    ]
   },
@@ -5604,7 +5604,7 @@ JA["weather"] = {
     "露出区画にカバーを建て、弱い作物はまとめて育てる。",
     "「雨露均等」遺伝子で乾燥期も自動散水。",
     "雷雨の電力を1.0ドローン基地と工業地帯に。",
-    "干ばつ前に作物保護を準備、干ばつ中に売却。"
+    "Harsh Dry Season 前に作物保護と水やりを準備する。"
    ]
   },
   {
@@ -5627,11 +5627,11 @@ JA["weather"] = {
     ],
     [
      "干ばつはいつ？",
-     "4月、乾季の終わり。作物が枯れ、商店価格が高騰。"
+     "4月、乾季の終わり。Harsh Dry Season で作物保護と水やりが必要。"
     ],
     [
-     "干ばつでどう稼ぐ？",
-     "第4月前に作物保護を準備し、作物への負担期に売る。"
+     "Harsh Dry Season にどう備える？",
+     "第4月前に作物保護と水やりを準備する。"
     ],
     [
      "雨季はある？",
@@ -5825,7 +5825,7 @@ ES["weather"] = {
     [
      "Sequía (mes 4)",
      "Marchitez + presión sobre cultivos",
-     "Acumula, planifica el riego"
+     "Protege los cultivos y planifica el riego"
     ]
    ]
   },
@@ -5854,9 +5854,9 @@ ES["weather"] = {
     ],
     [
      "Sequía (abril)",
-     "Marchitez y precios altos",
+     "Harsh Dry Season",
      "El mes más duro para la granja",
-     "Vende reservas a los precios más altos del año"
+     "Protege los cultivos y planifica el riego"
     ],
     [
      "Cualquier estación",
@@ -5881,7 +5881,7 @@ ES["weather"] = {
     ],
     [
      "Aprovecha el momento de la sequía",
-     "Acumula antes del mes 4 y vende durante la presión sobre cultivos."
+     "Protege los cultivos y planifica el riego antes del mes 4."
     ]
    ]
   },
@@ -5894,7 +5894,7 @@ ES["weather"] = {
     "Construye cubiertas sobre las parcelas expuestas y agrupa los cultivos vulnerables.",
     "Instala el gen Lluvia para regar automáticamente en las sequías.",
     "Usa la energía de las tormentas para las estaciones de drones del 1.0 y la zona industrial.",
-    "Acumula antes de la sequía y vende durante ella."
+    "Protege los cultivos y planifica el riego antes de Harsh Dry Season."
    ]
   },
   {
@@ -5917,11 +5917,11 @@ ES["weather"] = {
     ],
     [
      "¿Cuándo es la sequía?",
-     "Abril, al final de la estación seca. Los cultivos se marchitan y los precios suben."
+     "Abril, al final de la estación seca. Harsh Dry Season exige protección de cultivos y riego planificado."
     ],
     [
      "¿Cómo saco provecho de la sequía?",
-     "Acumula bienes antes del mes 4 y véndelos durante la presión sobre cultivos."
+     "Protege los cultivos y planifica el riego antes del mes 4."
     ],
     [
      "¿Hay estación lluviosa?",
@@ -7136,7 +7136,7 @@ _EXTRA = {
     {"en": "Common Money Mistakes", "heading": "よくある金策ミス", "body": "コミュニティ報告が指摘するお金を逃すパターン：素材を全部生売り（10-20%の加工マージンを捨てる）、4月前に作物保護を準備しない（一年で最悪の価格で売る）、クエストをスキップ（収入の増幅器・テックポイントを逃す）、魚を全部売る（水槽限定13種の繁殖ペアを失う）、バックパック強化を後回し（往復で何時間も無駄にする）。"},
     {"en": "Sources & Verification", "heading": "出典と検証", "body": "10-20% の加工マージン、Level 2 の竿、初日のバックパックのコツはすべてコミュニティ報告（L2、grindnstrat や Steam 議論など）。1.0 クライアントでの正確なマージンは未実測——具体的な数字はプレイヤー報告として扱い、自分のセーブで確認してほしい。"},
     {"en": "Quick Answers", "heading": "よくある質問",
-     "items": [["ドロックタウンで一番早く稼ぐ方法は？", "コミュニティの一致した見解は 魚→乾燥→販売：種代ゼロで初日から可能、乾燥機で +10-20% [L2]。"], ["加工の付加価値はどのくらい？", "漬ける・干す・織るで1品あたり約10-20%、コミュニティ報告による [L2]。"], ["作物保護を準備はいつ売る？", "4月の干ばつ前に作物保護を準備し、作物への負担時に売る——カレンダー最大の払い出し。"], ["バックパック強化は価値がある？", "ある——第1層でスロットがほぼ倍増し、コミュニティで最も推奨される最初の買い物 [L2]。"], ["自動化にお金は必要？", "後半は必要：二段階自動化とドローン基地は素材とテックポイントが要る。序盤の収入が1.0終盤を支える。"]]}
+     "items": [["ドロックタウンで一番早く稼ぐ方法は？", "コミュニティの一致した見解は 魚→乾燥→販売：種代ゼロで初日から可能、乾燥機で +10-20% [L2]。"], ["加工の付加価値はどのくらい？", "漬ける・干す・織るで1品あたり約10-20%、コミュニティ報告による [L2]。"], ["4月にどう備える？", "4月の Harsh Dry Season 前に作物保護と水やりを準備する。"], ["バックパック強化は価値がある？", "ある——第1層でスロットがほぼ倍増し、コミュニティで最も推奨される最初の買い物 [L2]。"], ["自動化にお金は必要？", "後半は必要：二段階自動化とドローン基地は素材とテックポイントが要る。序盤の収入が1.0終盤を支える。"]]}
    ]
   }
  },
@@ -7183,7 +7183,7 @@ _EXTRA = {
   "make-money": {
    "title": "Cómo ganar dinero rápido en Doloc Town (1.0)",
    "metaTitle": "Guía de dinero en Doloc Town: ingresos rápidos (1.0)",
-   "metaDescription": "Cómo ganar dinero rápido en Doloc Town: procesa cultivos y pescado para +10-20%, seca tu pesca, vende en la subida de la sequía y los movimientos del día uno.",
+   "metaDescription": "Cómo ganar dinero rápido en Doloc Town: procesa cultivos y pescado para +10-20%, seca tu pesca, prepara protección y riego para el mes 4 y los movimientos del día uno.",
    "intro": "En Doloc Town casi nunca se gana dinero vendiendo materia prima. El procesado, el timing del clima y una mejora temprana lo cambian todo — esto es lo que la comunidad ha descubierto.",
    "sections": [
     {"en": "The Money Loop, From Zero", "heading": "El bucle de dinero desde cero", "body": "Los ingresos en Doloc Town son compuestos: cada capa multiplica a la anterior. Construye en este orden.",
@@ -7194,11 +7194,11 @@ _EXTRA = {
     {"en": "The Easiest Starter Loop: Fish, Dry, Sell", "heading": "El bucle inicial más fácil: pescar, secar, vender", "body": "La rutina temprana más recomendada por la comunidad: bajo riesgo, sin coste de semillas y financia todo lo demás.",
      "items": [["Consigue la caña gratis", "Haz el tutorial de pesca de Lightman — te da una caña, así empiezas el bucle sin coste."], ["Pesca con clima", "La lluvia y las tormentas traen capturas que los días secos nunca dan — mira antes las tablas de la guía de pesca."], ["Seca en vez de vender crudo", "La secadora añade 10-20% [L2]; el bucle pasa a ser pescar → secar → vender."], ["Mejora la caña cuando puedas", "Una caña nivel 2 (~1.000 monedas) captura todos los peces según la comunidad [L2]."], ["Guarda parejas reproductoras", "13 especies de tanque necesitan padres específicos — guarda sobras, vende el excedente."]]},
     {"en": "Season Timing: Protect Crops and Plan Watering", "heading": "Calendario estacional: protege cultivos y planifica el riego", "body": "Usa el calendario para proteger cultivos y planificar el riego.",
-     "items": ["La sequía (mes 4) daña los cultivos — protege los cultivos antes y vende en la subida.", "La temporada de lluvias (ene-feb) cambia las tablas de peces — pesca las capturas raras mientras duran.", "Las tormentas cargan la energía de tu granja — en el 1.0 reduce los costes de la automatización.", "Planta según la estación — los cultivos fuera de temporada se marchitan; rota con el calendario."]},
+     "items": ["El mes 4 es Harsh Dry Season: protege los cultivos y planifica el riego.", "La temporada de lluvias (ene-feb) cambia las tablas de peces — pesca las capturas raras mientras duran.", "Las tormentas cargan la energía de tu granja — en el 1.0 reduce los costes de la automatización.", "Planta según la estación — los cultivos fuera de temporada se marchitan; rota con el calendario."]},
     {"en": "Common Money Mistakes", "heading": "Errores de dinero comunes", "body": "La comunidad señala estas formas de dejar dinero sobre la mesa: vender todo crudo (te saltas el 10-20% del procesado), no protege los cultivosr antes del mes 4 (proteges los cultivos demasiado tarde del año), saltarte misiones (pierdes Puntos de Tecnología, el multiplicador de ingresos), vender todos los peces (pierdes las parejas de 13 especies de tanque) y retrasar la mochila (horas yendo a casa)."},
     {"en": "Sources & Verification", "heading": "Fuentes y verificación", "body": "Los márgenes del 10-20%, la caña nivel 2 y los consejos del día uno son reportados por la comunidad (L2, p. ej. grindnstrat y discusiones de Steam). Aún no hemos verificado los márgenes exactos en el cliente 1.0 — trata los números como reportados por jugadores y confírmalos en tu partida."},
     {"en": "Quick Answers", "heading": "Respuestas rápidas",
-     "items": [["¿Cuál es la forma más rápida de ganar dinero?", "El consenso de la comunidad es pescar → secar → vender: sin coste de semillas, funciona desde el día uno y la secadora añade 10-20% [L2]."], ["¿Cuánto añade el procesado?", "Encurtir, secar y tejer añaden cada uno un 10-20% por artículo, según la comunidad [L2]."], ["¿Cuándo vendo mi reserva?", "Acumula antes de la sequía del mes 4 y vende en la subida: es el mayor pago del calendario."], ["¿Merece la pena la mochila?", "Sí — el primer nivel casi duplica tus espacios y es la compra inicial más recomendada [L2]."], ["¿Necesito dinero para la automatización?", "Más tarde sí: la energía solar/automatización y las estaciones de drones cuestan materiales y Puntos de Tecnología, así que los ingresos tempranos financian el final del 1.0."]]}
+     "items": [["¿Cuál es la forma más rápida de ganar dinero?", "El consenso de la comunidad es pescar → secar → vender: sin coste de semillas, funciona desde el día uno y la secadora añade 10-20% [L2]."], ["¿Cuánto añade el procesado?", "Encurtir, secar y tejer añaden cada uno un 10-20% por artículo, según la comunidad [L2]."], ["¿Cómo me preparo para el mes 4?", "Antes del mes 4, protege los cultivos y planifica el riego."], ["¿Merece la pena la mochila?", "Sí — el primer nivel casi duplica tus espacios y es la compra inicial más recomendada [L2]."], ["¿Necesito dinero para la automatización?", "Más tarde sí: la energía solar/automatización y las estaciones de drones cuestan materiales y Puntos de Tecnología, así que los ingresos tempranos financian el final del 1.0."]]}
    ]
   }
  }
@@ -7406,78 +7406,6 @@ for _slug in ("weather","make-money"):
     _p["metaDescription"] = _seo["en"][_slug]
     for _lg in ("zh-CN","zh-TW","ja","ko","es"):
         _p["i18n"][_lg]["metaDescription"] = _seo[_lg][_slug]
-
-# P0 factual remediation: legacy source blocks contain translated Month-4
-# trading claims in tables, FAQ JSON-LD inputs, SEO copy and body text. Strip
-# those assertions at the final source-of-truth boundary, while preserving the
-# supported official name and the crop-protection / watering guidance.
-_drought_replacements = {
- "en": [
-  (r"Start stockpiling before Month 4", "Prepare crop protection before Month 4"),
-  (r"sell into the drought spike", "plan early priorities"),
-  (r"not stockpiling before Month 4 \(you sell at the worst prices of the year\)", "not protecting crops and planning watering before Month 4"),
-  (r"When should I sell my stockpile\?", "How should I prepare for Month 4?"),
- ],
- "zh-CN": [
-  (r"4 月前囤货", "4 月前准备作物防护"), (r"旱季物价让小额囤货非常划算", "旱季前的作物防护和浇水准备很重要"),
-  (r"物价飙升", "进入 Harsh Dry Season"), (r"囤货，高价卖出", "保护作物，规划浇水"),
- ],
- "zh-TW": [
-  (r"4 月前囤貨", "4 月前準備作物防護"), (r"旱季物價讓小額囤貨非常划算", "旱季前的作物防護和澆水準備很重要"),
-  (r"物價飆升", "進入 Harsh Dry Season"), (r"囤貨，高價賣出", "保護作物，規劃澆水"),
- ],
- "ja": [
-  (r"4月前に作物保護を準備し、高騰期に売る", "4月前に作物保護と水やりを準備する"),
-  (r"4月前に何も作物保護を準備しない（一年で最悪の価格で売る）", "4月前に作物保護と水やりを準備しない"),
-  (r"作物が枯れ、物価が高騰", "Harsh Dry Season で作物保護が必要"),
-  (r"商店価格が高騰", "作物保護と水やりが必要"),
-  (r"4月の干ばつ前に作物保護を準備 — 価格が高騰", "4月の Harsh Dry Season 前に作物保護と水やりを準備"),
-  (r"加工で\+10-20%、釣りと乾燥、4月の干ばつ前の作物保護を準備と高値売り", "加工で+10-20%、釣りと乾燥、4月前の作物保護と水やり"),
-  (r"作物保護を準備はいつ売る？", "4月にどう備える？"),
-  (r"4月の干ばつ前に作物保護を準備し、作物への負担時に売る——カレンダー最大の払い出し。", "4月の Harsh Dry Season 前に作物保護と水やりを準備する。"),
-  (r"干ばつ月（4月）は作物が枯れ、価格が高騰。干ばつ前に作物保護を準備し、その間に水やりを計画る。", "第4月は Harsh Dry Season。事前に作物保護と水やりを準備する。"),
- ],
- "ko": [
-  (r"4월 전 작물 보호 준비, 급등기에 판매", "4월 전 작물 보호와 물주기 준비"),
-  (r"4월 전에 아무것도 작물 보호 준비 안 함\(1년 중 최악의 가격에 판매\)", "4월 전에 작물 보호와 물주기를 준비하지 않음"),
-  (r"4월 가뭄 전 작물 보호 준비 후 고가 판매", "4월 전 작물 보호와 물주기 준비"),
-  (r"가뭄\(4월\)에 작물 부담 증가 — 그 전에 작물 보호 준비하고 급등기에 판매", "4번째 달은 Harsh Dry Season — 그 전에 작물 보호와 물주기를 준비"),
-  (r"4월 전 작물 보호 준비 안 함\(연중 최악의 가격으로 판매\)", "4월 전 작물 보호와 물주기를 준비하지 않음"),
-  (r"작물 보호 준비물은 언제 팔아야 하나요\?", "4번째 달에 어떻게 대비하나요?"),
-  (r"4월 가뭄 전에 작물 보호 준비하고 작물 부담 증가기에 판매 — 달력에서 가장 큰 수익 기회입니다.", "4번째 달 Harsh Dry Season 전에 작물 보호와 물주기를 준비하세요."),
- ],
- "es": [
-  (r"vende en la subida de la sequía", "prepara protección y riego para el mes 4"),
-  (r"La sequía \(mes 4\) daña los cultivos — protege los cultivos antes y vende en la subida.", "El mes 4 es Harsh Dry Season: protege los cultivos y planifica el riego."),
-  (r"Acumula antes de la sequía del mes 4 y vende en la subida: es el mayor pago del calendario.", "Antes del mes 4, prepara protección para los cultivos y planifica el riego."),
-  (r"Acumula antes del mes 4 y vende durante la presión sobre cultivos.", "Protege los cultivos y planifica el riego antes del mes 4."),
-  (r"Acumula antes de la sequía y vende durante ella.", "Protege los cultivos y planifica el riego antes de Harsh Dry Season."),
-  (r"Los cultivos se marchitan y los precios se disparan", "Los cultivos necesitan protección y riego planificado"),
-  (r"Los cultivos se marchitan y los precios suben", "Los cultivos necesitan protección y riego planificado"),
-  (r"Acumula reservas antes de la sequía de abril — los precios suben y los cultivos se marchitan", "Prepara protección para cultivos y planifica el riego antes de Harsh Dry Season"),
-  (r"Vende tus reservas a los precios más altos del año", "Protege los cultivos y planifica el riego"),
-  (r"Vende reservas a los precios más altos del año", "Protege los cultivos y planifica el riego"),
-  (r"Acumula y planifica el riego", "Protege los cultivos y planifica el riego"),
-  (r"Acumula reservas antes de la sequía y planifica el riego durante ella", "Protege los cultivos y planifica el riego antes de Harsh Dry Season"),
-  (r"Acumula, planifica el riego", "Protege los cultivos y planifica el riego"),
-  (r"Acumula bienes antes del mes 4 y véndelos durante la presión sobre cultivos", "Protege los cultivos y planifica el riego antes del mes 4"),
-  (r"Marchitez y precios altos", "Harsh Dry Season"),
- ],
-}
-def _replace_strings(node, lang):
-    if isinstance(node, str):
-        for _pattern, _replacement in _drought_replacements[lang]:
-            node = re.sub(_pattern, _replacement, node, flags=re.IGNORECASE)
-        return node
-    if isinstance(node, list): return [_replace_strings(x, lang) for x in node]
-    if isinstance(node, dict): return {k:_replace_strings(v, lang) for k,v in node.items()}
-    return node
-for _p in d["pages"]:
-    _base = {k:v for k,v in _p.items() if k != "i18n"}
-    _base = _replace_strings(_base, "en")
-    for _k,_v in _base.items(): _p[_k]=_v
-    for _lg in ("zh-CN","zh-TW","ja","ko","es"):
-        if _lg in _p.get("i18n", {}): _p["i18n"][_lg]=_replace_strings(_p["i18n"][_lg], _lg)
 
 _auto_meta = {
  "zh-CN":("多洛可小镇农业自动化与无人机（1.0）","多洛可小镇 1.0 两阶段农业自动化、任务分配及 1.00.03 无人机已知问题。"),
