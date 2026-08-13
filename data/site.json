@@ -13993,15 +13993,15 @@
      "sections": [
       {
        "type": "note",
-       "tag": "TRANSLATION",
-       "heading": "Traducción del sitio",
-       "body": "Esta página es una traducción editorial del sitio. Los términos del juego se mantienen en inglés cuando no se ha verificado una cadena oficial localizada; no implica que el cliente de Doloc Town tenga soporte oficial en español."
-      },
-      {
-       "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Advertencia oficial antes de instalar mods funcionales",
        "body": "Reemplazar contenido en Steam Workshop no equivale a un sistema de mods funcionales compatible. El desarrollador dice que la arquitectura de Workshop no los admite y que pueden causar pantalla negra o bloqueos. Para diagnosticar, elimina BepInEx y prueba el juego limpio. La compatibilidad de DTMAPI con 1.0 no está garantizada."
+      },
+      {
+       "type": "note",
+       "tag": "TRANSLATION",
+       "heading": "Traducción del sitio",
+       "body": "Esta página es una traducción editorial del sitio. Los términos del juego se mantienen en inglés cuando no se ha verificado una cadena oficial localizada; no implica que el cliente de Doloc Town tenga soporte oficial en español."
       },
       {
        "type": "list",

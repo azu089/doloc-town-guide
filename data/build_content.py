@@ -7440,7 +7440,9 @@ for _p in d["pages"]:
     if not _es: continue
     _es.setdefault("sections", copy.deepcopy(_p.get("sections", [])))
     _es["sections"] = [s for s in _es["sections"] if s.get("tag") != "TRANSLATION"]
-    _es["sections"].insert(0, copy.deepcopy(_es_notice))
+    # The mods safety warning is contractually first in every locale. Keep the
+    # Spanish translation boundary immediately after it on that one page.
+    _es["sections"].insert(1 if _p["slug"] == "mods" else 0, copy.deepcopy(_es_notice))
 
 # ---------- write site.json ----------
 d["site"]["languages"] = ["en","zh-CN","zh-TW","ja","ko","es"]
