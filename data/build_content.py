@@ -7414,6 +7414,21 @@ def _rewrite_strings(obj):
     return obj
 d = _rewrite_strings(d)
 
+_season_fallback = {
+ "zh-CN":"Harsh Dry Season 是第 4 月。请提前保护作物并规划浇水；当前引用的官方来源不支持价格暴涨或倒卖策略。",
+ "zh-TW":"Harsh Dry Season 是第 4 月。請提前保護作物並規劃澆水；目前引用的官方來源不支援價格暴漲或倒賣策略。",
+ "ja":"Harsh Dry Season は第4月です。作物保護と水やりを準備してください。引用した公式情報は価格急騰や売買攻略を裏付けていません。",
+ "ko":"Harsh Dry Season은 네 번째 달입니다. 작물 보호와 물주기를 준비하세요. 인용한 공식 자료는 가격 급등이나 거래 전략을 뒷받침하지 않습니다.",
+ "es":"Harsh Dry Season es el mes 4. Prepara protección y riego; las fuentes oficiales citadas no respaldan una subida de precios ni una estrategia de compraventa.",
+}
+_season_en = "Harsh Dry Season is Month 4. Protect crops and plan watering; the cited official sources do not establish a price spike or trading strategy."
+for _p in d["pages"]:
+    for _lg, _t in (_p.get("i18n") or {}).items():
+        for _sec in _t.get("sections", []):
+            for _key in ("heading", "body"):
+                if _sec.get(_key) == _season_en:
+                    _sec[_key] = _season_fallback.get(_lg, _season_en)
+
 # Spanish is an editorial translation of the official-source facts. Do not
 # imply that the current game client has an official Spanish localization.
 _es_notice = {
