@@ -114,6 +114,117 @@ try {
     if (!hit || hit.locale!==locale) fail(`fault-injection-${locale}`,hit?`misclassified:${hit.locale}`:"not detected");
   }
   for (const [locale,fixture] of Object.entries(safeBoundaries)) if(droughtHit(fixture)) fail(`boundary-false-positive-${locale}`,fixture);
+  // ---------- G4 privacy / commercial disclosure (six locales) ----------
+  // Every privacy page must disclose the provider scripts actually injected
+  // into that same HTML (GA4 / Google AdSense / Adsterra-effectivecpmnetwork),
+  // must disclose the data categories and purposes, must give cookie controls
+  // and provider policy links, and must not contain absolute anonymous /
+  // no-PII wording or an invented consent state. Fault injection per locale
+  // proves each check can fail (non-zero exit), so a vacuous assertion is
+  // itself a failure.
+  const privacyLocales = ["en", "zh-CN", "zh-TW", "ja", "ko", "es"];
+  const privacyRel = lang => lang === "en" ? "privacy.html" : `${lang}/privacy.html`;
+  const INJECTED_PROVIDERS = {
+    ga4: /googletagmanager\.com\/gtag\/js/,
+    adsense: /googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/,
+    adsterra: /effectivecpmnetwork\.com/
+  };
+  const DISCLOSED_PROVIDERS = {
+    ga4: ["Google Analytics", "GA4"],
+    adsense: ["Google AdSense"],
+    adsterra: ["Adsterra", "effectivecpmnetwork"]
+  };
+  const ABSOLUTE_PATTERNS = {
+    en: [/\banonymous\b/i, /\bpersonally identifiable information\b/i, /do not collect (?:names?|email)/i],
+    "zh-CN": [/匿名/, /个人身份信息/, /不收集任何个人/],
+    "zh-TW": [/匿名/, /個人身分資訊/, /不收集任何個人/],
+    ja: [/匿名/, /個人情報は収集/, /個人情報を収集/],
+    ko: [/익명/, /개인 식별 정보/, /개인정보를 수집/],
+    es: [/anónim/i, /información personal identificable/i, /no recopilamos (?:nombres|correos)/i]
+  };
+  const AFFIRMATIVE_CONSENT = {
+    en: /(?:we|this site|our site)[^.\n]{0,40}(?:have|has) (?:obtained|received) (?:your )?consent/i,
+    "zh-CN": /已(?:获得|取得)您的同意/,
+    "zh-TW": /已(?:獲得|取得)您的同意/,
+    ja: /同意を得(?:ました|ています|ております)/,
+    ko: /동의를 (?:받았습니다|획득했습니다)/,
+    es: /hemos obtenido tu consentimiento|se ha obtenido consentimiento/i
+  };
+  const PURPOSE_PATTERNS = {
+    en: /analytics.{0,40}advertising|advertising.{0,40}analytics/is,
+    "zh-CN": /分析.{0,40}(?:广告|廣告)/,
+    "zh-TW": /分析.{0,40}(?:廣告|广告)/,
+    ja: /分析.{0,40}広告/,
+    ko: /분석.{0,40}광고/,
+    es: /análisis.{0,40}publicidad|publicidad.{0,40}análisis/is
+  };
+  const OPT_OUT_URL = "https://tools.google.com/dlpage/gaoptout";
+  const POLICY_URLS = [
+    "https://policies.google.com/privacy",
+    "https://adsterra.com/privacy-policy/",
+    "https://developers.google.com/fonts/faq",
+    "https://www.cloudflare.com/privacypolicy/"
+  ];
+  // Absolute-wording checks run on visible prose (scripts/styles/tags and their
+  // attributes stripped) plus the meta description. This avoids false positives
+  // from attributes such as the AdSense script's crossorigin="anonymous" while
+  // still catching claims inside the indexed meta description.
+  const privacyTextOf = html => html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&[a-z]+;/gi, " ")
+    .replace(/\s+/g, " ").trim();
+  const metaDescOf = html => (html.match(/<meta\s+name="description"\s+content="([^"]*)"/i) || [, ""])[1];
+  const checkPrivacy = (lang, html) => {
+    const out = [];
+    for (const [name, re] of Object.entries(INJECTED_PROVIDERS)) if (!re.test(html)) out.push(`injected-${name}-missing`);
+    const prose = privacyTextOf(html);
+    const desc = metaDescOf(html);
+    for (const [name, tokens] of Object.entries(DISCLOSED_PROVIDERS)) {
+      for (const token of tokens) if (!prose.includes(token)) out.push(`disclose-${name}-missing:${token}`);
+    }
+    for (const re of ABSOLUTE_PATTERNS[lang]) {
+      if (re.test(prose) || re.test(desc)) out.push(`forbidden-absolute:${re}`);
+    }
+    if (!PURPOSE_PATTERNS[lang].test(prose)) out.push("purpose-missing");
+    if (!html.includes(OPT_OUT_URL)) out.push("ga-optout-missing");
+    for (const url of POLICY_URLS) if (!html.includes(url)) out.push(`policy-link-missing:${url}`);
+    if (AFFIRMATIVE_CONSENT[lang].test(prose)) out.push("forbidden-consent-claim");
+    return out;
+  };
+  const ABSOLUTE_FIXTURES = {
+    en: " We collect anonymous data and no personally identifiable information.",
+    "zh-CN": " 我们收集匿名数据，不收集任何个人身份信息。",
+    "zh-TW": " 我們收集匿名資料，不收集任何個人身分資訊。",
+    ja: " 匿名データを収集し、個人情報は一切収集しません。",
+    ko: " 익명 데이터를 수집하며 개인 식별 정보를 수집하지 않습니다.",
+    es: " Recopilamos datos anónimos y ninguna información personal identificable."
+  };
+  const CONSENT_FIXTURES = {
+    en: " We have obtained your consent for third-party tracking.",
+    "zh-CN": " 我们已获得您的同意进行第三方跟踪。",
+    "zh-TW": " 我們已獲得您的同意進行第三方追蹤。",
+    ja: " 第三者によるトラッキングについて同意を得ました。",
+    ko: " 제3자 추적에 대해 동의를 받았습니다.",
+    es: " Hemos obtenido tu consentimiento para el rastreo de terceros."
+  };
+  for (const lang of privacyLocales) {
+    const rel = privacyRel(lang);
+    const file = path.join(disabled, rel);
+    if (!fs.existsSync(file)) { fail("privacy-page-missing", rel); continue; }
+    const html = fs.readFileSync(file, "utf8");
+    for (const code of checkPrivacy(lang, html)) fail(code, `${rel}:${code}`);
+    // Fault injection: each language must prove the assertions can fail.
+    const dropped = html.replace(/AdSense/g, "AD-REPLACED");
+    const dropFaults = checkPrivacy(lang, dropped).filter(c => c.startsWith("disclose-adsense"));
+    if (!dropFaults.length) fail("privacy-fault-provider", `${rel}:dropping AdSense was not detected`);
+    const anonFaults = checkPrivacy(lang, html + ABSOLUTE_FIXTURES[lang]).filter(c => c.startsWith("forbidden-absolute"));
+    if (!anonFaults.length) fail("privacy-fault-absolute", `${rel}:absolute wording was not detected`);
+    const consentFaults = checkPrivacy(lang, html + CONSENT_FIXTURES[lang]).filter(c => c.startsWith("forbidden-consent"));
+    if (!consentFaults.length) fail("privacy-fault-consent", `${rel}:invented consent was not detected`);
+  }
+
 } finally { fs.rmSync(disabled,{recursive:true,force:true}); fs.rmSync(enabled,{recursive:true,force:true}); }
 console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),failures},null,2));
 process.exit(failures.length?1:0);
