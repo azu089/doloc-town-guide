@@ -7407,6 +7407,78 @@ for _slug in ("weather","make-money"):
     for _lg in ("zh-CN","zh-TW","ja","ko","es"):
         _p["i18n"][_lg]["metaDescription"] = _seo[_lg][_slug]
 
+# P0 factual remediation: legacy source blocks contain translated Month-4
+# trading claims in tables, FAQ JSON-LD inputs, SEO copy and body text. Strip
+# those assertions at the final source-of-truth boundary, while preserving the
+# supported official name and the crop-protection / watering guidance.
+_drought_replacements = {
+ "en": [
+  (r"Start stockpiling before Month 4", "Prepare crop protection before Month 4"),
+  (r"sell into the drought spike", "plan early priorities"),
+  (r"not stockpiling before Month 4 \(you sell at the worst prices of the year\)", "not protecting crops and planning watering before Month 4"),
+  (r"When should I sell my stockpile\?", "How should I prepare for Month 4?"),
+ ],
+ "zh-CN": [
+  (r"4 月前囤货", "4 月前准备作物防护"), (r"旱季物价让小额囤货非常划算", "旱季前的作物防护和浇水准备很重要"),
+  (r"物价飙升", "进入 Harsh Dry Season"), (r"囤货，高价卖出", "保护作物，规划浇水"),
+ ],
+ "zh-TW": [
+  (r"4 月前囤貨", "4 月前準備作物防護"), (r"旱季物價讓小額囤貨非常划算", "旱季前的作物防護和澆水準備很重要"),
+  (r"物價飆升", "進入 Harsh Dry Season"), (r"囤貨，高價賣出", "保護作物，規劃澆水"),
+ ],
+ "ja": [
+  (r"4月前に作物保護を準備し、高騰期に売る", "4月前に作物保護と水やりを準備する"),
+  (r"4月前に何も作物保護を準備しない（一年で最悪の価格で売る）", "4月前に作物保護と水やりを準備しない"),
+  (r"作物が枯れ、物価が高騰", "Harsh Dry Season で作物保護が必要"),
+  (r"商店価格が高騰", "作物保護と水やりが必要"),
+  (r"4月の干ばつ前に作物保護を準備 — 価格が高騰", "4月の Harsh Dry Season 前に作物保護と水やりを準備"),
+  (r"加工で\+10-20%、釣りと乾燥、4月の干ばつ前の作物保護を準備と高値売り", "加工で+10-20%、釣りと乾燥、4月前の作物保護と水やり"),
+  (r"作物保護を準備はいつ売る？", "4月にどう備える？"),
+  (r"4月の干ばつ前に作物保護を準備し、作物への負担時に売る——カレンダー最大の払い出し。", "4月の Harsh Dry Season 前に作物保護と水やりを準備する。"),
+  (r"干ばつ月（4月）は作物が枯れ、価格が高騰。干ばつ前に作物保護を準備し、その間に水やりを計画る。", "第4月は Harsh Dry Season。事前に作物保護と水やりを準備する。"),
+ ],
+ "ko": [
+  (r"4월 전 작물 보호 준비, 급등기에 판매", "4월 전 작물 보호와 물주기 준비"),
+  (r"4월 전에 아무것도 작물 보호 준비 안 함\(1년 중 최악의 가격에 판매\)", "4월 전에 작물 보호와 물주기를 준비하지 않음"),
+  (r"4월 가뭄 전 작물 보호 준비 후 고가 판매", "4월 전 작물 보호와 물주기 준비"),
+  (r"가뭄\(4월\)에 작물 부담 증가 — 그 전에 작물 보호 준비하고 급등기에 판매", "4번째 달은 Harsh Dry Season — 그 전에 작물 보호와 물주기를 준비"),
+  (r"4월 전 작물 보호 준비 안 함\(연중 최악의 가격으로 판매\)", "4월 전 작물 보호와 물주기를 준비하지 않음"),
+  (r"작물 보호 준비물은 언제 팔아야 하나요\?", "4번째 달에 어떻게 대비하나요?"),
+  (r"4월 가뭄 전에 작물 보호 준비하고 작물 부담 증가기에 판매 — 달력에서 가장 큰 수익 기회입니다.", "4번째 달 Harsh Dry Season 전에 작물 보호와 물주기를 준비하세요."),
+ ],
+ "es": [
+  (r"vende en la subida de la sequía", "prepara protección y riego para el mes 4"),
+  (r"La sequía \(mes 4\) daña los cultivos — protege los cultivos antes y vende en la subida.", "El mes 4 es Harsh Dry Season: protege los cultivos y planifica el riego."),
+  (r"Acumula antes de la sequía del mes 4 y vende en la subida: es el mayor pago del calendario.", "Antes del mes 4, prepara protección para los cultivos y planifica el riego."),
+  (r"Acumula antes del mes 4 y vende durante la presión sobre cultivos.", "Protege los cultivos y planifica el riego antes del mes 4."),
+  (r"Acumula antes de la sequía y vende durante ella.", "Protege los cultivos y planifica el riego antes de Harsh Dry Season."),
+  (r"Los cultivos se marchitan y los precios se disparan", "Los cultivos necesitan protección y riego planificado"),
+  (r"Los cultivos se marchitan y los precios suben", "Los cultivos necesitan protección y riego planificado"),
+  (r"Acumula reservas antes de la sequía de abril — los precios suben y los cultivos se marchitan", "Prepara protección para cultivos y planifica el riego antes de Harsh Dry Season"),
+  (r"Vende tus reservas a los precios más altos del año", "Protege los cultivos y planifica el riego"),
+  (r"Vende reservas a los precios más altos del año", "Protege los cultivos y planifica el riego"),
+  (r"Acumula y planifica el riego", "Protege los cultivos y planifica el riego"),
+  (r"Acumula reservas antes de la sequía y planifica el riego durante ella", "Protege los cultivos y planifica el riego antes de Harsh Dry Season"),
+  (r"Acumula, planifica el riego", "Protege los cultivos y planifica el riego"),
+  (r"Acumula bienes antes del mes 4 y véndelos durante la presión sobre cultivos", "Protege los cultivos y planifica el riego antes del mes 4"),
+  (r"Marchitez y precios altos", "Harsh Dry Season"),
+ ],
+}
+def _replace_strings(node, lang):
+    if isinstance(node, str):
+        for _pattern, _replacement in _drought_replacements[lang]:
+            node = re.sub(_pattern, _replacement, node, flags=re.IGNORECASE)
+        return node
+    if isinstance(node, list): return [_replace_strings(x, lang) for x in node]
+    if isinstance(node, dict): return {k:_replace_strings(v, lang) for k,v in node.items()}
+    return node
+for _p in d["pages"]:
+    _base = {k:v for k,v in _p.items() if k != "i18n"}
+    _base = _replace_strings(_base, "en")
+    for _k,_v in _base.items(): _p[_k]=_v
+    for _lg in ("zh-CN","zh-TW","ja","ko","es"):
+        if _lg in _p.get("i18n", {}): _p["i18n"][_lg]=_replace_strings(_p["i18n"][_lg], _lg)
+
 _auto_meta = {
  "zh-CN":("多洛可小镇农业自动化与无人机（1.0）","多洛可小镇 1.0 两阶段农业自动化、任务分配及 1.00.03 无人机已知问题。"),
  "zh-TW":("多洛可小鎮農業自動化與無人機（1.0）","多洛可小鎮 1.0 兩階段農業自動化、任務分配及 1.00.03 無人機已知問題。"),
