@@ -179,6 +179,24 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
 /* 联盟披露（FTC）：只在页面含计佣链接时输出。ul 是 flex，这里要 width:100% 另起一行 */
 .aff-note{width:100%;margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);color:var(--muted);font-size:.76rem;line-height:1.6}
 
+/* commercial funnel experiment: neutral store comparison + selected entry cards */
+.store-compare{border:1px solid rgba(127,176,105,.32);border-radius:var(--radius);padding:22px 24px;margin-bottom:22px;background:linear-gradient(145deg,rgba(127,176,105,.11),rgba(34,48,31,.92) 62%,rgba(217,119,6,.07))}
+.store-compare h2{font-family:var(--display);font-size:1.55rem;line-height:1.2;margin:12px 0 7px}
+.store-intro{color:var(--muted);font-size:.9rem;max-width:68ch}
+.store-grid{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+.store-card{display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0;padding:15px;border:1px solid var(--line);border-radius:11px;background:rgba(22,33,26,.68)}
+.store-card.is-partner{border-color:rgba(240,180,87,.38);background:linear-gradient(145deg,rgba(217,119,6,.09),rgba(22,33,26,.72))}
+.store-card b{font-size:.96rem;color:var(--text)}
+.store-card a{font-size:.82rem;border-bottom:1px dashed rgba(127,176,105,.5)}
+.store-card a:hover{color:var(--amber-soft);border-bottom-color:var(--amber-soft)}
+.store-card a:focus-visible,.buy-entry a:focus-visible{outline:2px solid var(--amber-soft);outline-offset:4px;border-radius:4px}
+.store-kind{font-family:var(--mono);font-size:.62rem;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-soft)}
+.buy-entry{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;border:1px solid rgba(127,176,105,.34);border-radius:var(--radius-sm);padding:17px 18px;margin:26px 0 4px;background:linear-gradient(135deg,rgba(127,176,105,.11),rgba(22,33,26,.7))}
+.buy-entry b{display:block;font-family:var(--display);font-size:1.05rem;line-height:1.3}
+.buy-entry p{color:var(--muted);font-size:.82rem;line-height:1.5;margin-top:3px}
+.buy-entry .btn-secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:9px;padding:9px 13px;color:var(--text);background:rgba(127,176,105,.09);border:1px solid rgba(127,176,105,.4);font-size:.82rem;font-weight:700;line-height:1.25;white-space:nowrap;transition:background .15s,color .15s,border-color .15s,transform .15s}
+.buy-entry .btn-secondary:hover{color:#16211A;background:var(--sprout);border-color:var(--sprout);transform:translateY(-1px)}
+
 /* sidebar */
 .related{border:1px solid var(--line);border-radius:var(--radius-sm);padding:16px;background:rgba(255,255,255,.02)}
 .related> b{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-soft);margin-bottom:10px}
@@ -212,6 +230,9 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
   .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .footer-cols{grid-template-columns:1fr}
   .container{padding:0 16px}
+  .store-grid{grid-template-columns:1fr}
+  .buy-entry{grid-template-columns:1fr;align-items:start}
+  .buy-entry .btn{justify-self:start}
 }
 @media (max-width:420px){
   .logo-txt{font-size:.9rem}

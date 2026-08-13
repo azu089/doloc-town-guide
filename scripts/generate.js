@@ -70,6 +70,87 @@ const siteI18n = lang => {
   };
 };
 
+/* ---------- commercial funnel experiment (2026-08-13) ----------
+ * Keep this intentionally narrow: only the seven approved high-engagement
+ * entry pages get a purchase-guide link, while the comparison itself appears
+ * only on where-to-buy. Store URLs come from the page's existing source list.
+ */
+const BUY_ENTRY_PAGES = new Set([
+  "en:cooking", "en:fishing", "en:gifts", "en:mods",
+  "ko:cooking", "ko:fishing", "ko:exploration",
+]);
+const BUY_UI = {
+  "en":    { entryTag:"BUYING GUIDE", entryTitle:"Ready to buy Doloc Town?", entryBody:"Compare the available store links before you choose where to buy.", entryCta:"Compare stores →",
+             title:"Compare places to buy", intro:"Open a store to check its current price and availability. Prices are not copied here because they can change.",
+             steam:"Steam store", store:"Store link", compare:"Price comparison", partner:"Partner link", cta:"Check current offer ↗" },
+  "zh-CN": { entryTag:"购买指南", entryTitle:"准备购买《多洛可小镇》？", entryBody:"购买前对比现有商店链接，再决定从哪里购买。", entryCta:"对比商店 →",
+             title:"对比购买渠道", intro:"打开商店查看当前价格与库存。价格可能变化，因此这里不复制价格。",
+             steam:"Steam 商店", store:"商店链接", compare:"价格对比", partner:"合作伙伴链接", cta:"查看当前信息 ↗" },
+  "zh-TW": { entryTag:"購買指南", entryTitle:"準備購買《多洛可小鎮》？", entryBody:"購買前比較現有商店連結，再決定從哪裡購買。", entryCta:"比較商店 →",
+             title:"比較購買管道", intro:"開啟商店查看目前價格與供應情況。價格可能變動，因此這裡不複製價格。",
+             steam:"Steam 商店", store:"商店連結", compare:"價格比較", partner:"合作夥伴連結", cta:"查看目前資訊 ↗" },
+  "ja":    { entryTag:"購入ガイド", entryTitle:"Doloc Town を購入しますか？", entryBody:"購入先を決める前に、利用できるストアリンクを比較できます。", entryCta:"ストアを比較 →",
+             title:"購入先を比較", intro:"各ストアで現在の価格と在庫状況を確認してください。変動するため、価格はここに転載していません。",
+             steam:"Steam ストア", store:"ストアリンク", compare:"価格比較", partner:"パートナーリンク", cta:"現在の情報を確認 ↗" },
+  "ko":    { entryTag:"구매 가이드", entryTitle:"Doloc Town을 구매할 준비가 됐나요?", entryBody:"구매처를 정하기 전에 이용 가능한 스토어 링크를 비교해 보세요.", entryCta:"스토어 비교 →",
+             title:"구매처 비교", intro:"각 스토어에서 현재 가격과 판매 여부를 확인하세요. 정보가 바뀔 수 있어 가격은 이 페이지에 복사하지 않습니다.",
+             steam:"Steam 스토어", store:"스토어 링크", compare:"가격 비교", partner:"파트너 링크", cta:"현재 정보 확인 ↗" },
+  "es":    { entryTag:"GUÍA DE COMPRA", entryTitle:"¿Listo para comprar Doloc Town?", entryBody:"Compara los enlaces disponibles antes de elegir dónde comprar.", entryCta:"Comparar tiendas →",
+             title:"Compara dónde comprar", intro:"Abre cada tienda para consultar su precio y disponibilidad actuales. No copiamos precios porque pueden cambiar.",
+             steam:"Tienda de Steam", store:"Enlace de tienda", compare:"Comparación de precios", partner:"Enlace de socio", cta:"Ver información actual ↗" },
+};
+const buyUi = lang => BUY_UI[lang] || BUY_UI.en;
+
+function sourceByHost(page, hostname) {
+  return (page.sources || []).find(source => {
+    try { return new URL(source.url).hostname.replace(/^www\./, "") === hostname; }
+    catch (_) { return false; }
+  });
+}
+
+function renderStoreComparison(lang, page) {
+  if (page.slug !== "where-to-buy") return "";
+  const u = buyUi(lang);
+  const stores = [
+    ["store.steampowered.com", "Steam", "steam"],
+    ["humblebundle.com", "Humble Store", "store"],
+    ["greenmangaming.com", "Green Man Gaming", "store"],
+    ["gamersgate.com", "GamersGate", "partner"],
+    ["isthereanydeal.com", "IsThereAnyDeal", "compare"],
+  ].map(([host, name, kind]) => {
+    const source = sourceByHost(page, host);
+    if (!source) return "";
+    const partner = AFF.isPartner(source.url);
+    const label = partner ? u.partner : u[kind];
+    return `<li class="store-card${partner ? " is-partner" : ""}">
+      <span class="store-kind">${esc(label)}</span>
+      <b>${esc(name)}</b>
+      ${AFF.anchor({ url: source.url, text: u.cta })}
+    </li>`;
+  }).join("");
+  const trackedUrls = (page.sources || []).map(source => source.url);
+  const disclosure = AFF.needsDisclosure(trackedUrls)
+    ? `<p class="aff-note">${esc(KIT.affiliateDisclosure(lang))}</p>` : "";
+  return `<section class="store-compare reveal" aria-labelledby="store-compare-title">
+    <span class="furrow-tag">${esc(u.entryTag)}</span>
+    <h2 id="store-compare-title">${esc(u.title)}</h2>
+    <p class="store-intro">${esc(u.intro)}</p>
+    <ul class="store-grid">${stores}</ul>
+    ${disclosure}
+  </section>`;
+}
+
+function renderBuyEntry(lang, page) {
+  if (!BUY_ENTRY_PAGES.has(`${lang}:${page.slug}`)) return "";
+  const u = buyUi(lang);
+  const prefix = lang === DEF ? "" : `/${lang}`;
+  return `<aside class="buy-entry reveal" aria-label="${esc(u.entryTag)}">
+    <span class="furrow-tag">${esc(u.entryTag)}</span>
+    <div><b>${esc(u.entryTitle)}</b><p>${esc(u.entryBody)}</p></div>
+    <a class="btn btn-secondary" href="${prefix}/where-to-buy">${esc(u.entryCta)}</a>
+  </aside>`;
+}
+
 /* ---------- 鱼类筛选器文案（6 语） ----------
  * 术语全部沿用 data 层已有译法（水核心/竹竿/钓点…），不另造词。
  * 地点分组（池塘/码头海域/浅滩/洞穴）是对已有钓点字段的归类，不是新事实。
@@ -341,6 +422,55 @@ function header(lang, active){
   </div>
 </header>`;
 }
+/**
+ * Doloc-specific decision events for this experiment.
+ * A commercial exit is an affiliate click only when the rendered anchor is
+ * explicitly marked sponsored by the active affiliate configuration. This
+ * avoids counting ordinary Humble/GMG store links as commissionable traffic.
+ */
+function decisionEventsScript() {
+  return `<script>
+(function(){
+  function send(name, params){
+    if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+  }
+  function toolRoot(el){
+    return el && el.closest && el.closest('.ff,.ach,.tool-shell,.tool-panel,.tracker,[data-tool]');
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (a) {
+      try {
+        var u = new URL(a.href, location.href);
+        if (u.origin !== location.origin) {
+          var affiliate = /(^|\\s)sponsored(\\s|$)/.test(a.rel || '');
+          send(affiliate ? 'affiliate_click' : 'outbound_click', {
+            link_domain: u.hostname,
+            link_url: u.origin + u.pathname,
+            page_path: location.pathname
+          });
+        }
+      } catch (_) {}
+    }
+    var root = toolRoot(e.target);
+    var control = e.target.closest && e.target.closest('button,[role="button"]');
+    if (root && control) send('tool_interaction', {
+      tool_name: root.getAttribute('data-tool') || root.id || (root.className || '').toString().split(/\\s+/)[0] || 'interactive_tool',
+      interaction_type: control.type || control.tagName.toLowerCase(),
+      page_path: location.pathname
+    });
+  });
+  document.addEventListener('change', function(e){
+    var root = toolRoot(e.target);
+    if (root && /^(INPUT|SELECT)$/.test(e.target.tagName)) send('tool_interaction', {
+      tool_name: root.getAttribute('data-tool') || root.id || (root.className || '').toString().split(/\\s+/)[0] || 'interactive_tool',
+      interaction_type: e.target.type || e.target.tagName.toLowerCase(),
+      page_path: location.pathname
+    });
+  });
+})();
+</script>`;
+}
 function footer(lang){
   const s = siteI18n(lang);
   const prefix = lang === DEF ? "" : `/${lang}`;
@@ -364,7 +494,7 @@ function footer(lang){
     </div>
     ${DATA.site.adsenseId ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(DATA.site.adsenseId)}" crossorigin="anonymous"></script>` : ""}\n    ${DATA.site.adsterra ? DATA.site.adsterra : ""}
   </div>
-${KIT.decisionEventsScript()}
+${decisionEventsScript()}
 <script>
 document.addEventListener('click', function(e){
   document.querySelectorAll('details.dd[open], details.lang-dd[open]').forEach(function(d){
@@ -788,7 +918,9 @@ function renderPage(lang, page){
     <div class="manual-grid">
       <div class="manual-main">
         ${toc ? `<nav class="toc reveal"><b class="toc-title">${esc(s.updated)}</b>${toc}</nav>` : ""}
+        ${renderStoreComparison(lang, page)}
         ${sections2}
+        ${renderBuyEntry(lang, page)}
         ${renderAmazonAffiliate(lang)}
         ${sources ? `<div class="sources reveal"><b>${esc(s.sources)}</b><ul>${sources}</ul>${affNote}</div>` : ""}
       </div>
