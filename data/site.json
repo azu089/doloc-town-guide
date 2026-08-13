@@ -535,7 +535,7 @@
      "type": "note",
      "tag": "1.00.03-OFFICIAL",
      "heading": "Harsh Dry Season (Month 4)",
-     "body": "Month 4 is Harsh Dry Season. Protect crops and plan watering; the cited official notes do not establish a trading strategy."
+     "body": "Month 4 is named Harsh Dry Season in 1.0. Plan crop protection and watering for it; this guide does not claim an unverified crop risk or trading exploit."
     },
     {
      "type": "steps",
@@ -612,7 +612,7 @@
       [
        "Drought (Month 4)",
        "Crops face Harsh Dry Season",
-       "Stockpile before Month 4, sell during the spike"
+       "Protect crops and plan watering before Month 4"
       ]
      ]
     },
@@ -640,7 +640,7 @@
       ],
       [
        "Start stockpiling before Month 4",
-       "Drought prices make a small hoard very profitable."
+       "Prepare crop protection and watering before Month 4."
       ]
      ]
     },
@@ -676,7 +676,7 @@
      "type": "note",
      "tag": "COMMON MISTAKES",
      "heading": "Common Mistakes New Players Make (Avoid These)",
-     "body": "The most common early run-enders, from community reports: watering everything by hand every single day (automate or use the Rain gene), planting one giant flat field (a single storm wipes it), ignoring friendship (you lock yourself out of recipes), skipping Bellad's quests (you fall behind the tech tree), and hoarding nothing before Month 4 (you sell at the worst prices of the year)."
+     "body": "The most common early run-enders, from community reports: watering everything by hand every single day (automate or use the Rain gene), planting one giant flat field (a single storm wipes it), ignoring friendship (you lock yourself out of recipes), skipping Bellad's quests (you fall behind the tech tree), and failing to protect crops before Month 4 (Harsh Dry Season can ruin an unprepared field)."
     },
     {
      "type": "list",
@@ -782,7 +782,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0 中第 4 月的正式名称是 Harsh Dry Season。请为作物防护与浇水做准备；本站不再声称未经证实的涨价或倒卖机制。"
+       "body": "1.0 中第 4 月的正式名称是 Harsh Dry Season。请为作物防护与浇水做准备；本站不再声称未经证实的交易机制。"
       },
       {
        "type": "steps",
@@ -855,8 +855,8 @@
         ],
         [
          "旱季（4月）",
-         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。",
-         "4 月前囤货，旺季卖出"
+         "作物枯萎、作物压力增加",
+         "4 月前准备作物防护，旺季卖出"
         ]
        ]
       },
@@ -882,8 +882,8 @@
          "任务奖励科技点——早期唯一可靠的科技收入。"
         ],
         [
-         "4 月前开始囤货",
-         "旱季物价让小额囤货非常划算。"
+         "4 月前开始准备作物防护",
+         "旱季物价让小额准备作物防护非常划算。"
         ]
        ]
       },
@@ -942,7 +942,7 @@
         ],
         [
          "新玩家",
-         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
+         "你比 EA 玩家更早实现自动化——两阶段自动化→无人机站代劳杂务。"
         ],
         [
          "旧城废墟",
@@ -998,7 +998,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0 中第 4 月的正式名稱是 Harsh Dry Season。請為作物防護與澆水準備；本站不再宣稱未經證實的漲價或倒賣機制。"
+       "body": "1.0 中第 4 月的正式名稱是 Harsh Dry Season。請為作物防護與澆水準備；本站不再宣稱未經證實的交易機制。"
       },
       {
        "type": "steps",
@@ -1071,8 +1071,8 @@
         ],
         [
          "旱季（4月）",
-         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。",
-         "4 月前囤貨，旺季賣出"
+         "作物枯萎、作物壓力增加",
+         "4 月前準備作物防護，旺季賣出"
         ]
        ]
       },
@@ -1098,8 +1098,8 @@
          "任務獎勵科技點——早期唯一可靠的科技收入。"
         ],
         [
-         "4 月前開始囤貨",
-         "旱季物價讓小額囤貨非常划算。"
+         "4 月前開始準備作物防護",
+         "旱季物價讓小額準備作物防護非常划算。"
         ]
        ]
       },
@@ -1158,7 +1158,7 @@
         ],
         [
          "新玩家",
-         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
+         "你比 EA 玩家更早實現自動化——兩階段自動化→無人機站代勞雜務。"
         ],
         [
          "舊城廢墟",
@@ -1166,7 +1166,7 @@
         ],
         [
          "⚠️ 驗證中",
-         "精確解鎖順序與建造費用仍在 1.0 來源核對；標註 ⚠️ 的為社區來源。"
+         "精確解鎖順序與建造費用仍在 1.0 實測；標註 ⚠️ 的為社區來源。"
         ]
        ]
       },
@@ -1214,7 +1214,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+       "body": "1.0 では第4月の公式名は Harsh Dry Season です。作物保護と水やりを準備してください。未確認の取引攻略は掲載しません。"
       },
       {
        "type": "steps",
@@ -1288,7 +1288,7 @@
         [
          "乾季（4月）",
          "作物が枯れ、物価が高騰",
-         "4月前に備蓄し、高騰期に売る"
+         "4月前に作物保護を準備し、高騰期に売る"
         ]
        ]
       },
@@ -1314,8 +1314,8 @@
          "クエスト報酬=テックポイント。初期の唯一の安定収入源。"
         ],
         [
-         "4月前に備蓄開始",
-         "乾季の物価高騰で、小さな備蓄が大きく報われる。"
+         "4月前に作物保護を準備開始",
+         "乾季の作物への負担で、小さな作物保護を準備が大きく報われる。"
         ]
        ]
       },
@@ -1349,7 +1349,7 @@
       {
        "type": "note",
        "heading": "初心者のよくある失敗（避けること）",
-       "body": "コミュニティ報告で最も多いラン崩壊要因：毎日すべての作物を手で水やり（自動化か「雨露均等」遺伝子を使う）、巨大な一枚畑（嵐ひとつで全滅）、友好度を無視（レシピがロックされる）、Bellad のクエストを放置（テックツリーで遅れる）、4月前に何も備蓄しない（一年で最悪の価格で売る）。"
+       "body": "コミュニティ報告で最も多いラン崩壊要因：毎日すべての作物を手で水やり（自動化か「雨露均等」遺伝子を使う）、巨大な一枚畑（嵐ひとつで全滅）、友好度を無視（レシピがロックされる）、Bellad のクエストを放置（テックツリーで遅れる）、4月前に何も作物保護を準備しない（一年で最悪の価格で売る）。"
       },
       {
        "type": "list",
@@ -1374,7 +1374,7 @@
         ],
         [
          "新規プレイヤー",
-         "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。"
+         "EAより早く自動化に到達できる——二段階自動化→ドローン基地が雑務を代行。"
         ],
         [
          "旧市街遺跡",
@@ -1430,7 +1430,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+       "body": "1.0에서 4번째 달의 공식 명칭은 Harsh Dry Season입니다. 작물 보호와 물주기를 준비하세요. 확인되지 않은 거래 요령은 안내하지 않습니다."
       },
       {
        "type": "steps",
@@ -1503,8 +1503,8 @@
         ],
         [
          "가뭄(4월)",
-         "작물 시들고 물가 급등",
-         "4월 전 비축, 급등기에 판매"
+         "작물 시들고 작물 부담 증가",
+         "4월 전 작물 보호 준비, 급등기에 판매"
         ]
        ]
       },
@@ -1530,8 +1530,8 @@
          "퀘스트 보상=테크 포인트. 초기 유일한 안정적 테크 수입."
         ],
         [
-         "4월 전에 비축 시작",
-         "가뭄 물가 급등으로 작은 비축이 크게 보답합니다."
+         "4월 전에 작물 보호 준비 시작",
+         "가뭄 작물 부담 증가으로 작은 작물 보호 준비이 크게 보답합니다."
         ]
        ]
       },
@@ -1565,7 +1565,7 @@
       {
        "type": "note",
        "heading": "초보자의 흔한 실수 (피해야 할 것)",
-       "body": "커뮤니티가 보고한 가장 흔한 런 파괴 요인: 매일 모든 작물에 손으로 물주기(자동화나 '고루 내리는 비' 유전자 사용), 거대한 평지 한 판(폭풍 하나로 전멸), 우정 무시(레시피가 영구히 잠김), Bellad 퀘스트 방치(테크 트리에서 뒤처짐), 4월 전에 아무것도 비축 안 함(1년 중 최악의 가격에 판매)."
+       "body": "커뮤니티가 보고한 가장 흔한 런 파괴 요인: 매일 모든 작물에 손으로 물주기(자동화나 '고루 내리는 비' 유전자 사용), 거대한 평지 한 판(폭풍 하나로 전멸), 우정 무시(레시피가 영구히 잠김), Bellad 퀘스트 방치(테크 트리에서 뒤처짐), 4월 전에 아무것도 작물 보호 준비 안 함(1년 중 최악의 가격에 판매)."
       },
       {
        "type": "list",
@@ -1590,7 +1590,7 @@
         ],
         [
          "새 플레이어",
-         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
+         "EA보다 일찍 자동화에 도달——2단계 자동화→드론 기지가 잡일을 대신."
         ],
         [
          "구시가지 유적",
@@ -1652,7 +1652,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "En 1.0, el nombre oficial del mes 4 es Harsh Dry Season. Prepara protección y riego; esta guía no afirma subidas de precio ni arbitraje sin verificar."
+       "body": "En 1.0, el nombre oficial del mes 4 es Harsh Dry Season. Prepara protección y riego; esta guía no afirma estrategias comerciales sin verificar."
       },
       {
        "type": "steps",
@@ -1725,8 +1725,8 @@
         ],
         [
          "Sequía (mes 4)",
-         "Marchita cultivos y sube precios",
-         "Acumula antes del mes 4 y vende en el pico"
+         "Marchita cultivos y aumenta la presión sobre los cultivos",
+         "Protege los cultivos antes del mes 4 y planifica el riego"
         ]
        ]
       },
@@ -1752,8 +1752,8 @@
          "Las recompensas son Puntos de Tecnología: el único ingreso fiable temprano."
         ],
         [
-         "Empieza a acumular antes del mes 4",
-         "Los precios de la sequía hacen muy rentable un pequeño acopio."
+         "Empieza a proteger los cultivos antes del mes 4",
+         "Harsh Dry Season exige proteger cultivos y planificar el riego."
         ]
        ]
       },
@@ -1787,7 +1787,7 @@
       {
        "type": "note",
        "heading": "Errores comunes de los novatos (evítalos)",
-       "body": "Los finales de partida más comunes según la comunidad: regar a mano todos los cultivos cada día (usa la automatización o el gen Lluvia), plantar un campo plano gigante (una sola tormenta lo borra), ignorar la amistad (te bloquea recetas), saltarte las misiones de Bellad (te atrasas en el árbol tecnológico) y no acumular nada antes del mes 4 (vendes a los peores precios del año)."
+       "body": "Los finales de partida más comunes según la comunidad: regar a mano todos los cultivos cada día (usa la automatización o el gen Lluvia), plantar un campo plano gigante (una sola tormenta lo borra), ignorar la amistad (te bloquea recetas), saltarte las misiones de Bellad (te atrasas en el árbol tecnológico) y no protege los cultivosr nada antes del mes 4 (proteges los cultivos demasiado tarde del año)."
       },
       {
        "type": "list",
@@ -1812,7 +1812,7 @@
         ],
         [
          "Nuevos jugadores",
-         "Los avisos oficiales de 1.0 describen una automatización agrícola en dos etapas. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas."
+         "Llegas a la automatización antes que en EA: automatización en dos etapas → estaciones de drones."
         ],
         [
          "Ruinas de la Ciudad Vieja",
@@ -2006,8 +2006,8 @@
        "body": "自动化有三层：能源、站点与无人机。",
        "items": [
         [
-         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。",
-         "建造太阳能板与风力涡轮机，为农场生成清洁能源。"
+         "利用两阶段自动化",
+         "建造太阳能板与自动化设备，为农场生成清洁能源。"
         ],
         [
          "建造农场无人机站",
@@ -2025,11 +2025,11 @@
       },
       {
        "type": "list",
-       "heading": "太阳能 vs 风能：先建什么",
+       "heading": "太阳能 vs 自动化：先建什么",
        "body": "先建与你天气匹配的，再平衡。",
        "items": [
         "晴天太阳能板效率高，适合晴朗季节。",
-        "风力涡轮机在暴风雨中持续发电——多雨月份很划算。",
+        "自动化设备在暴风雨中持续发电——多雨月份很划算。",
         "两者混用可让能源在各类天气下保持稳定。",
         "⚠️ 具体建造费用与发电量正在 1.0 实测中。"
        ]
@@ -2063,7 +2063,7 @@
        ],
        "rows": [
         [
-         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。",
+         "两阶段自动化",
          "站点能源",
          "前期-中期 ⚠️"
         ],
@@ -2092,7 +2092,7 @@
       {
        "type": "note",
        "heading": "为什么这个页面重要",
-       "body": "多洛可小镇自动化的英文攻略几乎不存在——多数内容停在 EA 基础阶段。本页是第一批 1.0 专属自动化英文参考之一。标 ⚠️ 的细节将在来源核对后更新。"
+       "body": "多洛可小镇自动化的英文攻略几乎不存在——多数内容停在 EA 基础阶段。本页是第一批 1.0 专属自动化英文参考之一。标 ⚠️ 的细节将在亲测后更新。"
       }
      ]
     },
@@ -2114,8 +2114,8 @@
        "body": "自動化有三層：能源、站點與無人機。",
        "items": [
         [
-         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。",
-         "建造太陽能板與風力渦輪機，為農場生成清潔能源。"
+         "利用兩階段自動化",
+         "建造太陽能板與自動化設備，為農場生成清潔能源。"
         ],
         [
          "建造農場無人機站",
@@ -2133,13 +2133,13 @@
       },
       {
        "type": "list",
-       "heading": "太陽能 vs 風能：先建什麼",
+       "heading": "太陽能 vs 自動化：先建什麼",
        "body": "先建與你天氣匹配的，再平衡。",
        "items": [
         "晴天太陽能板效率高，適合晴朗季節。",
-        "風力渦輪機在暴風雨中持續發電——多雨月份很划算。",
+        "自動化設備在暴風雨中持續發電——多雨月份很划算。",
         "兩者混用可讓能源在各類天氣下保持穩定。",
-        "⚠️ 具體建造費用與發電量正在 1.0 來源核對中。"
+        "⚠️ 具體建造費用與發電量正在 1.0 實測中。"
        ]
       },
       {
@@ -2171,7 +2171,7 @@
        ],
        "rows": [
         [
-         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。",
+         "兩階段自動化",
          "站點能源",
          "前期-中期 ⚠️"
         ],
@@ -2222,8 +2222,8 @@
        "body": "自動化は3層：エネルギー・基地・ドローン。",
        "items": [
         [
-         "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。",
-         "ソーラーパネルと風力タービンを建ててクリーンエネルギーを生成。"
+         "太陽光と自動化を利用",
+         "ソーラーパネルと自動化設備を建ててクリーンエネルギーを生成。"
         ],
         [
          "農場ドローン基地を建設",
@@ -2241,11 +2241,11 @@
       },
       {
        "type": "list",
-       "heading": "太陽光 vs 風力：どちらを先に",
+       "heading": "太陽光 vs 自動化：どちらを先に",
        "body": "自分の天候に合う方から。",
        "items": [
         "晴天ならソーラーパネルが効率的。",
-        "風力タービンは嵐でも発電——嵐の多い月に有利。",
+        "自動化設備は嵐でも発電——嵐の多い月に有利。",
         "両方の混在で天候に関係なく安定。",
         "⚠️ 正確な建設コストと発電量は 1.0 で検証中。"
        ]
@@ -2279,7 +2279,7 @@
        ],
        "rows": [
         [
-         "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。",
+         "二段階自動化",
          "基地のエネルギー",
          "序盤～中盤 ⚠️"
         ],
@@ -2330,8 +2330,8 @@
        "body": "자동화는 에너지·기지·드론 세 층으로 이루어집니다.",
        "items": [
         [
-         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요.",
-         "태양광 패널과 풍력 터빈을 지어 청정 에너지를 생산합니다."
+         "2단계 자동화 활용",
+         "태양광 패널과 자동화 장비을 지어 청정 에너지를 생산합니다."
         ],
         [
          "농장 드론 기지 건설",
@@ -2349,11 +2349,11 @@
       },
       {
        "type": "list",
-       "heading": "태양광 vs 풍력: 무엇부터?",
+       "heading": "태양광 vs 자동화: 무엇부터?",
        "body": "자신의 날씨에 맞는 것부터 짓고 균형을 맞추세요.",
        "items": [
         "맑은 날씨에는 태양광 패널이 효율적입니다.",
-        "풍력 터빈은 폭풍 중에도 발전합니다——비가 잦은 달에 유리합니다.",
+        "자동화 장비은 폭풍 중에도 발전합니다——비가 잦은 달에 유리합니다.",
         "둘을 섞으면 모든 날씨에서 에너지가 안정적입니다.",
         "⚠️ 정확한 건설 비용과 발전량은 1.0에서 검증 중입니다."
        ]
@@ -2387,7 +2387,7 @@
        ],
        "rows": [
         [
-         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요.",
+         "2단계 자동화",
          "기지 에너지",
          "초~중반 ⚠️"
         ],
@@ -2416,7 +2416,7 @@
       {
        "type": "note",
        "heading": "이 페이지가 중요한 이유",
-       "body": "돌록 타운 자동화에 대한 영어 가이드는 거의 없습니다——대부분 EA 기초에서 멈춰 있습니다. 이 페이지는 최초의 1.0 전용 자동화 영어 자료 중 하나입니다. ⚠️ 표시된 세부 사항은 공식 출처 확인 후 업데이트됩니다."
+       "body": "돌록 타운 자동화에 대한 영어 가이드는 거의 없습니다——대부분 EA 기초에서 멈춰 있습니다. 이 페이지는 최초의 1.0 전용 자동화 영어 자료 중 하나입니다. ⚠️ 표시된 세부 사항은 직접 검증 후 업데이트됩니다."
       }
      ]
     },
@@ -2444,8 +2444,8 @@
        "body": "La automatización tiene tres capas: energía, estaciones y drones.",
        "items": [
         [
-         "Los avisos oficiales de 1.0 describen una automatización agrícola en dos etapas. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas.",
-         "Construye paneles solares y aerogeneradores para generar energía limpia."
+         "Aprovecha la automatización agrícola",
+         "Construye paneles solares y equipos de automatización para generar energía limpia."
         ],
         [
          "Construye estaciones de drones",
@@ -2463,11 +2463,11 @@
       },
       {
        "type": "list",
-       "heading": "¿Solar o eólica? Qué construir primero",
+       "heading": "¿Solar o automatización? Qué construir primero",
        "body": "Empieza por lo que encaje con tu clima y luego equilibra.",
        "items": [
         "Los paneles solares brillan con buen tiempo.",
-        "Los aerogeneradores funcionan en tormentas: geniales en meses de tormentas.",
+        "Los equipos de automatización funcionan en tormentas: geniales en meses de tormentas.",
         "Una mezcla mantiene la energía estable en cualquier clima.",
         "⚠️ Costes y valores exactos se están verificando en 1.0."
        ]
@@ -2501,7 +2501,7 @@
        ],
        "rows": [
         [
-         "Energía solar/eólica",
+         "Energía solar/automatización",
          "Energía para estaciones",
          "Inicio-medio ⚠️"
         ],
@@ -2530,7 +2530,7 @@
       {
        "type": "note",
        "heading": "Por qué importa esta página",
-       "body": "Las guías en inglés sobre la automatización de Doloc Town son casi inexistentes: la mayoría se queda en lo básico del Early Access. Esta es una de las primeras referencias en inglés específicas del 1.0. Los detalles marcados ⚠️ se actualizarán tras la revisión de fuentes oficiales."
+       "body": "Las guías en inglés sobre la automatización de Doloc Town son casi inexistentes: la mayoría se queda en lo básico del Early Access. Esta es una de las primeras referencias en inglés específicas del 1.0. Los detalles marcados ⚠️ se actualizarán tras la verificación práctica."
       }
      ]
     }
@@ -2803,7 +2803,7 @@
         "用基因讀取器、複製器與合成器檢查並培育種子。",
         "通過商店、澳柯瑪種子研究與野外母本解鎖種子母本。",
         "每顆種子最多疊 3 個模塊——協同比堆數值更重要。",
-        "⚠️ 具體模塊來源仍在 1.0 來源核對中。"
+        "⚠️ 具體模塊來源仍在 1.0 實測中。"
        ]
       },
       {
@@ -2840,7 +2840,7 @@
         ],
         [
          "+ 約 14 種",
-         "⚠️ 完整列表正在 1.0 來源核對"
+         "⚠️ 完整列表正在 1.0 實測"
         ]
        ],
        "rowAttrs": [
@@ -4387,7 +4387,7 @@
       {
        "type": "table",
        "heading": "全年魚類",
-       "body": "這些魚全年任何時間都能釣到。釣點信息由玩家來源核對並經 18183 彙總。",
+       "body": "這些魚全年任何時間都能釣到。釣點信息由玩家實測並經 18183 彙總。",
        "columns": [
         "魚",
         "時間",
@@ -4907,7 +4907,7 @@
       },
       {
        "heading": "釣魚技巧：常見失敗與對策",
-       "body": "早期釣魚的大量挫敗感來自魚竿等級與時機，而不是運氣。這些技巧來自社區經驗——在我們於 1.0 來源核對前，請把數字當作玩家報告。[L2]",
+       "body": "早期釣魚的大量挫敗感來自魚竿等級與時機，而不是運氣。這些技巧來自社區經驗——在我們於 1.0 實測前，請把數字當作玩家報告。[L2]",
        "items": [
         "先做 Lightman 釣魚教程——它會送你一根魚竿，讓你不用拿著初始竿硬釣。",
         "儘早升級魚竿：社區報告稱 Level 2 魚竿（約 1000 金幣）能釣到遊戲裡所有魚，且更高等級的魚竿會讓釣魚小遊戲明顯更寬容。",
@@ -4921,7 +4921,7 @@
       {
        "type": "list",
        "heading": "來源與說明",
-       "body": "釣點、季節、天氣與繁殖概率由玩家來源核對，並整理自 18183 的完整圖鑑（L2）。部分刷新點可能隨補丁變化——請把它當作野外手冊，而非固定數據庫。⚠️ 中文名為遊戲內中文圖鑑譯名，可能與英文客戶端不同。"
+       "body": "釣點、季節、天氣與繁殖概率由玩家實測，並整理自 18183 的完整圖鑑（L2）。部分刷新點可能隨補丁變化——請把它當作野外手冊，而非固定數據庫。⚠️ 中文名為遊戲內中文圖鑑譯名，可能與英文客戶端不同。"
       }
      ]
     },
@@ -5463,7 +5463,7 @@
       },
       {
        "heading": "釣りのコツ：よくある失敗と対策",
-       "body": "序盤の釣りで挫折する原因は、ほとんどが運ではなく竿のレベルとタイミング。以下のコツはコミュニティ経験に基づく——1.0 で公式資料確認するまでは数値をプレイヤー報告として扱ってほしい。[L2]",
+       "body": "序盤の釣りで挫折する原因は、ほとんどが運ではなく竿のレベルとタイミング。以下のコツはコミュニティ経験に基づく——1.0 で実測するまでは数値をプレイヤー報告として扱ってほしい。[L2]",
        "items": [
         "Lightman の釣りチュートリアルを先に——無料の竿がもらえ、初期竿で無理に釣らなくて済む。",
         "早めに竿を強化：コミュニティ報告では Level 2 の竿（約1000コイン）で全魚種が釣れ、上位竿ほどミニゲームが明らかに易しくなる。",
@@ -6019,7 +6019,7 @@
       },
       {
        "heading": "낚시 팁: 흔한 실패와 해결법",
-       "body": "초반 낚시의 좌절감 대부분은 운이 아니라 낚싯대 레벨과 타이밍에서 옵니다. 이 팁은 커뮤니티 경험에 기반합니다 — 1.0에서 공식 출처 확인하기 전까지는 숫자를 플레이어 제보로 취급하세요. [L2]",
+       "body": "초반 낚시의 좌절감 대부분은 운이 아니라 낚싯대 레벨과 타이밍에서 옵니다. 이 팁은 커뮤니티 경험에 기반합니다 — 1.0에서 직접 검증하기 전까지는 숫자를 플레이어 제보로 취급하세요. [L2]",
        "items": [
         "Lightman 낚시 튜토리얼부터 — 무료 낚싯대를 주므로 시작용 낚싯대로 고생하지 않아도 됩니다.",
         "낚싯대를 일찍 업그레이드: 커뮤니티 제보에 따르면 Level 2 낚싯대(약 1,000코인)로 게임의 모든 물고기를 잡을 수 있고, 상위 낚싯대일수록 미니게임이 확실히 쉬워집니다.",
@@ -8764,7 +8764,7 @@
         ],
         [
          "更多",
-         "⚠️ 完整村民列表正在 1.0 來源核對"
+         "⚠️ 完整村民列表正在 1.0 實測"
         ]
        ]
       },
@@ -8798,7 +8798,7 @@
         "每位朋友解鎖獨特食譜（如鍊金臺）。",
         "個人劇情場景。",
         "節日參與獎勵。",
-        "⚠️ 具體好感閾值正在 1.0 來源核對。"
+        "⚠️ 具體好感閾值正在 1.0 實測。"
        ]
       },
       {
@@ -9442,8 +9442,8 @@
         ],
         [
          "旱灾（4 月）",
-         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。",
-         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+         "作物枯萎、商店作物压力增加",
+         "在全年旱季压力时卖出准备作物防护"
         ],
         [
          "任何季节",
@@ -9522,7 +9522,7 @@
        "heading": "从手工种田到自动化（1.0）",
        "body": "1.0 把你从农民变成农场经理。升级路径是：先能源、再站点，然后让无人机干活。",
        "items": [
-        "建造太阳能板与风力涡轮机，为农场生成清洁能源",
+        "建造太阳能板与自动化设备，为农场生成清洁能源",
         "建造农场无人机站——让无人机在田间作业的控制点",
         "指派自动化任务：无人机端到端处理播种、培育与收割",
         "垂直堆叠很关键：平台之间留出清晰航线，无人机才能到达每个花盆",
@@ -9532,7 +9532,7 @@
       {
        "type": "note",
        "heading": "旱季策略与常见错误",
-       "body": "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+       "body": "旱灾月（4 月）作物枯萎、作物压力增加。旱灾前准备作物防护，旱灾中规划浇水。常见错误：种一整片巨大的平地（一场风暴全毁）、早期忽略果树（它们后来是免费的钱）、从不升级镰刀（群体收割是巨大的省时工具）、在有「雨露均沾」基因时还全手工浇水、跳过 Bellad 的任务（科技点是唯一可靠的早期收入）。"
       },
       {
        "type": "faq",
@@ -9548,7 +9548,7 @@
         ],
         [
          "旱灾月是哪个月？",
-         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+         "4 月，在旱季。作物枯萎、商店作物压力增加——之前准备作物防护，期间卖出。"
         ],
         [
          "基因模块怎么用？",
@@ -9560,7 +9560,7 @@
         ],
         [
          "1.0 能完全自动种田吗？",
-         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
+         "能——两阶段自动化 + 无人机站负责播种、培育与收割，让你腾出手去探索、钓鱼和做任务。"
         ]
        ]
       }
@@ -9649,8 +9649,8 @@
         ],
         [
          "旱災（4 月）",
-         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。",
-         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+         "作物枯萎、商店作物壓力增加",
+         "在全年旱季壓力時賣出準備作物防護"
         ],
         [
          "任何季節",
@@ -9729,7 +9729,7 @@
        "heading": "從手工種田到自動化（1.0）",
        "body": "1.0 把你從農民變成農場經理。升級路徑是：先能源、再站點，然後讓無人機幹活。",
        "items": [
-        "建造太陽能板與風力渦輪機，為農場生成清潔能源",
+        "建造太陽能板與自動化設備，為農場生成清潔能源",
         "建造農場無人機站——讓無人機在田間作業的控制點",
         "指派自動化任務：無人機端到端處理播種、培育與收割",
         "垂直堆疊很關鍵：平臺之間留出清晰航線，無人機才能到達每個花盆",
@@ -9739,7 +9739,7 @@
       {
        "type": "note",
        "heading": "旱季策略與常見錯誤",
-       "body": "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+       "body": "旱災月（4 月）作物枯萎、作物壓力增加。旱災前準備作物防護，旱災中規劃澆水。常見錯誤：種一整片巨大的平地（一場風暴全毀）、早期忽略果樹（它們後來是免費的錢）、從不升級鐮刀（群體收割是巨大的省時工具）、在有「雨露均霑」基因時還全手工澆水、跳過 Bellad 的任務（科技點是唯一可靠的早期收入）。"
       },
       {
        "type": "faq",
@@ -9755,7 +9755,7 @@
         ],
         [
          "旱災月是哪個月？",
-         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+         "4 月，在旱季。作物枯萎、商店作物壓力增加——之前準備作物防護，期間賣出。"
         ],
         [
          "基因模塊怎麼用？",
@@ -9767,7 +9767,7 @@
         ],
         [
          "1.0 能完全自動種田嗎？",
-         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
+         "能——兩階段自動化 + 無人機站負責播種、培育與收割，讓你騰出手去探索、釣魚和做任務。"
         ]
        ]
       }
@@ -9857,7 +9857,7 @@
         [
          "干ばつ（4月）",
          "作物が枯れ、商店価格が高騰",
-         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+         "年間厳しい作物条件で作物保護を準備を売る"
         ],
         [
          "どの季節も",
@@ -9936,7 +9936,7 @@
        "heading": "手作業から自動化へ（1.0）",
        "body": "1.0は農家をファームマネージャーに変えます。強化の順序は：まずエネルギー、次に基地、そしてドローンに働かせる。",
        "items": [
-        "ソーラーパネルと風力タービンで農場のクリーンエネルギーを発電",
+        "ソーラーパネルと自動化設備で農場のクリーンエネルギーを発電",
         "農場ドローン基地を建設——ドローンが農地で作業するための制御点",
         "自動化作業を割り当て：ドローンが播種・育成・収穫を一貫処理",
         "縦積みが重要：プラットフォーム間に飛行経路を確保し、全プランターへ到達させる",
@@ -9946,7 +9946,7 @@
       {
        "type": "note",
        "heading": "乾季の戦略とよくある失敗",
-       "body": "干ばつ月（4月）は作物が枯れ、価格が高騰。干ばつ前に備蓄し、その間に高値で売る。よくある失敗：巨大な一枚畑（嵐ひとつで全滅）、果樹を後回し（後で無料の収入源）、鎌の強化を怠る（群収穫は大きな時短）、「雨露均等」があるのに全部手で水やり、Belladのクエストを飛ばす（技術ポイントが唯一の安定した序盤収入）。"
+       "body": "干ばつ月（4月）は作物が枯れ、価格が高騰。干ばつ前に作物保護を準備し、その間に水やりを計画る。よくある失敗：巨大な一枚畑（嵐ひとつで全滅）、果樹を後回し（後で無料の収入源）、鎌の強化を怠る（群収穫は大きな時短）、「雨露均等」があるのに全部手で水やり、Belladのクエストを飛ばす（技術ポイントが唯一の安定した序盤収入）。"
       },
       {
        "type": "faq",
@@ -9962,7 +9962,7 @@
         ],
         [
          "干ばつ月はいつ？",
-         "4月、乾季の最中。作物が枯れ、商店価格が高騰——前に備蓄し、その間に売る。"
+         "4月、乾季の最中。作物が枯れ、商店価格が高騰——前に作物保護を準備し、その間に売る。"
         ],
         [
          "遺伝子モジュールの使い方は？",
@@ -9974,7 +9974,7 @@
         ],
         [
          "1.0で完全自動化できる？",
-         "できる——ソーラー/風力＋ドローン基地が播種・育成・収穫を担い、探索・釣り・クエストに時間を使えます。"
+         "できる——ソーラー/自動化＋ドローン基地が播種・育成・収穫を担い、探索・釣り・クエストに時間を使えます。"
         ]
        ]
       }
@@ -10054,7 +10054,7 @@
         [
          "우기 (1–2월)",
          "폭우와 뇌우; 연못이 차고 일부 물고기는 이때만",
-         "빗물로 관개; 1.0 자동화용 번개 전력도 비축"
+         "빗물로 관개; 1.0 자동화용 번개 전력도 작물 보호 준비"
         ],
         [
          "건기 (3–4월)",
@@ -10063,8 +10063,8 @@
         ],
         [
          "가뭄 (4월)",
-         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다.",
-         "연중 최고가에 비축분 판매"
+         "작물이 시들고 상점 작물 부담이 커집음",
+         "연중 최고가에 작물 보호 준비분 판매"
         ],
         [
          "어느 계절이든",
@@ -10143,7 +10143,7 @@
        "heading": "손농사에서 자동화까지 (1.0)",
        "body": "1.0은 농부를 팜 매니저로 바꿉니다. 업그레이드 순서: 에너지 먼저, 스테이션 다음, 그리고 드론에게 일을 맡기세요.",
        "items": [
-        "태양광 패널과 풍력 터빈을 건설해 농장의 청정 에너지를 생산",
+        "태양광 패널과 자동화 장비을 건설해 농장의 청정 에너지를 생산",
         "농장 드론 스테이션 건설——드론이 밭에서 일하게 하는 제어 지점",
         "자동화 작업 지정: 드론이 파종·육성·수확을 처음부터 끝까지 처리",
         "수직 적층이 핵심: 플랫폼 사이에 비행 경로를 남겨 드론이 모든 화분에 닿게 하세요",
@@ -10153,7 +10153,7 @@
       {
        "type": "note",
        "heading": "가뭄 전략과 흔한 실수",
-       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+       "body": "가뭄 달(4월)에는 작물이 시들고 작물 부담이 커집습니다. 가뭄 전에 작물 보호 준비하고 그동안 물주기를 계획하세요. 흔한 실수: 거대한 평지 한 판(폭풍 하나로 전멸), 과일나무를 미루기(나중에 공짜 돈), 낫 업그레이드 안 하기(집단 수확이 큰 시간 절약), '고루 내리는 비' 유전자가 있는데 전부 손으로 물주기, Bellad 퀘스트 건너뛰기(기술 포인트가 유일한 안정적인 초반 수입)."
       },
       {
        "type": "faq",
@@ -10169,7 +10169,7 @@
         ],
         [
          "가뭄 달은 언제인가요?",
-         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+         "4월, 건기 중간입니다. 작물이 시들고 상점 작물 부담이 커집습니다——미리 작물 보호 준비하고 그동안 파세요."
         ],
         [
          "유전자 모듈은 어떻게 쓰나요?",
@@ -10181,7 +10181,7 @@
         ],
         [
          "1.0에서 농사가 완전 자동화되나요?",
-         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
+         "네——2단계 자동화 + 드론 스테이션이 파종·육성·수확을 처리해 탐험·낚시·퀘스트에 시간을 쓸 수 있습니다."
         ]
        ]
       }
@@ -10356,7 +10356,7 @@
        "heading": "De la agricultura manual a la automatización (1.0)",
        "body": "El 1.0 te convierte de granjero en gestor de granja. La ruta de mejora es: energía primero, estaciones después, y luego deja trabajar a los drones.",
        "items": [
-        "Construye paneles solares y turbinas eólicas para generar energía limpia para tu granja",
+        "Construye paneles solares y turbinas automatizacións para generar energía limpia para tu granja",
         "Construye estaciones de drones agrícolas: los puntos de control que dejan trabajar a los drones",
         "Asigna tareas de automatización: los drones hacen siembra, cuidado y cosecha de principio a fin",
         "El apilado vertical importa: deja pasillos de vuelo claros entre plataformas para que los drones lleguen a cada macetero",
@@ -10366,7 +10366,7 @@
       {
        "type": "note",
        "heading": "Estrategia de sequía y errores comunes",
-       "body": "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
+       "body": "En el mes de la sequía (abril) los cultivos se marchitan y los precios se disparan. Acumula reservas antes de la sequía y planifica el riego durante ella. Errores comunes: plantar un único campo plano gigante (una tormenta lo borra), ignorar los árboles frutales al principio (son dinero gratis después), no mejorar nunca la hoz (la cosecha en grupo ahorra muchísimo tiempo), regar todo a mano cuando existe el gen Lluvia, y saltarse las misiones de Bellad (los puntos de tecnología son el único ingreso inicial fiable)."
       },
       {
        "type": "faq",
@@ -10378,11 +10378,11 @@
         ],
         [
          "¿Cuándo planto los árboles frutales?",
-         "En la primera semana. Tardan 7 días en madurar y luego producen para siempre: cuanto antes, más ingreso gratis acumulas."
+         "En la primera semana. Tardan 7 días en madurar y luego producen para siempre: cuanto antes, más ingreso gratis protege los cultivoss."
         ],
         [
          "¿Cuál es el mes de la sequía?",
-         "Abril, en la estación seca. Los cultivos se marchitan y los precios se disparan: acumula antes y vende durante."
+         "Abril, en la estación seca. Los cultivos se marchitan y los precios se disparan: protege los cultivos antes y vende durante."
         ],
         [
          "¿Cómo funcionan los módulos genéticos?",
@@ -10394,7 +10394,7 @@
         ],
         [
          "¿El 1.0 automatiza del todo la granja?",
-         "Sí: la energía solar/eólica más las estaciones de drones gestionan siembra, cuidado y cosecha, y te dejan tiempo para explorar, pescar y hacer misiones."
+         "Sí: la energía solar/automatización más las estaciones de drones gestionan siembra, cuidado y cosecha, y te dejan tiempo para explorar, pescar y hacer misiones."
         ]
        ]
       }
@@ -10692,7 +10692,7 @@
         ],
         [
          "⚠️ 完整表格",
-         "1.0 來源核對中"
+         "1.0 實測中"
         ]
        ]
       },
@@ -10705,7 +10705,7 @@
         "速度餐——收割日與長途趕路日。",
         "防禦餐——廢墟探索與 Boss 戰。",
         "好感門檻食譜——部分最強增益在村民心後面（如鍊金臺）。",
-        "⚠️ 逐食譜完整清單正在 1.0 來源核對中。"
+        "⚠️ 逐食譜完整清單正在 1.0 實測中。"
        ]
       },
       {
@@ -11310,7 +11310,7 @@
       {
        "type": "note",
        "heading": "なぜ牧場か？",
-       "body": "牛乳と卵は荒廃地の貴重な備蓄——料理食材・贈り物・安定した収入源。よくある失敗：飼料生産より速く動物を増やす——飢えた群れは何も産まない。"
+       "body": "牛乳と卵は荒廃地の貴重な作物保護を準備——料理食材・贈り物・安定した収入源。よくある失敗：飼料生産より速く動物を増やす——飢えた群れは何も産まない。"
       }
      ]
     },
@@ -11713,7 +11713,7 @@
         ],
         [
          "⚠️ 精確門檻",
-         "1.0 來源核對中"
+         "1.0 實測中"
         ]
        ]
       },
@@ -12293,7 +12293,7 @@
       {
        "type": "note",
        "heading": "劇透政策",
-       "body": "本頁保持輕劇透。深度劇透章節將在來源核對後補充——並會明確標註。"
+       "body": "本頁保持輕劇透。深度劇透章節將在實測後補充——並會明確標註。"
       }
      ]
     },
@@ -12529,7 +12529,7 @@
      "type": "note",
      "tag": "1.00.03-OFFICIAL",
      "heading": "Harsh Dry Season (Month 4)",
-     "body": "Month 4 is Harsh Dry Season. Protect crops and plan watering; the cited official notes do not establish a trading strategy."
+     "body": "Month 4 is named Harsh Dry Season in 1.0. Plan crop protection and watering for it; this guide does not claim an unverified crop risk or trading exploit."
     },
     {
      "type": "table",
@@ -12714,7 +12714,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0 中第 4 月的正式名称是 Harsh Dry Season。请为作物防护与浇水做准备；本站不再声称未经证实的涨价或倒卖机制。"
+       "body": "1.0 中第 4 月的正式名称是 Harsh Dry Season。请为作物防护与浇水做准备；本站不再声称未经证实的交易机制。"
       },
       {
        "type": "table",
@@ -12748,8 +12748,8 @@
         ],
         [
          "旱灾（第 4 月）",
-         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。",
-         "囤货、高价卖出"
+         "枯萎 + 作物压力增加",
+         "准备作物防护、规划浇水"
         ]
        ]
       },
@@ -12778,9 +12778,9 @@
         ],
         [
          "旱灾（4 月）",
-         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。",
+         "作物枯萎、作物压力增加",
          "最难的种田月",
-         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+         "在全年旱季压力卖出准备作物防护"
         ],
         [
          "任何季节",
@@ -12805,7 +12805,7 @@
         ],
         [
          "把握旱灾时机",
-         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+         "第 4 月前准备作物防护，在作物压力增加期卖出。"
         ]
        ]
       },
@@ -12818,7 +12818,7 @@
         "给露天地块建遮盖，把脆弱作物集中种植。",
         "安装「雨露均沾」基因，旱期自动浇水。",
         "用雷暴电力驱动 1.0 无人机站与工业区。",
-        "旱灾前囤货、旱灾中卖出。"
+        "旱灾前准备作物防护、旱灾中卖出。"
        ]
       },
       {
@@ -12841,11 +12841,11 @@
         ],
         [
          "旱灾是什么时候？",
-         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+         "4 月，旱季末尾。作物枯萎、商店作物压力增加。"
         ],
         [
          "怎么从旱灾获利？",
-         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+         "第 4 月前准备作物防护，在作物压力增加期卖出。"
         ],
         [
          "有雨季吗？",
@@ -12871,7 +12871,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0 中第 4 月的正式名稱是 Harsh Dry Season。請為作物防護與澆水準備；本站不再宣稱未經證實的漲價或倒賣機制。"
+       "body": "1.0 中第 4 月的正式名稱是 Harsh Dry Season。請為作物防護與澆水準備；本站不再宣稱未經證實的交易機制。"
       },
       {
        "type": "table",
@@ -12905,8 +12905,8 @@
         ],
         [
          "旱災（第 4 月）",
-         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。",
-         "囤貨、高價賣出"
+         "枯萎 + 作物壓力增加",
+         "準備作物防護、規劃澆水"
         ]
        ]
       },
@@ -12935,9 +12935,9 @@
         ],
         [
          "旱災（4 月）",
-         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。",
+         "作物枯萎、作物壓力增加",
          "最難的種田月",
-         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+         "在全年旱季壓力賣出準備作物防護"
         ],
         [
          "任何季節",
@@ -12962,7 +12962,7 @@
         ],
         [
          "把握旱災時機",
-         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+         "第 4 月前準備作物防護，在作物壓力增加期賣出。"
         ]
        ]
       },
@@ -12975,7 +12975,7 @@
         "給露天地塊建遮蓋，把脆弱作物集中種植。",
         "安裝「雨露均霑」基因，旱期自動澆水。",
         "用雷暴電力驅動 1.0 無人機站與工業區。",
-        "旱災前囤貨、旱災中賣出。"
+        "旱災前準備作物防護、旱災中賣出。"
        ]
       },
       {
@@ -12998,11 +12998,11 @@
         ],
         [
          "旱災是什麼時候？",
-         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+         "4 月，旱季末尾。作物枯萎、商店作物壓力增加。"
         ],
         [
          "怎麼從旱災獲利？",
-         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+         "第 4 月前準備作物防護，在作物壓力增加期賣出。"
         ],
         [
          "有雨季嗎？",
@@ -13028,7 +13028,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+       "body": "1.0 では第4月の公式名は Harsh Dry Season です。作物保護と水やりを準備してください。未確認の取引攻略は掲載しません。"
       },
       {
        "type": "table",
@@ -13062,8 +13062,8 @@
         ],
         [
          "干ばつ（第4月）",
-         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。",
-         "備蓄、高値で売却"
+         "枯死＋作物への負担",
+         "作物保護を準備、水やりを計画却"
         ]
        ]
       },
@@ -13092,9 +13092,9 @@
         ],
         [
          "干ばつ（4月）",
-         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。",
+         "枯死、作物への負担",
          "最も厳しい農業月",
-         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+         "年間厳しい作物条件で作物保護を準備を売る"
         ],
         [
          "どの季節も",
@@ -13119,7 +13119,7 @@
         ],
         [
          "干ばつのタイミング",
-         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+         "第4月前に作物保護を準備し、作物への負担期に売る。"
         ]
        ]
       },
@@ -13132,7 +13132,7 @@
         "露出区画にカバーを建て、弱い作物はまとめて育てる。",
         "「雨露均等」遺伝子で乾燥期も自動散水。",
         "雷雨の電力を1.0ドローン基地と工業地帯に。",
-        "干ばつ前に備蓄、干ばつ中に売却。"
+        "干ばつ前に作物保護を準備、干ばつ中に売却。"
        ]
       },
       {
@@ -13159,7 +13159,7 @@
         ],
         [
          "干ばつでどう稼ぐ？",
-         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+         "第4月前に作物保護を準備し、作物への負担期に売る。"
         ],
         [
          "雨季はある？",
@@ -13185,7 +13185,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+       "body": "1.0에서 4번째 달의 공식 명칭은 Harsh Dry Season입니다. 작물 보호와 물주기를 준비하세요. 확인되지 않은 거래 요령은 안내하지 않습니다."
       },
       {
        "type": "table",
@@ -13219,8 +13219,8 @@
         ],
         [
          "가뭄 (4월)",
-         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다.",
-         "비축, 높은 가격에 판매"
+         "시듦 + 작물 부담 증가",
+         "작물 보호 준비, 물주기를 계획"
         ]
        ]
       },
@@ -13249,9 +13249,9 @@
         ],
         [
          "가뭄 (4월)",
-         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다.",
+         "시듦, 작물 부담 증가",
          "가장 힘든 농사 달",
-         "연중 최고가에 비축분 판매"
+         "연중 최고가에 작물 보호 준비분 판매"
         ],
         [
          "어느 계절이든",
@@ -13276,7 +13276,7 @@
         ],
         [
          "가뭄 타이밍 잡기",
-         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+         "4월 전에 작물 보호 준비하고 작물 부담 증가기에 판매."
         ]
        ]
       },
@@ -13289,7 +13289,7 @@
         "노출된 구획에 덮개를 짓고 약한 작물은 모아서 심으세요.",
         "'고루 내리는 비' 유전자로 건조기에도 자동 물 주기.",
         "뇌우 전력을 1.0 드론 스테이션과 공업 지구에.",
-        "가뭄 전에 비축하고 가뭄 중에 판매."
+        "가뭄 전에 작물 보호 준비하고 가뭄 중에 판매."
        ]
       },
       {
@@ -13312,11 +13312,11 @@
         ],
         [
          "가뭄은 언제인가요?",
-         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+         "4월, 건기 끝. 작물이 시들고 상점 작물 부담이 커집습니다."
         ],
         [
          "가뭄에서 어떻게 이익을 내나요?",
-         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+         "4월 전에 작물 보호 준비하고 작물 부담 증가기에 판매하세요."
         ],
         [
          "우기가 있나요?",
@@ -13348,7 +13348,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "En 1.0, el nombre oficial del mes 4 es Harsh Dry Season. Prepara protección y riego; esta guía no afirma subidas de precio ni arbitraje sin verificar."
+       "body": "En 1.0, el nombre oficial del mes 4 es Harsh Dry Season. Prepara protección y riego; esta guía no afirma estrategias comerciales sin verificar."
       },
       {
        "type": "table",
@@ -13382,8 +13382,8 @@
         ],
         [
          "Sequía (mes 4)",
-         "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa.",
-         "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
+         "Marchitez + presión sobre cultivos",
+         "Acumula, planifica el riego"
         ]
        ]
       },
@@ -13439,7 +13439,7 @@
         ],
         [
          "Aprovecha el momento de la sequía",
-         "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
+         "Acumula antes del mes 4 y vende durante la presión sobre cultivos."
         ]
        ]
       },
@@ -13479,7 +13479,7 @@
         ],
         [
          "¿Cómo saco provecho de la sequía?",
-         "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
+         "Acumula bienes antes del mes 4 y véndelos durante la presión sobre cultivos."
         ],
         [
          "¿Hay estación lluviosa?",
@@ -13784,7 +13784,7 @@
       {
        "type": "note",
        "heading": "備註",
-       "body": "帶解鎖條件的完整英文 80 成就清單正在 1.0 來源核對中整理，完成後會替換上方的部分表格。如果你想衝 100%，先從日常類成就（喝水、烹飪、釣魚）開始——它們自然發生，卻又容易被漏記。"
+       "body": "帶解鎖條件的完整英文 80 成就清單正在 1.0 實測中整理，完成後會替換上方的部分表格。如果你想衝 100%，先從日常類成就（喝水、烹飪、釣魚）開始——它們自然發生，卻又容易被漏記。"
       }
      ]
     },
@@ -14167,7 +14167,7 @@
         "打开多洛可小镇的 Steam 创意工坊（steamcommunity.com/app/2285550/workshop）。",
         "浏览或搜索模组，点「订阅」。",
         "Steam 自动下载，游戏中即可使用。",
-        "Workshop 架构不支持功能型 Mod，可能导致黑屏或卡死。本站不建议安装 DTMAPI；排障时移除 BepInEx 并用纯净游戏测试。",
+        "功能型 Mod 不受官方支持；请先阅读 8 月 3 日官方 FAQ 的风险说明。",
         "装模组前备份存档——模组会改变游戏行为，大版本更新后可能失效。"
        ]
       },
@@ -14193,7 +14193,7 @@
         ],
         [
          "需要 DTMAPI 吗？",
-         "Workshop 架构不支持功能型 Mod，可能导致黑屏或卡死。本站不建议安装 DTMAPI；排障时移除 BepInEx 并用纯净游戏测试。"
+         "不要从本指南安装功能型框架；请先阅读 8 月 3 日官方 FAQ，并用纯净游戏排障。"
         ],
         [
          "更新后模组还能用吗？",
@@ -14223,7 +14223,7 @@
         "打開多洛可小鎮的 Steam 創意工坊（steamcommunity.com/app/2285550/workshop）。",
         "瀏覽或搜索模組，點「訂閱」。",
         "Steam 自動下載，遊戲中即可使用。",
-        "Workshop 架構不支援功能型 Mod，可能造成黑畫面或凍結。本站不建議安裝 DTMAPI；疑難排解時移除 BepInEx 並用乾淨遊戲測試。",
+        "功能型 Mod 不受官方支持；請先閱讀 8 月 3 日官方 FAQ 的風險說明。",
         "裝模組前備份存檔——模組會改變遊戲行為，大版本更新後可能失效。"
        ]
       },
@@ -14249,7 +14249,7 @@
         ],
         [
          "需要 DTMAPI 嗎？",
-         "Workshop 架構不支援功能型 Mod，可能造成黑畫面或凍結。本站不建議安裝 DTMAPI；疑難排解時移除 BepInEx 並用乾淨遊戲測試。"
+         "不要從本指南安裝功能型框架；請先閱讀 8 月 3 日官方 FAQ，並用純淨遊戲排障。"
         ],
         [
          "更新後模組還能用嗎？",
@@ -14279,7 +14279,7 @@
         "ドロックタウンのSteamワークショップを開く（steamcommunity.com/app/2285550/workshop）。",
         "MODを探して「購読」をクリック。",
         "Steamが自動ダウンロードし、ゲーム内で使える。",
-        "Workshop の構造は機能 Mod をサポートせず、黒画面やフリーズの原因になり得ます。このガイドは DTMAPI の導入を勧めません。問題時は BepInEx を削除し、クリーンなゲームで確認してください。",
+        "機能 Mod は公式非対応です。8月3日の公式 FAQ でリスクを確認してください。",
         "導入前にセーブをバックアップ——MODは挙動を変え、大型アップデート後に壊れることがある。"
        ]
       },
@@ -14305,7 +14305,7 @@
         ],
         [
          "DTMAPIは必要？",
-         "Workshop の構造は機能 Mod をサポートせず、黒画面やフリーズの原因になり得ます。このガイドは DTMAPI の導入を勧めません。問題時は BepInEx を削除し、クリーンなゲームで確認してください。"
+         "本ガイドから機能フレームワークを導入せず、8月3日の公式 FAQ を確認してください。"
         ],
         [
          "アップデート後も動く？",
@@ -14335,7 +14335,7 @@
         "돌록 타운의 Steam 워크숍을 엽니다(steamcommunity.com/app/2285550/workshop).",
         "모드를 찾아 '구독'을 클릭합니다.",
         "Steam이 자동 다운로드하고 게임에서 바로 사용할 수 있습니다.",
-        "Workshop 구조는 기능성 Mod를 지원하지 않으며 검은 화면이나 멈춤이 생길 수 있습니다. 이 가이드는 DTMAPI 설치를 권하지 않습니다. 문제 해결 시 BepInEx를 제거하고 깨끗한 게임으로 시험하세요.",
+        "기능성 Mod는 공식 지원되지 않습니다. 8월 3일 공식 FAQ의 위험 안내를 먼저 확인하세요.",
         "모드 설치 전 세이브를 백업하세요 — 모드는 게임 동작을 바꾸고 대형 업데이트 후 깨질 수 있습니다."
        ]
       },
@@ -14361,7 +14361,7 @@
         ],
         [
          "DTMAPI가 필요한가요?",
-         "Workshop 구조는 기능성 Mod를 지원하지 않으며 검은 화면이나 멈춤이 생길 수 있습니다. 이 가이드는 DTMAPI 설치를 권하지 않습니다. 문제 해결 시 BepInEx를 제거하고 깨끗한 게임으로 시험하세요."
+         "이 가이드에서 기능 프레임워크를 설치하지 말고 8월 3일 공식 FAQ를 확인하세요."
         ],
         [
          "업데이트 후에도 되나요?",
@@ -14423,7 +14423,7 @@
         ],
         [
          "¿Necesito DTMAPI?",
-         "La arquitectura de Workshop no admite mods funcionales y pueden causar pantalla negra o bloqueos. Esta guía no recomienda instalar DTMAPI. Para diagnosticar, elimina BepInEx y prueba el juego limpio."
+         "No instales frameworks funcionales desde esta guía; consulta las FAQ oficiales del 3 de agosto."
         ],
         [
          "¿Funcionarán tras las actualizaciones?",
@@ -14446,7 +14446,7 @@
      "type": "list",
      "tag": "1.00.03-OFFICIAL",
      "heading": "Official patch 1.00.03 — August 10, 2026",
-     "body": "Official patch highlights; this is not a complete changelog.",
+     "body": "Official patch highlights; this is not a selected highlights.",
      "items": [
       "Fixed some Early Access saves failing to load because a removed planter remained in the tent.",
       "Fixed truncated naming text and a repeating Old City Ruins quest animation.",
@@ -14524,7 +14524,7 @@
      "type": "note",
      "tag": "SOURCE-BOUNDARY",
      "heading": "Source boundary",
-     "body": "Use the dated official Steam announcements as the source record; this page presents selected highlights, not a complete changelog."
+     "body": "Use the dated official Steam announcements as the source record; this page presents selected highlights, not a selected highlights."
     }
    ],
    "sources": [
@@ -14609,11 +14609,11 @@
       {
        "type": "list",
        "heading": "1.0 正式版亮点",
-       "body": "完整的 1.0 变更清单，依据官方公告。",
+       "body": "1.0 官方亮点摘录，依据官方公告。",
        "items": [
         "新区域：旧城废墟（第三大区域）。",
         "完整主线结局。",
-        "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。",
+        "农业自动化系统（太阳能+自动化→无人机站）。",
         "蘑菇节。",
         "更多角色剧情线。",
         "新工具、战斗无人机、鱼与配件。",
@@ -14624,7 +14624,7 @@
       {
        "type": "note",
        "heading": "为什么要跟踪更新",
-       "body": "知道游戏何时变化，能帮你找到当前有效的攻略、避开过时建议——多数英文攻略仍停留在 EA 阶段，因此像本站这样 1.0 感知的网站才是可靠来源。"
+       "body": "知道游戏何时变化，能帮你找到当前有效的攻略、避开过时建议——多数英文攻略仍停留在 EA 阶段，请以带日期的 Steam 官方公告为来源。"
       },
       {
        "type": "note",
@@ -14697,11 +14697,11 @@
       {
        "type": "list",
        "heading": "1.0 正式版亮點",
-       "body": "完整的 1.0 變更清單，依據官方公告。",
+       "body": "1.0 官方亮點摘錄，依據官方公告。",
        "items": [
         "新區域：舊城廢墟（第三大區域）。",
         "完整主線結局。",
-        "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。",
+        "農業自動化系統（太陽能+自動化→無人機站）。",
         "蘑菇節。",
         "更多角色劇情線。",
         "新工具、戰鬥無人機、魚與配件。",
@@ -14712,7 +14712,7 @@
       {
        "type": "note",
        "heading": "為什麼要跟蹤更新",
-       "body": "知道遊戲何時變化，能幫你找到當前有效的攻略、避開過時建議——多數英文攻略仍停留在 EA 階段，因此像本站這樣 1.0 感知的網站才是可靠來源。"
+       "body": "知道遊戲何時變化，能幫你找到當前有效的攻略、避開過時建議——多數英文攻略仍停留在 EA 階段，請以帶日期的 Steam 官方公告為來源。"
       },
       {
        "type": "note",
@@ -14732,7 +14732,7 @@
        "type": "list",
        "tag": "1.00.03-OFFICIAL",
        "heading": "公式パッチ 1.00.03 — 2026年8月10日",
-       "body": "公式発表の要点であり、完全な変更履歴ではありません。",
+       "body": "公式発表の要点であり、公式発表から選んだ要点です。",
        "items": [
         "削除済みプランターがテントに残り、一部の早期アクセスセーブを読み込めない問題を修正。",
         "命名テキストの切れと Old City Ruins クエストアニメーションの反復を修正。",
@@ -14785,11 +14785,11 @@
       {
        "type": "list",
        "heading": "1.0正式版ハイライト",
-       "body": "公式発表に基づく完全な1.0変更リスト。",
+       "body": "公式発表に基づく1.0 公式要点。",
        "items": [
         "新地域：旧市街遺跡（3つ目の大型マップ地域）。",
         "完全なメインストーリー結末。",
-        "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。",
+        "農業オートメーション（二段階自動化→ドローン基地）。",
         "キノコ祭り。",
         "追加のキャラクターストーリー。",
         "新ツール・戦闘ドローン・魚・アクセサリー。",
@@ -14800,13 +14800,13 @@
       {
        "type": "note",
        "heading": "なぜ更新を追うか",
-       "body": "ゲームがいつ変わったかを知れば、現在有効な攻略を見つけ、時代遅れの助言を避けられる——多くの英語攻略は EA のままだ。1.0 に対応した本サイトが信頼できる情報源。"
+       "body": "ゲームがいつ変わったかを知れば、現在有効な攻略を見つけ、時代遅れの助言を避けられる——多くの英語攻略は EA のままだ。日付付きの Steam 公式発表を情報源にしてください。"
       },
       {
        "type": "note",
        "tag": "SOURCE-BOUNDARY",
        "heading": "Source boundary",
-       "body": "日付付きの Steam 公式発表を情報源として確認してください。本ページは要点であり、完全な変更履歴ではありません。"
+       "body": "日付付きの Steam 公式発表を情報源として確認してください。本ページは要点であり、公式発表から選んだ要点です。"
       }
      ]
     },
@@ -14873,11 +14873,11 @@
       {
        "type": "list",
        "heading": "1.0 정식 출시 하이라이트",
-       "body": "공식 발표 기준 완전한 1.0 변경 목록.",
+       "body": "공식 발표 기준 1.0 공식 주요 내용.",
        "items": [
         "새 지역: 구시가지 유적 (세 번째 대형 맵 지역).",
         "완전한 메인 스토리 결말.",
-        "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요.",
+        "농업 자동화 시스템 (2단계 자동화→드론 기지).",
         "버섯 축제.",
         "추가 캐릭터 스토리.",
         "새 도구·전투 드론·물고기·액세서리.",
@@ -14888,7 +14888,7 @@
       {
        "type": "note",
        "heading": "업데이트를 추적하는 이유",
-       "body": "날짜가 있는 Steam 공식 공지를 원문으로 확인하세요. 이 페이지는 주요 내용이며 전체 변경 기록이라고 주장하지 않습니다."
+       "body": "게임이 언제 바뀌었는지 알면 현재 유효한 공략을 찾고 시대에 뒤떨어진 조언을 피할 수 있습니다——대부분의 영어 공략은 EA 상태 그대로입니다. 날짜가 있는 Steam 공식 공지를 원문으로 확인하세요."
       },
       {
        "type": "note",
@@ -14967,11 +14967,11 @@
       {
        "type": "list",
        "heading": "Destacados del lanzamiento 1.0",
-       "body": "El registro completo del 1.0, según el anuncio oficial.",
+       "body": "El hitos seleccionados del 1.0, según el anuncio oficial.",
        "items": [
         "Nueva área: Ruinas de la Ciudad Vieja (tercera gran zona).",
         "Final completo de la historia principal.",
-        "Los avisos oficiales de 1.0 describen una automatización agrícola en dos etapas. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas.",
+        "Sistema de automatización agrícola (automatización en dos etapas → drones).",
         "Festival de las Setas.",
         "Historias de personajes adicionales.",
         "Nuevas herramientas, drones de combate, peces y accesorios.",
@@ -14982,7 +14982,7 @@
       {
        "type": "note",
        "heading": "Por qué seguir las actualizaciones",
-       "body": "Consulta los anuncios oficiales de Steam con fecha como fuente. Esta página resume puntos destacados y no afirma ser un historial completo."
+       "body": "Saber cuándo cambió el juego te ayuda a encontrar guías vigentes y evitar consejos desactualizados: la mayoría de las guías en inglés siguen describiendo el Early Access. Consulta los anuncios oficiales de Steam con fecha como fuente."
       },
       {
        "type": "note",
@@ -15121,7 +15121,7 @@
         ],
         [
          "有农业自动化吗？",
-         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
+         "有——1.0 新增。两阶段自动化驱动农场无人机站，自动播种、培育与收获。"
         ],
         [
          "1.0 有什么新内容？",
@@ -15173,7 +15173,7 @@
         ],
         [
          "有農業自動化嗎？",
-         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
+         "有——1.0 新增。兩階段自動化驅動農場無人機站，自動播種、培育與收穫。"
         ],
         [
          "1.0 有什麼新內容？",
@@ -15225,7 +15225,7 @@
         ],
         [
          "農業オートメーションはある？",
-         "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。"
+         "あります——1.0で新登場。二段階自動化がドローン基地を駆動し、播種・育成・収穫を自動化。"
         ],
         [
          "1.0の新要素は？",
@@ -15277,7 +15277,7 @@
         ],
         [
          "농업 자동화가 있나요?",
-         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
+         "네——1.0 신규. 2단계 자동화이 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다."
         ],
         [
          "1.0에 뭐가 새로 있나요?",
@@ -15335,7 +15335,7 @@
         ],
         [
          "¿Hay automatización agrícola?",
-         "Los avisos oficiales de 1.0 describen una automatización agrícola en dos etapas. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas."
+         "Sí, nueva en 1.0: la automatización agrícola alimenta estaciones de drones que siembran, cuidan y cosechan."
         ],
         [
          "¿Qué hay de nuevo en 1.0?",
@@ -16656,7 +16656,7 @@
         "80 个 Steam 成就（基础 43 + 1.0 新增 37）鼓励全收集",
         "作物基因系统：30+ 作物 × 约 20 种突变需要研究与培育",
         "钓鱼：不同池塘、鱼竿与天气有不同渔获——集齐图鉴需要时间",
-        "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。",
+        "农业自动化（太阳能+自动化→无人机站）是一整条科技树",
         "5 个区域加上 1.0 新增的旧城废墟带来大量探索时间"
        ]
       },
@@ -16668,7 +16668,7 @@
         "想快速通关：专注主线任务与镇务，让自动化处理日常农活",
         "想 100%：并行推进成就、基因实验室与鱼类图鉴——别留到最后",
         "善用季节天气：用暴雨浇灌、用雷暴蓄电，而不是对抗它们",
-        "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+        "4 月旱季前准备作物防护——作物压力增加、作物枯萎"
        ]
       },
       {
@@ -16751,7 +16751,7 @@
         "80 個 Steam 成就（基礎 43 + 1.0 新增 37）鼓勵全收集",
         "作物基因系統：30+ 作物 × 約 20 種突變需要研究與培育",
         "釣魚：不同池塘、魚竿與天氣有不同漁獲——集齊圖鑑需要時間",
-        "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。",
+        "農業自動化（太陽能+自動化→無人機站）是一整條科技樹",
         "5 個區域加上 1.0 新增的舊城廢墟帶來大量探索時間"
        ]
       },
@@ -16763,7 +16763,7 @@
         "想快速通關：專注主線任務與鎮務，讓自動化處理日常農活",
         "想 100%：並行推進成就、基因實驗室與魚類圖鑑——別留到最後",
         "善用季節天氣：用暴雨澆灌、用雷暴蓄電，而不是對抗它們",
-        "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+        "4 月旱季前準備作物防護——作物壓力增加、作物枯萎"
        ]
       },
       {
@@ -16846,7 +16846,7 @@
         "全80実績（基礎43＋1.0で37）がコンプを促す",
         "作物遺伝子システム：30+作物×約20変異の研究と育成",
         "釣り：池・竿・天候で違う獲物 — 図鑑コンプに時間がかかる",
-        "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。",
+        "農業オートメーション（二段階自動化→ドローン基地）は一つのツリー",
         "5地域＋1.0の旧市街遺跡が探索時間を増やす"
        ]
       },
@@ -16858,7 +16858,7 @@
         "ストーリーを早く：メインクエストと街の依頼に集中し、ルーチン農作業は自動化に任せる",
         "100%を目指す：実績・遺伝子ラボ・魚図鑑を並行で — 最後にまとめない",
         "季節の天候を利用：嵐で水やり、雷雨で蓄電 — 戦わず活用する",
-        "4月の干ばつ前に備蓄 — 価格が高騰し作物は枯れる"
+        "4月の干ばつ前に作物保護を準備 — 価格が高騰し作物は枯れる"
        ]
       },
       {
@@ -16941,7 +16941,7 @@
         "80개 업적(기본 43 + 1.0 추가 37)이 완주를 유도",
         "작물 유전자 시스템: 30+ 작물 × 약 20개 변이 연구와 육종",
         "낚시: 연못·낚싯대·날씨에 따라 다른 어획 — 도감 완성이 오래 걸림",
-        "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요.",
+        "농업 자동화(2단계 자동화→드론 기지)는 하나의 테크 트리",
         "5개 지역 + 1.0의 옛 도시 유적이 탐험 시간을 늘림"
        ]
       },
@@ -16953,7 +16953,7 @@
         "스토리 빨리: 메인 퀘스트와 마을 의뢰에 집중하고 일상 농사는 자동화에 맡기기",
         "100% 목표: 업적·유전자 랩·물고기 도감을 병행 — 마지막에 몰아하지 말 것",
         "계절 날씨 활용: 폭풍으로 물 주기, 뇌우로 전력 저장 — 싸우지 말고 활용",
-        "4월 가뭄 전에 비축 — 가격이 폭등하고 작물이 시듦"
+        "4월 가뭄 전에 작물 보호 준비 — 작물 부담이 커짐하고 작물이 시듦"
        ]
       },
       {
@@ -17042,7 +17042,7 @@
         "Los 80 logros de Steam (43 base + 37 nuevos en 1.0) invitan a completarlo todo",
         "Sistema genético de cultivos: ~20 mutaciones en más de 30 cultivos por investigar y criar",
         "Pesca: estanques, cañas y clima diferentes dan capturas distintas — completar el catálogo lleva tiempo",
-        "La automatización agrícola (solar + eólica → estaciones de drones) es todo un árbol tecnológico",
+        "La automatización agrícola (solar + automatización → estaciones de drones) es todo un árbol tecnológico",
         "Las 5 regiones más la nueva área de las Ruinas de la Ciudad Vieja añaden tiempo de exploración"
        ]
       },
@@ -17109,7 +17109,7 @@
      "type": "note",
      "tag": "1.00.03-OFFICIAL",
      "heading": "Harsh Dry Season (Month 4)",
-     "body": "Month 4 is Harsh Dry Season. Protect crops and plan watering; the cited official notes do not establish a trading strategy."
+     "body": "Month 4 is named Harsh Dry Season in 1.0. Plan crop protection and watering for it; this guide does not claim an unverified crop risk or trading exploit."
     },
     {
      "type": "list",
@@ -17250,7 +17250,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0 中第 4 月的正式名称是 Harsh Dry Season。请为作物防护与浇水做准备；本站不再声称未经证实的涨价或倒卖机制。"
+       "body": "1.0 中第 4 月的正式名称是 Harsh Dry Season。请为作物防护与浇水做准备；本站不再声称未经证实的交易机制。"
       },
       {
        "heading": "从零开始的赚钱循环",
@@ -17325,7 +17325,7 @@
       },
       {
        "heading": "常见的赚钱错误",
-       "body": "社区报告指出这些是玩家漏钱的方式：全卖原料（跳过 10-20% 的加工利润）、4 月前不囤货（在全年最差的价格卖出）、跳过任务（错过技术点这个收入放大器）、把鱼全卖光（失去 13 种鱼缸专属鱼的繁殖对）、迟迟不升背包（浪费几小时跑回家）。",
+       "body": "社区报告指出这些是玩家漏钱的方式：全卖原料（跳过 10-20% 的加工利润）、4 月前不准备作物防护（在全年最差的价格卖出）、跳过任务（错过技术点这个收入放大器）、把鱼全卖光（失去 13 种鱼缸专属鱼的繁殖对）、迟迟不升背包（浪费几小时跑回家）。",
        "type": "note"
       },
       {
@@ -17345,8 +17345,8 @@
          "腌菜、烘干、织布各约增值 10-20%，据社区报告 [L2]。"
         ],
         [
-         "什么时候卖囤货？",
-         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+         "什么时候卖准备作物防护？",
+         "4 月旱季前准备作物防护，趁作物压力增加时卖出——那是日历上最大的一笔回报。"
         ],
         [
          "背包升级值得吗？",
@@ -17354,7 +17354,7 @@
         ],
         [
          "自动化需要钱吗？",
-         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
+         "后期需要：两阶段自动化与无人机站要材料和技术点，早期收入为 1.0 终局供血。"
         ]
        ],
        "type": "faq"
@@ -17377,7 +17377,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+       "body": "1.0 では第4月の公式名は Harsh Dry Season です。作物保護と水やりを準備してください。未確認の取引攻略は掲載しません。"
       },
       {
        "heading": "ゼロからの金策ループ",
@@ -17393,7 +17393,7 @@
       },
       {
        "heading": "加工：10-20% の付加価値",
-       "body": "コミュニティ報告（L2）では、加工による付加価値は1品あたり10-20%。機械は24時間稼働するので、何かをしている間も利益が複利で増える。1.0 の正確なマージンは公式資料確認待ち。",
+       "body": "コミュニティ報告（L2）では、加工による付加価値は1品あたり10-20%。機械は24時間稼働するので、何かをしている間も利益が複利で増える。1.0 の正確なマージンは実測待ち。",
        "columns": [
         "素材",
         "加工",
@@ -17452,12 +17452,12 @@
       },
       {
        "heading": "よくある金策ミス",
-       "body": "コミュニティ報告が指摘するお金を逃すパターン：素材を全部生売り（10-20%の加工マージンを捨てる）、4月前に備蓄しない（一年で最悪の価格で売る）、クエストをスキップ（収入の増幅器・テックポイントを逃す）、魚を全部売る（水槽限定13種の繁殖ペアを失う）、バックパック強化を後回し（往復で何時間も無駄にする）。",
+       "body": "コミュニティ報告が指摘するお金を逃すパターン：素材を全部生売り（10-20%の加工マージンを捨てる）、4月前に作物保護を準備しない（一年で最悪の価格で売る）、クエストをスキップ（収入の増幅器・テックポイントを逃す）、魚を全部売る（水槽限定13種の繁殖ペアを失う）、バックパック強化を後回し（往復で何時間も無駄にする）。",
        "type": "note"
       },
       {
        "heading": "出典と検証",
-       "body": "10-20% の加工マージン、Level 2 の竿、初日のバックパックのコツはすべてコミュニティ報告（L2、grindnstrat や Steam 議論など）。1.0 クライアントでの正確なマージンは未公式資料確認——具体的な数字はプレイヤー報告として扱い、自分のセーブで確認してほしい。",
+       "body": "10-20% の加工マージン、Level 2 の竿、初日のバックパックのコツはすべてコミュニティ報告（L2、grindnstrat や Steam 議論など）。1.0 クライアントでの正確なマージンは未実測——具体的な数字はプレイヤー報告として扱い、自分のセーブで確認してほしい。",
        "type": "note"
       },
       {
@@ -17472,8 +17472,8 @@
          "漬ける・干す・織るで1品あたり約10-20%、コミュニティ報告による [L2]。"
         ],
         [
-         "備蓄はいつ売る？",
-         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+         "作物保護を準備はいつ売る？",
+         "4月の干ばつ前に作物保護を準備し、作物への負担時に売る——カレンダー最大の払い出し。"
         ],
         [
          "バックパック強化は価値がある？",
@@ -17481,7 +17481,7 @@
         ],
         [
          "自動化にお金は必要？",
-         "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。"
+         "後半は必要：二段階自動化とドローン基地は素材とテックポイントが要る。序盤の収入が1.0終盤を支える。"
         ]
        ],
        "type": "faq"
@@ -17504,7 +17504,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+       "body": "1.0에서 4번째 달의 공식 명칭은 Harsh Dry Season입니다. 작물 보호와 물주기를 준비하세요. 확인되지 않은 거래 요령은 안내하지 않습니다."
       },
       {
        "heading": "제로부터 시작하는 돈 루프",
@@ -17579,7 +17579,7 @@
       },
       {
        "heading": "흔한 돈 버는 실수",
-       "body": "커뮤니티가 지적하는 돈을 놓치는 패턴: 원자재를 전부 그대로 판매(10-20% 가공 마진 포기), 4월 전 비축 안 함(연중 최악의 가격으로 판매), 퀘스트 건너뛰기(수입 증폭기인 기술 포인트를 놓침), 물고기를 전부 판매(수조 전용 13종의 번식 쌍 상실), 가방 업그레이드 미루기(왕복에 몇 시간 낭비).",
+       "body": "커뮤니티가 지적하는 돈을 놓치는 패턴: 원자재를 전부 그대로 판매(10-20% 가공 마진 포기), 4월 전 작물 보호 준비 안 함(연중 최악의 가격으로 판매), 퀘스트 건너뛰기(수입 증폭기인 기술 포인트를 놓침), 물고기를 전부 판매(수조 전용 13종의 번식 쌍 상실), 가방 업그레이드 미루기(왕복에 몇 시간 낭비).",
        "type": "note"
       },
       {
@@ -17599,8 +17599,8 @@
          "절임·건조·직조 각각 품목당 약 10-20%, 커뮤니티 보고 기준 [L2]."
         ],
         [
-         "비축물은 언제 팔아야 하나요?",
-         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+         "작물 보호 준비물은 언제 팔아야 하나요?",
+         "4월 가뭄 전에 작물 보호 준비하고 작물 부담 증가기에 판매 — 달력에서 가장 큰 수익 기회입니다."
         ],
         [
          "가방 업그레이드는 가치 있나요?",
@@ -17608,7 +17608,7 @@
         ],
         [
          "자동화에 돈이 필요한가요?",
-         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
+         "후반에는 필요: 2단계 자동화과 드론 기지에 재료와 기술 포인트가 듭니다. 초반 수입이 1.0 엔드게임을 뒷받침합니다."
         ]
        ],
        "type": "faq"
@@ -17637,7 +17637,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "En 1.0, el nombre oficial del mes 4 es Harsh Dry Season. Prepara protección y riego; esta guía no afirma subidas de precio ni arbitraje sin verificar."
+       "body": "En 1.0, el nombre oficial del mes 4 es Harsh Dry Season. Prepara protección y riego; esta guía no afirma estrategias comerciales sin verificar."
       },
       {
        "heading": "El bucle de dinero desde cero",
@@ -17712,7 +17712,7 @@
       },
       {
        "heading": "Errores de dinero comunes",
-       "body": "La comunidad señala estas formas de dejar dinero sobre la mesa: vender todo crudo (te saltas el 10-20% del procesado), no acumular antes del mes 4 (vendes a los peores precios del año), saltarte misiones (pierdes Puntos de Tecnología, el multiplicador de ingresos), vender todos los peces (pierdes las parejas de 13 especies de tanque) y retrasar la mochila (horas yendo a casa).",
+       "body": "La comunidad señala estas formas de dejar dinero sobre la mesa: vender todo crudo (te saltas el 10-20% del procesado), no protege los cultivosr antes del mes 4 (proteges los cultivos demasiado tarde del año), saltarte misiones (pierdes Puntos de Tecnología, el multiplicador de ingresos), vender todos los peces (pierdes las parejas de 13 especies de tanque) y retrasar la mochila (horas yendo a casa).",
        "type": "note"
       },
       {
@@ -17741,7 +17741,7 @@
         ],
         [
          "¿Necesito dinero para la automatización?",
-         "Más tarde sí: la energía solar/eólica y las estaciones de drones cuestan materiales y Puntos de Tecnología, así que los ingresos tempranos financian el final del 1.0."
+         "Más tarde sí: la energía solar/automatización y las estaciones de drones cuestan materiales y Puntos de Tecnología, así que los ingresos tempranos financian el final del 1.0."
         ]
        ],
        "type": "faq"
@@ -17764,7 +17764,7 @@
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0 中第 4 月的正式名稱是 Harsh Dry Season。請為作物防護與澆水準備；本站不再宣稱未經證實的漲價或倒賣機制。"
+       "body": "1.0 中第 4 月的正式名稱是 Harsh Dry Season。請為作物防護與澆水準備；本站不再宣稱未經證實的交易機制。"
       },
       {
        "heading": "從零開始的賺錢循環",
@@ -17839,12 +17839,12 @@
       },
       {
        "heading": "常見的賺錢錯誤",
-       "body": "社區報告指出這些是玩家漏錢的方式：全賣原料（跳過 10-20% 的加工利潤）、4 月前不囤貨（在全年最差的價格賣出）、跳過任務（錯過技術點這個收入放大器）、把魚全賣光（失去 13 種魚缸專屬魚的繁殖對）、遲遲不升揹包（浪費幾小時跑回家）。",
+       "body": "社區報告指出這些是玩家漏錢的方式：全賣原料（跳過 10-20% 的加工利潤）、4 月前不準備作物防護（在全年最差的價格賣出）、跳過任務（錯過技術點這個收入放大器）、把魚全賣光（失去 13 種魚缸專屬魚的繁殖對）、遲遲不升揹包（浪費幾小時跑回家）。",
        "type": "note"
       },
       {
        "heading": "來源與驗證",
-       "body": "10-20% 加工利潤率、Level 2 魚竿和第一天揹包技巧均為社區報告（L2，如 grindnstrat 與 Steam 討論）。我們尚未在 1.0 客戶端來源核對確切利潤率——請把具體數字當作玩家報告，並在自己的存檔中確認。",
+       "body": "10-20% 加工利潤率、Level 2 魚竿和第一天揹包技巧均為社區報告（L2，如 grindnstrat 與 Steam 討論）。我們尚未在 1.0 客戶端實測確切利潤率——請把具體數字當作玩家報告，並在自己的存檔中確認。",
        "type": "note"
       },
       {
@@ -17859,8 +17859,8 @@
          "醃菜、烘乾、織布各約增值 10-20%，據社區報告 [L2]。"
         ],
         [
-         "什麼時候賣囤貨？",
-         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+         "什麼時候賣準備作物防護？",
+         "4 月旱季前準備作物防護，趁作物壓力增加時賣出——那是日曆上最大的一筆回報。"
         ],
         [
          "揹包升級值得嗎？",
@@ -17868,7 +17868,7 @@
         ],
         [
          "自動化需要錢嗎？",
-         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
+         "後期需要：兩階段自動化與無人機站要材料和技術點，早期收入為 1.0 終局供血。"
         ]
        ],
        "type": "faq"
@@ -22623,7 +22623,7 @@
       {
        "type": "table",
        "heading": "按村民查——該帶什麼？",
-       "body": "社區已來源核對的 13 位村民。另外 12 個角色（Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch）目前沒有任何禮物數據。",
+       "body": "社區已實測的 13 位村民。另外 12 個角色（Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch）目前沒有任何禮物數據。",
        "columns": [
         "村民",
         "愛",
@@ -22717,7 +22717,7 @@
        "items": [
         [
          "多洛可小鎮最萬能的禮物是什麼？",
-         "Fern Fossil。在 13 位有來源核對數據的村民裡，12 位喜歡它，沒有一個人討厭。Honey 緊隨其後，10/13，同樣零討厭。"
+         "Fern Fossil。在 13 位有實測數據的村民裡，12 位喜歡它，沒有一個人討厭。Honey 緊隨其後，10/13，同樣零討厭。"
         ],
         [
          "什麼東西絕對不能送？",

@@ -258,7 +258,7 @@
       [
        "Drought (Month 4)",
        "Crops face Harsh Dry Season",
-       "Stockpile before Month 4, sell during the spike"
+       "Protect crops and plan watering before Month 4"
       ]
      ]
     },
@@ -286,7 +286,7 @@
       ],
       [
        "Start stockpiling before Month 4",
-       "Drought prices make a small hoard very profitable."
+       "Prepare crop protection and watering before Month 4."
       ]
      ]
     },
@@ -322,7 +322,7 @@
      "type": "note",
      "tag": "COMMON MISTAKES",
      "heading": "Common Mistakes New Players Make (Avoid These)",
-     "body": "The most common early run-enders, from community reports: watering everything by hand every single day (automate or use the Rain gene), planting one giant flat field (a single storm wipes it), ignoring friendship (you lock yourself out of recipes), skipping Bellad's quests (you fall behind the tech tree), and hoarding nothing before Month 4 (you sell at the worst prices of the year)."
+     "body": "The most common early run-enders, from community reports: watering everything by hand every single day (automate or use the Rain gene), planting one giant flat field (a single storm wipes it), ignoring friendship (you lock yourself out of recipes), skipping Bellad's quests (you fall behind the tech tree), and failing to protect crops before Month 4 (Harsh Dry Season can ruin an unprepared field)."
     },
     {
      "type": "list",
@@ -2050,7 +2050,7 @@
    "slug": "weather",
    "title": "Doloc Town Weather Guide: Acid Rain, Storms & Drought",
    "metaTitle": "Doloc Town Weather: Acid Rain, Storms & Drought Guide",
-   "metaDescription": "Master Doloc Town extreme weather: protect crops from acid rain and heat, harness storms for power, and profit from drought prices with the seasonal calendar.",
+   "metaDescription": "Master Doloc Town extreme weather: protect crops from acid rain and heat, harness storms for power, and prepare crop protection and watering with the seasonal calendar.",
    "intro": "Extreme weather defines Doloc Town. Learn each threat, read the seasonal calendar, and turn every storm into an advantage.",
    "sections": [
     {

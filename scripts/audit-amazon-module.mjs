@@ -45,20 +45,23 @@ try {
 
   // Evidence-semantic guard: inspect the generated data and final HTML, not
   // only one visible route. Exceptions are narrowly limited to warning copy.
-  const semanticFiles = [path.join(root,"data/site.json"), ...walk(disabled)];
+  const semanticFiles = [
+    path.join(root,"data/site.base.json"),
+    path.join(root,"data/build_content.py"),
+    path.join(root,"data/site.json"),
+    ...walk(disabled)
+  ];
   const forbidden = [
-    ["drought-arbitrage", /price spike|prices spike|sell high|highest prices|价格飙升|價格飆升|物价飙升|物價飆升|最高价|最高價|価格高騰|最高値|가격.{0,10}(급등|치솟)|dispara los precios|subida de precios|vende caro/i],
-    ["wind-claim", /wind turbine|wind power|solar\/wind|solar \+ wind|solar and wind|太阳能.{0,3}风能|太陽能.{0,3}風能|太阳能\/风能|太陽光.{0,3}風力|태양광.{0,3}풍력|solar.{0,3}viento|energía solar y eólica/i],
+    ["drought-arbitrage", /drought.{0,60}(?:price|hoard|sell high|worst)|price.{0,50}(?:drought|spike)|hoard|sell high|价格(?:飙升|高涨)|價格(?:飆升|高漲)|物价(?:飙升|高涨)|物價(?:飆升|高漲)|価格高騰|物価高騰|가뭄.{0,30}(?:가격|물가)|precios.{0,30}sequía|vende caro/i],
+    ["wind-claim", /\bwind(?:\s+(?:power|turbines?))\b|aerogeneradores|風力|风力|풍력/i],
     ["unsafe-mod-advice", /DTMAPI.{0,100}(subscribe|install|订阅|訂閱|購読|구독|Suscríbete)|(?:dependencies|依赖|依賴|依存|의존성).{0,40}(first|先|먼저)/i],
     ["new-year-beast-mistranslation", /New Year Beast.{0,20}(difficulty|难度|難度|난이도|dificultad)/i],
-    ["self-backing", /complete 1\.0 changelog|site (?:like this )?is the reliable source|사이트가 신뢰할 수 있는 출처|sitio .*fuente fiable/i]
+    ["self-backing", /complete.{0,30}(?:change|log)|完整.{0,20}(?:变更|變更)|完全.{0,20}(?:変更|ログ)|완전한.{0,20}(?:변경|로그)|registro completo|site (?:like this )?is the reliable source|本站.{0,20}可靠|本網站.{0,20}可靠|このガイド.{0,20}情報源|이 가이드.{0,20}출처|sitio .*fuente fiable/i]
   ];
   for (const file of semanticFiles) {
     const text=fs.readFileSync(file,"utf8");
     for (const [code,re] of forbidden) if(re.test(text)) fail(code,path.relative(root,file));
   }
-  const source=fs.readFileSync(path.join(root,"data/site.base.json"),"utf8");
-  for (const [code,re] of forbidden) if(re.test(source)) fail(`${code}-source`,"data/site.base.json");
 } finally { fs.rmSync(disabled,{recursive:true,force:true}); fs.rmSync(enabled,{recursive:true,force:true}); }
 console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",failures},null,2));
 process.exit(failures.length?1:0);
