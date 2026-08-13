@@ -436,17 +436,17 @@
    ]
   },
   "introI18n": {
-   "zh-CN": "多洛可小镇是一款横版卷轴像素风的后末日农场模拟游戏。你扮演年轻的拾荒者，在极端天气下用平台一块块搭建垂直农场：酸雨、酷热与雷暴轮番来袭。收集 40+ 资源、钓鱼、畜牧、改造作物基因、与无人机并肩战斗，并用太阳能实现自动化生产。1.0 正式版（2026 年 8 月 6 日）加入了完整故事结局、旧城废墟区域、农业自动化与 37 个新成就。",
-   "zh-TW": "多洛可小鎮是一款橫版卷軸像素風的後末日農場模擬遊戲。你扮演年輕的拾荒者，在極端天氣下用平台一塊塊搭建垂直農場：酸雨、酷熱與雷暴輪番來襲。收集 40+ 資源、釣魚、畜牧、改造作物基因、與無人機並肩戰鬥，並用太陽能實現自動化生產。1.0 正式版（2026 年 8 月 6 日）加入了完整故事結局、舊城廢墟區域、農業自動化與 37 個新成就。",
-   "ja": "ドロックタウンは横スクロールのピクセルアート農場シム。極限気象の中、プラットフォームを積み上げて垂直農場を築く若きスカベンジャーを演じる。酸性雨・猛暑・雷雨の中、40以上の資源を集め、釣り・牧場・遺伝子改良・ドローン戦闘・太陽光の自動化を駆使する。1.0 正式版（2026年8月6日）で完全なストーリー結末、旧市街遺跡、農業オートメーション、37の新実績が追加。",
-   "ko": "돌록 타운은 횡스크롤 픽셀아트 농장 시뮬입니다. 극한 날씨 속에서 플랫폼을 쌓아 수직 농장을 짓는 젊은 스캐빈저가 되어 보세요. 40+ 자원 수집, 낚시, 목장, 작물 유전자 개량, 드론 전투, 태양광 자동화를 활용합니다. 1.0 정식(2026년 8월 6일)으로 완전한 스토리 결말, 구시가지 유적, 농업 자동화, 신규 업적 37개가 추가됐습니다.",
-   "es": "Doloc Town es un simulador de granja pixel-art de scroll lateral ambientado en un páramo postapocalíptico. Juegas como un joven recolector que construye una granja vertical bajo clima extremo: lluvia ácida, calor abrasador y tormentas. Reúne más de 40 recursos, pesca, cría ganado, modifica genes, lucha con tu dron y automatiza con energía solar. El 1.0 (6 ago 2026) añade el final completo, las Ruinas de la Ciudad Vieja, la automatización y 37 logros."
+   "zh-CN": "多洛可小镇是一款横版卷轴像素风的后末日农场模拟游戏。你扮演年轻的拾荒者，在极端天气下用平台搭建垂直农场。收集资源、钓鱼、畜牧、改造作物基因、与无人机并肩战斗，并使用官方介绍的两阶段农业自动化。",
+   "zh-TW": "多洛可小鎮是一款橫版卷軸像素風的後末日農場模擬遊戲。你扮演年輕的拾荒者，在極端天氣下用平台搭建垂直農場。收集資源、釣魚、畜牧、改造作物基因、與無人機並肩戰鬥，並使用官方介紹的兩階段農業自動化。",
+   "ja": "ドロックタウンは横スクロールのピクセルアート農場シム。極限気象の中で垂直農場を築き、資源収集・釣り・牧場・遺伝子改良・ドローン戦闘と、公式に紹介された二段階の農業オートメーションを進める。",
+   "ko": "돌록 타운은 횡스크롤 픽셀아트 농장 시뮬입니다. 극한 날씨 속에서 수직 농장을 짓고 자원 수집, 낚시, 목장, 유전자 개량, 드론 전투와 공식 설명의 2단계 농업 자동화를 진행합니다.",
+   "es": "Doloc Town es un simulador de granja pixel-art lateral. Construye una granja vertical bajo clima extremo, reúne recursos, pesca, cría animales, modifica genes, combate con tu dron y usa la automatización agrícola oficial en dos etapas."
   },
   "keyFactsI18n": {
    "zh-CN": [
     "1.0 正式版：2026 年 8 月 6 日，含完整故事结局",
     "主线 30+ 小时，全收集 100+ 小时",
-    "农业自动化：太阳能→无人机站（1.0 新增）",
+    "农业自动化：两阶段农事自动化（1.0 新增）",
     "作物基因系统：30+ 作物 × 约 20 种突变",
     "可利用的极端天气（酸雨/雷暴/旱季）",
     "Steam 成就共 80 个（基础 43 + 1.0 新增 37）"
@@ -454,7 +454,7 @@
    "zh-TW": [
     "1.0 正式版：2026 年 8 月 6 日，含完整故事結局",
     "主線 30+ 小時，全收集 100+ 小時",
-    "農業自動化：太陽能→無人機站（1.0 新增）",
+    "農業自動化：兩階段農事自動化（1.0 新增）",
     "作物基因系統：30+ 作物 × 約 20 種突變",
     "可利用的極端天氣（酸雨/雷暴/旱季）",
     "Steam 成就共 80 個（基礎 43 + 1.0 新增 37）"
@@ -462,7 +462,7 @@
    "ja": [
     "1.0 正式版：2026年8月6日、完全なストーリー結末",
     "メイン30時間+、全収集100時間+",
-    "農業オートメーション：太陽光→ドローン基地（1.0新）",
+    "農業オートメーション：二段階の農作業自動化（1.0新）",
     "作物遺伝子システム：30+作物×約20変異",
     "活用できる異常気象（酸性雨/雷雨/乾季）",
     "Steam実績80個（基礎43+1.0新37）"
@@ -470,7 +470,7 @@
    "ko": [
     "1.0 정식: 2026년 8월 6일, 완전한 스토리 결말",
     "메인 30시간+, 전체 수집 100시간+",
-    "농업 자동화: 태양광→드론 기지 (1.0 신규)",
+    "농업 자동화: 2단계 농작업 자동화 (1.0 신규)",
     "작물 유전자 시스템: 30+ 작물 × 약 20 돌연변이",
     "활용 가능한 극한 날씨 (산성비/뇌우/가뭄)",
     "Steam 업적 80개 (기본 43 + 1.0 신규 37)"
@@ -478,7 +478,7 @@
    "es": [
     "Lanzamiento 1.0: 6 ago 2026, final completo de la historia",
     "30+ horas de historia, 100+ con todo",
-    "Automatización agrícola: solar → drones (nuevo en 1.0)",
+    "Automatización agrícola en dos etapas (nueva en 1.0)",
     "Sistema genético: 30+ cultivos × ~20 mutaciones",
     "Clima extremo aprovechable (lluvia ácida, tormentas, sequía)",
     "80 logros de Steam (43 base + 37 nuevos en 1.0)"
@@ -489,31 +489,31 @@
     "多洛可小镇由 RedSaw Games Studio 开发，Logoi Games 发行，Pathea Games 联合发行。",
     "游戏于 2025 年 5 月 8 日开启抢先体验，2026 年 8 月 6 日发布 1.0 正式版。",
     "本站信息以 Steam 官方商店页、官方 1.0 公告、发行商新闻与权威媒体（CGMagazine、PCGamesN、RPGamer）为准。",
-    "社区来源的细节在来源核对前会用 ⚠️ 标注。"
+    "社区来源的细节会用 ⚠️ 标注，并与可引用来源分开。"
    ],
    "zh-TW": [
     "多洛可小鎮由 RedSaw Games Studio 開發，Logoi Games 發行，Pathea Games 聯合發行。",
     "遊戲於 2025 年 5 月 8 日開啟搶先體驗，2026 年 8 月 6 日發布 1.0 正式版。",
     "本站資訊以 Steam 官方商店頁、官方 1.0 公告、發行商新聞與權威媒體（CGMagazine、PCGamesN、RPGamer）為準。",
-    "社群來源的細節在來源核對前會用 ⚠️ 標註。"
+    "社群來源的細節在親測前會用 ⚠️ 標註。"
    ],
    "ja": [
     "ドロックタウンは RedSaw Games Studio 開発、Logoi Games 発売、Pathea Games 共同発売。",
     "2025年5月8日に早期アクセス開始、2026年8月6日に1.0正式版リリース。",
     "本サイトの情報は Steam 公式ストア、公式1.0アナウンス、パブリッシャー、信頼できるメディア（CGMagazine、PCGamesN、RPGamer）で確認。",
-    "コミュニティ情報は実機検証まで ⚠️ で明記。"
+    "コミュニティ情報は ⚠️ で示し、引用可能な公式情報と区別します。"
    ],
    "ko": [
     "돌록 타운은 RedSaw Games Studio 개발, Logoi Games 퍼블리싱, Pathea Games 공동 퍼블리싱입니다.",
     "2025년 5월 8일 얼리 액세스 시작, 2026년 8월 6일 1.0 정식 출시.",
     "본 사이트 정보는 Steam 공식 스토어, 공식 1.0 발표, 퍼블리셔, 신뢰할 수 있는 미디어(CGMagazine, PCGamesN, RPGamer)로 확인합니다.",
-    "커뮤니티 출처 세부 사항은 공식 출처 확인 전까지 ⚠️로 표시합니다."
+    "커뮤니티 출처 세부 사항은 ⚠️로 표시하고 인용 가능한 공식 정보와 구분합니다."
    ],
    "es": [
     "Doloc Town está desarrollado por RedSaw Games Studio y publicado por Logoi Games con Pathea Games como coeditor.",
     "El juego salió en Early Access el 8 de mayo de 2025 y lanzó su 1.0 el 6 de agosto de 2026.",
     "La información se verifica en la página oficial de Steam, el anuncio oficial 1.0, el editor y medios de confianza (CGMagazine, PCGamesN, RPGamer).",
-    "Los detalles de la comunidad se marcan con ⚠️ hasta verificarlos."
+    "Los datos comunitarios se marcan con ⚠️ y se separan de las fuentes oficiales citables."
    ]
   }
  },
@@ -527,9 +527,15 @@
    "sections": [
     {
      "type": "note",
+     "tag": "OFFICIAL-SEASON",
+     "heading": "Harsh Dry Season (Month 4)",
+     "body": "Month 4 is Harsh Dry Season. Protect crops and plan watering; the cited official notes do not establish a trading strategy."
+    },
+    {
+     "type": "note",
      "tag": "1.00.03-OFFICIAL",
      "heading": "Harsh Dry Season (Month 4)",
-     "body": "Month 4 is named Harsh Dry Season in 1.0."
+     "body": "Month 4 is Harsh Dry Season. Protect crops and plan watering; the cited official notes do not establish a trading strategy."
     },
     {
      "type": "steps",
@@ -605,7 +611,7 @@
       ],
       [
        "Drought (Month 4)",
-       "",
+       "Crops face Harsh Dry Season",
        "Stockpile before Month 4, sell during the spike"
       ]
      ]
@@ -631,6 +637,10 @@
       [
        "Open Bellad's quests immediately",
        "Quest rewards are Tech Points — the only reliable early tech income."
+      ],
+      [
+       "Start stockpiling before Month 4",
+       "Drought prices make a small hoard very profitable."
       ]
      ]
     },
@@ -690,6 +700,10 @@
       [
        "Aug 6, 2026",
        "1.0 launches: complete story ending, Old City Ruins, farming automation, Mushroom Fest, 37 new achievements."
+      ],
+      [
+       "New players",
+       "You can reach the official two-stage farming automation earlier than EA players."
       ],
       [
        "Old City Ruins",
@@ -758,6 +772,12 @@
      "metaDescription": "多洛可小镇怎么玩？本指南讲清「清障→收集→种田→建造→探索」循环、垂直农场、极端天气利用、无人机战斗基础与 1.0 自动化。",
      "intro": "多洛可小镇把横版平台跳跃与后末日农场模拟结合在一起。你从拾荒者起步，最终成为农场大亨——这里是从第一天到无人机时代的完整循环。",
      "sections": [
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+      },
       {
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
@@ -832,6 +852,11 @@
          "暴雨",
          "淹没低处地块",
          "让雨水免费灌溉；省下浇水体力"
+        ],
+        [
+         "旱季（4月）",
+         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。",
+         "4 月前囤货，旺季卖出"
         ]
        ]
       },
@@ -855,6 +880,10 @@
         [
          "立刻开 Bellad 的任务",
          "任务奖励科技点——早期唯一可靠的科技收入。"
+        ],
+        [
+         "4 月前开始囤货",
+         "旱季物价让小额囤货非常划算。"
         ]
        ]
       },
@@ -912,6 +941,10 @@
          "1.0 上线：完整故事结局、旧城废墟、农业自动化、蘑菇节、37 个新成就。"
         ],
         [
+         "新玩家",
+         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
+        ],
+        [
          "旧城废墟",
          "新区域：凶悍新敌人、新 NPC、支线与资源；许多道路通向那里。"
         ],
@@ -955,6 +988,12 @@
      "metaDescription": "多洛可小鎮怎麼玩？本指南講清「清障→收集→種田→建造→探索」循環、垂直農場、極端天氣利用、無人機戰鬥基礎與 1.0 自動化。",
      "intro": "多洛可小鎮把橫版平臺跳躍與後末日農場模擬結合在一起。你從拾荒者起步，最終成為農場大亨——這裡是從第一天到無人機時代的完整循環。",
      "sections": [
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+      },
       {
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
@@ -1029,6 +1068,11 @@
          "暴雨",
          "淹沒低處地塊",
          "讓雨水免費灌溉；省下澆水體力"
+        ],
+        [
+         "旱季（4月）",
+         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。",
+         "4 月前囤貨，旺季賣出"
         ]
        ]
       },
@@ -1052,6 +1096,10 @@
         [
          "立刻開 Bellad 的任務",
          "任務獎勵科技點——早期唯一可靠的科技收入。"
+        ],
+        [
+         "4 月前開始囤貨",
+         "旱季物價讓小額囤貨非常划算。"
         ]
        ]
       },
@@ -1109,6 +1157,10 @@
          "1.0 上線：完整故事結局、舊城廢墟、農業自動化、蘑菇節、37 個新成就。"
         ],
         [
+         "新玩家",
+         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
+        ],
+        [
          "舊城廢墟",
          "新區域：兇悍新敵人、新 NPC、支線與資源；許多道路通向那裡。"
         ],
@@ -1154,9 +1206,15 @@
      "sections": [
       {
        "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+      },
+      {
+       "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0 では第4月の公式名は Harsh Dry Season です。作物保護と水やりを準備してください。"
+       "body": "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
       },
       {
        "type": "steps",
@@ -1254,6 +1312,10 @@
         [
          "すぐ Bellad のクエストを開く",
          "クエスト報酬=テックポイント。初期の唯一の安定収入源。"
+        ],
+        [
+         "4月前に備蓄開始",
+         "乾季の物価高騰で、小さな備蓄が大きく報われる。"
         ]
        ]
       },
@@ -1311,6 +1373,10 @@
          "1.0配信：完全なストーリー結末、旧市街遺跡、農業オートメーション、キノコ祭り、新実績37個。"
         ],
         [
+         "新規プレイヤー",
+         "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。"
+        ],
+        [
          "旧市街遺跡",
          "新地域：凶暴な新敵、新NPC、サブクエスト、資源。多くの道が通じる。"
         ],
@@ -1351,14 +1417,20 @@
     "ko": {
      "title": "돌록 타운 하는 법: 초보자 가이드 (1.0)",
      "metaTitle": "돌록 타운 하는 법: 완전 초보자 가이드 (1.0)",
-     "metaDescription": "돌록 타운 하는 법: 잔해 치우기→수집→농사→건설→탐험의 순환, 수직 농장, 극한 날씨 활용, 드론 전투 기초와 1.0 자동화까지.",
+     "metaDescription": "돌록 타운 하는 법: 잔해 치우기→수집→농사→건설→탐험의 순환, 수직 농장, 극한 날씨 활용, 드론 전투 기초와 1.0 자동화까지. ",
      "intro": "돌록 타운은 횡스크롤 플랫포머와 종말 후 농장 시뮬을 결합한 게임입니다. 스캐빈저에서 시작해 농장 거물이 되기까지의 전체 순환을 설명합니다.",
      "sections": [
       {
        "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+      },
+      {
+       "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0에서 4번째 달의 공식 명칭은 Harsh Dry Season입니다. 작물 보호와 물주기를 준비하세요."
+       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
       },
       {
        "type": "steps",
@@ -1456,6 +1528,10 @@
         [
          "바로 Bellad 퀘스트 열기",
          "퀘스트 보상=테크 포인트. 초기 유일한 안정적 테크 수입."
+        ],
+        [
+         "4월 전에 비축 시작",
+         "가뭄 물가 급등으로 작은 비축이 크게 보답합니다."
         ]
        ]
       },
@@ -1514,7 +1590,7 @@
         ],
         [
          "새 플레이어",
-         "EA보다 일찍 자동화에 도달——태양광→드론 기지가 잡일을 대신."
+         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
         ],
         [
          "구시가지 유적",
@@ -1565,6 +1641,12 @@
        "tag": "TRANSLATION",
        "heading": "Traducción del sitio",
        "body": "Esta página es una traducción editorial del sitio. Los términos del juego se mantienen en inglés cuando no se ha verificado una cadena oficial localizada; no implica que el cliente de Doloc Town tenga soporte oficial en español."
+      },
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
       },
       {
        "type": "note",
@@ -1730,7 +1812,7 @@
         ],
         [
          "Nuevos jugadores",
-         "Llegas a la automatización antes que en EA: solar → estaciones de drones."
+         "Los avisos oficiales de 1.0 describen una automatización agrícola en dos etapas. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas."
         ],
         [
          "Ruinas de la Ciudad Vieja",
@@ -1775,15 +1857,15 @@
   {
    "slug": "automation",
    "title": "Doloc Town Farming Automation Guide (1.0)",
-   "metaTitle": "Doloc Town Farming Automation: Solar Power and Drones (1.0)",
-   "metaDescription": "How farming automation works in Doloc Town 1.0: build solar power, deploy farming drone stations and let drones seed, nurture and harvest for you.",
+   "metaTitle": "Doloc Town Farming Automation & Drone Guide (1.0)",
+   "metaDescription": "How Doloc Town 1.0 farming automation works: two-stage crop automation, task assignment and current drone issues from official notes.",
    "intro": "The 1.0 release turns you from a farmer into a farm manager. Here is how to generate clean energy, deploy drone stations and automate the whole crop cycle.",
    "sections": [
     {
      "type": "note",
-     "tag": "1.00.03-OFFICIAL",
-     "heading": "Official patch 1.00.03 — August 10, 2026",
-     "body": "The official 1.00.03 known-issues list says automation drones can fail in certain situations. Save before restructuring automated plots and check the next official patch notes; wind-power claims have been removed because they were not supported by the cited official sources."
+     "tag": "OFFICIAL-AUTOMATION",
+     "heading": "Official automation status",
+     "body": "Official 1.0 notes describe two-stage farming automation. Patch 1.00.03 also lists drone failures in certain situations; save before restructuring automated plots."
     },
     {
      "type": "steps",
@@ -1791,6 +1873,10 @@
      "heading": "How Farming Automation Works",
      "body": "Automation has three layers: energy, stations and drones. Each layer feeds the next, so build in this order.",
      "items": [
+      [
+       "Build the automation chain",
+       "Follow the official two-stage farming automation flow and unlock each task before expanding the layout."
+      ],
       [
        "Build farming drone stations",
        "Stations are the control points that let drones run farm operations. They consume energy, so size them to your power output."
@@ -1808,12 +1894,13 @@
     {
      "type": "list",
      "tag": "ENERGY",
-     "heading": "Solar Power: What to Build First",
-     "body": "Your weather pattern decides the optimal first build.",
+     "heading": "What to Automate First",
+     "body": "Start with a small, repeatable crop task and verify that the drone completes it reliably.",
      "items": [
-      "Clear-weather seasons favour solar panels — cheap and predictable.",
-      "A mixed array keeps energy stable through the year and powers a bigger station network.",
-      "⚠️ Exact build costs and energy values are being verified in 1.0."
+      "Start with a low-risk crop task rather than your only income crop.",
+      "Leave clear routes around platforms so drones can reach assigned plots.",
+      "Save before restructuring a working automated farm.",
+      "Official patch 1.00.03 lists drone failures in certain situations as unresolved."
      ]
     },
     {
@@ -1848,6 +1935,11 @@
      ],
      "rows": [
       [
+       "First automation stage",
+       "Basic crop task",
+       "Early-mid game ⚠️"
+      ],
+      [
        "First drone station",
        "Automated seeding",
        "Mid game ⚠️"
@@ -1874,7 +1966,7 @@
      "type": "note",
      "tag": "1.0",
      "heading": "Why This Page Matters",
-     "body": "English guides for Doloc Town automation are practically non-existent — most coverage stops at Early Access basics. This is one of the first 1.0-specific automation references in English. Details marked ⚠️ will be updated after official-source review."
+     "body": "This page separates official 1.0 and 1.00.03 information from community-reported details. Check the linked Steam announcements after each patch."
     }
    ],
    "sources": [
@@ -1898,21 +1990,25 @@
    "i18n": {
     "zh-CN": {
      "title": "多洛可小镇农业自动化指南（1.0）",
-     "metaTitle": "多洛可小镇农业自动化：太阳能与无人机站（1.0）",
-     "metaDescription": "多洛可小镇 1.0 农业自动化详解：建造太阳能、部署农场无人机站，让无人机自动播种、培育与收割。",
+     "metaTitle": "多洛可小镇农业自动化与无人机（1.0）",
+     "metaDescription": "多洛可小镇 1.0 两阶段农业自动化、任务分配及 1.00.03 无人机已知问题。",
      "intro": "1.0 把你从农民变成农场经理。这里是发电、部署无人机站、实现整条作物流水线自动化的方法。",
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "官方 1.00.03 补丁 — 2026 年 8 月 10 日",
-       "body": "1.00.03 官方已知问题指出自动化无人机在某些情况下会失效。重排自动化地块前请存档并关注下一次官方补丁；本站已删除官方来源未支持的风力发电说法。"
+       "tag": "OFFICIAL-AUTOMATION",
+       "heading": "Official automation status",
+       "body": "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
       },
       {
        "type": "steps",
        "heading": "农业自动化如何运作",
        "body": "自动化有三层：能源、站点与无人机。",
        "items": [
+        [
+         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。",
+         "建造太阳能板与风力涡轮机，为农场生成清洁能源。"
+        ],
         [
          "建造农场无人机站",
          "站点是让无人机执行农场作业的控制点。"
@@ -1929,10 +2025,11 @@
       },
       {
        "type": "list",
-       "heading": "太阳能：先建什么",
+       "heading": "太阳能 vs 风能：先建什么",
        "body": "先建与你天气匹配的，再平衡。",
        "items": [
         "晴天太阳能板效率高，适合晴朗季节。",
+        "风力涡轮机在暴风雨中持续发电——多雨月份很划算。",
         "两者混用可让能源在各类天气下保持稳定。",
         "⚠️ 具体建造费用与发电量正在 1.0 实测中。"
        ]
@@ -1966,6 +2063,11 @@
        ],
        "rows": [
         [
+         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。",
+         "站点能源",
+         "前期-中期 ⚠️"
+        ],
+        [
          "第一座无人机站",
          "自动播种",
          "中期 ⚠️"
@@ -1996,21 +2098,25 @@
     },
     "zh-TW": {
      "title": "多洛可小鎮農業自動化指南（1.0）",
-     "metaTitle": "多洛可小鎮農業自動化：太陽能與無人機站（1.0）",
-     "metaDescription": "多洛可小鎮 1.0 農業自動化詳解：建造太陽能、部署農場無人機站，讓無人機自動播種、培育與收割。",
+     "metaTitle": "多洛可小鎮農業自動化與無人機（1.0）",
+     "metaDescription": "多洛可小鎮 1.0 兩階段農業自動化、任務分配及 1.00.03 無人機已知問題。",
      "intro": "1.0 把你從農民變成農場經理。這裡是發電、部署無人機站、實現整條作物流水線自動化的方法。",
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "官方 1.00.03 更新 — 2026 年 8 月 10 日",
-       "body": "1.00.03 官方已知問題指出自動化無人機在某些情況下會失效。重整自動化地塊前請存檔並留意下一次官方更新；本站已移除官方來源未支援的風力發電說法。"
+       "tag": "OFFICIAL-AUTOMATION",
+       "heading": "Official automation status",
+       "body": "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
       },
       {
        "type": "steps",
        "heading": "農業自動化如何運作",
        "body": "自動化有三層：能源、站點與無人機。",
        "items": [
+        [
+         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。",
+         "建造太陽能板與風力渦輪機，為農場生成清潔能源。"
+        ],
         [
          "建造農場無人機站",
          "站點是讓無人機執行農場作業的控制點。"
@@ -2027,10 +2133,11 @@
       },
       {
        "type": "list",
-       "heading": "太陽能：先建什麼",
+       "heading": "太陽能 vs 風能：先建什麼",
        "body": "先建與你天氣匹配的，再平衡。",
        "items": [
         "晴天太陽能板效率高，適合晴朗季節。",
+        "風力渦輪機在暴風雨中持續發電——多雨月份很划算。",
         "兩者混用可讓能源在各類天氣下保持穩定。",
         "⚠️ 具體建造費用與發電量正在 1.0 來源核對中。"
        ]
@@ -2064,6 +2171,11 @@
        ],
        "rows": [
         [
+         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。",
+         "站點能源",
+         "前期-中期 ⚠️"
+        ],
+        [
          "第一座無人機站",
          "自動播種",
          "中期 ⚠️"
@@ -2088,27 +2200,31 @@
       {
        "type": "note",
        "heading": "為什麼這個頁面重要",
-       "body": "多洛可小鎮自動化的英文攻略幾乎不存在——多數內容停在 EA 基礎階段。本頁是第一批 1.0 專屬自動化英文參考之一。標 ⚠️ 的細節將在來源核對後更新。"
+       "body": "多洛可小鎮自動化的英文攻略幾乎不存在——多數內容停在 EA 基礎階段。本頁是第一批 1.0 專屬自動化英文參考之一。標 ⚠️ 的細節將在親測後更新。"
       }
      ]
     },
     "ja": {
      "title": "ドロックタウン農業オートメーションガイド（1.0）",
-     "metaTitle": "ドロックタウン農業オートメーション：太陽光・ドローン基地（1.0）",
-     "metaDescription": "ドロックタウン 1.0 の農業オートメーション：太陽光発電の建設、農場ドローン基地の展開、播種から収穫までの自動化。",
+     "metaTitle": "ドロックタウン農業自動化（1.0）",
+     "metaDescription": "1.0 の二段階農業自動化と 1.00.03 のドローン既知問題。",
      "intro": "1.0 で、あなたは農家から農場マネージャーになる。クリーンエネルギーを生み、ドローン基地を展開し、作物サイクル全体を自動化する方法を解説。",
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "公式パッチ 1.00.03 — 2026年8月10日",
-       "body": "1.00.03 の公式既知事項では、自動化ドローンが特定状況で動作しないことがあります。区画を組み替える前に保存し、次の公式パッチを確認してください。公式根拠のない太陽光発電記述は削除しました。"
+       "tag": "OFFICIAL-AUTOMATION",
+       "heading": "Official automation status",
+       "body": "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。"
       },
       {
        "type": "steps",
        "heading": "農業オートメーションの仕組み",
        "body": "自動化は3層：エネルギー・基地・ドローン。",
        "items": [
+        [
+         "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。",
+         "ソーラーパネルと風力タービンを建ててクリーンエネルギーを生成。"
+        ],
         [
          "農場ドローン基地を建設",
          "基地がドローンに農場作業を実行させるコントロールポイント。"
@@ -2125,10 +2241,11 @@
       },
       {
        "type": "list",
-       "heading": "太陽光発電：どちらを先に",
+       "heading": "太陽光 vs 風力：どちらを先に",
        "body": "自分の天候に合う方から。",
        "items": [
         "晴天ならソーラーパネルが効率的。",
+        "風力タービンは嵐でも発電——嵐の多い月に有利。",
         "両方の混在で天候に関係なく安定。",
         "⚠️ 正確な建設コストと発電量は 1.0 で検証中。"
        ]
@@ -2162,6 +2279,11 @@
        ],
        "rows": [
         [
+         "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。",
+         "基地のエネルギー",
+         "序盤～中盤 ⚠️"
+        ],
+        [
          "最初のドローン基地",
          "自動播種",
          "中盤 ⚠️"
@@ -2192,15 +2314,15 @@
     },
     "ko": {
      "title": "돌록 타운 농업 자동화 가이드 (1.0)",
-     "metaTitle": "돌록 타운 농업 자동화: 태양광·드론 기지 (1.0)",
-     "metaDescription": "돌록 타운 1.0 농업 자동화: 태양광 발전소 건설, 농장 드론 기지 배치, 드론이 파종부터 수확까지 자동 처리하는 방법.",
+     "metaTitle": "돌록 타운 농업 자동화 (1.0)",
+     "metaDescription": "1.0의 2단계 농업 자동화와 1.00.03 드론 알려진 문제.",
      "intro": "1.0은 당신을 농부에서 농장 관리자로 바꿉니다. 청정 에너지를 만들고 드론 기지를 배치해 작물 주기를 자동화하는 방법을 설명합니다.",
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "공식 패치 1.00.03 — 2026년 8월 10일",
-       "body": "1.00.03 공식 알려진 문제에 따르면 자동화 드론이 특정 상황에서 작동하지 않을 수 있습니다. 자동화 구역을 바꾸기 전에 저장하고 다음 공식 패치를 확인하세요. 공식 근거가 없는 풍력 발전 설명은 삭제했습니다."
+       "tag": "OFFICIAL-AUTOMATION",
+       "heading": "Official automation status",
+       "body": "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
       },
       {
        "type": "steps",
@@ -2208,8 +2330,8 @@
        "body": "자동화는 에너지·기지·드론 세 층으로 이루어집니다.",
        "items": [
         [
-         "태양광 활용",
-         "태양광 발전기을 지어 청정 에너지를 생산합니다."
+         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요.",
+         "태양광 패널과 풍력 터빈을 지어 청정 에너지를 생산합니다."
         ],
         [
          "농장 드론 기지 건설",
@@ -2227,11 +2349,11 @@
       },
       {
        "type": "list",
-       "heading": "태양광 발전기: 무엇부터?",
+       "heading": "태양광 vs 풍력: 무엇부터?",
        "body": "자신의 날씨에 맞는 것부터 짓고 균형을 맞추세요.",
        "items": [
         "맑은 날씨에는 태양광 패널이 효율적입니다.",
-        "태양광 발전기와 드론 스테이션의 공식 요구 사항을 먼저 확인하세요.",
+        "풍력 터빈은 폭풍 중에도 발전합니다——비가 잦은 달에 유리합니다.",
         "둘을 섞으면 모든 날씨에서 에너지가 안정적입니다.",
         "⚠️ 정확한 건설 비용과 발전량은 1.0에서 검증 중입니다."
        ]
@@ -2265,7 +2387,7 @@
        ],
        "rows": [
         [
-         "태양광",
+         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요.",
          "기지 에너지",
          "초~중반 ⚠️"
         ],
@@ -2301,7 +2423,7 @@
     "es": {
      "title": "Guía de automatización agrícola de Doloc Town (1.0)",
      "metaTitle": "Automatización agrícola de Doloc Town (1.0)",
-     "metaDescription": "Cómo funciona la automatización agrícola en Doloc Town 1.0: construye energía solar, despliega estaciones de drones y automatiza el ciclo completo.",
+     "metaDescription": "Automatización agrícola en dos etapas y fallos de drones de 1.00.03.",
      "intro": "El 1.0 te convierte de agricultor en gerente de granja. Así generas energía limpia, despliegas estaciones de drones y automatizas todo el ciclo de cultivo.",
      "sections": [
       {
@@ -2312,15 +2434,19 @@
       },
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "Parche oficial 1.00.03 — 10 de agosto de 2026",
-       "body": "La lista oficial de 1.00.03 dice que los drones de automatización fallan en determinadas situaciones. Guarda antes de reorganizar parcelas y consulta el próximo parche oficial; se retiraron las afirmaciones sobre energía eólica sin respaldo oficial."
+       "tag": "OFFICIAL-AUTOMATION",
+       "heading": "Official automation status",
+       "body": "Los avisos oficiales de 1.0 describen una automatización agrícola en dos etapas. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas."
       },
       {
        "type": "steps",
        "heading": "Cómo funciona la automatización agrícola",
        "body": "La automatización tiene tres capas: energía, estaciones y drones.",
        "items": [
+        [
+         "Los avisos oficiales de 1.0 describen una automatización agrícola en dos etapas. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas.",
+         "Construye paneles solares y aerogeneradores para generar energía limpia."
+        ],
         [
          "Construye estaciones de drones",
          "Las estaciones controlan que los drones hagan el trabajo agrícola."
@@ -2337,7 +2463,7 @@
       },
       {
        "type": "list",
-       "heading": "Energía solar: qué construir primero",
+       "heading": "¿Solar o eólica? Qué construir primero",
        "body": "Empieza por lo que encaje con tu clima y luego equilibra.",
        "items": [
         "Los paneles solares brillan con buen tiempo.",
@@ -2375,6 +2501,11 @@
        ],
        "rows": [
         [
+         "Energía solar/eólica",
+         "Energía para estaciones",
+         "Inicio-medio ⚠️"
+        ],
+        [
          "Primera estación de drones",
          "Siembra automática",
          "Medio ⚠️"
@@ -2399,7 +2530,7 @@
       {
        "type": "note",
        "heading": "Por qué importa esta página",
-       "body": "Las guías en inglés sobre la automatización de Doloc Town son casi inexistentes: la mayoría se queda en lo básico del Early Access. Esta es una de las primeras referencias en inglés específicas del 1.0. Los detalles marcados ⚠️ se actualizarán tras la verificación práctica."
+       "body": "Las guías en inglés sobre la automatización de Doloc Town son casi inexistentes: la mayoría se queda en lo básico del Early Access. Esta es una de las primeras referencias en inglés específicas del 1.0. Los detalles marcados ⚠️ se actualizarán tras la revisión de fuentes oficiales."
       }
      ]
     }
@@ -7241,7 +7372,7 @@
         ],
         [
          "최고 모듈은?",
-         "택티컬 캐패시터(재장전 후 피해)와 섀도우 슈터(확률 2연발)가 커뮤니티 단골 ⚠️."
+         "택티컬 캐패시터(재장전 후 피해)와 섀도우 슈터(확률 2연발)가 커뮤니티 단골 ⚠️. "
         ]
        ]
       }
@@ -7398,7 +7529,7 @@
         ],
         [
          "¿Cuáles son los mejores módulos?",
-         "El Capacitor Táctico (daño tras recargar) y el Disparador Sombra (probabilidad de doble disparo) son los favoritos de la comunidad ⚠️."
+         "El Capacitor Táctico (daño tras recargar) y el Disparador Sombra (probabilidad de doble disparo) son los favoritos de la comunidad ⚠️. "
         ]
        ]
       }
@@ -8146,7 +8277,7 @@
         ],
         [
          "엔드게임으로 취급",
-         "에너지·음식·전투 모듈을 준비하세요 — 가장 어려운 구역입니다."
+         "에너지·음식·전투 모듈을 준비하세요 — 가장 어려운 구역입니다. "
         ]
        ]
       },
@@ -8215,7 +8346,7 @@
         ],
         [
          "고급 드론 부품은 어떻게 얻나요?",
-         "희귀어가 고급 드론·도구 부품을 드랍하고, 습지 보스가 미디엄 E칩을 드랍합니다 ⚠️."
+         "희귀어가 고급 드론·도구 부품을 드랍하고, 습지 보스가 미디엄 E칩을 드랍합니다 ⚠️. "
         ]
        ]
       }
@@ -8310,7 +8441,7 @@
         ],
         [
          "Trátala como contenido final",
-         "Prepara energía, comida y módulos de combate: es la zona más dura."
+         "Prepara energía, comida y módulos de combate: es la zona más dura. "
         ]
        ]
       },
@@ -8379,7 +8510,7 @@
         ],
         [
          "¿Cómo consigo piezas avanzadas de dron?",
-         "Los peces raros dan piezas avanzadas de dron y herramientas; el jefe de los Humedales suelta un chip E medio ⚠️."
+         "Los peces raros dan piezas avanzadas de dron y herramientas; el jefe de los Humedales suelta un chip E medio ⚠️. "
         ]
        ]
       }
@@ -9002,6 +9133,12 @@
    "intro": "Farming is the foundation of your wasteland farm. Learn what to plant, when, how to protect it from extreme weather — and how genes and 1.0 automation replace the busywork.",
    "sections": [
     {
+     "type": "note",
+     "tag": "OFFICIAL-SEASON",
+     "heading": "Harsh Dry Season (Month 4)",
+     "body": "Month 4 is Harsh Dry Season. Protect crops and plan watering; the cited official notes do not establish a trading strategy."
+    },
+    {
      "type": "list",
      "tag": "CROPS",
      "heading": "Crop Basics",
@@ -9072,6 +9209,11 @@
        "Dry season (Mar–Apr)",
        "Less rain; crops start to struggle",
        "Water more; lean on the Rain Falls Evenly gene or covers"
+      ],
+      [
+       "Drought (April)",
+       "Crops face the harshest dry conditions",
+       "Protect plots and plan watering"
       ],
       [
        "Any season",
@@ -9153,6 +9295,7 @@
      "heading": "From Hand-Farming to Automation (1.0)",
      "body": "The 1.0 release turns you from a farmer into a farm manager. The upgrade path is: energy first, stations second, then let the drones work.",
      "items": [
+      "Follow the two-stage automation tasks described in the official 1.0 notes.",
       "Construct farm drone stations — the control points that let drones work the fields.",
       "Assign automation tasks: drones handle seeding, nurturing and harvesting end to end.",
       "Vertical stacking matters: leave clear flight lanes between platforms so drones can reach every planter.",
@@ -9163,7 +9306,7 @@
      "type": "note",
      "tag": "TIP",
      "heading": "Drought Strategy & Common Mistakes",
-     "body": "Prepare crop protection and watering before Harsh Dry Season. Common mistakes: planting one giant flat field (a single storm wipes it), ignoring fruit trees early (they are free money later), never upgrading the sickle (group harvest is a huge time saver), watering everything by hand when the Rain gene exists, and skipping Bellad's quests (tech points are the only reliable early income)."
+     "body": "Month 4 is Harsh Dry Season. Protect exposed crops, plan watering and keep a save before changing automation. The cited official notes do not establish a price-arbitrage strategy."
     },
     {
      "type": "faq",
@@ -9180,7 +9323,7 @@
       ],
       [
        "What is the drought month?",
-       "April, in the dry season."
+       "Month 4 is Harsh Dry Season. Prepare crop protection and watering."
       ],
       [
        "How do gene modules work?",
@@ -9189,6 +9332,10 @@
       [
        "How many crops can be gene-modified?",
        "The official store page says the genetics system covers upward of 30 different crops."
+      ],
+      [
+       "Does 1.0 fully automate farming?",
+       "Yes. Official 1.0 notes describe two-stage farming automation; patch 1.00.03 also lists drone failures in certain situations."
       ]
      ]
     }
@@ -9218,6 +9365,12 @@
      "metaDescription": "多洛可小镇种田全解：季节作物、果树、香草、蘑菇、花盆与土壤，加上改变种田方式的基因突变与 1.0 自动化。",
      "intro": "种田是废土农场的根基。学会计什么、什么时候种、如何抵御极端天气——以及基因与 1.0 自动化如何替你省掉杂活。",
      "sections": [
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+      },
       {
        "type": "list",
        "heading": "作物基础",
@@ -9286,6 +9439,11 @@
          "旱季（3–4 月）",
          "降雨减少；作物开始吃力",
          "多浇水；依赖「雨露均沾」基因或遮盖"
+        ],
+        [
+         "旱灾（4 月）",
+         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。",
+         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
         ],
         [
          "任何季节",
@@ -9364,6 +9522,7 @@
        "heading": "从手工种田到自动化（1.0）",
        "body": "1.0 把你从农民变成农场经理。升级路径是：先能源、再站点，然后让无人机干活。",
        "items": [
+        "建造太阳能板与风力涡轮机，为农场生成清洁能源",
         "建造农场无人机站——让无人机在田间作业的控制点",
         "指派自动化任务：无人机端到端处理播种、培育与收割",
         "垂直堆叠很关键：平台之间留出清晰航线，无人机才能到达每个花盆",
@@ -9373,7 +9532,7 @@
       {
        "type": "note",
        "heading": "旱季策略与常见错误",
-       "body": "Harsh Dry Season 是第 4 月。请提前保护作物并规划浇水；当前引用的官方来源不支持价格暴涨或倒卖策略。"
+       "body": "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
       },
       {
        "type": "faq",
@@ -9388,12 +9547,20 @@
          "第一周。它们 7 天成熟后永久产出——种得越早，攒下的免费收入越多。"
         ],
         [
+         "旱灾月是哪个月？",
+         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+        ],
+        [
          "基因模块怎么用？",
          "每颗种子可装最多 3 个基因模块，从约 20 种突变中挑选；用基因读取器/合成器安装，在农场上观察协同效果。"
         ],
         [
          "多少作物可以被基因改造？",
          "官方商店页称基因系统覆盖 30 多种作物。"
+        ],
+        [
+         "1.0 能完全自动种田吗？",
+         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
         ]
        ]
       }
@@ -9405,6 +9572,12 @@
      "metaDescription": "多洛可小鎮種田全解：季節作物、果樹、香草、蘑菇、花盆與土壤，加上改變種田方式的基因突變與 1.0 自動化。",
      "intro": "種田是廢土農場的根基。學會計什麼、什麼時候種、如何抵禦極端天氣——以及基因與 1.0 自動化如何替你省掉雜活。",
      "sections": [
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+      },
       {
        "type": "list",
        "heading": "作物基礎",
@@ -9473,6 +9646,11 @@
          "旱季（3–4 月）",
          "降雨減少；作物開始吃力",
          "多澆水；依賴「雨露均霑」基因或遮蓋"
+        ],
+        [
+         "旱災（4 月）",
+         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。",
+         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
         ],
         [
          "任何季節",
@@ -9551,6 +9729,7 @@
        "heading": "從手工種田到自動化（1.0）",
        "body": "1.0 把你從農民變成農場經理。升級路徑是：先能源、再站點，然後讓無人機幹活。",
        "items": [
+        "建造太陽能板與風力渦輪機，為農場生成清潔能源",
         "建造農場無人機站——讓無人機在田間作業的控制點",
         "指派自動化任務：無人機端到端處理播種、培育與收割",
         "垂直堆疊很關鍵：平臺之間留出清晰航線，無人機才能到達每個花盆",
@@ -9560,7 +9739,7 @@
       {
        "type": "note",
        "heading": "旱季策略與常見錯誤",
-       "body": "Harsh Dry Season 是第 4 月。請提前保護作物並規劃澆水；目前引用的官方來源不支援價格暴漲或倒賣策略。"
+       "body": "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
       },
       {
        "type": "faq",
@@ -9575,12 +9754,20 @@
          "第一週。它們 7 天成熟後永久產出——種得越早，攢下的免費收入越多。"
         ],
         [
+         "旱災月是哪個月？",
+         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+        ],
+        [
          "基因模塊怎麼用？",
          "每顆種子可裝最多 3 個基因模塊，從約 20 種突變中挑選；用基因讀取器/合成器安裝，在農場上觀察協同效果。"
         ],
         [
          "多少作物可以被基因改造？",
          "官方商店頁稱基因系統覆蓋 30 多種作物。"
+        ],
+        [
+         "1.0 能完全自動種田嗎？",
+         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
         ]
        ]
       }
@@ -9592,6 +9779,12 @@
      "metaDescription": "ドロックタウンの農業を完全解説：季節作物、果樹、ハーブ、キノコ、プランターと土壌、そして農業を変える遺伝子変異と1.0自動化まで。",
      "intro": "農業は荒廃地農場の基盤。何をいつ植え、異常気象からどう守るか——そして遺伝子と1.0自動化が雑務をどう肩代わりするかを学ぼう。",
      "sections": [
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+      },
       {
        "type": "list",
        "heading": "作物の基本",
@@ -9664,7 +9857,7 @@
         [
          "干ばつ（4月）",
          "作物が枯れ、商店価格が高騰",
-         "Harsh Dry Season 前に作物保護と水やりを準備"
+         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
         ],
         [
          "どの季節も",
@@ -9743,6 +9936,7 @@
        "heading": "手作業から自動化へ（1.0）",
        "body": "1.0は農家をファームマネージャーに変えます。強化の順序は：まずエネルギー、次に基地、そしてドローンに働かせる。",
        "items": [
+        "ソーラーパネルと風力タービンで農場のクリーンエネルギーを発電",
         "農場ドローン基地を建設——ドローンが農地で作業するための制御点",
         "自動化作業を割り当て：ドローンが播種・育成・収穫を一貫処理",
         "縦積みが重要：プラットフォーム間に飛行経路を確保し、全プランターへ到達させる",
@@ -9752,7 +9946,7 @@
       {
        "type": "note",
        "heading": "乾季の戦略とよくある失敗",
-       "body": "干ばつ月（4月）は作物が枯れ、価格が高騰。よくある失敗：巨大な一枚畑（嵐ひとつで全滅）、果樹を後回し（後で無料の収入源）、鎌の強化を怠る（群収穫は大きな時短）、「雨露均等」があるのに全部手で水やり、Belladのクエストを飛ばす（技術ポイントが唯一の安定した序盤収入）。"
+       "body": "干ばつ月（4月）は作物が枯れ、価格が高騰。干ばつ前に備蓄し、その間に高値で売る。よくある失敗：巨大な一枚畑（嵐ひとつで全滅）、果樹を後回し（後で無料の収入源）、鎌の強化を怠る（群収穫は大きな時短）、「雨露均等」があるのに全部手で水やり、Belladのクエストを飛ばす（技術ポイントが唯一の安定した序盤収入）。"
       },
       {
        "type": "faq",
@@ -9777,6 +9971,10 @@
         [
          "遺伝子改造できる作物はいくつ？",
          "公式ストアページは30種類以上の作物に対応と明記。"
+        ],
+        [
+         "1.0で完全自動化できる？",
+         "できる——ソーラー/風力＋ドローン基地が播種・育成・収穫を担い、探索・釣り・クエストに時間を使えます。"
         ]
        ]
       }
@@ -9788,6 +9986,12 @@
      "metaDescription": "돌록 타운 농사의 모든 것: 계절 작물, 과일나무, 허브, 버섯, 화분과 토양, 그리고 농사를 바꾸는 유전자 변이와 1.0 자동화까지.",
      "intro": "농사는 황무지 농장의 기반입니다. 무엇을 언제 심고, 극한 날씨에서 어떻게 보호할지——그리고 유전자와 1.0 자동화가 잡일을 어떻게 대신하는지 배우세요.",
      "sections": [
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+      },
       {
        "type": "list",
        "heading": "작물의 기초",
@@ -9858,6 +10062,11 @@
          "물을 더 주고 '고루 내리는 비' 유전자나 덮개에 의존"
         ],
         [
+         "가뭄 (4월)",
+         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다.",
+         "연중 최고가에 비축분 판매"
+        ],
+        [
          "어느 계절이든",
          "산성비와 폭염이 갑자기 덮칠 수 있음",
          "덮개를 항상 유지; 약한 작물은 모아서 재배"
@@ -9925,7 +10134,7 @@
         ],
         [
          "1.0에서 자동화",
-         "드론 스테이션이 파종·육성·수확을 담당합니다——엔드게임."
+         "드론 스테이션이 파종·육성·수확을 담당합니다——엔드게임. "
         ]
        ]
       },
@@ -9934,7 +10143,7 @@
        "heading": "손농사에서 자동화까지 (1.0)",
        "body": "1.0은 농부를 팜 매니저로 바꿉니다. 업그레이드 순서: 에너지 먼저, 스테이션 다음, 그리고 드론에게 일을 맡기세요.",
        "items": [
-        "태양광 발전기을 건설해 농장의 청정 에너지를 생산",
+        "태양광 패널과 풍력 터빈을 건설해 농장의 청정 에너지를 생산",
         "농장 드론 스테이션 건설——드론이 밭에서 일하게 하는 제어 지점",
         "자동화 작업 지정: 드론이 파종·육성·수확을 처음부터 끝까지 처리",
         "수직 적층이 핵심: 플랫폼 사이에 비행 경로를 남겨 드론이 모든 화분에 닿게 하세요",
@@ -9944,7 +10153,7 @@
       {
        "type": "note",
        "heading": "가뭄 전략과 흔한 실수",
-       "body": "Harsh Dry Season은 네 번째 달입니다. 작물 보호와 물주기를 준비하세요. 인용한 공식 자료는 가격 급등이나 거래 전략을 뒷받침하지 않습니다."
+       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
       },
       {
        "type": "faq",
@@ -9959,6 +10168,10 @@
          "첫 주. 7일 만에 자란 뒤 영구히 열매를 맺습니다——일찍 심을수록 공짜 수입이 쌓입니다."
         ],
         [
+         "가뭄 달은 언제인가요?",
+         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+        ],
+        [
          "유전자 모듈은 어떻게 쓰나요?",
          "씨앗마다 약 20종 변이 풀에서 최대 3개 모듈을 장착합니다. 유전자 리더/합성기로 설치하고 농장에서 시너지를 관찰하세요."
         ],
@@ -9968,7 +10181,7 @@
         ],
         [
          "1.0에서 농사가 완전 자동화되나요?",
-         "네——태양광 + 드론 스테이션이 파종·육성·수확을 처리해 탐험·낚시·퀘스트에 시간을 쓸 수 있습니다."
+         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
         ]
        ]
       }
@@ -9985,6 +10198,12 @@
        "tag": "TRANSLATION",
        "heading": "Traducción del sitio",
        "body": "Esta página es una traducción editorial del sitio. Los términos del juego se mantienen en inglés cuando no se ha verificado una cadena oficial localizada; no implica que el cliente de Doloc Town tenga soporte oficial en español."
+      },
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
       },
       {
        "type": "list",
@@ -10137,6 +10356,7 @@
        "heading": "De la agricultura manual a la automatización (1.0)",
        "body": "El 1.0 te convierte de granjero en gestor de granja. La ruta de mejora es: energía primero, estaciones después, y luego deja trabajar a los drones.",
        "items": [
+        "Construye paneles solares y turbinas eólicas para generar energía limpia para tu granja",
         "Construye estaciones de drones agrícolas: los puntos de control que dejan trabajar a los drones",
         "Asigna tareas de automatización: los drones hacen siembra, cuidado y cosecha de principio a fin",
         "El apilado vertical importa: deja pasillos de vuelo claros entre plataformas para que los drones lleguen a cada macetero",
@@ -10146,7 +10366,7 @@
       {
        "type": "note",
        "heading": "Estrategia de sequía y errores comunes",
-       "body": "En el mes de la sequía (abril) los cultivos se marchitan y los precios se disparan. Errores comunes: plantar un único campo plano gigante (una tormenta lo borra), ignorar los árboles frutales al principio (son dinero gratis después), no mejorar nunca la hoz (la cosecha en grupo ahorra muchísimo tiempo), regar todo a mano cuando existe el gen Lluvia, y saltarse las misiones de Bellad (los puntos de tecnología son el único ingreso inicial fiable)."
+       "body": "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
       },
       {
        "type": "faq",
@@ -10171,6 +10391,10 @@
         [
          "¿Cuántos cultivos pueden modificarse genéticamente?",
          "La tienda oficial dice que el sistema genético cubre más de 30 cultivos."
+        ],
+        [
+         "¿El 1.0 automatiza del todo la granja?",
+         "Sí: la energía solar/eólica más las estaciones de drones gestionan siembra, cuidado y cosecha, y te dejan tiempo para explorar, pescar y hacer misiones."
         ]
        ]
       }
@@ -10763,7 +10987,7 @@
         ],
         [
          "초반에 요리가 가치 있나요?",
-         "네 — 조리 식사는 인벤토리 한 칸당 에너지 효율이 높고 버프는 본전을 뽑습니다."
+         "네 — 조리 식사는 인벤토리 한 칸당 에너지 효율이 높고 버프는 본전을 뽑습니다. "
         ]
        ]
       }
@@ -10883,7 +11107,7 @@
         ],
         [
          "¿Merece la pena cocinar pronto?",
-         "Sí: la comida cocinada da más energía por casilla de inventario y los buffs se pagan solos."
+         "Sí: la comida cocinada da más energía por casilla de inventario y los buffs se pagan solos. "
         ]
        ]
       }
@@ -12151,7 +12375,7 @@
       {
        "type": "list",
        "heading": "당신의 이야기 시작",
-       "body": "설정을 한 문장으로.",
+       "body": "설정을 한 문장으로. ",
        "items": [
         "당신은 황무지에서 적을 피하는 젊은 스캐빈저입니다.",
         "돌록 타운이라는 작은 정착지를 우연히 발견합니다.",
@@ -12297,9 +12521,15 @@
    "sections": [
     {
      "type": "note",
+     "tag": "OFFICIAL-SEASON",
+     "heading": "Harsh Dry Season (Month 4)",
+     "body": "Month 4 is Harsh Dry Season. Protect crops and plan watering; the cited official notes do not establish a trading strategy."
+    },
+    {
+     "type": "note",
      "tag": "1.00.03-OFFICIAL",
      "heading": "Harsh Dry Season (Month 4)",
-     "body": "Month 4 is named Harsh Dry Season in 1.0."
+     "body": "Month 4 is Harsh Dry Season. Protect crops and plan watering; the cited official notes do not establish a trading strategy."
     },
     {
      "type": "table",
@@ -12331,6 +12561,11 @@
        "Torrential rain",
        "Flooding",
        "Free irrigation"
+      ],
+      [
+       "Drought (Month 4)",
+       "Harsh dry conditions",
+       "Protect crops; plan watering"
       ]
      ]
     },
@@ -12359,6 +12594,12 @@
        "Water more; use covers and the Rain gene"
       ],
       [
+       "Drought (April)",
+       "Harshest farming conditions",
+       "Hardest farming month",
+       "Protect crops and plan watering"
+      ],
+      [
        "Any season",
        "Acid rain and heat waves can strike suddenly",
        "Fields at risk",
@@ -12379,6 +12620,10 @@
       [
        "Let rain irrigate",
        "Skip manual watering during downpours; save the effort."
+      ],
+      [
+       "Prepare for Month 4",
+       "Harsh Dry Season needs crop protection and planned watering."
       ]
      ]
     },
@@ -12392,7 +12637,7 @@
       "Build covers over exposed plots and group vulnerable crops together.",
       "Install the Rain Falls Evenly gene to auto-water through dry spells.",
       "Use thunderstorm power for 1.0 drone stations and the industrial zone.",
-      "Stockpile before the drought and sell during it."
+      "Prepare crop protection and watering before Harsh Dry Season."
      ]
     },
     {
@@ -12417,7 +12662,11 @@
       ],
       [
        "When is the drought?",
-       "April, at the end of the dry season."
+       "Month 4 is officially named Harsh Dry Season in 1.0."
+      ],
+      [
+       "How do I profit from the drought?",
+       "The cited official notes do not establish a price-arbitrage strategy; prepare crop protection and watering instead."
       ],
       [
        "Is there a rainy season?",
@@ -12457,6 +12706,12 @@
      "sections": [
       {
        "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+      },
+      {
+       "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
        "body": "1.0 中第 4 月的正式名称是 Harsh Dry Season。请为作物防护与浇水做准备；本站不再声称未经证实的涨价或倒卖机制。"
@@ -12490,6 +12745,11 @@
          "暴雨",
          "淹没低地",
          "免费灌溉"
+        ],
+        [
+         "旱灾（第 4 月）",
+         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。",
+         "囤货、高价卖出"
         ]
        ]
       },
@@ -12517,6 +12777,12 @@
          "多浇水；用遮盖与「雨露均沾」基因"
         ],
         [
+         "旱灾（4 月）",
+         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。",
+         "最难的种田月",
+         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+        ],
+        [
          "任何季节",
          "酸雨与热浪可能突袭",
          "农田有风险",
@@ -12536,6 +12802,10 @@
         [
          "让雨水灌溉",
          "暴雨期间省掉手动浇水，省下体力。"
+        ],
+        [
+         "把握旱灾时机",
+         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
         ]
        ]
       },
@@ -12570,6 +12840,14 @@
          "给农场充电，这是 1.0 自动化与工业区的关键。"
         ],
         [
+         "旱灾是什么时候？",
+         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+        ],
+        [
+         "怎么从旱灾获利？",
+         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+        ],
+        [
          "有雨季吗？",
          "有——1 月与 2 月暴雨与雷暴频繁，部分鱼只在那时出现。"
         ]
@@ -12583,6 +12861,12 @@
      "metaDescription": "多洛可小鎮天氣攻略：應對酸雨、酷熱、雷暴與第 4 月 Harsh Dry Season，保護作物並安排澆水。",
      "intro": "極端天氣定義多洛可小鎮。認清每一種威脅、讀懂季節日曆，並把每一場風暴變成優勢。",
      "sections": [
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+      },
       {
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
@@ -12618,6 +12902,11 @@
          "暴雨",
          "淹沒低地",
          "免費灌溉"
+        ],
+        [
+         "旱災（第 4 月）",
+         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。",
+         "囤貨、高價賣出"
         ]
        ]
       },
@@ -12645,6 +12934,12 @@
          "多澆水；用遮蓋與「雨露均霑」基因"
         ],
         [
+         "旱災（4 月）",
+         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。",
+         "最難的種田月",
+         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+        ],
+        [
          "任何季節",
          "酸雨與熱浪可能突襲",
          "農田有風險",
@@ -12664,6 +12959,10 @@
         [
          "讓雨水灌溉",
          "暴雨期間省掉手動澆水，省下體力。"
+        ],
+        [
+         "把握旱災時機",
+         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
         ]
        ]
       },
@@ -12698,6 +12997,14 @@
          "給農場充電，這是 1.0 自動化與工業區的關鍵。"
         ],
         [
+         "旱災是什麼時候？",
+         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+        ],
+        [
+         "怎麼從旱災獲利？",
+         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+        ],
+        [
          "有雨季嗎？",
          "有——1 月與 2 月暴雨與雷暴頻繁，部分魚只在那時出現。"
         ]
@@ -12713,9 +13020,15 @@
      "sections": [
       {
        "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+      },
+      {
+       "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0 では第4月の公式名は Harsh Dry Season です。作物保護と水やりを準備してください。"
+       "body": "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
       },
       {
        "type": "table",
@@ -12746,6 +13059,11 @@
          "豪雨",
          "低地が浸水",
          "無料灌漑"
+        ],
+        [
+         "干ばつ（第4月）",
+         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。",
+         "備蓄、高値で売却"
         ]
        ]
       },
@@ -12773,6 +13091,12 @@
          "多めに散水；カバーと「雨露均等」遺伝子"
         ],
         [
+         "干ばつ（4月）",
+         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。",
+         "最も厳しい農業月",
+         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+        ],
+        [
          "どの季節も",
          "酸性雨と熱波が突然",
          "農地がリスクに",
@@ -12792,6 +13116,10 @@
         [
          "雨で灌漑",
          "豪雨の日は手動散水を省略、労力を節約。"
+        ],
+        [
+         "干ばつのタイミング",
+         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
         ]
        ]
       },
@@ -12830,6 +13158,10 @@
          "4月、乾季の終わり。作物が枯れ、商店価格が高騰。"
         ],
         [
+         "干ばつでどう稼ぐ？",
+         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+        ],
+        [
          "雨季はある？",
          "ある——1月と2月に豪雨と雷雨が頻発し、一部の魚はこの時期だけ。"
         ]
@@ -12845,9 +13177,15 @@
      "sections": [
       {
        "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+      },
+      {
+       "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0에서 4번째 달의 공식 명칭은 Harsh Dry Season입니다. 작물 보호와 물주기를 준비하세요."
+       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
       },
       {
        "type": "table",
@@ -12878,6 +13216,11 @@
          "폭우",
          "저지대 침수",
          "무료 관개"
+        ],
+        [
+         "가뭄 (4월)",
+         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다.",
+         "비축, 높은 가격에 판매"
         ]
        ]
       },
@@ -12905,6 +13248,12 @@
          "물 더 주기; 덮개와 '고루 내리는 비' 유전자"
         ],
         [
+         "가뭄 (4월)",
+         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다.",
+         "가장 힘든 농사 달",
+         "연중 최고가에 비축분 판매"
+        ],
+        [
          "어느 계절이든",
          "산성비와 폭염이 갑자기",
          "밭이 위험",
@@ -12924,6 +13273,10 @@
         [
          "비로 관개",
          "폭우 때 손으로 물 주기를 건너뛰고 노력을 아끼세요."
+        ],
+        [
+         "가뭄 타이밍 잡기",
+         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
         ]
        ]
       },
@@ -12935,7 +13288,8 @@
         "매일 아침 일기예보 확인 — 폭풍과 산성비는 하루 전에 알 수 있습니다.",
         "노출된 구획에 덮개를 짓고 약한 작물은 모아서 심으세요.",
         "'고루 내리는 비' 유전자로 건조기에도 자동 물 주기.",
-        "뇌우 전력을 1.0 드론 스테이션과 공업 지구에."
+        "뇌우 전력을 1.0 드론 스테이션과 공업 지구에.",
+        "가뭄 전에 비축하고 가뭄 중에 판매."
        ]
       },
       {
@@ -12957,8 +13311,16 @@
          "농장 전력을 충전 — 1.0 자동화와 공업 지구의 핵심."
         ],
         [
+         "가뭄은 언제인가요?",
+         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+        ],
+        [
+         "가뭄에서 어떻게 이익을 내나요?",
+         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+        ],
+        [
          "우기가 있나요?",
-         "네 — 1월과 2월에 폭우와 뇌우가 잦고 일부 물고기는 그때만 나타납니다."
+         "네 — 1월과 2월에 폭우와 뇌우가 잦고 일부 물고기는 그때만 나타납니다. "
         ]
        ]
       }
@@ -12975,6 +13337,12 @@
        "tag": "TRANSLATION",
        "heading": "Traducción del sitio",
        "body": "Esta página es una traducción editorial del sitio. Los términos del juego se mantienen en inglés cuando no se ha verificado una cadena oficial localizada; no implica que el cliente de Doloc Town tenga soporte oficial en español."
+      },
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
       },
       {
        "type": "note",
@@ -13011,6 +13379,11 @@
          "Lluvia torrencial",
          "Inundaciones",
          "Riego gratis"
+        ],
+        [
+         "Sequía (mes 4)",
+         "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa.",
+         "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
         ]
        ]
       },
@@ -13063,6 +13436,10 @@
         [
          "Deja que la lluvia riegue",
          "Sáltate el riego manual en los chaparrones y ahorra esfuerzo."
+        ],
+        [
+         "Aprovecha el momento de la sequía",
+         "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
         ]
        ]
       },
@@ -13074,7 +13451,8 @@
         "Revisa el pronóstico cada mañana: las tormentas y la lluvia ácida avisan con un día de antelación.",
         "Construye cubiertas sobre las parcelas expuestas y agrupa los cultivos vulnerables.",
         "Instala el gen Lluvia para regar automáticamente en las sequías.",
-        "Usa la energía de las tormentas para las estaciones de drones del 1.0 y la zona industrial."
+        "Usa la energía de las tormentas para las estaciones de drones del 1.0 y la zona industrial.",
+        "Acumula antes de la sequía y vende durante ella."
        ]
       },
       {
@@ -13100,8 +13478,12 @@
          "Abril, al final de la estación seca. Los cultivos se marchitan y los precios suben."
         ],
         [
+         "¿Cómo saco provecho de la sequía?",
+         "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
+        ],
+        [
          "¿Hay estación lluviosa?",
-         "Sí: enero y febrero traen lluvias fuertes y tormentas; algunos peces solo aparecen entonces."
+         "Sí: enero y febrero traen lluvias fuertes y tormentas; algunos peces solo aparecen entonces. "
         ]
        ]
       }
@@ -13691,14 +14073,14 @@
    "slug": "mods",
    "title": "Doloc Town Mods & Steam Workshop Guide",
    "metaTitle": "Doloc Town Mods: Steam Workshop & Popular Mods",
-   "metaDescription": "Doloc Town Steam Workshop: install mods, popular community mods (QoL, cooking, fishing, DTMAPI), risks and FAQ.",
+   "metaDescription": "Doloc Town Steam Workshop safety guide: supported content replacements, functional-mod risks, clean troubleshooting and official FAQ.",
    "intro": "Doloc Town has an active Steam Workshop with 67+ community mods. Here's how to install them, what's popular, and what to watch out for.",
    "sections": [
     {
      "type": "note",
-     "tag": "1.00.03-OFFICIAL",
-     "heading": "Official warning before installing functional mods",
-     "body": "Steam Workshop content replacement is not the same as a supported functional mod system. The developer says functional mods are unsupported by the Workshop architecture and may cause a black screen or freeze. If troubleshooting, remove BepInEx and test a clean game. DTMAPI compatibility with 1.0 is not guaranteed."
+     "tag": "MOD-SAFETY",
+     "heading": "Official functional-mod warning",
+     "body": "Functional mods are unsupported by the Workshop architecture and may cause a black screen or freeze. Do not install DTMAPI from this guide. Remove BepInEx and test a clean game when troubleshooting."
     },
     {
      "type": "list",
@@ -13709,7 +14091,7 @@
       "Open the Steam Workshop for Doloc Town (steamcommunity.com/app/2285550/workshop).",
       "Browse or search mods, then click Subscribe on the ones you want.",
       "Steam downloads them automatically and they appear in the game.",
-      "Some mods need a loader/framework (e.g. DTMAPI) — read each mod's description and install dependencies first ⚠️.",
+      "Treat functional loaders as unsupported for 1.0; do not install a framework based on an old guide.",
       "Back up your save before modding — mods can change game behaviour and may break after big updates."
      ]
     },
@@ -13720,7 +14102,7 @@
      "body": "Verified: Doloc Town has an active Steam Workshop (as of Aug 2026).",
      "items": [
       "67+ community mods, with many Chinese-language mods (32+).",
-      "Popular ones include: Magic Storage, 多洛可QoL (cooking preview, batch cooking, quest board), Maple's fish expansion, DTMAPI framework, price helper, time-stop button, and Korean translation fixes.",
+      "Prefer Workshop content replacements that state current 1.0 compatibility; functional changes carry the official black-screen/freeze warning.",
       "Common categories: QoL (quality-of-life), cooking, fishing, UI, gameplay, visual, and translation mods.",
       "Mod counts change often — check the Workshop page for the current list."
      ]
@@ -13736,8 +14118,8 @@
        "Community mods are user-made — install at your own risk. Back up saves and check mod descriptions for dependencies."
       ],
       [
-       "Do I need DTMAPI?",
-       "Some mods list DTMAPI as a dependency (a framework mod). Subscribe to it first if a mod asks for it."
+       "Should I install a functional mod framework?",
+       "Not from this guide. Functional mods are unsupported by the Workshop architecture and 1.0 compatibility is not guaranteed."
       ],
       [
        "Will mods work after updates?",
@@ -13754,6 +14136,10 @@
     {
      "label": "Official Doloc Town patch 1.00.03",
      "url": "https://store.steampowered.com/news/app/2285550/view/1840310314351178"
+    },
+    {
+     "label": "Official Doloc Town 1.0 FAQ — functional mod warning",
+     "url": "https://store.steampowered.com/news/app/2285550/view/1839676055894691"
     }
    ],
    "meta": {
@@ -13769,9 +14155,9 @@
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "安装功能型 Mod 前先看官方警告",
-       "body": "Steam Workshop 内容替换不等于官方支持的功能型 Mod 系统。开发者明确表示 Workshop 架构不支持功能型 Mod，可能导致黑屏或卡死。排障时先移除 BepInEx，并用纯净游戏测试；DTMAPI 与 1.0 的兼容性不受保证。"
+       "tag": "MOD-SAFETY",
+       "heading": "Official functional-mod warning",
+       "body": "Workshop 架构不支持功能型 Mod，可能导致黑屏或卡死。本站不建议安装 DTMAPI；排障时移除 BepInEx 并用纯净游戏测试。"
       },
       {
        "type": "list",
@@ -13781,7 +14167,7 @@
         "打开多洛可小镇的 Steam 创意工坊（steamcommunity.com/app/2285550/workshop）。",
         "浏览或搜索模组，点「订阅」。",
         "Steam 自动下载，游戏中即可使用。",
-        "部分模组依赖框架（如 DTMAPI）——先看模组说明并安装依赖 ⚠️。",
+        "Workshop 架构不支持功能型 Mod，可能导致黑屏或卡死。本站不建议安装 DTMAPI；排障时移除 BepInEx 并用纯净游戏测试。",
         "装模组前备份存档——模组会改变游戏行为，大版本更新后可能失效。"
        ]
       },
@@ -13807,7 +14193,7 @@
         ],
         [
          "需要 DTMAPI 吗？",
-         "部分模组把 DTMAPI（框架模组）列为依赖。模组有要求就先订阅它。"
+         "Workshop 架构不支持功能型 Mod，可能导致黑屏或卡死。本站不建议安装 DTMAPI；排障时移除 BepInEx 并用纯净游戏测试。"
         ],
         [
          "更新后模组还能用吗？",
@@ -13825,9 +14211,9 @@
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "安裝功能型 Mod 前先看官方警告",
-       "body": "Steam Workshop 內容替換不等於官方支援的功能型 Mod 系統。開發者表示 Workshop 架構不支援功能型 Mod，可能造成黑畫面或凍結。疑難排解時先移除 BepInEx，再用乾淨遊戲測試；DTMAPI 與 1.0 的相容性沒有保證。"
+       "tag": "MOD-SAFETY",
+       "heading": "Official functional-mod warning",
+       "body": "Workshop 架構不支援功能型 Mod，可能造成黑畫面或凍結。本站不建議安裝 DTMAPI；疑難排解時移除 BepInEx 並用乾淨遊戲測試。"
       },
       {
        "type": "list",
@@ -13837,7 +14223,7 @@
         "打開多洛可小鎮的 Steam 創意工坊（steamcommunity.com/app/2285550/workshop）。",
         "瀏覽或搜索模組，點「訂閱」。",
         "Steam 自動下載，遊戲中即可使用。",
-        "部分模組依賴框架（如 DTMAPI）——先看模組說明並安裝依賴 ⚠️。",
+        "Workshop 架構不支援功能型 Mod，可能造成黑畫面或凍結。本站不建議安裝 DTMAPI；疑難排解時移除 BepInEx 並用乾淨遊戲測試。",
         "裝模組前備份存檔——模組會改變遊戲行為，大版本更新後可能失效。"
        ]
       },
@@ -13863,7 +14249,7 @@
         ],
         [
          "需要 DTMAPI 嗎？",
-         "部分模組把 DTMAPI（框架模組）列為依賴。模組有要求就先訂閱它。"
+         "Workshop 架構不支援功能型 Mod，可能造成黑畫面或凍結。本站不建議安裝 DTMAPI；疑難排解時移除 BepInEx 並用乾淨遊戲測試。"
         ],
         [
          "更新後模組還能用嗎？",
@@ -13881,9 +14267,9 @@
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "機能 Mod を導入する前の公式警告",
-       "body": "Steam Workshop のコンテンツ置換は、公式対応の機能 Mod システムではありません。開発者は Workshop の構造が機能 Mod をサポートせず、黒画面やフリーズの原因になり得ると説明しています。問題時は BepInEx を削除してクリーンな状態で確認してください。DTMAPI の 1.0 互換性は保証されません。"
+       "tag": "MOD-SAFETY",
+       "heading": "Official functional-mod warning",
+       "body": "Workshop の構造は機能 Mod をサポートせず、黒画面やフリーズの原因になり得ます。このガイドは DTMAPI の導入を勧めません。問題時は BepInEx を削除し、クリーンなゲームで確認してください。"
       },
       {
        "type": "list",
@@ -13893,7 +14279,7 @@
         "ドロックタウンのSteamワークショップを開く（steamcommunity.com/app/2285550/workshop）。",
         "MODを探して「購読」をクリック。",
         "Steamが自動ダウンロードし、ゲーム内で使える。",
-        "一部MODはフレームワーク（例：DTMAPI）が前提——説明を読んで依存を先に導入 ⚠️。",
+        "Workshop の構造は機能 Mod をサポートせず、黒画面やフリーズの原因になり得ます。このガイドは DTMAPI の導入を勧めません。問題時は BepInEx を削除し、クリーンなゲームで確認してください。",
         "導入前にセーブをバックアップ——MODは挙動を変え、大型アップデート後に壊れることがある。"
        ]
       },
@@ -13919,7 +14305,7 @@
         ],
         [
          "DTMAPIは必要？",
-         "一部MODがDTMAPI（フレームワークMOD）を依存に指定。要求されたら先に購読。"
+         "Workshop の構造は機能 Mod をサポートせず、黒画面やフリーズの原因になり得ます。このガイドは DTMAPI の導入を勧めません。問題時は BepInEx を削除し、クリーンなゲームで確認してください。"
         ],
         [
          "アップデート後も動く？",
@@ -13937,9 +14323,9 @@
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "기능성 Mod 설치 전 공식 경고",
-       "body": "Steam Workshop 콘텐츠 교체는 공식 지원 기능성 Mod 시스템과 다릅니다. 개발자는 Workshop 구조가 기능성 Mod를 지원하지 않아 검은 화면이나 멈춤이 생길 수 있다고 밝혔습니다. 문제 해결 시 BepInEx를 제거하고 깨끗한 게임으로 시험하세요. DTMAPI의 1.0 호환성은 보장되지 않습니다."
+       "tag": "MOD-SAFETY",
+       "heading": "Official functional-mod warning",
+       "body": "Workshop 구조는 기능성 Mod를 지원하지 않으며 검은 화면이나 멈춤이 생길 수 있습니다. 이 가이드는 DTMAPI 설치를 권하지 않습니다. 문제 해결 시 BepInEx를 제거하고 깨끗한 게임으로 시험하세요."
       },
       {
        "type": "list",
@@ -13949,7 +14335,7 @@
         "돌록 타운의 Steam 워크숍을 엽니다(steamcommunity.com/app/2285550/workshop).",
         "모드를 찾아 '구독'을 클릭합니다.",
         "Steam이 자동 다운로드하고 게임에서 바로 사용할 수 있습니다.",
-        "일부 모드는 프레임워크(예: DTMAPI)가 필요 — 설명을 읽고 의존성을 먼저 설치 ⚠️.",
+        "Workshop 구조는 기능성 Mod를 지원하지 않으며 검은 화면이나 멈춤이 생길 수 있습니다. 이 가이드는 DTMAPI 설치를 권하지 않습니다. 문제 해결 시 BepInEx를 제거하고 깨끗한 게임으로 시험하세요.",
         "모드 설치 전 세이브를 백업하세요 — 모드는 게임 동작을 바꾸고 대형 업데이트 후 깨질 수 있습니다."
        ]
       },
@@ -13975,7 +14361,7 @@
         ],
         [
          "DTMAPI가 필요한가요?",
-         "일부 모드가 DTMAPI(프레임워크 모드)를 의존성으로 요구합니다. 요구하면 먼저 구독하세요."
+         "Workshop 구조는 기능성 Mod를 지원하지 않으며 검은 화면이나 멈춤이 생길 수 있습니다. 이 가이드는 DTMAPI 설치를 권하지 않습니다. 문제 해결 시 BepInEx를 제거하고 깨끗한 게임으로 시험하세요."
         ],
         [
          "업데이트 후에도 되나요?",
@@ -13993,9 +14379,9 @@
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "Advertencia oficial antes de instalar mods funcionales",
-       "body": "Reemplazar contenido en Steam Workshop no equivale a un sistema de mods funcionales compatible. El desarrollador dice que la arquitectura de Workshop no los admite y que pueden causar pantalla negra o bloqueos. Para diagnosticar, elimina BepInEx y prueba el juego limpio. La compatibilidad de DTMAPI con 1.0 no está garantizada."
+       "tag": "MOD-SAFETY",
+       "heading": "Official functional-mod warning",
+       "body": "La arquitectura de Workshop no admite mods funcionales y pueden causar pantalla negra o bloqueos. Esta guía no recomienda instalar DTMAPI. Para diagnosticar, elimina BepInEx y prueba el juego limpio."
       },
       {
        "type": "note",
@@ -14037,7 +14423,7 @@
         ],
         [
          "¿Necesito DTMAPI?",
-         "Algunos mods listan DTMAPI (un mod framework) como dependencia. Suscríbete primero si un mod lo pide."
+         "La arquitectura de Workshop no admite mods funcionales y pueden causar pantalla negra o bloqueos. Esta guía no recomienda instalar DTMAPI. Para diagnosticar, elimina BepInEx y prueba el juego limpio."
         ],
         [
          "¿Funcionarán tras las actualizaciones?",
@@ -14076,7 +14462,7 @@
      "items": [
       "Some fish remain too difficult to catch.",
       "Automation drones can fail in certain situations.",
-      "New Year Beast difficulty, panorama camera resolution, a false New Year's Eve side-quest trigger and getting stuck after losing to the Old City Guardian are pending fixes.",
+      "The New Year Beast flying path is too high; panorama camera resolution, a false New Year's Eve side-quest trigger and getting stuck after losing to the Old City Guardian are also pending fixes.",
       "Stopped game time remains under investigation."
      ]
     },
@@ -14116,10 +14502,11 @@
      "type": "list",
      "tag": "1.0",
      "heading": "1.0 Full Release Highlights",
-     "body": "The official 1.0 highlights, per the official announcement.",
+     "body": "Selected official 1.0 highlights; use the linked Steam announcement for the source record.",
      "items": [
       "New area: Old City Ruins (third large map area).",
       "Complete main story ending.",
+      "Two-stage farming automation system.",
       "Mushroom Fest festival.",
       "Additional character storylines.",
       "New tools, combat drones, fish and accessories.",
@@ -14131,7 +14518,13 @@
      "type": "note",
      "tag": "TIP",
      "heading": "Why Track Updates",
-     "body": "Knowing when the game changed helps you find current guides and avoid outdated advice — most English guides still describe Early Access, so a 1.0-aware site like this is the reliable source."
+     "body": "Use the dated official Steam announcements to distinguish current behavior from Early Access advice."
+    },
+    {
+     "type": "note",
+     "tag": "SOURCE-BOUNDARY",
+     "heading": "Source boundary",
+     "body": "Use the dated official Steam announcements as the source record; this page presents selected highlights, not a complete changelog."
     }
    ],
    "sources": [
@@ -14179,7 +14572,7 @@
        "items": [
         "部分鱼仍然过难捕获。",
         "自动化无人机在某些情况下会失效。",
-        "New Year Beast 难度、全景相机分辨率、New Year's Eve 支线误触发，以及败给 Old City Guardian 后卡住仍待修复。",
+        "New Year Beast 飞行路径过高；全景相机分辨率、New Year's Eve 支线误触发，以及败给 Old City Guardian 后卡住也仍待修复。",
         "游戏时间停止仍在调查。"
        ]
       },
@@ -14220,6 +14613,7 @@
        "items": [
         "新区域：旧城废墟（第三大区域）。",
         "完整主线结局。",
+        "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。",
         "蘑菇节。",
         "更多角色剧情线。",
         "新工具、战斗无人机、鱼与配件。",
@@ -14231,6 +14625,12 @@
        "type": "note",
        "heading": "为什么要跟踪更新",
        "body": "知道游戏何时变化，能帮你找到当前有效的攻略、避开过时建议——多数英文攻略仍停留在 EA 阶段，因此像本站这样 1.0 感知的网站才是可靠来源。"
+      },
+      {
+       "type": "note",
+       "tag": "SOURCE-BOUNDARY",
+       "heading": "Source boundary",
+       "body": "请以带日期的 Steam 官方公告为来源；本页仅列重点，不自称完整日志。"
       }
      ]
     },
@@ -14260,7 +14660,7 @@
        "items": [
         "部分魚仍然過難捕獲。",
         "自動化無人機在某些情況下會失效。",
-        "New Year Beast 難度、全景相機解析度、New Year's Eve 支線誤觸發，以及敗給 Old City Guardian 後卡住仍待修正。",
+        "New Year Beast 飛行路徑過高；全景相機解析度、New Year's Eve 支線誤觸發，以及敗給 Old City Guardian 後卡住也仍待修正。",
         "遊戲時間停止仍在調查。"
        ]
       },
@@ -14301,6 +14701,7 @@
        "items": [
         "新區域：舊城廢墟（第三大區域）。",
         "完整主線結局。",
+        "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。",
         "蘑菇節。",
         "更多角色劇情線。",
         "新工具、戰鬥無人機、魚與配件。",
@@ -14312,6 +14713,12 @@
        "type": "note",
        "heading": "為什麼要跟蹤更新",
        "body": "知道遊戲何時變化，能幫你找到當前有效的攻略、避開過時建議——多數英文攻略仍停留在 EA 階段，因此像本站這樣 1.0 感知的網站才是可靠來源。"
+      },
+      {
+       "type": "note",
+       "tag": "SOURCE-BOUNDARY",
+       "heading": "Source boundary",
+       "body": "請以有日期的 Steam 官方公告為來源；本頁只列重點，不自稱完整日誌。"
       }
      ]
     },
@@ -14341,7 +14748,7 @@
        "items": [
         "一部の魚がまだ釣りにくすぎる。",
         "自動化ドローンが特定状況で動作しない。",
-        "New Year Beast の難度、パノラマカメラ解像度、New Year's Eve サイドクエストの誤発火、Old City Guardian 敗北後の停止は修正待ち。",
+        "New Year Beast の飛行経路が高すぎる。パノラマカメラ解像度、New Year's Eve サイドクエストの誤発火、Old City Guardian 敗北後の停止も修正待ち。",
         "ゲーム内時間の停止は調査中。"
        ]
       },
@@ -14382,6 +14789,7 @@
        "items": [
         "新地域：旧市街遺跡（3つ目の大型マップ地域）。",
         "完全なメインストーリー結末。",
+        "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。",
         "キノコ祭り。",
         "追加のキャラクターストーリー。",
         "新ツール・戦闘ドローン・魚・アクセサリー。",
@@ -14393,6 +14801,12 @@
        "type": "note",
        "heading": "なぜ更新を追うか",
        "body": "ゲームがいつ変わったかを知れば、現在有効な攻略を見つけ、時代遅れの助言を避けられる——多くの英語攻略は EA のままだ。1.0 に対応した本サイトが信頼できる情報源。"
+      },
+      {
+       "type": "note",
+       "tag": "SOURCE-BOUNDARY",
+       "heading": "Source boundary",
+       "body": "日付付きの Steam 公式発表を情報源として確認してください。本ページは要点であり、完全な変更履歴ではありません。"
       }
      ]
     },
@@ -14422,7 +14836,7 @@
        "items": [
         "일부 물고기가 여전히 너무 어렵습니다.",
         "자동화 드론이 특정 상황에서 작동하지 않습니다.",
-        "New Year Beast 난이도, 파노라마 카메라 해상도, New Year's Eve 보조 퀘스트 오작동, Old City Guardian 패배 뒤 멈춤은 수정 대기 중입니다.",
+        "New Year Beast 비행 경로가 너무 높습니다. 파노라마 카메라 해상도, New Year's Eve 보조 퀘스트 오작동, Old City Guardian 패배 뒤 멈춤도 수정 대기 중입니다.",
         "게임 시간 정지는 조사 중입니다."
        ]
       },
@@ -14463,7 +14877,7 @@
        "items": [
         "새 지역: 구시가지 유적 (세 번째 대형 맵 지역).",
         "완전한 메인 스토리 결말.",
-        "농업 자동화 시스템 (태양광→드론 기지).",
+        "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요.",
         "버섯 축제.",
         "추가 캐릭터 스토리.",
         "새 도구·전투 드론·물고기·액세서리.",
@@ -14474,7 +14888,13 @@
       {
        "type": "note",
        "heading": "업데이트를 추적하는 이유",
-       "body": "게임이 언제 바뀌었는지 알면 현재 유효한 공략을 찾고 시대에 뒤떨어진 조언을 피할 수 있습니다——대부분의 영어 공략은 EA 상태 그대로입니다. 1.0에 대응한 이 사이트가 신뢰할 수 있는 출처입니다."
+       "body": "날짜가 있는 Steam 공식 공지를 원문으로 확인하세요. 이 페이지는 주요 내용이며 전체 변경 기록이라고 주장하지 않습니다."
+      },
+      {
+       "type": "note",
+       "tag": "SOURCE-BOUNDARY",
+       "heading": "Source boundary",
+       "body": "날짜가 있는 Steam 공식 공지를 원문으로 확인하세요. 이 페이지는 주요 내용이며 전체 변경 기록이라고 주장하지 않습니다."
       }
      ]
     },
@@ -14510,7 +14930,7 @@
        "items": [
         "Algunos peces siguen siendo demasiado difíciles.",
         "Los drones de automatización fallan en determinadas situaciones.",
-        "La dificultad de New Year Beast, la resolución de la cámara panorámica, el falso inicio de una misión de New Year's Eve y quedar bloqueado tras perder contra Old City Guardian siguen pendientes.",
+        "La trayectoria de vuelo de New Year Beast es demasiado alta; la resolución de la cámara panorámica, el falso inicio de una misión de New Year's Eve y quedar bloqueado tras perder contra Old City Guardian también siguen pendientes.",
         "La detención del tiempo del juego sigue en investigación."
        ]
       },
@@ -14551,7 +14971,7 @@
        "items": [
         "Nueva área: Ruinas de la Ciudad Vieja (tercera gran zona).",
         "Final completo de la historia principal.",
-        "Sistema de automatización agrícola (solar → drones).",
+        "Los avisos oficiales de 1.0 describen una automatización agrícola en dos etapas. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas.",
         "Festival de las Setas.",
         "Historias de personajes adicionales.",
         "Nuevas herramientas, drones de combate, peces y accesorios.",
@@ -14562,7 +14982,13 @@
       {
        "type": "note",
        "heading": "Por qué seguir las actualizaciones",
-       "body": "Saber cuándo cambió el juego te ayuda a encontrar guías vigentes y evitar consejos desactualizados: la mayoría de las guías en inglés siguen describiendo el Early Access. Un sitio consciente del 1.0 como este es la fuente fiable."
+       "body": "Consulta los anuncios oficiales de Steam con fecha como fuente. Esta página resume puntos destacados y no afirma ser un historial completo."
+      },
+      {
+       "type": "note",
+       "tag": "SOURCE-BOUNDARY",
+       "heading": "Source boundary",
+       "body": "Consulta los anuncios oficiales de Steam con fecha como fuente. Esta página resume puntos destacados y no afirma ser un historial completo."
       }
      ]
     }
@@ -14577,9 +15003,9 @@
    "sections": [
     {
      "type": "note",
-     "tag": "1.00.03-OFFICIAL",
-     "heading": "Official patch 1.00.03 — August 10, 2026",
-     "body": "Music-disc codes 12311, 24141 and 35321 are permanently valid according to the official FAQ. A hat code is planned but has not been released; do not enter or share an invented code."
+     "tag": "OFFICIAL-AUTOMATION",
+     "heading": "Official automation status",
+     "body": "Official 1.0 notes describe two-stage farming automation. Patch 1.00.03 also lists drone failures in certain situations; save before restructuring automated plots."
     },
     {
      "type": "faq",
@@ -14610,6 +15036,10 @@
       [
        "What platforms is it on?",
        "PC (Windows) via Steam. Minimum specs: i3 6100, 8GB RAM, GTX 460, DX11, 2GB storage."
+      ],
+      [
+       "Is there farming automation?",
+       "Yes — new in 1.0. Official notes describe two-stage farming automation."
       ],
       [
        "What's new in 1.0?",
@@ -14657,9 +15087,9 @@
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "官方 1.00.03 补丁 — 2026 年 8 月 10 日",
-       "body": "官方 FAQ 说明音乐唱片代码 12311、24141、35321 永久有效。帽子代码仅为计划，尚未发布，请勿输入或传播虚构代码。"
+       "tag": "OFFICIAL-AUTOMATION",
+       "heading": "Official automation status",
+       "body": "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
       },
       {
        "type": "faq",
@@ -14690,6 +15120,10 @@
          "PC（Windows）Steam。最低配置：i3 6100、8GB 内存、GTX 460、DX11、2GB 存储。"
         ],
         [
+         "有农业自动化吗？",
+         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
+        ],
+        [
          "1.0 有什么新内容？",
          "旧城废墟、完整故事结局、农业自动化、蘑菇节、新工具/无人机/鱼/配件，以及 37 个新成就。"
         ]
@@ -14705,9 +15139,9 @@
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "官方 1.00.03 更新 — 2026 年 8 月 10 日",
-       "body": "官方 FAQ 說明音樂唱片代碼 12311、24141、35321 永久有效。帽子代碼僅在規劃中，尚未發布，請勿輸入或散播虛構代碼。"
+       "tag": "OFFICIAL-AUTOMATION",
+       "heading": "Official automation status",
+       "body": "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
       },
       {
        "type": "faq",
@@ -14738,6 +15172,10 @@
          "PC（Windows）Steam。最低配置：i3 6100、8GB 內存、GTX 460、DX11、2GB 存儲。"
         ],
         [
+         "有農業自動化嗎？",
+         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
+        ],
+        [
          "1.0 有什麼新內容？",
          "舊城廢墟、完整故事結局、農業自動化、蘑菇節、新工具/無人機/魚/配件，以及 37 個新成就。"
         ]
@@ -14753,9 +15191,9 @@
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "公式パッチ 1.00.03 — 2026年8月10日",
-       "body": "公式 FAQ によると音楽ディスクコード 12311、24141、35321 は恒久有効です。帽子コードは計画段階で未公開のため、架空コードを使わないでください。"
+       "tag": "OFFICIAL-AUTOMATION",
+       "heading": "Official automation status",
+       "body": "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。"
       },
       {
        "type": "faq",
@@ -14786,6 +15224,10 @@
          "PC（Windows）Steam。最低：i3 6100 / 8GB RAM / GTX 460 / DX11 / 2GB。"
         ],
         [
+         "農業オートメーションはある？",
+         "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。"
+        ],
+        [
          "1.0の新要素は？",
          "旧市街遺跡、完全なストーリー結末、農業オートメーション、キノコ祭り、新ツール/ドローン/魚/アクセサリー、新実績37個。"
         ]
@@ -14801,9 +15243,9 @@
      "sections": [
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "공식 패치 1.00.03 — 2026년 8월 10일",
-       "body": "공식 FAQ에 따르면 음악 디스크 코드 12311, 24141, 35321은 영구 유효합니다. 모자 코드는 계획만 되었고 아직 공개되지 않았으므로 가짜 코드를 쓰지 마세요."
+       "tag": "OFFICIAL-AUTOMATION",
+       "heading": "Official automation status",
+       "body": "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
       },
       {
        "type": "faq",
@@ -14835,7 +15277,7 @@
         ],
         [
          "농업 자동화가 있나요?",
-         "네——1.0 신규. 태양광이 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다."
+         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
         ],
         [
          "1.0에 뭐가 새로 있나요?",
@@ -14859,9 +15301,9 @@
       },
       {
        "type": "note",
-       "tag": "1.00.03-OFFICIAL",
-       "heading": "Parche oficial 1.00.03 — 10 de agosto de 2026",
-       "body": "Según las FAQ oficiales, los códigos de discos musicales 12311, 24141 y 35321 son válidos permanentemente. El código de sombrero solo está planeado y aún no existe; no uses códigos inventados."
+       "tag": "OFFICIAL-AUTOMATION",
+       "heading": "Official automation status",
+       "body": "Los avisos oficiales de 1.0 describen una automatización agrícola en dos etapas. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas."
       },
       {
        "type": "faq",
@@ -14890,6 +15332,10 @@
         [
          "¿En qué plataformas está?",
          "PC (Windows) en Steam. Mínimo: i3 6100, 8 GB RAM, GTX 460, DX11, 2 GB."
+        ],
+        [
+         "¿Hay automatización agrícola?",
+         "Los avisos oficiales de 1.0 describen una automatización agrícola en dos etapas. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas."
         ],
         [
          "¿Qué hay de nuevo en 1.0?",
@@ -16056,6 +16502,12 @@
    "intro": "Doloc Town is a deep farming sim, so play time depends on how much you want to do. The official store page gives clear numbers.",
    "sections": [
     {
+     "type": "note",
+     "tag": "OFFICIAL-SEASON",
+     "heading": "Harsh Dry Season (Month 4)",
+     "body": "Month 4 is Harsh Dry Season. Protect crops and plan watering; the cited official notes do not establish a trading strategy."
+    },
+    {
      "type": "table",
      "heading": "Official Play Time",
      "body": "From the official Steam store page and the 1.0 announcement.",
@@ -16095,6 +16547,7 @@
       "80 Steam achievements (43 base + 37 new in 1.0) encourage full completion",
       "Crop gene system: ~20 mutations across 30+ crops to research and breed",
       "Fishing: different ponds, rods and weather give different catches — completing the catalog takes a while",
+      "Two-stage farming automation is a progression system to build toward",
       "The 5 regions plus the new Old City Ruins area add exploration time"
      ]
     },
@@ -16106,7 +16559,7 @@
       "To finish the story quickly: focus on main quests and town tasks, and let automation handle routine farming",
       "To 100%: work on achievements, the gene lab and the fish catalog in parallel — don't save them for the end",
       "Season weather matters: use storms to water and thunderstorms to store power instead of fighting them",
-      ""
+      "Prepare crop protection and watering before Month 4's Harsh Dry Season"
      ]
     },
     {
@@ -16158,6 +16611,12 @@
      "intro": "多洛可小镇是内容深厚的农场模拟，通关时间取决于你想做多少事。官方商店页给出了明确数字。",
      "sections": [
       {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+      },
+      {
        "type": "table",
        "heading": "官方游戏时长",
        "body": "来自官方 Steam 商店页与 1.0 公告。",
@@ -16197,6 +16656,7 @@
         "80 个 Steam 成就（基础 43 + 1.0 新增 37）鼓励全收集",
         "作物基因系统：30+ 作物 × 约 20 种突变需要研究与培育",
         "钓鱼：不同池塘、鱼竿与天气有不同渔获——集齐图鉴需要时间",
+        "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。",
         "5 个区域加上 1.0 新增的旧城废墟带来大量探索时间"
        ]
       },
@@ -16207,7 +16667,8 @@
        "items": [
         "想快速通关：专注主线任务与镇务，让自动化处理日常农活",
         "想 100%：并行推进成就、基因实验室与鱼类图鉴——别留到最后",
-        "善用季节天气：用暴雨浇灌、用雷暴蓄电，而不是对抗它们"
+        "善用季节天气：用暴雨浇灌、用雷暴蓄电，而不是对抗它们",
+        "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
        ]
       },
       {
@@ -16244,6 +16705,12 @@
      "metaDescription": "多洛可小鎮通關要多久：核心主線 30+ 小時、休閒 40-60、100% 完成 100+ 小時——官方商店頁數字。",
      "intro": "多洛可小鎮是內容深厚的農場模擬，通關時間取決於你想做多少事。官方商店頁給出了明確數字。",
      "sections": [
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+      },
       {
        "type": "table",
        "heading": "官方遊戲時長",
@@ -16284,6 +16751,7 @@
         "80 個 Steam 成就（基礎 43 + 1.0 新增 37）鼓勵全收集",
         "作物基因系統：30+ 作物 × 約 20 種突變需要研究與培育",
         "釣魚：不同池塘、魚竿與天氣有不同漁獲——集齊圖鑑需要時間",
+        "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。",
         "5 個區域加上 1.0 新增的舊城廢墟帶來大量探索時間"
        ]
       },
@@ -16294,7 +16762,8 @@
        "items": [
         "想快速通關：專注主線任務與鎮務，讓自動化處理日常農活",
         "想 100%：並行推進成就、基因實驗室與魚類圖鑑——別留到最後",
-        "善用季節天氣：用暴雨澆灌、用雷暴蓄電，而不是對抗它們"
+        "善用季節天氣：用暴雨澆灌、用雷暴蓄電，而不是對抗它們",
+        "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
        ]
       },
       {
@@ -16331,6 +16800,12 @@
      "metaDescription": "ドロックタウンのクリア時間：コア 30時間以上、100%は100時間以上（公式ストア表記）。",
      "intro": "ドロックタウンはやり込み要素の多い農場シミュレーション。プレイ時間は何をどこまでやるか次第です。公式ストアが明確な数字を示しています。",
      "sections": [
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+      },
       {
        "type": "table",
        "heading": "公式プレイ時間",
@@ -16371,6 +16846,7 @@
         "全80実績（基礎43＋1.0で37）がコンプを促す",
         "作物遺伝子システム：30+作物×約20変異の研究と育成",
         "釣り：池・竿・天候で違う獲物 — 図鑑コンプに時間がかかる",
+        "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。",
         "5地域＋1.0の旧市街遺跡が探索時間を増やす"
        ]
       },
@@ -16420,6 +16896,12 @@
      "intro": "돌록 타운은 깊이 있는 농장 시뮬레이션으로, 플레이 시간은 얼마나 하느냐에 따라 달라집니다. 공식 스토어가 명확한 수치를 제시합니다.",
      "sections": [
       {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+      },
+      {
        "type": "table",
        "heading": "공식 플레이 시간",
        "body": "공식 Steam 스토어 및 1.0 발표 기준.",
@@ -16459,7 +16941,7 @@
         "80개 업적(기본 43 + 1.0 추가 37)이 완주를 유도",
         "작물 유전자 시스템: 30+ 작물 × 약 20개 변이 연구와 육종",
         "낚시: 연못·낚싯대·날씨에 따라 다른 어획 — 도감 완성이 오래 걸림",
-        "농업 자동화(태양광→드론 기지)는 하나의 테크 트리",
+        "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요.",
         "5개 지역 + 1.0의 옛 도시 유적이 탐험 시간을 늘림"
        ]
       },
@@ -16470,7 +16952,8 @@
        "items": [
         "스토리 빨리: 메인 퀘스트와 마을 의뢰에 집중하고 일상 농사는 자동화에 맡기기",
         "100% 목표: 업적·유전자 랩·물고기 도감을 병행 — 마지막에 몰아하지 말 것",
-        "계절 날씨 활용: 폭풍으로 물 주기, 뇌우로 전력 저장 — 싸우지 말고 활용"
+        "계절 날씨 활용: 폭풍으로 물 주기, 뇌우로 전력 저장 — 싸우지 말고 활용",
+        "4월 가뭄 전에 비축 — 가격이 폭등하고 작물이 시듦"
        ]
       },
       {
@@ -16514,6 +16997,12 @@
        "body": "Esta página es una traducción editorial del sitio. Los términos del juego se mantienen en inglés cuando no se ha verificado una cadena oficial localizada; no implica que el cliente de Doloc Town tenga soporte oficial en español."
       },
       {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
+      },
+      {
        "type": "table",
        "heading": "Tiempo oficial",
        "body": "De la tienda oficial de Steam y del anuncio de 1.0.",
@@ -16553,6 +17042,7 @@
         "Los 80 logros de Steam (43 base + 37 nuevos en 1.0) invitan a completarlo todo",
         "Sistema genético de cultivos: ~20 mutaciones en más de 30 cultivos por investigar y criar",
         "Pesca: estanques, cañas y clima diferentes dan capturas distintas — completar el catálogo lleva tiempo",
+        "La automatización agrícola (solar + eólica → estaciones de drones) es todo un árbol tecnológico",
         "Las 5 regiones más la nueva área de las Ruinas de la Ciudad Vieja añaden tiempo de exploración"
        ]
       },
@@ -16611,9 +17101,15 @@
    "sections": [
     {
      "type": "note",
+     "tag": "OFFICIAL-SEASON",
+     "heading": "Harsh Dry Season (Month 4)",
+     "body": "Month 4 is Harsh Dry Season. Protect crops and plan watering; the cited official notes do not establish a trading strategy."
+    },
+    {
+     "type": "note",
      "tag": "1.00.03-OFFICIAL",
      "heading": "Harsh Dry Season (Month 4)",
-     "body": "Month 4 is named Harsh Dry Season in 1.0."
+     "body": "Month 4 is Harsh Dry Season. Protect crops and plan watering; the cited official notes do not establish a trading strategy."
     },
     {
      "type": "list",
@@ -16692,9 +17188,10 @@
     {
      "type": "list",
      "tag": "WEATHER TIMING",
-     "heading": "Season planning: protect crops and water",
-     "body": "The calendar is the real market. Work with it and prices work for you.",
+     "heading": "Season Planning",
+     "body": "Use the official calendar to schedule crops and fishing without assuming an unverified price mechanic.",
      "items": [
+      "Month 4 is Harsh Dry Season — protect crops and plan watering.",
       "Rainy season (Jan-Feb) reshuffles the fish tables — fish the uncommon catches while they last.",
       "Thunderstorms charge your farm's power — in 1.0 that cuts the running costs of automation.",
       "Plant for the season — off-season crops wither, so rotate what you grow with the calendar."
@@ -16726,8 +17223,16 @@
        "Pickling, drying and weaving each add roughly 10-20% per item, per community reports [L2]."
       ],
       [
+       "When should I sell my stockpile?",
+       "The cited official notes do not establish a Month 4 trading strategy; plan crop protection and watering instead."
+      ],
+      [
        "Is the backpack upgrade worth it?",
        "Yes — the first tier roughly doubles your slots and is the community's most-recommended first purchase [L2]."
+      ],
+      [
+       "Do I need money for automation?",
+       "Later, yes: the automation progression costs materials and Tech Points, so early income supports the 1.0 endgame."
       ]
      ]
     }
@@ -16735,6 +17240,12 @@
    "i18n": {
     "zh-CN": {
      "sections": [
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+      },
       {
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
@@ -16813,16 +17324,6 @@
        "type": "steps"
       },
       {
-       "heading": "天气时机：低买高卖",
-       "body": "游戏日历就是真正的市场。顺着它，价格就会为你工作。",
-       "items": [
-        "雨季（1-2 月）重置渔获表——趁稀有渔获还在赶紧钓。",
-        "雷暴能给农场充电——1.0 里这能降低自动化的运行成本。",
-        "按季节种植——非应季作物会枯萎，跟着日历轮换。"
-       ],
-       "type": "list"
-      },
-      {
        "heading": "常见的赚钱错误",
        "body": "社区报告指出这些是玩家漏钱的方式：全卖原料（跳过 10-20% 的加工利润）、4 月前不囤货（在全年最差的价格卖出）、跳过任务（错过技术点这个收入放大器）、把鱼全卖光（失去 13 种鱼缸专属鱼的繁殖对）、迟迟不升背包（浪费几小时跑回家）。",
        "type": "note"
@@ -16844,8 +17345,16 @@
          "腌菜、烘干、织布各约增值 10-20%，据社区报告 [L2]。"
         ],
         [
+         "什么时候卖囤货？",
+         "第 4 月是 Harsh Dry Season。请保护作物并规划浇水；引用的官方公告未建立倒卖策略。"
+        ],
+        [
          "背包升级值得吗？",
          "值得——第一层大约翻倍槽位，是社区最推荐的第一笔购买 [L2]。"
+        ],
+        [
+         "自动化需要钱吗？",
+         "官方 1.0 公告介绍两阶段农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
         ]
        ],
        "type": "faq"
@@ -16860,9 +17369,15 @@
      "sections": [
       {
        "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+      },
+      {
+       "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0 では第4月の公式名は Harsh Dry Season です。作物保護と水やりを準備してください。"
+       "body": "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
       },
       {
        "heading": "ゼロからの金策ループ",
@@ -16936,16 +17451,6 @@
        "type": "steps"
       },
       {
-       "heading": "天候のタイミング：安く仕入れ高く売る",
-       "body": "ゲーム内カレンダーこそ本当の市場。これに合わせれば価格がこちらに働く。",
-       "items": [
-        "雨季（1-2月）で漁獲表が変わる——レア漁獲があるうちに釣る。",
-        "雷雨で農場に充電——1.0では自動化の運用コストを下げる。",
-        "季節に合わせて作付け——季節外れは枯れる。カレンダーで輪作。"
-       ],
-       "type": "list"
-      },
-      {
        "heading": "よくある金策ミス",
        "body": "コミュニティ報告が指摘するお金を逃すパターン：素材を全部生売り（10-20%の加工マージンを捨てる）、4月前に備蓄しない（一年で最悪の価格で売る）、クエストをスキップ（収入の増幅器・テックポイントを逃す）、魚を全部売る（水槽限定13種の繁殖ペアを失う）、バックパック強化を後回し（往復で何時間も無駄にする）。",
        "type": "note"
@@ -16967,8 +17472,16 @@
          "漬ける・干す・織るで1品あたり約10-20%、コミュニティ報告による [L2]。"
         ],
         [
+         "備蓄はいつ売る？",
+         "第4月は Harsh Dry Season です。作物保護と水やりを準備してください。引用した公式情報は売買攻略を示していません。"
+        ],
+        [
          "バックパック強化は価値がある？",
          "ある——第1層でスロットがほぼ倍増し、コミュニティで最も推奨される最初の買い物 [L2]。"
+        ],
+        [
+         "自動化にお金は必要？",
+         "公式 1.0 情報は二段階の農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。"
         ]
        ],
        "type": "faq"
@@ -16983,9 +17496,15 @@
      "sections": [
       {
        "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+      },
+      {
+       "type": "note",
        "tag": "1.00.03-OFFICIAL",
        "heading": "Harsh Dry Season (Month 4)",
-       "body": "1.0에서 4번째 달의 공식 명칭은 Harsh Dry Season입니다. 작물 보호와 물주기를 준비하세요."
+       "body": "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
       },
       {
        "heading": "제로부터 시작하는 돈 루프",
@@ -17059,16 +17578,6 @@
        "type": "steps"
       },
       {
-       "heading": "날씨 타이밍: 싸게 사서 비싸게 팔기",
-       "body": "게임 달력이 진짜 시장입니다. 이에 맞추면 가격이 당신 편이 됩니다.",
-       "items": [
-        "우기(1-2월)에 어종 표가 바뀜 — 희귀 어종이 있는 동안 낚시.",
-        "뇌우가 농장 전력 충전 — 1.0에서 자동화 운영비를 줄임.",
-        "계절에 맞춰 재배 — 비수기 작물은 시듭니다. 달력에 맞춰 윤작."
-       ],
-       "type": "list"
-      },
-      {
        "heading": "흔한 돈 버는 실수",
        "body": "커뮤니티가 지적하는 돈을 놓치는 패턴: 원자재를 전부 그대로 판매(10-20% 가공 마진 포기), 4월 전 비축 안 함(연중 최악의 가격으로 판매), 퀘스트 건너뛰기(수입 증폭기인 기술 포인트를 놓침), 물고기를 전부 판매(수조 전용 13종의 번식 쌍 상실), 가방 업그레이드 미루기(왕복에 몇 시간 낭비).",
        "type": "note"
@@ -17090,12 +17599,16 @@
          "절임·건조·직조 각각 품목당 약 10-20%, 커뮤니티 보고 기준 [L2]."
         ],
         [
+         "비축물은 언제 팔아야 하나요?",
+         "4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다."
+        ],
+        [
          "가방 업그레이드는 가치 있나요?",
          "네 — 첫 단계가 슬롯을 약 2배로 늘리며 커뮤니티가 가장 추천하는 첫 구매입니다 [L2]."
         ],
         [
          "자동화에 돈이 필요한가요?",
-         "후반에는 필요: 태양광과 드론 기지에 재료와 기술 포인트가 듭니다. 초반 수입이 1.0 엔드게임을 뒷받침합니다."
+         "공식 1.0 공지는 2단계 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
         ]
        ],
        "type": "faq"
@@ -17113,6 +17626,12 @@
        "tag": "TRANSLATION",
        "heading": "Traducción del sitio",
        "body": "Esta página es una traducción editorial del sitio. Los términos del juego se mantienen en inglés cuando no se ha verificado una cadena oficial localizada; no implica que el cliente de Doloc Town tenga soporte oficial en español."
+      },
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa."
       },
       {
        "type": "note",
@@ -17134,7 +17653,7 @@
       },
       {
        "heading": "Procesado: el +10-20% de valor",
-       "body": "Los reportes de la comunidad (L2) sitúan el margen del procesado en 10-20% por artículo. Las máquinas funcionan 24/7, así que el margen se compone mientras haces cualquier otra cosa. Los márgenes exactos del 1.0 están pendientes de revisión de fuentes oficiales.",
+       "body": "Los reportes de la comunidad (L2) sitúan el margen del procesado en 10-20% por artículo. Las máquinas funcionan 24/7, así que el margen se compone mientras haces cualquier otra cosa. Los márgenes exactos del 1.0 están pendientes de nuestras pruebas.",
        "columns": [
         "Entrada",
         "Proceso",
@@ -17192,16 +17711,6 @@
        "type": "steps"
       },
       {
-       "heading": "Plan estacional: protege cultivos y riega",
-       "body": "El calendario es el mercado real. Alinéate con él y los precios trabajan para ti.",
-       "items": [
-        "La temporada de lluvias (ene-feb) cambia las tablas de peces — pesca las capturas raras mientras duran.",
-        "Las tormentas cargan la energía de tu granja — en el 1.0 reduce los costes de la automatización.",
-        "Planta según la estación — los cultivos fuera de temporada se marchitan; rota con el calendario."
-       ],
-       "type": "list"
-      },
-      {
        "heading": "Errores de dinero comunes",
        "body": "La comunidad señala estas formas de dejar dinero sobre la mesa: vender todo crudo (te saltas el 10-20% del procesado), no acumular antes del mes 4 (vendes a los peores precios del año), saltarte misiones (pierdes Puntos de Tecnología, el multiplicador de ingresos), vender todos los peces (pierdes las parejas de 13 especies de tanque) y retrasar la mochila (horas yendo a casa).",
        "type": "note"
@@ -17223,8 +17732,16 @@
          "Encurtir, secar y tejer añaden cada uno un 10-20% por artículo, según la comunidad [L2]."
         ],
         [
+         "¿Cuándo vendo mi reserva?",
+         "Acumula antes de la sequía del mes 4 y vende en la subida: es el mayor pago del calendario."
+        ],
+        [
          "¿Merece la pena la mochila?",
          "Sí — el primer nivel casi duplica tus espacios y es la compra inicial más recomendada [L2]."
+        ],
+        [
+         "¿Necesito dinero para la automatización?",
+         "Más tarde sí: la energía solar/eólica y las estaciones de drones cuestan materiales y Puntos de Tecnología, así que los ingresos tempranos financian el final del 1.0."
         ]
        ],
        "type": "faq"
@@ -17237,6 +17754,12 @@
     },
     "zh-TW": {
      "sections": [
+      {
+       "type": "note",
+       "tag": "OFFICIAL-SEASON",
+       "heading": "Harsh Dry Season (Month 4)",
+       "body": "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+      },
       {
        "type": "note",
        "tag": "1.00.03-OFFICIAL",
@@ -17315,16 +17838,6 @@
        "type": "steps"
       },
       {
-       "heading": "天氣時機：低買高賣",
-       "body": "遊戲日曆就是真正的市場。順著它，價格就會為你工作。",
-       "items": [
-        "雨季（1-2 月）重置漁獲表——趁稀有漁獲還在趕緊釣。",
-        "雷暴能給農場充電——1.0 裡這能降低自動化的運行成本。",
-        "按季節種植——非應季作物會枯萎，跟著日曆輪換。"
-       ],
-       "type": "list"
-      },
-      {
        "heading": "常見的賺錢錯誤",
        "body": "社區報告指出這些是玩家漏錢的方式：全賣原料（跳過 10-20% 的加工利潤）、4 月前不囤貨（在全年最差的價格賣出）、跳過任務（錯過技術點這個收入放大器）、把魚全賣光（失去 13 種魚缸專屬魚的繁殖對）、遲遲不升揹包（浪費幾小時跑回家）。",
        "type": "note"
@@ -17346,8 +17859,16 @@
          "醃菜、烘乾、織布各約增值 10-20%，據社區報告 [L2]。"
         ],
         [
+         "什麼時候賣囤貨？",
+         "第 4 月是 Harsh Dry Season。請保護作物並規劃澆水；引用的官方公告未建立倒賣策略。"
+        ],
+        [
          "揹包升級值得嗎？",
          "值得——第一層大約翻倍槽位，是社區最推薦的第一筆購買 [L2]。"
+        ],
+        [
+         "自動化需要錢嗎？",
+         "官方 1.0 公告介紹兩階段農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
         ]
        ],
        "type": "faq"
@@ -21414,7 +21935,7 @@
      "title": "多洛可小鎮送禮指南：每位村民的喜好與雷區",
      "metaTitle": "多洛可小鎮送禮：村民喜好、討厭物一覽",
      "metaDescription": "多洛可小鎮每位村民愛什麼、喜歡什麼、討厭什麼——外加 12/13 的萬能禮物，以及絕對不能送的三樣東西。",
-     "intro": "送對了好感度猛漲，送錯了白費一天。本頁把 65 件物品和社區來源核對過的 13 位村民做了雙向對照：可以按物品查誰想要，也可以按村民查該帶什麼。",
+     "intro": "送對了好感度猛漲，送錯了白費一天。本頁把 65 件物品和社區實測過的 13 位村民做了雙向對照：可以按物品查誰想要，也可以按村民查該帶什麼。",
      "sections": [
       {
        "type": "note",

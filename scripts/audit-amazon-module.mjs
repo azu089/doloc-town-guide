@@ -42,6 +42,23 @@ try {
   for (const token of ["inline-size:100%","max-inline-size:100%","min-inline-size:44px","min-block-size:44px","outline:2px solid var(--amber-soft)","grid-template-columns:1fr","minmax(0,1fr)","overflow-wrap:anywhere","prefers-reduced-motion:reduce","margin:32px auto 0"]) if(!css.includes(token)) fail("css-contract",token);
   const authored=(css.match(/\.amazon[^}]*\{[^}]*\}/g)||[]).join("\n");
   if (/animation\s*:|translateY|reveal/.test(authored)) fail("motion-contract","entrance motion found");
+
+  // Evidence-semantic guard: inspect the generated data and final HTML, not
+  // only one visible route. Exceptions are narrowly limited to warning copy.
+  const semanticFiles = [path.join(root,"data/site.json"), ...walk(disabled)];
+  const forbidden = [
+    ["drought-arbitrage", /price spike|prices spike|sell high|highest prices|价格飙升|價格飆升|物价飙升|物價飆升|最高价|最高價|価格高騰|最高値|가격.{0,10}(급등|치솟)|dispara los precios|subida de precios|vende caro/i],
+    ["wind-claim", /wind turbine|wind power|solar\/wind|solar \+ wind|solar and wind|太阳能.{0,3}风能|太陽能.{0,3}風能|太阳能\/风能|太陽光.{0,3}風力|태양광.{0,3}풍력|solar.{0,3}viento|energía solar y eólica/i],
+    ["unsafe-mod-advice", /DTMAPI.{0,100}(subscribe|install|订阅|訂閱|購読|구독|Suscríbete)|(?:dependencies|依赖|依賴|依存|의존성).{0,40}(first|先|먼저)/i],
+    ["new-year-beast-mistranslation", /New Year Beast.{0,20}(difficulty|难度|難度|난이도|dificultad)/i],
+    ["self-backing", /complete 1\.0 changelog|site (?:like this )?is the reliable source|사이트가 신뢰할 수 있는 출처|sitio .*fuente fiable/i]
+  ];
+  for (const file of semanticFiles) {
+    const text=fs.readFileSync(file,"utf8");
+    for (const [code,re] of forbidden) if(re.test(text)) fail(code,path.relative(root,file));
+  }
+  const source=fs.readFileSync(path.join(root,"data/site.base.json"),"utf8");
+  for (const [code,re] of forbidden) if(re.test(source)) fail(`${code}-source`,"data/site.base.json");
 } finally { fs.rmSync(disabled,{recursive:true,force:true}); fs.rmSync(enabled,{recursive:true,force:true}); }
 console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",failures},null,2));
 process.exit(failures.length?1:0);

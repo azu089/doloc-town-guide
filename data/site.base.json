@@ -94,17 +94,17 @@
   "nameI18n": {},
   "statsI18n": {},
   "introI18n": {
-   "zh-CN": "多洛可小镇是一款横版卷轴像素风的后末日农场模拟游戏。你扮演年轻的拾荒者，在极端天气下用平台一块块搭建垂直农场：酸雨、酷热与雷暴轮番来袭。收集 40+ 资源、钓鱼、畜牧、改造作物基因、与无人机并肩战斗，并用太阳能与风能实现自动化生产。1.0 正式版（2026 年 8 月 6 日）加入了完整故事结局、旧城废墟区域、农业自动化与 37 个新成就。",
-   "zh-TW": "多洛可小鎮是一款橫版卷軸像素風的後末日農場模擬遊戲。你扮演年輕的拾荒者，在極端天氣下用平台一塊塊搭建垂直農場：酸雨、酷熱與雷暴輪番來襲。收集 40+ 資源、釣魚、畜牧、改造作物基因、與無人機並肩戰鬥，並用太陽能與風能實現自動化生產。1.0 正式版（2026 年 8 月 6 日）加入了完整故事結局、舊城廢墟區域、農業自動化與 37 個新成就。",
-   "ja": "ドロックタウンは横スクロールのピクセルアート農場シム。極限気象の中、プラットフォームを積み上げて垂直農場を築く若きスカベンジャーを演じる。酸性雨・猛暑・雷雨の中、40以上の資源を集め、釣り・牧場・遺伝子改良・ドローン戦闘・太陽光/風力の自動化を駆使する。1.0 正式版（2026年8月6日）で完全なストーリー結末、旧市街遺跡、農業オートメーション、37の新実績が追加。",
-   "ko": "돌록 타운은 횡스크롤 픽셀아트 농장 시뮬입니다. 극한 날씨 속에서 플랫폼을 쌓아 수직 농장을 짓는 젊은 스캐빈저가 되어 보세요. 40+ 자원 수집, 낚시, 목장, 작물 유전자 개량, 드론 전투, 태양광·풍력 자동화를 활용합니다. 1.0 정식(2026년 8월 6일)으로 완전한 스토리 결말, 구시가지 유적, 농업 자동화, 신규 업적 37개가 추가됐습니다.",
-   "es": "Doloc Town es un simulador de granja pixel-art de scroll lateral ambientado en un páramo postapocalíptico. Juegas como un joven recolector que construye una granja vertical bajo clima extremo: lluvia ácida, calor abrasador y tormentas. Reúne más de 40 recursos, pesca, cría ganado, modifica genes, lucha con tu dron y automatiza con energía solar y eólica. El 1.0 (6 ago 2026) añade el final completo, las Ruinas de la Ciudad Vieja, la automatización y 37 logros."
+   "zh-CN": "多洛可小镇是一款横版卷轴像素风的后末日农场模拟游戏。你扮演年轻的拾荒者，在极端天气下用平台搭建垂直农场。收集资源、钓鱼、畜牧、改造作物基因、与无人机并肩战斗，并使用官方介绍的两阶段农业自动化。",
+   "zh-TW": "多洛可小鎮是一款橫版卷軸像素風的後末日農場模擬遊戲。你扮演年輕的拾荒者，在極端天氣下用平台搭建垂直農場。收集資源、釣魚、畜牧、改造作物基因、與無人機並肩戰鬥，並使用官方介紹的兩階段農業自動化。",
+   "ja": "ドロックタウンは横スクロールのピクセルアート農場シム。極限気象の中で垂直農場を築き、資源収集・釣り・牧場・遺伝子改良・ドローン戦闘と、公式に紹介された二段階の農業オートメーションを進める。",
+   "ko": "돌록 타운은 횡스크롤 픽셀아트 농장 시뮬입니다. 극한 날씨 속에서 수직 농장을 짓고 자원 수집, 낚시, 목장, 유전자 개량, 드론 전투와 공식 설명의 2단계 농업 자동화를 진행합니다.",
+   "es": "Doloc Town es un simulador de granja pixel-art lateral. Construye una granja vertical bajo clima extremo, reúne recursos, pesca, cría animales, modifica genes, combate con tu dron y usa la automatización agrícola oficial en dos etapas."
   },
   "keyFactsI18n": {
    "zh-CN": [
     "1.0 正式版：2026 年 8 月 6 日，含完整故事结局",
     "主线 30+ 小时，全收集 100+ 小时",
-    "农业自动化：太阳能+风能→无人机站（1.0 新增）",
+    "农业自动化：两阶段农事自动化（1.0 新增）",
     "作物基因系统：30+ 作物 × 约 20 种突变",
     "可利用的极端天气（酸雨/雷暴/旱季）",
     "Steam 成就共 80 个（基础 43 + 1.0 新增 37）"
@@ -112,7 +112,7 @@
    "zh-TW": [
     "1.0 正式版：2026 年 8 月 6 日，含完整故事結局",
     "主線 30+ 小時，全收集 100+ 小時",
-    "農業自動化：太陽能+風能→無人機站（1.0 新增）",
+    "農業自動化：兩階段農事自動化（1.0 新增）",
     "作物基因系統：30+ 作物 × 約 20 種突變",
     "可利用的極端天氣（酸雨/雷暴/旱季）",
     "Steam 成就共 80 個（基礎 43 + 1.0 新增 37）"
@@ -120,7 +120,7 @@
    "ja": [
     "1.0 正式版：2026年8月6日、完全なストーリー結末",
     "メイン30時間+、全収集100時間+",
-    "農業オートメーション：太陽光+風力→ドローン基地（1.0新）",
+    "農業オートメーション：二段階の農作業自動化（1.0新）",
     "作物遺伝子システム：30+作物×約20変異",
     "活用できる異常気象（酸性雨/雷雨/乾季）",
     "Steam実績80個（基礎43+1.0新37）"
@@ -128,7 +128,7 @@
    "ko": [
     "1.0 정식: 2026년 8월 6일, 완전한 스토리 결말",
     "메인 30시간+, 전체 수집 100시간+",
-    "농업 자동화: 태양광+풍력→드론 기지 (1.0 신규)",
+    "농업 자동화: 2단계 농작업 자동화 (1.0 신규)",
     "작물 유전자 시스템: 30+ 작물 × 약 20 돌연변이",
     "활용 가능한 극한 날씨 (산성비/뇌우/가뭄)",
     "Steam 업적 80개 (기본 43 + 1.0 신규 37)"
@@ -136,7 +136,7 @@
    "es": [
     "Lanzamiento 1.0: 6 ago 2026, final completo de la historia",
     "30+ horas de historia, 100+ con todo",
-    "Automatización agrícola: solar + viento → drones (nuevo en 1.0)",
+    "Automatización agrícola en dos etapas (nueva en 1.0)",
     "Sistema genético: 30+ cultivos × ~20 mutaciones",
     "Clima extremo aprovechable (lluvia ácida, tormentas, sequía)",
     "80 logros de Steam (43 base + 37 nuevos en 1.0)"
@@ -147,7 +147,7 @@
     "多洛可小镇由 RedSaw Games Studio 开发，Logoi Games 发行，Pathea Games 联合发行。",
     "游戏于 2025 年 5 月 8 日开启抢先体验，2026 年 8 月 6 日发布 1.0 正式版。",
     "本站信息以 Steam 官方商店页、官方 1.0 公告、发行商新闻与权威媒体（CGMagazine、PCGamesN、RPGamer）为准。",
-    "社区来源的细节在亲测前会用 ⚠️ 标注。"
+    "社区来源的细节会用 ⚠️ 标注，并与可引用来源分开。"
    ],
    "zh-TW": [
     "多洛可小鎮由 RedSaw Games Studio 開發，Logoi Games 發行，Pathea Games 聯合發行。",
@@ -159,19 +159,19 @@
     "ドロックタウンは RedSaw Games Studio 開発、Logoi Games 発売、Pathea Games 共同発売。",
     "2025年5月8日に早期アクセス開始、2026年8月6日に1.0正式版リリース。",
     "本サイトの情報は Steam 公式ストア、公式1.0アナウンス、パブリッシャー、信頼できるメディア（CGMagazine、PCGamesN、RPGamer）で確認。",
-    "コミュニティ情報は実機検証まで ⚠️ で明記。"
+    "コミュニティ情報は ⚠️ で示し、引用可能な公式情報と区別します。"
    ],
    "ko": [
     "돌록 타운은 RedSaw Games Studio 개발, Logoi Games 퍼블리싱, Pathea Games 공동 퍼블리싱입니다.",
     "2025년 5월 8일 얼리 액세스 시작, 2026년 8월 6일 1.0 정식 출시.",
     "본 사이트 정보는 Steam 공식 스토어, 공식 1.0 발표, 퍼블리셔, 신뢰할 수 있는 미디어(CGMagazine, PCGamesN, RPGamer)로 확인합니다.",
-    "커뮤니티 출처 세부 사항은 직접 검증 전까지 ⚠️로 표시합니다."
+    "커뮤니티 출처 세부 사항은 ⚠️로 표시하고 인용 가능한 공식 정보와 구분합니다."
    ],
    "es": [
     "Doloc Town está desarrollado por RedSaw Games Studio y publicado por Logoi Games con Pathea Games como coeditor.",
     "El juego salió en Early Access el 8 de mayo de 2025 y lanzó su 1.0 el 6 de agosto de 2026.",
     "La información se verifica en la página oficial de Steam, el anuncio oficial 1.0, el editor y medios de confianza (CGMagazine, PCGamesN, RPGamer).",
-    "Los detalles de la comunidad se marcan con ⚠️ hasta verificarlos."
+    "Los datos comunitarios se marcan con ⚠️ y se separan de las fuentes oficiales citables."
    ]
   }
  },
@@ -257,7 +257,7 @@
       ],
       [
        "Drought (Month 4)",
-       "Crops wither, prices spike",
+       "Crops face Harsh Dry Season",
        "Stockpile before Month 4, sell during the spike"
       ]
      ]
@@ -349,7 +349,7 @@
       ],
       [
        "New players",
-       "You can reach automation earlier than EA players — solar/wind power → drone stations handle chores."
+       "You can reach the official two-stage farming automation earlier than EA players."
       ],
       [
        "Old City Ruins",
@@ -407,8 +407,8 @@
   {
    "slug": "automation",
    "title": "Doloc Town Farming Automation Guide (1.0)",
-   "metaTitle": "Doloc Town Farming Automation: Solar, Wind and Drones (1.0)",
-   "metaDescription": "How farming automation works in Doloc Town 1.0: build solar and wind power, deploy farming drone stations and let drones seed, nurture and harvest for you.",
+   "metaTitle": "Doloc Town Farming Automation & Drone Guide (1.0)",
+   "metaDescription": "How Doloc Town 1.0 farming automation works: two-stage crop automation, task assignment and current drone issues from official notes.",
    "intro": "The 1.0 release turns you from a farmer into a farm manager. Here is how to generate clean energy, deploy drone stations and automate the whole crop cycle.",
    "sections": [
     {
@@ -418,8 +418,8 @@
      "body": "Automation has three layers: energy, stations and drones. Each layer feeds the next, so build in this order.",
      "items": [
       [
-       "Harness solar and wind power",
-       "Build solar panels and wind turbines to generate clean energy. Solar shines in clear weather; wind keeps producing through storms — a mix is the safest early setup."
+       "Build the automation chain",
+       "Follow the official two-stage farming automation flow and unlock each task before expanding the layout."
       ],
       [
        "Build farming drone stations",
@@ -438,13 +438,13 @@
     {
      "type": "list",
      "tag": "ENERGY",
-     "heading": "Solar vs Wind: What to Build First",
-     "body": "Your weather pattern decides the optimal first build.",
+     "heading": "What to Automate First",
+     "body": "Start with a small, repeatable crop task and verify that the drone completes it reliably.",
      "items": [
-      "Clear-weather seasons favour solar panels — cheap and predictable.",
-      "Storm-heavy months favour wind turbines — they never idle.",
-      "A mixed array keeps energy stable through the year and powers a bigger station network.",
-      "⚠️ Exact build costs and energy values are being verified in 1.0."
+      "Start with a low-risk crop task rather than your only income crop.",
+      "Leave clear routes around platforms so drones can reach assigned plots.",
+      "Save before restructuring a working automated farm.",
+      "Official patch 1.00.03 lists drone failures in certain situations as unresolved."
      ]
     },
     {
@@ -479,8 +479,8 @@
      ],
      "rows": [
       [
-       "Solar/wind power",
-       "Energy for stations",
+       "First automation stage",
+       "Basic crop task",
        "Early-mid game ⚠️"
       ],
       [
@@ -510,7 +510,7 @@
      "type": "note",
      "tag": "1.0",
      "heading": "Why This Page Matters",
-     "body": "English guides for Doloc Town automation are practically non-existent — most coverage stops at Early Access basics. This is one of the first 1.0-specific automation references in English. Details marked ⚠️ will be updated after hands-on verification."
+     "body": "This page separates official 1.0 and 1.00.03 information from community-reported details. Check the linked Steam announcements after each patch."
     }
    ],
    "sources": [
@@ -1486,8 +1486,8 @@
       ],
       [
        "Drought (April)",
-       "Crops wither and shop prices spike",
-       "Sell stockpiles at the highest prices of the year"
+       "Crops face the harshest dry conditions",
+       "Protect plots and plan watering"
       ],
       [
        "Any season",
@@ -1569,7 +1569,7 @@
      "heading": "From Hand-Farming to Automation (1.0)",
      "body": "The 1.0 release turns you from a farmer into a farm manager. The upgrade path is: energy first, stations second, then let the drones work.",
      "items": [
-      "Build solar panels and wind turbines to generate clean energy for your farm.",
+      "Follow the two-stage automation tasks described in the official 1.0 notes.",
       "Construct farm drone stations — the control points that let drones work the fields.",
       "Assign automation tasks: drones handle seeding, nurturing and harvesting end to end.",
       "Vertical stacking matters: leave clear flight lanes between platforms so drones can reach every planter.",
@@ -1580,7 +1580,7 @@
      "type": "note",
      "tag": "TIP",
      "heading": "Drought Strategy & Common Mistakes",
-     "body": "In drought month (April) crops wither and prices spike. Stockpile before the drought and sell high during it. Common mistakes: planting one giant flat field (a single storm wipes it), ignoring fruit trees early (they are free money later), never upgrading the sickle (group harvest is a huge time saver), watering everything by hand when the Rain gene exists, and skipping Bellad's quests (tech points are the only reliable early income)."
+     "body": "Month 4 is Harsh Dry Season. Protect exposed crops, plan watering and keep a save before changing automation. The cited official notes do not establish a price-arbitrage strategy."
     },
     {
      "type": "faq",
@@ -1597,7 +1597,7 @@
       ],
       [
        "What is the drought month?",
-       "April, in the dry season. Crops wither and shop prices spike — stockpile before it and sell during it."
+       "Month 4 is Harsh Dry Season. Prepare crop protection and watering."
       ],
       [
        "How do gene modules work?",
@@ -1609,7 +1609,7 @@
       ],
       [
        "Does 1.0 fully automate farming?",
-       "Yes — solar/wind energy plus drone stations handle seeding, nurturing and harvesting, freeing you to explore, fish and quest."
+       "Yes. Official 1.0 notes describe two-stage farming automation; patch 1.00.03 also lists drone failures in certain situations."
       ]
      ]
     }
@@ -2086,8 +2086,8 @@
       ],
       [
        "Drought (Month 4)",
-       "Wither + price spike",
-       "Stockpile, sell high"
+       "Harsh dry conditions",
+       "Protect crops; plan watering"
       ]
      ]
     },
@@ -2117,9 +2117,9 @@
       ],
       [
        "Drought (April)",
-       "Crops wither, prices spike",
+       "Harshest farming conditions",
        "Hardest farming month",
-       "Sell stockpiles at the year's highest prices"
+       "Protect crops and plan watering"
       ],
       [
        "Any season",
@@ -2144,8 +2144,8 @@
        "Skip manual watering during downpours; save the effort."
       ],
       [
-       "Time the drought",
-       "Hoarding before Month 4 pays off with the price spike."
+       "Prepare for Month 4",
+       "Harsh Dry Season needs crop protection and planned watering."
       ]
      ]
     },
@@ -2159,7 +2159,7 @@
       "Build covers over exposed plots and group vulnerable crops together.",
       "Install the Rain Falls Evenly gene to auto-water through dry spells.",
       "Use thunderstorm power for 1.0 drone stations and the industrial zone.",
-      "Stockpile before the drought and sell during it."
+      "Prepare crop protection and watering before Harsh Dry Season."
      ]
     },
     {
@@ -2184,11 +2184,11 @@
       ],
       [
        "When is the drought?",
-       "April, at the end of the dry season. Crops wither and shop prices spike."
+       "Month 4 is officially named Harsh Dry Season in 1.0."
       ],
       [
        "How do I profit from the drought?",
-       "Stockpile goods before Month 4 and sell them during the price spike."
+       "The cited official notes do not establish a price-arbitrage strategy; prepare crop protection and watering instead."
       ],
       [
        "Is there a rainy season?",
@@ -2321,7 +2321,7 @@
    "slug": "mods",
    "title": "Doloc Town Mods & Steam Workshop Guide",
    "metaTitle": "Doloc Town Mods: Steam Workshop & Popular Mods",
-   "metaDescription": "Doloc Town Steam Workshop: install mods, popular community mods (QoL, cooking, fishing, DTMAPI), risks and FAQ.",
+   "metaDescription": "Doloc Town Steam Workshop safety guide: supported content replacements, functional-mod risks, clean troubleshooting and official FAQ.",
    "intro": "Doloc Town has an active Steam Workshop with 67+ community mods. Here's how to install them, what's popular, and what to watch out for.",
    "sections": [
     {
@@ -2333,7 +2333,7 @@
       "Open the Steam Workshop for Doloc Town (steamcommunity.com/app/2285550/workshop).",
       "Browse or search mods, then click Subscribe on the ones you want.",
       "Steam downloads them automatically and they appear in the game.",
-      "Some mods need a loader/framework (e.g. DTMAPI) — read each mod's description and install dependencies first ⚠️.",
+      "Treat functional loaders as unsupported for 1.0; do not install a framework based on an old guide.",
       "Back up your save before modding — mods can change game behaviour and may break after big updates."
      ]
     },
@@ -2344,7 +2344,7 @@
      "body": "Verified: Doloc Town has an active Steam Workshop (as of Aug 2026).",
      "items": [
       "67+ community mods, with many Chinese-language mods (32+).",
-      "Popular ones include: Magic Storage, 多洛可QoL (cooking preview, batch cooking, quest board), Maple's fish expansion, DTMAPI framework, price helper, time-stop button, and Korean translation fixes.",
+      "Prefer Workshop content replacements that state current 1.0 compatibility; functional changes carry the official black-screen/freeze warning.",
       "Common categories: QoL (quality-of-life), cooking, fishing, UI, gameplay, visual, and translation mods.",
       "Mod counts change often — check the Workshop page for the current list."
      ]
@@ -2360,8 +2360,8 @@
        "Community mods are user-made — install at your own risk. Back up saves and check mod descriptions for dependencies."
       ],
       [
-       "Do I need DTMAPI?",
-       "Some mods list DTMAPI as a dependency (a framework mod). Subscribe to it first if a mod asks for it."
+       "Should I install a functional mod framework?",
+       "Not from this guide. Functional mods are unsupported by the Workshop architecture and 1.0 compatibility is not guaranteed."
       ],
       [
        "Will mods work after updates?",
@@ -2424,11 +2424,11 @@
      "type": "list",
      "tag": "1.0",
      "heading": "1.0 Full Release Highlights",
-     "body": "The complete 1.0 changelog, per the official announcement.",
+     "body": "Selected official 1.0 highlights; use the linked Steam announcement for the source record.",
      "items": [
       "New area: Old City Ruins (third large map area).",
       "Complete main story ending.",
-      "Farming automation system (solar + wind → drone stations).",
+      "Two-stage farming automation system.",
       "Mushroom Fest festival.",
       "Additional character storylines.",
       "New tools, combat drones, fish and accessories.",
@@ -2440,7 +2440,7 @@
      "type": "note",
      "tag": "TIP",
      "heading": "Why Track Updates",
-     "body": "Knowing when the game changed helps you find current guides and avoid outdated advice — most English guides still describe Early Access, so a 1.0-aware site like this is the reliable source."
+     "body": "Use the dated official Steam announcements to distinguish current behavior from Early Access advice."
     }
    ],
    "sources": [
@@ -2497,7 +2497,7 @@
       ],
       [
        "Is there farming automation?",
-       "Yes — new in 1.0. Solar and wind power drive farming drone stations that seed, nurture and harvest automatically."
+       "Yes — new in 1.0. Official notes describe two-stage farming automation."
       ],
       [
        "What's new in 1.0?",
@@ -2839,7 +2839,7 @@
       "80 Steam achievements (43 base + 37 new in 1.0) encourage full completion",
       "Crop gene system: ~20 mutations across 30+ crops to research and breed",
       "Fishing: different ponds, rods and weather give different catches — completing the catalog takes a while",
-      "Farming automation (solar + wind → drone stations) is a whole tech tree to build toward",
+      "Two-stage farming automation is a progression system to build toward",
       "The 5 regions plus the new Old City Ruins area add exploration time"
      ]
     },
@@ -2851,7 +2851,7 @@
       "To finish the story quickly: focus on main quests and town tasks, and let automation handle routine farming",
       "To 100%: work on achievements, the gene lab and the fish catalog in parallel — don't save them for the end",
       "Season weather matters: use storms to water and thunderstorms to store power instead of fighting them",
-      "Keep a stockpile before the April drought — prices spike and crops wilt"
+      "Prepare crop protection and watering before Month 4's Harsh Dry Season"
      ]
     },
     {
@@ -2985,10 +2985,10 @@
     {
      "type": "list",
      "tag": "WEATHER TIMING",
-     "heading": "Weather Timing: Buy Low, Sell High",
-     "body": "The calendar is the real market. Work with it and prices work for you.",
+     "heading": "Season Planning",
+     "body": "Use the official calendar to schedule crops and fishing without assuming an unverified price mechanic.",
      "items": [
-      "Drought (Month 4) spikes prices — stockpile before it and sell into the spike.",
+      "Month 4 is Harsh Dry Season — protect crops and plan watering.",
       "Rainy season (Jan-Feb) reshuffles the fish tables — fish the uncommon catches while they last.",
       "Thunderstorms charge your farm's power — in 1.0 that cuts the running costs of automation.",
       "Plant for the season — off-season crops wither, so rotate what you grow with the calendar."
@@ -3021,7 +3021,7 @@
       ],
       [
        "When should I sell my stockpile?",
-       "Stockpile before the Month 4 drought and sell into the price spike — that is the calendar's biggest payout."
+       "The cited official notes do not establish a Month 4 trading strategy; plan crop protection and watering instead."
       ],
       [
        "Is the backpack upgrade worth it?",
@@ -3029,7 +3029,7 @@
       ],
       [
        "Do I need money for automation?",
-       "Later, yes: solar/wind power and drone stations cost materials and Tech Points, so early income funds the 1.0 endgame."
+       "Later, yes: the automation progression costs materials and Tech Points, so early income supports the 1.0 endgame."
       ]
      ]
     }
