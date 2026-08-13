@@ -19,11 +19,11 @@ const countOf = (text, needle) => needle ? text.split(needle).length - 1 : 0;
 
 const cohort = new Map([
   ["cooking.html", { section: 4, label: "Advertisement" }],
-  ["fishing.html", { section: 5, label: "Advertisement" }],
-  ["mods.html", { section: 2, label: "Advertisement" }],
+  ["fishing.html", { section: 6, label: "Advertisement" }],
+  ["mods.html", { section: 3, label: "Advertisement" }],
   ["gifts.html", { section: 5, label: "Advertisement" }],
   ["ko/cooking.html", { section: 4, label: "광고" }],
-  ["ko/fishing.html", { section: 5, label: "광고" }],
+  ["ko/fishing.html", { section: 6, label: "광고" }],
   ["ko/exploration.html", { section: 4, label: "광고" }]
 ]);
 

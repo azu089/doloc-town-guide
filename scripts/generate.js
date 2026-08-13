@@ -10,7 +10,7 @@ const path = require("path");
 const crypto = require("crypto");
 const ROOT = path.join(__dirname, "..");
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "site.json"), "utf8"));
-const OUT = path.join(ROOT, "public");
+const OUT = process.env.DOLOC_OUTPUT_DIR ? path.resolve(process.env.DOLOC_OUTPUT_DIR) : path.join(ROOT, "public");
 const KIT = require("./lib/site-kit");   // 共用基建：URL/图片/sitemap/lastmod
 // 联盟链接：site.json 的 affiliates 没配 ID 时原样输出原链接，配了才加追踪参数 + rel="sponsored"
 const AFF = KIT.createAffiliate(DATA.site.affiliates);
@@ -21,7 +21,10 @@ const DEF = DATA.site.defaultLanguage || "en";
 const CSS_V = crypto.createHash("md5").update(fs.readFileSync(path.join(ROOT,"templates","style.css"),"utf8")).digest("hex").slice(0,8);
 const today = new Date().toISOString().slice(0,10);
 const urlOf = KIT.createUrl({ domain: DATA.site.domain, defaultLang: DEF });
-const LM = KIT.createLastmod({ manifestPath: path.join(ROOT,"data",".lastmod.json"), today });
+const LASTMOD_PATH = process.env.DOLOC_LASTMOD_PATH
+  ? path.resolve(process.env.DOLOC_LASTMOD_PATH)
+  : path.join(ROOT,"data",".lastmod.json");
+const LM = KIT.createLastmod({ manifestPath: LASTMOD_PATH, today });
 const HERO_SET = "/images/hero-640.jpg 640w, /images/hero-1280.jpg 1280w, /images/hero.jpg 1600w";
 const UPDATED_LABEL = { en:"Updated", "zh-CN":"更新于", "zh-TW":"更新於", ja:"更新日", ko:"업데이트", es:"Actualizado" };
 const updLabel = lang => UPDATED_LABEL[lang] || "Updated";
@@ -359,31 +362,35 @@ function langSwitcher(lang, slug){
   </details>`;
 }
 
+function amazonConfig() {
+  const configured = DATA.site.amazonAffiliate || {};
+  const fixture = process.env.DOLOC_AMAZON_FIXTURE === "enabled";
+  const cfg = fixture ? { ...configured, enabled: true, providerRegistrationVerified: true } : configured;
+  const validTag = /^[a-z0-9-]{3,64}$/i.test(cfg.trackingTag || "");
+  const validHost = /(^|\.)amazon\.com$/i.test(cfg.marketplaceHost || "");
+  const validDomain = cfg.registeredDomain === DATA.site.domain;
+  return cfg.enabled === true && cfg.providerRegistrationVerified === true && validTag && validHost && validDomain ? cfg : null;
+}
+
 function renderAmazonAffiliate(lang) {
+  const cfg = amazonConfig();
+  if (!cfg) return "";
   const AMZ = {
-    "en":    { title: "Game Gear", note: "As an Amazon Associate we earn from qualifying purchases. Prices and availability may change.", items: [["Gaming Keyboard","gaming keyboard"],["Gaming Mouse","gaming mouse"],["Headset","gaming headset"],["Controller","game controller"],["Monitor","gaming monitor"]] },
-    "zh-CN": { title: "游戏装备", note: "作为亚马逊联盟伙伴，我们会从符合条件的购买中获得佣金。价格与库存可能随时变化。", items: [["游戏键盘","gaming keyboard"],["游戏鼠标","gaming mouse"],["耳机","gaming headset"],["手柄","game controller"],["显示器","gaming monitor"]] },
-    "zh-TW": { title: "遊戲裝備", note: "作為亞馬遜聯盟夥伴，我們會從符合條件的購買中獲得佣金。價格與庫存可能隨時變化。", items: [["遊戲鍵盤","gaming keyboard"],["遊戲滑鼠","gaming mouse"],["耳機","gaming headset"],["手把","game controller"],["顯示器","gaming monitor"]] },
-    "ja":    { title: "ゲームギア", note: "Amazonアソシエイトとして、適格購入から手数料を得ることがあります。価格と在庫は変動します。", items: [["ゲーミングキーボード","gaming keyboard"],["ゲーミングマウス","gaming mouse"],["ヘッドセット","gaming headset"],["コントローラー","game controller"],["モニター","gaming monitor"]] },
-    "ko":    { title: "게임 장비", note: "Amazon 어소시에이트로서 적격 구매로부터 수수료를 받습니다. 가격과 재고는 변동될 수 있습니다.", items: [["게이밍 키보드","gaming keyboard"],["게이밍 마우스","gaming mouse"],["헤드셋","gaming headset"],["컨트롤러","game controller"],["모니터","gaming monitor"]] },
-    "es":    { title: "Equipo de juego", note: "Como afiliado de Amazon, ganamos con las compras que califican. El precio y la disponibilidad pueden cambiar.", items: [["Teclado gamer","gaming keyboard"],["Ratón gamer","gaming mouse"],["Auriculares","gaming headset"],["Mando","game controller"],["Monitor","gaming monitor"]] },
-    "fr":    { title: "Équipement de jeu", note: "En tant que partenaire Amazon, nous touchons une commission sur les achats éligibles. Prix et disponibilité peuvent changer.", items: [["Clavier gamer","gaming keyboard"],["Souris gamer","gaming mouse"],["Casque","gaming headset"],["Manette","game controller"],["Écran","gaming monitor"]] },
-    "de":    { title: "Gaming-Ausrüstung", note: "Als Amazon-Partner verdienen wir an qualifizierten Käufen. Preise und Verfügbarkeit können sich ändern.", items: [["Gaming-Tastatur","gaming keyboard"],["Gaming-Maus","gaming mouse"],["Headset","gaming headset"],["Controller","game controller"],["Monitor","gaming monitor"]] },
-    "it":    { title: "Accessori gaming", note: "In qualità di affiliato Amazon, guadagniamo dagli acquisti idonei. Prezzi e disponibilità possono cambiare.", items: [["Tastiera gaming","gaming keyboard"],["Mouse gaming","gaming mouse"],["Cuffie","gaming headset"],["Controller","game controller"],["Monitor","gaming monitor"]] },
-    "pl":    { title: "Sprzęt gamingowy", note: "Jako partner Amazon zarabiamy na kwalifikowanych zakupach. Ceny i dostępność mogą się zmieniać.", items: [["Klawiatura gamingowa","gaming keyboard"],["Mysz gamingowa","gaming mouse"],["Słuchawki","gaming headset"],["Pad","game controller"],["Monitor","gaming monitor"]] },
-    "pt-BR": { title: "Equipamentos de jogo", note: "Como associado da Amazon, ganhamos com compras qualificadas. Preços e disponibilidade podem mudar.", items: [["Teclado gamer","gaming keyboard"],["Mouse gamer","gaming mouse"],["Headset","gaming headset"],["Controle","game controller"],["Monitor","gaming monitor"]] },
-    "ru":    { title: "Игровое оборудование", note: "Как партнёр Amazon мы получаем комиссию с соответствующих покупок. Цены и наличие могут меняться.", items: [["Игровая клавиатура","gaming keyboard"],["Игровая мышь","gaming mouse"],["Гарнитура","gaming headset"],["Геймпад","game controller"],["Монитор","gaming monitor"]] },
-    "uk":    { title: "Ігрове обладнання", note: "Як партнер Amazon ми отримуємо комісію з відповідних покупок. Ціни та наявність можуть змінюватися.", items: [["Ігрова клавіатура","gaming keyboard"],["Ігрова миша","gaming mouse"],["Гарнітура","gaming headset"],["Геймпад","game controller"],["Монітор","gaming monitor"]] },
-    "vi":    { title: "Thiết bị chơi game", note: "Là cộng tác viên Amazon, chúng tôi nhận hoa hồng từ các giao dịch mua đủ điều kiện. Giá và tình trạng hàng có thể thay đổi.", items: [["Bàn phím gaming","gaming keyboard"],["Chuột gaming","gaming mouse"],["Tai nghe","gaming headset"],["Tay cầm","game controller"],["Màn hình","gaming monitor"]] },
+    "en":    { title: "Game gear", local: "Prices and availability may change.", action: "search Amazon (opens in a new tab)", items: [["Gaming keyboard","gaming keyboard"],["Gaming mouse","gaming mouse"],["Gaming headset","gaming headset"],["Game controller","game controller"],["Gaming monitor","gaming monitor"]] },
+    "zh-CN": { title: "游戏装备", local: "价格与库存可能变化。", action: "在 Amazon 搜索（新标签页）", items: [["游戏键盘","gaming keyboard"],["游戏鼠标","gaming mouse"],["游戏耳机","gaming headset"],["游戏手柄","game controller"],["游戏显示器","gaming monitor"]] },
+    "zh-TW": { title: "遊戲裝備", local: "價格與庫存可能變動。", action: "在 Amazon 搜尋（新分頁）", items: [["遊戲鍵盤","gaming keyboard"],["遊戲滑鼠","gaming mouse"],["遊戲耳機","gaming headset"],["遊戲手把","game controller"],["遊戲顯示器","gaming monitor"]] },
+    "ja":    { title: "ゲームギア", local: "価格と在庫は変動します。", action: "Amazon で検索（新しいタブ）", items: [["ゲーミングキーボード","gaming keyboard"],["ゲーミングマウス","gaming mouse"],["ゲーミングヘッドセット","gaming headset"],["ゲームコントローラー","game controller"],["ゲーミングモニター","gaming monitor"]] },
+    "ko":    { title: "게임 장비", local: "가격과 재고는 변경될 수 있습니다.", action: "Amazon에서 검색 (새 탭)", items: [["게이밍 키보드","gaming keyboard"],["게이밍 마우스","gaming mouse"],["게이밍 헤드셋","gaming headset"],["게임 컨트롤러","game controller"],["게이밍 모니터","gaming monitor"]] },
+    "es":    { title: "Equipo de juego", local: "Los precios y la disponibilidad pueden cambiar.", action: "buscar en Amazon (abre una pestaña nueva)", items: [["Teclado gaming","gaming keyboard"],["Ratón gaming","gaming mouse"],["Auriculares gaming","gaming headset"],["Mando","game controller"],["Monitor gaming","gaming monitor"]] },
   };
   const t = AMZ[lang] || AMZ.en;
-  const tag = "cozysimhub20-20";
-  const links = t.items.map(it => `<a href="https://www.amazon.com/s?k=${encodeURIComponent(it[1])}&tag=${tag}" target="_blank" rel="sponsored noopener nofollow">${esc(it[0])}</a>`).join("");
-  return `<div class="amazon-gear">
-    <h3>${esc(t.title)}</h3>
-    <div class="amazon-gear-links">${links}</div>
-    <p class="aff-note">${esc(t.note)}</p>
-  </div>`;
+  const links = t.items.map(it => `<li><a href="https://${esc(cfg.marketplaceHost)}/s?k=${encodeURIComponent(it[1])}&amp;tag=${encodeURIComponent(cfg.trackingTag)}" target="_blank" rel="sponsored nofollow noopener">${esc(it[0])} — ${esc(t.action)} ↗</a></li>`).join("");
+  return `<aside class="amazon-gear" aria-labelledby="amazon-gear-title">
+    <h2 id="amazon-gear-title">${esc(t.title)}</h2>
+    <p class="amazon-disclosure">As an Amazon Associate I earn from qualifying purchases.</p>
+    <ul class="amazon-gear-links">${links}</ul>
+    <p class="aff-note">${esc(t.local)}</p>
+  </aside>`;
 }
 
 
@@ -585,7 +592,6 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });
 </script>
-${renderAmazonAffiliate(lang)}
 </footer>`;
 }
 

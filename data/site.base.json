@@ -31,6 +31,13 @@
     "value": "01352e74c147aa8c9ae9c2793e51726c1e005035"
    }
   },
+  "amazonAffiliate": {
+   "enabled": false,
+   "providerRegistrationVerified": false,
+   "registeredDomain": "doloctownguides.com",
+   "marketplaceHost": "www.amazon.com",
+   "trackingTag": "cozysimhub20-20"
+  },
   "adsterra": "<script async=\"async\" data-cfasync=\"false\" src=\"https://pl30754261.effectivecpmnetwork.com/b77bc61705d2dcbe2c5239c8553cdb1a/invoke.js\"></script> <div id=\"container-b77bc61705d2dcbe2c5239c8553cdb1a\"></div>"
  },
  "game": {
@@ -43,11 +50,11 @@
   "price": "$19.99",
   "steamUrl": "https://store.steampowered.com/app/2285550/Doloc_Town/",
   "officialSite": "",
-  "intro": "Doloc Town is a side-scrolling pixel-art farming sim set in a post-apocalyptic wasteland. Play as a young scavenger who builds a vertical farm one platform at a time under extreme weather: acid rain, scorching heat and thunderstorms. Gather 40+ resources, fish, ranch, modify crop genes, fight alongside your drone and automate production with solar and wind power. The 1.0 full release on August 6, 2026 adds a complete story ending, the Old City Ruins area, farming automation and 37 new achievements.",
+  "intro": "Doloc Town is a side-scrolling pixel-art farming sim set in a post-apocalyptic wasteland. Play as a young scavenger who builds a vertical farm one platform at a time under extreme weather: acid rain, scorching heat and thunderstorms. Gather 40+ resources, fish, ranch, modify crop genes, fight alongside your drone and automate production with solar power. The 1.0 full release on August 6, 2026 adds a complete story ending, the Old City Ruins area, farming automation and 37 new achievements.",
   "keyFacts": [
    "1.0 full release: August 6, 2026 with complete story ending",
    "30+ hours of core gameplay, 100+ hours of additional content",
-   "Farming automation: solar + wind power → drone stations (new in 1.0)",
+   "Farming automation: solar power → drone stations (new in 1.0)",
    "Crop gene system: ~20 mutations across 30+ crops",
    "Extreme weather you can turn to your advantage (acid rain, storms, drought)",
    "80 Steam achievements total (43 base + 37 new in 1.0)"
@@ -82,7 +89,7 @@
    "Doloc Town is developed by RedSaw Games Studio and published by Logoi Games with Pathea Games as co-publisher.",
    "The game left Early Access on August 6, 2026 after launching in EA on May 8, 2025.",
    "Information on this site is fact-checked against the official Steam store page, official 1.0 announcement, publisher news and reputable media (CGMagazine, PCGamesN, RPGamer).",
-   "Community-sourced details are marked with a ⚠️ note until verified by hands-on play."
+   "Community-sourced details are marked with a ⚠️ note until checked against cited sources."
   ],
   "nameI18n": {},
   "statsI18n": {},

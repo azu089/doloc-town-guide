@@ -520,15 +520,17 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
   .bed-plots{grid-template-columns:1fr}
 }
 
-/* ============ Amazon 联盟推荐（页脚内） ============ */
-.amazon-gear { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(127,127,127,0.22); }
-.amazon-gear h3 { font-size: 15px; margin: 0 0 10px; letter-spacing: .3px; }
-.amazon-gear-links { display: flex; flex-wrap: wrap; gap: 8px 12px; }
-.amazon-gear-links a {
-  font-size: 13px; text-decoration: none;
-  border: 1px solid rgba(127,127,127,0.35); border-radius: 999px;
-  padding: 4px 13px; transition: border-color .2s, color .2s, background .2s;
-}
-.amazon-gear-links a:hover { border-color: currentColor; background: rgba(127,127,127,0.08); }
-.amazon-gear .aff-note { font-size: 12px; opacity: .65; margin: 10px 0 0; }
-@media (max-width: 640px){ .amazon-gear-links a { font-size: 12px; padding: 3px 11px; } }
+/* ============ Amazon gear（正文内，provider gate 默认关闭） ============ */
+.amazon-gear{inline-size:100%;max-inline-size:100%;margin:32px auto 0;padding:20px;background:var(--panel);border:1px solid var(--line-strong);border-radius:11px;overflow:visible}
+.amazon-gear h2{font-family:var(--display);font-size:1.2rem;margin:0 0 8px;color:var(--text)}
+.amazon-disclosure,.amazon-gear .aff-note{font-size:12px;line-height:1.55;color:var(--muted);margin:0 0 12px}
+.amazon-gear .aff-note{margin:12px 0 0}
+.amazon-gear-links{list-style:none;display:grid;grid-template-columns:1fr;gap:8px;margin:0;padding:0}
+.amazon-gear-links li{min-width:0}
+.amazon-gear-links a{display:flex;align-items:center;justify-content:center;min-inline-size:44px;min-block-size:44px;padding:8px 12px;text-align:center;font-size:14px;line-height:1.4;text-decoration:none;color:var(--text);background:rgba(127,176,105,.06);border:1px solid rgba(127,176,105,.3);border-radius:11px;white-space:normal;overflow-wrap:anywhere;touch-action:manipulation;transition:transform 120ms cubic-bezier(.23,1,.32,1)}
+.amazon-gear-links a:focus-visible{outline:2px solid var(--amber-soft);outline-offset:3px}
+.amazon-gear-links a:active{transform:scale(.98)}
+@media (min-width:375px){.amazon-gear-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:641px){.amazon-gear-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (hover:hover) and (pointer:fine){.amazon-gear-links a:hover{color:var(--amber-soft);border-color:var(--amber-soft);background:rgba(240,180,87,.08)}}
+@media (prefers-reduced-motion:reduce){.amazon-gear-links a,.amazon-gear-links a:active{transition:none;transform:none}}

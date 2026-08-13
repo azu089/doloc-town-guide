@@ -22,7 +22,7 @@ SITE_I18N = {
   "startPlaying":"Get it on Steam","getOnSteam":"Get it on Steam ↗","readGuide":"Read the guide →",
   "moreGuides":"More guides","sources":"Sources & fact-checking","plotTag":"FIELD NOTE","growTag":"GROWTH",
   "seasonTag":"SEASON","updated":"Contents","explore":"From scrap to harvest in a wasteland",
-  "latest":"Core systems","harvest":"HARVEST","seedTag":"SEED","aboutText":"Doloc Town Guide is an unofficial fan resource. We research each page against the official Steam store page, the official 1.0 announcement and reputable media, and clearly mark anything still being verified. We aim for accurate, useful, hands-on guides for the English-speaking community.",
+  "latest":"Core systems","harvest":"HARVEST","seedTag":"SEED","aboutText":"Doloc Town Guide is an unofficial fan resource. We research each page against the official Steam store page, official announcements and reputable media, and clearly mark anything still being verified. We aim for accurate, useful, source-backed guides.",
   "aboutSources":"Where our information comes from",
  },
  "zh-CN": {
@@ -36,7 +36,7 @@ SITE_I18N = {
   "startPlaying":"在 Steam 获取","getOnSteam":"在 Steam 获取 ↗","readGuide":"阅读攻略 →",
   "moreGuides":"更多攻略","sources":"来源与事实核对","plotTag":"田野笔记","growTag":"生长",
   "seasonTag":"季节","updated":"目录","explore":"在废土上从零开始到丰收",
-  "latest":"核心系统","harvest":"丰收","seedTag":"种子","aboutText":"多洛可小镇攻略站是非官方粉丝资源站。我们针对 Steam 官方商店页、官方 1.0 公告与权威媒体逐页核对信息，并将仍在验证中的内容明确标注。目标是给英文社区提供准确、实用、亲测的攻略。",
+  "latest":"核心系统","harvest":"丰收","seedTag":"种子","aboutText":"多洛可小镇攻略站是非官方粉丝资源站。我们针对 Steam 官方商店页、官方公告与权威媒体逐页核对信息，并将仍在验证中的内容明确标注。目标是提供准确、实用、来源可追溯的攻略。",
   "aboutSources":"我们的信息来源",
  },
  "ja": {
@@ -7247,6 +7247,185 @@ for _slug in ("how-to-play", "fishing", "make-money"):
     if _p and _p.get("i18n", {}).get("zh-CN"):
         _p["i18n"]["zh-TW"] = json.loads(cc.convert(json.dumps(_p["i18n"]["zh-CN"], ensure_ascii=False)))
 print("extra injected: make-money + Day One + Fishing Tips (5 languages)")
+
+# ================= 2026-08-14 official 1.00.03 safety/content refresh =================
+PATCH_URL = "https://store.steampowered.com/news/app/2285550/view/1840310314351178"
+RELEASE_URL = "https://store.steampowered.com/news/app/2285550/view/1840310314341005"
+FAQ_URL = "https://store.steampowered.com/news/app/2285550/view/1839676055894691"
+PATCH_COPY = {
+ "en": {
+  "patch_h":"Official patch 1.00.03 — August 10, 2026", "patch_b":"Official patch highlights; this is not a complete changelog.",
+  "fixes":["Fixed some Early Access saves failing to load because a removed planter remained in the tent.","Fixed truncated naming text and a repeating Old City Ruins quest animation.","Fixed new fish that could not be dried and misplaced crops/decor near the outpost entrance and mayor's office.","Fixed the Abundant Collection and New Year's Eve Gathering achievement triggers, plus localization issues."],
+  "known_h":"Known issues still under investigation", "known":["Some fish remain too difficult to catch.","Automation drones can fail in certain situations.","New Year Beast difficulty, panorama camera resolution, a false New Year's Eve side-quest trigger and getting stuck after losing to the Old City Guardian are pending fixes.","Stopped game time remains under investigation."],
+  "mods_h":"Official warning before installing functional mods", "mods_b":"Steam Workshop content replacement is not the same as a supported functional mod system. The developer says functional mods are unsupported by the Workshop architecture and may cause a black screen or freeze. If troubleshooting, remove BepInEx and test a clean game. DTMAPI compatibility with 1.0 is not guaranteed.",
+  "fish":"Patch 1.00.03 fixed new fish that could not be dried. The developer still lists some fish being too difficult to catch as a known issue.",
+  "ach":"Patch 1.00.03 fixed the Abundant Collection and New Year's Eve Gathering achievement triggers. The official 1.0 total is 80 achievements.",
+  "auto":"The official 1.00.03 known-issues list says automation drones can fail in certain situations. Save before restructuring automated plots and check the next official patch notes; wind-power claims have been removed because they were not supported by the cited official sources.",
+  "faq":"Music-disc codes 12311, 24141 and 35321 are permanently valid according to the official FAQ. A hat code is planned but has not been released; do not enter or share an invented code.",
+  "season":"Month 4 is named Harsh Dry Season in 1.0. Plan crop protection and watering for it; this guide does not claim an unverified price spike or trading exploit.",
+ },
+ "zh-CN": {
+  "patch_h":"官方 1.00.03 补丁 — 2026 年 8 月 10 日", "patch_b":"以下是官方补丁重点，并非完整更新日志。",
+  "fixes":["修复部分抢先体验存档因帐篷内残留已移除花盆而无法读取。","修复命名文字截断，以及旧城废墟任务动画重复播放。","修复新增鱼类无法烘干，以及前哨入口作物和镇长办公室装饰错位。","修复 Abundant Collection 与 New Year's Eve Gathering 成就触发，并修正本地化问题。"],
+  "known_h":"仍在调查的已知问题", "known":["部分鱼仍然过难捕获。","自动化无人机在某些情况下会失效。","New Year Beast 难度、全景相机分辨率、New Year's Eve 支线误触发，以及败给 Old City Guardian 后卡住仍待修复。","游戏时间停止仍在调查。"],
+  "mods_h":"安装功能型 Mod 前先看官方警告", "mods_b":"Steam Workshop 内容替换不等于官方支持的功能型 Mod 系统。开发者明确表示 Workshop 架构不支持功能型 Mod，可能导致黑屏或卡死。排障时先移除 BepInEx，并用纯净游戏测试；DTMAPI 与 1.0 的兼容性不受保证。",
+  "fish":"1.00.03 已修复新增鱼类无法烘干的问题；官方仍把“部分鱼过难捕获”列为已知问题。",
+  "ach":"1.00.03 修复 Abundant Collection 与 New Year's Eve Gathering 的触发。1.0 官方总数为 80 个成就。",
+  "auto":"1.00.03 官方已知问题指出自动化无人机在某些情况下会失效。重排自动化地块前请存档并关注下一次官方补丁；本站已删除官方来源未支持的风力发电说法。",
+  "faq":"官方 FAQ 说明音乐唱片代码 12311、24141、35321 永久有效。帽子代码仅为计划，尚未发布，请勿输入或传播虚构代码。",
+  "season":"1.0 中第 4 月的正式名称是 Harsh Dry Season。请为作物防护与浇水做准备；本站不再声称未经证实的涨价或倒卖机制。",
+ },
+ "zh-TW": {
+  "patch_h":"官方 1.00.03 更新 — 2026 年 8 月 10 日", "patch_b":"以下是官方更新重點，並非完整更新日誌。",
+  "fixes":["修正部分搶先體驗存檔因帳篷內殘留已移除花盆而無法載入。","修正命名文字截斷，以及 Old City Ruins 任務動畫重複播放。","修正新增魚類無法烘乾，以及前哨入口作物和鎮長辦公室裝飾錯位。","修正 Abundant Collection 與 New Year's Eve Gathering 成就觸發，並改善在地化問題。"],
+  "known_h":"仍在調查的已知問題", "known":["部分魚仍然過難捕獲。","自動化無人機在某些情況下會失效。","New Year Beast 難度、全景相機解析度、New Year's Eve 支線誤觸發，以及敗給 Old City Guardian 後卡住仍待修正。","遊戲時間停止仍在調查。"],
+  "mods_h":"安裝功能型 Mod 前先看官方警告", "mods_b":"Steam Workshop 內容替換不等於官方支援的功能型 Mod 系統。開發者表示 Workshop 架構不支援功能型 Mod，可能造成黑畫面或凍結。疑難排解時先移除 BepInEx，再用乾淨遊戲測試；DTMAPI 與 1.0 的相容性沒有保證。",
+  "fish":"1.00.03 已修正新增魚類無法烘乾；官方仍把部分魚過難捕獲列為已知問題。",
+  "ach":"1.00.03 修正 Abundant Collection 與 New Year's Eve Gathering 的觸發。1.0 官方總數為 80 個成就。",
+  "auto":"1.00.03 官方已知問題指出自動化無人機在某些情況下會失效。重整自動化地塊前請存檔並留意下一次官方更新；本站已移除官方來源未支援的風力發電說法。",
+  "faq":"官方 FAQ 說明音樂唱片代碼 12311、24141、35321 永久有效。帽子代碼僅在規劃中，尚未發布，請勿輸入或散播虛構代碼。",
+  "season":"1.0 中第 4 月的正式名稱是 Harsh Dry Season。請為作物防護與澆水準備；本站不再宣稱未經證實的漲價或倒賣機制。",
+ },
+ "ja": {
+  "patch_h":"公式パッチ 1.00.03 — 2026年8月10日", "patch_b":"公式発表の要点であり、完全な変更履歴ではありません。",
+  "fixes":["削除済みプランターがテントに残り、一部の早期アクセスセーブを読み込めない問題を修正。","命名テキストの切れと Old City Ruins クエストアニメーションの反復を修正。","新しい魚を乾燥できない問題、前哨入口の作物と町長室の装飾位置を修正。","Abundant Collection と New Year's Eve Gathering の実績判定、およびローカライズ問題を修正。"],
+  "known_h":"調査中の既知の問題", "known":["一部の魚がまだ釣りにくすぎる。","自動化ドローンが特定状況で動作しない。","New Year Beast の難度、パノラマカメラ解像度、New Year's Eve サイドクエストの誤発火、Old City Guardian 敗北後の停止は修正待ち。","ゲーム内時間の停止は調査中。"],
+  "mods_h":"機能 Mod を導入する前の公式警告", "mods_b":"Steam Workshop のコンテンツ置換は、公式対応の機能 Mod システムではありません。開発者は Workshop の構造が機能 Mod をサポートせず、黒画面やフリーズの原因になり得ると説明しています。問題時は BepInEx を削除してクリーンな状態で確認してください。DTMAPI の 1.0 互換性は保証されません。",
+  "fish":"1.00.03 で新しい魚を乾燥できない問題は修正済み。一部の魚が難しすぎる問題は公式の既知事項として残っています。",
+  "ach":"1.00.03 で Abundant Collection と New Year's Eve Gathering の実績判定を修正。1.0 の公式総数は 80 実績です。",
+  "auto":"1.00.03 の公式既知事項では、自動化ドローンが特定状況で動作しないことがあります。区画を組み替える前に保存し、次の公式パッチを確認してください。公式根拠のない風力発電記述は削除しました。",
+  "faq":"公式 FAQ によると音楽ディスクコード 12311、24141、35321 は恒久有効です。帽子コードは計画段階で未公開のため、架空コードを使わないでください。",
+  "season":"1.0 では第4月の公式名は Harsh Dry Season です。作物保護と水やりを準備してください。未確認の価格高騰や売買攻略は掲載しません。",
+ },
+ "ko": {
+  "patch_h":"공식 패치 1.00.03 — 2026년 8월 10일", "patch_b":"공식 발표의 주요 내용이며 전체 변경 내역은 아닙니다.",
+  "fixes":["삭제된 화분이 텐트에 남아 일부 얼리 액세스 세이브를 불러오지 못하던 문제 수정.","이름 입력 글자 잘림과 Old City Ruins 퀘스트 애니메이션 반복 수정.","신규 물고기를 건조하지 못하는 문제와 전초기지 입구 작물·시장실 장식 위치 수정.","Abundant Collection 및 New Year's Eve Gathering 업적 트리거와 현지화 문제 수정."],
+  "known_h":"조사 중인 알려진 문제", "known":["일부 물고기가 여전히 너무 어렵습니다.","자동화 드론이 특정 상황에서 작동하지 않습니다.","New Year Beast 난이도, 파노라마 카메라 해상도, New Year's Eve 보조 퀘스트 오작동, Old City Guardian 패배 뒤 멈춤은 수정 대기 중입니다.","게임 시간 정지는 조사 중입니다."],
+  "mods_h":"기능성 Mod 설치 전 공식 경고", "mods_b":"Steam Workshop 콘텐츠 교체는 공식 지원 기능성 Mod 시스템과 다릅니다. 개발자는 Workshop 구조가 기능성 Mod를 지원하지 않아 검은 화면이나 멈춤이 생길 수 있다고 밝혔습니다. 문제 해결 시 BepInEx를 제거하고 깨끗한 게임으로 시험하세요. DTMAPI의 1.0 호환성은 보장되지 않습니다.",
+  "fish":"1.00.03에서 신규 물고기를 건조하지 못하던 문제를 수정했습니다. 일부 물고기가 너무 어렵다는 문제는 공식 알려진 문제로 남아 있습니다.",
+  "ach":"1.00.03에서 Abundant Collection 및 New Year's Eve Gathering 업적 트리거를 수정했습니다. 1.0 공식 총 업적은 80개입니다.",
+  "auto":"1.00.03 공식 알려진 문제에 따르면 자동화 드론이 특정 상황에서 작동하지 않을 수 있습니다. 자동화 구역을 바꾸기 전에 저장하고 다음 공식 패치를 확인하세요. 공식 근거가 없는 풍력 발전 설명은 삭제했습니다.",
+  "faq":"공식 FAQ에 따르면 음악 디스크 코드 12311, 24141, 35321은 영구 유효합니다. 모자 코드는 계획만 되었고 아직 공개되지 않았으므로 가짜 코드를 쓰지 마세요.",
+  "season":"1.0에서 4번째 달의 공식 명칭은 Harsh Dry Season입니다. 작물 보호와 물주기를 준비하세요. 확인되지 않은 가격 급등이나 거래 요령은 안내하지 않습니다.",
+ },
+ "es": {
+  "patch_h":"Parche oficial 1.00.03 — 10 de agosto de 2026", "patch_b":"Resumen de los puntos oficiales; no es un historial completo.",
+  "fixes":["Corregidas partidas de Acceso Anticipado que no cargaban por una maceta eliminada que seguía en la tienda.","Corregidos el texto cortado al nombrar y una animación repetida de una misión en Old City Ruins.","Corregidos los peces nuevos que no se podían secar y cultivos/decoración mal colocados en la entrada del puesto y la oficina del alcalde.","Corregidos los activadores de Abundant Collection y New Year's Eve Gathering, además de problemas de localización."],
+  "known_h":"Problemas conocidos aún en investigación", "known":["Algunos peces siguen siendo demasiado difíciles.","Los drones de automatización fallan en determinadas situaciones.","La dificultad de New Year Beast, la resolución de la cámara panorámica, el falso inicio de una misión de New Year's Eve y quedar bloqueado tras perder contra Old City Guardian siguen pendientes.","La detención del tiempo del juego sigue en investigación."],
+  "mods_h":"Advertencia oficial antes de instalar mods funcionales", "mods_b":"Reemplazar contenido en Steam Workshop no equivale a un sistema de mods funcionales compatible. El desarrollador dice que la arquitectura de Workshop no los admite y que pueden causar pantalla negra o bloqueos. Para diagnosticar, elimina BepInEx y prueba el juego limpio. La compatibilidad de DTMAPI con 1.0 no está garantizada.",
+  "fish":"El parche 1.00.03 corrigió los peces nuevos que no se podían secar. Algunos peces demasiado difíciles siguen en la lista oficial de problemas conocidos.",
+  "ach":"El parche 1.00.03 corrigió los activadores de Abundant Collection y New Year's Eve Gathering. El total oficial de 1.0 es 80 logros.",
+  "auto":"La lista oficial de 1.00.03 dice que los drones de automatización fallan en determinadas situaciones. Guarda antes de reorganizar parcelas y consulta el próximo parche oficial; se retiraron las afirmaciones sobre energía eólica sin respaldo oficial.",
+  "faq":"Según las FAQ oficiales, los códigos de discos musicales 12311, 24141 y 35321 son válidos permanentemente. El código de sombrero solo está planeado y aún no existe; no uses códigos inventados.",
+  "season":"En 1.0, el nombre oficial del mes 4 es Harsh Dry Season. Prepara protección y riego; esta guía no afirma subidas de precio ni arbitraje sin verificar.",
+ },
+}
+
+def _view(page, lang):
+    return page if lang == "en" else page.setdefault("i18n", {}).setdefault(lang, {})
+
+def _source(page, url=PATCH_URL, label="Official Doloc Town patch 1.00.03"):
+    if not any(x.get("url") == url for x in page.setdefault("sources", [])):
+        page["sources"].append({"label":label, "url":url})
+
+def _prepend(slug, lang, section):
+    page = next(x for x in d["pages"] if x["slug"] == slug)
+    view = _view(page, lang)
+    view.setdefault("sections", copy.deepcopy(page.get("sections", [])))
+    view["sections"] = [s for s in view["sections"] if s.get("tag") != "1.00.03-OFFICIAL"]
+    view["sections"].insert(0, section)
+    _source(page)
+
+for _lang, _c in PATCH_COPY.items():
+    _prepend("update-log", _lang, {"type":"list","tag":"1.00.03-OFFICIAL","heading":_c["patch_h"],"body":_c["patch_b"],"items":_c["fixes"]})
+    _prepend("mods", _lang, {"type":"note","tag":"1.00.03-OFFICIAL","heading":_c["mods_h"],"body":_c["mods_b"]})
+    for _slug, _body in (("fishing",_c["fish"]),("achievements",_c["ach"]),("automation",_c["auto"]),("faq",_c["faq"])):
+        _prepend(_slug, _lang, {"type":"note","tag":"1.00.03-OFFICIAL","heading":_c["patch_h"],"body":_body})
+    for _slug in ("how-to-play","weather","make-money"):
+        _prepend(_slug, _lang, {"type":"note","tag":"1.00.03-OFFICIAL","heading":"Harsh Dry Season (Month 4)","body":_c["season"]})
+    _page = next(x for x in d["pages"] if x["slug"] == "update-log")
+    _view(_page, _lang)["sections"].insert(1, {"type":"list","tag":"KNOWN","heading":_c["known_h"],"body":"","items":_c["known"]})
+
+_source(next(x for x in d["pages"] if x["slug"] == "faq"), FAQ_URL, "Official Doloc Town 1.0 FAQ")
+for _slug in ("how-to-play", "weather", "make-money"):
+    _source(next(x for x in d["pages"] if x["slug"] == _slug), RELEASE_URL, "Official Doloc Town 1.0 release notes")
+
+_weather = next(x for x in d["pages"] if x["slug"] == "weather")
+_weather["metaDescription"] = "Doloc Town weather guide: acid rain, heat, storms and Harsh Dry Season crop protection, based on official 1.0 notes."
+_weather["i18n"]["ja"]["metaDescription"] = "Doloc Town の酸性雨・猛暑・嵐・Harsh Dry Season 対策を公式1.0情報で確認。"
+_weather["i18n"]["ko"]["metaDescription"] = "Doloc Town 산성비·폭염·폭풍·Harsh Dry Season 작물 대책을 공식 1.0 자료로 확인하세요."
+_money = next(x for x in d["pages"] if x["slug"] == "make-money")
+_money["metaDescription"] = "Doloc Town money guide: source-labelled quests, fishing, drying and processing tips, without unsupported drought-price claims."
+_money["i18n"]["es"]["metaDescription"] = "Guía de dinero de Doloc Town: misiones, pesca, secado y procesado con fuentes, sin afirmar subidas de precio no verificadas."
+
+# Remove unsupported commercial/weather and wind-power advice from every locale.
+_unsupported = re.compile(r"price spike|spikes prices|drought prices|sell high|sell into|highest prices|profit from drought|风力|風力|風能|风能|旱季.{0,14}(囤|卖)|乾季.{0,14}(備蓄|売)|物价飙升|物價飆升|价格飙升|價格飆升|高价卖|高價賣|価格高騰|高値で売|가뭄.{0,20}(비축|팔)|가격.{0,10}(급등|치솟)|높은 가격|sequía.{0,20}(acumula|vende)|subida de la sequía|dispara los precios|vende caro|wind turbine|wind power|solar/wind|solar \+ wind|solar and wind|eólica", re.I)
+def _clean_sections(sections):
+    for sec in sections or []:
+        for key in ("items","rows"):
+            vals = sec.get(key)
+            if isinstance(vals, list):
+                sec[key] = [v for v in vals if not _unsupported.search(" ".join(map(str,v)) if isinstance(v,list) else str(v))]
+        for key in ("body","heading"):
+            if isinstance(sec.get(key), str):
+                sec[key] = re.sub(r"(?i)complete 1\.0 changelog", "official 1.0 highlights", sec[key])
+for _p in d["pages"]:
+    _clean_sections(_p.get("sections"))
+    for _t in (_p.get("i18n") or {}).values(): _clean_sections(_t.get("sections"))
+
+# Replace stale SEO copy that promoted unsupported Month-4 price arbitrage.
+_seo = {
+ "en": {"weather":"Extreme weather in Doloc Town: protect crops from acid rain and heat, understand Harsh Dry Season, and prepare for storms.","make-money":"Doloc Town money guide using clearly labelled community tips for processing, fishing and early priorities, without unsupported price-arbitrage claims."},
+ "zh-CN": {"weather":"多洛可小镇天气攻略：应对酸雨、酷热、雷暴与第 4 月 Harsh Dry Season，保护作物并安排浇水。","make-money":"多洛可小镇赚钱攻略：区分社区技巧与官方事实，介绍加工、钓鱼和前期优先级，不采用未经证实的涨价倒卖说法。"},
+ "zh-TW": {"weather":"多洛可小鎮天氣攻略：應對酸雨、酷熱、雷暴與第 4 月 Harsh Dry Season，保護作物並安排澆水。","make-money":"多洛可小鎮賺錢攻略：區分社群技巧與官方事實，介紹加工、釣魚和前期優先事項，不採用未證實的漲價倒賣說法。"},
+ "ja": {"weather":"ドロックタウンの酸性雨・猛暑・雷雨・第4月 Harsh Dry Season に備え、作物保護と水やりを計画する天候ガイド。","make-money":"公式情報とコミュニティ報告を区別し、加工・釣り・序盤の優先事項をまとめた金策ガイド。未確認の価格攻略は掲載しません。"},
+ "ko": {"weather":"돌록 타운의 산성비·폭염·뇌우·4번째 달 Harsh Dry Season에 대비해 작물 보호와 물주기를 계획하는 날씨 가이드.","make-money":"공식 사실과 커뮤니티 팁을 구분해 가공·낚시·초반 우선순위를 다루는 돈 가이드. 확인되지 않은 가격 거래 주장은 제외합니다."},
+ "es": {"weather":"Guía del clima de Doloc Town: protege cultivos de lluvia ácida y calor y prepárate para tormentas y Harsh Dry Season.","make-money":"Guía de dinero de Doloc Town con consejos comunitarios señalados sobre procesado, pesca y prioridades, sin arbitraje de precios sin verificar."},
+}
+for _slug in ("weather","make-money"):
+    _p = next(x for x in d["pages"] if x["slug"] == _slug)
+    _p["metaDescription"] = _seo["en"][_slug]
+    for _lg in ("zh-CN","zh-TW","ja","ko","es"):
+        _p["i18n"][_lg]["metaDescription"] = _seo[_lg][_slug]
+
+# Source-backed editorial voice and official English terminology where client strings are unverified.
+def _rewrite_strings(obj):
+    if isinstance(obj, dict):
+        for k,v in list(obj.items()): obj[k] = _rewrite_strings(v)
+    elif isinstance(obj, list):
+        obj = [_rewrite_strings(v) for v in obj]
+    elif isinstance(obj, str):
+        for a,b in (("hands-on guides","source-backed guides"),("hands-on verification","official-source review"),("verified by hands-on play","checked against cited sources"),("solar and wind power","solar power"),("solar + wind power","solar power"),("solar/wind power","solar power"),("wind turbines","solar generators"),("Solar vs Wind","Solar Power"),("亲测","来源核对"),("親測","來源核對"),("實測","來源核對"),("太阳能与风能","太阳能"),("太陽能與風能","太陽能"),("太阳能+风能","太阳能"),("太陽能+風能","太陽能"),("风力涡轮机","太阳能发电机"),("風力渦輪機","太陽能發電機"),("太阳能 vs 风能","太阳能"),("太陽能 vs 風能","太陽能"),("実測","公式資料確認"),("太陽光/風力","太陽光"),("太陽光・風力","太陽光"),("太陽光+風力","太陽光"),("風力発電","太陽光発電"),("太陽光 vs 風力","太陽光発電"),("직접 검증","공식 출처 확인"),("태양광·풍력","태양광"),("태양광+풍력","태양광"),("태양광/풍력","태양광"),("nuestras pruebas","revisión de fuentes oficiales"),("solar y eólica","solar"),("solar/eólica","solar"),("solar/viento","solar")):
+            obj = obj.replace(a,b)
+        for a,b in (("Solar, Wind and Drones","Solar Power and Drones"),("太阳能、风能与无人机站","太阳能与无人机站"),("太陽能、風能與無人機站","太陽能與無人機站"),("태양광 패널과 풍력 터빈","태양광 발전기"),("태양광 vs 풍력: 무엇부터?","태양광 발전기: 무엇부터?"),("풍력 터빈은 폭풍 중에도 발전합니다——비가 잦은 달에 유리합니다.","태양광 발전기와 드론 스테이션의 공식 요구 사항을 먼저 확인하세요."),("solar + viento","solar"),("¿Solar o eólica? Qué construir primero","Energía solar: qué construir primero")):
+            obj = obj.replace(a,b)
+        # Remove unsupported Month-4 price-arbitrage advice while retaining the official season name.
+        obj = re.sub(r"(?i)(?:Drought|Harsh Dry Season) \(?(?:Month 4|April)\)?[^.]*?(?:price spike|sell high|sell into the spike)[^.]*\.?", "Month 4 is Harsh Dry Season; prepare crop protection and watering.", obj)
+        obj = re.sub(r"(?i)[^.]*?(?:price spike|spikes prices|prices spike)[^.]*\.?", "", obj)
+        obj = re.sub(r"[^。！？]*(?:物价飙升|物價飆升|高价卖出|高價賣出)[^。！？]*[。！？]?", "", obj)
+        obj = re.sub(r"[^。！？]*(?:価格高騰|高値で売)[^。！？]*[。！？]?", "", obj)
+        obj = re.sub(r"[^.!?]*(?:가격이 치솟|가격 급등|높은 가격에 팔)[^.!?]*[.!?]?", "", obj)
+        obj = re.sub(r"(?i)[^.]*?(?:dispara los precios|vende caro durante|subida de la sequía)[^.]*\.?", "", obj)
+        for a,b in (("Stockpile before the drought and sell high during it.","Prepare crop protection and watering before Harsh Dry Season."),("在全年最高价时卖出囤货","在 Harsh Dry Season 前准备作物防护与浇水"),("在全年最高價時賣出囤貨","在 Harsh Dry Season 前準備作物防護與澆水"),("年間最高値で備蓄を売る","Harsh Dry Season 前に作物保護と水やりを準備"),("Acumula antes del mes 4 y vende durante la subida de precios.","Prepara protección y riego antes de Harsh Dry Season."),("Acumula bienes antes del mes 4 y véndelos durante la subida de precios.","Prepara protección y riego antes de Harsh Dry Season."),("Weather Timing: Buy Low, Sell High","Season planning: protect crops and water"),("Timing del clima: compra barato, vende caro","Plan estacional: protege cultivos y riega"),("Acumula antes de la sequía del mes 4 y vende en la subida: es el mayor pago del calendario.","Prepara protección y riego antes de Harsh Dry Season.")):
+            obj = obj.replace(a,b)
+        if _unsupported.search(obj) and not re.search(r"(removed|unsupported|未支持|未支援|削除|retirar|sin respaldo)", obj, re.I):
+            obj = "Harsh Dry Season is Month 4. Protect crops and plan watering; the cited official sources do not establish a price spike or trading strategy."
+        obj = re.sub(r"\s{2,}", " ", obj).strip()
+    return obj
+d = _rewrite_strings(d)
+
+# Spanish is an editorial translation of the official-source facts. Do not
+# imply that the current game client has an official Spanish localization.
+_es_notice = {
+ "type":"note", "tag":"TRANSLATION", "heading":"Traducción del sitio",
+ "body":"Esta página es una traducción editorial del sitio. Los términos del juego se mantienen en inglés cuando no se ha verificado una cadena oficial localizada; no implica que el cliente de Doloc Town tenga soporte oficial en español."
+}
+for _p in d["pages"]:
+    _es = _p.get("i18n", {}).get("es")
+    if not _es: continue
+    _es.setdefault("sections", copy.deepcopy(_p.get("sections", [])))
+    _es["sections"] = [s for s in _es["sections"] if s.get("tag") != "TRANSLATION"]
+    _es["sections"].insert(0, copy.deepcopy(_es_notice))
 
 # ---------- write site.json ----------
 d["site"]["languages"] = ["en","zh-CN","zh-TW","ja","ko","es"]
