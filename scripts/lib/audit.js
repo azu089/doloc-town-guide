@@ -52,6 +52,17 @@ const cjkRatio = t => {
   const lat = (t.match(/[A-Za-z]/g) || []).length;
   return cjk + lat === 0 ? 0 : cjk / (cjk + lat);
 };
+const countOf = (text, needle) => needle ? text.split(needle).length - 1 : 0;
+
+const DOLOC_AD_COHORT = new Map([
+  ["cooking.html", { section: 4, label: "Advertisement" }],
+  ["fishing.html", { section: 5, label: "Advertisement" }],
+  ["mods.html", { section: 2, label: "Advertisement" }],
+  ["gifts.html", { section: 5, label: "Advertisement" }],
+  ["ko/cooking.html", { section: 4, label: "광고" }],
+  ["ko/fishing.html", { section: 5, label: "광고" }],
+  ["ko/exploration.html", { section: 4, label: "광고" }]
+]);
 
 function auditSite(root) {
   const pub = path.join(root, "public");
@@ -76,6 +87,36 @@ function auditSite(root) {
     const slug = "/" + rel.replace(/index\.html$/, "").replace(/\.html$/, "").replace(/\/$/, "");
     slugs.add(slug === "/" ? "/" : slug);
     if (/<meta name="robots" content="[^"]*noindex/i.test(html)) noindexSlugs.add(slug === "/" ? "/" : slug);
+
+    // Doloc bounded Native Banner experiment: exact cohort, exact anchor and exactly one unit.
+    if (cfg.adsterra) {
+      const providerSrc = (cfg.adsterra.match(/src="([^"]*effectivecpmnetwork\.com[^"]*)"/) || [])[1];
+      const containerId = (cfg.adsterra.match(/id="([^"]+)"/) || [])[1];
+      if (!providerSrc || !containerId) F("ad-config-invalid", rel);
+      else {
+        if (countOf(html, providerSrc) !== 1) F("ad-provider-count", `${rel} (script=${countOf(html, providerSrc)})`);
+        if (countOf(html, `id="${containerId}"`) !== 1) F("ad-container-count", `${rel} (container=${countOf(html, `id="${containerId}"`)})`);
+      }
+      const slotCount = countOf(html, 'class="native-ad-slot"');
+      const expected = DOLOC_AD_COHORT.get(rel);
+      const footerHtml = (html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/) || [""])[0];
+      if (expected) {
+        if (slotCount !== 1) F("ad-cohort-slot", `${rel} (slot=${slotCount})`);
+        if (providerSrc && footerHtml.includes(providerSrc)) F("ad-eligible-footer", rel);
+        const slot = (html.match(/<aside class="native-ad-slot"[\s\S]*?<\/aside>/) || [""])[0];
+        if (!slot.includes(`aria-label="${expected.label}"`) || !slot.includes(`<span class="native-ad-label">${expected.label}</span>`)) F("ad-label", rel);
+        if (!slot.includes('data-ad-placement="article-mid-late"') || !slot.includes('data-experiment="doloc-native-ad-viewability-20260814"')) F("ad-metadata", rel);
+        const anchor = `id="sec-${expected.section}"`;
+        const next = `id="sec-${expected.section + 1}"`;
+        const a = html.indexOf(anchor), s = html.indexOf('class="native-ad-slot"'), n = html.indexOf(next);
+        if (!(a >= 0 && a < s && s < n)) F("ad-anchor", `${rel} (expected after section ${expected.section})`);
+        if (/class="[^"]*native-ad-slot[^"]*reveal|class="[^"]*reveal[^"]*native-ad-slot/.test(html)) F("ad-motion-class", rel);
+      } else {
+        if (slotCount !== 0) F("ad-cohort-leak", rel);
+        if (providerSrc && !footerHtml.includes(providerSrc)) F("ad-footer-missing", rel);
+      }
+      if (/(popunder|smartlink|social bar|adult ads|interstitial|auto-audio)/i.test(cfg.adsterra)) F("ad-forbidden-format", rel);
+    }
     if (is404) continue;
     pages++;
 
@@ -184,6 +225,14 @@ function auditSite(root) {
   // — 空 ads.txt 无意义；未接 AdSense 就不该输出
   const ads = path.join(pub, "ads.txt");
   if (fs.existsSync(ads) && fs.statSync(ads).size === 0) F("empty-ads-txt", "未接 AdSense 时不应输出空文件");
+
+  if (cfg.domain === "doloctownguides.com" && cfg.adsterra) {
+    const css = fs.readFileSync(path.join(root, "templates", "style.css"), "utf8");
+    for (const token of ["--ad-slot-reserve:clamp(180px,32vw,260px)", ".native-ad-slot", "max-inline-size:100%", ".native-ad-label"])
+      if (!css.includes(token)) F("ad-css-contract", token);
+    const authored = (css.match(/\.native-ad-slot[^}]*\{[^}]*\}/g) || []).join("\n") + (css.match(/\.native-ad-label[^}]*\{[^}]*\}/g) || []).join("\n");
+    if (/(animation|transition|position\s*:\s*(fixed|sticky))/i.test(authored)) F("ad-motion-position", "slot/label must stay static");
+  }
 
   return { root, domain: cfg.domain, pages, langs: langs.length, fail, warn };
 }

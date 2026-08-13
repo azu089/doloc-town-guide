@@ -471,7 +471,7 @@ function decisionEventsScript() {
 })();
 </script>`;
 }
-function footer(lang){
+function footer(lang, { omitAdsterra = false } = {}){
   const s = siteI18n(lang);
   const prefix = lang === DEF ? "" : `/${lang}`;
   const cols = DATA.pages.slice(0, 10).map(p => `<a href="${prefix}/${p.slug}">${esc(pageOf(p,lang).title)}</a>`).join("");
@@ -492,7 +492,7 @@ function footer(lang){
         <p>${esc(s.footerSource)} · ${today}</p>
       </div>
     </div>
-    ${DATA.site.adsenseId ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(DATA.site.adsenseId)}" crossorigin="anonymous"></script>` : ""}\n    ${DATA.site.adsterra ? DATA.site.adsterra : ""}
+    ${DATA.site.adsenseId ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(DATA.site.adsenseId)}" crossorigin="anonymous"></script>` : ""}\n    ${DATA.site.adsterra && !omitAdsterra ? DATA.site.adsterra : ""}
   </div>
 ${decisionEventsScript()}
 <script>
@@ -863,12 +863,41 @@ function renderHome(lang){
   </script>`;
   return renderFull(lang, siteI18n(lang).name, s.description, [gameLd()], "index", body, "/images/hero.jpg");
 }
-function renderFull(lang, title, desc, extraLd, slug, body, ogImage){
+function renderFull(lang, title, desc, extraLd, slug, body, ogImage, options = {}){
   const s = siteI18n(lang);
-  return head(title, desc, extraLd, slug, lang, ogImage) + header(lang, slug === "index" ? "" : slug) + body + footer(lang);
+  return head(title, desc, extraLd, slug, lang, ogImage) + header(lang, slug === "index" ? "" : slug) + body + footer(lang, options);
 }
 
 /* ---------- article pages ---------- */
+const ARTICLE_AD_EXPERIMENT = "doloc-native-ad-viewability-20260814";
+const ARTICLE_AD_COHORT = new Set([
+  "en:cooking", "en:fishing", "en:mods", "en:gifts",
+  "ko:cooking", "ko:fishing", "ko:exploration"
+]);
+const AD_LABELS = { en:"Advertisement", "zh-CN":"广告", "zh-TW":"廣告", ja:"広告", ko:"광고", es:"Publicidad" };
+function hasArticleAd(lang, slug){ return ARTICLE_AD_COHORT.has(`${lang}:${slug}`); }
+function articleAdInsertionCount(sections){
+  const list = sections || [];
+  const n = list.length;
+  if (n < 3) throw new Error("Article ad cohort requires at least three rendered sections");
+  let count = Math.max(2, Math.min(n - 1, Math.ceil(0.60 * n)));
+  for (let i = 0; i < list.length; i += 1) {
+    if (!["fishfilter", "giftfilter", "genefilter"].includes(list[i].type)) continue;
+    let end = i + 1;
+    while (end < list.length && list[end].type === "table") end += 1;
+    const startOneBased = i + 1;
+    const endOneBased = end;
+    if (count >= startOneBased && count <= endOneBased) count = endOneBased;
+  }
+  return Math.min(count, n - 1);
+}
+function renderArticleAd(lang){
+  const label = AD_LABELS[lang] || AD_LABELS.en;
+  return `<aside class="native-ad-slot" aria-label="${esc(label)}" data-ad-placement="article-mid-late" data-experiment="${ARTICLE_AD_EXPERIMENT}">
+    <span class="native-ad-label">${esc(label)}</span>
+    ${DATA.site.adsterra || ""}
+  </aside>`;
+}
 function renderPage(lang, page){
   const t = Object.assign(pageOf(page, lang), {slug: page.slug});
   const prefix = lang === DEF ? "" : `/${lang}`;
@@ -878,7 +907,12 @@ function renderPage(lang, page){
     return `<a href="#sec-${SEC_IDX}"><span class="toc-no">${String(SEC_IDX).padStart(2,"0")}</span>${esc(x.heading)}</a>`;
   }).join("");
   SEC_IDX = 0;
-  const sections2 = (t.sections||[]).map(x => renderSection(x, lang)).join("");
+  const eligibleArticleAd = hasArticleAd(lang, page.slug);
+  const adInsertionCount = eligibleArticleAd ? articleAdInsertionCount(t.sections) : -1;
+  const sections2 = (t.sections||[]).map((x, i) => {
+    const rendered = renderSection(x, lang);
+    return rendered + (eligibleArticleAd && i + 1 === adInsertionCount ? renderArticleAd(lang) : "");
+  }).join("");
   const related = DATA.pages.filter(p=>p.slug!==page.slug).slice(0,6).map(p=>{
     const m = metaOf(p.slug);
     return `<a href="${prefix}/${p.slug}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(pageOf(p,lang).title)}</span></a>`;
@@ -951,7 +985,7 @@ function renderPage(lang, page){
   const extraLd = [articleLd(page, lang), breadcrumbLd(page, lang)];
   const fq = faqLd(t.sections);
   if (fq) extraLd.push(fq);
-  return renderFull(lang, t.metaTitle || t.title, t.metaDescription, extraLd, page.slug, body, heroImg || DATA.site.ogImage);
+  return renderFull(lang, t.metaTitle || t.title, t.metaDescription, extraLd, page.slug, body, heroImg || DATA.site.ogImage, { omitAdsterra: eligibleArticleAd });
 }
 function gnameOf(lang){ return (DATA.game.nameI18n && DATA.game.nameI18n[lang]) || DATA.game.name; }
 

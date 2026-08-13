@@ -32,6 +32,14 @@
   --nav-h:64px;
   --shadow:0 24px 60px -28px rgba(0,0,0,.85);
   --pixel:4px;
+  --ad-slot-surface:rgba(255,255,255,.025);
+  --ad-slot-border:rgba(196,220,180,.18);
+  --ad-slot-label:#C4D3BD;
+  --ad-slot-radius:11px;
+  --ad-slot-gap-editorial:24px;
+  --ad-slot-gap-commercial:48px;
+  --ad-slot-reserve:clamp(180px,32vw,260px);
+  --ad-slot-inline-max:100%;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -276,6 +284,12 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
 .manual-grid > *{min-width:0}
 .manual-main{min-width:0}
 .manual-side{position:sticky;top:calc(var(--nav-h) + 20px);align-self:start;display:flex;flex-direction:column;gap:16px}
+
+/* Bounded Native Banner experiment: quiet disclosure, stable geometry, no authored motion. */
+.native-ad-slot{inline-size:100%;max-inline-size:var(--ad-slot-inline-max);min-block-size:var(--ad-slot-reserve);margin:var(--ad-slot-gap-editorial) 0;padding:16px;overflow:hidden;border:1px solid var(--ad-slot-border);border-radius:var(--ad-slot-radius);background:var(--ad-slot-surface)}
+.native-ad-label{display:block;margin-bottom:12px;color:var(--ad-slot-label);font-family:var(--body);font-size:12px;font-weight:600;letter-spacing:.08em;line-height:1.4}
+.native-ad-slot>*,.native-ad-slot iframe{max-inline-size:100%}
+@media (min-width:641px){.native-ad-slot{padding-inline:20px}}
 
 /* ---------- plot hero (内页横幅) ---------- */
 .plot-hero{position:relative;border:1px solid var(--line-strong);border-radius:var(--radius);padding:30px 32px;margin-bottom:24px;background:linear-gradient(135deg,rgba(127,176,105,.10),rgba(22,33,26,.5) 55%,rgba(217,119,6,.07));overflow:hidden}
