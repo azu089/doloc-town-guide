@@ -129,6 +129,7 @@ const contentIntegrityPatterns = [
   ["zh-cn-farming-intro-malformed", /学会计什么/u],
   ["zh-tw-farming-intro-malformed", /學會計什麼/u],
   ["ko-farming-grammar-malformed", /커집습니다/u],
+  ["ko-automation-particle", /농업 자동화이/u],
   ["en-update-log-grammar-malformed", /not a selected highlights/iu],
   ["es-automation-mojibake", /automatizaciÃ(?:³|\u00b3)n|automatizaciÃ/i],
   ["unsupported-money-quantitative", /(?:processing|procesad[oa]|加工|處理|加工品|가공)[^.。\n]{0,100}10\s*[-–—]\s*20\s*%|10\s*[-–—]\s*20\s*%[^.。\n]{0,100}(?:processing|procesad[oa]|加工|處理|加工品|가공)/iu],
@@ -199,6 +200,110 @@ const independentFaults = {
   "global-zh-tw-money-metadata": {layer:"metadata", rel:"zh-TW/make-money.html", text:"區分社群技巧與官方事實，介紹加工、釣魚和前期優先事項。"},
   "global-source-label-fallback": {layer:"visible", rel:"ja/make-money.html", text:"Official Doloc Town 1.0 release notes"},
 };
+
+// Fishing recipes are intentionally fail-closed. This guard is route-scoped so
+// the legitimate crop gene-system breeding explanation remains publishable.
+const fishingRecipeFixtures = {
+  en: "Raise four lantern bass alongside four glowing eels in one tank; one in two batches succeeds.",
+  "zh-CN": "在鱼缸里混养四条灯笼鲈鱼和四条荧光鳗鱼，成功率为二分之一。",
+  "zh-TW": "在魚缸裡混養四條燈籠鱸魚和四條螢光鰻魚，成功率為二分之一。",
+  ja: "水槽でランタンスズキ4匹と光るウナギ4匹を一緒に育てると、成功確率は二分の一です。",
+  ko: "수조에서 랜턴 배스 4마리와 발광 뱀장어 4마리를 함께 키우면 둘 중 하나가 성공합니다.",
+  es: "Pon cuatro lubinas linterna y cuatro anguilas brillantes en el tanque; una de cada dos tandas tiene éxito.",
+};
+const fishingRecipeSignals = {
+  en: {
+    exclusive: /\b(?:breed|breeding|breeding[- ]only|fish[- ]tank|parent fish)\b/iu,
+    count: /\b(?:\d+|one|two|three|four|five|six)\s+(?:[a-z-]+\s+){0,2}(?:fish|bass|eels?|salmon|cod|pike|sardine|tuna|loach|carp)\b/iu,
+    action: /\b(?:raise|rear|keep|place|put|stock|mix|combine|alongside|together)\b/iu,
+    probability: /(?:\d+(?:[.,]\d+)?\s*%|chance|probabilit|one\s+in\s+(?:two|four)|one\s+out\s+of|half)/iu,
+  },
+  "zh-CN": {
+    exclusive: /(?:鱼缸[^。\n]{0,40}(?:繁殖|养殖)|繁殖(?:专属|限定|概率|几率|要求|亲本)|只能(?:繁殖|养殖))/u,
+    count: /(?:[一二三四五六两]|\d+)\s*条[^。\n]{0,35}(?:鱼|鳗|鲈|鲑|鳕|狗鱼|泥鳅)/u,
+    action: /(?:混养|一起养|放入|养在|搭配|组合)/u,
+    probability: /(?:\d+(?:[.,]\d+)?\s*%|成功率|概率|几率|二分之一|四分之一)/u,
+  },
+  "zh-TW": {
+    exclusive: /(?:魚缸[^。\n]{0,40}(?:繁殖|養殖)|繁殖(?:專屬|限定|概率|機率|要求|親本)|只能(?:繁殖|養殖))/u,
+    count: /(?:[一二三四五六兩]|\d+)\s*條[^。\n]{0,35}(?:魚|鰻|鱸|鮭|鱈|狗魚|泥鰍)/u,
+    action: /(?:混養|一起養|放入|養在|搭配|組合)/u,
+    probability: /(?:\d+(?:[.,]\d+)?\s*%|成功率|概率|機率|二分之一|四分之一)/u,
+  },
+  ja: {
+    exclusive: /(?:水槽[^。\n]{0,40}繁殖|繁殖(?:限定|確率|条件|親魚)|繁殖させ)/u,
+    count: /(?:\d+|一|二|三|四|五|六)匹[^。\n]{0,35}(?:魚|ウナギ|スズキ|サケ|タラ|マグロ)/u,
+    action: /(?:一緒に育て|組み合わせ|水槽に入れ|混ぜ|同時に飼)/u,
+    probability: /(?:\d+(?:[.,]\d+)?\s*%|成功確率|確率|二分の一|四分の一)/u,
+  },
+  ko: {
+    exclusive: /(?:수조[^.\n]{0,40}번식|번식(?:\s*전용|\s*확률|\s*조건|\s*요구|\s*부모)|번식해야)/u,
+    count: /(?:\d+|한|두|세|네|다섯|여섯)\s*마리[^.\n]{0,35}(?:물고기|뱀장어|배스|연어|대구|참치)/u,
+    action: /(?:함께 키우|같이 키우|수조에 넣|섞어|조합)/u,
+    probability: /(?:\d+(?:[.,]\d+)?\s*%|성공률|확률|둘 중 하나|넷 중 하나)/u,
+  },
+  es: {
+    exclusive: /(?:tanque[^.\n]{0,45}(?:cr[ií]a|criar|reproduc)|(?:cr[ií]a|criar|reproducci[oó]n)[^.\n]{0,45}(?:peces|padres|tanque|probabilidad)|solo\s+cr[ií]a)/iu,
+    count: /\b(?:\d+|un[oa]?|dos|tres|cuatro|cinco|seis)\s+(?:peces|lubinas|anguilas|salmones|bacalaos|lucios|sardinas|atunes|lochas|carpas)\b/iu,
+    action: /\b(?:pon|mete|cr[ií]a|combina|mezcla|mant[eé]n|junta)\b/iu,
+    probability: /(?:\d+(?:[.,]\d+)?\s*%|probabilidad|una?\s+de\s+cada\s+(?:dos|cuatro)|mitad)/iu,
+  },
+};
+const fishingRecipeHit = (text, locale) => {
+  const s = fishingRecipeSignals[locale];
+  if (!s) return null;
+  const exclusive = text.match(s.exclusive);
+  if (exclusive) return exclusive[0];
+  const countHit = text.match(s.count), actionHit = text.match(s.action), probabilityHit = text.match(s.probability);
+  return countHit && actionHit && probabilityHit ? `${countHit[0]} | ${actionHit[0]} | ${probabilityHit[0]}` : null;
+};
+const fishingRecipeAnyHit = text => {
+  for (const locale of Object.keys(fishingRecipeSignals)) {
+    const hit = fishingRecipeHit(text, locale);
+    if (hit) return {locale, hit};
+  }
+  return null;
+};
+const fishingRecipeFaults = {};
+const fishingRecipeFaultNames = [];
+for (const [locale, text] of Object.entries(fishingRecipeFixtures)) {
+  const keyLocale = locale.toLowerCase().replaceAll("-", "-");
+  const rel = locale === "en" ? "fishing.html" : `${locale}/fishing.html`;
+  for (const layer of ["source", "effective", "visible", "metadata", "jsonld"]) {
+    const name = `fishing-recipe-${keyLocale}-${layer}`;
+    fishingRecipeFaultNames.push(name);
+    fishingRecipeFaults[name] = {layer, rel, locale, text};
+  }
+}
+fishingRecipeFaults["ko-automation-particle"] = {layer:"source", rel:"ko/faq.html", locale:"ko", text:"농업 자동화이 농장 드론 기지를 구동합니다."};
+Object.assign(independentFaults, fishingRecipeFaults);
+const fishingRecipeFault = fishingRecipeFaults[fault];
+const extractBalancedObject = (text, openAt) => {
+  let depth = 0, quote = "", escaped = false;
+  for (let i = openAt; i < text.length; i += 1) {
+    const ch = text[i];
+    if (quote) {
+      if (escaped) escaped = false;
+      else if (ch === "\\") escaped = true;
+      else if (ch === quote) quote = "";
+      continue;
+    }
+    if (ch === '"' || ch === "'") { quote = ch; continue; }
+    if (ch === "{") depth += 1;
+    else if (ch === "}" && --depth === 0) return text.slice(openAt, i + 1);
+  }
+  return "";
+};
+const rawFishingFragments = buildRawText => {
+  const fragments = [];
+  const marker = /(?:(?:ZH|JA|KO|ES)\["fishing"\]\s*=|"fishing"\s*:)\s*\{/g;
+  for (const match of buildRawText.matchAll(marker)) {
+    const openAt = match.index + match[0].lastIndexOf("{");
+    const fragment = extractBalancedObject(buildRawText, openAt);
+    if (fragment) fragments.push(fragment);
+  }
+  return fragments;
+};
 const semanticFamilyCodes = new Set(semanticFamilyPatterns.map(([code]) => code));
 const nonSemanticIntegrityPatterns = contentIntegrityPatterns.filter(([code]) => !semanticFamilyCodes.has(code));
 
@@ -216,11 +321,18 @@ const semanticInventory = {
   generated_jsonld: {blocks: 0, hits: 0},
 };
 const evidenceLayerInventory = {raw:0,effective:0,visible:0,metadata:0,faq:0,jsonld:0};
+const fishingRecipeInventory = {
+  source: {documents:0, recipe_hits:0, structural_rows:0},
+  effective: {documents:0, recipe_hits:0, structural_rows:0},
+  generated_visible: {documents:0, recipe_hits:0, structural_rows:0},
+  generated_metadata: {documents:0, recipe_hits:0},
+  generated_jsonld: {documents:0, recipe_hits:0},
+};
 try {
   generate(disabled,false); generate(enabled,true);
   const offFiles=walk(disabled), onFiles=walk(enabled);
   const independentFault = independentFaults[fault];
-  if (independentFault && independentFault.layer !== "source") {
+  if (independentFault && !["source", "effective"].includes(independentFault.layer)) {
     const target = offFiles.find(file => path.relative(disabled, file) === path.normalize(independentFault.rel));
     if (!target) fail("fault-target-missing", `${fault}:${independentFault.rel}`);
     else if (independentFault.layer === "visible") fs.appendFileSync(target, `<p>${independentFault.text}</p>`);
@@ -335,6 +447,57 @@ try {
   };
   const buildRaw=fs.readFileSync(path.join(root,"data/build_content.py"),"utf8");
   const baseRaw=JSON.parse(fs.readFileSync(path.join(root,"data/site.base.json"),"utf8"));
+  const fishingViewOf = (data, locale) => {
+    const page = data.pages?.find(item => item.slug === "fishing");
+    return locale === "en" ? page : page?.i18n?.[locale];
+  };
+  const inspectFishingView = (view, locale, layer, rel, injected = "") => {
+    const inventory = fishingRecipeInventory[layer];
+    inventory.documents += 1;
+    if (!view) { fail("fishing-view-missing", `${layer}:${rel}`); return; }
+    let structuralRows = 0;
+    for (const section of view.sections || []) {
+      for (const attrs of section.rowAttrs || []) {
+        if (attrs?.how === "breed" || attrs?.period === "breed") structuralRows += 1;
+      }
+      for (const row of section.rows || []) {
+        if (fishingRecipeHit(JSON.stringify(row), locale)) structuralRows += 1;
+      }
+    }
+    inventory.structural_rows += structuralRows;
+    if (structuralRows) fail("fishing-recipe-structural-row", `${layer}:${rel}:${structuralRows}`);
+    const hit = fishingRecipeHit(`${JSON.stringify(view)} ${injected}`, locale);
+    if (hit) {
+      inventory.recipe_hits += 1;
+      fail("fishing-recipe-semantic", `${layer}:${rel}:${locale}:${hit}`);
+    }
+  };
+  inspectFishingView(fishingViewOf(baseRaw, "en"), "en", "source", "data/site.base.json");
+  const rawFishing = rawFishingFragments(buildRaw);
+  for (let index = 0; index < rawFishing.length; index += 1) {
+    fishingRecipeInventory.source.documents += 1;
+    const hit = fishingRecipeAnyHit(rawFishing[index]);
+    if (hit) {
+      fishingRecipeInventory.source.recipe_hits += 1;
+      fail("fishing-recipe-raw-source", `data/build_content.py#${index + 1}:${hit.locale}:${hit.hit}`);
+    }
+  }
+  if (fishingRecipeFault?.layer === "source" && fishingRecipeFault.locale) {
+    fishingRecipeInventory.source.documents += 1;
+    const hit = fishingRecipeHit(fishingRecipeFault.text, fishingRecipeFault.locale);
+    if (hit) {
+      fishingRecipeInventory.source.recipe_hits += 1;
+      fail("fishing-recipe-fault-source", `${fishingRecipeFault.locale}:${hit}`);
+    }
+  }
+  for (const locale of Object.keys(fishingRecipeFixtures)) {
+    const injected = fishingRecipeFault?.layer === "effective" && fishingRecipeFault.locale === locale ? fishingRecipeFault.text : "";
+    inspectFishingView(fishingViewOf(sourceData, locale), locale, "effective", `${locale}:data/site.json`, injected);
+  }
+  const genePageText = JSON.stringify(sourceData.pages?.find(item => item.slug === "gene-system") || {});
+  if (!/breed stronger crops|培育更强种子|強い種子|더 강한 작물|criar semillas más fuertes/iu.test(genePageText)) {
+    fail("gene-breeding-negative-control-missing", "gene-system");
+  }
   const extraAt=buildRaw.indexOf("_EXTRA = {");
   const rawMakeMoney = {en:JSON.stringify(baseRaw.pages.find(p=>p.slug==="make-money"))};
   const ordered=["zh-CN","ja","ko","es"];
@@ -489,6 +652,33 @@ try {
     semanticInventory.generated_visible.files += 1;
     semanticInventory.generated_metadata.documents += 1;
     semanticInventory.generated_jsonld.blocks += jsonLd.length;
+    const route = rel.split(path.sep).join("/");
+    const fishingLocale = route === "fishing.html" ? "en" : (route.match(/^(zh-CN|zh-TW|ja|ko|es)\/fishing\.html$/) || [])[1];
+    if (fishingLocale) {
+      fishingRecipeInventory.generated_visible.documents += 1;
+      const structuralRows = (html.match(/data-(?:how|period)="breed"/g) || []).length;
+      fishingRecipeInventory.generated_visible.structural_rows += structuralRows;
+      if (structuralRows) fail("fishing-recipe-generated-structural-row", `${route}:${structuralRows}`);
+      const visibleHit = fishingRecipeHit(visible, fishingLocale);
+      if (visibleHit) {
+        fishingRecipeInventory.generated_visible.recipe_hits += 1;
+        fail("fishing-recipe-generated-visible", `${route}:${visibleHit}`);
+      }
+      fishingRecipeInventory.generated_metadata.documents += 1;
+      const metadataHit = fishingRecipeHit(metadata, fishingLocale);
+      if (metadataHit) {
+        fishingRecipeInventory.generated_metadata.recipe_hits += 1;
+        fail("fishing-recipe-generated-metadata", `${route}:${metadataHit}`);
+      }
+      fishingRecipeInventory.generated_jsonld.documents += jsonLd.length;
+      for (const block of jsonLd) {
+        const jsonLdHit = fishingRecipeHit(block, fishingLocale);
+        if (jsonLdHit) {
+          fishingRecipeInventory.generated_jsonld.recipe_hits += 1;
+          fail("fishing-recipe-generated-jsonld", `${route}:${jsonLdHit}`);
+        }
+      }
+    }
     scanSemantic(visible, "generated_visible", rel);
     scanSemantic(metadata, "generated_metadata", rel);
     for (const block of jsonLd) scanSemantic(block, "generated_jsonld", rel);
@@ -498,6 +688,19 @@ try {
     for (const [code,re] of forbidden) if(re.test(html)) fail(code,rel);
     for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(html)) fail(code,rel);
   }
+  const badKoAutomationParticle = /농업 자동화이/u;
+  const expectedKoAutomation = "농업 자동화가 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다.";
+  if (badKoAutomationParticle.test(buildRaw) || badKoAutomationParticle.test(JSON.stringify(sourceData))) fail("ko-automation-particle-source", "persistent");
+  if (!buildRaw.includes("2단계 자동화가 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다.")) fail("ko-automation-particle-raw-correction-missing", "data/build_content.py");
+  if (!JSON.stringify(sourceData.pages?.find(page => page.slug === "faq")?.i18n?.ko || {}).includes(expectedKoAutomation)) fail("ko-automation-particle-effective-correction-missing", "faq:ko");
+  for (const rel of [path.join("ko", "index.html"), path.join("ko", "faq.html")]) {
+    const html = fs.readFileSync(path.join(disabled, rel), "utf8");
+    const visible = html.replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<style[\s\S]*?<\/style>/gi," ").replace(/<[^>]+>/g," ");
+    if (badKoAutomationParticle.test(visible) || !visible.includes(expectedKoAutomation)) fail("ko-automation-particle-visible", rel);
+  }
+  const koFaqHtml = fs.readFileSync(path.join(disabled, "ko", "faq.html"), "utf8");
+  const koFaqJsonLd = [...koFaqHtml.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)].map(match => match[1]).join(" ");
+  if (badKoAutomationParticle.test(koFaqJsonLd) || !koFaqJsonLd.includes(expectedKoAutomation)) fail("ko-automation-particle-jsonld", "ko/faq.html");
   for (const [locale,fixture] of Object.entries(faultFixtures)) {
     const hit=droughtHit(fixture);
     if (!hit || hit.locale!==locale) fail(`fault-injection-${locale}`,hit?`misclassified:${hit.locale}`:"not detected");
@@ -654,6 +857,7 @@ if (!fault && !failures.length) {
     "global-gameplay-literal-source", "global-gameplay-paraphrase-visible",
     "global-source-mismatch-literal-source", "global-source-mismatch-paraphrase-faq",
     "global-season-duplicate", "global-season-wrong-source", "global-zh-tw-money-metadata", "global-source-label-fallback",
+    ...fishingRecipeFaultNames, "ko-automation-particle",
   ]) {
     const result = spawnSync(process.execPath, [auditScript, root], {
       env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: name },
@@ -663,5 +867,5 @@ if (!fault && !failures.length) {
     if (!Number.isInteger(result.status) || result.status <= 0) fail("negative-fixture-did-not-fail", name);
   }
 }
-console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
+console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fishing_recipe_inventory:fishingRecipeInventory,fishing_recipe_faults:fishingRecipeFaultNames,gene_breeding_negative_control:"preserved_and_route_scoped",fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
 process.exit(failures.length?1:0);

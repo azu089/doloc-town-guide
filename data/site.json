@@ -3232,8 +3232,8 @@
   {
    "slug": "fishing",
    "title": "Doloc Town Fishing Guide: Ponds, Weather & Rare Fish",
-   "metaTitle": "Doloc Town Fish Chart: All 33 Fish, Locations & Weather",
-   "metaDescription": "Every Doloc Town fish in one searchable, filterable chart: all 33 species, time, weather, pond and season, plus the rare breeding-only fish.",
+   "metaTitle": "Doloc Town Fish Chart: Locations, Weather & Seasons",
+   "metaDescription": "Review Doloc Town fishing locations, times, weather, seasons and current rod or core requirements in one catch chart.",
    "intro": "Fishing is a full second career in Doloc Town. This catalog lists fish locations, seasons, weather and current in-game requirements.",
    "sections": [
     {
@@ -3243,7 +3243,10 @@
      "body": "Patch 1.00.03 fixed new fish that could not be dried. The developer still lists some fish being too difficult to catch as a known issue."
     },
     {
-     "type": "fishfilter"
+     "type": "note",
+     "tag": "CATCH-SCOPE",
+     "heading": "Catch chart scope",
+     "body": "These tables list currently documented catches and requirements. Recheck the in-game catalog after patches."
     },
     {
      "type": "table",
@@ -3572,8 +3575,8 @@
     },
     {
      "type": "table",
-     "heading": "Single-Month & Breeding-Only Fish",
-     "body": "Two fish appear in specific months; the rest can only be bred in a fish tank from parents you catch.",
+     "heading": "Single-Month Fish",
+     "body": "These two fish appear only in specific months.",
      "columns": [
       "Fish",
       "How to get",
@@ -3589,61 +3592,6 @@
        "Salmon",
        "January (Salmon Festival)",
        "Bamboo rod; ponds + Town Dock Center, Under Pier"
-      ],
-      [
-       "Dark Skeleton Fish",
-       "Breed ≥3 Mimic Skeleton Fish",
-       "66.67% chance"
-      ],
-      [
-       "Silver-Glow Eel",
-       "Breed ≥6 Eels",
-       "50% chance"
-      ],
-      [
-       "Chum Salmon",
-       "Breed ≥6 Salmon",
-       "50% chance"
-      ],
-      [
-       "Red Cod",
-       "Breed ≥3 Cod",
-       "66.67% chance"
-      ],
-      [
-       "Blue Pike",
-       "Breed ≥3 Pike",
-       "66.67% chance"
-      ],
-      [
-       "Black-Back Sardine",
-       "Breed ≥5 Sardine + 1 Catfish",
-       "66.67% chance"
-      ],
-      [
-       "Emperor Tuna",
-       "Breed ≥5 Tuna + ≥2 Shining Goldfish",
-       "25% chance"
-      ],
-      [
-       "Leaf Slug",
-       "Breed ≥3 Grass Carp + ≥3 Aquatic Amoeba",
-       "50% chance"
-      ],
-      [
-       "Mist Eel",
-       "Breed ≥4 Loach + ≥4 Swamp Eel",
-       "50% chance"
-      ],
-      [
-       "Terror Fish",
-       "Breed exactly 3 Fang Fish + 3 Pike",
-       "25% chance"
-      ],
-      [
-       "Abyss Lantern Bass",
-       "Breed ≥4 Bass + ≥4 Glowing Eel",
-       "50% chance"
       ]
      ],
      "rowAttrs": [
@@ -3662,94 +3610,6 @@
        "weather": "any",
        "req": "bamboo",
        "loc": "pond sea"
-      },
-      {
-       "period": "breed",
-       "how": "breed",
-       "time": "any",
-       "weather": "any",
-       "req": "none",
-       "loc": "none"
-      },
-      {
-       "period": "breed",
-       "how": "breed",
-       "time": "any",
-       "weather": "any",
-       "req": "none",
-       "loc": "none"
-      },
-      {
-       "period": "breed",
-       "how": "breed",
-       "time": "any",
-       "weather": "any",
-       "req": "none",
-       "loc": "none"
-      },
-      {
-       "period": "breed",
-       "how": "breed",
-       "time": "any",
-       "weather": "any",
-       "req": "none",
-       "loc": "none"
-      },
-      {
-       "period": "breed",
-       "how": "breed",
-       "time": "any",
-       "weather": "any",
-       "req": "none",
-       "loc": "none"
-      },
-      {
-       "period": "breed",
-       "how": "breed",
-       "time": "any",
-       "weather": "any",
-       "req": "none",
-       "loc": "none"
-      },
-      {
-       "period": "breed",
-       "how": "breed",
-       "time": "any",
-       "weather": "any",
-       "req": "none",
-       "loc": "none"
-      },
-      {
-       "period": "breed",
-       "how": "breed",
-       "time": "any",
-       "weather": "any",
-       "req": "none",
-       "loc": "none"
-      },
-      {
-       "period": "breed",
-       "how": "breed",
-       "time": "any",
-       "weather": "any",
-       "req": "none",
-       "loc": "none"
-      },
-      {
-       "period": "breed",
-       "how": "breed",
-       "time": "any",
-       "weather": "any",
-       "req": "none",
-       "loc": "none"
-      },
-      {
-       "period": "breed",
-       "how": "breed",
-       "time": "any",
-       "weather": "any",
-       "req": "none",
-       "loc": "none"
       }
      ]
     },
@@ -3762,7 +3622,6 @@
       "Upgrade your rod: higher-tier rods unlock better fish and make the fishing minigame more forgiving",
       "Fish through weather: rain and thunderstorms bring uncommon catches that dry days don't",
       "Watch the season: rainy season (Jan–Feb) and dry season (Mar–Apr) change the catch tables completely",
-      "Review current in-game breeding requirements before using spare fish",
       "Rare fish drop advanced drone and tool parts, so a good fishing session funds your upgrades"
      ]
     },
@@ -3776,13 +3635,13 @@
       "Controller players report the most failures: if a catch keeps slipping on a gamepad, upgrade the rod before assuming your timing is the problem.",
       "Fish through weather: rain and thunderstorms bring catches that dry days never do — check the tables above before choosing a spot.",
       "Use unlocked processing equipment for surplus catches, and compare the current in-game values before selling.",
-      "Keep spare fish until you have checked the current in-game breeding requirements."
+      "Keep surplus catches until you have checked their current in-game uses."
      ]
     },
     {
      "type": "note",
      "heading": "Sources & Notes",
-     "body": "Fish locations, seasons, weather and breeding odds are player-verified and compiled from 18183's full catalog (L2). Some spawns may vary after patches — treat this as a field guide, not a fixed database. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client."
+     "body": "Fish locations, seasons and weather are player-verified and compiled from 18183's catalog (L2). Some spawns may vary after patches — treat this as a field guide, not a fixed database. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client."
     }
    ],
    "sources": [
@@ -3806,9 +3665,9 @@
    "i18n": {
     "zh-CN": {
      "title": "多洛可小镇钓鱼指南：池塘、天气与稀有鱼",
-     "metaTitle": "多洛可小镇鱼图鉴：33 种鱼、钓点与天气（可筛选）",
-     "metaDescription": "多洛可小镇全部 33 种鱼一表收录：时间、天气、钓点与只能养殖获得的稀有鱼，支持搜索筛选快速查找。",
-     "intro": "钓鱼是多洛可小镇的第二种全职事业。本图鉴列出每一条已确认的鱼——在哪里刷新、需要什么季节与天气，以及如何繁殖只能养在鱼缸里的稀有鱼。",
+     "metaTitle": "多洛可小镇鱼类钓点、天气与季节",
+     "metaDescription": "多洛可小镇钓鱼表：查阅时间、天气、钓点、季节及当前鱼竿或核心要求。",
+     "intro": "钓鱼是多洛可小镇的第二种全职事业。本图鉴整理当前有记录的渔获——在哪里刷新、需要什么季节、天气、鱼竿或核心。",
      "sections": [
       {
        "type": "note",
@@ -3817,7 +3676,10 @@
        "body": "1.00.03 已修复新增鱼类无法烘干的问题；官方仍把“部分鱼过难捕获”列为已知问题。"
       },
       {
-       "type": "fishfilter"
+       "type": "note",
+       "tag": "CATCH-SCOPE",
+       "heading": "渔获表范围",
+       "body": "这些表格列出当前有记录的渔获与条件；补丁更新后请在游戏内图鉴中复核。"
       },
       {
        "type": "table",
@@ -4146,8 +4008,8 @@
       },
       {
        "type": "table",
-       "heading": "单月鱼与只能繁殖的鱼",
-       "body": "两种鱼只在特定月份出现；其余只能在你钓到的亲本基础上于鱼缸中繁殖。",
+       "heading": "单月鱼类",
+       "body": "这两种鱼只在特定月份出现。",
        "columns": [
         "鱼",
         "获得方式",
@@ -4163,61 +4025,6 @@
          "鲑鱼",
          "1 月（鲑鱼节）",
          "竹竿；池塘 + 城镇码头中心、桥墩下"
-        ],
-        [
-         "暗色骨架鱼",
-         "繁殖 ≥3 条拟态骨架鱼",
-         "66.67% 概率"
-        ],
-        [
-         "银光鳗鱼",
-         "繁殖 ≥6 条鳗鱼",
-         "50% 概率"
-        ],
-        [
-         "大马哈鱼",
-         "繁殖 ≥6 条鲑鱼",
-         "50% 概率"
-        ],
-        [
-         "红鳕鱼",
-         "繁殖 ≥3 条鳕鱼",
-         "66.67% 概率"
-        ],
-        [
-         "蓝狗鱼",
-         "繁殖 ≥3 条狗鱼",
-         "66.67% 概率"
-        ],
-        [
-         "黑背沙丁鱼",
-         "繁殖 ≥5 条沙丁鱼 + 1 条鲶鱼",
-         "66.67% 概率"
-        ],
-        [
-         "帝王金枪鱼",
-         "繁殖 ≥5 条金枪鱼 + ≥2 条闪亮黄金鱼",
-         "25% 概率"
-        ],
-        [
-         "叶蛞蝓",
-         "繁殖 ≥3 条草鱼 + ≥3 条水生变形虫",
-         "50% 概率"
-        ],
-        [
-         "雾鳗",
-         "繁殖 ≥4 条泥鳅 + ≥4 条黄鳝",
-         "50% 概率"
-        ],
-        [
-         "恐鱼",
-         "繁殖恰好 3 条牙鱼 + 3 条狗鱼",
-         "25% 概率"
-        ],
-        [
-         "深渊灯笼鲈鱼",
-         "繁殖 ≥4 条鲈鱼 + ≥4 条荧光鳗鱼",
-         "50% 概率"
         ]
        ],
        "rowAttrs": [
@@ -4236,94 +4043,6 @@
          "weather": "any",
          "req": "bamboo",
          "loc": "pond sea"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
         }
        ]
       },
@@ -4336,7 +4055,6 @@
         "升级鱼竿：更高品质的鱼竿解锁更好的鱼，也让钓鱼小游戏更宽容",
         "看天气钓鱼：雨天和雷暴会带来晴天没有的稀有渔获",
         "盯紧季节：雨季（1–2 月）与旱季（3–4 月）会完全改变渔获表",
-        "繁殖前先在当前游戏内核对需求，再处理多余鱼类",
         "稀有鱼掉落高级无人机与工具零件，一次好的钓鱼就够升级开支"
        ]
       },
@@ -4348,22 +4066,22 @@
         "手柄操作不顺时先练习小游戏节奏并查看游戏内设置。",
         "选点前核对天气与渔获表。",
         "加工或出售前比较当前存档显示的数值。",
-        "繁殖前先核对当前游戏内要求，只处理多余鱼类。"
+        "把多余渔获留下，先核对当前游戏内用途。"
        ],
        "type": "list"
       },
       {
        "type": "list",
        "heading": "来源与说明",
-       "body": "钓点、季节、天气与繁殖概率由玩家实测，并整理自 18183 的完整图鉴（L2）。部分刷新点可能随补丁变化——请把它当作野外手册，而非固定数据库。⚠️ 中文名为游戏内中文图鉴译名，可能与英文客户端不同。"
+       "body": "钓点、季节与天气由玩家实测，并整理自 18183 的图鉴（L2）。部分刷新点可能随补丁变化——请把它当作野外手册，而非固定数据库。⚠️ 中文名为游戏内中文图鉴译名，可能与英文客户端不同。"
       }
      ]
     },
     "zh-TW": {
      "title": "多洛可小鎮釣魚指南：池塘、天氣與稀有魚",
-     "metaTitle": "多洛可小鎮魚圖鑑：33 種魚、釣點與天氣（可篩選）",
-     "metaDescription": "多洛可小鎮全部 33 種魚一表收錄：時間、天氣、釣點與只能養殖獲得的稀有魚，支持搜索篩選快速查找。",
-     "intro": "釣魚是多洛可小鎮的第二種全職事業。本圖鑑列出每一條已確認的魚——在哪裡刷新、需要什麼季節與天氣，以及如何繁殖只能養在魚缸裡的稀有魚。",
+     "metaTitle": "多洛可小鎮魚類釣點、天氣與季節",
+     "metaDescription": "多洛可小鎮釣魚表：查閱時間、天氣、釣點、季節及當前魚竿或核心要求。",
+     "intro": "釣魚是多洛可小鎮的第二種全職事業。本圖鑑整理當前有記錄的漁獲——在哪裡刷新、需要什麼季節、天氣、魚竿或核心。",
      "sections": [
       {
        "type": "note",
@@ -4372,7 +4090,10 @@
        "body": "1.00.03 已修正新增魚類無法烘乾；官方仍把部分魚過難捕獲列為已知問題。"
       },
       {
-       "type": "fishfilter"
+       "type": "note",
+       "tag": "CATCH-SCOPE",
+       "heading": "漁獲表範圍",
+       "body": "這些表格列出當前有記錄的漁獲與條件；補丁更新後請在遊戲內圖鑑中複核。"
       },
       {
        "type": "table",
@@ -4701,8 +4422,8 @@
       },
       {
        "type": "table",
-       "heading": "單月魚與只能繁殖的魚",
-       "body": "兩種魚只在特定月份出現；其餘只能在你釣到的親本基礎上於魚缸中繁殖。",
+       "heading": "單月魚類",
+       "body": "這兩種魚只在特定月份出現。",
        "columns": [
         "魚",
         "獲得方式",
@@ -4718,61 +4439,6 @@
          "鮭魚",
          "1 月（鮭魚節）",
          "竹竿；池塘 + 城鎮碼頭中心、橋墩下"
-        ],
-        [
-         "暗色骨架魚",
-         "繁殖 ≥3 條擬態骨架魚",
-         "66.67% 概率"
-        ],
-        [
-         "銀光鰻魚",
-         "繁殖 ≥6 條鰻魚",
-         "50% 概率"
-        ],
-        [
-         "大馬哈魚",
-         "繁殖 ≥6 條鮭魚",
-         "50% 概率"
-        ],
-        [
-         "紅鱈魚",
-         "繁殖 ≥3 條鱈魚",
-         "66.67% 概率"
-        ],
-        [
-         "藍狗魚",
-         "繁殖 ≥3 條狗魚",
-         "66.67% 概率"
-        ],
-        [
-         "黑背沙丁魚",
-         "繁殖 ≥5 條沙丁魚 + 1 條鯰魚",
-         "66.67% 概率"
-        ],
-        [
-         "帝王金槍魚",
-         "繁殖 ≥5 條金槍魚 + ≥2 條閃亮黃金魚",
-         "25% 概率"
-        ],
-        [
-         "葉蛞蝓",
-         "繁殖 ≥3 條草魚 + ≥3 條水生變形蟲",
-         "50% 概率"
-        ],
-        [
-         "霧鰻",
-         "繁殖 ≥4 條泥鰍 + ≥4 條黃鱔",
-         "50% 概率"
-        ],
-        [
-         "恐魚",
-         "繁殖恰好 3 條牙魚 + 3 條狗魚",
-         "25% 概率"
-        ],
-        [
-         "深淵燈籠鱸魚",
-         "繁殖 ≥4 條鱸魚 + ≥4 條熒光鰻魚",
-         "50% 概率"
         ]
        ],
        "rowAttrs": [
@@ -4791,94 +4457,6 @@
          "weather": "any",
          "req": "bamboo",
          "loc": "pond sea"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
         }
        ]
       },
@@ -4891,7 +4469,6 @@
         "升級魚竿：更高品質的魚竿解鎖更好的魚，也讓釣魚小遊戲更寬容",
         "看天氣釣魚：雨天和雷暴會帶來晴天沒有的稀有漁獲",
         "盯緊季節：雨季（1–2 月）與旱季（3–4 月）會完全改變漁獲表",
-        "繁殖前先在當前遊戲內核對需求，再處理多餘魚類",
         "稀有魚掉落高級無人機與工具零件，一次好的釣魚就夠升級開支"
        ]
       },
@@ -4903,22 +4480,22 @@
         "手柄操作不順時先練習小遊戲節奏並查看遊戲內設置。",
         "選點前核對天氣與漁獲表。",
         "加工或出售前比較當前存檔顯示的數值。",
-        "繁殖前先核對當前遊戲內要求，只處理多餘魚類。"
+        "把多餘漁獲留下，先核對當前遊戲內用途。"
        ],
        "type": "list"
       },
       {
        "type": "list",
        "heading": "來源與說明",
-       "body": "釣點、季節、天氣與繁殖概率由玩家實測，並整理自 18183 的完整圖鑑（L2）。部分刷新點可能隨補丁變化——請把它當作野外手冊，而非固定數據庫。⚠️ 中文名為遊戲內中文圖鑑譯名，可能與英文客戶端不同。"
+       "body": "釣點、季節與天氣由玩家實測，並整理自 18183 的圖鑑（L2）。部分刷新點可能隨補丁變化——請把它當作野外手冊，而非固定數據庫。⚠️ 中文名為遊戲內中文圖鑑譯名，可能與英文客戶端不同。"
       }
      ]
     },
     "ja": {
      "title": "ドロックタウン釣りガイド：池・天候・レア魚",
-     "metaTitle": "ドロックタウン釣り図鑑：全魚種・釣り場・天候（1.0）",
-     "metaDescription": "ドロックタウンの完全魚図鑑：魚種ごとの釣り場・必要な竿と天候、繁殖限定のレア魚まで。",
-     "intro": "釣りはドロックタウンで第二の本職。本図鑑は確認済みの全魚種を網羅——出現場所、必要な季節と天候、そして水槽でしか作れないレア魚の繁殖方法。",
+     "metaTitle": "ドロックタウン釣り図鑑：釣り場・天候・季節（1.0）",
+     "metaDescription": "ドロックタウンの釣果表：釣り場、時間、天候、季節、現在の竿・コア要件を検索できます。",
+     "intro": "釣りはドロックタウンで第二の本職。本図鑑は現在記録されている釣果の出現場所、季節、天候、竿・コア要件をまとめます。",
      "sections": [
       {
        "type": "note",
@@ -4927,7 +4504,10 @@
        "body": "1.00.03 で新しい魚を乾燥できない問題は修正済み。一部の魚が難しすぎる問題は公式の既知事項として残っています。"
       },
       {
-       "type": "fishfilter"
+       "type": "note",
+       "tag": "CATCH-SCOPE",
+       "heading": "釣果表の範囲",
+       "body": "表は現在記録されている釣果と条件を掲載しています。更新後はゲーム内図鑑で再確認してください。"
       },
       {
        "type": "table",
@@ -5256,8 +4836,8 @@
       },
       {
        "type": "table",
-       "heading": "単月魚と繁殖限定魚",
-       "body": "2種は特定の月のみ出現。残りは釣った親魚から水槽で繁殖させます。",
+       "heading": "単月魚",
+       "body": "この2種は特定の月のみ出現します。",
        "columns": [
         "魚",
         "入手方法",
@@ -5273,61 +4853,6 @@
          "サケ",
          "1月（サケ祭り）",
          "竹の竿；池 + 町のドック中央、桟橋の下"
-        ],
-        [
-         "暗色スケルトン魚",
-         "擬態スケルトン魚を3匹以上で繁殖",
-         "66.67%"
-        ],
-        [
-         "銀光ウナギ",
-         "ウナギを6匹以上で繁殖",
-         "50%"
-        ],
-        [
-         "シロザケ",
-         "サケを6匹以上で繁殖",
-         "50%"
-        ],
-        [
-         "赤タラ",
-         "タラを3匹以上で繁殖",
-         "66.67%"
-        ],
-        [
-         "青カワカマス",
-         "カワカマスを3匹以上で繁殖",
-         "66.67%"
-        ],
-        [
-         "黒背イワシ",
-         "イワシ5匹以上 + ナマズ1匹で繁殖",
-         "66.67%"
-        ],
-        [
-         "帝王マグロ",
-         "マグロ5匹以上 + 光る金魚2匹以上で繁殖",
-         "25%"
-        ],
-        [
-         "葉ナメクジ",
-         "ソウギョ3匹以上 + 水生アメーバ3匹以上で繁殖",
-         "50%"
-        ],
-        [
-         "霧ウナギ",
-         "ドジョウ4匹以上 + タウナギ4匹以上で繁殖",
-         "50%"
-        ],
-        [
-         "恐怖魚",
-         "牙魚3匹 + カワカマス3匹ちょうどで繁殖",
-         "25%"
-        ],
-        [
-         "深淵ランタンスズキ",
-         "スズキ4匹以上 + 光るウナギ4匹以上で繁殖",
-         "50%"
         ]
        ],
        "rowAttrs": [
@@ -5346,94 +4871,6 @@
          "weather": "any",
          "req": "bamboo",
          "loc": "pond sea"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
         }
        ]
       },
@@ -5446,7 +4883,6 @@
         "竿を強化する：上位の竿でより良い魚が解禁され、ミニゲームも寛容に",
         "天候を活かす：雨と雷雨は晴れの日には出ない珍しい釣果をもたらす",
         "季節に注意：雨季（1〜2月）と乾季（3〜4月）で釣果テーブルが完全に変わる",
-        "繁殖前に現在のゲーム内要件を確認し、余剰分だけを扱う",
         "レア魚はドローン・道具の高度なパーツを落とす——良い釣りは強化費の財源"
        ]
       },
@@ -5458,22 +4894,22 @@
         "操作しにくい場合はミニゲームのリズムと設定を確認する。",
         "場所を選ぶ前に天候と魚の表を確認する。",
         "加工または販売前に現在のセーブ表示を比較する。",
-        "繁殖前に現在のゲーム内要件を確認し、余剰分だけを扱う。"
+        "余った釣果は残し、現在のゲーム内用途を先に確認する。"
        ],
        "type": "list"
       },
       {
        "type": "list",
        "heading": "出典と注記",
-       "body": "釣り場・季節・天候・繁殖確率はプレイヤー検証済みで、18183 の完全図鑑（L2）を元に編集。パッチで出現が変わる可能性があります——固定データベースではなくフィールドガイドとして扱ってください。⚠️ 日本語名はゲーム内中国語図鑑の訳で、英語クライアントと異なる場合があります。"
+       "body": "釣り場・季節・天候はプレイヤー検証済みで、18183 の図鑑（L2）を元に編集。パッチで出現が変わる可能性があります——固定データベースではなくフィールドガイドとして扱ってください。⚠️ 日本語名はゲーム内中国語図鑑の訳で、英語クライアントと異なる場合があります。"
       }
      ]
     },
     "ko": {
      "title": "돌록 타운 낚시 가이드: 연못·날씨·희귀어",
-     "metaTitle": "돌록 타운 낚시 도감: 전체 어종·낚시터·날씨 (1.0)",
-     "metaDescription": "돌록 타운의 완전한 물고기 도감: 어종별 낚시터, 필요한 낚싯대와 날씨, 그리고 번식으로만 얻는 희귀어까지.",
-     "intro": "낚시는 돌록 타운에서 두 번째 본업입니다. 이 도감은 확인된 모든 물고기를 다룹니다——어디서 나오는지, 어떤 계절과 날씨가 필요한지, 그리고 수조에서만 키울 수 있는 희귀어 번식법까지.",
+     "metaTitle": "돌록 타운 낚시 도감: 낚시터·날씨·계절 (1.0)",
+     "metaDescription": "돌록 타운 어획표에서 낚시터, 시간, 날씨, 계절과 현재 낚싯대·코어 요구 사항을 검색하세요.",
+     "intro": "낚시는 돌록 타운에서 두 번째 본업입니다. 이 도감은 현재 기록된 어획의 위치, 계절, 날씨와 낚싯대·코어 요구 사항을 정리합니다.",
      "sections": [
       {
        "type": "note",
@@ -5482,7 +4918,10 @@
        "body": "1.00.03에서 신규 물고기를 건조하지 못하던 문제를 수정했습니다. 일부 물고기가 너무 어렵다는 문제는 공식 알려진 문제로 남아 있습니다."
       },
       {
-       "type": "fishfilter"
+       "type": "note",
+       "tag": "CATCH-SCOPE",
+       "heading": "어획표 범위",
+       "body": "이 표는 현재 기록된 어획과 조건을 정리합니다. 패치 후에는 게임 내 도감에서 다시 확인하세요."
       },
       {
        "type": "table",
@@ -5811,8 +5250,8 @@
       },
       {
        "type": "table",
-       "heading": "단일 월 어종과 번식 전용 어종",
-       "body": "두 어종은 특정 달에만 나타나며, 나머지는 잡은 부모어로 수조에서 번식해야 합니다.",
+       "heading": "단일 월 어종",
+       "body": "이 두 어종은 특정 달에만 나타납니다.",
        "columns": [
         "물고기",
         "획득 방법",
@@ -5828,61 +5267,6 @@
          "연어",
          "1월 (연어 축제)",
          "대나무 낚싯대; 연못 + 마을 부두 중앙, 교각 아래"
-        ],
-        [
-         "어둠 해골 물고기",
-         "위장 해골 물고기 3마리 이상 번식",
-         "66.67% 확률"
-        ],
-        [
-         "은빛 뱀장어",
-         "뱀장어 6마리 이상 번식",
-         "50% 확률"
-        ],
-        [
-         "시베리아연어",
-         "연어 6마리 이상 번식",
-         "50% 확률"
-        ],
-        [
-         "붉은대구",
-         "대구 3마리 이상 번식",
-         "66.67% 확률"
-        ],
-        [
-         "파란강꼬치",
-         "강꼬치고기 3마리 이상 번식",
-         "66.67% 확률"
-        ],
-        [
-         "검은등 정어리",
-         "정어리 5마리 이상 + 메기 1마리 번식",
-         "66.67% 확률"
-        ],
-        [
-         "제왕참치",
-         "참치 5마리 이상 + 반짝이는 금붕어 2마리 이상 번식",
-         "25% 확률"
-        ],
-        [
-         "잎민달팽이",
-         "초어 3마리 이상 + 수생 아메바 3마리 이상 번식",
-         "50% 확률"
-        ],
-        [
-         "안개뱀장어",
-         "미꾸라지 4마리 이상 + 드렁허리 4마리 이상 번식",
-         "50% 확률"
-        ],
-        [
-         "공포어",
-         "이빨고기 정확히 3마리 + 강꼬치고기 3마리 번식",
-         "25% 확률"
-        ],
-        [
-         "심연 랜턴 배스",
-         "배스 4마리 이상 + 발광 뱀장어 4마리 이상 번식",
-         "50% 확률"
         ]
        ],
        "rowAttrs": [
@@ -5901,94 +5285,6 @@
          "weather": "any",
          "req": "bamboo",
          "loc": "pond sea"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
         }
        ]
       },
@@ -6001,7 +5297,6 @@
         "낚싯대를 업그레이드하세요: 상위 낚싯대는 더 좋은 물고기를 해금하고 미니게임도 관대해집니다",
         "날씨를 활용하세요: 비와 뇌우는 맑은 날에는 안 나오는 진귀한 어획을 줍니다",
         "계절을 주시하세요: 우기(1–2월)와 건기(3–4월)는 어획표를 완전히 바꿉니다",
-        "번식 전에 현재 게임 내 요구 사항을 확인하고 남는 물고기만 처리하세요",
         "희귀어는 드론·도구 고급 부품을 줍니다——좋은 낚시 한 번이 강화 비용을 채웁니다"
        ]
       },
@@ -6013,22 +5308,22 @@
         "조작이 어렵다면 미니게임 리듬과 설정을 확인하세요.",
         "자리 선택 전에 날씨와 어종 표를 확인하세요.",
         "가공하거나 판매하기 전에 현재 세이브 표시값을 비교하세요.",
-        "번식 전에 현재 게임 내 요구 사항을 확인하고 남는 물고기만 처리하세요."
+        "남는 어획은 보관하고 현재 게임 내 용도를 먼저 확인하세요."
        ],
        "type": "list"
       },
       {
        "type": "list",
        "heading": "출처 및 주의",
-       "body": "낚시터·계절·날씨·번식 확률은 플레이어 검증 후 18183의 완전 도감(L2)을 바탕으로 정리했습니다. 패치로 일부 출현이 달라질 수 있습니다——고정 데이터베이스가 아닌 현장 가이드로 다뤄주세요. ⚠️ 한국어 이름은 게임 내 중국어 도감의 번역이며 영어 클라이언트와 다를 수 있습니다."
+       "body": "낚시터·계절·날씨는 플레이어 검증 후 18183의 도감(L2)을 바탕으로 정리했습니다. 패치로 일부 출현이 달라질 수 있습니다——고정 데이터베이스가 아닌 현장 가이드로 다뤄주세요. ⚠️ 한국어 이름은 게임 내 중국어 도감의 번역이며 영어 클라이언트와 다를 수 있습니다."
       }
      ]
     },
     "es": {
      "title": "Guía de pesca de Doloc Town: estanques, clima y peces raros",
-     "metaTitle": "Pesca de Doloc Town: catálogo completo de peces (1.0)",
-     "metaDescription": "El catálogo completo de peces de Doloc Town: cada pez, dónde capturarlo, qué caña y clima necesita, y los raros que solo se crían.",
-     "intro": "La pesca es una segunda carrera completa en Doloc Town. Este catálogo reúne cada pez confirmado: dónde aparece, qué estación y clima necesita, y cómo criar las especies raras que solo viven en tanque.",
+     "metaTitle": "Pesca de Doloc Town: lugares, clima y cañas (1.0)",
+     "metaDescription": "Consulta capturas de Doloc Town por lugar, hora, clima, estación y requisitos actuales de caña o núcleo.",
+     "intro": "La pesca es una segunda carrera completa en Doloc Town. Este catálogo reúne las capturas documentadas con su lugar, estación, clima y requisitos de caña o núcleo.",
      "sections": [
       {
        "type": "note",
@@ -6043,7 +5338,10 @@
        "body": "El parche 1.00.03 corrigió los peces nuevos que no se podían secar. Algunos peces demasiado difíciles siguen en la lista oficial de problemas conocidos."
       },
       {
-       "type": "fishfilter"
+       "type": "note",
+       "tag": "CATCH-SCOPE",
+       "heading": "Alcance de las tablas",
+       "body": "Estas tablas recogen capturas y requisitos documentados. Vuelve a comprobar el catálogo del juego tras los parches."
       },
       {
        "type": "table",
@@ -6372,8 +5670,8 @@
       },
       {
        "type": "table",
-       "heading": "Peces de un solo mes y solo cría",
-       "body": "Dos peces aparecen en meses concretos; el resto solo puede criarse en un tanque a partir de los padres que captures.",
+       "heading": "Peces de un solo mes",
+       "body": "Estos dos peces aparecen solo en meses concretos.",
        "columns": [
         "Pez",
         "Cómo obtenerlo",
@@ -6389,61 +5687,6 @@
          "Salmón",
          "Enero (Festival del Salmón)",
          "Caña de bambú; estanques + Centro del muelle de la ciudad, Bajo el muelle"
-        ],
-        [
-         "Pez esqueleto oscuro",
-         "Cría con ≥3 peces esqueleto imitador",
-         "66,67 % de probabilidad"
-        ],
-        [
-         "Anguila de brillo plateado",
-         "Cría con ≥6 anguilas",
-         "50 % de probabilidad"
-        ],
-        [
-         "Salmón keta",
-         "Cría con ≥6 salmones",
-         "50 % de probabilidad"
-        ],
-        [
-         "Bacalao rojo",
-         "Cría con ≥3 bacalaos",
-         "66,67 % de probabilidad"
-        ],
-        [
-         "Lucio azul",
-         "Cría con ≥3 lucios",
-         "66,67 % de probabilidad"
-        ],
-        [
-         "Sardina de lomo negro",
-         "Cría con ≥5 sardinas + 1 bagre",
-         "66,67 % de probabilidad"
-        ],
-        [
-         "Atún emperador",
-         "Cría con ≥5 atunes + ≥2 peces dorado brillante",
-         "25 % de probabilidad"
-        ],
-        [
-         "Babosa hoja",
-         "Cría con ≥3 carpas herbívoras + ≥3 amebas acuáticas",
-         "50 % de probabilidad"
-        ],
-        [
-         "Anguila de niebla",
-         "Cría con ≥4 lochas + ≥4 anguilas de pantano",
-         "50 % de probabilidad"
-        ],
-        [
-         "Pez del terror",
-         "Cría con exactamente 3 peces colmillo + 3 lucios",
-         "25 % de probabilidad"
-        ],
-        [
-         "Lubina linterna abisal",
-         "Cría con ≥4 lubinas + ≥4 anguilas brillantes",
-         "50 % de probabilidad"
         ]
        ],
        "rowAttrs": [
@@ -6462,94 +5705,6 @@
          "weather": "any",
          "req": "bamboo",
          "loc": "pond sea"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
-        },
-        {
-         "period": "breed",
-         "how": "breed",
-         "time": "any",
-         "weather": "any",
-         "req": "none",
-         "loc": "none"
         }
        ]
       },
@@ -6562,7 +5717,6 @@
         "Mejora tu caña: las cañas superiores desbloquean mejores peces y hacen el minijuego más permisivo",
         "Pesca según el clima: la lluvia y las tormentas traen capturas poco comunes que no aparecen en días secos",
         "Vigila la estación: la lluviosa (ene–feb) y la seca (mar–abr) cambian por completo las tablas de captura",
-        "Antes de criar, revisa los requisitos actuales del juego y usa solo los peces que sobren",
         "Los peces raros dan piezas avanzadas de dron y herramientas: una buena sesión de pesca financia tus mejoras"
        ]
       },
@@ -6574,14 +5728,14 @@
         "Si el mando resulta difícil, practica el ritmo y revisa los ajustes.",
         "Consulta las tablas de clima y peces antes de elegir sitio.",
         "Compara los valores actuales antes de procesar o vender.",
-        "Antes de criar, revisa los requisitos actuales y usa solo los peces que sobren."
+        "Guarda las capturas sobrantes y revisa primero sus usos actuales en el juego."
        ],
        "type": "list"
       },
       {
        "type": "list",
        "heading": "Fuentes y notas",
-       "body": "Ubicaciones, estaciones, clima y probabilidades de cría están verificados por jugadores y recopilados del catálogo completo de 18183 (L2). Algunas apariciones pueden variar tras los parches: trátalo como una guía de campo, no como una base de datos fija. ⚠️ Los nombres en español son traducciones del catálogo chino del juego y pueden diferir del cliente en inglés."
+       "body": "Ubicaciones, estaciones y clima están verificados por jugadores y recopilados del catálogo de 18183 (L2). Algunas apariciones pueden variar tras los parches: trátalo como una guía de campo, no como una base de datos fija. ⚠️ Los nombres en español son traducciones del catálogo chino del juego y pueden diferir del cliente en inglés."
       }
      ]
     }
@@ -15227,7 +14381,7 @@
         ],
         [
          "농업 자동화가 있나요?",
-         "네——1.0 신규. 농업 자동화이 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다."
+         "네——1.0 신규. 농업 자동화가 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다."
         ],
         [
          "1.0에 뭐가 새로 있나요?",

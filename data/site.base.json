@@ -657,8 +657,8 @@
   {
    "slug": "fishing",
    "title": "Doloc Town Fishing Guide: Ponds, Weather & Rare Fish",
-   "metaTitle": "Doloc Town Fish Chart: All 33 Fish, Locations & Weather",
-   "metaDescription": "Every Doloc Town fish in one searchable, filterable chart: all 33 species, time, weather, pond and season, plus the rare breeding-only fish.",
+   "metaTitle": "Doloc Town Fish Chart: Locations, Weather & Seasons",
+   "metaDescription": "Review Doloc Town fishing locations, times, weather, seasons and current rod or core requirements in one catch chart.",
    "intro": "Fishing is a full second career in Doloc Town. This catalog lists fish locations, seasons, weather and current in-game requirements.",
    "sections": [
     {
@@ -822,8 +822,8 @@
     },
     {
      "type": "table",
-     "heading": "Single-Month & Breeding-Only Fish",
-     "body": "Two fish appear in specific months; the rest can only be bred in a fish tank from parents you catch.",
+     "heading": "Single-Month Fish",
+     "body": "These two fish appear only in specific months.",
      "columns": [
       "Fish",
       "How to get",
@@ -839,61 +839,6 @@
        "Salmon",
        "January (Salmon Festival)",
        "Bamboo rod; ponds + Town Dock Center, Under Pier"
-      ],
-      [
-       "Dark Skeleton Fish",
-       "Breed ≥3 Mimic Skeleton Fish",
-       "66.67% chance"
-      ],
-      [
-       "Silver-Glow Eel",
-       "Breed ≥6 Eels",
-       "50% chance"
-      ],
-      [
-       "Chum Salmon",
-       "Breed ≥6 Salmon",
-       "50% chance"
-      ],
-      [
-       "Red Cod",
-       "Breed ≥3 Cod",
-       "66.67% chance"
-      ],
-      [
-       "Blue Pike",
-       "Breed ≥3 Pike",
-       "66.67% chance"
-      ],
-      [
-       "Black-Back Sardine",
-       "Breed ≥5 Sardine + 1 Catfish",
-       "66.67% chance"
-      ],
-      [
-       "Emperor Tuna",
-       "Breed ≥5 Tuna + ≥2 Shining Goldfish",
-       "25% chance"
-      ],
-      [
-       "Leaf Slug",
-       "Breed ≥3 Grass Carp + ≥3 Aquatic Amoeba",
-       "50% chance"
-      ],
-      [
-       "Mist Eel",
-       "Breed ≥4 Loach + ≥4 Swamp Eel",
-       "50% chance"
-      ],
-      [
-       "Terror Fish",
-       "Breed exactly 3 Fang Fish + 3 Pike",
-       "25% chance"
-      ],
-      [
-       "Abyss Lantern Bass",
-       "Breed ≥4 Bass + ≥4 Glowing Eel",
-       "50% chance"
       ]
      ]
     },
@@ -906,7 +851,6 @@
       "Upgrade your rod: higher-tier rods unlock better fish and make the fishing minigame more forgiving",
       "Fish through weather: rain and thunderstorms bring uncommon catches that dry days don't",
       "Watch the season: rainy season (Jan–Feb) and dry season (Mar–Apr) change the catch tables completely",
-      "Review current in-game breeding requirements before using spare fish",
       "Rare fish drop advanced drone and tool parts, so a good fishing session funds your upgrades"
      ]
     },
@@ -920,13 +864,13 @@
       "Controller players report the most failures: if a catch keeps slipping on a gamepad, upgrade the rod before assuming your timing is the problem.",
       "Fish through weather: rain and thunderstorms bring catches that dry days never do — check the tables above before choosing a spot.",
       "Use unlocked processing equipment for surplus catches, and compare the current in-game values before selling.",
-      "Keep spare fish until you have checked the current in-game breeding requirements."
+      "Keep surplus catches until you have checked their current in-game uses."
      ]
     },
     {
      "type": "note",
      "heading": "Sources & Notes",
-     "body": "Fish locations, seasons, weather and breeding odds are player-verified and compiled from 18183's full catalog (L2). Some spawns may vary after patches — treat this as a field guide, not a fixed database. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client."
+     "body": "Fish locations, seasons and weather are player-verified and compiled from 18183's catalog (L2). Some spawns may vary after patches — treat this as a field guide, not a fixed database. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client."
     }
    ],
    "sources": [

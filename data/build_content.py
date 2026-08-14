@@ -1107,7 +1107,7 @@ KO.update({
   "intro":"돌록 타운에 대해 플레이어들이 가장 많이 묻는 질문에 대한 출처가 있는 간결한 답변.",
   "sections":[
    {"heading":"자주 묻는 질문",
-    "items":[["돌록 타운은 멀티 / 협동 게임인가요?","아니요. 개발사는 1.0이 싱글 플레이 경험이라고 밝혔습니다. co-op과 멀티는 커뮤니티 피드백에 따라 추후 논의될 수 있습니다."],["Steam Deck 검증됐나요?","'Playable(플레이 가능)'로 표시되어 있으며 'Verified(검증됨)'는 아닙니다. 팀은 알려진 문제를 해결하고 향후 업데이트에서 Verified를 목표로 합니다."],["가격은?","Steam에서 ¥58. 출시 -20% 할인(¥46.40)은 2026년 8월 19일까지."],["게임 분량은?","메인 30시간+. 모든 추가 요소 포함 100시간+."],["연애 요소가 있나요?","없습니다——개발사가 연애/결혼 시스템이 없음을 확인했습니다. 소셜은 우정 기반입니다."],["지원 플랫폼은?","PC(Windows) Steam. 최소 사양: i3 6100, 8GB RAM, GTX 460, DX11, 2GB."],["농업 자동화가 있나요?","네——1.0 신규. 2단계 자동화이 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다."],["1.0에 뭐가 새로 있나요?","구시가지 유적, 완전한 스토리 결말, 농업 자동화, 버섯 축제, 새 도구/드론/물고기/액세서리, 신규 업적 37개."]]}
+    "items":[["돌록 타운은 멀티 / 협동 게임인가요?","아니요. 개발사는 1.0이 싱글 플레이 경험이라고 밝혔습니다. co-op과 멀티는 커뮤니티 피드백에 따라 추후 논의될 수 있습니다."],["Steam Deck 검증됐나요?","'Playable(플레이 가능)'로 표시되어 있으며 'Verified(검증됨)'는 아닙니다. 팀은 알려진 문제를 해결하고 향후 업데이트에서 Verified를 목표로 합니다."],["가격은?","Steam에서 ¥58. 출시 -20% 할인(¥46.40)은 2026년 8월 19일까지."],["게임 분량은?","메인 30시간+. 모든 추가 요소 포함 100시간+."],["연애 요소가 있나요?","없습니다——개발사가 연애/결혼 시스템이 없음을 확인했습니다. 소셜은 우정 기반입니다."],["지원 플랫폼은?","PC(Windows) Steam. 최소 사양: i3 6100, 8GB RAM, GTX 460, DX11, 2GB."],["농업 자동화가 있나요?","네——1.0 신규. 2단계 자동화가 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다."],["1.0에 뭐가 새로 있나요?","구시가지 유적, 완전한 스토리 결말, 농업 자동화, 버섯 축제, 새 도구/드론/물고기/액세서리, 신규 업적 37개."]]}
   ]
  },
  "system-requirements": {
@@ -1651,9 +1651,9 @@ apply_lang("es", ES)
 # 覆盖旧 fishing/farming 翻译（旧为 4 段结构），与 site.base.json 的 6/8 段英文对齐后重跑 apply_lang
 ZH["fishing"] = {
  "title": "多洛可小镇钓鱼指南：池塘、天气与稀有鱼",
- "metaTitle": "多洛可小镇鱼图鉴：33 种鱼、钓点与天气（可筛选）",
- "metaDescription": "多洛可小镇全部 33 种鱼一表收录：时间、天气、钓点与只能养殖获得的稀有鱼，支持搜索筛选快速查找。",
- "intro": "钓鱼是多洛可小镇的第二种全职事业。本图鉴列出每一条已确认的鱼——在哪里刷新、需要什么季节与天气，以及如何繁殖只能养在鱼缸里的稀有鱼。",
+ "metaTitle": "多洛可小镇鱼类钓点、天气与季节",
+ "metaDescription": "多洛可小镇钓鱼表：查阅时间、天气、钓点、季节及当前鱼竿或核心要求。",
+ "intro": "钓鱼是多洛可小镇的第二种全职事业。本图鉴整理当前有记录的渔获——在哪里刷新、需要什么季节、天气、鱼竿或核心。",
  "sections": [
   {
    "type": "table",
@@ -1816,8 +1816,8 @@ ZH["fishing"] = {
   },
   {
    "type": "table",
-   "heading": "单月鱼与只能繁殖的鱼",
-   "body": "两种鱼只在特定月份出现；其余只能在你钓到的亲本基础上于鱼缸中繁殖。",
+   "heading": "单月鱼类",
+   "body": "这两种鱼只在特定月份出现。",
    "columns": [
     "鱼",
     "获得方式",
@@ -1833,61 +1833,6 @@ ZH["fishing"] = {
      "鲑鱼",
      "1 月（鲑鱼节）",
      "竹竿；池塘 + 城镇码头中心、桥墩下"
-    ],
-    [
-     "暗色骨架鱼",
-     "繁殖 ≥3 条拟态骨架鱼",
-     "66.67% 概率"
-    ],
-    [
-     "银光鳗鱼",
-     "繁殖 ≥6 条鳗鱼",
-     "50% 概率"
-    ],
-    [
-     "大马哈鱼",
-     "繁殖 ≥6 条鲑鱼",
-     "50% 概率"
-    ],
-    [
-     "红鳕鱼",
-     "繁殖 ≥3 条鳕鱼",
-     "66.67% 概率"
-    ],
-    [
-     "蓝狗鱼",
-     "繁殖 ≥3 条狗鱼",
-     "66.67% 概率"
-    ],
-    [
-     "黑背沙丁鱼",
-     "繁殖 ≥5 条沙丁鱼 + 1 条鲶鱼",
-     "66.67% 概率"
-    ],
-    [
-     "帝王金枪鱼",
-     "繁殖 ≥5 条金枪鱼 + ≥2 条闪亮黄金鱼",
-     "25% 概率"
-    ],
-    [
-     "叶蛞蝓",
-     "繁殖 ≥3 条草鱼 + ≥3 条水生变形虫",
-     "50% 概率"
-    ],
-    [
-     "雾鳗",
-     "繁殖 ≥4 条泥鳅 + ≥4 条黄鳝",
-     "50% 概率"
-    ],
-    [
-     "恐鱼",
-     "繁殖恰好 3 条牙鱼 + 3 条狗鱼",
-     "25% 概率"
-    ],
-    [
-     "深渊灯笼鲈鱼",
-     "繁殖 ≥4 条鲈鱼 + ≥4 条荧光鳗鱼",
-     "50% 概率"
     ]
    ]
   },
@@ -1900,22 +1845,21 @@ ZH["fishing"] = {
     "升级鱼竿：更高品质的鱼竿解锁更好的鱼，也让钓鱼小游戏更宽容",
     "看天气钓鱼：雨天和雷暴会带来晴天没有的稀有渔获",
     "盯紧季节：雨季（1–2 月）与旱季（3–4 月）会完全改变渔获表",
-    "繁殖前先在当前游戏内核对需求，再处理多余鱼类",
     "稀有鱼掉落高级无人机与工具零件，一次好的钓鱼就够升级开支"
    ]
   },
   {
    "type": "note",
    "heading": "来源与说明",
-   "body": "钓点、季节、天气与繁殖概率由玩家实测，并整理自 18183 的完整图鉴（L2）。部分刷新点可能随补丁变化——请把它当作野外手册，而非固定数据库。⚠️ 中文名为游戏内中文图鉴译名，可能与英文客户端不同。"
+   "body": "钓点、季节与天气由玩家实测，并整理自 18183 的图鉴（L2）。部分刷新点可能随补丁变化——请把它当作野外手册，而非固定数据库。⚠️ 中文名为游戏内中文图鉴译名，可能与英文客户端不同。"
   }
  ]
 }
 JA["fishing"] = {
  "title": "ドロックタウン釣りガイド：池・天候・レア魚",
- "metaTitle": "ドロックタウン釣り図鑑：全魚種・釣り場・天候（1.0）",
- "metaDescription": "ドロックタウンの完全魚図鑑：魚種ごとの釣り場・必要な竿と天候、繁殖限定のレア魚まで。",
- "intro": "釣りはドロックタウンで第二の本職。本図鑑は確認済みの全魚種を網羅——出現場所、必要な季節と天候、そして水槽でしか作れないレア魚の繁殖方法。",
+ "metaTitle": "ドロックタウン釣り図鑑：釣り場・天候・季節（1.0）",
+ "metaDescription": "ドロックタウンの釣果表：釣り場、時間、天候、季節、現在の竿・コア要件を検索できます。",
+ "intro": "釣りはドロックタウンで第二の本職。本図鑑は現在記録されている釣果の出現場所、季節、天候、竿・コア要件をまとめます。",
  "sections": [
   {
    "type": "table",
@@ -2078,8 +2022,8 @@ JA["fishing"] = {
   },
   {
    "type": "table",
-   "heading": "単月魚と繁殖限定魚",
-   "body": "2種は特定の月のみ出現。残りは釣った親魚から水槽で繁殖させます。",
+   "heading": "単月魚",
+   "body": "この2種は特定の月のみ出現します。",
    "columns": [
     "魚",
     "入手方法",
@@ -2095,61 +2039,6 @@ JA["fishing"] = {
      "サケ",
      "1月（サケ祭り）",
      "竹の竿；池 + 町のドック中央、桟橋の下"
-    ],
-    [
-     "暗色スケルトン魚",
-     "擬態スケルトン魚を3匹以上で繁殖",
-     "66.67%"
-    ],
-    [
-     "銀光ウナギ",
-     "ウナギを6匹以上で繁殖",
-     "50%"
-    ],
-    [
-     "シロザケ",
-     "サケを6匹以上で繁殖",
-     "50%"
-    ],
-    [
-     "赤タラ",
-     "タラを3匹以上で繁殖",
-     "66.67%"
-    ],
-    [
-     "青カワカマス",
-     "カワカマスを3匹以上で繁殖",
-     "66.67%"
-    ],
-    [
-     "黒背イワシ",
-     "イワシ5匹以上 + ナマズ1匹で繁殖",
-     "66.67%"
-    ],
-    [
-     "帝王マグロ",
-     "マグロ5匹以上 + 光る金魚2匹以上で繁殖",
-     "25%"
-    ],
-    [
-     "葉ナメクジ",
-     "ソウギョ3匹以上 + 水生アメーバ3匹以上で繁殖",
-     "50%"
-    ],
-    [
-     "霧ウナギ",
-     "ドジョウ4匹以上 + タウナギ4匹以上で繁殖",
-     "50%"
-    ],
-    [
-     "恐怖魚",
-     "牙魚3匹 + カワカマス3匹ちょうどで繁殖",
-     "25%"
-    ],
-    [
-     "深淵ランタンスズキ",
-     "スズキ4匹以上 + 光るウナギ4匹以上で繁殖",
-     "50%"
     ]
    ]
   },
@@ -2162,22 +2051,21 @@ JA["fishing"] = {
     "竿を強化する：上位の竿でより良い魚が解禁され、ミニゲームも寛容に",
     "天候を活かす：雨と雷雨は晴れの日には出ない珍しい釣果をもたらす",
     "季節に注意：雨季（1〜2月）と乾季（3〜4月）で釣果テーブルが完全に変わる",
-    "繁殖前に現在のゲーム内要件を確認し、余剰分だけを扱う",
     "レア魚はドローン・道具の高度なパーツを落とす——良い釣りは強化費の財源"
    ]
   },
   {
    "type": "note",
    "heading": "出典と注記",
-   "body": "釣り場・季節・天候・繁殖確率はプレイヤー検証済みで、18183 の完全図鑑（L2）を元に編集。パッチで出現が変わる可能性があります——固定データベースではなくフィールドガイドとして扱ってください。⚠️ 日本語名はゲーム内中国語図鑑の訳で、英語クライアントと異なる場合があります。"
+   "body": "釣り場・季節・天候はプレイヤー検証済みで、18183 の図鑑（L2）を元に編集。パッチで出現が変わる可能性があります——固定データベースではなくフィールドガイドとして扱ってください。⚠️ 日本語名はゲーム内中国語図鑑の訳で、英語クライアントと異なる場合があります。"
   }
  ]
 }
 KO["fishing"] = {
  "title": "돌록 타운 낚시 가이드: 연못·날씨·희귀어",
- "metaTitle": "돌록 타운 낚시 도감: 전체 어종·낚시터·날씨 (1.0)",
- "metaDescription": "돌록 타운의 완전한 물고기 도감: 어종별 낚시터, 필요한 낚싯대와 날씨, 그리고 번식으로만 얻는 희귀어까지.",
- "intro": "낚시는 돌록 타운에서 두 번째 본업입니다. 이 도감은 확인된 모든 물고기를 다룹니다——어디서 나오는지, 어떤 계절과 날씨가 필요한지, 그리고 수조에서만 키울 수 있는 희귀어 번식법까지.",
+ "metaTitle": "돌록 타운 낚시 도감: 낚시터·날씨·계절 (1.0)",
+ "metaDescription": "돌록 타운 어획표에서 낚시터, 시간, 날씨, 계절과 현재 낚싯대·코어 요구 사항을 검색하세요.",
+ "intro": "낚시는 돌록 타운에서 두 번째 본업입니다. 이 도감은 현재 기록된 어획의 위치, 계절, 날씨와 낚싯대·코어 요구 사항을 정리합니다.",
  "sections": [
   {
    "type": "table",
@@ -2340,8 +2228,8 @@ KO["fishing"] = {
   },
   {
    "type": "table",
-   "heading": "단일 월 어종과 번식 전용 어종",
-   "body": "두 어종은 특정 달에만 나타나며, 나머지는 잡은 부모어로 수조에서 번식해야 합니다.",
+   "heading": "단일 월 어종",
+   "body": "이 두 어종은 특정 달에만 나타납니다.",
    "columns": [
     "물고기",
     "획득 방법",
@@ -2357,61 +2245,6 @@ KO["fishing"] = {
      "연어",
      "1월 (연어 축제)",
      "대나무 낚싯대; 연못 + 마을 부두 중앙, 교각 아래"
-    ],
-    [
-     "어둠 해골 물고기",
-     "위장 해골 물고기 3마리 이상 번식",
-     "66.67% 확률"
-    ],
-    [
-     "은빛 뱀장어",
-     "뱀장어 6마리 이상 번식",
-     "50% 확률"
-    ],
-    [
-     "시베리아연어",
-     "연어 6마리 이상 번식",
-     "50% 확률"
-    ],
-    [
-     "붉은대구",
-     "대구 3마리 이상 번식",
-     "66.67% 확률"
-    ],
-    [
-     "파란강꼬치",
-     "강꼬치고기 3마리 이상 번식",
-     "66.67% 확률"
-    ],
-    [
-     "검은등 정어리",
-     "정어리 5마리 이상 + 메기 1마리 번식",
-     "66.67% 확률"
-    ],
-    [
-     "제왕참치",
-     "참치 5마리 이상 + 반짝이는 금붕어 2마리 이상 번식",
-     "25% 확률"
-    ],
-    [
-     "잎민달팽이",
-     "초어 3마리 이상 + 수생 아메바 3마리 이상 번식",
-     "50% 확률"
-    ],
-    [
-     "안개뱀장어",
-     "미꾸라지 4마리 이상 + 드렁허리 4마리 이상 번식",
-     "50% 확률"
-    ],
-    [
-     "공포어",
-     "이빨고기 정확히 3마리 + 강꼬치고기 3마리 번식",
-     "25% 확률"
-    ],
-    [
-     "심연 랜턴 배스",
-     "배스 4마리 이상 + 발광 뱀장어 4마리 이상 번식",
-     "50% 확률"
     ]
    ]
   },
@@ -2424,22 +2257,21 @@ KO["fishing"] = {
     "낚싯대를 업그레이드하세요: 상위 낚싯대는 더 좋은 물고기를 해금하고 미니게임도 관대해집니다",
     "날씨를 활용하세요: 비와 뇌우는 맑은 날에는 안 나오는 진귀한 어획을 줍니다",
     "계절을 주시하세요: 우기(1–2월)와 건기(3–4월)는 어획표를 완전히 바꿉니다",
-    "번식 전에 현재 게임 내 요구 사항을 확인하고 남는 물고기만 처리하세요",
     "희귀어는 드론·도구 고급 부품을 줍니다——좋은 낚시 한 번이 강화 비용을 채웁니다"
    ]
   },
   {
    "type": "note",
    "heading": "출처 및 주의",
-   "body": "낚시터·계절·날씨·번식 확률은 플레이어 검증 후 18183의 완전 도감(L2)을 바탕으로 정리했습니다. 패치로 일부 출현이 달라질 수 있습니다——고정 데이터베이스가 아닌 현장 가이드로 다뤄주세요. ⚠️ 한국어 이름은 게임 내 중국어 도감의 번역이며 영어 클라이언트와 다를 수 있습니다."
+   "body": "낚시터·계절·날씨는 플레이어 검증 후 18183의 도감(L2)을 바탕으로 정리했습니다. 패치로 일부 출현이 달라질 수 있습니다——고정 데이터베이스가 아닌 현장 가이드로 다뤄주세요. ⚠️ 한국어 이름은 게임 내 중국어 도감의 번역이며 영어 클라이언트와 다를 수 있습니다."
   }
  ]
 }
 ES["fishing"] = {
  "title": "Guía de pesca de Doloc Town: estanques, clima y peces raros",
- "metaTitle": "Pesca de Doloc Town: catálogo completo de peces (1.0)",
- "metaDescription": "El catálogo completo de peces de Doloc Town: cada pez, dónde capturarlo, qué caña y clima necesita, y los raros que solo se crían.",
- "intro": "La pesca es una segunda carrera completa en Doloc Town. Este catálogo reúne cada pez confirmado: dónde aparece, qué estación y clima necesita, y cómo criar las especies raras que solo viven en tanque.",
+ "metaTitle": "Pesca de Doloc Town: lugares, clima y cañas (1.0)",
+ "metaDescription": "Consulta capturas de Doloc Town por lugar, hora, clima, estación y requisitos actuales de caña o núcleo.",
+ "intro": "La pesca es una segunda carrera completa en Doloc Town. Este catálogo reúne las capturas documentadas con su lugar, estación, clima y requisitos de caña o núcleo.",
  "sections": [
   {
    "type": "table",
@@ -2602,8 +2434,8 @@ ES["fishing"] = {
   },
   {
    "type": "table",
-   "heading": "Peces de un solo mes y solo cría",
-   "body": "Dos peces aparecen en meses concretos; el resto solo puede criarse en un tanque a partir de los padres que captures.",
+   "heading": "Peces de un solo mes",
+   "body": "Estos dos peces aparecen solo en meses concretos.",
    "columns": [
     "Pez",
     "Cómo obtenerlo",
@@ -2619,61 +2451,6 @@ ES["fishing"] = {
      "Salmón",
      "Enero (Festival del Salmón)",
      "Caña de bambú; estanques + Centro del muelle de la ciudad, Bajo el muelle"
-    ],
-    [
-     "Pez esqueleto oscuro",
-     "Cría con ≥3 peces esqueleto imitador",
-     "66,67 % de probabilidad"
-    ],
-    [
-     "Anguila de brillo plateado",
-     "Cría con ≥6 anguilas",
-     "50 % de probabilidad"
-    ],
-    [
-     "Salmón keta",
-     "Cría con ≥6 salmones",
-     "50 % de probabilidad"
-    ],
-    [
-     "Bacalao rojo",
-     "Cría con ≥3 bacalaos",
-     "66,67 % de probabilidad"
-    ],
-    [
-     "Lucio azul",
-     "Cría con ≥3 lucios",
-     "66,67 % de probabilidad"
-    ],
-    [
-     "Sardina de lomo negro",
-     "Cría con ≥5 sardinas + 1 bagre",
-     "66,67 % de probabilidad"
-    ],
-    [
-     "Atún emperador",
-     "Cría con ≥5 atunes + ≥2 peces dorado brillante",
-     "25 % de probabilidad"
-    ],
-    [
-     "Babosa hoja",
-     "Cría con ≥3 carpas herbívoras + ≥3 amebas acuáticas",
-     "50 % de probabilidad"
-    ],
-    [
-     "Anguila de niebla",
-     "Cría con ≥4 lochas + ≥4 anguilas de pantano",
-     "50 % de probabilidad"
-    ],
-    [
-     "Pez del terror",
-     "Cría con exactamente 3 peces colmillo + 3 lucios",
-     "25 % de probabilidad"
-    ],
-    [
-     "Lubina linterna abisal",
-     "Cría con ≥4 lubinas + ≥4 anguilas brillantes",
-     "50 % de probabilidad"
     ]
    ]
   },
@@ -2686,14 +2463,13 @@ ES["fishing"] = {
     "Mejora tu caña: las cañas superiores desbloquean mejores peces y hacen el minijuego más permisivo",
     "Pesca según el clima: la lluvia y las tormentas traen capturas poco comunes que no aparecen en días secos",
     "Vigila la estación: la lluviosa (ene–feb) y la seca (mar–abr) cambian por completo las tablas de captura",
-    "Antes de criar, revisa los requisitos actuales del juego y usa solo los peces que sobren",
     "Los peces raros dan piezas avanzadas de dron y herramientas: una buena sesión de pesca financia tus mejoras"
    ]
   },
   {
    "type": "note",
    "heading": "Fuentes y notas",
-   "body": "Ubicaciones, estaciones, clima y probabilidades de cría están verificados por jugadores y recopilados del catálogo completo de 18183 (L2). Algunas apariciones pueden variar tras los parches: trátalo como una guía de campo, no como una base de datos fija. ⚠️ Los nombres en español son traducciones del catálogo chino del juego y pueden diferir del cliente en inglés."
+   "body": "Ubicaciones, estaciones y clima están verificados por jugadores y recopilados del catálogo de 18183 (L2). Algunas apariciones pueden variar tras los parches: trátalo como una guía de campo, no como una base de datos fija. ⚠️ Los nombres en español son traducciones del catálogo chino del juego y pueden diferir del cliente en inglés."
   }
  ]
 }
@@ -6999,12 +6775,23 @@ if _fp:
     _attach(_fp["sections"])
     for _lg, _t in (_fp.get("i18n") or {}).items():
         _attach(_t.get("sections", []))
-    # 首节插入筛选器（幂等）
-    _fp["sections"] = [s for s in _fp["sections"] if s.get("type") != "fishfilter"]
-    _fp["sections"].insert(0, {"type": "fishfilter"})
+    # The former filter advertised removed recipe rows and a stale total.
+    # Replace it with a source-boundary note so ad placement and reading order
+    # remain stable without preserving an empty or misleading control.
+    _fish_scope = {
+        "en": ("Catch chart scope", "These tables list currently documented catches and requirements. Recheck the in-game catalog after patches."),
+        "zh-CN": ("渔获表范围", "这些表格列出当前有记录的渔获与条件；补丁更新后请在游戏内图鉴中复核。"),
+        "zh-TW": ("漁獲表範圍", "這些表格列出目前有記錄的漁獲與條件；更新後請在遊戲內圖鑑中複核。"),
+        "ja": ("釣果表の範囲", "表は現在記録されている釣果と条件を掲載しています。更新後はゲーム内図鑑で再確認してください。"),
+        "ko": ("어획표 범위", "이 표는 현재 기록된 어획과 조건을 정리합니다. 패치 후에는 게임 내 도감에서 다시 확인하세요."),
+        "es": ("Alcance de las tablas", "Estas tablas recogen capturas y requisitos documentados. Vuelve a comprobar el catálogo del juego tras los parches."),
+    }
+    _fp["sections"] = [s for s in _fp["sections"] if s.get("type") != "fishfilter" and s.get("tag") != "CATCH-SCOPE"]
+    _fp["sections"].insert(0, {"type":"note", "tag":"CATCH-SCOPE", "heading":_fish_scope["en"][0], "body":_fish_scope["en"][1]})
     for _lg, _t in (_fp.get("i18n") or {}).items():
-        _t["sections"] = [s for s in _t.get("sections", []) if s.get("type") != "fishfilter"]
-        _t["sections"].insert(0, {"type": "fishfilter"})
+        _t["sections"] = [s for s in _t.get("sections", []) if s.get("type") != "fishfilter" and s.get("tag") != "CATCH-SCOPE"]
+        _heading, _body = _fish_scope[_lg]
+        _t["sections"].insert(0, {"type":"note", "tag":"CATCH-SCOPE", "heading":_heading, "body":_body})
     print("fishing rowAttrs:", sum(len(a) for a in _attrs_by_table), "行 ×", 1 + len(_fp.get("i18n") or {}), "语言")
 
 # ================= gene-system: 行属性（前端筛选器用） =================
@@ -7085,7 +6872,7 @@ _EXTRA = {
   ]},
   "fishing": {"sections": [
    {"en": "Fishing Tips: Common Failures & Fixes", "heading": "钓鱼技巧：常见失败与对策", "body": "早期钓鱼的大量挫败感来自鱼竿等级与时机，而不是运气。这些技巧来自社区经验——在我们于 1.0 实测前，请把数字当作玩家报告。[L2]",
-    "items": ["挑战更难的渔获前查看游戏内当前鱼竿要求。", "手柄操作不顺时先练习小游戏节奏并查看游戏内设置。", "选点前核对天气与渔获表。", "加工或出售前比较当前存档显示的数值。", "繁殖前先核对当前游戏内要求，只处理多余鱼类。"]}
+    "items": ["挑战更难的渔获前查看游戏内当前鱼竿要求。", "手柄操作不顺时先练习小游戏节奏并查看游戏内设置。", "选点前核对天气与渔获表。", "加工或出售前比较当前存档显示的数值。", "把多余渔获留下，先核对当前游戏内用途。"]}
   ]},
   "make-money": {
    "title": "多洛可小镇怎么快速赚钱（1.0）",
@@ -7116,7 +6903,7 @@ _EXTRA = {
   ]},
   "fishing": {"sections": [
    {"en": "Fishing Tips: Common Failures & Fixes", "heading": "釣りのコツ：よくある失敗と対策", "body": "序盤の釣りで挫折する原因は、ほとんどが運ではなく竿のレベルとタイミング。以下のコツはコミュニティ経験に基づく——1.0 で実測するまでは数値をプレイヤー報告として扱ってほしい。[L2]",
-    "items": ["難しい魚を狙う前に現在の竿の要件を確認する。", "操作しにくい場合はミニゲームのリズムと設定を確認する。", "場所を選ぶ前に天候と魚の表を確認する。", "加工または販売前に現在のセーブ表示を比較する。", "繁殖前に現在のゲーム内要件を確認し、余剰分だけを扱う。"]}
+    "items": ["難しい魚を狙う前に現在の竿の要件を確認する。", "操作しにくい場合はミニゲームのリズムと設定を確認する。", "場所を選ぶ前に天候と魚の表を確認する。", "加工または販売前に現在のセーブ表示を比較する。", "余った釣果は残し、現在のゲーム内用途を先に確認する。"]}
   ]},
   "make-money": {
    "title": "ドロックタウンで早く稼ぐ方法（1.0）",
@@ -7147,7 +6934,7 @@ _EXTRA = {
   ]},
   "fishing": {"sections": [
    {"en": "Fishing Tips: Common Failures & Fixes", "heading": "낚시 팁: 흔한 실패와 해결법", "body": "초반 낚시의 좌절감 대부분은 운이 아니라 낚싯대 레벨과 타이밍에서 옵니다. 이 팁은 커뮤니티 경험에 기반합니다 — 1.0에서 직접 검증하기 전까지는 숫자를 플레이어 제보로 취급하세요. [L2]",
-    "items": ["어려운 어종을 노리기 전에 현재 낚싯대 요구 사항을 확인하세요.", "조작이 어렵다면 미니게임 리듬과 설정을 확인하세요.", "자리 선택 전에 날씨와 어종 표를 확인하세요.", "가공하거나 판매하기 전에 현재 세이브 표시값을 비교하세요.", "번식 전에 현재 게임 내 요구 사항을 확인하고 남는 물고기만 처리하세요."]}
+    "items": ["어려운 어종을 노리기 전에 현재 낚싯대 요구 사항을 확인하세요.", "조작이 어렵다면 미니게임 리듬과 설정을 확인하세요.", "자리 선택 전에 날씨와 어종 표를 확인하세요.", "가공하거나 판매하기 전에 현재 세이브 표시값을 비교하세요.", "남는 어획은 보관하고 현재 게임 내 용도를 먼저 확인하세요."]}
   ]},
   "make-money": {
    "title": "돌록 타운에서 빨리 돈 버는 법 (1.0)",
@@ -7178,7 +6965,7 @@ _EXTRA = {
   ]},
   "fishing": {"sections": [
    {"en": "Fishing Tips: Common Failures & Fixes", "heading": "Consejos de pesca: fallos comunes y soluciones", "body": "Gran parte de la frustración inicial con la pesca es el nivel de la caña y el timing, no la suerte. Estos consejos vienen de la experiencia de la comunidad — trata los números como reportados por jugadores hasta que los verifiquemos en el 1.0. [L2]",
-    "items": ["Consulta los requisitos actuales antes de buscar capturas difíciles.", "Si el mando resulta difícil, practica el ritmo y revisa los ajustes.", "Consulta las tablas de clima y peces antes de elegir sitio.", "Compara los valores actuales antes de procesar o vender.", "Antes de criar, revisa los requisitos actuales y usa solo los peces que sobren."]}
+    "items": ["Consulta los requisitos actuales antes de buscar capturas difíciles.", "Si el mando resulta difícil, practica el ritmo y revisa los ajustes.", "Consulta las tablas de clima y peces antes de elegir sitio.", "Compara los valores actuales antes de procesar o vender.", "Guarda las capturas sobrantes y revisa primero sus usos actuales en el juego."]}
   ]},
   "make-money": {
    "title": "Cómo ganar dinero rápido en Doloc Town (1.0)",
