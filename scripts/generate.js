@@ -639,8 +639,19 @@ document.addEventListener('click', function(e){
     if (!d.contains(e.target)) d.removeAttribute('open');
   });
 });
+function closeNavigationDetails(details, restoreFocus){
+  var summary = details.querySelector(':scope > summary');
+  details.removeAttribute('open');
+  if (restoreFocus && summary) summary.focus();
+}
 document.addEventListener('keydown', function(e){
-  if (e.key === 'Escape') document.querySelectorAll('details[open]').forEach(function(d){ d.removeAttribute('open'); });
+  if (e.key !== 'Escape') return;
+  var openMenus = Array.prototype.slice.call(document.querySelectorAll('details.dd[open], details.lang-dd[open]'));
+  if (!openMenus.length) return;
+  var active = document.activeElement;
+  var focusMenu = openMenus.find(function(d){ return d.contains(active); }) || openMenus[openMenus.length - 1];
+  e.preventDefault();
+  openMenus.forEach(function(d){ closeNavigationDetails(d, d === focusMenu); });
 });
 document.addEventListener('DOMContentLoaded', function(){
   var obs = new IntersectionObserver(function(es){

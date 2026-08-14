@@ -601,7 +601,7 @@
       "Platforms stack freely; each level you climb adds buildable surface.",
       "Jump and climb between levels — platforming is part of the daily loop, not a loading screen.",
       "Planters sit on platforms; group crops by season so you can re-plant in one pass.",
-      "Build covers or use the Rain gene so storms and acid rain do not wipe a whole layer.",
+      "Build covers or use the Rain gene to protect exposed crops from storms and acid rain.",
       "Leave vertical gaps for drone flight paths — automation in 1.0 needs clear lanes."
      ]
     },
@@ -609,7 +609,7 @@
      "type": "table",
      "tag": "WEATHER",
      "heading": "Weather Effects & How to Respond",
-     "body": "Extreme weather is the game's signature. It kills careless farms and powers clever ones.",
+     "body": "Extreme weather requires forecast checks, crop protection, watering plans and a response matched to each verified effect.",
      "columns": [
       "Weather",
       "What it does",
@@ -675,7 +675,7 @@
      "type": "steps",
      "tag": "DAY ONE",
      "heading": "Day One: What to Do First",
-     "body": "The first in-game day sets your momentum more than any other. This priority list is community-verified for 1.0 — exact shop prices are player-reported. [L2]",
+     "body": "The first in-game day sets your momentum. These priorities combine sourced mechanics with player-reported tips; confirm exact shop prices in your own save. [L2]",
      "items": [
       [
        "Unlock the backpack upgrade first",
@@ -781,11 +781,11 @@
     },
     {
      "label": "Official Doloc Town patch 1.00.03",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314351178"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
     },
     {
      "label": "Official Doloc Town 1.0 release notes",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314341005"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293019702"
     }
    ],
    "meta": {
@@ -846,7 +846,7 @@
         "平台可自由堆叠；每爬上一层都增加可建造表面。",
         "跳跃与攀爬穿梭各层——平台跳跃是每日循环的一部分。",
         "花盆放在平台上；按季节分组种植，便于一次换季补种。",
-        "用遮盖或「雨露均沾」基因，让风暴与酸雨不会毁掉整层。",
+        "用遮盖或「雨露均沾」基因保护露天作物，降低风暴与酸雨造成的侵蚀风险。",
         "为无人机飞行留出垂直空隙——1.0 自动化需要清晰航线。"
        ]
       },
@@ -916,7 +916,7 @@
       },
       {
        "heading": "第一天：优先做什么",
-       "body": "游戏中的第一天比其他任何一天都更决定你的节奏。这份优先级清单为 1.0 社区验证版——具体商店价格以玩家报告为准。[L2]",
+       "body": "游戏中的第一天会影响开局节奏。以下优先级结合已核对机制与玩家报告；具体商店价格请在自己的存档中确认。[L2]",
        "items": [
         [
          "先解锁背包升级",
@@ -1062,7 +1062,7 @@
         "平臺可自由堆疊；每爬上一層都增加可建造表面。",
         "跳躍與攀爬穿梭各層——平臺跳躍是每日循環的一部分。",
         "花盆放在平臺上；按季節分組種植，便於一次換季補種。",
-        "用遮蓋或「雨露均霑」基因，讓風暴與酸雨不會毀掉整層。",
+        "用遮蓋或「雨露均霑」基因保護露天作物，降低風暴與酸雨造成的侵蝕風險。",
         "為無人機飛行留出垂直空隙——1.0 自動化需要清晰航線。"
        ]
       },
@@ -1132,7 +1132,7 @@
       },
       {
        "heading": "第一天：優先做什麼",
-       "body": "遊戲中的第一天比其他任何一天都更決定你的節奏。這份優先級清單為 1.0 社區驗證版——具體商店價格以玩家報告為準。[L2]",
+       "body": "遊戲中的第一天會影響開局節奏。以下優先級結合已核對機制與玩家報告；具體商店價格請在自己的存檔中確認。[L2]",
        "items": [
         [
          "先解鎖揹包升級",
@@ -1278,7 +1278,7 @@
         "プラットフォームは自由に積める。登るほど建築可能面が増える。",
         "ジャンプと登攀で階層を行き来——プラットフォーミングも日常の一部。",
         "プランターをプラットフォームに置き、季節ごとに作物をまとめて植え替える。",
-        "カバーか「雨露均等」遺伝子で、嵐と酸性雨から一層まるごと守る。",
+        "カバーか「雨露均等」遺伝子で露出した作物を守り、嵐と酸性雨による侵食リスクを抑える。",
         "ドローンの飛行経路用に垂直の隙間を残す——1.0の自動化には通路が必要。"
        ]
       },
@@ -1348,7 +1348,7 @@
       },
       {
        "heading": "初日：最初にやること",
-       "body": "ゲーム内の初日が、それ以降の勢いを決める。この優先リストは 1.0 のコミュニティ検証版——正確な店の価格はプレイヤー報告に基づく。[L2]",
+       "body": "初日は序盤の流れに影響する。以下は確認済みの仕組みとプレイヤー報告を区別した優先事項で、正確な店頭価格は自分のセーブで確認してください。[L2]",
        "items": [
         [
          "まずバックパック強化",
@@ -1494,7 +1494,7 @@
         "플랫폼은 자유롭게 쌓을 수 있고, 오를수록 건설 가능 면이 늘어납니다.",
         "층 사이를 점프·등반하며 오갑니다——플랫포밍도 일상의 일부입니다.",
         "화분은 플랫폼 위에 둡니다. 계절별로 작물을 모아 한 번에 다시 심습니다.",
-        "덮개나 '고루 내리는 비' 유전자로 폭풍과 산성비에서 한 층 전체를 지킵니다.",
+        "덮개나 '고루 내리는 비' 유전자로 노출된 작물을 보호하고 폭풍·산성비의 침식 위험을 줄입니다.",
         "드론 비행 경로용 수직 틈을 남기세요——1.0 자동화에는 통로가 필요합니다."
        ]
       },
@@ -1564,7 +1564,7 @@
       },
       {
        "heading": "첫날: 가장 먼저 할 일",
-       "body": "게임 내 첫날이 이후 모든 진행의 동력을 결정합니다. 이 우선순위 목록은 1.0 커뮤니티 검증판입니다 — 정확한 상점 가격은 플레이어 제보 기준입니다. [L2]",
+       "body": "첫날은 초반 진행에 영향을 줍니다. 아래 우선순위는 확인된 메커니즘과 플레이어 제보를 구분하며, 정확한 상점 가격은 자신의 세이브에서 확인하세요. [L2]",
        "items": [
         [
          "가방 업그레이드를 먼저",
@@ -1716,7 +1716,7 @@
         "Las plataformas se apilan libremente; cada nivel añade superficie construible.",
         "Salta y trepa entre niveles: el plataformeo es parte de la rutina diaria.",
         "Los maceteros van en plataformas; agrupa por temporada para replantar de una vez.",
-        "Construye cubiertas o usa el gen Lluvia para que tormentas y lluvia ácida no borren una capa entera.",
+        "Construye cubiertas o usa el gen Lluvia para proteger los cultivos expuestos y reducir la erosión de tormentas y lluvia ácida.",
         "Deja huecos verticales para el vuelo de los drones: la automatización del 1.0 necesita carriles."
        ]
       },
@@ -1786,7 +1786,7 @@
       },
       {
        "heading": "Día uno: qué hacer primero",
-       "body": "El primer día de juego marca tu ritmo más que ningún otro. Esta lista de prioridades está verificada por la comunidad para el 1.0 — los precios exactos de tienda son reportados por jugadores. [L2]",
+       "body": "El primer día influye en el inicio. Estas prioridades distinguen mecánicas comprobadas de consejos reportados por jugadores; confirma los precios exactos en tu partida. [L2]",
        "items": [
         [
          "Desbloquea primero la mochila",
@@ -1886,7 +1886,7 @@
    "title": "Doloc Town Farming Automation Guide (1.0)",
    "metaTitle": "Doloc Town Farming Automation & Drone Guide (1.0)",
    "metaDescription": "How Doloc Town 1.0 farming automation works: two-stage crop automation, task assignment and current drone issues from official notes.",
-   "intro": "The 1.0 release turns you from a farmer into a farm manager. Here is how to generate clean energy, deploy drone stations and automate the whole crop cycle.",
+   "intro": "Official 1.0 notes describe two-stage farming automation and drone stations for crop tasks. This guide separates those mechanics from player-reported details.",
    "sections": [
     {
      "type": "note",
@@ -2007,7 +2007,7 @@
     },
     {
      "label": "Official Doloc Town patch 1.00.03",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314351178"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
     }
    ],
    "meta": {
@@ -2343,7 +2343,7 @@
      "title": "돌록 타운 농업 자동화 가이드 (1.0)",
      "metaTitle": "돌록 타운 농업 자동화 (1.0)",
      "metaDescription": "1.0의 2단계 농업 자동화와 1.00.03 드론 알려진 문제.",
-     "intro": "1.0은 당신을 농부에서 농장 관리자로 바꿉니다. 청정 에너지를 만들고 드론 기지를 배치해 작물 주기를 자동화하는 방법을 설명합니다.",
+     "intro": "공식 1.0 공지는 2단계 농업 자동화와 작물 작업용 드론 스테이션을 설명합니다. 이 가이드는 공식 메커니즘과 플레이어 제보를 구분합니다.",
      "sections": [
       {
        "type": "note",
@@ -2358,7 +2358,7 @@
        "items": [
         [
          "2단계 자동화 활용",
-         "태양광 패널과 자동화 장비을 지어 청정 에너지를 생산합니다."
+         "해금 조건과 필요한 재료를 확인한 뒤 자동화 장비를 배치합니다."
         ],
         [
          "농장 드론 기지 건설",
@@ -2379,9 +2379,9 @@
        "heading": "태양광 vs 자동화: 무엇부터?",
        "body": "자신의 날씨에 맞는 것부터 짓고 균형을 맞추세요.",
        "items": [
-        "맑은 날씨에는 태양광 패널이 효율적입니다.",
-        "자동화 장비은 폭풍 중에도 발전합니다——비가 잦은 달에 유리합니다.",
-        "둘을 섞으면 모든 날씨에서 에너지가 안정적입니다.",
+        "자동화 해금 조건과 필요한 재료를 확인하세요.",
+        "드론 스테이션에 파종·관리·수확 작업을 지정하세요.",
+        "1.00.03은 특정 상황의 드론 실패를 알려진 문제로 명시합니다.",
         "⚠️ 정확한 건설 비용과 발전량은 1.0에서 검증 중입니다."
        ]
       },
@@ -2451,7 +2451,7 @@
      "title": "Guía de automatización agrícola de Doloc Town (1.0)",
      "metaTitle": "Automatización agrícola de Doloc Town (1.0)",
      "metaDescription": "Automatización agrícola en dos etapas y fallos de drones de 1.00.03.",
-     "intro": "El 1.0 te convierte de agricultor en gerente de granja. Así generas energía limpia, despliegas estaciones de drones y automatizas todo el ciclo de cultivo.",
+     "intro": "Los avisos oficiales de 1.0 describen automatización agrícola en dos etapas y estaciones de drones para tareas de cultivo. Esta guía separa esas mecánicas de los reportes de jugadores.",
      "sections": [
       {
        "type": "note",
@@ -2472,7 +2472,7 @@
        "items": [
         [
          "Aprovecha la automatización agrícola",
-         "Construye paneles solares y equipos de automatización para generar energía limpia."
+         "Comprueba el desbloqueo y los materiales necesarios antes de colocar equipos de automatización."
         ],
         [
          "Construye estaciones de drones",
@@ -2491,11 +2491,11 @@
       {
        "type": "list",
        "heading": "¿Solar o automatización? Qué construir primero",
-       "body": "Empieza por lo que encaje con tu clima y luego equilibra.",
+       "body": "Empieza por comprobar las dos etapas oficiales de automatizaciÃ³n y las tareas de las estaciones de drones.",
        "items": [
-        "Los paneles solares brillan con buen tiempo.",
-        "Los equipos de automatización funcionan en tormentas: geniales en meses de tormentas.",
-        "Una mezcla mantiene la energía estable en cualquier clima.",
+        "Comprueba los requisitos de desbloqueo y los materiales necesarios.",
+        "Asigna a las estaciones de drones tareas de siembra, cuidado y cosecha.",
+        "1.00.03 enumera fallos de drones en determinadas situaciones.",
         "⚠️ Costes y valores exactos se están verificando en 1.0."
        ]
       },
@@ -3832,7 +3832,7 @@
     },
     {
      "label": "Official Doloc Town patch 1.00.03",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314351178"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
     }
    ],
    "meta": {
@@ -9469,7 +9469,7 @@
         ],
         [
          "旱灾（4 月）",
-         "作物枯萎、商店作物压力增加",
+         "作物可能枯萎、土壤水分压力增加",
          "提前准备作物防护，并按预报规划浇水"
         ],
         [
@@ -9676,7 +9676,7 @@
         ],
         [
          "旱災（4 月）",
-         "作物枯萎、商店作物壓力增加",
+         "作物可能枯萎、土壤水分壓力增加",
          "提前準備作物防護，並按預報規劃澆水"
         ],
         [
@@ -10170,7 +10170,7 @@
        "heading": "손농사에서 자동화까지 (1.0)",
        "body": "1.0은 농부를 팜 매니저로 바꿉니다. 업그레이드 순서: 에너지 먼저, 스테이션 다음, 그리고 드론에게 일을 맡기세요.",
        "items": [
-        "태양광 패널과 자동화 장비을 건설해 농장의 청정 에너지를 생산",
+        "해금 조건과 필요한 재료를 확인한 뒤 자동화 장비 배치",
         "농장 드론 스테이션 건설——드론이 밭에서 일하게 하는 제어 지점",
         "자동화 작업 지정: 드론이 파종·육성·수확을 처음부터 끝까지 처리",
         "수직 적층이 핵심: 플랫폼 사이에 비행 경로를 남겨 드론이 모든 화분에 닿게 하세요",
@@ -12713,11 +12713,11 @@
     },
     {
      "label": "Official Doloc Town patch 1.00.03",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314351178"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
     },
     {
      "label": "Official Doloc Town 1.0 release notes",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314341005"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293019702"
     }
    ],
    "meta": {
@@ -12868,7 +12868,7 @@
         ],
         [
          "旱灾是什么时候？",
-         "4 月，旱季末尾。作物枯萎、商店作物压力增加。"
+         "4 月，旱季末尾。作物可能枯萎、土壤水分压力增加。"
         ],
         [
          "怎么为旱灾做准备？",
@@ -13025,7 +13025,7 @@
         ],
         [
          "旱災是什麼時候？",
-         "4 月，旱季末尾。作物枯萎、商店作物壓力增加。"
+         "4 月，旱季末尾。作物可能枯萎、土壤水分壓力增加。"
         ],
         [
          "怎麼為旱災做準備？",
@@ -13625,7 +13625,7 @@
     },
     {
      "label": "Official Doloc Town patch 1.00.03",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314351178"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
     }
    ],
    "meta": {
@@ -14162,7 +14162,7 @@
     },
     {
      "label": "Official Doloc Town patch 1.00.03",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314351178"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
     },
     {
      "label": "Official Doloc Town 1.0 FAQ — functional mod warning",
@@ -14565,7 +14565,7 @@
     },
     {
      "label": "Official Doloc Town patch 1.00.03",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314351178"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
     }
    ],
    "meta": {
@@ -15094,7 +15094,7 @@
     },
     {
      "label": "Official Doloc Town patch 1.00.03",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314351178"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
     },
     {
      "label": "Official Doloc Town 1.0 FAQ",
@@ -17122,7 +17122,7 @@
    },
    "metaTitle": "Doloc Town Money Guide: Fast Income (1.0)",
    "metaDescription": "Doloc Town money guide using clearly labelled community tips for processing, fishing and early priorities, without unsupported price-arbitrage claims.",
-   "intro": "Money in Doloc Town is rarely about selling raw crops. Processing, weather timing and one early upgrade change the math completely — here is what the community has figured out.",
+   "intro": "This guide separates official mechanics from player-reported processing, fishing and early-upgrade tips; confirm exact values in your own save.",
    "heroImage": null,
    "seasonAccent": null,
    "sections": [
@@ -17390,7 +17390,7 @@
      "title": "多洛可小镇怎么快速赚钱（1.0）",
      "metaTitle": "多洛可小镇赚钱攻略：快速可靠的收入来源（1.0）",
      "metaDescription": "多洛可小镇赚钱攻略：区分社区技巧与官方事实，介绍加工、钓鱼和前期优先级，不采用未经证实的涨价倒卖说法。",
-     "intro": "在多洛可小镇，靠卖原料是赚不到钱的。加工、天气时机和一次早期升级会彻底改变收益曲线——这里是社区已经验证过的打法。"
+     "intro": "本指南区分官方机制与玩家报告的加工、钓鱼和前期升级技巧；具体数值请在自己的存档中确认。"
     },
     "ja": {
      "sections": [
@@ -17517,7 +17517,7 @@
      "title": "ドロックタウンで早く稼ぐ方法（1.0）",
      "metaTitle": "ドロックタウン金策ガイド：速くて安定した収入（1.0）",
      "metaDescription": "公式情報とコミュニティ報告を区別し、加工・釣り・序盤の優先事項をまとめた金策ガイド。未確認の価格攻略は掲載しません。",
-     "intro": "ドロックタウンで稼ぐなら、素材の生売りはほとんど当てにならない。加工・天候のタイミング・1つの早期アップグレードが収支を根本から変える——ここではコミュニティが検証済みの方法を紹介する。"
+     "intro": "本ガイドは、公式の仕組みと、加工・釣り・序盤強化に関するプレイヤー報告を区別します。正確な数値は自分のセーブで確認してください。"
     },
     "ko": {
      "sections": [
@@ -17644,7 +17644,7 @@
      "title": "돌록 타운에서 빨리 돈 버는 법 (1.0)",
      "metaTitle": "돌록 타운 돈 버는 가이드: 빠르고 안정적인 수입 (1.0)",
      "metaDescription": "공식 사실과 커뮤니티 팁을 구분해 가공·낚시·초반 우선순위를 다루는 돈 가이드. 확인되지 않은 가격 거래 주장은 제외합니다.",
-     "intro": "돌록 타운에서 원자재를 그대로 파는 것으로는 돈을 거의 벌 수 없습니다. 가공, 날씨 타이밍, 그리고 초반 업그레이드 하나가 수익 곡선을 완전히 바꿉니다 — 여기 커뮤니티가 이미 검증한 방법을 정리했습니다."
+     "intro": "이 가이드는 공식 메커니즘과 플레이어가 제보한 가공·낚시·초반 업그레이드 팁을 구분합니다. 정확한 수치는 자신의 세이브에서 확인하세요."
     },
     "es": {
      "sections": [
@@ -17777,7 +17777,7 @@
      "title": "Cómo ganar dinero rápido en Doloc Town (1.0)",
      "metaTitle": "Guía de dinero en Doloc Town: ingresos rápidos (1.0)",
      "metaDescription": "Guía de dinero de Doloc Town con consejos comunitarios señalados sobre procesado, pesca y prioridades, sin arbitraje de precios sin verificar.",
-     "intro": "En Doloc Town casi nunca se gana dinero vendiendo materia prima. El procesado, el timing del clima y una mejora temprana lo cambian todo — esto es lo que la comunidad ha descubierto."
+     "intro": "Esta guía distingue las mecánicas oficiales de los consejos de jugadores sobre procesado, pesca y mejoras tempranas; confirma los valores exactos en tu partida."
     },
     "zh-TW": {
      "sections": [
@@ -17904,17 +17904,17 @@
      "title": "多洛可小鎮怎麼快速賺錢（1.0）",
      "metaTitle": "多洛可小鎮賺錢攻略：快速可靠的收入來源（1.0）",
      "metaDescription": "多洛可小鎮賺錢攻略：區分社群技巧與官方事實，介紹加工、釣魚和前期優先事項，不採用未證實的漲價倒賣說法。",
-     "intro": "在多洛可小鎮，靠賣原料是賺不到錢的。加工、天氣時機和一次早期升級會徹底改變收益曲線——這裡是社區已經驗證過的打法。"
+     "intro": "本指南區分官方機制與玩家報告的加工、釣魚和前期升級技巧；具體數值請在自己的存檔中確認。"
     }
    },
    "sources": [
     {
      "label": "Official Doloc Town patch 1.00.03",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314351178"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
     },
     {
      "label": "Official Doloc Town 1.0 release notes",
-     "url": "https://store.steampowered.com/news/app/2285550/view/1840310314341005"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293019702"
     }
    ]
   },

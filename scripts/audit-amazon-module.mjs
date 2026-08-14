@@ -13,6 +13,14 @@ const fail = (code, detail) => failures.push({code, detail});
 const walk = (dir, out=[]) => { for (const e of fs.readdirSync(dir,{withFileTypes:true})) { const p=path.join(dir,e.name); e.isDirectory()?walk(p,out):e.name.endsWith(".html")&&out.push(p); } return out; };
 const count = (s,n) => s.split(n).length-1;
 const generate = (out, fixture) => execFileSync(process.execPath,[path.join(root,"scripts/generate.js")],{cwd:root,env:{...process.env,TZ:"UTC",DOLOC_OUTPUT_DIR:out,DOLOC_LASTMOD_PATH:path.join(out,".lastmod.json"),...(fixture?{DOLOC_AMAZON_FIXTURE:"enabled"}:{})},stdio:"pipe"});
+const canonicalSources = {
+  patch: "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586",
+  release: "https://steamcommunity.com/games/2285550/announcements/detail/703275952293019702",
+};
+const genericNewsHubSources = [
+  "https://store.steampowered.com/news/app/2285550/view/1840310314351178",
+  "https://store.steampowered.com/news/app/2285550/view/1840310314341005",
+];
 
 // Month 4 / Harsh Dry Season may be named, and a source-boundary warning may
 // explain that no trading claim is established. The unsupported assertion is
@@ -98,6 +106,17 @@ const semanticFamilyPatterns = [
   ["es-broad-threat-benefit", /(?:(?:cada|tod[oa]s?|cualquier)[^.\n]{0,45}(?:amenaza|tormenta|clima\s+extremo|fen[oó]meno)[^.\n]{0,65}(?:ventaja|bonus|bono|beneficio|provecho)|(?:ventaja|bonus|bono|beneficio|provecho)[^.\n]{0,65}(?:cada|tod[oa]s?|cualquier)[^.\n]{0,45}(?:amenaza|tormenta|clima|fen[oó]meno)|(?:clima|tiempo)[^.\n]{0,45}(?:no\s+(?:es|sea)|en\s+vez\s+de)[^.\n]{0,25}(?:desastre|amenaza)[^.\n]{0,25}(?:bonus|bono|ventaja))/iu],
   ["ko-drought-profit-benefit", /(?:Harsh Dry Season|가뭄|건기)[^.\n]{0,90}(?:수익|이익)(?:\s*(?:내기|보기|기회))?/u],
   ["es-drought-profit-benefit", /(?:aprovecha(?:r)?(?:\s+el)?\s+(?:momento\s+de\s+la\s+)?sequ[ií]a|sac(?:o|ar)\s+provecho\s+de\s+la\s+sequ[ií]a|gan(?:a|ar)\s+con[^.\n]{0,80}Harsh Dry Season|benefici(?:o|arse)[^.\n]{0,60}sequ[ií]a)/iu],
+  ["zh-shop-crop-pressure", /(?:(?:商店|店铺|店舖|店內|店内)[^。\n]{0,45}(?:作物|农产品|農產品)[^。\n]{0,35}(?:压力|壓力|紧张|緊張|短缺)|(?:作物|农产品|農產品)[^。\n]{0,35}(?:压力|壓力|紧张|緊張|短缺)[^。\n]{0,45}(?:商店|店铺|店舖|店內|店内))/u],
+  ["en-whole-layer-destruction", /(?:(?:storm|acid rain)[^.\n]{0,70}(?:wipe|destroy|erase|ruin)[^.\n]{0,30}(?:whole|entire)[ -](?:layer|tier)|(?:whole|entire)[ -](?:layer|tier)[^.\n]{0,70}(?:wiped|destroyed|erased|ruined)[^.\n]{0,30}(?:storm|acid rain))/iu],
+  ["zh-whole-layer-destruction", /(?:(?:风暴|風暴|酸雨)[^。\n]{0,55}(?:毁掉|毀掉|摧毁|摧毀|全毁|全毀|清空)[^。\n]{0,25}(?:整层|整層|全层|全層)|(?:整层|整層|全层|全層)[^。\n]{0,55}(?:被)?(?:风暴|風暴|酸雨)[^。\n]{0,25}(?:毁掉|毀掉|摧毁|摧毀|全毁|全毀|清空))/u],
+  ["ja-whole-layer-destruction", /(?:(?:嵐|酸性雨)[^。\n]{0,55}(?:一層|層全体)[^。\n]{0,25}(?:全滅|壊滅|破壊|消し去)|(?:一層|層全体)[^。\n]{0,55}(?:嵐|酸性雨)[^。\n]{0,25}(?:全滅|壊滅|破壊|消し去))/u],
+  ["ko-whole-layer-destruction", /(?:(?:폭풍|산성비)[^.\n]{0,55}(?:한\s*층|층\s*전체)[^.\n]{0,25}(?:전멸|파괴|쓸어버)|(?:한\s*층|층\s*전체)[^.\n]{0,55}(?:폭풍|산성비)[^.\n]{0,25}(?:전멸|파괴|쓸어버))/u],
+  ["es-whole-layer-destruction", /(?:(?:tormenta|lluvia\s+ácida)[^.\n]{0,70}(?:borra|destruye|arrasa|elimina)[^.\n]{0,30}(?:capa|nivel)\s+(?:entera|completa)|(?:capa|nivel)\s+(?:entera|completa)[^.\n]{0,70}(?:tormenta|lluvia\s+ácida)[^.\n]{0,30}(?:borra|destruye|arrasa|elimina)|(?:capa|nivel)\s+(?:entera|completa)[^.\n]{0,40}(?:borra|destruye|arrasa|elimina)[^.\n]{0,40}(?:tormenta|lluvia\s+ácida))/iu],
+  ["en-weather-profit-frame", /(?:weather\s+timing[^.\n]{0,60}(?:profit|math|returns?)[^.\n]{0,30}(?:completely|entirely)|(?:profit|math|returns?)[^.\n]{0,60}weather\s+timing|(?:storm|extreme weather)[^.\n]{0,45}(?:powers?\s+clever\s+farms?|guarantees?\s+(?:farm\s+)?success)|community[- ]verified\s+(?:for\s+)?1\.0)/iu],
+  ["zh-weather-profit-frame", /(?:(?:天气|天氣)[^。\n]{0,45}(?:收益|利润|利潤|回报|回報)[^。\n]{0,25}(?:完全|彻底|徹底)(?:改变|改變)|(?:聪明|聰明)农场|(?:社区|社區|社群)(?:已经|已經)(?:验证|驗證)(?:过|過)?的(?:打法|方法))/u],
+  ["ja-weather-profit-frame", /(?:(?:天候|天気)[^。\n]{0,45}(?:収支|利益|儲け)[^。\n]{0,25}(?:根本|完全)(?:に)?変え|賢い農場|コミュニティが検証済みの方法)/u],
+  ["ko-weather-profit-frame", /(?:(?:날씨|기상)[^.\n]{0,45}(?:수익|이익|수지)[^.\n]{0,30}(?:완전히|통째로)\s*(?:바꾸|바꿉|변화)|영리한\s*농장|커뮤니티가\s*이미\s*검증한\s*방법)/u],
+  ["es-weather-profit-frame", /(?:(?:timing|momento)\s+del\s+clima[^.\n]{0,55}(?:beneficio|rentabilidad|cálculo|lo\s+cambia\s+todo)|(?:beneficio|rentabilidad|cálculo)[^.\n]{0,55}(?:timing|momento)\s+del\s+clima|granjas?\s+inteligentes?|verificad[oa]\s+por\s+la\s+comunidad)/iu],
 ];
 const contentIntegrityPatterns = [
   ...semanticFamilyPatterns,
@@ -109,6 +128,9 @@ const semanticSourceFaults = {
   "semantic-flat-en-source": "A one-level horizontal field attracts storms and creates a drought risk.",
   "semantic-flat-source": "嵐が狙うのは平らな一枚畑なので、単層の配置は避ける。",
   "semantic-benefit-source": "이점으로 만들 수 있는 것은 모든 극한 날씨 위협입니다.",
+  "semantic-shop-pressure-source": "作物供应变少以后，商店里的农产品压力会明显增加。",
+  "semantic-whole-layer-source": "Acid rain can erase an entire tier of crops; storms destroy a whole layer too.",
+  "semantic-weather-profit-source": "Weather timing changes the profit math completely, a community-verified advantage for clever farms.",
 };
 const semanticFamilyCodes = new Set(semanticFamilyPatterns.map(([code]) => code));
 const nonSemanticIntegrityPatterns = contentIntegrityPatterns.filter(([code]) => !semanticFamilyCodes.has(code));
@@ -120,7 +142,7 @@ let generatedVisibleFileCount = 0;
 let generatedJsonLdBlockCount = 0;
 const semanticInventory = {
   locales: ["en", "zh-CN", "zh-TW", "ja", "ko", "es"],
-  families: ["drought-commercial-correlation", "flat-field-weather-causality", "broad-threat-benefit"],
+  families: ["drought-commercial-correlation", "flat-field-weather-causality", "broad-threat-benefit", "shop-crop-pressure", "whole-layer-destruction", "weather-profit-advantage"],
   source: {files: 3, hits: 0},
   generated_visible: {files: 0, hits: 0},
   generated_metadata: {documents: 0, hits: 0},
@@ -187,6 +209,39 @@ try {
   if (fault === "semantic-benefit-jsonld") {
     const target = offFiles.find(file => path.relative(disabled, file) === path.join("ko", "weather.html"));
     fs.appendFileSync(target, '<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","name":"날씨는 재난이 아니라 보너스인가요?"}</script>');
+  }
+  if (fault === "semantic-shop-pressure-visible") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("zh-TW", "weather.html"));
+    fs.appendFileSync(target, "<p>旱季讓商店裡的農產品供應緊張，作物壓力會升高。</p>");
+  }
+  if (fault === "semantic-shop-pressure-jsonld") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("zh-CN", "weather.html"));
+    fs.appendFileSync(target, '<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","name":"商店里的农产品短缺会增加作物压力吗？"}</script>');
+  }
+  if (fault === "semantic-whole-layer-visible") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("es", "how-to-play.html"));
+    fs.appendFileSync(target, "<p>Una capa completa queda bajo una tormenta que destruye todo el nivel.</p>");
+  }
+  if (fault === "semantic-whole-layer-jsonld") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("ja", "how-to-play.html"));
+    fs.appendFileSync(target, '<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","name":"一層全体が嵐で壊滅しますか？"}</script>');
+  }
+  if (fault === "semantic-weather-profit-visible") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("ko", "make-money.html"));
+    fs.appendFileSync(target, "<p>날씨 타이밍이 수익 곡선을 완전히 바꾸는 커뮤니티 검증판입니다.</p>");
+  }
+  if (fault === "semantic-weather-profit-jsonld") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("es", "automation.html"));
+    fs.appendFileSync(target, '<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","name":"¿El timing del clima cambia todo el cálculo de beneficios?"}</script>');
+  }
+  const persistentSourceText = ["data/build_content.py", "data/site.base.json", "data/site.json"]
+    .map(rel => fs.readFileSync(path.join(root, rel), "utf8")).join("\n");
+  for (const url of genericNewsHubSources) if (persistentSourceText.includes(url)) fail("generic-news-hub-source", url);
+  for (const url of Object.values(canonicalSources)) if (!persistentSourceText.includes(url)) fail("canonical-announcement-source-missing", url);
+  const sourceData = JSON.parse(fs.readFileSync(path.join(root, "data/site.json"), "utf8"));
+  for (const page of sourceData.pages || []) for (const source of page.sources || []) {
+    if (/patch 1\.00\.03/i.test(source.label || "") && source.url !== canonicalSources.patch) fail("patch-source-identity", `${page.slug}:${source.url}`);
+    if (/1\.0 release notes/i.test(source.label || "") && source.url !== canonicalSources.release) fail("release-source-identity", `${page.slug}:${source.url}`);
   }
   for (const f of offFiles) {
     const rel=path.relative(disabled,f), html=fs.readFileSync(f,"utf8");
@@ -413,6 +468,9 @@ if (!fault && !failures.length) {
     "semantic-drought-source", "semantic-drought-visible", "semantic-drought-jsonld",
     "semantic-flat-en-source", "semantic-flat-source", "semantic-flat-visible", "semantic-flat-zh-tw-visible", "semantic-flat-jsonld",
     "semantic-benefit-source", "semantic-benefit-visible", "semantic-benefit-jsonld",
+    "semantic-shop-pressure-source", "semantic-shop-pressure-visible", "semantic-shop-pressure-jsonld",
+    "semantic-whole-layer-source", "semantic-whole-layer-visible", "semantic-whole-layer-jsonld",
+    "semantic-weather-profit-source", "semantic-weather-profit-visible", "semantic-weather-profit-jsonld",
   ]) {
     const result = spawnSync(process.execPath, [auditScript, root], {
       env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: name },

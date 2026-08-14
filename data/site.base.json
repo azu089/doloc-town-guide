@@ -233,7 +233,7 @@
       "Platforms stack freely; each level you climb adds buildable surface.",
       "Jump and climb between levels — platforming is part of the daily loop, not a loading screen.",
       "Planters sit on platforms; group crops by season so you can re-plant in one pass.",
-      "Build covers or use the Rain gene so storms and acid rain do not wipe a whole layer.",
+      "Build covers or use the Rain gene to protect exposed crops from storms and acid rain.",
       "Leave vertical gaps for drone flight paths — automation in 1.0 needs clear lanes."
      ]
     },
@@ -241,7 +241,7 @@
      "type": "table",
      "tag": "WEATHER",
      "heading": "Weather Effects & How to Respond",
-     "body": "Extreme weather is the game's signature. It kills careless farms and powers clever ones.",
+     "body": "Extreme weather requires forecast checks, crop protection, watering plans and a response matched to each verified effect.",
      "columns": [
       "Weather",
       "What it does",
@@ -307,7 +307,7 @@
      "type": "steps",
      "tag": "DAY ONE",
      "heading": "Day One: What to Do First",
-     "body": "The first in-game day sets your momentum more than any other. This priority list is community-verified for 1.0 — exact shop prices are player-reported. [L2]",
+     "body": "The first in-game day sets your momentum. These priorities combine sourced mechanics with player-reported tips; confirm exact shop prices in your own save. [L2]",
      "items": [
       [
        "Unlock the backpack upgrade first",
@@ -422,7 +422,7 @@
    "title": "Doloc Town Farming Automation Guide (1.0)",
    "metaTitle": "Doloc Town Farming Automation & Drone Guide (1.0)",
    "metaDescription": "How Doloc Town 1.0 farming automation works: two-stage crop automation, task assignment and current drone issues from official notes.",
-   "intro": "The 1.0 release turns you from a farmer into a farm manager. Here is how to generate clean energy, deploy drone stations and automate the whole crop cycle.",
+   "intro": "Official 1.0 notes describe two-stage farming automation and drone stations for crop tasks. This guide separates those mechanics from player-reported details.",
    "sections": [
     {
      "type": "steps",
@@ -2917,7 +2917,7 @@
    },
    "metaTitle": "Doloc Town Money Guide: Fast Income (1.0)",
    "metaDescription": "Fast ways to make money in Doloc Town: process crops and fish for +10-20%, dry your catch and prioritize the right Day-1 upgrades.",
-   "intro": "Money in Doloc Town is rarely about selling raw crops. Processing, weather timing and one early upgrade change the math completely — here is what the community has figured out.",
+   "intro": "This guide separates official mechanics from player-reported processing, fishing and early-upgrade tips; confirm exact values in your own save.",
    "heroImage": null,
    "seasonAccent": null,
    "sections": [

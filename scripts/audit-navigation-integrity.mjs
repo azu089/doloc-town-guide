@@ -81,6 +81,18 @@ try {
     fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace(/<link rel="icon" type="image\/svg\+xml" href="\/favicon\.svg" \/>\n?/, ""));
   } else if (fault === "missing-icon-asset") {
     fs.rmSync(path.join(out, "favicon-32x32.png"));
+  } else if (fault === "escape-focus-loss") {
+    const target = path.join(out, "index.html");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("if (restoreFocus && summary) summary.focus();", "if (restoreFocus && summary) return;"));
+  } else if (fault === "touch-target-contract") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("min-block-size:44px", "min-block-size:34px"));
+  } else if (fault === "transition-shorthand") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("transition:color .16s ease,background-color .16s ease,box-shadow .16s ease", "transition:.16s"));
+  } else if (fault === "unscoped-navigation-hover") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("@media (hover:hover) and (pointer:fine)", "@media (min-width:1px)"));
   }
 
   const allFiles = walkHtml(out);
@@ -112,6 +124,37 @@ try {
     }
   }
 
+  const css = fs.readFileSync(path.join(out, "css", "style.css"), "utf8");
+  const targetContracts = [
+    /\.logo\{[^}]*min-block-size:44px/,
+    /\.nav>a,\.nav summary\{[^}]*min-block-size:44px/,
+    /\.lang-dd summary\{[^}]*min-block-size:44px/,
+    /\.dd-menu a\{[^}]*min-block-size:44px/,
+    /\.dd-manual a\{[^}]*min-block-size:44px/,
+  ];
+  for (const re of targetContracts) if (!re.test(css)) fail("touch-target-css-contract", String(re));
+  if (!/\.dd-manual\{[^}]*max-block-size:calc\(100dvh - 132px\)[^}]*overflow-y:auto/.test(css)) fail("menu-keyboard-reachability-css", "mobile guide menu requires a bounded scroll region");
+  const navigationRules = (css.match(/\.(?:logo|nav|dd-menu|dd-manual|lang-dd|site-search)[^{]*\{[^}]*\}/g) || []).join("\n");
+  if (/transition\s*:\s*(?:\d|\.)/.test(navigationRules)) fail("navigation-transition-shorthand", "navigation transition must name changed properties");
+  const fineStart = css.indexOf("@media (hover:hover) and (pointer:fine)");
+  const fineEnd = fineStart < 0 ? -1 : css.indexOf("\n}", fineStart);
+  if (fineStart < 0 || fineEnd < 0) fail("fine-pointer-hover-scope", "missing hover:hover + pointer:fine media scope");
+  for (const match of css.matchAll(/(?:\.nav[^,{]*|\.lang-dd summary|\.dd-menu a|\.dd-manual a):hover/g)) {
+    if (match.index < fineStart || match.index > fineEnd) fail("unscoped-navigation-hover", match[0]);
+  }
+  if (!/\.logo:focus-visible[^}]*outline:2px solid var\(--amber-soft\)/.test(css)) fail("navigation-focus-visible", "focus indicator missing");
+
+  for (const file of allFiles) {
+    const rel = path.relative(out, file);
+    const html = fs.readFileSync(file, "utf8");
+    for (const token of [
+      "function closeNavigationDetails(details, restoreFocus)",
+      "details.querySelector(':scope > summary')",
+      "if (restoreFocus && summary) summary.focus();",
+      "details.dd[open], details.lang-dd[open]",
+    ]) if (!html.includes(token)) fail("escape-focus-runtime-contract", `${rel}:${token}`);
+  }
+
   const icons = [
     { rel: "icon", href: "/favicon.svg" },
     { rel: "icon", href: "/favicon-32x32.png" },
@@ -132,7 +175,7 @@ try {
   }
 
   if (!fault && !failures.length) {
-    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset"]) {
+    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset", "escape-focus-loss", "touch-target-contract", "transition-shorthand", "unscoped-navigation-hover"]) {
       const child = spawnSync(process.execPath, [auditScript, root], { env: { ...process.env, DOLOC_NAV_AUDIT_FAULT: name }, encoding: "utf8" });
       negativeFixtureExitCodes[name] = child.status;
       if (!Number.isInteger(child.status) || child.status <= 0) fail("negative-fixture-did-not-fail", name);
