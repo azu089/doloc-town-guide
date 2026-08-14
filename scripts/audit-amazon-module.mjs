@@ -2,9 +2,12 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 
+const auditScript = fileURLToPath(import.meta.url);
 const root = path.resolve(process.argv[2] || ".");
+const fault = process.env.DOLOC_AMAZON_AUDIT_FAULT || "";
 const failures = [];
 const fail = (code, detail) => failures.push({code, detail});
 const walk = (dir, out=[]) => { for (const e of fs.readdirSync(dir,{withFileTypes:true})) { const p=path.join(dir,e.name); e.isDirectory()?walk(p,out):e.name.endsWith(".html")&&out.push(p); } return out; };
@@ -63,6 +66,9 @@ const enabled = fs.mkdtempSync(path.join(os.tmpdir(),"doloc-amz-on-"));
 try {
   generate(disabled,false); generate(enabled,true);
   const offFiles=walk(disabled), onFiles=walk(enabled);
+  if (fault === "default-module-leak") {
+    fs.appendFileSync(offFiles[0], '<aside class="amazon-gear">fault fixture</aside>');
+  }
   for (const f of offFiles) {
     const rel=path.relative(disabled,f), html=fs.readFileSync(f,"utf8");
     if (count(html,'class="amazon-gear"')) fail("disabled-module",rel);
@@ -241,5 +247,14 @@ try {
   }
 
 } finally { fs.rmSync(disabled,{recursive:true,force:true}); fs.rmSync(enabled,{recursive:true,force:true}); }
-console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),failures},null,2));
+let negativeFixtureExitCode = null;
+if (!fault && !failures.length) {
+  const result = spawnSync(process.execPath, [auditScript, root], {
+    env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: "default-module-leak" },
+    encoding: "utf8",
+  });
+  negativeFixtureExitCode = result.status;
+  if (!Number.isInteger(result.status) || result.status <= 0) fail("negative-fixture-did-not-fail", "default-module-leak");
+}
+console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),negative_fixture_exit_code:negativeFixtureExitCode,failures},null,2));
 process.exit(failures.length?1:0);
