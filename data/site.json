@@ -697,7 +697,7 @@
      "type": "note",
      "tag": "COMMON MISTAKES",
      "heading": "Common Mistakes New Players Make (Avoid These)",
-     "body": "The most common early run-enders, from community reports: watering everything by hand every single day (automate or use the Rain gene), building without clear access lanes, ignoring friendship (you lock yourself out of recipes), skipping Bellad's quests (you fall behind the tech tree), and failing to protect crops and plan watering before Month 4."
+     "body": "Check these common mistakes in your own save: watering every crop by hand when an available gene or automation task can help, blocking your own access routes, ignoring friendship, skipping Bellad's quests, and failing to protect crops or plan watering before Month 4."
     },
     {
      "type": "list",
@@ -709,7 +709,7 @@
       "Upgrade chassis (survivability), barrel (damage) and battery (uptime) — in that order early on.",
       "Charge beam (F) breaks shields on armoured Scavenger Bugs; normal fire bounces off.",
       "Fit weapon and lighting modules before exploring ruins at night.",
-      "Rare fish drop advanced parts — fishing funds your combat build."
+      "Check each module's current in-game material requirements before spending upgrade parts."
      ]
     },
     {
@@ -724,7 +724,7 @@
       ],
       [
        "New players",
-       "You can reach farming automation earlier than EA players."
+       "Official 1.0 materials add farming automation and farm drone stations."
       ],
       [
        "Old City Ruins",
@@ -732,7 +732,7 @@
       ],
       [
        "⚠️ Verification",
-       "Exact unlock order and build costs are still being verified in 1.0; details marked with ⚠️ are community-sourced."
+       "Check the current in-game tasks and the linked official notes; this guide does not infer an unlock order."
       ]
      ]
     },
@@ -932,7 +932,7 @@
       {
        "type": "steps",
        "heading": "新手常见错误（避免这些）",
-       "body": "社区报告中最常见的毁局行为：每天手动给所有作物浇水（用自动化或雨露均沾基因）、建造时不留通行路线、忽略好感（把自己锁在食谱之外）、跳过 Bellad 任务（科技树落后）、4 月前没有保护作物并规划浇水。"
+       "body": "请在自己的存档中排查这些常见问题：有可用基因或自动任务时仍给所有作物手动浇水、堵住自己的通行路线、忽略好感、跳过 Bellad 任务，以及 4 月前没有保护作物并规划浇水。"
       },
       {
        "type": "note",
@@ -943,7 +943,7 @@
         "按顺序升级：底盘（生存）、枪管（伤害）、电池（续航）。",
         "蓄力光束（F）破装甲 Scavenger Bugs 的盾；普通射击会被弹开。",
         "夜间探索废墟前装好武器与照明模块。",
-        "稀有鱼掉高级部件——钓鱼为战斗供血。"
+        "花费零件前，请在当前存档中核对各模块的升级材料要求。"
        ]
       },
       {
@@ -956,16 +956,16 @@
          "1.0 上线：完整故事结局、旧城废墟、农业自动化、蘑菇节、37 个新成就。"
         ],
         [
-         "新玩家",
-         "你比 EA 玩家更早实现自动化——农场无人机站会代劳杂务。"
+         "农业自动化",
+         "官方 1.0 资料新增农业自动化与农场无人机站。"
         ],
         [
          "旧城废墟",
          "新区域：凶悍新敌人、新 NPC、支线与资源；许多道路通向那里。"
         ],
         [
-         "⚠️ 验证中",
-         "精确解锁顺序与建造费用仍在 1.0 实测；标注 ⚠️ 的为社区来源。"
+         "资料边界",
+         "请核对当前游戏任务与所链接的官方公告；本指南不推断解锁顺序。"
         ]
        ]
       },
@@ -1142,7 +1142,7 @@
       {
        "type": "steps",
        "heading": "新手常見錯誤（避免這些）",
-       "body": "社區報告中最常見的毀局行為：每天手動給所有作物澆水（用自動化或雨露均霑基因）、建造時不留通行路線、忽略好感（把自己鎖在食譜之外）、跳過 Bellad 任務（科技樹落後）、4 月前沒有保護作物並規劃澆水。"
+       "body": "請在自己的存檔中排查這些常見問題：有可用基因或自動任務時仍給所有作物手動澆水、堵住自己的通行路線、忽略好感、跳過 Bellad 任務，以及 4 月前沒有保護作物並規劃澆水。"
       },
       {
        "type": "note",
@@ -1153,7 +1153,7 @@
         "按順序升級：底盤（生存）、槍管（傷害）、電池（續航）。",
         "蓄力光束（F）破裝甲 Scavenger Bugs 的盾；普通射擊會被彈開。",
         "夜間探索廢墟前裝好武器與照明模塊。",
-        "稀有魚掉高級部件——釣魚為戰鬥供血。"
+        "花費零件前，請在當前存檔中核對各模塊的升級材料要求。"
        ]
       },
       {
@@ -1166,16 +1166,16 @@
          "1.0 上線：完整故事結局、舊城廢墟、農業自動化、蘑菇節、37 個新成就。"
         ],
         [
-         "新玩家",
-         "你比 EA 玩家更早實現自動化——農場無人機站會代勞雜務。"
+         "農業自動化",
+         "官方 1.0 資料新增農業自動化與農場無人機站。"
         ],
         [
          "舊城廢墟",
          "新區域：兇悍新敵人、新 NPC、支線與資源；許多道路通向那裡。"
         ],
         [
-         "⚠️ 驗證中",
-         "精確解鎖順序與建造費用仍在 1.0 實測；標註 ⚠️ 的為社區來源。"
+         "資料邊界",
+         "請核對當前遊戲任務與所鏈接的官方公告；本指南不推斷解鎖順序。"
         ]
        ]
       },
@@ -1352,7 +1352,7 @@
       {
        "type": "note",
        "heading": "初心者のよくある失敗（避けること）",
-       "body": "コミュニティ報告で最も多いラン崩壊要因：毎日すべての作物を手で水やり（自動化か「雨露均等」遺伝子を使う）、移動経路を考えずにプラットフォームを配置する、友好度を無視（レシピがロックされる）、Bellad のクエストを放置（テックツリーで遅れる）、4月前に作物保護と水やりを準備しない。"
+       "body": "自分のセーブで確認したい一般的な失敗：利用できる遺伝子や自動作業があるのに全作物へ手作業で水やりする、移動経路を塞ぐ、友好度を無視する、Bellad のクエストを放置する、4月前に作物保護と水やりを準備しない。"
       },
       {
        "type": "list",
@@ -1363,7 +1363,7 @@
         "序盤はシャーシ（生存）→バレル（火力）→バッテリー（持続）の順に強化。",
         "チャージビーム（F）で装甲 Scavenger Bugs の盾を破壊。通常弾は弾かれる。",
         "夜の廃墟探索前に武器・照明モジュールを装備。",
-        "レア魚が高級パーツを落とす——釣りが戦闘を支える。"
+        "パーツを使う前に現在のセーブでモジュール要件を確認する。"
        ]
       },
       {
@@ -1377,7 +1377,7 @@
         ],
         [
          "新規プレイヤー",
-         "EAより早く自動化に到達できる——農場ドローン基地が雑務を代行。"
+         "公式 1.0 情報は農業オートメーションと農場ドローン基地を追加。"
         ],
         [
          "旧市街遺跡",
@@ -1385,7 +1385,7 @@
         ],
         [
          "⚠️ 検証中",
-         "正確な解放順と建造費は1.0で検証中。⚠️ 付きはコミュニティ情報。"
+         "現在のゲーム内タスクと公式発表を確認し、本ガイドは解放順を推測しない。"
         ]
        ]
       },
@@ -1562,7 +1562,7 @@
       {
        "type": "note",
        "heading": "초보자의 흔한 실수 (피해야 할 것)",
-       "body": "커뮤니티가 보고한 가장 흔한 런 파괴 요인: 매일 모든 작물에 손으로 물주기(자동화나 '고루 내리는 비' 유전자 사용), 노출된 작물을 보호하지 않기(극한 날씨에 취약), 우정 무시(레시피가 영구히 잠김), Bellad 퀘스트 방치(테크 트리에서 뒤처짐), 4월 전에 작물 보호와 물주기를 준비하지 않아 작물이 시드는 것."
+       "body": "현재 세이브에서 확인할 일반적인 실수: 사용할 수 있는 유전자나 자동 작업이 있는데도 모든 작물에 손으로 물주기, 작물 보호와 이동 경로를 확인하지 않기, 우정과 Bellad 퀘스트를 건너뛰기, 4월 전에 작물 보호와 물주기를 준비하지 않기."
       },
       {
        "type": "list",
@@ -1573,7 +1573,7 @@
         "초반은 샤시(생존)→총열(화력)→배터리(지속) 순으로 강화.",
         "차지 빔(F)으로 장갑 Scavenger Bugs의 방패를 깨세요. 일반탄은 튕깁니다.",
         "밤 유적 탐험 전에 무기·조명 모듈을 장착하세요.",
-        "희귀어가 고급 부품을 줍니다——낚시가 전투를 뒷받침합니다."
+        "부품을 쓰기 전에 현재 세이브의 모듈 요구 사항을 확인합니다."
        ]
       },
       {
@@ -1587,7 +1587,7 @@
         ],
         [
          "새 플레이어",
-         "EA보다 일찍 자동화에 도달——농장 드론 기지가 잡일을 대신."
+         "공식 1.0 자료는 농업 자동화와 농장 드론 기지를 추가합니다."
         ],
         [
          "구시가지 유적",
@@ -1595,7 +1595,7 @@
         ],
         [
          "⚠️ 검증 중",
-         "정확한 해금 순서와 건설 비용은 1.0에서 검증 중. ⚠️ 표시는 커뮤니티 정보."
+         "현재 게임 작업과 공식 공지를 확인하며 이 가이드는 해금 순서를 추론하지 않습니다."
         ]
        ]
       },
@@ -1778,7 +1778,7 @@
       {
        "type": "note",
        "heading": "Errores comunes de los novatos (evítalos)",
-       "body": "Los finales de partida más comunes según la comunidad: regar a mano todos los cultivos cada día (usa la automatización o el gen Lluvia), construir sin dejar rutas de acceso, ignorar la amistad (te bloquea recetas), saltarte las misiones de Bellad (te atrasas en el árbol tecnológico) y no proteger los cultivos ni planificar el riego antes del mes 4."
+       "body": "Errores generales que conviene revisar en tu partida: regar a mano todos los cultivos cuando hay un gen o una tarea automática disponible, bloquear tus rutas, ignorar la amistad, saltarte las misiones de Bellad y no proteger los cultivos ni planificar el riego antes del mes 4."
       },
       {
        "type": "list",
@@ -1789,7 +1789,7 @@
         "Mejora en orden: chasis (supervivencia), cañón (daño), batería (duración).",
         "El rayo de carga (F) rompe escudos de los Scavenger Bugs blindados; el fuego normal rebota.",
         "Equipa módulos de arma y luz antes de explorar ruinas de noche.",
-        "Los peces raros dan piezas avanzadas: pescar financia tu build."
+        "Comprueba los requisitos actuales de cada módulo antes de gastar piezas."
        ]
       },
       {
@@ -1803,7 +1803,7 @@
         ],
         [
          "Nuevos jugadores",
-         "Llegas a la automatización antes que en EA: estaciones de drones para automatizar las tareas agrícolas."
+         "Las fuentes oficiales de 1.0 añaden automatización agrícola y estaciones de drones."
         ],
         [
          "Ruinas de la Ciudad Vieja",
@@ -1811,7 +1811,7 @@
         ],
         [
          "⚠️ Verificación",
-         "El orden exacto de desbloqueo y costes se están verificando en 1.0; ⚠️ es información de la comunidad."
+         "Comprueba las tareas actuales y los anuncios oficiales; esta guía no infiere un orden de desbloqueo."
         ]
        ]
       },
@@ -1862,19 +1862,19 @@
      "type": "steps",
      "tag": "1.0",
      "heading": "How Farming Automation Works",
-     "body": "Automation has three layers: energy, stations and drones. Each layer feeds the next, so build in this order.",
+     "body": "This editorial checklist groups source-supported power options, farming drone stations and automated crop tasks. It does not imply an unlock or build order.",
      "items": [
       [
-       "Build the automation chain",
-       "Follow the in-game farming automation flow and unlock each task before expanding the layout."
+       "Review the documented components",
+       "Use the current in-game farming tasks to confirm which automation components are available in your save."
       ],
       [
        "Build farming drone stations",
-       "Stations are the control points that let drones run farm operations. They consume energy, so size them to your power output."
+       "Official 1.0 materials describe farming drone stations as part of crop automation."
       ],
       [
        "Assign automated tasks",
-       "Drones handle seeding, nurturing plants and gathering yields end-to-end. Start with one repetitive chore (watering) and expand."
+       "Official materials describe drones handling seeding, nurturing plants and gathering yields end-to-end. Confirm the available tasks in your current save."
       ],
       [
        "Free up your time",
@@ -1885,11 +1885,11 @@
     {
      "type": "list",
      "tag": "ENERGY",
-     "heading": "What to Automate First",
-     "body": "Start with a small, repeatable crop task and verify that the drone completes it reliably.",
+     "heading": "Verify an Automated Crop Task",
+     "body": "Use the current in-game task list to choose a crop task, then verify that the drone completes it reliably.",
      "items": [
-      "Start with a low-risk crop task rather than your only income crop.",
-      "Leave clear routes around platforms so drones can reach assigned plots.",
+      "Confirm the task and material requirements shown in your current save.",
+      "Test the assigned task before changing a larger working layout.",
       "Save before restructuring a working automated farm.",
       "Official patch 1.00.03 lists drone failures in certain situations as unresolved."
      ]
@@ -1917,33 +1917,33 @@
     {
      "type": "table",
      "tag": "ROADMAP",
-     "heading": "Automation Roadmap (Community Draft)",
-     "body": "A rough order that most players report working — verify exact costs in your save.",
+     "heading": "Source-Supported Automation Checklist",
+     "body": "These rows group documented components for reference; they are not a progression, dependency or timing sequence.",
      "columns": [
-      "Stage",
-      "What you get",
-      "When"
+      "Component",
+      "Documented role",
+      "Verification boundary"
      ],
      "rows": [
       [
-       "First automation stage",
-       "Basic crop task",
-       "Early-mid game ⚠️"
+       "Power options",
+       "Official materials name solar and wind power",
+       "Check availability in the current save"
       ],
       [
-       "First drone station",
-       "Automated seeding",
-       "Mid game ⚠️"
+       "Farming drone stations",
+       "Official materials connect stations with farming automation",
+       "No unlock order inferred"
       ],
       [
-       "Full crop cycle",
-       "Seed → nurture → harvest",
-       "Late game ⚠️"
+       "Automated crop tasks",
+       "Official materials name seeding, nurturing and gathering yields",
+       "Patch 1.00.03 lists failures in some situations"
       ],
       [
-       "Industrial line",
-       "Conveyor + new areas",
-       "1.0 endgame"
+       "Industrial production",
+       "Official 1.0 materials describe conveyor production lines",
+       "Separate feature; no dependency inferred"
       ]
      ]
     },
@@ -1951,27 +1951,48 @@
      "type": "note",
      "tag": "COMMON MISTAKES",
      "heading": "Common Automation Mistakes",
-     "body": "Do not rush stations before you have stable power — a station that idles half the day wastes the whole point. Do not automate your only income crop first; automate a low-value filler crop to learn the system risk-free. And leave clear lanes for drones when you build platforms, or they cannot reach their plots."
+     "body": "Check the current in-game task and material requirements before changing a working layout. Patch 1.00.03 lists drone failures in certain situations, so save first and verify each change in your own game."
     },
     {
      "type": "note",
      "tag": "1.0",
      "heading": "Why This Page Matters",
-     "body": "This page separates official 1.0 and 1.00.03 information from community-reported details. Check the linked Steam announcements after each patch."
+     "body": "This page groups official 1.0 and 1.00.03 information without claiming a fixed progression. Check the linked Steam announcements after each patch."
     }
    ],
    "sources": [
     {
      "label": "Official Steam page (Farming Automation)",
-     "url": "https://store.steampowered.com/app/2285550/Doloc_Town/"
+     "url": "https://store.steampowered.com/app/2285550/Doloc_Town/",
+     "labels": {
+      "zh-CN": "Steam 官方商店——太阳能、风力与农业自动化",
+      "zh-TW": "Steam 官方商店——太陽能、風力與農業自動化",
+      "ja": "Steam 公式ストア——太陽光・風力発電と農業自動化",
+      "ko": "Steam 공식 상점——태양광·풍력 발전과 농업 자동화",
+      "es": "Tienda oficial de Steam: energía solar, eólica y automatización agrícola"
+     }
     },
     {
      "label": "Official 1.0 announcement",
-     "url": "https://steamcommunity.com/app/2285550/allnews/?l=english"
+     "url": "https://steamcommunity.com/app/2285550/allnews/?l=english",
+     "labels": {
+      "zh-CN": "多洛可小镇官方 1.0 公告索引",
+      "zh-TW": "多洛可小鎮官方 1.0 公告索引",
+      "ja": "ドロックタウン公式 1.0 発表一覧",
+      "ko": "돌록 타운 공식 1.0 공지 목록",
+      "es": "Índice oficial de anuncios 1.0 de Doloc Town"
+     }
     },
     {
      "label": "Official Doloc Town patch 1.00.03",
-     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586",
+     "labels": {
+      "zh-CN": "多洛可小镇官方 1.00.03 补丁说明",
+      "zh-TW": "多洛可小鎮官方 1.00.03 更新說明",
+      "ja": "ドロックタウン公式パッチ 1.00.03",
+      "ko": "돌록 타운 공식 패치 1.00.03",
+      "es": "Parche oficial 1.00.03 de Doloc Town"
+     }
     }
    ],
    "meta": {
@@ -1988,41 +2009,41 @@
       {
        "type": "note",
        "tag": "OFFICIAL-AUTOMATION",
-       "heading": "Official automation status",
+       "heading": "官方自动化状态",
        "body": "官方 1.0 公告介绍农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
       },
       {
        "type": "steps",
-       "heading": "农业自动化如何运作",
-       "body": "自动化有三层：能源、站点与无人机。",
+       "heading": "农业自动化机制清单",
+       "body": "以下按主题整理官方资料支持的供能选项、农场无人机站与自动作业，不代表解锁或建造顺序。",
        "items": [
         [
-         "配置农业自动化",
-         "建造太阳能板与自动化设备，为农场生成清洁能源。"
+         "查看当前任务",
+         "先在自己的存档中确认可用的自动化组件与材料。"
         ],
         [
-         "建造农场无人机站",
-         "站点是让无人机执行农场作业的控制点。"
+         "核对农场无人机站",
+         "官方 1.0 资料把农场无人机站列为农业自动化的一部分。"
         ],
         [
-         "指派自动化任务",
-         "无人机端到端处理播种、培育与收获。"
+         "核对自动作业",
+         "官方资料提到播种、培育与收获作业。"
         ],
         [
-         "解放你的时间",
-         "无人机工作时，去探索、聊天或推进剧情。"
+         "保存后再调整",
+         "1.00.03 把特定情况下的无人机失效列为已知问题。"
         ]
        ]
       },
       {
        "type": "list",
-       "heading": "太阳能 vs 自动化：先建什么",
-       "body": "先建与你天气匹配的，再平衡。",
+       "heading": "官方资料支持的组件",
+       "body": "这是编辑整理的核对表，不表示组件之间存在依赖。",
        "items": [
-        "晴天太阳能板效率高，适合晴朗季节。",
-        "自动化设备在暴风雨中持续发电——多雨月份很划算。",
-        "两者混用可让能源在各类天气下保持稳定。",
-        "⚠️ 具体建造费用与发电量正在 1.0 实测中。"
+        "官方商店资料提到太阳能与风力供能。",
+        "官方 1.0 资料提到农业自动化与农场无人机站。",
+        "具体解锁条件与材料以当前存档显示为准。",
+        "1.00.03 列出特定情况下的无人机失效。"
        ]
       },
       {
@@ -2046,44 +2067,45 @@
       },
       {
        "type": "table",
-       "heading": "自动化路线图（草稿）",
+       "heading": "自动化资料核对表",
+       "body": "各行仅按主题分组，不是进度、依赖或时间顺序。",
        "columns": [
-        "阶段",
-        "获得内容",
-        "时机"
+        "组件",
+        "官方资料中的作用",
+        "核对边界"
        ],
        "rows": [
         [
-         "农业自动化",
-         "站点能源",
-         "前期-中期 ⚠️"
+         "供能选项",
+         "官方资料提到太阳能与风力",
+         "在当前存档核对可用性"
         ],
         [
-         "第一座无人机站",
-         "自动播种",
-         "中期 ⚠️"
+         "农场无人机站",
+         "官方资料将其与农业自动化相连",
+         "不推断解锁顺序"
         ],
         [
-         "完整作物循环",
-         "播种→培育→收割",
-         "后期 ⚠️"
+         "自动作业",
+         "播种、培育与收获",
+         "1.00.03 提醒某些情况下会失效"
         ],
         [
-         "工业线",
-         "传送带+新区域",
-         "1.0 终局"
+         "工业生产",
+         "1.0 资料提到传送带生产线",
+         "不推断与农场自动化的依赖"
         ]
        ]
       },
       {
        "type": "note",
-       "heading": "常见自动化错误",
-       "body": "不要在电力稳定前急着建站——一个半天闲置的站点违背了整个系统的意义。不要第一个就自动化你的唯一收入作物；先自动化低价值填充作物来无风险地学习系统。堆平台时给无人机留出清晰航线，否则它们够不到自己的地块。"
+       "heading": "调整自动化前",
+       "body": "先核对当前任务与材料，保存后再调整现有布局。1.00.03 把特定情况下的无人机失效列为已知问题。"
       },
       {
        "type": "note",
-       "heading": "为什么这个页面重要",
-       "body": "多洛可小镇自动化的英文攻略几乎不存在——多数内容停在 EA 基础阶段。本页是第一批 1.0 专属自动化英文参考之一。标 ⚠️ 的细节将在亲测后更新。"
+       "heading": "本页资料边界",
+       "body": "本页按主题整理官方 1.0 与 1.00.03 资料，不推断固定进度。更新后请复查所链接的 Steam 官方公告。"
       }
      ]
     },
@@ -2096,41 +2118,41 @@
       {
        "type": "note",
        "tag": "OFFICIAL-AUTOMATION",
-       "heading": "Official automation status",
+       "heading": "官方自動化狀態",
        "body": "官方 1.0 公告介紹農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
       },
       {
        "type": "steps",
-       "heading": "農業自動化如何運作",
-       "body": "自動化有三層：能源、站點與無人機。",
+       "heading": "農業自動化機制清單",
+       "body": "以下按主題整理官方資料支持的供能選項、農場無人機站與自動作業，不代表解鎖或建造順序。",
        "items": [
         [
-         "配置農業自動化",
-         "建造太陽能板與自動化設備，為農場生成清潔能源。"
+         "查看當前任務",
+         "先在自己的存檔中確認可用的自動化組件與材料。"
         ],
         [
-         "建造農場無人機站",
-         "站點是讓無人機執行農場作業的控制點。"
+         "核對農場無人機站",
+         "官方 1.0 資料把農場無人機站列為農業自動化的一部分。"
         ],
         [
-         "指派自動化任務",
-         "無人機端到端處理播種、培育與收穫。"
+         "核對自動作業",
+         "官方資料提到播種、培育與收穫作業。"
         ],
         [
-         "解放你的時間",
-         "無人機工作時，去探索、聊天或推進劇情。"
+         "保存後再調整",
+         "1.00.03 把特定情況下的無人機失效列為已知問題。"
         ]
        ]
       },
       {
        "type": "list",
-       "heading": "太陽能 vs 自動化：先建什麼",
-       "body": "先建與你天氣匹配的，再平衡。",
+       "heading": "官方資料支持的組件",
+       "body": "這是編輯整理的核對表，不表示組件之間存在依賴。",
        "items": [
-        "晴天太陽能板效率高，適合晴朗季節。",
-        "自動化設備在暴風雨中持續發電——多雨月份很划算。",
-        "兩者混用可讓能源在各類天氣下保持穩定。",
-        "⚠️ 具體建造費用與發電量正在 1.0 實測中。"
+        "官方商店資料提到太陽能與風力供能。",
+        "官方 1.0 資料提到農業自動化與農場無人機站。",
+        "具體解鎖條件與材料以當前存檔顯示為準。",
+        "1.00.03 列出特定情況下的無人機失效。"
        ]
       },
       {
@@ -2154,44 +2176,45 @@
       },
       {
        "type": "table",
-       "heading": "自動化路線圖（草稿）",
+       "heading": "自動化資料核對表",
+       "body": "各行僅按主題分組，不是進度、依賴或時間順序。",
        "columns": [
-        "階段",
-        "獲得內容",
-        "時機"
+        "組件",
+        "官方資料中的作用",
+        "核對邊界"
        ],
        "rows": [
         [
-         "農業自動化",
-         "站點能源",
-         "前期-中期 ⚠️"
+         "供能選項",
+         "官方資料提到太陽能與風力",
+         "在當前存檔核對可用性"
         ],
         [
-         "第一座無人機站",
-         "自動播種",
-         "中期 ⚠️"
+         "農場無人機站",
+         "官方資料將其與農業自動化相連",
+         "不推斷解鎖順序"
         ],
         [
-         "完整作物循環",
-         "播種→培育→收割",
-         "後期 ⚠️"
+         "自動作業",
+         "播種、培育與收穫",
+         "1.00.03 提醒某些情況下會失效"
         ],
         [
-         "工業線",
-         "傳送帶+新區域",
-         "1.0 終局"
+         "工業生產",
+         "1.0 資料提到傳送帶生產線",
+         "不推斷與農場自動化的依賴"
         ]
        ]
       },
       {
        "type": "note",
-       "heading": "常見自動化錯誤",
-       "body": "不要在電力穩定前急著建站——一個半天閒置的站點違背了整個系統的意義。不要第一個就自動化你的唯一收入作物；先自動化低價值填充作物來無風險地學習系統。堆平臺時給無人機留出清晰航線，否則它們夠不到自己的地塊。"
+       "heading": "調整自動化前",
+       "body": "先核對當前任務與材料，保存後再調整現有佈局。1.00.03 把特定情況下的無人機失效列為已知問題。"
       },
       {
        "type": "note",
-       "heading": "為什麼這個頁面重要",
-       "body": "多洛可小鎮自動化的英文攻略幾乎不存在——多數內容停在 EA 基礎階段。本頁是第一批 1.0 專屬自動化英文參考之一。標 ⚠️ 的細節將在親測後更新。"
+       "heading": "本頁資料邊界",
+       "body": "本頁按主題整理官方 1.0 與 1.00.03 資料，不推斷固定進度。更新後請複查所鏈接的 Steam 官方公告。"
       }
      ]
     },
@@ -2204,41 +2227,41 @@
       {
        "type": "note",
        "tag": "OFFICIAL-AUTOMATION",
-       "heading": "Official automation status",
+       "heading": "公式オートメーション情報",
        "body": "公式 1.0 情報は農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。"
       },
       {
        "type": "steps",
-       "heading": "農業オートメーションの仕組み",
-       "body": "自動化は3層：エネルギー・基地・ドローン。",
+       "heading": "農業オートメーションの確認項目",
+       "body": "公式情報にある電力設備・農場ドローン基地・自動作業をテーマ別に整理したもので、解放や建設の順序ではありません。",
        "items": [
         [
-         "太陽光と自動化を利用",
-         "ソーラーパネルと自動化設備を建ててクリーンエネルギーを生成。"
+         "現在のタスクを確認",
+         "自分のセーブで利用できる設備と素材を確認。"
         ],
         [
-         "農場ドローン基地を建設",
-         "基地がドローンに農場作業を実行させるコントロールポイント。"
+         "農場ドローン基地を確認",
+         "公式 1.0 情報は基地を農業オートメーションの要素として説明。"
         ],
         [
-         "自動タスクを割り当て",
-         "ドローンが播種・育成・収穫を一貫して処理。"
+         "自動作業を確認",
+         "公式情報は播種・育成・収穫を挙げています。"
         ],
         [
-         "時間を解放",
-         "ドローン作業中に探索・住民交流・ストーリー進行。"
+         "保存してから変更",
+         "1.00.03 は特定状況のドローン不具合を既知事項として列挙。"
         ]
        ]
       },
       {
        "type": "list",
-       "heading": "太陽光 vs 自動化：どちらを先に",
-       "body": "自分の天候に合う方から。",
+       "heading": "公式情報にある構成要素",
+       "body": "編集上のチェックリストであり、構成要素間の依存関係を示しません。",
        "items": [
-        "晴天ならソーラーパネルが効率的。",
-        "自動化設備は嵐でも発電——嵐の多い月に有利。",
-        "両方の混在で天候に関係なく安定。",
-        "⚠️ 正確な建設コストと発電量は 1.0 で検証中。"
+        "公式ストアは太陽光と風力発電を紹介。",
+        "公式 1.0 情報は農業オートメーションと農場ドローン基地を紹介。",
+        "解放条件と素材は現在のセーブで確認。",
+        "1.00.03 は特定状況のドローン不具合を列挙。"
        ]
       },
       {
@@ -2262,44 +2285,45 @@
       },
       {
        "type": "table",
-       "heading": "自動化ロードマップ（草案）",
+       "heading": "オートメーション資料チェックリスト",
+       "body": "各行はテーマ別の整理で、進行・依存・時期の順序ではありません。",
        "columns": [
-        "段階",
-        "得られるもの",
-        "時期"
+        "構成要素",
+        "公式情報の説明",
+        "確認範囲"
        ],
        "rows": [
         [
-         "農業オートメーション",
-         "基地のエネルギー",
-         "序盤～中盤 ⚠️"
+         "電力設備",
+         "公式情報は太陽光と風力発電を紹介",
+         "現在のセーブで利用可否を確認"
         ],
         [
-         "最初のドローン基地",
-         "自動播種",
-         "中盤 ⚠️"
+         "農場ドローン基地",
+         "公式情報は農業自動化との関係を説明",
+         "解放順は推測しない"
         ],
         [
-         "完全な作物サイクル",
-         "播種→育成→収穫",
-         "終盤 ⚠️"
+         "自動作業",
+         "播種・育成・収穫",
+         "1.00.03 は一部状況の不具合を列挙"
         ],
         [
-         "工業ライン",
-         "コンベア+新領域",
-         "1.0 エンドゲーム"
+         "工業生産",
+         "1.0 情報はコンベア生産ラインを紹介",
+         "農場自動化との依存は推測しない"
         ]
        ]
       },
       {
        "type": "note",
        "heading": "自動化のよくある失敗",
-       "body": "電力が安定する前に基地を急がない——半日稼働しない基地は意味がなくなる。最初の自動化は唯一の収入作物ではなく、低価値のフィラー作物でシステムを学ぼう。プラットフォームを積むときはドローンの飛行経路を確保しないと、作物に到達できない。"
+       "body": "現在のゲーム内タスクと素材を確認し、保存してから既存の配置を変更してください。1.00.03 は特定状況のドローン不具合を既知事項として列挙しています。"
       },
       {
        "type": "note",
        "heading": "このページの重要性",
-       "body": "ドロックタウンの自動化に関する英語ガイドはほぼ存在しない——多くは EA の基礎で止まっている。本ページは 1.0 専用の自動化英語リファレンスの最初の一つ。⚠️ 付きの詳細は実機検証後に更新。"
+       "body": "本ページは公式 1.0 と 1.00.03 の情報をテーマ別に整理し、固定された進行は推測しません。更新後はリンク先の Steam 公式発表を確認してください。"
       }
      ]
     },
@@ -2312,13 +2336,13 @@
       {
        "type": "note",
        "tag": "OFFICIAL-AUTOMATION",
-       "heading": "Official automation status",
+       "heading": "공식 자동화 상태",
        "body": "공식 1.0 공지는 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
       },
       {
        "type": "steps",
-       "heading": "농업 자동화의 작동 방식",
-       "body": "자동화는 에너지·기지·드론 세 층으로 이루어집니다.",
+       "heading": "농업 자동화 확인 항목",
+       "body": "공식 자료의 전력 설비·농장 드론 기지·자동 작업을 주제별로 묶었으며 해금이나 건설 순서를 뜻하지 않습니다.",
        "items": [
         [
          "농업 자동화 활용",
@@ -2340,8 +2364,8 @@
       },
       {
        "type": "list",
-       "heading": "태양광 vs 자동화: 무엇부터?",
-       "body": "자신의 날씨에 맞는 것부터 짓고 균형을 맞추세요.",
+       "heading": "공식 자료의 구성 요소",
+       "body": "편집용 체크리스트이며 구성 요소 사이의 의존 관계를 뜻하지 않습니다.",
        "items": [
         "자동화 해금 조건과 필요한 재료를 확인하세요.",
         "드론 스테이션에 파종·관리·수확 작업을 지정하세요.",
@@ -2370,44 +2394,45 @@
       },
       {
        "type": "table",
-       "heading": "자동화 로드맵 (초안)",
+       "heading": "자동화 자료 체크리스트",
+       "body": "각 행은 주제별 묶음이며 진행·의존·시기 순서가 아닙니다.",
        "columns": [
-        "단계",
-        "얻는 것",
-        "시기"
+        "구성 요소",
+        "공식 자료의 설명",
+        "확인 범위"
        ],
        "rows": [
         [
-         "농업 자동화",
-         "기지 에너지",
-         "초~중반 ⚠️"
+         "전력 설비",
+         "공식 자료는 태양광과 풍력을 소개",
+         "현재 세이브에서 이용 가능 여부 확인"
         ],
         [
-         "첫 드론 기지",
-         "자동 파종",
-         "중반 ⚠️"
+         "농장 드론 기지",
+         "공식 자료는 농업 자동화와의 관계를 설명",
+         "해금 순서를 추론하지 않음"
         ],
         [
-         "전체 작물 주기",
-         "파종→육성→수확",
-         "후반 ⚠️"
+         "자동 작업",
+         "파종·육성·수확",
+         "1.00.03은 일부 상황의 실패를 열거"
         ],
         [
-         "산업 라인",
-         "컨베이어+새 지역",
-         "1.0 엔드게임"
+         "산업 생산",
+         "1.0 자료는 컨베이어 생산 라인을 소개",
+         "농업 자동화와의 의존을 추론하지 않음"
         ]
        ]
       },
       {
        "type": "note",
        "heading": "자동화의 흔한 실수",
-       "body": "전력이 안정되기 전에 기지를 서두르지 마세요——반나절 놀고 있는 기지는 시스템의 의미를 없앱니다. 첫 자동화는 유일한 수입 작물이 아니라 저가 필러 작물로 시스템을 배우세요. 플랫폼을 쌓을 때 드론 비행 경로를 남겨두지 않으면 드론이 구획에 도달하지 못합니다."
+       "body": "현재 게임 작업과 재료를 확인하고 저장한 뒤 기존 배치를 바꾸세요. 1.00.03은 특정 상황의 드론 실패를 알려진 문제로 열거합니다."
       },
       {
        "type": "note",
        "heading": "이 페이지가 중요한 이유",
-       "body": "돌록 타운 자동화에 대한 영어 가이드는 거의 없습니다——대부분 EA 기초에서 멈춰 있습니다. 이 페이지는 최초의 1.0 전용 자동화 영어 자료 중 하나입니다. ⚠️ 표시된 세부 사항은 직접 검증 후 업데이트됩니다."
+       "body": "이 페이지는 공식 1.0과 1.00.03 자료를 주제별로 정리하며 고정된 진행을 추론하지 않습니다. 업데이트 후 링크된 Steam 공식 공지를 확인하세요."
       }
      ]
     },
@@ -2426,13 +2451,13 @@
       {
        "type": "note",
        "tag": "OFFICIAL-AUTOMATION",
-       "heading": "Official automation status",
+       "heading": "Estado oficial de la automatización",
        "body": "Los avisos oficiales de 1.0 describen una automatización agrícola. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas."
       },
       {
        "type": "steps",
-       "heading": "Cómo funciona la automatización agrícola",
-       "body": "La automatización tiene tres capas: energía, estaciones y drones.",
+       "heading": "Elementos de la automatización agrícola",
+       "body": "Esta lista editorial agrupa energía, estaciones de drones y tareas automáticas documentadas; no indica un orden de desbloqueo o construcción.",
        "items": [
         [
          "Aprovecha la automatización agrícola",
@@ -2454,8 +2479,8 @@
       },
       {
        "type": "list",
-       "heading": "¿Solar o automatización? Qué construir primero",
-       "body": "Empieza por comprobar la automatización agrícola oficial y las tareas de las estaciones de drones.",
+       "heading": "Componentes citados por las fuentes",
+       "body": "Es una lista editorial y no implica dependencias entre componentes.",
        "items": [
         "Comprueba los requisitos de desbloqueo y los materiales necesarios.",
         "Asigna a las estaciones de drones tareas de siembra, cuidado y cosecha.",
@@ -2484,44 +2509,45 @@
       },
       {
        "type": "table",
-       "heading": "Hoja de ruta de la automatización (borrador)",
+       "heading": "Lista de comprobación de las fuentes",
+       "body": "Las filas agrupan temas; no forman una secuencia de progreso, dependencia o tiempo.",
        "columns": [
-        "Etapa",
-        "Qué consigues",
-        "Cuándo"
+        "Componente",
+        "Qué describen las fuentes",
+        "Límite de verificación"
        ],
        "rows": [
         [
-         "Energía solar/automatización",
-         "Energía para estaciones",
-         "Inicio-medio ⚠️"
+         "Opciones de energía",
+         "Las fuentes oficiales citan energía solar y eólica",
+         "Comprobar disponibilidad en la partida"
         ],
         [
-         "Primera estación de drones",
-         "Siembra automática",
-         "Medio ⚠️"
+         "Estaciones de drones",
+         "Las fuentes las relacionan con la automatización agrícola",
+         "Sin inferir orden de desbloqueo"
         ],
         [
-         "Ciclo completo",
-         "Siembra→cuidado→cosecha",
-         "Final ⚠️"
+         "Tareas automáticas",
+         "Siembra, cuidado y cosecha",
+         "1.00.03 enumera fallos en algunas situaciones"
         ],
         [
-         "Línea industrial",
-         "Cintas + nuevas áreas",
-         "Final del 1.0"
+         "Producción industrial",
+         "1.0 describe líneas de cintas transportadoras",
+         "Sin inferir dependencia con la granja"
         ]
        ]
       },
       {
        "type": "note",
        "heading": "Errores comunes de automatización",
-       "body": "No construyas estaciones antes de tener energía estable: una estación que está ociosa medio día anula el propósito. No automatices tu único cultivo de ingresos primero; automatiza un cultivo de relleno barato para aprender sin riesgo. Y deja carriles claros para los drones al construir plataformas, o no podrán llegar a sus parcelas."
+       "body": "Comprueba las tareas y los materiales actuales, guarda y después cambia la distribución. 1.00.03 enumera fallos de drones en determinadas situaciones."
       },
       {
        "type": "note",
        "heading": "Por qué importa esta página",
-       "body": "Las guías en inglés sobre la automatización de Doloc Town son casi inexistentes: la mayoría se queda en lo básico del Early Access. Esta es una de las primeras referencias en inglés específicas del 1.0. Los detalles marcados ⚠️ se actualizarán tras la verificación práctica."
+       "body": "Esta página agrupa por temas información oficial de 1.0 y 1.00.03 sin inferir un progreso fijo. Revisa los anuncios oficiales de Steam enlazados después de cada actualización."
       }
      ]
     }
@@ -3616,13 +3642,13 @@
     {
      "type": "list",
      "heading": "How to Fish Efficiently",
-     "body": "Turn fishing from a side activity into a reliable income and parts source.",
+     "body": "Use the catch tables to choose a pond, weather window and rod for the fish you want.",
      "items": [
       "Map the ponds: each body of water has its own fish pool — check the tables above before choosing a spot",
       "Upgrade your rod: higher-tier rods unlock better fish and make the fishing minigame more forgiving",
       "Fish through weather: rain and thunderstorms bring uncommon catches that dry days don't",
       "Watch the season: rainy season (Jan–Feb) and dry season (Mar–Apr) change the catch tables completely",
-      "Rare fish drop advanced drone and tool parts, so a good fishing session funds your upgrades"
+      "Keep surplus catches until you have checked their current in-game uses"
      ]
     },
     {
@@ -4056,13 +4082,13 @@
       {
        "type": "list",
        "heading": "高效钓鱼方法",
-       "body": "把钓鱼从副业变成稳定的收入与零件来源。",
+       "body": "按池塘、天气、月份与鱼竿条件选择目标渔获。",
        "items": [
         "摸清每个池塘：每片水域都有自己的鱼池——选点前先看上面的表",
         "升级鱼竿：更高品质的鱼竿解锁更好的鱼，也让钓鱼小游戏更宽容",
         "看天气钓鱼：雨天和雷暴会带来晴天没有的稀有渔获",
         "盯紧季节：雨季（1–2 月）与旱季（3–4 月）会完全改变渔获表",
-        "稀有鱼掉落高级无人机与工具零件，一次好的钓鱼就够升级开支"
+        "多余渔获的用途以当前游戏内显示为准"
        ]
       },
       {
@@ -4470,13 +4496,13 @@
       {
        "type": "list",
        "heading": "高效釣魚方法",
-       "body": "把釣魚從副業變成穩定的收入與零件來源。",
+       "body": "按池塘、天氣、月份與魚竿條件選擇目標漁獲。",
        "items": [
         "摸清每個池塘：每片水域都有自己的魚池——選點前先看上面的表",
         "升級魚竿：更高品質的魚竿解鎖更好的魚，也讓釣魚小遊戲更寬容",
         "看天氣釣魚：雨天和雷暴會帶來晴天沒有的稀有漁獲",
         "盯緊季節：雨季（1–2 月）與旱季（3–4 月）會完全改變漁獲表",
-        "稀有魚掉落高級無人機與工具零件，一次好的釣魚就夠升級開支"
+        "多餘漁獲的用途以當前遊戲內顯示為準"
        ]
       },
       {
@@ -4884,13 +4910,13 @@
       {
        "type": "list",
        "heading": "効率的な釣り方",
-       "body": "釣りを副業から、安定した収入とパーツ供給源に変える。",
+       "body": "池・天候・月・竿の条件を確認して目標の魚を選ぶ。",
        "items": [
         "池を把握する：水域ごとに魚種が違う——場所選びの前に上の表を確認",
         "竿を強化する：上位の竿でより良い魚が解禁され、ミニゲームも寛容に",
         "天候を活かす：雨と雷雨は晴れの日には出ない珍しい釣果をもたらす",
         "季節に注意：雨季（1〜2月）と乾季（3〜4月）で釣果テーブルが完全に変わる",
-        "レア魚はドローン・道具の高度なパーツを落とす——良い釣りは強化費の財源"
+        "余った魚を加工・売却する前に現在のゲーム内用途を確認"
        ]
       },
       {
@@ -5298,13 +5324,13 @@
       {
        "type": "list",
        "heading": "효율적인 낚시법",
-       "body": "낚시를 부업에서 안정적인 수입과 부품 공급원으로 바꾸세요.",
+       "body": "연못·날씨·월·낚싯대 조건을 확인해 목표 어획을 고르세요.",
        "items": [
         "연못을 파악하세요: 물가마다 어종이 다릅니다——자리 정하기 전에 위 표를 확인",
         "낚싯대를 업그레이드하세요: 상위 낚싯대는 더 좋은 물고기를 해금하고 미니게임도 관대해집니다",
         "날씨를 활용하세요: 비와 뇌우는 맑은 날에는 안 나오는 진귀한 어획을 줍니다",
         "계절을 주시하세요: 우기(1–2월)와 건기(3–4월)는 어획표를 완전히 바꿉니다",
-        "희귀어는 드론·도구 고급 부품을 줍니다——좋은 낚시 한 번이 강화 비용을 채웁니다"
+        "남는 어획을 가공하거나 팔기 전에 현재 게임 내 용도를 확인하세요"
        ]
       },
       {
@@ -5718,13 +5744,13 @@
       {
        "type": "list",
        "heading": "Cómo pescar de forma eficiente",
-       "body": "Convierte la pesca de actividad secundaria en una fuente fiable de ingresos y piezas.",
+       "body": "Elige la captura según el estanque, el clima, el mes y la caña.",
        "items": [
         "Conoce los estanques: cada masa de agua tiene su propia fauna — consulta las tablas antes de elegir sitio",
         "Mejora tu caña: las cañas superiores desbloquean mejores peces y hacen el minijuego más permisivo",
         "Pesca según el clima: la lluvia y las tormentas traen capturas poco comunes que no aparecen en días secos",
         "Vigila la estación: la lluviosa (ene–feb) y la seca (mar–abr) cambian por completo las tablas de captura",
-        "Los peces raros dan piezas avanzadas de dron y herramientas: una buena sesión de pesca financia tus mejoras"
+        "Antes de procesar o vender capturas sobrantes, comprueba sus usos actuales en el juego"
        ]
       },
       {
@@ -5853,8 +5879,8 @@
        "Capacitor/Shadow Shooter scale with your build."
       ],
       [
-       "Save parts from fishing",
-       "Rare fish drop advanced parts — fish to fund combat."
+       "Check upgrade materials",
+       "Confirm each module's current in-game material requirements before spending parts."
       ]
      ]
     },
@@ -5892,8 +5918,8 @@
        "Battery. Running out of energy mid-fight is the #1 new-player death; then barrel for damage."
       ],
       [
-       "Where do advanced parts drop?",
-       "Rare fish drop advanced drone and tool parts; the Wetlands boss drops a Medium E-chip ⚠️."
+       "How should I plan combat upgrades?",
+       "Check each module's current in-game requirements and keep a save before committing scarce parts."
       ],
       [
        "Is night combat viable?",
@@ -6021,8 +6047,8 @@
          "电容 / 影子射手随出装成长。"
         ],
         [
-         "靠钓鱼攒零件",
-         "稀有鱼掉落高级零件——用钓鱼养战斗。"
+         "核对升级材料",
+         "花费零件前查看当前存档中的模块要求。"
         ]
        ]
       },
@@ -6057,8 +6083,8 @@
          "电池。战斗中没能量是新玩家头号死因；然后升枪管补伤害。"
         ],
         [
-         "高级零件在哪掉？",
-         "稀有鱼掉落高级无人机与工具零件；湿地 Boss 掉落中型E芯片 ⚠️。"
+         "如何规划战斗升级？",
+         "请核对当前游戏中的模块材料要求，并在花费稀缺零件前保存。"
         ],
         [
          "夜战可行吗？",
@@ -6172,8 +6198,8 @@
          "電容 / 影子射手隨出裝成長。"
         ],
         [
-         "靠釣魚攢零件",
-         "稀有魚掉落高級零件——用釣魚養戰鬥。"
+         "核對升級材料",
+         "花費零件前查看當前存檔中的模塊要求。"
         ]
        ]
       },
@@ -6208,8 +6234,8 @@
          "電池。戰鬥中沒能量是新玩家頭號死因；然後升槍管補傷害。"
         ],
         [
-         "高級零件在哪掉？",
-         "稀有魚掉落高級無人機與工具零件；溼地 Boss 掉落中型E芯片 ⚠️。"
+         "如何規劃戰鬥升級？",
+         "請核對當前遊戲中的模塊材料要求，並在花費稀缺零件前保存。"
         ],
         [
          "夜戰可行嗎？",
@@ -6323,8 +6349,8 @@
          "キャパシタ / シャドウシューターがビルドを伸ばす。"
         ],
         [
-         "釣りで部品を貯める",
-         "レア魚が高級部品——釣りで戦闘を賄う。"
+         "強化素材を確認",
+         "パーツを使う前に現在のセーブでモジュール要件を確認。"
         ]
        ]
       },
@@ -6359,8 +6385,8 @@
          "バッテリー。戦闘中のエネルギー切れが第1の死因。次にバレルでダメージ。"
         ],
         [
-         "高級部品はどこで？",
-         "レア魚が高級ドローン・道具部品を落とし、湿地ボスがミディアムEチップ ⚠️。"
+         "強化素材はどこで確認？",
+         "現在のセーブに表示されるモジュール要件と入手先を確認してください。"
         ],
         [
          "夜戦は可能？",
@@ -6474,8 +6500,8 @@
          "캐패시터 / 섀도우 슈터가 빌드를 키웁니다."
         ],
         [
-         "낚시로 부품 모으기",
-         "희귀어가 고급 부품 — 낚시로 전투 자금 마련."
+         "업그레이드 재료 확인",
+         "부품을 쓰기 전에 현재 세이브의 모듈 요구 사항을 확인하세요."
         ]
        ]
       },
@@ -6510,8 +6536,8 @@
          "배터리. 전투 중 에너지 고갈이 1위 사인. 다음 배럴로 피해."
         ],
         [
-         "고급 부품은 어디서?",
-         "희귀어가 고급 드론·도구 부품 드랍, 습지 보스가 미디엄 E칩 ⚠️."
+         "전투 업그레이드는 어떻게 계획하나요?",
+         "현재 게임의 모듈 재료 요구 사항을 확인하고 희소 부품을 쓰기 전에 저장하세요."
         ],
         [
          "야간전이 가능한가요?",
@@ -6631,8 +6657,8 @@
          "Capacitor / Disparador Sombra escalan con tu build."
         ],
         [
-         "Guarda piezas de la pesca",
-         "Los peces raros dan piezas avanzadas: pesca para financiar el combate."
+         "Comprueba los materiales",
+         "Revisa los requisitos actuales de cada módulo antes de gastar piezas."
         ]
        ]
       },
@@ -6667,8 +6693,8 @@
          "La batería. Quedarse sin energía a mitad del combate es la muerte n.º 1 de novatos; luego el cañón para daño."
         ],
         [
-         "¿Dónde caen las piezas avanzadas?",
-         "Los peces raros dan piezas avanzadas de dron y herramientas; el jefe de los Humedales suelta un chip E medio ⚠️."
+         "¿Cómo planifico las mejoras de combate?",
+         "Comprueba los requisitos actuales de cada módulo y guarda antes de gastar piezas escasas."
         ],
         [
          "¿Es viable el combate nocturno?",
@@ -6807,9 +6833,9 @@
        "New resource type introduced with 1.0"
       ],
       [
-       "Advanced drone parts",
-       "Fishing",
-       "Rare fish drop advanced drone and tool parts — fish to fund your build"
+       "Fishing catches",
+       "Ponds and waterways",
+       "Catch availability depends on the documented pond, weather and month conditions"
       ]
      ]
     },
@@ -6842,8 +6868,8 @@
        "Yes, but fit a lighting module to your drone first — night fights without light are the classic mistake."
       ],
       [
-       "How do I get advanced drone parts?",
-       "Rare fish drop advanced drone and tool parts; the Wetlands boss drops a Medium E-chip ⚠️."
+       "How should I verify upgrade materials?",
+       "Check the current in-game crafting and upgrade requirements; this guide does not infer direct material drops from fishing."
       ]
      ]
     }
@@ -6985,9 +7011,9 @@
          "1.0 引入的新资源类型"
         ],
         [
-         "高级无人机零件",
-         "钓鱼",
-         "稀有鱼掉落高级无人机与工具零件——用钓鱼养出装"
+         "钓鱼渔获",
+         "池塘与水域",
+         "可获得的鱼取决于所列池塘、天气与月份条件"
         ]
        ]
       },
@@ -7018,8 +7044,8 @@
          "可以，但先给无人机装照明模块——没灯夜战是经典失误。"
         ],
         [
-         "高级无人机零件怎么获得？",
-         "稀有鱼掉落高级无人机与工具零件；湿地 Boss 掉落中型E芯片 ⚠️。"
+         "如何核对升级材料？",
+         "请查看当前游戏中的制作与升级要求；本指南不从钓鱼推断直接材料掉落。"
         ]
        ]
       }
@@ -7143,9 +7169,9 @@
          "1.0 引入的新資源類型"
         ],
         [
-         "高級無人機零件",
-         "釣魚",
-         "稀有魚掉落高級無人機與工具零件——用釣魚養出裝"
+         "釣魚漁獲",
+         "池塘與水域",
+         "可獲得的魚取決於所列池塘、天氣與月份條件"
         ]
        ]
       },
@@ -7176,8 +7202,8 @@
          "可以，但先給無人機裝照明模塊——沒燈夜戰是經典失誤。"
         ],
         [
-         "高級無人機零件怎麼獲得？",
-         "稀有魚掉落高級無人機與工具零件；溼地 Boss 掉落中型E芯片 ⚠️。"
+         "如何核對升級材料？",
+         "請查看當前遊戲中的製作與升級要求；本指南不從釣魚推斷直接材料掉落。"
         ]
        ]
       }
@@ -7301,9 +7327,9 @@
          "1.0で追加された新資源"
         ],
         [
-         "高性能ドローン部品",
-         "釣り",
-         "レア魚が高級部品を落とす——釣りでビルドを賄う"
+         "現在のクラフト素材",
+         "探索と現在のタスク",
+         "入手先と用途は現在のゲーム内表示で確認"
         ]
        ]
       },
@@ -7334,8 +7360,8 @@
          "できますが、先に照明モジュールを装備——灯りなしの夜戦は典型ミス。"
         ],
         [
-         "高性能ドローン部品はどう入手？",
-         "レア魚が高級部品を落とし、湿地ボスがミディアムEチップをドロップ ⚠️。"
+         "強化素材はどう確認する？",
+         "現在のゲーム内の製作・強化要件を確認してください。本ガイドは釣りからの直接素材ドロップを推測しません。"
         ]
        ]
       }
@@ -7459,9 +7485,9 @@
          "1.0에서 추가된 새 자원"
         ],
         [
-         "고급 드론 부품",
-         "낚시",
-         "희귀어가 고급 부품 드랍 — 낚시로 빌드 자금 마련"
+         "낚시 어획",
+         "연못과 수역",
+         "어획 가능 여부는 표에 나온 연못·날씨·월 조건에 따릅니다"
         ]
        ]
       },
@@ -7492,8 +7518,8 @@
          "네, 하지만 먼저 조명 모듈을 장착하세요 — 불빛 없는 야간전은 전형적인 실수입니다."
         ],
         [
-         "고급 드론 부품은 어떻게 얻나요?",
-         "희귀어가 고급 드론·도구 부품을 드랍하고, 습지 보스가 미디엄 E칩을 드랍합니다 ⚠️. "
+         "업그레이드 재료는 어떻게 확인하나요?",
+         "현재 게임의 제작·업그레이드 요구 사항을 확인하세요. 이 가이드는 낚시에서 직접 재료가 나온다고 추론하지 않습니다."
         ]
        ]
       }
@@ -7623,9 +7649,9 @@
          "Tipo de recurso nuevo introducido con el 1.0"
         ],
         [
-         "Piezas avanzadas de dron",
-         "Pesca",
-         "Los peces raros dan piezas avanzadas: pesca para financiar tu build"
+         "Capturas de pesca",
+         "Estanques y vías de agua",
+         "La disponibilidad depende del estanque, el clima y el mes documentados"
         ]
        ]
       },
@@ -7656,8 +7682,8 @@
          "Sí, pero equipa antes un módulo de luz — pelear de noche sin luz es el error clásico."
         ],
         [
-         "¿Cómo consigo piezas avanzadas de dron?",
-         "Los peces raros dan piezas avanzadas de dron y herramientas; el jefe de los Humedales suelta un chip E medio ⚠️. "
+         "¿Cómo compruebo los materiales de mejora?",
+         "Consulta los requisitos actuales de fabricación y mejora; esta guía no infiere entregas directas de materiales al pescar."
         ]
        ]
       }
@@ -8432,7 +8458,7 @@
       ],
       [
        "Automate in 1.0",
-       "Drone stations handle seeding, nurturing and harvest — the endgame."
+       "Official 1.0 materials describe drone stations handling seeding, nurturing and harvest."
       ]
      ]
     },
@@ -8440,12 +8466,12 @@
      "type": "list",
      "tag": "AUTO",
      "heading": "From Hand-Farming to Automation (1.0)",
-     "body": "The 1.0 release turns you from a farmer into a farm manager. The upgrade path is: energy first, stations second, then let the drones work.",
+     "body": "Official 1.0 materials describe power options, farming automation and drone stations. This is an editorial checklist, not an unlock or build order.",
      "items": [
       "Follow the farming automation tasks shown in the current game.",
       "Construct farm drone stations — the control points that let drones work the fields.",
       "Assign automation tasks: drones handle seeding, nurturing and harvesting end to end.",
-      "Vertical stacking matters: leave clear flight lanes between platforms so drones can reach every planter.",
+      "Verify each assigned automation task in the current save before changing a working layout.",
       "The industrial zone adds conveyor-belt production lines that open up previously unreachable areas."
      ]
     },
@@ -8660,19 +8686,19 @@
         ],
         [
          "1.0 自动化",
-         "无人机站负责播种、培育与收割——这是终局。"
+         "官方 1.0 资料介绍无人机站负责播种、培育与收割。"
         ]
        ]
       },
       {
        "type": "list",
        "heading": "从手工种田到自动化（1.0）",
-       "body": "1.0 把你从农民变成农场经理。升级路径是：先能源、再站点，然后让无人机干活。",
+       "body": "官方 1.0 资料介绍供能选项、农业自动化与农场无人机站；这里仅作编辑核对表，不表示解锁或建造顺序。",
        "items": [
         "建造太阳能板与自动化设备，为农场生成清洁能源",
         "建造农场无人机站——让无人机在田间作业的控制点",
         "指派自动化任务：无人机端到端处理播种、培育与收割",
-        "垂直堆叠很关键：平台之间留出清晰航线，无人机才能到达每个花盆",
+        "改动已运作的布局前，请在当前存档中逐项核对指派的自动任务",
         "工业区新增传送带生产线，打开此前无法到达的区域"
        ]
       },
@@ -8867,19 +8893,19 @@
         ],
         [
          "1.0 自動化",
-         "無人機站負責播種、培育與收割——這是終局。"
+         "官方 1.0 資料介紹無人機站負責播種、培育與收割。"
         ]
        ]
       },
       {
        "type": "list",
        "heading": "從手工種田到自動化（1.0）",
-       "body": "1.0 把你從農民變成農場經理。升級路徑是：先能源、再站點，然後讓無人機幹活。",
+       "body": "官方 1.0 資料介紹供能選項、農業自動化與農場無人機站；這裡僅作編輯核對表，不表示解鎖或建造順序。",
        "items": [
         "建造太陽能板與自動化設備，為農場生成清潔能源",
         "建造農場無人機站——讓無人機在田間作業的控制點",
         "指派自動化任務：無人機端到端處理播種、培育與收割",
-        "垂直堆疊很關鍵：平臺之間留出清晰航線，無人機才能到達每個花盆",
+        "改動已運作的佈局前，請在當前存檔中逐項核對指派的自動任務",
         "工業區新增傳送帶生產線，打開此前無法到達的區域"
        ]
       },
@@ -9074,19 +9100,19 @@
         ],
         [
          "1.0で自動化",
-         "ドローン基地が播種・育成・収穫を担う——終盤の形。"
+         "公式 1.0 情報は、ドローン基地が播種・育成・収穫を担うと説明しています。"
         ]
        ]
       },
       {
        "type": "list",
        "heading": "手作業から自動化へ（1.0）",
-       "body": "1.0は農家をファームマネージャーに変えます。強化の順序は：まずエネルギー、次に基地、そしてドローンに働かせる。",
+       "body": "公式 1.0 情報は電力設備・農業オートメーション・農場ドローン基地を説明します。これは編集上の確認項目で、解放や建設の順序ではありません。",
        "items": [
         "ソーラーパネルと自動化設備で農場のクリーンエネルギーを発電",
         "農場ドローン基地を建設——ドローンが農地で作業するための制御点",
         "自動化作業を割り当て：ドローンが播種・育成・収穫を一貫処理",
-        "縦積みが重要：プラットフォーム間に飛行経路を確保し、全プランターへ到達させる",
+        "稼働中の配置を変更する前に、現在のセーブで割り当てた自動作業を一つずつ確認する",
         "工業地帯はコンベア生産ラインを追加し、従来到達不能だった地域を開放"
        ]
       },
@@ -9281,19 +9307,19 @@
         ],
         [
          "1.0에서 자동화",
-         "드론 스테이션이 파종·육성·수확을 담당합니다——엔드게임. "
+         "공식 1.0 자료는 드론 스테이션이 파종·육성·수확을 담당한다고 설명합니다."
         ]
        ]
       },
       {
        "type": "list",
        "heading": "손농사에서 자동화까지 (1.0)",
-       "body": "1.0은 농부를 팜 매니저로 바꿉니다. 업그레이드 순서: 에너지 먼저, 스테이션 다음, 그리고 드론에게 일을 맡기세요.",
+       "body": "공식 1.0 자료는 전력 설비·농업 자동화·농장 드론 기지를 설명합니다. 이는 편집용 확인 항목이며 해금이나 건설 순서가 아닙니다.",
        "items": [
         "해금 조건과 필요한 재료를 확인한 뒤 자동화 장비 배치",
         "농장 드론 스테이션 건설——드론이 밭에서 일하게 하는 제어 지점",
         "자동화 작업 지정: 드론이 파종·육성·수확을 처음부터 끝까지 처리",
-        "수직 적층이 핵심: 플랫폼 사이에 비행 경로를 남겨 드론이 모든 화분에 닿게 하세요",
+        "작동 중인 배치를 바꾸기 전에 현재 세이브에서 할당한 자동 작업을 하나씩 확인하세요",
         "공업 지구는 컨베이어 생산 라인을 추가해 이전에는 닿을 수 없던 지역을 엽니다"
        ]
       },
@@ -9494,19 +9520,19 @@
         ],
         [
          "Automatiza en 1.0",
-         "Las estaciones de drones gestionan siembra, cuidado y cosecha: el final del juego."
+         "Las fuentes oficiales de 1.0 describen estaciones de drones que gestionan siembra, cuidado y cosecha."
         ]
        ]
       },
       {
        "type": "list",
        "heading": "De la agricultura manual a la automatización (1.0)",
-       "body": "El 1.0 te convierte de granjero en gestor de granja. La ruta de mejora es: energía primero, estaciones después, y luego deja trabajar a los drones.",
+       "body": "Las fuentes oficiales de 1.0 describen energía, automatización agrícola y estaciones de drones. Es una lista editorial, no un orden de desbloqueo o construcción.",
        "items": [
         "Construye paneles solares y equipos de automatización para suministrar energía a tu granja",
         "Construye estaciones de drones agrícolas: los puntos de control que dejan trabajar a los drones",
         "Asigna tareas de automatización: los drones hacen siembra, cuidado y cosecha de principio a fin",
-        "El apilado vertical importa: deja pasillos de vuelo claros entre plataformas para que los drones lleguen a cada macetero",
+        "Verifica cada tarea automática en la partida actual antes de cambiar una distribución que ya funciona",
         "La zona industrial añade líneas de producción con cintas transportadoras que abren áreas antes inaccesibles"
        ]
       },
@@ -14199,7 +14225,7 @@
       {
        "type": "note",
        "tag": "OFFICIAL-AUTOMATION",
-       "heading": "Official automation status",
+       "heading": "官方自动化状态",
        "body": "官方 1.0 公告介绍农业自动化；1.00.03 也把特定情况下无人机失效列为已知问题。重排自动化地块前请存档。"
       },
       {
@@ -14251,7 +14277,7 @@
       {
        "type": "note",
        "tag": "OFFICIAL-AUTOMATION",
-       "heading": "Official automation status",
+       "heading": "官方自動化狀態",
        "body": "官方 1.0 公告介紹農業自動化；1.00.03 也把特定情況下無人機失效列為已知問題。重整自動化地塊前請存檔。"
       },
       {
@@ -14303,7 +14329,7 @@
       {
        "type": "note",
        "tag": "OFFICIAL-AUTOMATION",
-       "heading": "Official automation status",
+       "heading": "公式オートメーション情報",
        "body": "公式 1.0 情報は農業オートメーションを説明しています。1.00.03 は特定状況でのドローン不具合も既知事項としているため、区画変更前に保存してください。"
       },
       {
@@ -14355,7 +14381,7 @@
       {
        "type": "note",
        "tag": "OFFICIAL-AUTOMATION",
-       "heading": "Official automation status",
+       "heading": "공식 자동화 상태",
        "body": "공식 1.0 공지는 농업 자동화를 설명합니다. 1.00.03은 특정 상황의 드론 실패도 알려진 문제로 명시하므로 구역 변경 전에 저장하세요."
       },
       {
@@ -14413,7 +14439,7 @@
       {
        "type": "note",
        "tag": "OFFICIAL-AUTOMATION",
-       "heading": "Official automation status",
+       "heading": "Estado oficial de la automatización",
        "body": "Los avisos oficiales de 1.0 describen una automatización agrícola. 1.00.03 también enumera fallos de drones en ciertas situaciones; guarda antes de reorganizar parcelas."
       },
       {

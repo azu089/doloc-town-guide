@@ -335,7 +335,7 @@
      "type": "note",
      "tag": "COMMON MISTAKES",
      "heading": "Common Mistakes New Players Make (Avoid These)",
-     "body": "The most common early run-enders, from community reports: watering everything by hand every single day (automate or use the Rain gene), building without clear access lanes, ignoring friendship (you lock yourself out of recipes), skipping Bellad's quests (you fall behind the tech tree), and failing to protect crops and plan watering before Month 4."
+     "body": "Check these common mistakes in your own save: watering every crop by hand when an available gene or automation task can help, blocking your own access routes, ignoring friendship, skipping Bellad's quests, and failing to protect crops or plan watering before Month 4."
     },
     {
      "type": "list",
@@ -347,7 +347,7 @@
       "Upgrade chassis (survivability), barrel (damage) and battery (uptime) — in that order early on.",
       "Charge beam (F) breaks shields on armoured Scavenger Bugs; normal fire bounces off.",
       "Fit weapon and lighting modules before exploring ruins at night.",
-      "Rare fish drop advanced parts — fishing funds your combat build."
+      "Check each module's current in-game material requirements before spending upgrade parts."
      ]
     },
     {
@@ -362,7 +362,7 @@
       ],
       [
        "New players",
-       "You can reach farming automation earlier than EA players."
+       "Official 1.0 materials add farming automation and farm drone stations."
       ],
       [
        "Old City Ruins",
@@ -370,7 +370,7 @@
       ],
       [
        "⚠️ Verification",
-       "Exact unlock order and build costs are still being verified in 1.0; details marked with ⚠️ are community-sourced."
+       "Check the current in-game tasks and the linked official notes; this guide does not infer an unlock order."
       ]
      ]
     },
@@ -428,19 +428,19 @@
      "type": "steps",
      "tag": "1.0",
      "heading": "How Farming Automation Works",
-     "body": "Automation has three layers: energy, stations and drones. Each layer feeds the next, so build in this order.",
+     "body": "This editorial checklist groups source-supported power options, farming drone stations and automated crop tasks. It does not imply an unlock or build order.",
      "items": [
       [
-       "Build the automation chain",
-       "Follow the in-game farming automation flow and unlock each task before expanding the layout."
+       "Review the documented components",
+       "Use the current in-game farming tasks to confirm which automation components are available in your save."
       ],
       [
        "Build farming drone stations",
-       "Stations are the control points that let drones run farm operations. They consume energy, so size them to your power output."
+       "Official 1.0 materials describe farming drone stations as part of crop automation."
       ],
       [
        "Assign automated tasks",
-       "Drones handle seeding, nurturing plants and gathering yields end-to-end. Start with one repetitive chore (watering) and expand."
+       "Official materials describe drones handling seeding, nurturing plants and gathering yields end-to-end. Confirm the available tasks in your current save."
       ],
       [
        "Free up your time",
@@ -451,11 +451,11 @@
     {
      "type": "list",
      "tag": "ENERGY",
-     "heading": "What to Automate First",
-     "body": "Start with a small, repeatable crop task and verify that the drone completes it reliably.",
+     "heading": "Verify an Automated Crop Task",
+     "body": "Use the current in-game task list to choose a crop task, then verify that the drone completes it reliably.",
      "items": [
-      "Start with a low-risk crop task rather than your only income crop.",
-      "Leave clear routes around platforms so drones can reach assigned plots.",
+      "Confirm the task and material requirements shown in your current save.",
+      "Test the assigned task before changing a larger working layout.",
       "Save before restructuring a working automated farm.",
       "Official patch 1.00.03 lists drone failures in certain situations as unresolved."
      ]
@@ -483,33 +483,33 @@
     {
      "type": "table",
      "tag": "ROADMAP",
-     "heading": "Automation Roadmap (Community Draft)",
-     "body": "A rough order that most players report working — verify exact costs in your save.",
+     "heading": "Source-Supported Automation Checklist",
+     "body": "These rows group documented components for reference; they are not a progression, dependency or timing sequence.",
      "columns": [
-      "Stage",
-      "What you get",
-      "When"
+      "Component",
+      "Documented role",
+      "Verification boundary"
      ],
      "rows": [
       [
-       "First automation stage",
-       "Basic crop task",
-       "Early-mid game ⚠️"
+       "Power options",
+       "Official materials name solar and wind power",
+       "Check availability in the current save"
       ],
       [
-       "First drone station",
-       "Automated seeding",
-       "Mid game ⚠️"
+       "Farming drone stations",
+       "Official materials connect stations with farming automation",
+       "No unlock order inferred"
       ],
       [
-       "Full crop cycle",
-       "Seed → nurture → harvest",
-       "Late game ⚠️"
+       "Automated crop tasks",
+       "Official materials name seeding, nurturing and gathering yields",
+       "Patch 1.00.03 lists failures in some situations"
       ],
       [
-       "Industrial line",
-       "Conveyor + new areas",
-       "1.0 endgame"
+       "Industrial production",
+       "Official 1.0 materials describe conveyor production lines",
+       "Separate feature; no dependency inferred"
       ]
      ]
     },
@@ -517,13 +517,13 @@
      "type": "note",
      "tag": "COMMON MISTAKES",
      "heading": "Common Automation Mistakes",
-     "body": "Do not rush stations before you have stable power — a station that idles half the day wastes the whole point. Do not automate your only income crop first; automate a low-value filler crop to learn the system risk-free. And leave clear lanes for drones when you build platforms, or they cannot reach their plots."
+     "body": "Check the current in-game task and material requirements before changing a working layout. Patch 1.00.03 lists drone failures in certain situations, so save first and verify each change in your own game."
     },
     {
      "type": "note",
      "tag": "1.0",
      "heading": "Why This Page Matters",
-     "body": "This page separates official 1.0 and 1.00.03 information from community-reported details. Check the linked Steam announcements after each patch."
+     "body": "This page groups official 1.0 and 1.00.03 information without claiming a fixed progression. Check the linked Steam announcements after each patch."
     }
    ],
    "sources": [
@@ -845,13 +845,13 @@
     {
      "type": "list",
      "heading": "How to Fish Efficiently",
-     "body": "Turn fishing from a side activity into a reliable income and parts source.",
+     "body": "Use the catch tables to choose a pond, weather window and rod for the fish you want.",
      "items": [
       "Map the ponds: each body of water has its own fish pool — check the tables above before choosing a spot",
       "Upgrade your rod: higher-tier rods unlock better fish and make the fishing minigame more forgiving",
       "Fish through weather: rain and thunderstorms bring uncommon catches that dry days don't",
       "Watch the season: rainy season (Jan–Feb) and dry season (Mar–Apr) change the catch tables completely",
-      "Rare fish drop advanced drone and tool parts, so a good fishing session funds your upgrades"
+      "Keep surplus catches until you have checked their current in-game uses"
      ]
     },
     {
@@ -1000,8 +1000,8 @@
        "Capacitor/Shadow Shooter scale with your build."
       ],
       [
-       "Save parts from fishing",
-       "Rare fish drop advanced parts — fish to fund combat."
+       "Check upgrade materials",
+       "Confirm each module's current in-game material requirements before spending parts."
       ]
      ]
     },
@@ -1039,8 +1039,8 @@
        "Battery. Running out of energy mid-fight is the #1 new-player death; then barrel for damage."
       ],
       [
-       "Where do advanced parts drop?",
-       "Rare fish drop advanced drone and tool parts; the Wetlands boss drops a Medium E-chip ⚠️."
+       "How should I plan combat upgrades?",
+       "Check each module's current in-game requirements and keep a save before committing scarce parts."
       ],
       [
        "Is night combat viable?",
@@ -1191,9 +1191,9 @@
        "New resource type introduced with 1.0"
       ],
       [
-       "Advanced drone parts",
-       "Fishing",
-       "Rare fish drop advanced drone and tool parts — fish to fund your build"
+       "Fishing catches",
+       "Ponds and waterways",
+       "Catch availability depends on the documented pond, weather and month conditions"
       ]
      ]
     },
@@ -1226,8 +1226,8 @@
        "Yes, but fit a lighting module to your drone first — night fights without light are the classic mistake."
       ],
       [
-       "How do I get advanced drone parts?",
-       "Rare fish drop advanced drone and tool parts; the Wetlands boss drops a Medium E-chip ⚠️."
+       "How should I verify upgrade materials?",
+       "Check the current in-game crafting and upgrade requirements; this guide does not infer direct material drops from fishing."
       ]
      ]
     }
@@ -1523,7 +1523,7 @@
       ],
       [
        "Automate in 1.0",
-       "Drone stations handle seeding, nurturing and harvest — the endgame."
+       "Official 1.0 materials describe drone stations handling seeding, nurturing and harvest."
       ]
      ]
     },
@@ -1531,12 +1531,12 @@
      "type": "list",
      "tag": "AUTO",
      "heading": "From Hand-Farming to Automation (1.0)",
-     "body": "The 1.0 release turns you from a farmer into a farm manager. The upgrade path is: energy first, stations second, then let the drones work.",
+     "body": "Official 1.0 materials describe power options, farming automation and drone stations. This is an editorial checklist, not an unlock or build order.",
      "items": [
       "Follow the farming automation tasks shown in the current game.",
       "Construct farm drone stations — the control points that let drones work the fields.",
       "Assign automation tasks: drones handle seeding, nurturing and harvesting end to end.",
-      "Vertical stacking matters: leave clear flight lanes between platforms so drones can reach every planter.",
+      "Verify each assigned automation task in the current save before changing a working layout.",
       "The industrial zone adds conveyor-belt production lines that open up previously unreachable areas."
      ]
     },

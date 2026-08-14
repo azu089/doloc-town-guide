@@ -148,6 +148,55 @@ const semanticSourceFaults = {
 };
 const removedGameplayPattern = /(?:Lightman[^.\n。]{0,90}(?:tutorial|rod|教程|鱼竿|魚竿|チュートリアル|竿|튜토리얼|낚싯대|caña)|13\s*(?:tank-only|aquatic|fish)[^.\n]{0,90}(?:parent|pair|breed)|(?:specific|predetermined)\s+(?:breeding\s+)?(?:parents|pairs)|(?:13\s*种鱼缸|特定亲本|特定親本|水槽限定13種|特定の親|수조\s*전용\s*13종|특정\s*부모|13\s*especies[^.\n]{0,70}(?:padres|parejas)))/iu;
 const unsupportedPhasePattern = /(?:two[- ](?:stage|phase)|automation[^.\n]{0,70}(?:(?:two separate|initial and later) phases|(?:first|initial) phase[^.\n]{0,45}(?:second|later) phase)|两阶段|两个(?:阶段|环节)|先[^。\n]{0,35}再[^。\n]{0,35}(?:两个环节|分为两步)|兩階段|兩個(?:階段|環節)|先[^。\n]{0,35}再[^。\n]{0,35}(?:兩個環節|分為兩步)|二段階|前半[^。\n]{0,35}後半[^。\n]{0,35}分か|2단계|앞 단계[^.\n]{0,35}뒤 단계|(?:dos|dos distintas)\s+(?:etapas|fases)|fase inicial[^.\n]{0,45}(?:otra|fase) posterior)/iu;
+const unsupportedAutomationPatterns = [
+  ["phase", unsupportedPhasePattern],
+  ["order-en", /(?:energy|power)\s*(?:first|→|->)[^.\n]{0,70}stations?\s*(?:second|next|→|->)[^.\n]{0,70}drones?\s*(?:last|finally|then)|automation[^.\n]{0,110}build[^.\n]{0,35}(?:in )?(?:this|the) order/iu],
+  ["architecture-en", /automation[^.\n]{0,80}(?:has|uses|consists? of|is divided into)\s*(?:two|three|2|3)\s*(?:parts?|layers?|stages?|phases?)/iu],
+  ["timing-en", /early[-–— ]*mid(?:[- ]game)?[^\n]{0,180}mid[- ]game[^\n]{0,180}(?:late[- ]game|endgame)/iu],
+  ["consensus-en", /(?:(?:most players|community (?:consensus|reports?|agrees?|recommends?))[^.\n]{0,170}(?:automation|automate|drone station)|(?:automation|automate|drone station)[^.\n]{0,170}(?:most players|community (?:consensus|reports?|agrees?|recommends?)))/iu],
+  ["order-zh", /先[^。\n]{0,25}(?:能源|电力|電力|供能)[^。\n]{0,35}再[^。\n]{0,25}(?:站点|站點|基地|无人机站|無人機站)[^。\n]{0,35}(?:然后|然後|最后|最後|再让|再讓)[^。\n]{0,25}(?:无人机|無人機)/u],
+  ["architecture-zh", /(?:自动化|自動化)[^。\n]{0,80}(?:分为|分為|有|包括|由)[^。\n]{0,20}(?:两|兩|三|2|3)(?:个|個)?(?:部分|层|層|阶段|階段|环节|環節|步骤|步驟)/u],
+  ["timing-zh", /前期[-至到–— ]*中期[^\n]{0,180}中期[^\n]{0,180}(?:后期|後期|终局|終局)/u],
+  ["consensus-zh", /(?:多数玩家|多數玩家|社区共识|社群共識|社区报告中最常见|社群報告中最常見)[^。\n]{0,180}(?:自动化|自動化|无人机|無人機)/u],
+  ["order-ja", /(?:まず|最初に)[^。\n]{0,25}(?:エネルギー|電力)[^。\n]{0,40}(?:次に|その後)[^。\n]{0,25}(?:基地|ステーション)[^。\n]{0,40}(?:そして|最後に)[^。\n]{0,20}ドローン/u],
+  ["architecture-ja", /オートメーション[^。\n]{0,70}(?:2|3|二|三)(?:つの)?(?:層|段階|部分|フェーズ)/u],
+  ["timing-ja", /序盤[～~-–— ]*中盤[^\n]{0,180}中盤[^\n]{0,180}(?:終盤|エンドゲーム)/u],
+  ["consensus-ja", /コミュニティ[^。\n]{0,90}(?:報告|合意|推奨)[^。\n]{0,120}(?:オートメーション|自動化|ドローン)/u],
+  ["order-ko", /(?:먼저|우선)[^.\n]{0,25}(?:에너지|전력)[^.\n]{0,40}(?:다음|그 다음)[^.\n]{0,25}(?:기지|스테이션)[^.\n]{0,40}(?:마지막|그 후)[^.\n]{0,20}드론/u],
+  ["architecture-ko", /자동화[^.\n]{0,70}(?:2|3|두|세)\s*(?:개)?\s*(?:층|단계|부분|페이즈)/u],
+  ["timing-ko", /초[-–—~ ]*중반[^\n]{0,180}중반[^\n]{0,180}(?:후반|엔드게임)/u],
+  ["consensus-ko", /커뮤니티[^.\n]{0,90}(?:보고|합의|추천)[^.\n]{0,120}(?:자동화|드론)/u],
+  ["order-es", /energ[ií]a\s+primero[^.\n]{0,60}estaciones?\s+despu[eé]s[^.\n]{0,60}(?:drones?\s+(?:al final|por último)|luego[^.\n]{0,20}drones?)/iu],
+  ["architecture-es", /automatizaci[oó]n[^.\n]{0,80}(?:tiene|consta de|se divide en)\s*(?:dos|tres|2|3)\s*(?:partes|capas|etapas|fases)/iu],
+  ["timing-es", /inicio[-–— ]*medio[^\n]{0,180}medio[^\n]{0,180}(?:final|fin del juego)/iu],
+  ["consensus-es", /(?:comunidad|consenso)[^.\n]{0,90}(?:coincide|informa|recomienda)[^.\n]{0,130}(?:automatizaci[oó]n|drones?)/iu],
+];
+const unsupportedAutomationHit = text => {
+  for (const [family, pattern] of unsupportedAutomationPatterns) {
+    const hit = String(text).match(pattern);
+    if (hit) return {family, excerpt:hit[0].replace(/\s+/g," ").slice(0,260)};
+  }
+  return null;
+};
+const rareFishPatterns = [
+  ["direct-drop-en", /rare (?:fish|catch(?:es)?)[^.!?\n]{0,100}(?:drop|yield|give)[^.!?\n]{0,70}(?:advanced|high[- ]grade)[^.!?\n]{0,35}(?:drone |tool )?(?:parts?|components?)/iu],
+  ["upgrade-return-en", /rare (?:fish|catch(?:es)?)[^.!?\n]{0,110}(?:fund|finance|pay for|cover)[^.!?\n]{0,55}(?:upgrades?|builds?)/iu],
+  ["direct-drop-zh", /稀有[鱼魚][^。！？\n]{0,100}(?:掉落|产出|產出)[^。！？\n]{0,70}(?:高级|高級|高阶)[^。！？\n]{0,35}(?:部件|零件)/u],
+  ["upgrade-return-zh", /稀有[鱼魚][^。！？\n]{0,110}(?:资助|資助|支付|提供资金|提供資金)[^。！？\n]{0,55}(?:升级|升級|强化|強化)/u],
+  ["direct-drop-ja", /レア魚[^。！？\n]{0,100}(?:高級|高度)[^。！？\n]{0,45}(?:部品|パーツ)[^。！？\n]{0,35}(?:落と|ドロップ)/u],
+  ["upgrade-return-ja", /レア魚[^。！？\n]{0,110}(?:資金|賄う|費用)[^。！？\n]{0,55}(?:強化|アップグレード|ビルド)/u],
+  ["direct-drop-ko", /희귀(?:어|한\s*물고기)[^.!。?\n]{0,100}(?:고급|상급)[^.!。?\n]{0,45}부품[^.!。?\n]{0,35}(?:드롭|떨어뜨린)/u],
+  ["upgrade-return-ko", /희귀(?:어|한\s*물고기)[^.!。?\n]{0,110}(?:자금|비용|충당)[^.!。?\n]{0,55}(?:업그레이드|강화|빌드)/u],
+  ["direct-drop-es", /peces? raros?[^.!?\n]{0,100}(?:sueltan|dejan|dan)[^.!?\n]{0,70}(?:piezas|componentes)[^.!?\n]{0,35}(?:avanzad[oa]s?|de alto nivel)/iu],
+  ["upgrade-return-es", /peces? raros?[^.!?\n]{0,110}(?:financian|pagan|cubren|dan fondos)[^.!?\n]{0,55}(?:mejoras?|builds?)/iu],
+];
+const rareFishClaimHit = text => {
+  for (const [family, pattern] of rareFishPatterns) {
+    const hit = String(text).match(pattern);
+    if (hit) return {family, excerpt:hit[0].replace(/\s+/g," ").slice(0,260)};
+  }
+  return null;
+};
 const staleZhTwMoneyMetaPattern = /(?:區分社群技巧與官方事實|介紹加工、釣魚和前期優先事項)/u;
 const independentFaults = {
   "evidence-ja-weather-source": {layer:"source", rel:"ja/weather.html", text:"雷雨で農地を破壊し、豪雨で低地が浸水する。"},
@@ -199,6 +248,9 @@ const independentFaults = {
   "global-season-wrong-source": {layer:"visible", rel:"make-money.html", text:"<span>1.00.03-OFFICIAL</span>"},
   "global-zh-tw-money-metadata": {layer:"metadata", rel:"zh-TW/make-money.html", text:"區分社群技巧與官方事實，介紹加工、釣魚和前期優先事項。"},
   "global-source-label-fallback": {layer:"visible", rel:"ja/make-money.html", text:"Official Doloc Town 1.0 release notes"},
+  "automation-localization-status-fallback": {layer:"visible", rel:"ja/automation.html", text:"Official automation status"},
+  "automation-localization-source-fallback": {layer:"visible", rel:"ko/automation.html", text:"Official 1.0 announcement"},
+  "automation-localization-reference-fallback": {layer:"visible", rel:"es/automation.html", text:"This English reference explains automation."},
 };
 
 // Fishing recipes are intentionally fail-closed. This guard is route-scoped so
@@ -300,9 +352,50 @@ for (const [locale, fixture] of Object.entries(automationPhaseFixtures)) {
     automationPhaseFaults[name] = {layer, rel, locale, text:fixture.natural};
   }
 }
-Object.assign(independentFaults, fishingRecipeFaults, automationPhaseFaults);
+const automationClaimFixtures = {
+  en: {order:"Energy first, stations second, and drones last.", architecture:"Automation consists of three layers: energy, stations and drones.", timing:"Automation starts in early-mid game, expands in mid game, and finishes in late game.", consensus:"Most players report that automation should follow this roadmap."},
+  "zh-CN": {order:"先建能源，再建站点，然后让无人机干活。", architecture:"自动化由三个阶段组成：能源、站点与无人机。", timing:"自动化从前期-中期开始，中期扩张，后期完成。", consensus:"多数玩家认为自动化应遵循这条路线。"},
+  "zh-TW": {order:"先建能源，再建站點，然後讓無人機幹活。", architecture:"自動化由三個階段組成：能源、站點與無人機。", timing:"自動化從前期-中期開始，中期擴張，後期完成。", consensus:"多數玩家認為自動化應遵循這條路線。"},
+  ja: {order:"まずエネルギー、次に基地、そして最後にドローンです。", architecture:"オートメーションは三つの層で構成されます。", timing:"序盤～中盤に自動化を始め、中盤に広げ、終盤に完成します。", consensus:"コミュニティの合意はこのオートメーション順序を推奨します。"},
+  ko: {order:"먼저 에너지, 다음 기지, 마지막에 드론입니다.", architecture:"자동화는 세 개 층으로 구성됩니다.", timing:"자동화는 초-중반에 시작하고 중반에 확장하며 후반에 완성합니다.", consensus:"커뮤니티 합의는 이 자동화 순서를 추천합니다."},
+  es: {order:"Energía primero, estaciones después y drones al final.", architecture:"La automatización consta de tres capas.", timing:"La automatización empieza en inicio-medio, crece en medio y termina al final.", consensus:"La comunidad recomienda esta ruta de automatización."},
+};
+const rareFishFixtures = {
+  en:{direct:"Rare fish drop advanced drone and tool parts.",upgrade:"Rare fish fund your next upgrades."},
+  "zh-CN":{direct:"稀有鱼掉落高级无人机部件。",upgrade:"稀有鱼提供资金用于升级。"},
+  "zh-TW":{direct:"稀有魚掉落高級無人機零件。",upgrade:"稀有魚提供資金用於升級。"},
+  ja:{direct:"レア魚は高級ドローン部品を落とします。",upgrade:"レア魚の資金で強化できます。"},
+  ko:{direct:"희귀어는 고급 드론 부품을 드롭합니다.",upgrade:"희귀어 자금으로 업그레이드합니다."},
+  es:{direct:"Los peces raros sueltan piezas avanzadas de dron.",upgrade:"Los peces raros financian las mejoras."},
+};
+const contentClaimFaults = {}, contentClaimFaultNames = [];
+const claimLayers = ["source","effective","visible","metadata","faq","jsonld"];
+const claimRoutes = ["automation","farming","fishing","drone-combat","exploration","how-to-play"];
+for (const [localeIndex, [locale, fixtures]] of Object.entries(automationClaimFixtures).entries()) {
+  let familyIndex = 0;
+  for (const [family, text] of Object.entries(fixtures)) {
+    const layer = claimLayers[(localeIndex + familyIndex) % claimLayers.length];
+    const name = `automation-claim-${locale.toLowerCase()}-${family}-${layer}`;
+    contentClaimFaultNames.push(name);
+    contentClaimFaults[name] = {layer, locale, rel:`${locale === "en" ? "" : `${locale}/`}automation.html`, text};
+    familyIndex += 1;
+  }
+}
+for (const [localeIndex, [locale, fixtures]] of Object.entries(rareFishFixtures).entries()) {
+  let familyIndex = 0;
+  for (const [family, text] of Object.entries(fixtures)) {
+    const layer = claimLayers[(localeIndex + familyIndex * 3) % claimLayers.length];
+    const slug = claimRoutes[(localeIndex + familyIndex) % claimRoutes.length];
+    const name = `rare-fish-claim-${locale.toLowerCase()}-${family}-${layer}`;
+    contentClaimFaultNames.push(name);
+    contentClaimFaults[name] = {layer, locale, rel:`${locale === "en" ? "" : `${locale}/`}${slug}.html`, text};
+    familyIndex += 1;
+  }
+}
+Object.assign(independentFaults, fishingRecipeFaults, automationPhaseFaults, contentClaimFaults);
 const fishingRecipeFault = fishingRecipeFaults[fault];
 const automationPhaseFault = automationPhaseFaults[fault];
+const contentClaimFault = contentClaimFaults[fault];
 const extractBalancedObject = (text, openAt) => {
   let depth = 0, quote = "", escaped = false;
   for (let i = openAt; i < text.length; i += 1) {
@@ -460,10 +553,13 @@ try {
     return locale === "en" ? page : page?.i18n?.[locale];
   };
   for (const locale of contentLocales) {
-    const injected = automationPhaseFault?.layer === "effective" && automationPhaseFault.locale === locale
-      ? automationPhaseFault.text : "";
-    const effectiveAutomation = `${JSON.stringify(localizedPageView("automation", locale) || {})} ${JSON.stringify(localizedPageView("faq", locale) || {})} ${injected}`;
-    if (unsupportedPhasePattern.test(effectiveAutomation)) fail("unsupported-phase-effective", locale);
+    const injected = [automationPhaseFault, contentClaimFault]
+      .filter(item => item?.layer === "effective" && item.locale === locale).map(item => item.text).join(" ");
+    const effectiveSite = `${JSON.stringify((sourceData.pages || []).map(page => localizedPageView(page.slug, locale) || {}))} ${injected}`;
+    const automationHit = unsupportedAutomationHit(effectiveSite);
+    if (automationHit) fail("unsupported-automation-effective", `${locale}:${automationHit.family}:${automationHit.excerpt}`);
+    const fishHit = rareFishClaimHit(effectiveSite);
+    if (fishHit) fail("rare-fish-claim-effective", `${locale}:${fishHit.family}:${fishHit.excerpt}`);
   }
   const automationSafeBoundaries = [
     "Official 1.0 notes describe farming automation and drone stations.",
@@ -473,7 +569,41 @@ try {
     "공식 1.0 공지는 농업 자동화를 설명하며 1.00.03은 특정 상황의 드론 실패를 알려진 문제로 명시합니다.",
     "Los avisos oficiales describen automatización agrícola; 1.00.03 enumera fallos de drones en ciertas situaciones.",
   ];
-  for (const boundary of automationSafeBoundaries) if (unsupportedPhasePattern.test(boundary)) fail("automation-phase-negative-control", boundary);
+  for (const boundary of automationSafeBoundaries) if (unsupportedAutomationHit(boundary)) fail("automation-phase-negative-control", boundary);
+  for (const [locale, fixtures] of Object.entries(automationClaimFixtures)) for (const [family, fixture] of Object.entries(fixtures)) {
+    const hit = unsupportedAutomationHit(fixture);
+    if (!hit) fail("automation-claim-fixture-undetected", `${locale}:${family}`);
+  }
+  for (const [locale, fixtures] of Object.entries(rareFishFixtures)) for (const [family, fixture] of Object.entries(fixtures)) {
+    const hit = rareFishClaimHit(fixture);
+    if (!hit) fail("rare-fish-fixture-undetected", `${locale}:${family}`);
+  }
+  for (const safe of [
+    "Upgrade the rod before targeting rare fish.", "挑战稀有鱼前先核对鱼竿要求。", "レア魚を狙う前に竿の要件を確認します。",
+    "희귀어를 노리기 전에 낙싯대 요구 사항을 확인하세요.", "Mejora la caña antes de buscar peces raros.",
+    "Crop gene breeding combines parent traits; it is unrelated to fishing catches.",
+  ]) if (rareFishClaimHit(safe) || unsupportedAutomationHit(safe)) fail("content-claim-negative-control", safe);
+  const automationPage = sourceData.pages?.find(item => item.slug === "automation");
+  const automationLocalization = {
+    "zh-CN":{heading:"官方自动化状态",labels:["Steam 官方商店——太阳能、风力与农业自动化","多洛可小镇官方 1.0 公告索引","多洛可小镇官方 1.00.03 补丁说明"]},
+    "zh-TW":{heading:"官方自動化狀態",labels:["Steam 官方商店——太陽能、風力與農業自動化","多洛可小鎮官方 1.0 公告索引","多洛可小鎮官方 1.00.03 更新說明"]},
+    ja:{heading:"公式オートメーション情報",labels:["Steam 公式ストア——太陽光・風力発電と農業自動化","ドロックタウン公式 1.0 発表一覧","ドロックタウン公式パッチ 1.00.03"]},
+    ko:{heading:"공식 자동화 상태",labels:["Steam 공식 상점——태양광·풍력 발전과 농업 자동화","돌록 타운 공식 1.0 공지 목록","돌록 타운 공식 패치 1.00.03"]},
+    es:{heading:"Estado oficial de la automatización",labels:["Tienda oficial de Steam: energía solar, eólica y automatización agrícola","Índice oficial de anuncios 1.0 de Doloc Town","Parche oficial 1.00.03 de Doloc Town"]},
+  };
+  const automationEnglishFallback = /Official automation status|Official Steam page \(Farming Automation\)|Official 1\.0 announcement|Official Doloc Town patch 1\.00\.03|English (?:automation )?(?:reference|guide)/i;
+  for (const [locale, expected] of Object.entries(automationLocalization)) {
+    const view = localizedPageView("automation", locale) || {};
+    const status = (view.sections || []).find(section => section.tag === "OFFICIAL-AUTOMATION");
+    if (status?.heading !== expected.heading) fail("automation-status-localization-data", `${locale}:${status?.heading || "missing"}`);
+    for (const [index, label] of expected.labels.entries())
+      if (automationPage?.sources?.[index]?.labels?.[locale] !== label) fail("automation-source-localization-data", `${locale}:${index}`);
+    if (automationEnglishFallback.test(JSON.stringify(view))) fail("automation-reference-localization-data", locale);
+    const rel = `${locale}/automation.html`, html = fs.readFileSync(path.join(disabled, rel), "utf8");
+    if (!html.includes(expected.heading)) fail("automation-status-localization-visible", locale);
+    for (const label of expected.labels) if (!html.includes(label)) fail("automation-source-localization-visible", `${locale}:${label}`);
+    if (automationEnglishFallback.test(html)) fail("automation-reference-localization-visible", locale);
+  }
   const fishingSourceUrl = "https://doloctown.huijiwiki.com/wiki/%E9%92%93%E9%B1%BC";
   const fishingPage = sourceData.pages?.find(item => item.slug === "fishing");
   const fishingCommunitySource = fishingPage?.sources?.find(source => source.url === fishingSourceUrl);
@@ -685,7 +815,10 @@ try {
   for (const {rel,text} of sourceEntries) {
     scanSemantic(text, "source", rel);
     if (removedGameplayPattern.test(text)) fail("removed-gameplay-source", rel);
-    if (unsupportedPhasePattern.test(text)) fail("unsupported-phase-source", rel);
+    const automationHit = unsupportedAutomationHit(text);
+    if (automationHit) fail("unsupported-automation-source", `${rel}:${automationHit.family}:${automationHit.excerpt}`);
+    const fishHit = rareFishClaimHit(text);
+    if (fishHit) fail("rare-fish-claim-source", `${rel}:${fishHit.family}:${fishHit.excerpt}`);
     for (const [code,re] of forbidden) if(re.test(text)) fail(code,rel);
     for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(text)) fail(code,rel);
   }
@@ -742,10 +875,18 @@ try {
     scanSemantic(metadata, "generated_metadata", rel);
     for (const block of jsonLd) scanSemantic(block, "generated_jsonld", rel);
     if (removedGameplayPattern.test(visible) || removedGameplayPattern.test(metadata) || jsonLd.some(block=>removedGameplayPattern.test(block))) fail("removed-gameplay-generated",rel);
-    if (unsupportedPhasePattern.test(visible)) fail("unsupported-phase-generated-visible",rel);
-    if (unsupportedPhasePattern.test(metadata)) fail("unsupported-phase-generated-metadata",rel);
-    if (unsupportedPhasePattern.test(faqLayer)) fail("unsupported-phase-generated-faq",rel);
-    if (jsonLd.some(block=>unsupportedPhasePattern.test(block))) fail("unsupported-phase-generated-jsonld",rel);
+    for (const [layer, text] of [["visible",visible],["metadata",metadata],["faq",faqLayer]]) {
+      const automationHit = unsupportedAutomationHit(text);
+      if (automationHit) fail(`unsupported-automation-generated-${layer}`,`${rel}:${automationHit.family}:${automationHit.excerpt}`);
+      const fishHit = rareFishClaimHit(text);
+      if (fishHit) fail(`rare-fish-claim-generated-${layer}`,`${rel}:${fishHit.family}:${fishHit.excerpt}`);
+    }
+    for (const block of jsonLd) {
+      const automationHit = unsupportedAutomationHit(block);
+      if (automationHit) fail("unsupported-automation-generated-jsonld",`${rel}:${automationHit.family}:${automationHit.excerpt}`);
+      const fishHit = rareFishClaimHit(block);
+      if (fishHit) fail("rare-fish-claim-generated-jsonld",`${rel}:${fishHit.family}:${fishHit.excerpt}`);
+    }
     if (rel===path.join("zh-TW","make-money.html") && (staleZhTwMoneyMetaPattern.test(metadata) || !metadata.includes(expectedZhTwMoneyMeta))) fail("zh-tw-money-metadata-generated",rel);
     for (const [code,re] of forbidden) if(re.test(html)) fail(code,rel);
     for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(html)) fail(code,rel);
@@ -919,7 +1060,8 @@ if (!fault && !failures.length) {
     "global-gameplay-literal-source", "global-gameplay-paraphrase-visible",
     "global-source-mismatch-literal-source", "global-source-mismatch-paraphrase-faq",
     "global-season-duplicate", "global-season-wrong-source", "global-zh-tw-money-metadata", "global-source-label-fallback",
-    ...fishingRecipeFaultNames, ...automationPhaseFaultNames, "ko-automation-particle",
+    "automation-localization-status-fallback", "automation-localization-source-fallback", "automation-localization-reference-fallback",
+    ...fishingRecipeFaultNames, ...automationPhaseFaultNames, ...contentClaimFaultNames, "ko-automation-particle",
   ]) {
     const result = spawnSync(process.execPath, [auditScript, root], {
       env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: name },
@@ -929,5 +1071,5 @@ if (!fault && !failures.length) {
     if (!Number.isInteger(result.status) || result.status <= 0) fail("negative-fixture-did-not-fail", name);
   }
 }
-console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fishing_recipe_inventory:fishingRecipeInventory,fishing_recipe_faults:fishingRecipeFaultNames,automation_phase_faults:automationPhaseFaultNames,gene_breeding_negative_control:"preserved_and_route_scoped",automation_generic_negative_control:"preserved",fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
+console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fishing_recipe_inventory:fishingRecipeInventory,fishing_recipe_faults:fishingRecipeFaultNames,automation_phase_faults:automationPhaseFaultNames,content_claim_faults:contentClaimFaultNames,automation_claim_families:unsupportedAutomationPatterns.map(([family])=>family),rare_fish_claim_families:rareFishPatterns.map(([family])=>family),gene_breeding_negative_control:"preserved_and_route_scoped",automation_generic_negative_control:"preserved",fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
 process.exit(failures.length?1:0);

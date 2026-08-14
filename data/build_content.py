@@ -115,11 +115,11 @@ ZH = {
     "rows":[["酸雨","侵蚀无遮盖的作物","建造遮盖；收集酸液作为制作资源"],["酷热","烤干土壤、拖慢生长","按时浇水；种植耐热基因品种"],["雷暴","提供闪电电力","用闪电给农场充电（1.0 自动化关键）"],["暴雨","提供雨水灌溉","让雨水免费灌溉；省下浇水体力"],["旱季（4月）","作物枯萎、作物压力增加","4 月前准备作物防护，按预报调整种植"]]},
    {"heading":"第一周：奠定整局的 5 步","body":"按顺序做，第一个季节就不再手忙脚乱。",
     "items":[["完整清理起始地块","隐藏角落的废料能换来第一批花盆。"],["先种速生作物","快速收成为工具与种子提供资金。"],["每天与所有村民对话","好感解锁食谱、科技与剧情；也触发 Blooming Friendship。"],["立刻开 Bellad 的任务","任务奖励科技点——早期唯一可靠的科技收入。"],["4 月前开始准备作物防护","旱季前请保护作物并规划浇水。"]]},
-   {"heading":"新手常见错误（避免这些）","body":"社区报告中最常见的毁局行为：每天手动给所有作物浇水（用自动化或雨露均沾基因）、建造时不留通行路线、忽略好感（把自己锁在食谱之外）、跳过 Bellad 任务（科技树落后）、4 月前没有保护作物并规划浇水。"},
+   {"heading":"新手常见错误（避免这些）","body":"请在自己的存档中排查这些常见问题：有可用基因或自动任务时仍给所有作物手动浇水、堵住自己的通行路线、忽略好感、跳过 Bellad 任务，以及 4 月前没有保护作物并规划浇水。"},
    {"heading":"无人机战斗：先操作，后策略","body":"无人机既是武器也是生存工具。先学操作，再学出装。",
-    "items":["RMB 锁定、LMB 射击、Space 闪避、R 换弹。","按顺序升级：底盘（生存）、枪管（伤害）、电池（续航）。","蓄力光束（F）破装甲 Scavenger Bugs 的盾；普通射击会被弹开。","夜间探索废墟前装好武器与照明模块。","稀有鱼掉高级部件——钓鱼为战斗供血。"]},
+    "items":["RMB 锁定、LMB 射击、Space 闪避、R 换弹。","按顺序升级：底盘（生存）、枪管（伤害）、电池（续航）。","蓄力光束（F）破装甲 Scavenger Bugs 的盾；普通射击会被弹开。","夜间探索废墟前装好武器与照明模块。","花费零件前，请在当前存档中核对各模块的升级材料要求。"]},
    {"heading":"1.0 给新玩家带来的变化","body":"2026 年 8 月 6 日的 1.0 重构了前期体验。",
-    "items":[["2026-08-06","1.0 上线：完整故事结局、旧城废墟、农业自动化、蘑菇节、37 个新成就。"],["新玩家","你比 EA 玩家更早实现自动化——农场无人机站会代劳杂务。"],["旧城废墟","新区域：凶悍新敌人、新 NPC、支线与资源；许多道路通向那里。"],["⚠️ 验证中","精确解锁顺序与建造费用仍在 1.0 实测；标注 ⚠️ 的为社区来源。"]]},
+    "items":[["2026-08-06","1.0 上线：完整故事结局、旧城废墟、农业自动化、蘑菇节、37 个新成就。"],["农业自动化","官方 1.0 资料新增农业自动化与农场无人机站。"],["旧城废墟","新区域：凶悍新敌人、新 NPC、支线与资源；许多道路通向那里。"],["资料边界","请核对当前游戏任务与所链接的官方公告；本指南不推断解锁顺序。"]]},
    {"heading":"新手常见问题速答",
     "items":[["多洛可小镇是单机吗？","是的。官方确认 1.0 是单机体验；co-op/多人可能根据社区反馈在未来讨论。"],["每天都要浇水吗？","前期是的——但「雨露均沾」基因自动浇灌周围作物，1.0 无人机站则完全接管。"],["可以随处建造吗？","你在农场区域内堆叠平台。旧城废墟（1.0）增加新建造区域与资源。"],["游戏有多长？","主线 30+ 小时；加上钓鱼、畜牧、基因与收集可达 100+ 小时。"],["现在买划算吗？","正常 ¥58，首发 -20%（¥46.40）至 2026 年 8 月 19 日——不错的入手点。"]]}
   ]
@@ -130,17 +130,17 @@ ZH = {
   "metaDescription":"多洛可小镇 1.0 农业自动化详解：配置自动化设备、部署农场无人机站，让无人机自动播种、培育与收割。",
   "intro":"1.0 把你从农民变成农场经理。这里是发电、部署无人机站、实现整条作物流水线自动化的方法。",
   "sections":[
-   {"heading":"农业自动化如何运作","body":"自动化有三层：能源、站点与无人机。",
-    "items":[["配置农业自动化","建造太阳能板与自动化设备，为农场生成清洁能源。"],["建造农场无人机站","站点是让无人机执行农场作业的控制点。"],["指派自动化任务","无人机端到端处理播种、培育与收获。"],["解放你的时间","无人机工作时，去探索、聊天或推进剧情。"]]},
-   {"heading":"太阳能 vs 自动化：先建什么","body":"先建与你天气匹配的，再平衡。",
-    "items":["晴天太阳能板效率高，适合晴朗季节。","自动化设备在暴风雨中持续发电——多雨月份很划算。","两者混用可让能源在各类天气下保持稳定。","⚠️ 具体建造费用与发电量正在 1.0 实测中。"]},
+   {"heading":"农业自动化机制清单","body":"以下按主题整理官方资料支持的供能选项、农场无人机站与自动作业，不代表解锁或建造顺序。",
+    "items":[["查看当前任务","先在自己的存档中确认可用的自动化组件与材料。"],["核对农场无人机站","官方 1.0 资料把农场无人机站列为农业自动化的一部分。"],["核对自动作业","官方资料提到播种、培育与收获作业。"],["保存后再调整","1.00.03 把特定情况下的无人机失效列为已知问题。"]]},
+   {"heading":"官方资料支持的组件","body":"这是编辑整理的核对表，不表示组件之间存在依赖。",
+    "items":["官方商店资料提到太阳能与风力供能。","官方 1.0 资料提到农业自动化与农场无人机站。","具体解锁条件与材料以当前存档显示为准。","1.00.03 列出特定情况下的无人机失效。"]},
    {"heading":"工业区与传送带","body":"自动化不止用于作物。",
     "items":[["启动工业区发电机","为新的传送带生产线供电。"],["建造传送带","在站点之间自动搬运材料。"],["解锁此前无法到达的区域","工业线让你进入地图的新区域。"]]},
-   {"heading":"自动化路线图（草稿）",
-    "columns":["阶段","获得内容","时机"],
-    "rows":[["农业自动化","站点能源","前期-中期 ⚠️"],["第一座无人机站","自动播种","中期 ⚠️"],["完整作物循环","播种→培育→收割","后期 ⚠️"],["工业线","传送带+新区域","1.0 终局"]]},
-   {"heading":"常见自动化错误","body":"不要在电力稳定前急着建站——一个半天闲置的站点违背了整个系统的意义。不要第一个就自动化你的唯一收入作物；先自动化低价值填充作物来无风险地学习系统。堆平台时给无人机留出清晰航线，否则它们够不到自己的地块。"},
-   {"heading":"为什么这个页面重要","body":"多洛可小镇自动化的英文攻略几乎不存在——多数内容停在 EA 基础阶段。本页是第一批 1.0 专属自动化英文参考之一。标 ⚠️ 的细节将在亲测后更新。"}
+   {"heading":"自动化资料核对表","body":"各行仅按主题分组，不是进度、依赖或时间顺序。",
+    "columns":["组件","官方资料中的作用","核对边界"],
+    "rows":[["供能选项","官方资料提到太阳能与风力","在当前存档核对可用性"],["农场无人机站","官方资料将其与农业自动化相连","不推断解锁顺序"],["自动作业","播种、培育与收获","1.00.03 提醒某些情况下会失效"],["工业生产","1.0 资料提到传送带生产线","不推断与农场自动化的依赖"]]},
+   {"heading":"调整自动化前","body":"先核对当前任务与材料，保存后再调整现有布局。1.00.03 把特定情况下的无人机失效列为已知问题。"},
+   {"heading":"本页资料边界","body":"本页按主题整理官方 1.0 与 1.00.03 资料，不推断固定进度。更新后请复查所链接的 Steam 官方公告。"}
   ]
  },
  "gene-system": {
@@ -162,16 +162,16 @@ ZH = {
  "fishing": {
   "title":"多洛可小镇钓鱼指南：池塘、天气与稀有鱼",
   "metaTitle":"多洛可小镇钓鱼：池塘、天气、鱼竿与稀有鱼",
-  "metaDescription":"多洛可小镇钓鱼详解：不同池塘、鱼竿与天气出不同渔获，稀有鱼还会掉落无人机高级部件。",
-  "intro":"钓鱼是多洛可小镇的第二种全职事业。不同池塘、鱼竿与天气决定你能钓到什么——稀有鱼还会掉落无人机高级部件。",
+  "metaDescription":"多洛可小镇钓鱼详解：按池塘、鱼竿、天气与月份核对不同渔获。",
+  "intro":"钓鱼是多洛可小镇的重要活动。池塘、鱼竿、天气与月份会改变可获得的渔获。",
   "sections":[
    {"heading":"钓鱼基础","body":"无需鱼饵——只要鱼竿和正确的地点。",
-    "items":["不同池塘出不同鱼。","鱼竿品质决定你能钓到什么。","天气会改变渔获表。","稀有鱼掉落用于无人机与工具升级的高级部件。"]},
+    "items":["不同池塘出不同鱼。","鱼竿品质决定你能钓到什么。","天气会改变渔获表。","月份也会改变部分鱼类的出现条件。"]},
    {"heading":"什么影响你的渔获",
     "columns":["因素","影响"],
     "rows":[["池塘 / 水域","每片水域有自己的鱼池"],["鱼竿等级","更好的鱼竿解锁更好的鱼"],["天气","暴风雨可能改变出没种类"],["时间 / 季节","部分鱼有季节限定 ⚠️"]]},
    {"heading":"如何高效刷鱼",
-    "items":[["摸清池塘","走遍每片水域并记录咬钩情况。"],["鱼竿匹配目标","追稀有鱼前先升级。"],["趁天气钓鱼","暴风雨常带来不常见渔获。"],["把鱼变成部件","稀有鱼为无人机与工具升级提供资金。"]]},
+    "items":[["摸清池塘","走遍每片水域并记录咬钩情况。"],["鱼竿匹配目标","追稀有鱼前先升级。"],["趁天气钓鱼","暴风雨常带来不常见渔获。"],["核对当前用途","多余渔获的用途以当前游戏内显示为准。"]]},
    {"heading":"1.0 新增鱼类","body":"1.0 更新加入了新鱼种。⚠️ 完整的英文鱼类列表（含每池塘×每天气对照表）正在整理，完成后会补到这里。"}
   ]
  },
@@ -190,7 +190,7 @@ ZH = {
     "columns":["模块","效果"],
     "rows":[["战术电容","换弹后追加伤害"],["影子射手","概率双发"],["警用无人机 / 狙击","更高阶战斗出装 ⚠️"],["中型 E 芯片","湿地 Boss 掉落 ⚠️"]]},
    {"heading":"战斗出装顺序",
-    "items":[["先升电池","停机必死；能量决定胜负。"],["再升枪管","每点能量的伤害更高。"],["装战术模块","电容/影子射手随出装成长。"],["用钓鱼攒部件","稀有鱼掉高级部件——钓鱼为战斗供血。"]]},
+    "items":[["先升电池","停机必死；能量决定胜负。"],["再升枪管","每点能量的伤害更高。"],["装战术模块","电容/影子射手随出装成长。"],["核对升级材料","花费零件前，请查看当前存档中的模块要求。"]]},
    {"heading":"对抗 Scavenger Bugs","body":"装甲 Scavenger Bugs 无视普通攻击。用蓄力光束（F）破盾后再倾泻火力。⚠️ 细节来自社区攻略，请在 1.0 中验证。"}
   ]
  },
@@ -517,7 +517,7 @@ JA = {
     "items":[["開始区画を撤去","建築スペース=作物=速度。"],["プランターを作り速成作物を植える","早い収穫がすべての資金になる。"],["毎日住民と話す","友好度でレシピ・テック・ストーリーが解放（Blooming Friendship 含む）。"],["ギルドマスターのクエストを開く","Bellad のクエストでテックポイント獲得。"],["4月前に作物保護を準備開始","Harsh Dry Season 前に作物を保護し、水やりを計画する。"]]},
    {"heading":"ドローン戦闘入門","body":"ドローンは武器であり、生存ツール。",
     "items":["RMB ロックオン / LMB 射撃 / Space 回避 / R リロード。","シャーシ・バレル・バッテリーを強化し、射速・ダメージ・持続を向上。","チャージビーム（F）で装甲 Scavenger Bugs のシールドを破壊。","廃墟探索前に武器・照明モジュールを装備。"]},
-   {"heading":"1.0 で新規プレイヤーに変わること","body":"1.0 アップデート（2026年8月6日）で完全なストーリー結末、旧市街遺跡、農業オートメーションと農場ドローン基地、キノコ祭り、新実績37個が追加。今始めるなら、EA よりはるかに早く自動化に到達できます。⚠️ 正確な解放順は 1.0 で検証中。"},
+   {"heading":"1.0 で新規プレイヤーに変わること","body":"1.0 アップデート（2026年8月6日）で完全なストーリー結末、旧市街遺跡、農業オートメーションと農場ドローン基地、キノコ祭り、新実績37個が追加。現在のゲーム内タスクとリンク先の公式発表を確認し、本ガイドから解放順は推測しません。"},
    {"heading":"よくある質問",
     "items":[["ドロックタウンはシングルプレイ？","はい。開発者は 1.0 がシングルプレイ体験であると明言。co-op/マルチはコミュニティの反応次第で検討。"],["毎日水やりが必要？","最初は必要。ただし「雨露均等」遺伝子で周囲に自動潅水、1.0 のドローン基地なら完全自動。"],["どこでも建築できる？","農場エリア内でプラットフォームを積みます。旧市街遺跡（1.0）で新たな建築ゾーンと資源。"],["プレイ時間は？","メイン 30時間+。釣り・牧場・遺伝子・収集で 100時間+。"]]}
   ]
@@ -528,16 +528,16 @@ JA = {
   "metaDescription":"ドロックタウン 1.0 の農業オートメーション：自動化設備の構築、農場ドローン基地の展開、播種から収穫までの自動化。",
   "intro":"1.0 で、あなたは農家から農場マネージャーになる。クリーンエネルギーを生み、ドローン基地を展開し、作物サイクル全体を自動化する方法を解説。",
   "sections":[
-   {"heading":"農業オートメーションの仕組み","body":"自動化は3層：エネルギー・基地・ドローン。",
-    "items":[["太陽光と自動化を利用","ソーラーパネルと自動化設備を建ててクリーンエネルギーを生成。"],["農場ドローン基地を建設","基地がドローンに農場作業を実行させるコントロールポイント。"],["自動タスクを割り当て","ドローンが播種・育成・収穫を一貫して処理。"],["時間を解放","ドローン作業中に探索・住民交流・ストーリー進行。"]]},
-   {"heading":"太陽光 vs 自動化：どちらを先に","body":"自分の天候に合う方から。",
-    "items":["晴天ならソーラーパネルが効率的。","自動化設備は嵐でも発電——嵐の多い月に有利。","両方の混在で天候に関係なく安定。","⚠️ 正確な建設コストと発電量は 1.0 で検証中。"]},
+   {"heading":"農業オートメーションの確認項目","body":"公式情報にある電力設備・農場ドローン基地・自動作業をテーマ別に整理したもので、解放や建設の順序ではありません。",
+    "items":[["現在のタスクを確認","自分のセーブで利用できる設備と素材を確認。"],["農場ドローン基地を確認","公式 1.0 情報は基地を農業オートメーションの要素として説明。"],["自動作業を確認","公式情報は播種・育成・収穫を挙げています。"],["保存してから変更","1.00.03 は特定状況のドローン不具合を既知事項として列挙。"]]},
+   {"heading":"公式情報にある構成要素","body":"編集上のチェックリストであり、構成要素間の依存関係を示しません。",
+    "items":["公式ストアは太陽光と風力発電を紹介。","公式 1.0 情報は農業オートメーションと農場ドローン基地を紹介。","解放条件と素材は現在のセーブで確認。","1.00.03 は特定状況のドローン不具合を列挙。"]},
    {"heading":"工業地帯とコンベアベルト","body":"自動化は作物だけのものではない。",
     "items":[["工業地帯のジェネレーター起動","新しいコンベア生産ラインに電力を供給。"],["コンベアベルトを建設","ステーション間で素材を自動搬送。"],["到達不能だった地域を解放","工業ラインでマップの新領域へ。"]]},
-   {"heading":"自動化ロードマップ（草案）",
-    "columns":["段階","得られるもの","時期"],
-    "rows":[["農業オートメーション","基地のエネルギー","序盤～中盤 ⚠️"],["最初のドローン基地","自動播種","中盤 ⚠️"],["完全な作物サイクル","播種→育成→収穫","終盤 ⚠️"],["工業ライン","コンベア+新領域","1.0 エンドゲーム"]]},
-   {"heading":"このページの重要性","body":"ドロックタウンの自動化に関する英語ガイドはほぼ存在しません。多くは EA の基礎で止まっています。本ページは 1.0 専用の自動化英語リファレンスの最初の一つ。⚠️ 付きの詳細は実機検証後に更新。"}
+   {"heading":"オートメーション資料チェックリスト","body":"各行はテーマ別の整理で、進行・依存・時期の順序ではありません。",
+    "columns":["構成要素","公式情報の説明","確認範囲"],
+    "rows":[["電力設備","公式情報は太陽光と風力発電を紹介","現在のセーブで利用可否を確認"],["農場ドローン基地","公式情報は農業自動化との関係を説明","解放順は推測しない"],["自動作業","播種・育成・収穫","1.00.03 は一部状況の不具合を列挙"],["工業生産","1.0 情報はコンベア生産ラインを紹介","農場自動化との依存は推測しない"]]},
+   {"heading":"本ページの情報範囲","body":"公式 1.0 と 1.00.03 の情報をテーマ別に整理し、固定された進行は推測しません。更新後はリンク先の Steam 公式発表を確認してください。"}
   ]
  },
  "gene-system": {
@@ -559,16 +559,16 @@ JA = {
  "fishing": {
   "title":"ドロックタウン釣りガイド：池・天候・レア魚",
   "metaTitle":"ドロックタウン釣り：池・天候・竿・レア魚",
-  "metaDescription":"ドロックタウンの釣りを解説：池・竿・天候で獲れる魚が変わり、レア魚はドローンの高性能パーツを落とす。",
-  "intro":"釣りはドロックタウンで第二の本職。池・竿・天候で釣れるものが変わり、レア魚はドローン用の高度なパーツを落とす。",
+  "metaDescription":"ドロックタウンの釣りを池・竿・天候・月ごとの条件で確認するガイド。",
+  "intro":"釣りはドロックタウンの主要アクティビティ。池・竿・天候・月で釣果が変わる。",
   "sections":[
    {"heading":"釣りの基本","body":"餌は不要——竿と正しい場所だけ。",
-    "items":["池ごとに獲れる魚が違う。","竿の品質で釣れる魚が変わる。","天候で釣果テーブルが変わる。","レア魚はドローン・道具強化の高度なパーツをドロップ。"]},
+    "items":["池ごとに獲れる魚が違う。","竿の品質で釣れる魚が変わる。","天候で釣果テーブルが変わる。","月によって出現条件が変わる魚もいる。"]},
    {"heading":"釣果を変える要素",
     "columns":["要素","影響"],
     "rows":[["池 / 水域","水域ごとに魚のプールが違う"],["竿のランク","高ランクで良い魚が解禁"],["天候","嵐で出現が変わる場合あり"],["時間 / 季節","季節限定の魚も ⚠️"]]},
    {"heading":"効率的な魚の稼ぎ方",
-    "items":[["池を把握","全水域を回って釣果を記録。"],["竿を目標に合わせる","レア魚狙いの前に強化。"],["天候を狙う","嵐はレアな釣果をもたらす。"],["魚をパーツに","レア魚がドローン・道具強化の資金に。"]]},
+    "items":[["池を把握","全水域を回って釣果を記録。"],["竿を目標に合わせる","レア魚狙いの前に強化。"],["天候を狙う","嵐はレアな釣果をもたらす。"],["用途を確認","余った魚を加工・売却する前にゲーム内用途を確認。"]]},
   ]
  },
  "drone-combat": {
@@ -586,7 +586,7 @@ JA = {
     "columns":["モジュール","効果"],
     "rows":[["戦術コンデンサ","リロード後、追撃ダメージ"],["シャドウシューター","確率で2連射"],["ポリスドローン / スナイパー","上位戦闘ビルド ⚠️"],["中Eチップ","湿地ボスからドロップ ⚠️"]]},
    {"heading":"戦闘ビルドの順序",
-    "items":[["バッテリー最優先","停止は死。エネルギーが勝敗を決める。"],["次にバレル","エネルギーあたりのダメージ向上。"],["戦術モジュール装備","コンデンサ/シャドウはビルドと共に伸びる。"],["釣りでパーツ調達","レア魚が高パーツを落とす——釣りが戦闘を支える。"]]},
+    "items":[["バッテリー最優先","停止は死。エネルギーが勝敗を決める。"],["次にバレル","エネルギーあたりのダメージ向上。"],["戦術モジュール装備","コンデンサ/シャドウはビルドと共に伸びる。"],["素材を確認","パーツを使う前に現在のセーブで各モジュールの必要素材を確認。"]]},
   ]
  },
  "exploration": {
@@ -859,7 +859,7 @@ KO = {
     "items":[["시작 구획 치우기","건설 공간 = 작물 = 속도."],["화분 만들고 속성 작물 심기","빠른 수확이 모든 것의 자금입니다."],["매일 주민과 대화","호감도로 레시피·테크·스토리 해금 (Blooming Friendship 포함)."],["길드마스터 퀘스트 열기","Bellad의 퀘스트가 테크 포인트를 줍니다."],["4월 전에 작물 보호 준비 시작","Harsh Dry Season에 대비해 작물 보호와 물주기를 준비합니다."]]},
    {"heading":"드론 전투 입문","body":"드론은 무기이자 생존 도구입니다.",
     "items":["RMB 조준 / LMB 사격 / Space 회피 / R 재장전.","샤시·총열·배터리를 업그레이드해 공격 속도·데미지·지속력을 높입니다.","차지 빔(F)으로 장갑 Scavenger Bugs의 방패를 깨세요.","유적 탐험 전에 무기·조명 모듈을 장착하세요."]},
-   {"heading":"1.0이 새 플레이어에게 주는 변화","body":"1.0 업데이트(2026년 8월 6일)로 완전한 스토리 결말, 구시가지 유적, 농업 자동화와 농장 드론 기지, 버섯 축제, 신규 업적 37개가 추가됐습니다. 지금 시작하면 EA보다 훨씬 일찍 자동화에 도달할 수 있습니다. ⚠️ 정확한 해금 순서는 1.0에서 검증 중입니다."},
+   {"heading":"1.0이 새 플레이어에게 주는 변화","body":"1.0 업데이트(2026년 8월 6일)로 완전한 스토리 결말, 구시가지 유적, 농업 자동화와 농장 드론 기지, 버섯 축제, 신규 업적 37개가 추가됐습니다. 현재 게임의 작업과 링크된 공식 공지를 확인하며, 이 가이드는 해금 순서를 추론하지 않습니다."},
    {"heading":"빠른 답변",
     "items":[["돌록 타운은 싱글 플레이인가요?","네. 개발사는 1.0이 싱글 플레이 경험이라고 밝혔습니다. co-op/멀티는 커뮤니티 피드백에 따라 추후 논의될 수 있습니다."],["매일 물을 줘야 하나요?","초반엔 네. 하지만 '고루 내리는 비' 유전자가 주변 작물에 자동 관수하고, 1.0 드론 기지가 완전히 대신합니다."],["아무 데나 지을 수 있나요?","농장 구역 안에서 플랫폼을 쌓습니다. 구시가지 유적(1.0)은 새로운 건설 구역과 자원을 추가합니다."],["게임 분량은?","메인 30시간+. 낚시·목장·유전자·수집 포함 100시간+."]]}
   ]
@@ -870,16 +870,16 @@ KO = {
   "metaDescription":"돌록 타운 1.0 농업 자동화: 자동화 장비와 농장 드론 기지를 배치하고 드론이 파종부터 수확까지 자동 처리하는 방법.",
   "intro":"공식 1.0 공지는 농업 자동화와 작물 작업용 드론 스테이션을 설명합니다. 이 가이드는 공식 메커니즘과 플레이어 제보를 구분합니다.",
   "sections":[
-   {"heading":"농업 자동화의 작동 방식","body":"자동화는 에너지·기지·드론 세 층으로 이루어집니다.",
+   {"heading":"농업 자동화 확인 항목","body":"공식 자료의 전력 설비·농장 드론 기지·자동 작업을 주제별로 묶었으며 해금이나 건설 순서를 뜻하지 않습니다.",
     "items":[["농업 자동화 활용","해금 조건과 필요한 재료를 확인한 뒤 자동화 장비를 배치합니다."],["농장 드론 기지 건설","기지는 드론이 농장 작업을 수행하게 하는 제어 지점입니다."],["자동 작업 지정","드론이 파종·육성·수확을 처음부터 끝까지 처리합니다."],["시간 확보","드론이 일하는 동안 탐험·대화·스토리 진행을 하세요."]]},
-   {"heading":"태양광 vs 자동화: 무엇부터?","body":"자신의 날씨에 맞는 것부터 짓고 균형을 맞추세요.",
+   {"heading":"공식 자료의 구성 요소","body":"편집용 체크리스트이며 구성 요소 사이의 의존 관계를 뜻하지 않습니다.",
     "items":["자동화 해금 조건과 필요한 재료를 확인하세요.","드론 스테이션에 파종·관리·수확 작업을 지정하세요.","1.00.03은 특정 상황의 드론 실패를 알려진 문제로 명시합니다.","⚠️ 정확한 건설 비용과 발전량은 1.0에서 검증 중입니다."]},
    {"heading":"산업 지구와 컨베이어 벨트","body":"자동화는 작물에만 해당하지 않습니다.",
     "items":[["산업 지구 발전기 가동","새 컨베이어 생산 라인에 전력을 공급합니다."],["컨베이어 벨트 건설","기지 사이에서 자재를 자동으로 운반합니다."],["도달 불가능했던 지역 해금","산업 라인으로 지도의 새로운 영역에 들어갈 수 있습니다."]]},
-   {"heading":"자동화 로드맵 (초안)",
-    "columns":["단계","얻는 것","시기"],
-    "rows":[["농업 자동화","기지 에너지","초~중반 ⚠️"],["첫 드론 기지","자동 파종","중반 ⚠️"],["전체 작물 주기","파종→육성→수확","후반 ⚠️"],["산업 라인","컨베이어+새 지역","1.0 엔드게임"]]},
-   {"heading":"이 페이지가 중요한 이유","body":"돌록 타운 자동화에 대한 영어 가이드는 거의 없습니다——대부분 EA 기초에서 멈춰 있습니다. 이 페이지는 최초의 1.0 전용 자동화 영어 자료 중 하나입니다. ⚠️ 표시된 세부 사항은 직접 검증 후 업데이트됩니다."}
+   {"heading":"자동화 자료 체크리스트","body":"각 행은 주제별 묶음이며 진행·의존·시기 순서가 아닙니다.",
+    "columns":["구성 요소","공식 자료의 설명","확인 범위"],
+    "rows":[["전력 설비","공식 자료는 태양광과 풍력을 소개","현재 세이브에서 이용 가능 여부 확인"],["농장 드론 기지","공식 자료는 농업 자동화와의 관계를 설명","해금 순서를 추론하지 않음"],["자동 작업","파종·육성·수확","1.00.03은 일부 상황의 실패를 열거"],["산업 생산","1.0 자료는 컨베이어 생산 라인을 소개","농업 자동화와의 의존을 추론하지 않음"]]},
+   {"heading":"이 페이지의 자료 범위","body":"공식 1.0과 1.00.03 자료를 주제별로 정리하며 고정된 진행을 추론하지 않습니다. 업데이트 후에는 링크된 Steam 공식 공지를 확인하세요."}
   ]
  },
  "gene-system": {
@@ -901,16 +901,16 @@ KO = {
  "fishing": {
   "title":"돌록 타운 낚시 가이드: 연못·날씨·희귀어",
   "metaTitle":"돌록 타운 낚시: 연못·날씨·낚싯대·희귀어",
-  "metaDescription":"돌록 타운 낚시 설명: 연못·낚싯대·날씨에 따라 잡히는 물고기가 다르고, 희귀어는 드론 고급 부품을 떨어뜨립니다.",
-  "intro":"낚시는 돌록 타운에서 두 번째 본업입니다. 연못·낚싯대·날씨에 따라 잡히는 것이 달라지고, 희귀어는 드론 고급 부품을 줍니다.",
+  "metaDescription":"돌록 타운 낚시 가이드: 연못·낚싯대·날씨·월별 조건에 따른 어획을 확인합니다.",
+  "intro":"낚시는 돌록 타운의 주요 활동입니다. 연못·낚싯대·날씨·월에 따라 잡히는 물고기가 달라집니다.",
   "sections":[
    {"heading":"낚시의 기초","body":"미끼는 필요 없습니다——낚싯대와 올바른 장소만 있으면 됩니다.",
-    "items":["연못마다 잡히는 물고기가 다릅니다.","낚싯대 품질에 따라 잡을 수 있는 물고기가 달라집니다.","날씨가 낚시 테이블을 바꿉니다.","희귀어는 드론·도구 업그레이드용 고급 부품을 드롭합니다."]},
+    "items":["연못마다 잡히는 물고기가 다릅니다.","낚싯대 품질에 따라 잡을 수 있는 물고기가 달라집니다.","날씨가 낚시 테이블을 바꿉니다.","일부 물고기는 월별 출현 조건도 다릅니다."]},
    {"heading":"낚시 결과를 바꾸는 요소",
     "columns":["요소","영향"],
     "rows":[["연못 / 수역","수역마다 고유한 물고기 풀"],["낚싯대 등급","더 좋은 낚싯대가 더 좋은 물고기 해금"],["날씨","폭풍이 출현을 바꿀 수 있음"],["시간 / 계절","일부 물고기는 계절 한정 ⚠️"]]},
    {"heading":"효율적으로 물고기 파밍하기",
-    "items":[["연못 파악","모든 수역을 돌며 낚이는 것을 기록하세요."],["낚싯대를 목표에 맞추기","희귀어를 노리기 전에 업그레이드."],["날씨 노리기","폭풍은 흔치 않은 어획을 가져옵니다."],["물고기를 부품으로","희귀어가 드론·도구 강화의 자금이 됩니다."]]},
+    "items":[["연못 파악","모든 수역을 돌며 낚이는 것을 기록하세요."],["낚싯대를 목표에 맞추기","희귀어를 노리기 전에 업그레이드."],["날씨 노리기","폭풍은 흔치 않은 어획을 가져옵니다."],["현재 용도 확인","남는 어획을 가공하거나 팔기 전에 게임 내 용도를 확인하세요."]]},
    {"heading":"1.0의 새 물고기","body":"1.0 업데이트로 새로운 어종이 추가됐습니다. ⚠️ 연못×날씨별 완전한 영어 물고기 목록을 정리 중이며, 완성되면 추가합니다."}
   ]
  },
@@ -929,7 +929,7 @@ KO = {
     "columns":["모듈","효과"],
     "rows":[["전술 커패시터","재장전 후 추가 데미지"],["섀도 슈터","확률로 2연발"],["경찰 드론 / 저격","상위 전투 빌드 ⚠️"],["중형 E칩","습지 보스 드롭 ⚠️"]]},
    {"heading":"전투 빌드 순서",
-    "items":[["배터리 우선","정지하면 죽습니다. 에너지가 승부를 가릅니다."],["그다음 총열","에너지당 데미지가 높아집니다."],["전술 모듈 장착","커패시터/섀도는 빌드와 함께 성장합니다."],["낚시로 부품 모으기","희귀어가 고급 부품을 줍니다——낚시가 전투를 뒷받침합니다."]]},
+    "items":[["배터리 우선","정지하면 죽습니다. 에너지가 승부를 가릅니다."],["그다음 총열","에너지당 데미지가 높아집니다."],["전술 모듈 장착","커패시터/섀도는 빌드와 함께 성장합니다."],["재료 확인","부품을 쓰기 전에 현재 세이브의 모듈 요구 재료를 확인하세요."]]},
    {"heading":"Scavenger Bugs 처치법","body":"장갑 Scavenger Bugs는 일반 공격을 무시합니다. 차지 빔(F)으로 방패를 깬 뒤 화력을 쏟아붓세요. ⚠️ 커뮤니티 가이드 출처. 1.0에서 검증하세요."}
   ]
  },
@@ -1211,7 +1211,7 @@ ES = {
     "items":[["Limpia tu parcela inicial","Más espacio = más cultivos = más progreso."],["Crea un macetero y planta rápido","Las cosechas rápidas financian todo lo demás."],["Habla con los vecinos a diario","La amistad desbloquea recetas, tecnología e historia."],["Abre las misiones del Maestro de Gremio","Las misiones de Bellad dan Puntos de Tecnología."],["Empieza a proteger los cultivos antes del mes 4","Harsh Dry Season exige proteger cultivos y planificar el riego."]]},
    {"heading":"Combate con drones para principiantes","body":"Tu dron es tu arma y tu herramienta de supervivencia.",
     "items":["RMB apunta, LMB dispara, Espacio esquiva, R recarga.","Mejora chasis, cañón y batería para cadencia, daño y energía.","El rayo de carga (F) rompe escudos de los Scavenger Bugs blindados.","Equipa módulos de arma y luz antes de explorar ruinas."]},
-   {"heading":"Qué cambia el lanzamiento 1.0 para los nuevos jugadores","body":"La actualización 1.0 (6 de agosto de 2026) añade el final completo de la historia, las Ruinas de la Ciudad Vieja, la automatización agrícola con estaciones de drones, el Festival de las Setas y 37 logros nuevos. Si empiezas ahora, podrás automatizar mucho antes que en Early Access. ⚠️ El orden exacto de desbloqueo aún se está verificando en 1.0."},
+   {"heading":"Qué cambia el lanzamiento 1.0 para los nuevos jugadores","body":"La actualización 1.0 (6 de agosto de 2026) añade el final completo de la historia, las Ruinas de la Ciudad Vieja, la automatización agrícola con estaciones de drones, el Festival de las Setas y 37 logros nuevos. Comprueba las tareas actuales y los anuncios oficiales enlazados; esta guía no infiere un orden de desbloqueo."},
    {"heading":"Respuestas rápidas",
     "items":[["¿Doloc Town es de un solo jugador?","Sí. Los desarrolladores confirmaron que el 1.0 es una experiencia de un jugador; el cooperativo/multijugador podría discutirse más adelante según los comentarios de la comunidad."],["¿Tengo que regar todos los días?","Sí al principio; pero la mutación 'Lluvia' riega automáticamente y las estaciones de drones del 1.0 lo automatizan por completo."],["¿Puedo construir en cualquier sitio?","Apilas plataformas dentro de tu zona de granja. Las Ruinas de la Ciudad Vieja (1.0) añaden nuevas zonas y recursos."],["¿Cuánto dura Doloc Town?","Más de 30 horas de historia; más de 100 con pesca, ganadería, genes y colecciones."]]}
   ]
@@ -1222,16 +1222,16 @@ ES = {
   "metaDescription":"Cómo funciona la automatización agrícola en Doloc Town 1.0: construye automatización agrícola, despliega estaciones de drones y automatiza el ciclo completo.",
   "intro":"Los avisos oficiales de 1.0 describen automatización agrícola y estaciones de drones para tareas de cultivo. Esta guía separa esas mecánicas de los reportes de jugadores.",
   "sections":[
-   {"heading":"Cómo funciona la automatización agrícola","body":"La automatización tiene tres capas: energía, estaciones y drones.",
+   {"heading":"Elementos de la automatización agrícola","body":"Esta lista editorial agrupa energía, estaciones de drones y tareas automáticas documentadas; no indica un orden de desbloqueo o construcción.",
     "items":[["Aprovecha la automatización agrícola","Comprueba el desbloqueo y los materiales necesarios antes de colocar equipos de automatización."],["Construye estaciones de drones","Las estaciones controlan que los drones hagan el trabajo agrícola."],["Asigna tareas automáticas","Los drones siembran, cuidan y cosechan de principio a fin."],["Libera tu tiempo","Mientras los drones trabajan, explora, habla con vecinos o avanza la historia."]]},
-   {"heading":"¿Solar o automatización? Qué construir primero","body":"Empieza por comprobar la automatización agrícola oficial y las tareas de las estaciones de drones.",
+   {"heading":"Componentes citados por las fuentes","body":"Es una lista editorial y no implica dependencias entre componentes.",
     "items":["Comprueba los requisitos de desbloqueo y los materiales necesarios.","Asigna a las estaciones de drones tareas de siembra, cuidado y cosecha.","1.00.03 enumera fallos de drones en determinadas situaciones.","⚠️ Costes y valores exactos se están verificando en 1.0."]},
    {"heading":"La zona industrial y las cintas transportadoras","body":"La automatización no es solo para cultivos.",
     "items":[["Enciende el generador de la zona industrial","Alimenta la nueva línea de producción con cintas."],["Construye cintas transportadoras","Mueve materiales automáticamente entre estaciones."],["Desbloquea áreas antes inaccesibles","La línea industrial da acceso a nuevas zonas del mapa."]]},
-   {"heading":"Hoja de ruta de la automatización (borrador)",
-    "columns":["Etapa","Qué consigues","Cuándo"],
-    "rows":[["Energía solar/automatización","Energía para estaciones","Inicio-medio ⚠️"],["Primera estación de drones","Siembra automática","Medio ⚠️"],["Ciclo completo","Siembra→cuidado→cosecha","Final ⚠️"],["Línea industrial","Cintas + nuevas áreas","Final del 1.0"]]},
-   {"heading":"Por qué importa esta página","body":"Las guías en inglés sobre la automatización de Doloc Town son prácticamente inexistentes. Esta es una de las primeras referencias en inglés específicas del 1.0. Los detalles marcados ⚠️ se actualizarán tras la verificación práctica."}
+   {"heading":"Lista de comprobación de las fuentes","body":"Las filas agrupan temas; no forman una secuencia de progreso, dependencia o tiempo.",
+    "columns":["Componente","Qué describen las fuentes","Límite de verificación"],
+    "rows":[["Opciones de energía","Las fuentes oficiales citan energía solar y eólica","Comprobar disponibilidad en la partida"],["Estaciones de drones","Las fuentes las relacionan con la automatización agrícola","Sin inferir orden de desbloqueo"],["Tareas automáticas","Siembra, cuidado y cosecha","1.00.03 enumera fallos en algunas situaciones"],["Producción industrial","1.0 describe líneas de cintas transportadoras","Sin inferir dependencia con la granja"]]},
+   {"heading":"Alcance de esta página","body":"Agrupa por temas información oficial de 1.0 y 1.00.03 sin inferir un progreso fijo. Revisa los anuncios oficiales de Steam enlazados después de cada actualización."}
   ]
  },
  "gene-system": {
@@ -1253,16 +1253,16 @@ ES = {
  "fishing": {
   "title":"Guía de pesca de Doloc Town: estanques, clima y peces raros",
   "metaTitle":"Pesca en Doloc Town: estanques, clima, cañas y peces raros",
-  "metaDescription":"La pesca de Doloc Town explicada: distintos estanques, cañas y clima dan capturas diferentes; los peces raros dan piezas avanzadas para el dron.",
-  "intro":"La pesca es una segunda carrera completa en Doloc Town. Estanques, cañas y clima cambian lo que pescas, y los peces raros dan piezas avanzadas.",
+  "metaDescription":"Guía de pesca de Doloc Town: capturas por estanque, caña, clima y mes.",
+  "intro":"La pesca es una actividad principal de Doloc Town. El estanque, la caña, el clima y el mes cambian las capturas.",
   "sections":[
    {"heading":"Bases de la pesca","body":"No necesitas cebo: solo una caña y el sitio adecuado.",
-    "items":["Cada estanque da peces distintos.","La calidad de la caña cambia lo que puedes pescar.","El clima cambia la tabla de capturas.","Los peces raros dan piezas avanzadas para el dron y las herramientas."]},
+    "items":["Cada estanque da peces distintos.","La calidad de la caña cambia lo que puedes pescar.","El clima cambia la tabla de capturas.","Algunos peces también tienen condiciones mensuales."]},
    {"heading":"Qué cambia tu captura",
     "columns":["Factor","Efecto"],
     "rows":[["Estanque / agua","Cada masa de agua tiene su propia población"],["Nivel de caña","Mejores cañas, mejores peces"],["Clima","Las tormentas pueden cambiar los peces"],["Hora / temporada","Algunos peces son de temporada ⚠️"]]},
    {"heading":"Cómo pescar de forma eficiente",
-    "items":[["Mapea los estanques","Visita cada masa de agua y anota qué pica."],["Iguala la caña al objetivo","Mejora antes de buscar peces raros."],["Pesca con clima","Las tormentas suelen traer capturas poco comunes."],["Convierte peces en piezas","Los peces raros financian mejoras del dron."]]},
+    "items":[["Mapea los estanques","Visita cada masa de agua y anota qué pica."],["Iguala la caña al objetivo","Mejora antes de buscar peces raros."],["Pesca con clima","Las tormentas suelen traer capturas poco comunes."],["Comprueba los usos","Antes de procesar o vender capturas sobrantes, revisa sus usos actuales en el juego."]]},
    {"heading":"Peces nuevos en 1.0","body":"La actualización 1.0 añade nuevas especies. ⚠️ La lista completa en inglés con tablas por estanque y clima se está compilando y se añadirá aquí."}
   ]
  },
@@ -1281,7 +1281,7 @@ ES = {
     "columns":["Módulo","Efecto"],
     "rows":[["Condensador táctico","Daño extra tras recargar"],["Tirador sombra","Probabilidad de disparo doble"],["Dron policial / Francotirador","Builds superiores ⚠️"],["Chip-E medio","Cae del jefe de los Humedales ⚠️"]]},
    {"heading":"Orden de construcción para combate",
-    "items":[["Mejora la batería primero","Quedarte sin energía mata; la energía gana."],["Luego el cañón","Más daño por energía gastada."],["Equipa un módulo táctico","El condensador/tirador crece con tu build."],["Ahorra piezas pescando","Los peces raros dan piezas avanzadas."]]},
+    "items":[["Mejora la batería primero","Quedarte sin energía mata; la energía gana."],["Luego el cañón","Más daño por energía gastada."],["Equipa un módulo táctico","El condensador/tirador crece con tu build."],["Comprueba materiales","Revisa los requisitos actuales de cada módulo antes de gastar piezas."]]},
    {"heading":"Contra los Scavenger Bugs","body":"Los Scavenger Bugs blindados ignoran el fuego normal. Carga el rayo (F) para romper su escudo y luego dispara. ⚠️ Detalles de guías comunitarias; verifica en 1.0."}
   ]
  },
@@ -1587,7 +1587,7 @@ for _slug, _tr in ZH_P12.items():
     ZH.setdefault(_slug, _tr)
 
 # ---- JA flat supplement (en-heading aligned sections) ----
-JA_SUP = {"automation": {"sections": [{"en": "Common Automation Mistakes", "heading": "自動化のよくある失敗", "body": "電力が安定する前に基地を急がない——半日稼働しない基地は意味がなくなる。最初の自動化は唯一の収入作物ではなく、低価値のフィラー作物でシステムを学ぼう。プラットフォームを積むときはドローンの飛行経路を確保しないと、作物に到達できない。"}, {"en": "Why This Page Matters", "heading": "このページの重要性", "body": "ドロックタウンの自動化に関する英語ガイドはほぼ存在しない——多くは EA の基礎で止まっている。本ページは 1.0 専用の自動化英語リファレンスの最初の一つ。⚠️ 付きの詳細は実機検証後に更新。"}]}, "gene-system": {"sections": [{"en": "Pro Tips & Common Mistakes", "heading": "プロのコツとよくある失敗", "body": "「雨露均等」と自動収穫系の変異を組み合わせれば、ほぼ放置で済む区画——コミュニティのお気に入り。「時間の贈り物」は長期プレイ向きなので早めに植える。よくある失敗：冗長なモジュールを重ねてシナジーを組まない、母本研究トラックを無視する（最良モジュールの鍵）。⚠️ コミュニティ情報。自分のセーブで要検証。"}]}, "fishing": {"sections": [{"en": "New Fish in 1.0", "heading": "1.0 の新魚", "body": "1.0 で新しい魚種が追加。池×天候別の完全な英語リストを実機で編集中。完成後、上の要約を置き換える（⚠️）。"}]}, "drone-combat": {"sections": [{"en": "Fighting Scavenger Bugs (And Avoiding Mistakes)", "heading": "Scavenger Bugs 対策と失敗回避", "body": "装甲 Scavenger Bugs は通常攻撃を無視。チャージビーム（F）で盾を破ってから撃ち込む。よくある失敗：壁にパニック回避、オープンでリロード、照明モジュールなしで夜間戦闘。⚠️ コミュニティガイド由来。1.0 で要検証。"}]}, "exploration": {"sections": [{"en": "The Three Mysteries (And Common Mistakes)", "heading": "3つの謎とよくある失敗", "body": "滅びた世界でリバーバレーはなぜ緑か？消えた町長はどうなった？なぜ前終末テクノロジーに「Eden」の刻印が？1.0 のストーリーが答える。よくある失敗：伝承オブジェクトを急いで通り過ぎる——いくつかの物語は地域を走り抜けると取り逃す。"}]}, "friendship": {"sections": [{"en": "Common Mistakes", "heading": "よくある失敗", "body": "「遠いから」と一人の住民を無視すると、そのレシピが永久にロックされる。全員に同じ贈り物を渡すと好みを外し、贈り物を無駄にする。祭りを逃すのが最大の損失——カレンダーで最も価値の高い友好イベント。"}]}, "farming": {"sections": [{"en": "Drought Strategy & Common Mistakes", "heading": "乾季の戦略とよくある失敗", "body": "乾季（4月）はHarsh Dry Season で作物保護と水やりが必要。乾季前に作物保護を準備し、乾季中に水やりを計画る。よくある失敗：移動経路を考えずにプラットフォームを配置する、果樹を後回し（後で無料の収入源）、鎌のアップグレードを怠る（群収穫が大きな時間節約）。"}]}, "cooking": {"sections": [{"en": "Common Mistakes", "heading": "よくある失敗", "body": "収穫を全部売ってレシピ用の食材を残さない。好感度ゲートのレシピを無視する（最良のバフは好感度の先にある）。体力食しか作らない——速度と防御バフは単なるカロリーより時間を節約する。"}]}, "ranching": {"sections": [{"en": "Why Ranch?", "heading": "なぜ牧場か？", "body": "牛乳と卵は荒廃地の貴重な作物保護を準備——料理食材・贈り物・安定した収入源。よくある失敗：飼料生産より速く動物を増やす——飢えた群れは何も産まない。"}]}, "characters": {"sections": [{"en": "Secrets of the Town", "heading": "町の秘密", "body": "リバーバレーはなぜ緑？伝説の町長は何処へ？前終末テクノロジーの「Eden」刻印は？答えは 1.0 のストーリーに——特定の住民と結びついているので、全員と話そう。"}, {"en": "Social Tips", "heading": "社交のコツ", "body": "すべてのハートを活かす。", "items": ["毎日みんなと話す——「遠い」相手も。", "好みに合わせて贈り物。覚えた好みは記録しよう。", "クエストをやる——友好への最良の投資。", "祭りは全部参加し、最大のボーナスを得る。"]}]}, "story": {"sections": [{"en": "Spoiler Policy & Common Mistakes", "heading": "ネタバレ方針とよくある失敗", "body": "本ページは軽いネタバレに留める。深掘りネタバレ節は検証後に追加——明確にラベル付けする。よくある失敗：メインクエストを速攻してサイドキャラクターに結びついた取り逃し可能な展開を飛ばす。謎は地域を完全に探索してから進めるのが最良。"}]}, "weather": {"sections": [{"en": "Farm Like the Weather Knows", "heading": "天候を知る農場経営", "body": "毎日予報を確認。明日嵐なら今日の水やりは無駄——だが今日の充電は貴重。よくある失敗：天候をランダムイベントと見なすのではなく、計画できるカレンダーとして扱う。"}]}, "achievements": {"sections": [{"en": "Achievement Counts & Structure", "heading": "実績数と構造", "body": "実績リストの構造は明確。", "items": ["基礎43個（EA時代）。", "1.0（2026年8月6日）で37個追加。", "合計80個。", "チャプター選択で取り逃した実績を回収可 ⚠️。"]}, {"en": "Note", "heading": "メモ", "body": "解除条件付きの完全な英語80実績チェックリストを実機で編集中。完成後、上の不完全な表を置き換える。100%を目指すなら日常型実績（水を飲む、料理、釣り）から——自然に達成するが、進捗を見失いやすい。"}]}, "mods": {"sections": [{"en": "Workshop Status", "heading": "ワークショップの状況", "body": "⚠️ ワークショップの対応状況と現在のトップMODを確認中。確認後、実際のMODリストに拡張する。MOD導入前にセーブをバックアップ——MODはゲーム挙動を変え、大規模アップデート後に互換性の問題を報告するプレイヤーもいる。"}]}, "update-log": {"sections": [{"en": "Why Track Updates", "heading": "なぜ更新を追うか", "body": "ゲームがいつ変わったかを知れば、現在有効な攻略を見つけ、時代遅れの助言を避けられる——多くの英語攻略は EA のままだ。日付付きの Steam 公式発表を情報源にしてください。"}]}, "system-requirements": {"sections": [{"en": "Notes & Common Questions", "heading": "メモとよくある質問", "body": "公式Steamページには最低のみ記載。推奨は未公表。ゲームは軽量で低スペックでも動作し、Steam Deckでは「Playable」。最低構成に近い場合はバックグラウンドアプリを閉じ、後半地域では性能低下を想定。"}]}, "steam-deck": {"sections": [{"en": "Tip", "heading": "ヒント", "body": "Deckで問題が出たら先にアップデート確認——開発者曰く、最適化待ちが原因であることが多い。重い地域ではフレームレート上限とシャドウ低減で、より滑らかな携帯体験に。"}]}}
+JA_SUP = {"automation": {"sections": [{"en": "Common Automation Mistakes", "heading": "自動化のよくある失敗", "body": "現在のゲーム内タスクと素材を確認し、保存してから既存の配置を変更してください。1.00.03 は特定状況のドローン不具合を既知事項として列挙しています。"}, {"en": "Why This Page Matters", "heading": "このページの重要性", "body": "本ページは公式 1.0 と 1.00.03 の情報をテーマ別に整理し、固定された進行は推測しません。更新後はリンク先の Steam 公式発表を確認してください。"}]}, "gene-system": {"sections": [{"en": "Pro Tips & Common Mistakes", "heading": "プロのコツとよくある失敗", "body": "「雨露均等」と自動収穫系の変異を組み合わせれば、ほぼ放置で済む区画——コミュニティのお気に入り。「時間の贈り物」は長期プレイ向きなので早めに植える。よくある失敗：冗長なモジュールを重ねてシナジーを組まない、母本研究トラックを無視する（最良モジュールの鍵）。⚠️ コミュニティ情報。自分のセーブで要検証。"}]}, "fishing": {"sections": [{"en": "New Fish in 1.0", "heading": "1.0 の新魚", "body": "1.0 で新しい魚種が追加。池×天候別の完全な英語リストを実機で編集中。完成後、上の要約を置き換える（⚠️）。"}]}, "drone-combat": {"sections": [{"en": "Fighting Scavenger Bugs (And Avoiding Mistakes)", "heading": "Scavenger Bugs 対策と失敗回避", "body": "装甲 Scavenger Bugs は通常攻撃を無視。チャージビーム（F）で盾を破ってから撃ち込む。よくある失敗：壁にパニック回避、オープンでリロード、照明モジュールなしで夜間戦闘。⚠️ コミュニティガイド由来。1.0 で要検証。"}]}, "exploration": {"sections": [{"en": "The Three Mysteries (And Common Mistakes)", "heading": "3つの謎とよくある失敗", "body": "滅びた世界でリバーバレーはなぜ緑か？消えた町長はどうなった？なぜ前終末テクノロジーに「Eden」の刻印が？1.0 のストーリーが答える。よくある失敗：伝承オブジェクトを急いで通り過ぎる——いくつかの物語は地域を走り抜けると取り逃す。"}]}, "friendship": {"sections": [{"en": "Common Mistakes", "heading": "よくある失敗", "body": "「遠いから」と一人の住民を無視すると、そのレシピが永久にロックされる。全員に同じ贈り物を渡すと好みを外し、贈り物を無駄にする。祭りを逃すのが最大の損失——カレンダーで最も価値の高い友好イベント。"}]}, "farming": {"sections": [{"en": "Drought Strategy & Common Mistakes", "heading": "乾季の戦略とよくある失敗", "body": "乾季（4月）はHarsh Dry Season で作物保護と水やりが必要。乾季前に作物保護を準備し、乾季中に水やりを計画る。よくある失敗：移動経路を考えずにプラットフォームを配置する、果樹を後回し（後で無料の収入源）、鎌のアップグレードを怠る（群収穫が大きな時間節約）。"}]}, "cooking": {"sections": [{"en": "Common Mistakes", "heading": "よくある失敗", "body": "収穫を全部売ってレシピ用の食材を残さない。好感度ゲートのレシピを無視する（最良のバフは好感度の先にある）。体力食しか作らない——速度と防御バフは単なるカロリーより時間を節約する。"}]}, "ranching": {"sections": [{"en": "Why Ranch?", "heading": "なぜ牧場か？", "body": "牛乳と卵は荒廃地の貴重な作物保護を準備——料理食材・贈り物・安定した収入源。よくある失敗：飼料生産より速く動物を増やす——飢えた群れは何も産まない。"}]}, "characters": {"sections": [{"en": "Secrets of the Town", "heading": "町の秘密", "body": "リバーバレーはなぜ緑？伝説の町長は何処へ？前終末テクノロジーの「Eden」刻印は？答えは 1.0 のストーリーに——特定の住民と結びついているので、全員と話そう。"}, {"en": "Social Tips", "heading": "社交のコツ", "body": "すべてのハートを活かす。", "items": ["毎日みんなと話す——「遠い」相手も。", "好みに合わせて贈り物。覚えた好みは記録しよう。", "クエストをやる——友好への最良の投資。", "祭りは全部参加し、最大のボーナスを得る。"]}]}, "story": {"sections": [{"en": "Spoiler Policy & Common Mistakes", "heading": "ネタバレ方針とよくある失敗", "body": "本ページは軽いネタバレに留める。深掘りネタバレ節は検証後に追加——明確にラベル付けする。よくある失敗：メインクエストを速攻してサイドキャラクターに結びついた取り逃し可能な展開を飛ばす。謎は地域を完全に探索してから進めるのが最良。"}]}, "weather": {"sections": [{"en": "Farm Like the Weather Knows", "heading": "天候を知る農場経営", "body": "毎日予報を確認。明日嵐なら今日の水やりは無駄——だが今日の充電は貴重。よくある失敗：天候をランダムイベントと見なすのではなく、計画できるカレンダーとして扱う。"}]}, "achievements": {"sections": [{"en": "Achievement Counts & Structure", "heading": "実績数と構造", "body": "実績リストの構造は明確。", "items": ["基礎43個（EA時代）。", "1.0（2026年8月6日）で37個追加。", "合計80個。", "チャプター選択で取り逃した実績を回収可 ⚠️。"]}, {"en": "Note", "heading": "メモ", "body": "解除条件付きの完全な英語80実績チェックリストを実機で編集中。完成後、上の不完全な表を置き換える。100%を目指すなら日常型実績（水を飲む、料理、釣り）から——自然に達成するが、進捗を見失いやすい。"}]}, "mods": {"sections": [{"en": "Workshop Status", "heading": "ワークショップの状況", "body": "⚠️ ワークショップの対応状況と現在のトップMODを確認中。確認後、実際のMODリストに拡張する。MOD導入前にセーブをバックアップ——MODはゲーム挙動を変え、大規模アップデート後に互換性の問題を報告するプレイヤーもいる。"}]}, "update-log": {"sections": [{"en": "Why Track Updates", "heading": "なぜ更新を追うか", "body": "ゲームがいつ変わったかを知れば、現在有効な攻略を見つけ、時代遅れの助言を避けられる——多くの英語攻略は EA のままだ。日付付きの Steam 公式発表を情報源にしてください。"}]}, "system-requirements": {"sections": [{"en": "Notes & Common Questions", "heading": "メモとよくある質問", "body": "公式Steamページには最低のみ記載。推奨は未公表。ゲームは軽量で低スペックでも動作し、Steam Deckでは「Playable」。最低構成に近い場合はバックグラウンドアプリを閉じ、後半地域では性能低下を想定。"}]}, "steam-deck": {"sections": [{"en": "Tip", "heading": "ヒント", "body": "Deckで問題が出たら先にアップデート確認——開発者曰く、最適化待ちが原因であることが多い。重い地域ではフレームレート上限とシャドウ低減で、より滑らかな携帯体験に。"}]}}
 for _slug, _sup in JA_SUP.items():
     _base = JA.setdefault(_slug, {})
     _secs = _base.setdefault("sections", [])
@@ -1601,7 +1601,7 @@ for _slug, _sup in JA_SUP.items():
     _base["sections"] = _kept + list(_en_map.values())
 
 # ---- JA full replacement for how-to-play & friendship ----
-JA_FULL = {"how-to-play": {"sections": [{"en": "The Five-Step Core Loop", "heading": "5ステップのコアループ", "body": "毎日のリズムは同じ。これを覚えれば荒廃地は農場になる。", "items": [["瓦礫を撤去する", "初期ツールで残骸と廃墟を壊す。撤去で建築スペースが開き、埋もれた資源が露出し、行動範囲が広がる。まず拠点に近い区画から。"], ["資源を採取する", "40種類以上の鉱物・植物・がらくた・機械部品を集める。がらくたは製作に、植物は料理に、鉱物はテックツリーに。毎日リスポーンする場所を覚えよう。"], ["垂直に農場を作る", "プランターを作りプラットフォームを積んで上へ建てる。垂直に積むと限られた空間を効率よく使い、作物を整理し、自動化の余地も残せる。天候対策と水やりは配置とは別に計画する。"], ["建築とアップグレード", "資源をテックツリー・設計図・建物・自宅に投資。テックポイントはギルドマスター Bellad のクエストから——常に1つ進行させておく。"], ["新地域を探索する", "強化した道具とドローンで新エリアへ。1.0の旧市街遺跡も。探索は新種子・新魚・新材料としてループに還元される。"]]}, {"en": "Vertical Farming: How It Actually Works", "heading": "垂直農場：実際の仕組み", "body": "横スクロール視点はギミックではない——農場システムそのもの。", "items": ["プラットフォームは自由に積める。登るほど建築可能面が増える。", "ジャンプと登攀で階層を行き来——プラットフォーミングも日常の一部。", "プランターをプラットフォームに置き、季節ごとに作物をまとめて植え替える。", "カバーか「雨露均等」遺伝子で露出した作物を守り、酸性雨による侵食リスクを抑える。", "ドローンの飛行経路用に垂直の隙間を残す——1.0の自動化には通路が必要。"]}, {"en": "Weather Effects & How to Respond", "heading": "天候の影響と対応", "body": "異常気象には、予報確認・作物保護・水やりで対応する。", "columns": ["天候", "影響", "対応"], "rows": [["酸性雨", "無防備な作物を侵食", "カバーを建てる。酸を製作資源として回収"], ["猛暑", "土を乾かし成長を遅らせる", "タイミング水やり。耐熱遺伝子品種"], ["雷雨", "落雷で電力を供給", "落雷で農場に充電（1.0自動化の鍵）"], ["豪雨", "雨による灌漑", "無料の灌漑に任せ、水やりの労力を節約"], ["乾季（4月）", "Harsh Dry Season で作物保護と水やりが必要", "4月前に作物保護と水やりを準備する"]]}, {"en": "First Week: The 5 Moves That Set Up the Run", "heading": "最初の1週間：ランを決める5つの行動", "body": "この順でやれば最初の季節は慌てずに済む。", "items": [["開始区画を完全に撤去", "隠れた隅のがらくたが最初のプランター資金になる。"], ["速成作物を先に植える", "早い収穫が道具と種子の資金になる。"], ["毎日全員と話す", "友好度でレシピ・テック・ストーリー解放。Blooming Friendship も。"], ["すぐ Bellad のクエストを開く", "クエスト報酬=テックポイント。初期の唯一の安定収入源。"], ["4月前に作物保護を準備開始", "Harsh Dry Season 前に作物保護と水やりを準備する。"]]}, {"en": "Common Mistakes New Players Make (Avoid These)", "heading": "初心者のよくある失敗（避けること）", "body": "コミュニティ報告で最も多いラン崩壊要因：毎日すべての作物を手で水やり（自動化か「雨露均等」遺伝子を使う）、移動経路を考えずにプラットフォームを配置する、友好度を無視（レシピがロックされる）、Bellad のクエストを放置（テックツリーで遅れる）、4月前に作物保護と水やりを準備しない。"}, {"en": "Drone Combat: Controls, Then Strategy", "heading": "ドローン戦闘：操作→戦略の順に", "body": "ドローンは武器であり生存ツール。操作を覚えてから出装を。", "items": ["RMB ロックオン / LMB 射撃 / Space 回避 / R リロード。", "序盤はシャーシ（生存）→バレル（火力）→バッテリー（持続）の順に強化。", "チャージビーム（F）で装甲 Scavenger Bugs の盾を破壊。通常弾は弾かれる。", "夜の廃墟探索前に武器・照明モジュールを装備。", "レア魚が高級パーツを落とす——釣りが戦闘を支える。"]}, {"en": "What the 1.0 Release Changes for New Players", "heading": "1.0で新規プレイヤーに変わること", "body": "2026年8月6日の1.0は序盤の体験を変える。", "items": [["2026-08-06", "1.0配信：完全なストーリー結末、旧市街遺跡、農業オートメーション、キノコ祭り、新実績37個。"], ["新規プレイヤー", "EAより早く自動化に到達できる——農場ドローン基地が雑務を代行。"], ["旧市街遺跡", "新地域：凶暴な新敵、新NPC、サブクエスト、資源。多くの道が通じる。"], ["⚠️ 検証中", "正確な解放順と建造費は1.0で検証中。⚠️ 付きはコミュニティ情報。"]]}, {"en": "Quick Answers for New Players", "heading": "新規プレイヤーのよくある質問", "items": [["ドロックタウンはシングルプレイ？", "はい。開発者は1.0をシングルプレイ体験と明言。co-op/マルチはコミュニティの反応次第で将来検討。"], ["毎日水やりが必要？", "最初は必要。ただし「雨露均等」遺伝子で周囲に自動潅水、1.0のドローン基地なら完全自動。"], ["どこでも建築できる？", "農場エリア内でプラットフォームを積む。旧市街遺跡（1.0）で新築エリアと資源。"], ["プレイ時間は？", "メイン30時間+。釣り・牧場・遺伝子・収集で100時間+。"], ["今買うべき？", "通常¥58、発売記念-20%（¥46.40）が2026年8月19日まで——入りやすい時期。"]]}]}, "friendship": {"sections": [{"en": "No Romance — Friendship Only", "heading": "公式：恋愛なし、友好のみ", "body": "開発者は恋愛・結婚システムがないことを明言。ソーシャルは友好ベース：贈り物・祭り・ハートイベント・個人ストーリー。恋愛ガイドは作らないこと。"}, {"en": "Known Villagers (Community-Sourced)", "heading": "既知の住民（コミュニティ情報）", "body": "プレイヤーが最も頻繁に報告する住民。完全な 1.0 リストは検証中。", "columns": ["住民", "役割 / メモ"], "rows": [["カシア", "商店街2階。友好MAXで Blooming Friendship 実績"], ["ギルドマスター Bellad", "クエストとテックポイント"], ["クマサン", "リバーバレーの徘徊NPC。希少素材の重要供給源 ⚠️"], ["その他", "⚠️ 完全リストは 1.0 で検証中"]]}, {"en": "How to Raise Friendship (A Routine)", "heading": "友好度の上げ方（日常ルーティン）", "body": "友好度は毎日のルーティンであり、作業ではない。", "items": [["毎日話す", "簡単・無料・すべてのハートの土台。"], ["贈り物", "住民ごとに好み——試して何が当たるか記録。"], ["クエスト達成", "友好と報酬が両方貯まる——1分あたり最良の投資。"], ["祭りに参加", "季節イベントで大きな友好ボーナス。1.0のキノコ祭りも新登場。"]]}, {"en": "What Friendship Unlocks", "heading": "友好度で解放されるもの", "body": "ハートは進行システムであり、飾りではない。", "items": ["友人ごとの固有レシピ（錬金ステーション等）。", "町の謎を深める個人ストーリーシーン。", "祭りの参加報酬。", "⚠️ 正確なハート閾値は 1.0 で検証中。"]}, {"en": "Common Mistakes", "heading": "よくある失敗", "body": "「遠いから」と一人の住民を無視すると、そのレシピが永久にロックされる。全員に同じ贈り物を渡すと好みを外し、贈り物を無駄にする。祭りを逃すのが最大の損失——カレンダーで最も価値の高い友好イベント。"}, {"en": "Quick Answers", "heading": "よくある質問", "items": [["ドロックタウンに恋愛はある？", "ありません。開発者が恋愛・結婚システムなしと明言。関係は友好ベースです。"], ["友好度は重要？", "重要です。レシピ・ストーリー・祭りコンテンツが解放されます。"], ["次の祭りはいつ？", "1.0 で季節の祭りに加えてキノコ祭りが追加。"]]}]}}
+JA_FULL = {"how-to-play": {"sections": [{"en": "The Five-Step Core Loop", "heading": "5ステップのコアループ", "body": "毎日のリズムは同じ。これを覚えれば荒廃地は農場になる。", "items": [["瓦礫を撤去する", "初期ツールで残骸と廃墟を壊す。撤去で建築スペースが開き、埋もれた資源が露出し、行動範囲が広がる。まず拠点に近い区画から。"], ["資源を採取する", "40種類以上の鉱物・植物・がらくた・機械部品を集める。がらくたは製作に、植物は料理に、鉱物はテックツリーに。毎日リスポーンする場所を覚えよう。"], ["垂直に農場を作る", "プランターを作りプラットフォームを積んで上へ建てる。垂直に積むと限られた空間を効率よく使い、作物を整理し、自動化の余地も残せる。天候対策と水やりは配置とは別に計画する。"], ["建築とアップグレード", "資源をテックツリー・設計図・建物・自宅に投資。テックポイントはギルドマスター Bellad のクエストから——常に1つ進行させておく。"], ["新地域を探索する", "強化した道具とドローンで新エリアへ。1.0の旧市街遺跡も。探索は新種子・新魚・新材料としてループに還元される。"]]}, {"en": "Vertical Farming: How It Actually Works", "heading": "垂直農場：実際の仕組み", "body": "横スクロール視点はギミックではない——農場システムそのもの。", "items": ["プラットフォームは自由に積める。登るほど建築可能面が増える。", "ジャンプと登攀で階層を行き来——プラットフォーミングも日常の一部。", "プランターをプラットフォームに置き、季節ごとに作物をまとめて植え替える。", "カバーか「雨露均等」遺伝子で露出した作物を守り、酸性雨による侵食リスクを抑える。", "ドローンの飛行経路用に垂直の隙間を残す——1.0の自動化には通路が必要。"]}, {"en": "Weather Effects & How to Respond", "heading": "天候の影響と対応", "body": "異常気象には、予報確認・作物保護・水やりで対応する。", "columns": ["天候", "影響", "対応"], "rows": [["酸性雨", "無防備な作物を侵食", "カバーを建てる。酸を製作資源として回収"], ["猛暑", "土を乾かし成長を遅らせる", "タイミング水やり。耐熱遺伝子品種"], ["雷雨", "落雷で電力を供給", "落雷で農場に充電（1.0自動化の鍵）"], ["豪雨", "雨による灌漑", "無料の灌漑に任せ、水やりの労力を節約"], ["乾季（4月）", "Harsh Dry Season で作物保護と水やりが必要", "4月前に作物保護と水やりを準備する"]]}, {"en": "First Week: The 5 Moves That Set Up the Run", "heading": "最初の1週間：ランを決める5つの行動", "body": "この順でやれば最初の季節は慌てずに済む。", "items": [["開始区画を完全に撤去", "隠れた隅のがらくたが最初のプランター資金になる。"], ["速成作物を先に植える", "早い収穫が道具と種子の資金になる。"], ["毎日全員と話す", "友好度でレシピ・テック・ストーリー解放。Blooming Friendship も。"], ["すぐ Bellad のクエストを開く", "クエスト報酬=テックポイント。初期の唯一の安定収入源。"], ["4月前に作物保護を準備開始", "Harsh Dry Season 前に作物保護と水やりを準備する。"]]}, {"en": "Common Mistakes New Players Make (Avoid These)", "heading": "初心者のよくある失敗（避けること）", "body": "自分のセーブで確認したい一般的な失敗：利用できる遺伝子や自動作業があるのに全作物へ手作業で水やりする、移動経路を塞ぐ、友好度を無視する、Bellad のクエストを放置する、4月前に作物保護と水やりを準備しない。"}, {"en": "Drone Combat: Controls, Then Strategy", "heading": "ドローン戦闘：操作→戦略の順に", "body": "ドローンは武器であり生存ツール。操作を覚えてから出装を。", "items": ["RMB ロックオン / LMB 射撃 / Space 回避 / R リロード。", "序盤はシャーシ（生存）→バレル（火力）→バッテリー（持続）の順に強化。", "チャージビーム（F）で装甲 Scavenger Bugs の盾を破壊。通常弾は弾かれる。", "夜の廃墟探索前に武器・照明モジュールを装備。", "パーツを使う前に現在のセーブでモジュール要件を確認する。"]}, {"en": "What the 1.0 Release Changes for New Players", "heading": "1.0で新規プレイヤーに変わること", "body": "2026年8月6日の1.0は序盤の体験を変える。", "items": [["2026-08-06", "1.0配信：完全なストーリー結末、旧市街遺跡、農業オートメーション、キノコ祭り、新実績37個。"], ["新規プレイヤー", "公式 1.0 情報は農業オートメーションと農場ドローン基地を追加。"], ["旧市街遺跡", "新地域：凶暴な新敵、新NPC、サブクエスト、資源。多くの道が通じる。"], ["⚠️ 検証中", "現在のゲーム内タスクと公式発表を確認し、本ガイドは解放順を推測しない。"]]}, {"en": "Quick Answers for New Players", "heading": "新規プレイヤーのよくある質問", "items": [["ドロックタウンはシングルプレイ？", "はい。開発者は1.0をシングルプレイ体験と明言。co-op/マルチはコミュニティの反応次第で将来検討。"], ["毎日水やりが必要？", "最初は必要。ただし「雨露均等」遺伝子で周囲に自動潅水、1.0のドローン基地なら完全自動。"], ["どこでも建築できる？", "農場エリア内でプラットフォームを積む。旧市街遺跡（1.0）で新築エリアと資源。"], ["プレイ時間は？", "メイン30時間+。釣り・牧場・遺伝子・収集で100時間+。"], ["今買うべき？", "通常¥58、発売記念-20%（¥46.40）が2026年8月19日まで——入りやすい時期。"]]}]}, "friendship": {"sections": [{"en": "No Romance — Friendship Only", "heading": "公式：恋愛なし、友好のみ", "body": "開発者は恋愛・結婚システムがないことを明言。ソーシャルは友好ベース：贈り物・祭り・ハートイベント・個人ストーリー。恋愛ガイドは作らないこと。"}, {"en": "Known Villagers (Community-Sourced)", "heading": "既知の住民（コミュニティ情報）", "body": "プレイヤーが最も頻繁に報告する住民。完全な 1.0 リストは検証中。", "columns": ["住民", "役割 / メモ"], "rows": [["カシア", "商店街2階。友好MAXで Blooming Friendship 実績"], ["ギルドマスター Bellad", "クエストとテックポイント"], ["クマサン", "リバーバレーの徘徊NPC。希少素材の重要供給源 ⚠️"], ["その他", "⚠️ 完全リストは 1.0 で検証中"]]}, {"en": "How to Raise Friendship (A Routine)", "heading": "友好度の上げ方（日常ルーティン）", "body": "友好度は毎日のルーティンであり、作業ではない。", "items": [["毎日話す", "簡単・無料・すべてのハートの土台。"], ["贈り物", "住民ごとに好み——試して何が当たるか記録。"], ["クエスト達成", "友好と報酬が両方貯まる——1分あたり最良の投資。"], ["祭りに参加", "季節イベントで大きな友好ボーナス。1.0のキノコ祭りも新登場。"]]}, {"en": "What Friendship Unlocks", "heading": "友好度で解放されるもの", "body": "ハートは進行システムであり、飾りではない。", "items": ["友人ごとの固有レシピ（錬金ステーション等）。", "町の謎を深める個人ストーリーシーン。", "祭りの参加報酬。", "⚠️ 正確なハート閾値は 1.0 で検証中。"]}, {"en": "Common Mistakes", "heading": "よくある失敗", "body": "「遠いから」と一人の住民を無視すると、そのレシピが永久にロックされる。全員に同じ贈り物を渡すと好みを外し、贈り物を無駄にする。祭りを逃すのが最大の損失——カレンダーで最も価値の高い友好イベント。"}, {"en": "Quick Answers", "heading": "よくある質問", "items": [["ドロックタウンに恋愛はある？", "ありません。開発者が恋愛・結婚システムなしと明言。関係は友好ベースです。"], ["友好度は重要？", "重要です。レシピ・ストーリー・祭りコンテンツが解放されます。"], ["次の祭りはいつ？", "1.0 で季節の祭りに加えてキノコ祭りが追加。"]]}]}}
 for _slug, _sup in JA_FULL.items():
     _base = JA.setdefault(_slug, {})
     # 完全替换 sections（旧结构不混用）
@@ -1609,7 +1609,7 @@ for _slug, _sup in JA_FULL.items():
 
 apply_lang("ja", JA)
 # ---- KO_SUP (en-heading aligned) ----
-KO_SUP = {"how-to-play": {"sections": [{"en": "Common Mistakes New Players Make (Avoid These)", "heading": "초보자의 흔한 실수 (피해야 할 것)", "body": "커뮤니티가 보고한 가장 흔한 런 파괴 요인: 매일 모든 작물에 손으로 물주기(자동화나 '고루 내리는 비' 유전자 사용), 노출된 작물을 보호하지 않기(극한 날씨에 취약), 우정 무시(레시피가 영구히 잠김), Bellad 퀘스트 방치(테크 트리에서 뒤처짐), 4월 전에 작물 보호와 물주기를 준비하지 않아 작물이 시드는 것."}]}, "automation": {"sections": [{"en": "Common Automation Mistakes", "heading": "자동화의 흔한 실수", "body": "전력이 안정되기 전에 기지를 서두르지 마세요——반나절 놀고 있는 기지는 시스템의 의미를 없앱니다. 첫 자동화는 유일한 수입 작물이 아니라 저가 필러 작물로 시스템을 배우세요. 플랫폼을 쌓을 때 드론 비행 경로를 남겨두지 않으면 드론이 구획에 도달하지 못합니다."}, {"en": "Why This Page Matters", "heading": "이 페이지가 중요한 이유", "body": "돌록 타운 자동화에 대한 영어 가이드는 거의 없습니다——대부분 EA 기초에서 멈춰 있습니다. 이 페이지는 최초의 1.0 전용 자동화 영어 자료 중 하나입니다. ⚠️ 표시된 세부 사항은 직접 검증 후 업데이트됩니다."}]}, "friendship": {"sections": [{"en": "Common Mistakes", "heading": "흔한 실수", "body": "'멀다'는 이유로 한 주민을 무시하면 그 사람의 레시피가 영구히 잠깁니다. 모두에게 같은 선물을 주면 취향을 놓치고 선물을 낭비합니다. 축제를 놓치는 것이 가장 큰 손실——달력에서 가장 가치 높은 우정 이벤트입니다."}]}, "cooking": {"sections": [{"en": "Common Mistakes", "heading": "흔한 실수", "body": "수확물을 전부 팔아 레시피용 재료를 남기지 않는 것. 우정 게이트 레시피를 무시하는 것(최고의 버프는 우정 뒤에 있음). 체력 요리만 만드는 것——속도와 방어 버프는 단순 칼로리보다 시간을 절약합니다."}]}, "update-log": {"sections": [{"en": "Why Track Updates", "heading": "업데이트를 추적하는 이유", "body": "게임이 언제 바뀌었는지 알면 현재 유효한 공략을 찾고 시대에 뒤떨어진 조언을 피할 수 있습니다——대부분의 영어 공략은 EA 상태 그대로입니다. 날짜가 있는 Steam 공식 공지를 원문으로 확인하세요."}]}}
+KO_SUP = {"how-to-play": {"sections": [{"en": "Common Mistakes New Players Make (Avoid These)", "heading": "초보자의 흔한 실수 (피해야 할 것)", "body": "현재 세이브에서 확인할 일반적인 실수: 사용할 수 있는 유전자나 자동 작업이 있는데도 모든 작물에 손으로 물주기, 작물 보호와 이동 경로를 확인하지 않기, 우정과 Bellad 퀘스트를 건너뛰기, 4월 전에 작물 보호와 물주기를 준비하지 않기."}]}, "automation": {"sections": [{"en": "Common Automation Mistakes", "heading": "자동화의 흔한 실수", "body": "현재 게임 작업과 재료를 확인하고 저장한 뒤 기존 배치를 바꾸세요. 1.00.03은 특정 상황의 드론 실패를 알려진 문제로 열거합니다."}, {"en": "Why This Page Matters", "heading": "이 페이지가 중요한 이유", "body": "이 페이지는 공식 1.0과 1.00.03 자료를 주제별로 정리하며 고정된 진행을 추론하지 않습니다. 업데이트 후 링크된 Steam 공식 공지를 확인하세요."}]}, "friendship": {"sections": [{"en": "Common Mistakes", "heading": "흔한 실수", "body": "'멀다'는 이유로 한 주민을 무시하면 그 사람의 레시피가 영구히 잠깁니다. 모두에게 같은 선물을 주면 취향을 놓치고 선물을 낭비합니다. 축제를 놓치는 것이 가장 큰 손실——달력에서 가장 가치 높은 우정 이벤트입니다."}]}, "cooking": {"sections": [{"en": "Common Mistakes", "heading": "흔한 실수", "body": "수확물을 전부 팔아 레시피용 재료를 남기지 않는 것. 우정 게이트 레시피를 무시하는 것(최고의 버프는 우정 뒤에 있음). 체력 요리만 만드는 것——속도와 방어 버프는 단순 칼로리보다 시간을 절약합니다."}]}, "update-log": {"sections": [{"en": "Why Track Updates", "heading": "업데이트를 추적하는 이유", "body": "게임이 언제 바뀌었는지 알면 현재 유효한 공략을 찾고 시대에 뒤떨어진 조언을 피할 수 있습니다——대부분의 영어 공략은 EA 상태 그대로입니다. 날짜가 있는 Steam 공식 공지를 원문으로 확인하세요."}]}}
 for _slug, _sup in KO_SUP.items():
     _base = KO.setdefault(_slug, {})
     _secs = _base.setdefault("sections", [])
@@ -1622,13 +1622,13 @@ for _slug, _sup in KO_SUP.items():
     _base["sections"] = _kept + list(_en_map.values())
 
 # ---- KO_FULL (full replacement) ----
-KO_FULL = {"how-to-play": {"sections": [{"en": "The Five-Step Core Loop", "heading": "5단계 핵심 순환", "body": "모든 게임일의 리듬은 같습니다. 이것만 익히면 황무지가 농장이 됩니다.", "items": [["잔해 치우기", "초기 도구로 잔해와 버려진 건물을 부숩니다. 치우면 건설 공간이 열리고 묻힌 자원이 드러나며 활동 범위가 넓어집니다. 기지에서 가장 가까운 구획부터 우선하세요."], ["자원 수집", "40종 이상의 광물·식물·고철·기계 부품을 모읍니다. 고철은 제작에, 식물은 요리에, 광물은 테크 트리에 쓰입니다. 매일 리스폰되는 곳을 익히세요."], ["수직 농사", "화분을 만들어 플랫폼을 쌓아 위로 짓습니다. 수직 층은 한정된 공간을 효율적으로 쓰고 작물을 나눠 관리하는 데 유리합니다. 덮개와 물주기를 계획하고 나중에 자동화도 추가할 수 있습니다."], ["건설과 업그레이드", "자원을 테크 트리·설계도·건물·집에 투자합니다. 테크 포인트는 길드마스터 Bellad의 퀘스트에서——항상 퀘스트 하나는 진행 중으로 두세요."], ["새 지역 탐험", "강화된 도구와 드론으로 새 지역에 갑니다. 1.0의 구시가지 유적도. 탐험은 새 씨앗·물고기·재료로 순환에 되먹임됩니다."]]}, {"en": "Vertical Farming: How It Actually Works", "heading": "수직 농장: 실제 작동 방식", "body": "횡스크롤 시점은 장식이 아닙니다——바로 농장 시스템 전체입니다.", "items": ["플랫폼은 자유롭게 쌓을 수 있고, 오를수록 건설 가능 면이 늘어납니다.", "층 사이를 점프·등반하며 오갑니다——플랫포밍도 일상의 일부입니다.", "화분은 플랫폼 위에 둡니다. 계절별로 작물을 모아 한 번에 다시 심습니다.", "덮개나 '고루 내리는 비' 유전자로 노출된 작물을 보호하고 산성비의 침식 위험을 줄입니다.", "드론 비행 경로용 수직 틈을 남기세요——1.0 자동화에는 통로가 필요합니다."]}, {"en": "Weather Effects & How to Respond", "heading": "날씨 영향과 대응", "body": "극한 날씨에는 예보 확인, 작물 보호, 물주기로 대응합니다.", "columns": ["날씨", "영향", "대응"], "rows": [["산성비", "덮지 않은 작물을 침식", "덮개 설치. 산을 제작 자원으로 수집"], ["폭염", "흙을 말리고 성장을 늦춤", "타이밍 물주기. 내열 유전자 품종"], ["뇌우", "번개 전력 제공", "번개로 농장 충전 (1.0 자동화의 핵심)"], ["폭우", "빗물 관개 제공", "무료 관개에 맡기고 물주기 노력 절약"], ["가뭄(4월)", "작물 시들고 작물 부담 증가", "4월 전에 작물을 보호하고 물주기를 계획"]]}, {"en": "First Week: The 5 Moves That Set Up the Run", "heading": "첫 주: 런을 결정하는 5가지 행동", "body": "이 순서대로 하면 첫 계절이 허둥대지 않습니다.", "items": [["시작 구획을 완전히 치우기", "숨은 구석의 고철이 첫 화분 자금이 됩니다."], ["속성 작물부터 심기", "빠른 수확이 도구와 씨앗 자금이 됩니다."], ["매일 모두와 대화", "우정으로 레시피·테크·스토리 해금. Blooming Friendship도."], ["바로 Bellad 퀘스트 열기", "퀘스트 보상=테크 포인트. 초기 유일한 안정적 테크 수입."], ["4월 전에 작물 보호 준비 시작", "4월 전에 작물 보호와 물주기를 준비하면 피해를 줄일 수 있습니다."]]}, {"en": "Common Mistakes New Players Make (Avoid These)", "heading": "초보자의 흔한 실수 (피해야 할 것)", "body": "커뮤니티가 보고한 가장 흔한 런 파괴 요인: 매일 모든 작물에 손으로 물주기(자동화나 '고루 내리는 비' 유전자 사용), 노출된 작물을 보호하지 않기(극한 날씨에 취약), 우정 무시(레시피가 영구히 잠김), Bellad 퀘스트 방치(테크 트리에서 뒤처짐), 4월 전에 작물 보호와 물주기를 준비하지 않아 작물이 시드는 것."}, {"en": "Drone Combat: Controls, Then Strategy", "heading": "드론 전투: 조작 → 전략 순서로", "body": "드론은 무기이자 생존 도구입니다. 조작을 익힌 뒤 빌드를 갖추세요.", "items": ["RMB 조준 / LMB 사격 / Space 회피 / R 재장전.", "초반은 샤시(생존)→총열(화력)→배터리(지속) 순으로 강화.", "차지 빔(F)으로 장갑 Scavenger Bugs의 방패를 깨세요. 일반탄은 튕깁니다.", "밤 유적 탐험 전에 무기·조명 모듈을 장착하세요.", "희귀어가 고급 부품을 줍니다——낚시가 전투를 뒷받침합니다."]}, {"en": "What the 1.0 Release Changes for New Players", "heading": "1.0이 새 플레이어에게 주는 변화", "body": "2026년 8월 6일의 1.0은 초반 경험을 바꿉니다.", "items": [["2026-08-06", "1.0 출시: 완전한 스토리 결말, 구시가지 유적, 농업 자동화, 버섯 축제, 신규 업적 37개."], ["새 플레이어", "EA보다 일찍 자동화에 도달——농장 드론 기지가 잡일을 대신."], ["구시가지 유적", "새 지역: 강한 적, 새 NPC, 사이드 퀘스트, 자원. 많은 길이 통합니다."], ["⚠️ 검증 중", "정확한 해금 순서와 건설 비용은 1.0에서 검증 중. ⚠️ 표시는 커뮤니티 정보."]]}, {"en": "Quick Answers for New Players", "heading": "새 플레이어 빠른 답변", "items": [["돌록 타운은 싱글 플레이인가요?", "네. 개발사는 1.0이 싱글 플레이 경험이라고 밝혔습니다. co-op/멀티는 커뮤니티 피드백에 따라 추후 논의될 수 있습니다."], ["매일 물을 줘야 하나요?", "처음엔 네. '고루 내리는 비' 유전자가 주변에 자동 관수하고, 1.0 드론 기지가 완전히 대신합니다."], ["아무 데나 지을 수 있나요?", "농장 구역 안에서 플랫폼을 쌓습니다. 구시가지 유적(1.0)이 새 건설 구역과 자원을 추가합니다."], ["게임 분량은?", "메인 30시간+. 낚시·목장·유전자·수집 포함 100시간+."], ["지금 사도 되나요?", "정상가 ¥58, 출시 -20%(¥46.40)가 2026년 8월 19일까지——좋은 진입 시점입니다."]]}]}, "friendship": {"sections": [{"en": "No Romance — Friendship Only", "heading": "공식: 연애 없음, 우정만", "body": "개발사는 연애/결혼 시스템이 없음을 확인했습니다. 소셜은 우정 기반: 선물·축제·하트 이벤트·개인 스토리. 연애 가이드는 만들지 마세요."}, {"en": "Known Villagers (Community-Sourced)", "heading": "알려진 주민 (커뮤니티 정보)", "body": "플레이어들이 가장 자주 보고하는 주민입니다. 완전한 1.0 목록은 검증 중.", "columns": ["주민", "역할 / 메모"], "rows": [["카시아", "상가 2층. 호감 MAX 시 Blooming Friendship 업적"], ["길드마스터 Bellad", "퀘스트와 테크 포인트"], ["쿠마상", "리버 밸리 배회 NPC. 희귀 재료 핵심 공급원 ⚠️"], ["+더 있음", "⚠️ 전체 주민 목록 1.0에서 검증 중"]]}, {"en": "How to Raise Friendship (A Routine)", "heading": "우정 올리는 법 (일상 루틴)", "body": "우정은 매일의 루틴이지 노동이 아닙니다.", "items": [["매일 대화", "간단·무료·모든 하트의 기초."], ["선물", "주민마다 취향이 다릅니다——시도하고 뭐가 잘 맞는지 기록."], ["퀘스트 완료", "우정과 보상이 모두 쌓입니다——분당 최고의 투자."], ["축제 참여", "계절 이벤트로 큰 우정 보너스. 1.0의 버섯 축제도 새로."]]}, {"en": "What Friendship Unlocks", "heading": "우정으로 해금되는 것", "body": "하트는 장식이 아니라 성장 시스템입니다.", "items": ["친구별 고유 레시피 (연금 스테이션 등).", "마을의 수수께끼를 깊게 하는 개인 스토리 장면.", "축제 참여 보상.", "⚠️ 정확한 하트 임계값은 1.0에서 검증 중입니다."]}, {"en": "Common Mistakes", "heading": "흔한 실수", "body": "'멀다'는 이유로 한 주민을 무시하면 그 사람의 레시피가 영구히 잠깁니다. 모두에게 같은 선물을 주면 취향을 놓치고 선물을 낭비합니다. 축제를 놓치는 것이 가장 큰 손실——달력에서 가장 가치 높은 우정 이벤트입니다."}, {"en": "Quick Answers", "heading": "빠른 답변", "items": [["돌록 타운에 연애가 있나요?", "없습니다. 개발사가 연애/결혼 시스템 없음을 확인했습니다. 관계는 우정 기반입니다."], ["우정이 중요한가요?", "네——친구가 레시피·스토리·축제 콘텐츠를 해금합니다."], ["다음 축제는 언제?", "1.0에서 계절 축제에 더해 버섯 축제가 추가됩니다."]]}]}}
+KO_FULL = {"how-to-play": {"sections": [{"en": "The Five-Step Core Loop", "heading": "5단계 핵심 순환", "body": "모든 게임일의 리듬은 같습니다. 이것만 익히면 황무지가 농장이 됩니다.", "items": [["잔해 치우기", "초기 도구로 잔해와 버려진 건물을 부숩니다. 치우면 건설 공간이 열리고 묻힌 자원이 드러나며 활동 범위가 넓어집니다. 기지에서 가장 가까운 구획부터 우선하세요."], ["자원 수집", "40종 이상의 광물·식물·고철·기계 부품을 모읍니다. 고철은 제작에, 식물은 요리에, 광물은 테크 트리에 쓰입니다. 매일 리스폰되는 곳을 익히세요."], ["수직 농사", "화분을 만들어 플랫폼을 쌓아 위로 짓습니다. 수직 층은 한정된 공간을 효율적으로 쓰고 작물을 나눠 관리하는 데 유리합니다. 덮개와 물주기를 계획하고 나중에 자동화도 추가할 수 있습니다."], ["건설과 업그레이드", "자원을 테크 트리·설계도·건물·집에 투자합니다. 테크 포인트는 길드마스터 Bellad의 퀘스트에서——항상 퀘스트 하나는 진행 중으로 두세요."], ["새 지역 탐험", "강화된 도구와 드론으로 새 지역에 갑니다. 1.0의 구시가지 유적도. 탐험은 새 씨앗·물고기·재료로 순환에 되먹임됩니다."]]}, {"en": "Vertical Farming: How It Actually Works", "heading": "수직 농장: 실제 작동 방식", "body": "횡스크롤 시점은 장식이 아닙니다——바로 농장 시스템 전체입니다.", "items": ["플랫폼은 자유롭게 쌓을 수 있고, 오를수록 건설 가능 면이 늘어납니다.", "층 사이를 점프·등반하며 오갑니다——플랫포밍도 일상의 일부입니다.", "화분은 플랫폼 위에 둡니다. 계절별로 작물을 모아 한 번에 다시 심습니다.", "덮개나 '고루 내리는 비' 유전자로 노출된 작물을 보호하고 산성비의 침식 위험을 줄입니다.", "드론 비행 경로용 수직 틈을 남기세요——1.0 자동화에는 통로가 필요합니다."]}, {"en": "Weather Effects & How to Respond", "heading": "날씨 영향과 대응", "body": "극한 날씨에는 예보 확인, 작물 보호, 물주기로 대응합니다.", "columns": ["날씨", "영향", "대응"], "rows": [["산성비", "덮지 않은 작물을 침식", "덮개 설치. 산을 제작 자원으로 수집"], ["폭염", "흙을 말리고 성장을 늦춤", "타이밍 물주기. 내열 유전자 품종"], ["뇌우", "번개 전력 제공", "번개로 농장 충전 (1.0 자동화의 핵심)"], ["폭우", "빗물 관개 제공", "무료 관개에 맡기고 물주기 노력 절약"], ["가뭄(4월)", "작물 시들고 작물 부담 증가", "4월 전에 작물을 보호하고 물주기를 계획"]]}, {"en": "First Week: The 5 Moves That Set Up the Run", "heading": "첫 주: 런을 결정하는 5가지 행동", "body": "이 순서대로 하면 첫 계절이 허둥대지 않습니다.", "items": [["시작 구획을 완전히 치우기", "숨은 구석의 고철이 첫 화분 자금이 됩니다."], ["속성 작물부터 심기", "빠른 수확이 도구와 씨앗 자금이 됩니다."], ["매일 모두와 대화", "우정으로 레시피·테크·스토리 해금. Blooming Friendship도."], ["바로 Bellad 퀘스트 열기", "퀘스트 보상=테크 포인트. 초기 유일한 안정적 테크 수입."], ["4월 전에 작물 보호 준비 시작", "4월 전에 작물 보호와 물주기를 준비하면 피해를 줄일 수 있습니다."]]}, {"en": "Common Mistakes New Players Make (Avoid These)", "heading": "초보자의 흔한 실수 (피해야 할 것)", "body": "현재 세이브에서 확인할 일반적인 실수: 사용할 수 있는 유전자나 자동 작업이 있는데도 모든 작물에 손으로 물주기, 작물 보호와 이동 경로를 확인하지 않기, 우정과 Bellad 퀘스트를 건너뛰기, 4월 전에 작물 보호와 물주기를 준비하지 않기."}, {"en": "Drone Combat: Controls, Then Strategy", "heading": "드론 전투: 조작 → 전략 순서로", "body": "드론은 무기이자 생존 도구입니다. 조작을 익힌 뒤 빌드를 갖추세요.", "items": ["RMB 조준 / LMB 사격 / Space 회피 / R 재장전.", "초반은 샤시(생존)→총열(화력)→배터리(지속) 순으로 강화.", "차지 빔(F)으로 장갑 Scavenger Bugs의 방패를 깨세요. 일반탄은 튕깁니다.", "밤 유적 탐험 전에 무기·조명 모듈을 장착하세요.", "부품을 쓰기 전에 현재 세이브의 모듈 요구 사항을 확인합니다."]}, {"en": "What the 1.0 Release Changes for New Players", "heading": "1.0이 새 플레이어에게 주는 변화", "body": "2026년 8월 6일의 1.0은 초반 경험을 바꿉니다.", "items": [["2026-08-06", "1.0 출시: 완전한 스토리 결말, 구시가지 유적, 농업 자동화, 버섯 축제, 신규 업적 37개."], ["새 플레이어", "공식 1.0 자료는 농업 자동화와 농장 드론 기지를 추가합니다."], ["구시가지 유적", "새 지역: 강한 적, 새 NPC, 사이드 퀘스트, 자원. 많은 길이 통합니다."], ["⚠️ 검증 중", "현재 게임 작업과 공식 공지를 확인하며 이 가이드는 해금 순서를 추론하지 않습니다."]]}, {"en": "Quick Answers for New Players", "heading": "새 플레이어 빠른 답변", "items": [["돌록 타운은 싱글 플레이인가요?", "네. 개발사는 1.0이 싱글 플레이 경험이라고 밝혔습니다. co-op/멀티는 커뮤니티 피드백에 따라 추후 논의될 수 있습니다."], ["매일 물을 줘야 하나요?", "처음엔 네. '고루 내리는 비' 유전자가 주변에 자동 관수하고, 1.0 드론 기지가 완전히 대신합니다."], ["아무 데나 지을 수 있나요?", "농장 구역 안에서 플랫폼을 쌓습니다. 구시가지 유적(1.0)이 새 건설 구역과 자원을 추가합니다."], ["게임 분량은?", "메인 30시간+. 낚시·목장·유전자·수집 포함 100시간+."], ["지금 사도 되나요?", "정상가 ¥58, 출시 -20%(¥46.40)가 2026년 8월 19일까지——좋은 진입 시점입니다."]]}]}, "friendship": {"sections": [{"en": "No Romance — Friendship Only", "heading": "공식: 연애 없음, 우정만", "body": "개발사는 연애/결혼 시스템이 없음을 확인했습니다. 소셜은 우정 기반: 선물·축제·하트 이벤트·개인 스토리. 연애 가이드는 만들지 마세요."}, {"en": "Known Villagers (Community-Sourced)", "heading": "알려진 주민 (커뮤니티 정보)", "body": "플레이어들이 가장 자주 보고하는 주민입니다. 완전한 1.0 목록은 검증 중.", "columns": ["주민", "역할 / 메모"], "rows": [["카시아", "상가 2층. 호감 MAX 시 Blooming Friendship 업적"], ["길드마스터 Bellad", "퀘스트와 테크 포인트"], ["쿠마상", "리버 밸리 배회 NPC. 희귀 재료 핵심 공급원 ⚠️"], ["+더 있음", "⚠️ 전체 주민 목록 1.0에서 검증 중"]]}, {"en": "How to Raise Friendship (A Routine)", "heading": "우정 올리는 법 (일상 루틴)", "body": "우정은 매일의 루틴이지 노동이 아닙니다.", "items": [["매일 대화", "간단·무료·모든 하트의 기초."], ["선물", "주민마다 취향이 다릅니다——시도하고 뭐가 잘 맞는지 기록."], ["퀘스트 완료", "우정과 보상이 모두 쌓입니다——분당 최고의 투자."], ["축제 참여", "계절 이벤트로 큰 우정 보너스. 1.0의 버섯 축제도 새로."]]}, {"en": "What Friendship Unlocks", "heading": "우정으로 해금되는 것", "body": "하트는 장식이 아니라 성장 시스템입니다.", "items": ["친구별 고유 레시피 (연금 스테이션 등).", "마을의 수수께끼를 깊게 하는 개인 스토리 장면.", "축제 참여 보상.", "⚠️ 정확한 하트 임계값은 1.0에서 검증 중입니다."]}, {"en": "Common Mistakes", "heading": "흔한 실수", "body": "'멀다'는 이유로 한 주민을 무시하면 그 사람의 레시피가 영구히 잠깁니다. 모두에게 같은 선물을 주면 취향을 놓치고 선물을 낭비합니다. 축제를 놓치는 것이 가장 큰 손실——달력에서 가장 가치 높은 우정 이벤트입니다."}, {"en": "Quick Answers", "heading": "빠른 답변", "items": [["돌록 타운에 연애가 있나요?", "없습니다. 개발사가 연애/결혼 시스템 없음을 확인했습니다. 관계는 우정 기반입니다."], ["우정이 중요한가요?", "네——친구가 레시피·스토리·축제 콘텐츠를 해금합니다."], ["다음 축제는 언제?", "1.0에서 계절 축제에 더해 버섯 축제가 추가됩니다."]]}]}}
 for _slug, _sup in KO_FULL.items():
     KO.setdefault(_slug, {})["sections"] = _sup.get("sections", [])
 
 apply_lang("ko", KO)
 # ---- ES_SUP (en-heading aligned) ----
-ES_SUP = {"how-to-play": {"sections": [{"en": "Common Mistakes New Players Make (Avoid These)", "heading": "Errores comunes de los novatos (evítalos)", "body": "Los finales de partida más comunes según la comunidad: regar a mano todos los cultivos cada día (usa la automatización o el gen Lluvia), construir sin dejar rutas de acceso, ignorar la amistad (te bloquea recetas), saltarte las misiones de Bellad (te atrasas en el árbol tecnológico) y no proteger los cultivos ni planificar el riego antes del mes 4."}]}, "automation": {"sections": [{"en": "Common Automation Mistakes", "heading": "Errores comunes de automatización", "body": "No construyas estaciones antes de tener energía estable: una estación que está ociosa medio día anula el propósito. No automatices tu único cultivo de ingresos primero; automatiza un cultivo de relleno barato para aprender sin riesgo. Y deja carriles claros para los drones al construir plataformas, o no podrán llegar a sus parcelas."}, {"en": "Why This Page Matters", "heading": "Por qué importa esta página", "body": "Las guías en inglés sobre la automatización de Doloc Town son casi inexistentes: la mayoría se queda en lo básico del Early Access. Esta es una de las primeras referencias en inglés específicas del 1.0. Los detalles marcados ⚠️ se actualizarán tras la verificación práctica."}]}, "friendship": {"sections": [{"en": "Common Mistakes", "heading": "Errores comunes", "body": "Ignorar a un vecino 'porque está lejos' te bloquea sus recetas. Dar el mismo regalo a todos falla las preferencias y desperdicia regalos. Perderse festivales es la mayor pérdida: son los eventos de amistad de mayor valor del calendario."}]}, "cooking": {"sections": [{"en": "Common Mistakes", "heading": "Errores comunes", "body": "Vender toda la cosecha en vez de guardar ingredientes para recetas. Ignorar las recetas con requisito de amistad (los mejores buffs están tras corazones). Y cocinar solo comidas de energía: los buffs de velocidad y defensa ahorran más tiempo que las calorías."}]}, "update-log": {"sections": [{"en": "Why Track Updates", "heading": "Por qué seguir las actualizaciones", "body": "Saber cuándo cambió el juego te ayuda a encontrar guías vigentes y evitar consejos desactualizados: la mayoría de las guías en inglés siguen describiendo el Early Access. Consulta los anuncios oficiales de Steam con fecha como fuente."}]}}
+ES_SUP = {"how-to-play": {"sections": [{"en": "Common Mistakes New Players Make (Avoid These)", "heading": "Errores comunes de los novatos (evítalos)", "body": "Errores generales que conviene revisar en tu partida: regar a mano todos los cultivos cuando hay un gen o una tarea automática disponible, bloquear tus rutas, ignorar la amistad, saltarte las misiones de Bellad y no proteger los cultivos ni planificar el riego antes del mes 4."}]}, "automation": {"sections": [{"en": "Common Automation Mistakes", "heading": "Errores comunes de automatización", "body": "Comprueba las tareas y los materiales actuales, guarda y después cambia la distribución. 1.00.03 enumera fallos de drones en determinadas situaciones."}, {"en": "Why This Page Matters", "heading": "Por qué importa esta página", "body": "Esta página agrupa por temas información oficial de 1.0 y 1.00.03 sin inferir un progreso fijo. Revisa los anuncios oficiales de Steam enlazados después de cada actualización."}]}, "friendship": {"sections": [{"en": "Common Mistakes", "heading": "Errores comunes", "body": "Ignorar a un vecino 'porque está lejos' te bloquea sus recetas. Dar el mismo regalo a todos falla las preferencias y desperdicia regalos. Perderse festivales es la mayor pérdida: son los eventos de amistad de mayor valor del calendario."}]}, "cooking": {"sections": [{"en": "Common Mistakes", "heading": "Errores comunes", "body": "Vender toda la cosecha en vez de guardar ingredientes para recetas. Ignorar las recetas con requisito de amistad (los mejores buffs están tras corazones). Y cocinar solo comidas de energía: los buffs de velocidad y defensa ahorran más tiempo que las calorías."}]}, "update-log": {"sections": [{"en": "Why Track Updates", "heading": "Por qué seguir las actualizaciones", "body": "Saber cuándo cambió el juego te ayuda a encontrar guías vigentes y evitar consejos desactualizados: la mayoría de las guías en inglés siguen describiendo el Early Access. Consulta los anuncios oficiales de Steam con fecha como fuente."}]}}
 for _slug, _sup in ES_SUP.items():
     _base = ES.setdefault(_slug, {})
     _secs = _base.setdefault("sections", [])
@@ -1641,7 +1641,7 @@ for _slug, _sup in ES_SUP.items():
     _base["sections"] = _kept + list(_en_map.values())
 
 # ---- ES_FULL (full replacement) ----
-ES_FULL = {"how-to-play": {"sections": [{"en": "The Five-Step Core Loop", "heading": "El ciclo principal en 5 pasos", "body": "Cada sesión sigue el mismo ritmo. Domínalo y el páramo se convertirá en tu granja.", "items": [["Limpia las ruinas", "Rompe escombros y estructuras con tus herramientas iniciales. Limpiar abre espacio de construcción, revela recursos enterrados y amplía tu alcance. Prioriza las parcelas más cercanas a tu base."], ["Recolecta recursos", "Consigue más de 40 minerales, plantas, chatarra y piezas. La chatarra alimenta la creación, las plantas la cocina y los minerales el árbol tecnológico. Aprende qué puntos reaparecen a diario."], ["Cultiva en vertical", "Crea maceteros y apila plataformas para construir hacia arriba. Las capas verticales aprovechan el espacio limitado, organizan los cultivos y dejan sitio para automatizar. Planifica aparte la protección contra el clima y el riego."], ["Construye y mejora", "Invierte recursos en el árbol tecnológico, planos, edificios y tu hogar. Los Puntos de Tecnología vienen de las misiones de Bellad: ten siempre una misión activa."], ["Explora nuevas regiones", "Usa herramientas y drones mejorados para llegar a áreas nuevas, incluidas las Ruinas de la Ciudad Vieja del 1.0. La exploración devuelve semillas, peces y materiales al ciclo."]]}, {"en": "Vertical Farming: How It Actually Works", "heading": "Granja vertical: cómo funciona de verdad", "body": "La vista lateral no es un truco: es todo el sistema de la granja.", "items": ["Las plataformas se apilan libremente; cada nivel añade superficie construible.", "Salta y trepa entre niveles: el plataformeo es parte de la rutina diaria.", "Los maceteros van en plataformas; agrupa por temporada para replantar de una vez.", "Construye cubiertas o usa el gen Lluvia para proteger los cultivos expuestos y reducir la erosión de la lluvia ácida.", "Deja huecos verticales para el vuelo de los drones: la automatización del 1.0 necesita carriles."]}, {"en": "Weather Effects & How to Respond", "heading": "Efectos del clima y cómo responder", "body": "El clima extremo exige previsión, protección de cultivos y riego planificado.", "columns": ["Clima", "Efecto", "Respuesta"], "rows": [["Lluvia ácida", "Erosiona cultivos sin cubrir", "Construye cubiertas; recoge el ácido como recurso"], ["Calor abrasador", "Seca el suelo y ralentiza el crecimiento", "Riega con timing; usa cepas resistentes al calor"], ["Tormenta", "Aporta energía de rayos", "Aprovecha los rayos para cargar la granja (clave en 1.0)"], ["Lluvia torrencial", "Aporta riego con lluvia", "Déjala regar gratis y ahorra esfuerzo"], ["Sequía (mes 4)", "Marchita cultivos y aumenta la presión sobre los cultivos", "Protege los cultivos antes del mes 4 y planifica el riego"]]}, {"en": "First Week: The 5 Moves That Set Up the Run", "heading": "Primera semana: los 5 movimientos que definen la partida", "body": "Hazlos en orden y la primera temporada dejará de ser un caos.", "items": [["Limpia por completo tu parcela inicial", "La chatarra escondida financia tu primer lote de maceteros."], ["Planta cultivos rápidos primero", "Las cosechas tempranas dan capital para herramientas y semillas."], ["Habla con todos a diario", "La amistad desbloquea recetas, tecnología e historia; también Blooming Friendship."], ["Abre las misiones de Bellad de inmediato", "Las recompensas son Puntos de Tecnología: el único ingreso fiable temprano."], ["Empieza a proteger los cultivos antes del mes 4", "Harsh Dry Season exige proteger cultivos y planificar el riego."]]}, {"en": "Common Mistakes New Players Make (Avoid These)", "heading": "Errores comunes de los novatos (evítalos)", "body": "Los finales de partida más comunes según la comunidad: regar a mano todos los cultivos cada día (usa la automatización o el gen Lluvia), construir sin dejar rutas de acceso, ignorar la amistad (te bloquea recetas), saltarte las misiones de Bellad (te atrasas en el árbol tecnológico) y no proteger los cultivos ni planificar el riego antes del mes 4."}, {"en": "Drone Combat: Controls, Then Strategy", "heading": "Combate con drones: controles primero, estrategia después", "body": "Tu dron es arma y herramienta de supervivencia. Aprende los controles y luego las builds.", "items": ["RMB apunta, LMB dispara, Espacio esquiva, R recarga.", "Mejora en orden: chasis (supervivencia), cañón (daño), batería (duración).", "El rayo de carga (F) rompe escudos de los Scavenger Bugs blindados; el fuego normal rebota.", "Equipa módulos de arma y luz antes de explorar ruinas de noche.", "Los peces raros dan piezas avanzadas: pescar financia tu build."]}, {"en": "What the 1.0 Release Changes for New Players", "heading": "Qué cambia el 1.0 para los nuevos jugadores", "body": "El 1.0 del 6 de agosto de 2026 rediseña la experiencia inicial.", "items": [["6 ago 2026", "1.0: final completo de la historia, Ruinas de la Ciudad Vieja, automatización, Festival de las Setas, 37 logros."], ["Nuevos jugadores", "Llegas a la automatización antes que en EA: estaciones de drones para automatizar las tareas agrícolas."], ["Ruinas de la Ciudad Vieja", "Nueva región con enemigos feroces, nuevos PNJ, misiones y recursos."], ["⚠️ Verificación", "El orden exacto de desbloqueo y costes se están verificando en 1.0; ⚠️ es información de la comunidad."]]}, {"en": "Quick Answers for New Players", "heading": "Respuestas rápidas para nuevos jugadores", "items": [["¿Doloc Town es de un solo jugador?", "Sí. Los desarrolladores confirmaron que el 1.0 es una experiencia de un jugador; el cooperativo podría discutirse más adelante."], ["¿Tengo que regar todos los días?", "Sí al principio; pero el gen Lluvia riega automáticamente y las estaciones de drones del 1.0 lo automatizan del todo."], ["¿Puedo construir en cualquier sitio?", "Apilas plataformas en tu zona de granja. Las Ruinas del 1.0 añaden zonas y recursos nuevos."], ["¿Cuánto dura?", "Más de 30 horas de historia; más de 100 con todo lo demás."], ["¿Merece la pena comprarlo ahora?", "Cuesta ¥58 con un 20% de descuento de lanzamiento (¥46.40) hasta el 19 de agosto de 2026: buen momento."]]}]}, "friendship": {"sections": [{"en": "No Romance — Friendship Only", "heading": "Oficial: solo amistad, sin romance", "body": "Los desarrolladores han confirmado que no hay romance ni matrimonio. El juego social es de amistad: regalos, festivales, eventos de corazón e historias personales. No hagas guías de 'citas'."}, {"en": "Known Villagers (Community-Sourced)", "heading": "Vecinos conocidos (de la comunidad)", "body": "Los vecinos que más reportan los jugadores; la lista completa del 1.0 se está verificando.", "columns": ["Vecino", "Rol / notas"], "rows": [["Kasia", "Calle comercial, 2ª planta; amistad máxima logra Blooming Friendship"], ["Maestro de Gremio Bellad", "Reparte misiones y Puntos de Tecnología"], ["Kumasang", "PNJ errante en el Valle del Río; materiales raros ⚠️"], ["+ más", "⚠️ Lista completa en verificación (1.0)"]]}, {"en": "How to Raise Friendship (A Routine)", "heading": "Cómo subir la amistad (una rutina)", "body": "La amistad es una rutina diaria, no un esfuerzo.", "items": [["Habla a diario", "Simple, gratis y la base de todo corazón."], ["Da regalos", "Cada vecino tiene gustos: experimenta y anota qué funciona."], ["Completa misiones", "Suben corazones y pagan bien: la mejor inversión por minuto."], ["Acude a festivales", "Grandes bonificaciones; el Festival de las Setas del 1.0 es nuevo."]]}, {"en": "What Friendship Unlocks", "heading": "Qué desbloquea la amistad", "body": "Los corazones son un sistema de progresión, no decoración.", "items": ["Recetas únicas por amigo (p. ej., la Estación de Alquimia).", "Escenas de historia personal que profundizan los misterios.", "Recompensas de festival.", "⚠️ Umbrales exactos en verificación (1.0)."]}, {"en": "Common Mistakes", "heading": "Errores comunes", "body": "Ignorar a un vecino 'porque está lejos' te bloquea sus recetas. Dar el mismo regalo a todos falla las preferencias y desperdicia regalos. Perderse festivales es la mayor pérdida: son los eventos de amistad de mayor valor del calendario."}, {"en": "Quick Answers", "heading": "Respuestas rápidas", "items": [["¿Hay romance en Doloc Town?", "No. Los desarrolladores confirmaron que no hay sistema de romance ni matrimonio; las relaciones son de amistad."], ["¿Importan las amistades?", "Sí: los amigos desbloquean recetas, historias y contenido de festivales."], ["¿Cuándo es el próximo festival?", "El 1.0 añade el Festival de las Setas junto a los de temporada."]]}]}}
+ES_FULL = {"how-to-play": {"sections": [{"en": "The Five-Step Core Loop", "heading": "El ciclo principal en 5 pasos", "body": "Cada sesión sigue el mismo ritmo. Domínalo y el páramo se convertirá en tu granja.", "items": [["Limpia las ruinas", "Rompe escombros y estructuras con tus herramientas iniciales. Limpiar abre espacio de construcción, revela recursos enterrados y amplía tu alcance. Prioriza las parcelas más cercanas a tu base."], ["Recolecta recursos", "Consigue más de 40 minerales, plantas, chatarra y piezas. La chatarra alimenta la creación, las plantas la cocina y los minerales el árbol tecnológico. Aprende qué puntos reaparecen a diario."], ["Cultiva en vertical", "Crea maceteros y apila plataformas para construir hacia arriba. Las capas verticales aprovechan el espacio limitado, organizan los cultivos y dejan sitio para automatizar. Planifica aparte la protección contra el clima y el riego."], ["Construye y mejora", "Invierte recursos en el árbol tecnológico, planos, edificios y tu hogar. Los Puntos de Tecnología vienen de las misiones de Bellad: ten siempre una misión activa."], ["Explora nuevas regiones", "Usa herramientas y drones mejorados para llegar a áreas nuevas, incluidas las Ruinas de la Ciudad Vieja del 1.0. La exploración devuelve semillas, peces y materiales al ciclo."]]}, {"en": "Vertical Farming: How It Actually Works", "heading": "Granja vertical: cómo funciona de verdad", "body": "La vista lateral no es un truco: es todo el sistema de la granja.", "items": ["Las plataformas se apilan libremente; cada nivel añade superficie construible.", "Salta y trepa entre niveles: el plataformeo es parte de la rutina diaria.", "Los maceteros van en plataformas; agrupa por temporada para replantar de una vez.", "Construye cubiertas o usa el gen Lluvia para proteger los cultivos expuestos y reducir la erosión de la lluvia ácida.", "Deja huecos verticales para el vuelo de los drones: la automatización del 1.0 necesita carriles."]}, {"en": "Weather Effects & How to Respond", "heading": "Efectos del clima y cómo responder", "body": "El clima extremo exige previsión, protección de cultivos y riego planificado.", "columns": ["Clima", "Efecto", "Respuesta"], "rows": [["Lluvia ácida", "Erosiona cultivos sin cubrir", "Construye cubiertas; recoge el ácido como recurso"], ["Calor abrasador", "Seca el suelo y ralentiza el crecimiento", "Riega con timing; usa cepas resistentes al calor"], ["Tormenta", "Aporta energía de rayos", "Aprovecha los rayos para cargar la granja (clave en 1.0)"], ["Lluvia torrencial", "Aporta riego con lluvia", "Déjala regar gratis y ahorra esfuerzo"], ["Sequía (mes 4)", "Marchita cultivos y aumenta la presión sobre los cultivos", "Protege los cultivos antes del mes 4 y planifica el riego"]]}, {"en": "First Week: The 5 Moves That Set Up the Run", "heading": "Primera semana: los 5 movimientos que definen la partida", "body": "Hazlos en orden y la primera temporada dejará de ser un caos.", "items": [["Limpia por completo tu parcela inicial", "La chatarra escondida financia tu primer lote de maceteros."], ["Planta cultivos rápidos primero", "Las cosechas tempranas dan capital para herramientas y semillas."], ["Habla con todos a diario", "La amistad desbloquea recetas, tecnología e historia; también Blooming Friendship."], ["Abre las misiones de Bellad de inmediato", "Las recompensas son Puntos de Tecnología: el único ingreso fiable temprano."], ["Empieza a proteger los cultivos antes del mes 4", "Harsh Dry Season exige proteger cultivos y planificar el riego."]]}, {"en": "Common Mistakes New Players Make (Avoid These)", "heading": "Errores comunes de los novatos (evítalos)", "body": "Errores generales que conviene revisar en tu partida: regar a mano todos los cultivos cuando hay un gen o una tarea automática disponible, bloquear tus rutas, ignorar la amistad, saltarte las misiones de Bellad y no proteger los cultivos ni planificar el riego antes del mes 4."}, {"en": "Drone Combat: Controls, Then Strategy", "heading": "Combate con drones: controles primero, estrategia después", "body": "Tu dron es arma y herramienta de supervivencia. Aprende los controles y luego las builds.", "items": ["RMB apunta, LMB dispara, Espacio esquiva, R recarga.", "Mejora en orden: chasis (supervivencia), cañón (daño), batería (duración).", "El rayo de carga (F) rompe escudos de los Scavenger Bugs blindados; el fuego normal rebota.", "Equipa módulos de arma y luz antes de explorar ruinas de noche.", "Comprueba los requisitos actuales de cada módulo antes de gastar piezas."]}, {"en": "What the 1.0 Release Changes for New Players", "heading": "Qué cambia el 1.0 para los nuevos jugadores", "body": "El 1.0 del 6 de agosto de 2026 rediseña la experiencia inicial.", "items": [["6 ago 2026", "1.0: final completo de la historia, Ruinas de la Ciudad Vieja, automatización, Festival de las Setas, 37 logros."], ["Nuevos jugadores", "Las fuentes oficiales de 1.0 añaden automatización agrícola y estaciones de drones."], ["Ruinas de la Ciudad Vieja", "Nueva región con enemigos feroces, nuevos PNJ, misiones y recursos."], ["⚠️ Verificación", "Comprueba las tareas actuales y los anuncios oficiales; esta guía no infiere un orden de desbloqueo."]]}, {"en": "Quick Answers for New Players", "heading": "Respuestas rápidas para nuevos jugadores", "items": [["¿Doloc Town es de un solo jugador?", "Sí. Los desarrolladores confirmaron que el 1.0 es una experiencia de un jugador; el cooperativo podría discutirse más adelante."], ["¿Tengo que regar todos los días?", "Sí al principio; pero el gen Lluvia riega automáticamente y las estaciones de drones del 1.0 lo automatizan del todo."], ["¿Puedo construir en cualquier sitio?", "Apilas plataformas en tu zona de granja. Las Ruinas del 1.0 añaden zonas y recursos nuevos."], ["¿Cuánto dura?", "Más de 30 horas de historia; más de 100 con todo lo demás."], ["¿Merece la pena comprarlo ahora?", "Cuesta ¥58 con un 20% de descuento de lanzamiento (¥46.40) hasta el 19 de agosto de 2026: buen momento."]]}]}, "friendship": {"sections": [{"en": "No Romance — Friendship Only", "heading": "Oficial: solo amistad, sin romance", "body": "Los desarrolladores han confirmado que no hay romance ni matrimonio. El juego social es de amistad: regalos, festivales, eventos de corazón e historias personales. No hagas guías de 'citas'."}, {"en": "Known Villagers (Community-Sourced)", "heading": "Vecinos conocidos (de la comunidad)", "body": "Los vecinos que más reportan los jugadores; la lista completa del 1.0 se está verificando.", "columns": ["Vecino", "Rol / notas"], "rows": [["Kasia", "Calle comercial, 2ª planta; amistad máxima logra Blooming Friendship"], ["Maestro de Gremio Bellad", "Reparte misiones y Puntos de Tecnología"], ["Kumasang", "PNJ errante en el Valle del Río; materiales raros ⚠️"], ["+ más", "⚠️ Lista completa en verificación (1.0)"]]}, {"en": "How to Raise Friendship (A Routine)", "heading": "Cómo subir la amistad (una rutina)", "body": "La amistad es una rutina diaria, no un esfuerzo.", "items": [["Habla a diario", "Simple, gratis y la base de todo corazón."], ["Da regalos", "Cada vecino tiene gustos: experimenta y anota qué funciona."], ["Completa misiones", "Suben corazones y pagan bien: la mejor inversión por minuto."], ["Acude a festivales", "Grandes bonificaciones; el Festival de las Setas del 1.0 es nuevo."]]}, {"en": "What Friendship Unlocks", "heading": "Qué desbloquea la amistad", "body": "Los corazones son un sistema de progresión, no decoración.", "items": ["Recetas únicas por amigo (p. ej., la Estación de Alquimia).", "Escenas de historia personal que profundizan los misterios.", "Recompensas de festival.", "⚠️ Umbrales exactos en verificación (1.0)."]}, {"en": "Common Mistakes", "heading": "Errores comunes", "body": "Ignorar a un vecino 'porque está lejos' te bloquea sus recetas. Dar el mismo regalo a todos falla las preferencias y desperdicia regalos. Perderse festivales es la mayor pérdida: son los eventos de amistad de mayor valor del calendario."}, {"en": "Quick Answers", "heading": "Respuestas rápidas", "items": [["¿Hay romance en Doloc Town?", "No. Los desarrolladores confirmaron que no hay sistema de romance ni matrimonio; las relaciones son de amistad."], ["¿Importan las amistades?", "Sí: los amigos desbloquean recetas, historias y contenido de festivales."], ["¿Cuándo es el próximo festival?", "El 1.0 añade el Festival de las Setas junto a los de temporada."]]}]}}
 for _slug, _sup in ES_FULL.items():
     ES.setdefault(_slug, {})["sections"] = _sup.get("sections", [])
 
@@ -1839,13 +1839,13 @@ ZH["fishing"] = {
   {
    "type": "list",
    "heading": "高效钓鱼方法",
-   "body": "把钓鱼从副业变成稳定的收入与零件来源。",
+   "body": "按池塘、天气、月份与鱼竿条件选择目标渔获。",
    "items": [
     "摸清每个池塘：每片水域都有自己的鱼池——选点前先看上面的表",
     "升级鱼竿：更高品质的鱼竿解锁更好的鱼，也让钓鱼小游戏更宽容",
     "看天气钓鱼：雨天和雷暴会带来晴天没有的稀有渔获",
     "盯紧季节：雨季（1–2 月）与旱季（3–4 月）会完全改变渔获表",
-    "稀有鱼掉落高级无人机与工具零件，一次好的钓鱼就够升级开支"
+    "多余渔获的用途以当前游戏内显示为准"
    ]
   },
   {
@@ -2045,13 +2045,13 @@ JA["fishing"] = {
   {
    "type": "list",
    "heading": "効率的な釣り方",
-   "body": "釣りを副業から、安定した収入とパーツ供給源に変える。",
+   "body": "池・天候・月・竿の条件を確認して目標の魚を選ぶ。",
    "items": [
     "池を把握する：水域ごとに魚種が違う——場所選びの前に上の表を確認",
     "竿を強化する：上位の竿でより良い魚が解禁され、ミニゲームも寛容に",
     "天候を活かす：雨と雷雨は晴れの日には出ない珍しい釣果をもたらす",
     "季節に注意：雨季（1〜2月）と乾季（3〜4月）で釣果テーブルが完全に変わる",
-    "レア魚はドローン・道具の高度なパーツを落とす——良い釣りは強化費の財源"
+    "余った魚を加工・売却する前に現在のゲーム内用途を確認"
    ]
   },
   {
@@ -2251,13 +2251,13 @@ KO["fishing"] = {
   {
    "type": "list",
    "heading": "효율적인 낚시법",
-   "body": "낚시를 부업에서 안정적인 수입과 부품 공급원으로 바꾸세요.",
+   "body": "연못·날씨·월·낚싯대 조건을 확인해 목표 어획을 고르세요.",
    "items": [
     "연못을 파악하세요: 물가마다 어종이 다릅니다——자리 정하기 전에 위 표를 확인",
     "낚싯대를 업그레이드하세요: 상위 낚싯대는 더 좋은 물고기를 해금하고 미니게임도 관대해집니다",
     "날씨를 활용하세요: 비와 뇌우는 맑은 날에는 안 나오는 진귀한 어획을 줍니다",
     "계절을 주시하세요: 우기(1–2월)와 건기(3–4월)는 어획표를 완전히 바꿉니다",
-    "희귀어는 드론·도구 고급 부품을 줍니다——좋은 낚시 한 번이 강화 비용을 채웁니다"
+    "남는 어획을 가공하거나 팔기 전에 현재 게임 내 용도를 확인하세요"
    ]
   },
   {
@@ -2457,13 +2457,13 @@ ES["fishing"] = {
   {
    "type": "list",
    "heading": "Cómo pescar de forma eficiente",
-   "body": "Convierte la pesca de actividad secundaria en una fuente fiable de ingresos y piezas.",
+   "body": "Elige la captura según el estanque, el clima, el mes y la caña.",
    "items": [
     "Conoce los estanques: cada masa de agua tiene su propia fauna — consulta las tablas antes de elegir sitio",
     "Mejora tu caña: las cañas superiores desbloquean mejores peces y hacen el minijuego más permisivo",
     "Pesca según el clima: la lluvia y las tormentas traen capturas poco comunes que no aparecen en días secos",
     "Vigila la estación: la lluviosa (ene–feb) y la seca (mar–abr) cambian por completo las tablas de captura",
-    "Los peces raros dan piezas avanzadas de dron y herramientas: una buena sesión de pesca financia tus mejoras"
+    "Antes de procesar o vender capturas sobrantes, comprueba sus usos actuales en el juego"
    ]
   },
   {
@@ -2621,19 +2621,19 @@ ZH["farming"] = {
     ],
     [
      "1.0 自动化",
-     "无人机站负责播种、培育与收割——这是终局。"
+     "官方 1.0 资料介绍无人机站负责播种、培育与收割。"
     ]
    ]
   },
   {
    "type": "list",
    "heading": "从手工种田到自动化（1.0）",
-   "body": "1.0 把你从农民变成农场经理。升级路径是：先能源、再站点，然后让无人机干活。",
+   "body": "官方 1.0 资料介绍供能选项、农业自动化与农场无人机站；这里仅作编辑核对表，不表示解锁或建造顺序。",
    "items": [
     "建造太阳能板与自动化设备，为农场生成清洁能源",
     "建造农场无人机站——让无人机在田间作业的控制点",
     "指派自动化任务：无人机端到端处理播种、培育与收割",
-    "垂直堆叠很关键：平台之间留出清晰航线，无人机才能到达每个花盆",
+    "改动已运作的布局前，请在当前存档中逐项核对指派的自动任务",
     "工业区新增传送带生产线，打开此前无法到达的区域"
    ]
   },
@@ -2822,19 +2822,19 @@ JA["farming"] = {
     ],
     [
      "1.0で自動化",
-     "ドローン基地が播種・育成・収穫を担う——終盤の形。"
+     "公式 1.0 情報は、ドローン基地が播種・育成・収穫を担うと説明しています。"
     ]
    ]
   },
   {
    "type": "list",
    "heading": "手作業から自動化へ（1.0）",
-   "body": "1.0は農家をファームマネージャーに変えます。強化の順序は：まずエネルギー、次に基地、そしてドローンに働かせる。",
+   "body": "公式 1.0 情報は電力設備・農業オートメーション・農場ドローン基地を説明します。これは編集上の確認項目で、解放や建設の順序ではありません。",
    "items": [
     "ソーラーパネルと自動化設備で農場のクリーンエネルギーを発電",
     "農場ドローン基地を建設——ドローンが農地で作業するための制御点",
     "自動化作業を割り当て：ドローンが播種・育成・収穫を一貫処理",
-    "縦積みが重要：プラットフォーム間に飛行経路を確保し、全プランターへ到達させる",
+    "稼働中の配置を変更する前に、現在のセーブで割り当てた自動作業を一つずつ確認する",
     "工業地帯はコンベア生産ラインを追加し、従来到達不能だった地域を開放"
    ]
   },
@@ -3023,19 +3023,19 @@ KO["farming"] = {
     ],
     [
      "1.0에서 자동화",
-     "드론 스테이션이 파종·육성·수확을 담당합니다——엔드게임. "
+     "공식 1.0 자료는 드론 스테이션이 파종·육성·수확을 담당한다고 설명합니다."
     ]
    ]
   },
   {
    "type": "list",
    "heading": "손농사에서 자동화까지 (1.0)",
-   "body": "1.0은 농부를 팜 매니저로 바꿉니다. 업그레이드 순서: 에너지 먼저, 스테이션 다음, 그리고 드론에게 일을 맡기세요.",
+   "body": "공식 1.0 자료는 전력 설비·농업 자동화·농장 드론 기지를 설명합니다. 이는 편집용 확인 항목이며 해금이나 건설 순서가 아닙니다.",
    "items": [
     "해금 조건과 필요한 재료를 확인한 뒤 자동화 장비 배치",
     "농장 드론 스테이션 건설——드론이 밭에서 일하게 하는 제어 지점",
     "자동화 작업 지정: 드론이 파종·육성·수확을 처음부터 끝까지 처리",
-    "수직 적층이 핵심: 플랫폼 사이에 비행 경로를 남겨 드론이 모든 화분에 닿게 하세요",
+    "작동 중인 배치를 바꾸기 전에 현재 세이브에서 할당한 자동 작업을 하나씩 확인하세요",
     "공업 지구는 컨베이어 생산 라인을 추가해 이전에는 닿을 수 없던 지역을 엽니다"
    ]
   },
@@ -3224,19 +3224,19 @@ ES["farming"] = {
     ],
     [
      "Automatiza en 1.0",
-     "Las estaciones de drones gestionan siembra, cuidado y cosecha: el final del juego."
+     "Las fuentes oficiales de 1.0 describen estaciones de drones que gestionan siembra, cuidado y cosecha."
     ]
    ]
   },
   {
    "type": "list",
    "heading": "De la agricultura manual a la automatización (1.0)",
-   "body": "El 1.0 te convierte de granjero en gestor de granja. La ruta de mejora es: energía primero, estaciones después, y luego deja trabajar a los drones.",
+   "body": "Las fuentes oficiales de 1.0 describen energía, automatización agrícola y estaciones de drones. Es una lista editorial, no un orden de desbloqueo o construcción.",
    "items": [
     "Construye paneles solares y equipos de automatización para suministrar energía a tu granja",
     "Construye estaciones de drones agrícolas: los puntos de control que dejan trabajar a los drones",
     "Asigna tareas de automatización: los drones hacen siembra, cuidado y cosecha de principio a fin",
-    "El apilado vertical importa: deja pasillos de vuelo claros entre plataformas para que los drones lleguen a cada macetero",
+    "Verifica cada tarea automática en la partida actual antes de cambiar una distribución que ya funciona",
     "La zona industrial añade líneas de producción con cintas transportadoras que abren áreas antes inaccesibles"
    ]
   },
@@ -3401,9 +3401,9 @@ ZH["exploration"] = {
      "1.0 引入的新资源类型"
     ],
     [
-     "高级无人机零件",
-     "钓鱼",
-     "稀有鱼掉落高级无人机与工具零件——用钓鱼养出装"
+     "钓鱼渔获",
+     "池塘与水域",
+     "可获得的鱼取决于所列池塘、天气与月份条件"
     ]
    ]
   },
@@ -3434,8 +3434,8 @@ ZH["exploration"] = {
      "可以，但先给无人机装照明模块——没灯夜战是经典失误。"
     ],
     [
-     "高级无人机零件怎么获得？",
-     "稀有鱼掉落高级无人机与工具零件；湿地 Boss 掉落中型E芯片 ⚠️。"
+     "如何核对升级材料？",
+     "请查看当前游戏中的制作与升级要求；本指南不从钓鱼推断直接材料掉落。"
     ]
    ]
   }
@@ -3559,9 +3559,9 @@ JA["exploration"] = {
      "1.0で追加された新資源"
     ],
     [
-     "高性能ドローン部品",
-     "釣り",
-     "レア魚が高級部品を落とす——釣りでビルドを賄う"
+     "現在のクラフト素材",
+     "探索と現在のタスク",
+     "入手先と用途は現在のゲーム内表示で確認"
     ]
    ]
   },
@@ -3592,8 +3592,8 @@ JA["exploration"] = {
      "できますが、先に照明モジュールを装備——灯りなしの夜戦は典型ミス。"
     ],
     [
-     "高性能ドローン部品はどう入手？",
-     "レア魚が高級部品を落とし、湿地ボスがミディアムEチップをドロップ ⚠️。"
+     "強化素材はどう確認する？",
+     "現在のゲーム内の製作・強化要件を確認してください。本ガイドは釣りからの直接素材ドロップを推測しません。"
     ]
    ]
   }
@@ -3717,9 +3717,9 @@ KO["exploration"] = {
      "1.0에서 추가된 새 자원"
     ],
     [
-     "고급 드론 부품",
-     "낚시",
-     "희귀어가 고급 부품 드랍 — 낚시로 빌드 자금 마련"
+     "낚시 어획",
+     "연못과 수역",
+     "어획 가능 여부는 표에 나온 연못·날씨·월 조건에 따릅니다"
     ]
    ]
   },
@@ -3750,8 +3750,8 @@ KO["exploration"] = {
      "네, 하지만 먼저 조명 모듈을 장착하세요 — 불빛 없는 야간전은 전형적인 실수입니다."
     ],
     [
-     "고급 드론 부품은 어떻게 얻나요?",
-     "희귀어가 고급 드론·도구 부품을 드랍하고, 습지 보스가 미디엄 E칩을 드랍합니다 ⚠️. "
+     "업그레이드 재료는 어떻게 확인하나요?",
+     "현재 게임의 제작·업그레이드 요구 사항을 확인하세요. 이 가이드는 낚시에서 직접 재료가 나온다고 추론하지 않습니다."
     ]
    ]
   }
@@ -3875,9 +3875,9 @@ ES["exploration"] = {
      "Tipo de recurso nuevo introducido con el 1.0"
     ],
     [
-     "Piezas avanzadas de dron",
-     "Pesca",
-     "Los peces raros dan piezas avanzadas: pesca para financiar tu build"
+     "Capturas de pesca",
+     "Estanques y vías de agua",
+     "La disponibilidad depende del estanque, el clima y el mes documentados"
     ]
    ]
   },
@@ -3908,8 +3908,8 @@ ES["exploration"] = {
      "Sí, pero equipa antes un módulo de luz — pelear de noche sin luz es el error clásico."
     ],
     [
-     "¿Cómo consigo piezas avanzadas de dron?",
-     "Los peces raros dan piezas avanzadas de dron y herramientas; el jefe de los Humedales suelta un chip E medio ⚠️. "
+     "¿Cómo compruebo los materiales de mejora?",
+     "Consulta los requisitos actuales de fabricación y mejora; esta guía no infiere entregas directas de materiales al pescar."
     ]
    ]
   }
@@ -5807,8 +5807,8 @@ ZH["drone-combat"] = {
      "电容 / 影子射手随出装成长。"
     ],
     [
-     "靠钓鱼攒零件",
-     "稀有鱼掉落高级零件——用钓鱼养战斗。"
+     "核对升级材料",
+     "花费零件前查看当前存档中的模块要求。"
     ]
    ]
   },
@@ -5843,8 +5843,8 @@ ZH["drone-combat"] = {
      "电池。战斗中没能量是新玩家头号死因；然后升枪管补伤害。"
     ],
     [
-     "高级零件在哪掉？",
-     "稀有鱼掉落高级无人机与工具零件；湿地 Boss 掉落中型E芯片 ⚠️。"
+     "如何规划战斗升级？",
+     "请核对当前游戏中的模块材料要求，并在花费稀缺零件前保存。"
     ],
     [
      "夜战可行吗？",
@@ -5958,8 +5958,8 @@ JA["drone-combat"] = {
      "キャパシタ / シャドウシューターがビルドを伸ばす。"
     ],
     [
-     "釣りで部品を貯める",
-     "レア魚が高級部品——釣りで戦闘を賄う。"
+     "強化素材を確認",
+     "パーツを使う前に現在のセーブでモジュール要件を確認。"
     ]
    ]
   },
@@ -5994,8 +5994,8 @@ JA["drone-combat"] = {
      "バッテリー。戦闘中のエネルギー切れが第1の死因。次にバレルでダメージ。"
     ],
     [
-     "高級部品はどこで？",
-     "レア魚が高級ドローン・道具部品を落とし、湿地ボスがミディアムEチップ ⚠️。"
+     "強化素材はどこで確認？",
+     "現在のセーブに表示されるモジュール要件と入手先を確認してください。"
     ],
     [
      "夜戦は可能？",
@@ -6109,8 +6109,8 @@ KO["drone-combat"] = {
      "캐패시터 / 섀도우 슈터가 빌드를 키웁니다."
     ],
     [
-     "낚시로 부품 모으기",
-     "희귀어가 고급 부품 — 낚시로 전투 자금 마련."
+     "업그레이드 재료 확인",
+     "부품을 쓰기 전에 현재 세이브의 모듈 요구 사항을 확인하세요."
     ]
    ]
   },
@@ -6145,8 +6145,8 @@ KO["drone-combat"] = {
      "배터리. 전투 중 에너지 고갈이 1위 사인. 다음 배럴로 피해."
     ],
     [
-     "고급 부품은 어디서?",
-     "희귀어가 고급 드론·도구 부품 드랍, 습지 보스가 미디엄 E칩 ⚠️."
+     "전투 업그레이드는 어떻게 계획하나요?",
+     "현재 게임의 모듈 재료 요구 사항을 확인하고 희소 부품을 쓰기 전에 저장하세요."
     ],
     [
      "야간전이 가능한가요?",
@@ -6260,8 +6260,8 @@ ES["drone-combat"] = {
      "Capacitor / Disparador Sombra escalan con tu build."
     ],
     [
-     "Guarda piezas de la pesca",
-     "Los peces raros dan piezas avanzadas: pesca para financiar el combate."
+     "Comprueba los materiales",
+     "Revisa los requisitos actuales de cada módulo antes de gastar piezas."
     ]
    ]
   },
@@ -6296,8 +6296,8 @@ ES["drone-combat"] = {
      "La batería. Quedarse sin energía a mitad del combate es la muerte n.º 1 de novatos; luego el cañón para daño."
     ],
     [
-     "¿Dónde caen las piezas avanzadas?",
-     "Los peces raros dan piezas avanzadas de dron y herramientas; el jefe de los Humedales suelta un chip E medio ⚠️."
+     "¿Cómo planifico las mejoras de combate?",
+     "Comprueba los requisitos actuales de cada módulo y guarda antes de gastar piezas escasas."
     ],
     [
      "¿Es viable el combate nocturno?",
@@ -7168,7 +7168,15 @@ for _slug in ("automation","faq"):
     for _lg in ("en","zh-CN","zh-TW","ja","ko","es"):
         _v=_view(_p,_lg); _v.setdefault("sections",copy.deepcopy(_p["sections"]));
         _v["sections"]=[s for s in _v["sections"] if s.get("tag") not in ("OFFICIAL-AUTOMATION","1.00.03-OFFICIAL")]
-        _v["sections"].insert(0,{"type":"note","tag":"OFFICIAL-AUTOMATION","heading":"Official automation status","body":_approved[_lg]["auto"]})
+        _automation_status_headings = {
+            "en":"Official automation status",
+            "zh-CN":"官方自动化状态",
+            "zh-TW":"官方自動化狀態",
+            "ja":"公式オートメーション情報",
+            "ko":"공식 자동화 상태",
+            "es":"Estado oficial de la automatización",
+        }
+        _v["sections"].insert(0,{"type":"note","tag":"OFFICIAL-AUTOMATION","heading":_automation_status_headings[_lg],"body":_approved[_lg]["auto"]})
 _mods=next(x for x in d["pages"] if x["slug"]=="mods")
 for _lg in ("en","zh-CN","zh-TW","ja","ko","es"):
     _v=_view(_mods,_lg); _v.setdefault("sections",copy.deepcopy(_mods["sections"]));
@@ -7254,6 +7262,13 @@ _source_labels = {
         "ko":"Steam 공식 상점——태양광·풍력 발전과 농업 자동화",
         "es":"Tienda oficial de Steam: energía solar, eólica y automatización agrícola",
     },
+    "https://steamcommunity.com/app/2285550/allnews/?l=english": {
+        "zh-CN":"多洛可小镇官方 1.0 公告索引",
+        "zh-TW":"多洛可小鎮官方 1.0 公告索引",
+        "ja":"ドロックタウン公式 1.0 発表一覧",
+        "ko":"돌록 타운 공식 1.0 공지 목록",
+        "es":"Índice oficial de anuncios 1.0 de Doloc Town",
+    },
     PATCH_URL: {
         "zh-CN":"多洛可小镇官方 1.00.03 补丁说明",
         "zh-TW":"多洛可小鎮官方 1.00.03 更新說明",
@@ -7270,6 +7285,13 @@ _source_labels = {
     },
 }
 for _source_item in _money.get("sources", []):
+    if _source_item.get("url") in _source_labels:
+        _source_item["labels"] = copy.deepcopy(_source_labels[_source_item["url"]])
+
+# The automation route uses the same first-party identities but needs its own
+# localized labels. Keep URL identity unchanged and never fall back to English
+# on a localized page.
+for _source_item in _auto_page.get("sources", []):
     if _source_item.get("url") in _source_labels:
         _source_item["labels"] = copy.deepcopy(_source_labels[_source_item["url"]])
 

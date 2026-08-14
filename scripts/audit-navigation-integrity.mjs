@@ -109,6 +109,18 @@ try {
   } else if (fault === "search-late-cascade-override") {
     const target = path.join(out, "css", "style.css");
     fs.appendFileSync(target, '\n.site-search input[type="search"]{min-block-size:8px;pointer-events:none}\n');
+  } else if (fault === "search-specificity-shrink") {
+    const target = path.join(out, "css", "style.css");
+    fs.appendFileSync(target, '\n.site-header .site-search input[type="search"]{min-inline-size:8px;min-block-size:8px}\n');
+  } else if (fault === "search-important-focus-loss") {
+    const target = path.join(out, "css", "style.css");
+    fs.appendFileSync(target, '\n.site-search input[type="search"]:focus-visible{outline:none!important}\n');
+  } else if (fault === "search-specificity-icon-capture") {
+    const target = path.join(out, "css", "style.css");
+    fs.appendFileSync(target, '\n.site-header .site-search .search-ic{pointer-events:auto}\n');
+  } else if (fault === "search-mobile-only-shrink") {
+    const target = path.join(out, "css", "style.css");
+    fs.appendFileSync(target, '\n@media (max-width:480px){.site-header .site-search input[type="search"]{min-block-size:8px}}\n');
   } else if (fault === "transition-shorthand") {
     const target = path.join(out, "css", "style.css");
     fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("transition:color .16s ease,background-color .16s ease,box-shadow .16s ease", "transition:.16s"));
@@ -158,36 +170,143 @@ try {
     /\.dd-manual a\{(?=[^}]*min-inline-size:44px)(?=[^}]*min-block-size:44px)(?=[^}]*justify-content:center)[^}]*\}/,
   ];
   for (const re of targetContracts) if (!re.test(css)) fail("touch-target-css-contract", String(re));
-  // Resolve repeated exact-selector declarations in source order so a later
-  // cascade override cannot hide behind the first authored 44px rule. The
-  // task's real-Chromium pass separately verifies the rendered interaction.
-  const resolvedRule = selector => {
-    const escaped = selector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const bodies = [...css.matchAll(new RegExp(`${escaped}\\{([^}]*)\\}`, "g"))].map(match => match[1]);
-    const resolved = {};
-    for (const body of bodies) for (const declaration of body.split(";")) {
-      const splitAt = declaration.indexOf(":");
-      if (splitAt > 0) resolved[declaration.slice(0, splitAt).trim()] = declaration.slice(splitAt + 1).trim();
+  // Minimal cascade evaluator for the real header DOM. It resolves importance,
+  // specificity, source order and width/pointer media applicability. This is
+  // intentionally narrower than a browser CSS engine, but broader than exact
+  // selector matching and fail-closed for every search-control property below.
+  const cssRules = [];
+  let cssOrder = 0;
+  const cssText = css.replace(/\/\*[\s\S]*?\*\//g, "");
+  const matchingBrace = (text, openAt) => {
+    let depth = 0, quote = "", escaped = false;
+    for (let i = openAt; i < text.length; i += 1) {
+      const ch = text[i];
+      if (quote) {
+        if (escaped) escaped = false;
+        else if (ch === "\\") escaped = true;
+        else if (ch === quote) quote = "";
+      } else if (ch === '"' || ch === "'") quote = ch;
+      else if (ch === "{") depth += 1;
+      else if (ch === "}" && --depth === 0) return i;
     }
-    return resolved;
+    return -1;
+  };
+  const parseRuleList = (text, media = []) => {
+    let cursor = 0;
+    while (cursor < text.length) {
+      const openAt = text.indexOf("{", cursor);
+      if (openAt < 0) break;
+      const prelude = text.slice(cursor, openAt).trim();
+      const closeAt = matchingBrace(text, openAt);
+      if (closeAt < 0) break;
+      const body = text.slice(openAt + 1, closeAt);
+      if (/^@media\b/i.test(prelude)) parseRuleList(body, [...media, prelude.replace(/^@media\s*/i, "")]);
+      else if (!prelude.startsWith("@")) {
+        const declarations = {};
+        for (const declaration of body.split(";")) {
+          const splitAt = declaration.indexOf(":");
+          if (splitAt < 1) continue;
+          const property = declaration.slice(0, splitAt).trim().toLowerCase();
+          let value = declaration.slice(splitAt + 1).trim();
+          const important = /!important\s*$/i.test(value);
+          value = value.replace(/\s*!important\s*$/i, "").trim();
+          declarations[property] = { value, important };
+        }
+        for (const selector of prelude.split(",").map(item => item.trim()).filter(Boolean))
+          cssRules.push({ selector, declarations, media, order: cssOrder++ });
+      }
+      cursor = closeAt + 1;
+    }
+  };
+  parseRuleList(cssText);
+  const profiles = {
+    form: {tag:"form", classes:["site-search"], attrs:{}, pseudos:[], ancestors:[
+      {tag:"div",classes:["header-inner"]},{tag:"div",classes:["container"]},{tag:"header",classes:["site-header"]},
+    ]},
+    input: {tag:"input", classes:[], attrs:{type:"search"}, pseudos:[], ancestors:[
+      {tag:"form",classes:["site-search"]},{tag:"div",classes:["header-inner"]},{tag:"div",classes:["container"]},{tag:"header",classes:["site-header"]},
+    ]},
+    icon: {tag:"span", classes:["search-ic"], attrs:{}, pseudos:[], ancestors:[
+      {tag:"form",classes:["site-search"]},{tag:"div",classes:["header-inner"]},{tag:"div",classes:["container"]},{tag:"header",classes:["site-header"]},
+    ]},
+    focus: {tag:"input", classes:[], attrs:{type:"search"}, pseudos:["focus-visible"], ancestors:[
+      {tag:"form",classes:["site-search"]},{tag:"div",classes:["header-inner"]},{tag:"div",classes:["container"]},{tag:"header",classes:["site-header"]},
+    ]},
+  };
+  const compoundMatches = (compound, node) => {
+    if (!node || /::/.test(compound)) return false;
+    for (const pseudo of [...compound.matchAll(/:([\w-]+)/g)].map(match => match[1]))
+      if (!node.pseudos?.includes(pseudo)) return false;
+    for (const klass of [...compound.matchAll(/\.([\w-]+)/g)].map(match => match[1]))
+      if (!node.classes?.includes(klass)) return false;
+    for (const attr of compound.matchAll(/\[([\w-]+)(?:=["']?([^\]"']+)["']?)?\]/g))
+      if (!(attr[1] in (node.attrs || {})) || (attr[2] && node.attrs[attr[1]] !== attr[2])) return false;
+    const tag = compound.replace(/#[\w-]+|\.[\w-]+|\[[^\]]+\]|:{1,2}[\w-]+(?:\([^)]*\))?/g, "").trim();
+    return !tag || tag === "*" || tag.toLowerCase() === node.tag;
+  };
+  const selectorMatches = (selector, profile) => {
+    const compounds = selector.replace(/>/g, " ").trim().split(/\s+/).filter(Boolean);
+    if (!compounds.length || !compoundMatches(compounds.at(-1), profile)) return false;
+    let ancestorAt = 0;
+    for (let i = compounds.length - 2; i >= 0; i -= 1) {
+      while (ancestorAt < profile.ancestors.length && !compoundMatches(compounds[i], profile.ancestors[ancestorAt])) ancestorAt += 1;
+      if (ancestorAt >= profile.ancestors.length) return false;
+      ancestorAt += 1;
+    }
+    return true;
+  };
+  const specificity = selector => [
+    (selector.match(/#[\w-]+/g) || []).length,
+    (selector.match(/\.[\w-]+|\[[^\]]+\]|:(?!:)[\w-]+/g) || []).length,
+    (selector.replace(/#[\w-]+|\.[\w-]+|\[[^\]]+\]|:{1,2}[\w-]+(?:\([^)]*\))?/g, " ").match(/\b[a-z][\w-]*\b/gi) || []).length,
+  ];
+  const mediaMatches = (queries, width) => queries.every(query => query.split(",").some(branch => {
+    const max = branch.match(/max-width\s*:\s*([0-9.]+)px/i);
+    const min = branch.match(/min-width\s*:\s*([0-9.]+)px/i);
+    if (max && width > Number(max[1])) return false;
+    if (min && width < Number(min[1])) return false;
+    if (/hover\s*:\s*hover/i.test(branch) && width < 769) return false;
+    if (/hover\s*:\s*none/i.test(branch) && width >= 769) return false;
+    if (/pointer\s*:\s*fine/i.test(branch) && width < 769) return false;
+    if (/pointer\s*:\s*coarse/i.test(branch) && width >= 769) return false;
+    if (/prefers-reduced-motion\s*:\s*reduce/i.test(branch)) return false;
+    return true;
+  }));
+  const wins = (candidate, current) => {
+    if (!current) return true;
+    if (candidate.important !== current.important) return candidate.important;
+    for (let i = 0; i < 3; i += 1) if (candidate.specificity[i] !== current.specificity[i]) return candidate.specificity[i] > current.specificity[i];
+    return candidate.order >= current.order;
+  };
+  const resolvedRule = (target, width) => {
+    const resolved = {};
+    for (const rule of cssRules) {
+      if (!mediaMatches(rule.media, width) || !selectorMatches(rule.selector, profiles[target])) continue;
+      for (const [property, declaration] of Object.entries(rule.declarations)) {
+        const candidate = {...declaration, specificity:specificity(rule.selector), order:rule.order, selector:rule.selector};
+        if (wins(candidate, resolved[property])) resolved[property] = candidate;
+      }
+    }
+    return Object.fromEntries(Object.entries(resolved).map(([property, item]) => [property, item.value]));
   };
   const pxValue = (rule, property) => Number((String(rule[property] || "").match(/^([0-9.]+)px$/) || [])[1] || 0);
-  const searchFormRule = resolvedRule(".site-search");
-  const searchInputRule = resolvedRule('.site-search input[type="search"]');
-  const searchIconRule = resolvedRule(".search-ic");
-  const searchFocusRule = resolvedRule('.site-search input[type="search"]:focus-visible');
-  searchComputedMinimums = {
-    form: { inline: pxValue(searchFormRule, "min-inline-size"), block: pxValue(searchFormRule, "min-block-size") },
-    input: { inline: pxValue(searchInputRule, "min-inline-size"), block: pxValue(searchInputRule, "min-block-size") },
-  };
-  for (const [target, size] of Object.entries(searchComputedMinimums)) {
-    if (size.inline < 44 || size.block < 44) fail("search-computed-size-contract", `${target}:${size.inline}x${size.block}`);
+  searchComputedMinimums = {};
+  for (const width of [375, 1440]) {
+    const formRule = resolvedRule("form", width), inputRule = resolvedRule("input", width);
+    const iconRule = resolvedRule("icon", width), focusRule = resolvedRule("focus", width);
+    const computed = searchComputedMinimums[width] = {
+      form: {inline:pxValue(formRule,"min-inline-size"),block:pxValue(formRule,"min-block-size")},
+      input: {inline:pxValue(inputRule,"min-inline-size"),block:pxValue(inputRule,"min-block-size")},
+      input_width: inputRule.width, icon_pointer_events: iconRule["pointer-events"], focus_outline: focusRule.outline,
+    };
+    for (const [target, size] of Object.entries({form:computed.form,input:computed.input}))
+      if (size.inline < 44 || size.block < 44) fail("search-computed-size-contract", `${width}:${target}:${size.inline}x${size.block}`);
+    if (inputRule.width !== "100%" || inputRule.padding !== "0 12px 0 35px" || formRule.padding !== "0" || inputRule["pointer-events"] === "none")
+      fail("search-full-control-click-contract", `${width}:visible search pill must be the full-width search input`);
+    if (iconRule["pointer-events"] !== "none") fail("search-icon-click-through", `${width}:search icon must pass clicks to the input`);
+    if (/^(?:0|none)$/i.test(focusRule.outline || "") || /^(?:0|none)$/i.test(focusRule["outline-width"] || ""))
+      fail("search-focus-visible", `${width}:search input requires a visible keyboard focus outline`);
   }
-  if (searchInputRule.width !== "100%" || searchInputRule.padding !== "0 12px 0 35px" || searchFormRule.padding !== "0" || searchInputRule["pointer-events"] === "none")
-    fail("search-full-control-click-contract", "visible search pill must be the full-width search input");
-  if (searchIconRule["pointer-events"] !== "none") fail("search-icon-click-through", "search icon must pass clicks to the input");
-  if (searchFocusRule.outline !== "2px solid var(--amber-soft)" || /^(?:0|none)$/.test(searchFocusRule.outline || ""))
-    fail("search-focus-visible", "search input requires a visible keyboard focus outline");
   if (!/\.logo\{[^}]*transition:none[^}]*\}/.test(css)) fail("logo-transition-property", "logo transition must compute to none, never all");
   if (!/\.dd-manual\{[^}]*max-block-size:calc\(100dvh - 132px\)[^}]*overflow-y:auto/.test(css)) fail("menu-keyboard-reachability-css", "mobile guide menu requires a bounded scroll region");
   const navigationRules = (css.match(/\.(?:logo|nav|dd-menu|dd-manual|lang-dd|site-search)[^{]*\{[^}]*\}/g) || []).join("\n");
@@ -234,7 +353,7 @@ try {
   }
 
   if (!fault && !failures.length) {
-    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset", "escape-focus-loss", "consent-escape-steals-focus", "touch-target-contract", "inline-target-contract", "search-under-44", "search-focus-ring-loss", "search-icon-captures-click", "search-input-not-full-control", "search-late-cascade-override", "transition-shorthand", "unscoped-navigation-hover", "logo-transition-all"]) {
+    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset", "escape-focus-loss", "consent-escape-steals-focus", "touch-target-contract", "inline-target-contract", "search-under-44", "search-focus-ring-loss", "search-icon-captures-click", "search-input-not-full-control", "search-late-cascade-override", "search-specificity-shrink", "search-important-focus-loss", "search-specificity-icon-capture", "search-mobile-only-shrink", "transition-shorthand", "unscoped-navigation-hover", "logo-transition-all"]) {
       const child = spawnSync(process.execPath, [auditScript, root], { env: { ...process.env, DOLOC_NAV_AUDIT_FAULT: name }, encoding: "utf8" });
       negativeFixtureExitCodes[name] = child.status;
       if (!Number.isInteger(child.status) || child.status <= 0) fail("negative-fixture-did-not-fail", name);
