@@ -63,11 +63,11 @@
   "price": "$19.99",
   "steamUrl": "https://store.steampowered.com/app/2285550/Doloc_Town/",
   "officialSite": "",
-  "intro": "Doloc Town is a side-scrolling pixel-art farming sim set in a post-apocalyptic wasteland. Play as a young scavenger who builds a vertical farm one platform at a time under extreme weather: acid rain, scorching heat and thunderstorms. Gather 40+ resources, fish, ranch, modify crop genes, fight alongside your drone and automate production with solar power. The 1.0 full release on August 6, 2026 adds a complete story ending, the Old City Ruins area, farming automation and 37 new achievements.",
+  "intro": "Doloc Town is a side-scrolling pixel-art farming sim set in a post-apocalyptic wasteland. Play as a young scavenger who builds a vertical farm one platform at a time under extreme weather: acid rain, scorching heat and thunderstorms. Gather 40+ resources, fish, ranch, modify crop genes, fight alongside your drone, generate solar and wind power, and use farming automation. The 1.0 full release on August 6, 2026 adds a complete story ending, the Old City Ruins area, farming automation and 37 new achievements.",
   "keyFacts": [
    "1.0 full release: August 6, 2026 with complete story ending",
    "30+ hours of core gameplay, 100+ hours of additional content",
-   "Farming automation: solar power → drone stations (new in 1.0)",
+   "1.0 components include farming automation and farm drone stations; solar and wind are listed power sources",
    "Crop gene system: ~20 mutations across 30+ crops",
    "Extreme weather requires crop protection, watering plans and daily forecasts",
    "80 Steam achievements total (43 base + 37 new in 1.0)"

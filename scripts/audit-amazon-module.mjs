@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { execFileSync, spawnSync } from "node:child_process";
+import { execFileSync, spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
 const auditScript = fileURLToPath(import.meta.url);
@@ -171,7 +171,255 @@ const unsupportedAutomationPatterns = [
   ["timing-es", /inicio[-–— ]*medio[^\n]{0,180}medio[^\n]{0,180}(?:final|fin del juego)/iu],
   ["consensus-es", /(?:comunidad|consenso)[^.\n]{0,90}(?:coincide|informa|recomienda)[^.\n]{0,130}(?:automatizaci[oó]n|drones?)/iu],
 ];
-const unsupportedAutomationHit = text => {
+const claimLocales = ["en", "zh-CN", "zh-TW", "ja", "ko", "es"];
+const automationCorePatterns={
+  en:/\b(?:automation|automated|automatic farming)\b/iu,"zh-CN":/(?:自动化|自动作业)/u,"zh-TW":/(?:自動化|自動作業)/u,
+  ja:/(?:オートメーション|自動化|自動作業)/u,ko:/(?:농업 자동화|자동화|자동 작업)/u,es:/(?:automatizaci[oó]n|tareas autom[aá]ticas)/iu,
+};
+const droneStationPatterns={en:/\bdrone stations?\b/iu,"zh-CN":/无人机站/u,"zh-TW":/無人機站/u,ja:/ドローン基地/u,ko:/드론 기지/u,es:/\bestaciones? de drones?\b/iu};
+const claimLexicons = {
+  en: {
+    auto:/\b(?:automation|automated|automatic farming|drone stations?|work ?stations?)\b/iu,
+    power:/\b(?:power grid|energy grid|grid power|energy|electricity|power|solar|wind)\b/iu,
+    station:/\b(?:(?:work|farm|drone) ?stations?|bases?)\b/iu,
+    drone:/\b(?:drones?|drone crews?|drone fleet)\b/iu,
+    relation:/(?:→|->|\b(?:first|before|then|next|after|finally|last|follow(?:s|ing)?|lead(?:s)? to|progress(?:es)? through|unlock(?:s|ed)?|open(?:s|ed)?|enable(?:s|d)?|powers|powered|feed(?:s)?|drive(?:s)?|require(?:s|d)?|depend(?:s|ed)?|must|only after|once)\b)/iu,
+    prerequisite:/\b(?:prerequisite|precondition|required before|must (?:be|come|finish)|need(?:s|ed)? to .* before|only after)\b/iu,
+    dependency:/\b(?:depend(?:s|ed|ency)?|requir(?:e|es|ed)|rel(?:y|ies) on|powered by|drives?|feeds?|leads? to|unlocks?|enables?)\b/iu,
+    architecture:/\b(?:architecture|stack|layers?|tiers?|stages?|phases?|pipeline|chain|whole system|fixed system|standard system|technology tree|tech tree)\b/iu,
+    techTree:/\b(?:technology|tech) tree\b/iu,
+    early:/\b(?:early(?: game)?|opening stretch|first stretch|beginning|starting days?)\b/iu,
+    mid:/\b(?:mid(?:dle)?[- ]?game|midpoint|middle stretch|halfway)\b/iu,
+    late:/\b(?:late(?: game)?|endgame|ending stretch|final stretch|near the ending)\b/iu,
+    community:/\b(?:players?|community)\b/iu,
+    general:/\b(?:most|many|generally|usually|widely|consensus|standard|common|agree(?:s|d)?|recommend(?:s|ed)?|report(?:s|ed)?|treat(?:s|ed) as)\b/iu,
+    route:/\b(?:route|roadmap|path|order|sequence|way)\b/iu,
+    rare:/\b(?:(?:rare|exceptional|uncommon|trophy|scarce) (?:fish|catch|haul)|(?:fish|catch) of exceptional rarity)\b/iu,
+    parts:/\b(?:(?:advanced|high[- ]grade|high[- ]level) (?:drone |tool )?(?:parts?|components?)|(?:drone|tool) (?:parts?|components?))\b/iu,
+    direct:/\b(?:drop(?:s|ped)?|yield(?:s|ed)?|give(?:s|n)?|provide(?:s|d)?|produce(?:s|d)?|turn(?:s|ed)? into|become(?:s)?|straight into|directly|immediately)\b/iu,
+    upgrade:/\b(?:(?:next )?(?:drone |tool )?(?:upgrade|improvement|build)s?)\b/iu,
+    fund:/\b(?:fund(?:s|ed)?|financ(?:e|es|ed)|pay(?:s|ing)? for|cover(?:s|ed)?|afford(?:s|ed)?|straight to|convert(?:s|ed)? .* value|worth enough)\b/iu,
+    hands:/\b(?:hands[- ]on|playtest(?:ed|ing)?|tested ourselves|testing ourselves|real[- ]device test|real hardware test|on-device test)\b/iu,
+    realDevice:/\b(?:real[- ]device|real hardware|physical device|on-device)\b/iu,
+    progress:/\b(?:currently|right now|now testing|in progress|being edited|we are|we have|our current|version 1\.0|1\.0 build)\b/iu,
+    persona:/\b(?:we|our|this guide|this site|the site|our team)\b/iu,
+    automationBoundary:/\b(?:do(?:es)? not|not|no|without)\b[^.!?]{0,70}\b(?:infer|imply|establish|show|claim|dependency|prerequisite|order|sequence|progression|technology tree)\b|\b(?:separate|independent) components?\b/iu,
+    testBoundary:/\b(?:not|never|have not|has not|without)\b[^.!?]{0,70}\b(?:hands[- ]on|playtest|tested|testing|verified)\b|\b(?:pending source verification|awaiting source verification|source verification pending)\b/iu,
+  },
+  "zh-CN": {
+    auto:/(?:自动化|自动作业|无人机站|工作站)/u,
+    power:/(?:供能|能源|电力|电网|太阳能|风力)/u,
+    station:/(?:工作站|站点|基地|无人机站)/u,
+    drone:/无人机/u,
+    relation:/(?:→|->|前置|依赖|必须|需要|先|再|然后|之后|才(?:能|会)|解锁|开放|带来|通向|驱动|供给)/u,
+    prerequisite:/(?:前置|先决|必须先|需要先|完成[^。]{0,25}才|只有[^。]{0,25}后)/u,
+    dependency:/(?:依赖|取决于|驱动|供给|带动|通向|解锁|开放)/u,
+    architecture:/(?:架构|体系|固定|标准|层|阶段|环节|链路|整条|全套|科技树)/u,
+    techTree:/科技树/u,
+    early:/(?:前期|开局|起步阶段|最初阶段)/u,
+    mid:/(?:中期|中段|流程过半|中盘)/u,
+    late:/(?:后期|终局|结局前|收尾阶段)/u,
+    community:/(?:玩家|社区|社群)/u,
+    general:/(?:多数|大多数|普遍|通常|公认|共识|主流|一致|标准|都认为|常见)/u,
+    route:/(?:路线|路径|顺序|流程|打法|路线图)/u,
+    rare:/(?:稀有|罕见|珍稀|极品|特殊)[^。！？\n]{0,18}(?:鱼|渔获|捕获)/u,
+    parts:/(?:高级|高阶)[^。！？\n]{0,18}(?:无人机|工具)?[^。！？\n]{0,12}(?:部件|零件|组件|配件)|(?:无人机|工具)(?:部件|零件|组件|配件)/u,
+    direct:/(?:掉落|产出|直接(?:得到|获得|变成)|换来|变成|给出|带来|立刻|马上)/u,
+    upgrade:/(?:下一次|下一项|下一轮)?[^。！？\n]{0,12}(?:无人机|工具)?(?:升级|强化|改造)/u,
+    fund:/(?:资助|支付|提供资金|筹够|覆盖|抵掉|直接换成|价值直接|足够支付)/u,
+    hands:/(?:实测|亲测|试玩|上手测试|实机|真机)/u,
+    realDevice:/(?:实机|真机|真实设备)/u,
+    progress:/(?:正在|当前|目前|已经|整理中|测试中|1\.0)/u,
+    persona:/(?:我们|本站|本指南|编辑组|团队)/u,
+    automationBoundary:/(?:不|未|没有|不据此)[^。！？\n]{0,40}(?:推断|表示|代表|建立|声称|依赖|前置|顺序|科技树)|(?:分别|独立)列出/u,
+    testBoundary:/(?:未|没有|尚未|未经|未由|不声称|不代表)[^。！？\n]{0,45}(?:实测|亲测|试玩|实机|测试)|(?:实测|亲测|试玩|实机|测试)前|(?:待|仍待)[^。！？\n]{0,35}(?:来源|资料)[^。！？\n]{0,20}(?:核对|核实)/u,
+  },
+  "zh-TW": {
+    auto:/(?:自動化|自動作業|無人機站|工作站)/u,
+    power:/(?:供能|能源|電力|電網|太陽能|風力)/u,
+    station:/(?:工作站|站點|基地|無人機站)/u,
+    drone:/無人機/u,
+    relation:/(?:→|->|前置|依賴|必須|需要|先|再|然後|之後|才(?:能|會)|解鎖|開放|帶來|通向|驅動|供給)/u,
+    prerequisite:/(?:前置|先決|必須先|需要先|完成[^。]{0,25}才|只有[^。]{0,25}後)/u,
+    dependency:/(?:依賴|取決於|驅動|供給|帶動|通向|解鎖|開放)/u,
+    architecture:/(?:架構|體系|固定|標準|層|階段|環節|鏈路|整條|全套|科技樹)/u,
+    techTree:/科技樹/u,
+    early:/(?:前期|開局|起步階段|最初階段)/u,
+    mid:/(?:中期|中段|流程過半|中盤)/u,
+    late:/(?:後期|終局|結局前|收尾階段)/u,
+    community:/(?:玩家|社區|社群)/u,
+    general:/(?:多數|大多數|普遍|通常|公認|共識|主流|一致|標準|都認為|常見)/u,
+    route:/(?:路線|路徑|順序|流程|打法|路線圖)/u,
+    rare:/(?:稀有|罕見|珍稀|極品|特殊)[^。！？\n]{0,18}(?:魚|漁獲|捕獲)/u,
+    parts:/(?:高級|高階)[^。！？\n]{0,18}(?:無人機|工具)?[^。！？\n]{0,12}(?:部件|零件|組件|配件)|(?:無人機|工具)(?:部件|零件|組件|配件)/u,
+    direct:/(?:掉落|產出|直接(?:得到|獲得|變成)|換來|變成|給出|帶來|立刻|馬上)/u,
+    upgrade:/(?:下一次|下一項|下一輪)?[^。！？\n]{0,12}(?:無人機|工具)?(?:升級|強化|改造)/u,
+    fund:/(?:資助|支付|提供資金|籌夠|覆蓋|抵掉|直接換成|價值直接|足夠支付)/u,
+    hands:/(?:實測|親測|試玩|上手測試|實機|真機)/u,
+    realDevice:/(?:實機|真機|真實裝置|真實設備)/u,
+    progress:/(?:正在|當前|目前|已經|整理中|測試中|1\.0)/u,
+    persona:/(?:我們|本站|本指南|編輯組|團隊)/u,
+    automationBoundary:/(?:不|未|沒有|不據此)[^。！？\n]{0,40}(?:推斷|表示|代表|建立|聲稱|依賴|前置|順序|科技樹)|(?:分別|獨立)列出/u,
+    testBoundary:/(?:未|沒有|尚未|未經|未由|不聲稱|不代表)[^。！？\n]{0,45}(?:實測|親測|試玩|實機|測試)|(?:實測|親測|試玩|實機|測試)前|(?:待|仍待)[^。！？\n]{0,35}(?:來源|資料)[^。！？\n]{0,20}(?:核對|核實)/u,
+  },
+  ja: {
+    auto:/(?:オートメーション|自動化|自動作業|ドローン基地|作業ステーション)/u,
+    power:/(?:電力網|送電網|電力|エネルギー|太陽光|風力)/u,
+    station:/(?:作業ステーション|ステーション|基地|ドローン基地)/u,
+    drone:/ドローン/u,
+    relation:/(?:→|->|前提|必須|必要|まず|先に|次に|その後|最後に|してから|経て|解放|開放|依存|駆動|つながる|導く)/u,
+    prerequisite:/(?:前提|必須|必要条件|先に[^。]{0,25}(?:必要|ないと)|終えてから|済ませてから)/u,
+    dependency:/(?:依存|駆動|つながる|導く|解放|必要とする)/u,
+    architecture:/(?:アーキテクチャ|構成|固定|標準|層|段階|フェーズ|スタック|チェーン|テックツリー)/u,
+    techTree:/テックツリー/u,
+    early:/(?:序盤|開始直後|冒頭|初期)/u,
+    mid:/(?:中盤|中ほど|折り返し|中期)/u,
+    late:/(?:終盤|エンドゲーム|結末前|最後の区間)/u,
+    community:/(?:プレイヤー|コミュニティ)/u,
+    general:/(?:多く|大半|一般に|通常|定番|標準|合意|総意|主流|一致|推奨)/u,
+    route:/(?:ルート|順番|順序|経路|ロードマップ|進め方)/u,
+    rare:/(?:レア|希少|珍しい|特別な)[^。！？\n]{0,18}(?:魚|釣果|獲物|キャッチ)/u,
+    parts:/(?:高級|上位|高度)[^。！？\n]{0,18}(?:ドローン|道具)?[^。！？\n]{0,12}(?:部品|パーツ|コンポーネント)|(?:ドローン|道具)(?:部品|パーツ)/u,
+    direct:/(?:落とす|ドロップ|生み出す|直接(?:得る|入手)|そのまま|直結|変わる|手に入る|すぐ)/u,
+    upgrade:/(?:次の)?[^。！？\n]{0,12}(?:ドローン|道具)?(?:強化|アップグレード|改造)/u,
+    fund:/(?:資金|費用を賄う|支払える|まかなえる|直接回せる|価値がそのまま|一匹で)/u,
+    hands:/(?:実機|実地テスト|プレイテスト|手元で検証|実際にプレイ)/u,
+    realDevice:/(?:実機|実端末|実際の端末)/u,
+    progress:/(?:現在|いま|編集中|検証中|テスト中|1\.0)/u,
+    persona:/(?:当サイト|本ガイド|私たち|編集部|チーム)/u,
+    automationBoundary:/(?:推測しません|示しません|意味しません|依存関係はない|順序では(?:ない|ありません)|別々|個別に列挙)/u,
+    testBoundary:/(?:検証してい(?:ない|ません)|テストしてい(?:ない|ません)|実機確認してい(?:ない|ません)|未検証|出典確認待ち|資料との照合待ち)/u,
+  },
+  ko: {
+    auto:/(?:농업 자동화|자동화|자동 작업|드론 기지|작업 스테이션)/u,
+    power:/(?:전력망|전력|에너지|태양광|풍력)/u,
+    station:/(?:작업 스테이션|스테이션|기지|드론 기지)/u,
+    drone:/드론/u,
+    relation:/(?:→|->|전제|필수|필요|먼저|다음|그 후|마지막|이후|해금|잠금 해제|의존|구동|이어지|거쳐)/u,
+    prerequisite:/(?:전제|필수 조건|먼저[^.]{0,25}(?:완성|구축|필요)|끝내야|완료해야)/u,
+    dependency:/(?:의존|구동|이어지|해금|필요로|공급해야)/u,
+    architecture:/(?:아키텍처|구조|고정|표준|층|단계|페이즈|스택|체인|테크 트리)/u,
+    techTree:/테크\s*트리/u,
+    early:/(?:초반|시작 구간|초기)/u,
+    mid:/(?:중반|중간 지점|절반)/u,
+    late:/(?:후반|엔드게임|결말 직전|마지막 구간)/u,
+    community:/(?:플레이어|커뮤니티)/u,
+    general:/(?:대부분|많은|보통|일반적으로|정석|표준|합의|주류|일치|추천)/u,
+    route:/(?:루트|경로|순서|로드맵|진행법)/u,
+    rare:/(?:희귀|특별한|보기 드문)[^.!?。\n]{0,18}(?:물고기|어획|낚은 것|캐치)/u,
+    parts:/(?:고급|상급)[^.!?。\n]{0,18}(?:드론|도구)?[^.!?。\n]{0,12}(?:부품|컴포넌트)|(?:드론|도구)\s*부품/u,
+    direct:/(?:드롭|떨어뜨|산출|직접(?:얻|주)|그대로|바로|변하|손에 넣)/u,
+    upgrade:/(?:다음)?[^.!?。\n]{0,12}(?:드론|도구)?(?:업그레이드|강화|개조)/u,
+    fund:/(?:자금|비용을 충당|값을 치르|지불|바로 돌리|가치가 곧|한 마리로)/u,
+    hands:/(?:실기기|실제 기기|직접 플레이|플레이테스트|직접 테스트)/u,
+    realDevice:/(?:실기기|실제 기기|물리 기기)/u,
+    progress:/(?:현재|지금|진행 중|편집 중|테스트 중|1\.0)/u,
+    persona:/(?:우리|이 가이드|이 사이트|편집팀|팀)/u,
+    automationBoundary:/(?:추론하지|의미하지|나타내지|뜻하지|의존 관계가 아니|순서가 아니|별도|각각 설명)/u,
+    testBoundary:/(?:테스트하지 않았|검증하지 않았|직접 확인하지 않았|미검증|출처 확인 대기|자료 확인 대기)/u,
+  },
+  es: {
+    auto:/(?:automatizaci[oó]n|tareas autom[aá]ticas|estaciones? de drones?|estaciones? de trabajo)/iu,
+    power:/(?:red el[eé]ctrica|red de energ[ií]a|energ[ií]a|electricidad|solar|e[oó]lica)/iu,
+    station:/(?:estaciones? de trabajo|estaciones?|bases?|estaciones? de drones?)/iu,
+    drone:/drones?/iu,
+    relation:/(?:→|->|\b(?:requisito|prerrequisito|primero|antes|despu[eé]s|luego|al final|solo tras|una vez|desbloquea|abre|depende|alimenta|impulsa|conduce a|requiere)\b)/iu,
+    prerequisite:/\b(?:prerrequisito|requisito previo|debe .* antes|hay que .* antes|solo tras|hasta que .* no)\b/iu,
+    dependency:/\b(?:depende|requiere|alimenta|impulsa|conduce a|desbloquea|abre paso|necesita)\b/iu,
+    architecture:/\b(?:arquitectura|estructura|fij[oa]|est[aá]ndar|capas?|etapas?|fases?|pila|cadena|sistema completo|[aá]rbol tecnol[oó]gico)\b/iu,
+    techTree:/[aá]rbol (?:de tecnolog[ií]a|tecnol[oó]gico)/iu,
+    early:/\b(?:inicio|temprano|tramo inicial|primeros d[ií]as)\b/iu,
+    mid:/\b(?:mitad|medio juego|punto medio|tramo central)\b/iu,
+    late:/\b(?:final|fin del juego|tramo final|antes del desenlace)\b/iu,
+    community:/\b(?:jugadores?|comunidad)\b/iu,
+    general:/\b(?:mayor[ií]a|muchos|normalmente|generalmente|est[aá]ndar|consenso|habitual|coincide|recomienda|considera)\b/iu,
+    route:/\b(?:ruta|camino|orden|secuencia|hoja de ruta|forma)\b/iu,
+    rare:/\b(?:(?:pez|peces|captura|capturas) (?:rar[oa]s?|excepcional(?:es)?|inusual(?:es)?)|(?:rar[oa]s?|excepcional(?:es)?) (?:pez|peces|captura|capturas))\b/iu,
+    parts:/\b(?:(?:piezas?|componentes?) (?:avanzad[oa]s?|de alto nivel)(?: de dron| de herramienta)?|(?:piezas?|componentes?) de (?:dron|herramienta))\b/iu,
+    direct:/\b(?:sueltan?|dejan?|dan|producen?|entregan?|se convierten? en|directamente|al instante|de inmediato)\b/iu,
+    upgrade:/\b(?:pr[oó]xima )?(?:mejora|actualizaci[oó]n|build|mejora del dron|mejora de herramienta)\b/iu,
+    fund:/\b(?:financian?|pagan?|cubren?|permiten costear|va directo a|convierte .* valor|basta para|costea)\b/iu,
+    hands:/\b(?:prueba pr[aá]ctica|pruebas? de primera mano|hemos probado|estamos probando|playtest|prueba en dispositivo real|hardware real)\b/iu,
+    realDevice:/\b(?:dispositivo real|hardware real|equipo f[ií]sico)\b/iu,
+    progress:/\b(?:ahora|actualmente|en curso|estamos|hemos|editando|probando|versi[oó]n 1\.0|1\.0)\b/iu,
+    persona:/\b(?:nosotros|hemos|estamos|esta gu[ií]a|este sitio|nuestro equipo)\b/iu,
+    automationBoundary:/\b(?:no|sin)\b[^.!?]{0,70}\b(?:inferir|infiere|establecer|establece|implicar|implica|dependencia|prerrequisito|orden|secuencia|[aá]rbol tecnol[oó]gico)\b|\bcomponentes separados\b/iu,
+    testBoundary:/\b(?:no hemos|no se ha|sin haber|a[uú]n no)\b[^.!?]{0,70}\b(?:probado|prueba|verificado)|\b(?:pendiente de verificar con fuentes|pendiente de comprobaci[oó]n de fuentes)\b/iu,
+  },
+};
+const decodeClaimText = value => String(value)
+  .replace(/&amp;/giu,"&").replace(/&quot;/giu,'"').replace(/&#(?:39|x27);/giu,"'")
+  .replace(/&lt;/giu,"<").replace(/&gt;/giu,">").replace(/\s+/gu," ").trim();
+const sentenceClaimUnits = (value, locale="en") => {
+  const text = decodeClaimText(value);
+  if (!text) return [];
+  try {
+    const segmenter = new Intl.Segmenter(locale,{granularity:"sentence"});
+    return [...segmenter.segment(text)].map(item=>item.segment.trim()).filter(Boolean);
+  } catch {
+    return text.split(/(?<=[.!?。！？；;])\s*/u).map(item=>item.trim()).filter(Boolean);
+  }
+};
+const collectStringLeaves = (value, out=[]) => {
+  if (typeof value === "string") out.push(value);
+  else if (Array.isArray(value)) for (const item of value) collectStringLeaves(item,out);
+  else if (value && typeof value === "object") for (const item of Object.values(value)) collectStringLeaves(item,out);
+  return out;
+};
+const quotedSourceStrings = text => {
+  const out=[];
+  for (let i=0;i<text.length;i+=1) {
+    const quote=text[i];
+    if (quote!=="\"" && quote!=="'") continue;
+    let escaped=false, value="", closed=false;
+    for (i+=1;i<text.length;i+=1) {
+      const ch=text[i];
+      if (escaped) { value+=ch; escaped=false; continue; }
+      if (ch==="\\") { escaped=true; continue; }
+      if (ch===quote) { closed=true; break; }
+      value+=ch;
+    }
+    if (closed && value.trim()) out.push(value);
+  }
+  return out;
+};
+const claimUnitsOf = (input, locale="en") => {
+  const values=Array.isArray(input)?input:[input];
+  return values.flatMap(value=>sentenceClaimUnits(value,locale));
+};
+const claimFamilyHit = (input, localeHint="") => {
+  const locales=localeHint?[localeHint]:claimLocales;
+  for (const locale of locales) {
+    const lex=claimLexicons[locale];
+    if (!lex) continue;
+    for (const unit of claimUnitsOf(input,locale)) {
+      const powerHit=lex.power.test(unit), stationHit=lex.station.test(unit), droneHit=lex.drone.test(unit);
+      const componentCount=Number(powerHit)+Number(stationHit)+Number(droneHit && !droneStationPatterns[locale].test(unit));
+      const automationNamed=automationCorePatterns[locale].test(unit);
+      const automationContext=lex.auto.test(unit) || componentCount>=2;
+      const automationBoundary=lex.automationBoundary.test(unit);
+      const hit = family => ({family,locale,excerpt:unit.replace(/\s+/gu," ").slice(0,280)});
+      if (!automationBoundary && automationContext) {
+        if (/(?:→|->)/u.test(unit) && lex.relation.test(unit) && componentCount>=2) return hit("automation-arrow");
+        if (lex.techTree.test(unit) && (lex.auto.test(unit) || componentCount>=1)) return hit("automation-technology-tree");
+        if (lex.prerequisite.test(unit) && componentCount>=2) return hit("automation-prerequisite");
+        if (lex.dependency.test(unit) && componentCount>=2) return hit("automation-dependency");
+        if (lex.relation.test(unit) && componentCount>=2) return hit("automation-order");
+        if (lex.early.test(unit) && lex.mid.test(unit) && lex.late.test(unit)) return hit("automation-timing");
+        if (lex.community.test(unit) && lex.general.test(unit) && (lex.route.test(unit) || lex.relation.test(unit) || componentCount>=2)) return hit("automation-consensus");
+        if (lex.architecture.test(unit) && (componentCount>=2 || (automationNamed && /(?:2|3|two|three|两|兩|二|三|두|세|dos|tres)/iu.test(unit)))) return hit("automation-architecture");
+      }
+      if (lex.rare.test(unit) && lex.direct.test(unit) && lex.parts.test(unit)) return hit("rare-direct-parts");
+      if (lex.rare.test(unit) && lex.upgrade.test(unit) && (lex.fund.test(unit) || lex.direct.test(unit))) return hit("rare-upgrade-return");
+      if (!lex.testBoundary.test(unit) && lex.hands.test(unit) && (lex.progress.test(unit) || lex.persona.test(unit) || lex.realDevice.test(unit)))
+        return hit(lex.realDevice.test(unit)?"hands-on-real-device":"hands-on-ongoing");
+    }
+  }
+  return null;
+};
+const unsupportedAutomationHit = (text, locale="") => {
+  const semantic=claimFamilyHit(text,locale);
+  if (semantic && semantic.family.startsWith("automation-")) return semantic;
   for (const [family, pattern] of unsupportedAutomationPatterns) {
     const hit = String(text).match(pattern);
     if (hit) return {family, excerpt:hit[0].replace(/\s+/g," ").slice(0,260)};
@@ -190,12 +438,43 @@ const rareFishPatterns = [
   ["direct-drop-es", /peces? raros?[^.!?\n]{0,100}(?:sueltan|dejan|dan)[^.!?\n]{0,70}(?:piezas|componentes)[^.!?\n]{0,35}(?:avanzad[oa]s?|de alto nivel)/iu],
   ["upgrade-return-es", /peces? raros?[^.!?\n]{0,110}(?:financian|pagan|cubren|dan fondos)[^.!?\n]{0,55}(?:mejoras?|builds?)/iu],
 ];
-const rareFishClaimHit = text => {
+const rareFishClaimHit = (text, locale="") => {
+  const semantic=claimFamilyHit(text,locale);
+  if (semantic && semantic.family.startsWith("rare-")) return semantic;
   for (const [family, pattern] of rareFishPatterns) {
     const hit = String(text).match(pattern);
     if (hit) return {family, excerpt:hit[0].replace(/\s+/g," ").slice(0,260)};
   }
   return null;
+};
+const routeLocale = rel => (String(rel).replaceAll("\\","/").match(/^(zh-CN|zh-TW|ja|ko|es)\//u) || [])[1] || "en";
+const claimGuardHit = (input, locale) => claimFamilyHit(input, locale)
+  || unsupportedAutomationHit(input, locale)
+  || rareFishClaimHit(input, locale);
+const scanClaimRecords = ({values, locale, route, layer, source}) => {
+  for (const value of values) for (const unit of sentenceClaimUnits(value, locale)) {
+    const hit=claimGuardHit(unit,locale);
+    if (!hit) continue;
+    fail(`unsupported-claim-${hit.family}-${layer}`,
+      `${locale}:${route}:${layer}:${source}:${hit.excerpt || decodeClaimText(unit).slice(0,280)}`);
+  }
+};
+const stripMarkup = value => decodeClaimText(String(value).replace(/<[^>]+>/gu," "));
+const htmlClaimRecords = (html, layer) => {
+  if (layer === "visible") {
+    const body=html.replace(/<script[\s\S]*?<\/script>/giu," ")
+      .replace(/<style[\s\S]*?<\/style>/giu," ")
+      .replace(/<details[^>]*class="[^"]*(?:faq|harvest-faq)[^"]*"[^>]*>[\s\S]*?<\/details>/giu," ");
+    return [...body.matchAll(/>([^<>]+)</gu)].map(match=>decodeClaimText(match[1])).filter(Boolean);
+  }
+  if (layer === "metadata") return [
+    ...(html.match(/<title>[\s\S]*?<\/title>/giu)||[]).map(stripMarkup),
+    ...[...html.matchAll(/<meta\s+[^>]*content="([^"]*)"[^>]*>/giu)].map(match=>decodeClaimText(match[1])),
+  ];
+  if (layer === "faq") return (html.match(/<details[^>]*class="[^"]*(?:faq|harvest-faq)[^"]*"[^>]*>[\s\S]*?<\/details>/giu)||[]).map(stripMarkup);
+  if (layer === "jsonld") return [...html.matchAll(/<script\s+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/giu)]
+    .flatMap(match=>{ try { return collectStringLeaves(JSON.parse(match[1])); } catch { return [match[1]]; } });
+  return [];
 };
 const staleZhTwMoneyMetaPattern = /(?:區分社群技巧與官方事實|介紹加工、釣魚和前期優先事項)/u;
 const independentFaults = {
@@ -352,45 +631,54 @@ for (const [locale, fixture] of Object.entries(automationPhaseFixtures)) {
     automationPhaseFaults[name] = {layer, rel, locale, text:fixture.natural};
   }
 }
-const automationClaimFixtures = {
-  en: {order:"Energy first, stations second, and drones last.", architecture:"Automation consists of three layers: energy, stations and drones.", timing:"Automation starts in early-mid game, expands in mid game, and finishes in late game.", consensus:"Most players report that automation should follow this roadmap."},
-  "zh-CN": {order:"先建能源，再建站点，然后让无人机干活。", architecture:"自动化由三个阶段组成：能源、站点与无人机。", timing:"自动化从前期-中期开始，中期扩张，后期完成。", consensus:"多数玩家认为自动化应遵循这条路线。"},
-  "zh-TW": {order:"先建能源，再建站點，然後讓無人機幹活。", architecture:"自動化由三個階段組成：能源、站點與無人機。", timing:"自動化從前期-中期開始，中期擴張，後期完成。", consensus:"多數玩家認為自動化應遵循這條路線。"},
-  ja: {order:"まずエネルギー、次に基地、そして最後にドローンです。", architecture:"オートメーションは三つの層で構成されます。", timing:"序盤～中盤に自動化を始め、中盤に広げ、終盤に完成します。", consensus:"コミュニティの合意はこのオートメーション順序を推奨します。"},
-  ko: {order:"먼저 에너지, 다음 기지, 마지막에 드론입니다.", architecture:"자동화는 세 개 층으로 구성됩니다.", timing:"자동화는 초-중반에 시작하고 중반에 확장하며 후반에 완성합니다.", consensus:"커뮤니티 합의는 이 자동화 순서를 추천합니다."},
-  es: {order:"Energía primero, estaciones después y drones al final.", architecture:"La automatización consta de tres capas.", timing:"La automatización empieza en inicio-medio, crece en medio y termina al final.", consensus:"La comunidad recomienda esta ruta de automatización."},
+const coreClaimFixtures = {
+  en:{prerequisite:"The power grid must be live before work stations can release the drone crews.",architecture:"A fixed automation stack groups the power grid, work stations and drone crews into three layers.",timing:"Automated plots begin in the opening stretch, expand around the midpoint and finish in the final stretch.",consensus:"Players widely call the power-grid and work-station plan the standard automation route.",direct:"An exceptional catch immediately yields high-grade drone components.",upgrade:"A trophy fish pays for the next drone upgrade outright."},
+  "zh-CN":{prerequisite:"供电网必须先接通，工作站才会开放无人机作业。",architecture:"固定自动化架构把供电网、工作站与无人机分成三层。",timing:"自动化在开局阶段起步、流程过半时扩张，并在收尾阶段完成。",consensus:"玩家普遍把供电网与工作站方案称为标准自动化路线。",direct:"一条珍稀鱼会立刻产出高级无人机部件。",upgrade:"一次罕见渔获足够支付下一次无人机升级。"},
+  "zh-TW":{prerequisite:"供電網必須先接通，工作站才會開放無人機作業。",architecture:"固定自動化架構把供電網、工作站與無人機分成三層。",timing:"自動化在開局階段起步、流程過半時擴張，並在收尾階段完成。",consensus:"玩家普遍把供電網與工作站方案稱為標準自動化路線。",direct:"一條珍稀魚會立刻產出高級無人機部件。",upgrade:"一次罕見漁獲足夠支付下一次無人機升級。"},
+  ja:{prerequisite:"電力網を先に完成させないと、作業ステーションからドローンを解放できません。",architecture:"固定された自動化アーキテクチャは、電力網・作業ステーション・ドローンを三層に分けます。",timing:"自動化は序盤に始まり、中盤で広がり、最後の区間で完成します。",consensus:"プレイヤーの多くは、電力網と作業ステーションの案を標準の自動化ルートと呼びます。",direct:"珍しい獲物はすぐに高級ドローン部品を生み出します。",upgrade:"珍しい獲物一匹で次のドローン強化費用をまかなえます。"},
+  ko:{prerequisite:"전력망을 먼저 완성해야 작업 스테이션에서 드론을 해금할 수 있습니다.",architecture:"고정 자동화 구조는 전력망·작업 스테이션·드론을 세 개 층으로 묶습니다.",timing:"자동화는 초반에 시작해 중간 지점에서 확장하고 마지막 구간에 완성됩니다.",consensus:"대부분의 플레이어는 전력망과 작업 스테이션 구성을 표준 자동화 루트라고 부릅니다.",direct:"특별한 어획은 바로 고급 드론 부품을 줍니다.",upgrade:"희귀한 물고기 한 마리로 다음 드론 업그레이드 비용을 충당합니다."},
+  es:{prerequisite:"La red eléctrica debe estar lista antes de que las estaciones de trabajo desbloqueen los drones.",architecture:"Una arquitectura fija de automatización agrupa la red eléctrica, las estaciones de trabajo y los drones en tres capas.",timing:"La automatización empieza en el tramo inicial, crece en el punto medio y termina en el tramo final.",consensus:"La mayoría de jugadores considera estándar la ruta de automatización con red eléctrica y estaciones de trabajo.",direct:"Una captura excepcional entrega al instante componentes avanzados de dron.",upgrade:"Una captura excepcional convierte al instante su valor en la próxima mejora del dron."},
 };
-const rareFishFixtures = {
-  en:{direct:"Rare fish drop advanced drone and tool parts.",upgrade:"Rare fish fund your next upgrades."},
-  "zh-CN":{direct:"稀有鱼掉落高级无人机部件。",upgrade:"稀有鱼提供资金用于升级。"},
-  "zh-TW":{direct:"稀有魚掉落高級無人機零件。",upgrade:"稀有魚提供資金用於升級。"},
-  ja:{direct:"レア魚は高級ドローン部品を落とします。",upgrade:"レア魚の資金で強化できます。"},
-  ko:{direct:"희귀어는 고급 드론 부품을 드롭합니다.",upgrade:"희귀어 자금으로 업그레이드합니다."},
-  es:{direct:"Los peces raros sueltan piezas avanzadas de dron.",upgrade:"Los peces raros financian las mejoras."},
+const coreLayerByFamily={prerequisite:"source",architecture:"effective",timing:"visible",consensus:"metadata",direct:"faq",upgrade:"jsonld"};
+const coreExpectedFamily={prerequisite:"automation-prerequisite",architecture:"automation-architecture",timing:"automation-timing",consensus:"automation-consensus",direct:"rare-direct-parts",upgrade:"rare-upgrade-return"};
+const coreRouteByFamily={prerequisite:"automation",architecture:"farming",timing:"how-to-play",consensus:"automation",direct:"fishing",upgrade:"fishing"};
+const residualClaimFixtures = {
+  en:{arrow:"Power grid → work stations → drone crews is the automation route.",prerequisite:"Work stations are a prerequisite for the drone fleet in this automation plan.",dependency:"Automation depends on the power network to operate drone stations.",techTree:"Farm stations and drones make up the complete automation technology tree.",ongoing:"This guide is currently hands-on testing the version 1.0 achievement list.",realDevice:"Our team is editing the checklist after a playtest on real hardware."},
+  "zh-CN":{arrow:"供电网 → 工作站 → 无人机是自动化路线。",prerequisite:"工作站是这套自动化方案启用无人机的前置条件。",dependency:"自动化依赖供电网来驱动无人机站。",techTree:"农场站点与无人机组成完整的自动化科技树。",ongoing:"本站正在对 1.0 成就清单做上手测试。",realDevice:"编辑组正在真机试玩后整理这份清单。"},
+  "zh-TW":{arrow:"供電網 → 工作站 → 無人機是自動化路線。",prerequisite:"工作站是這套自動化方案啟用無人機的前置條件。",dependency:"自動化依賴供電網來驅動無人機站。",techTree:"農場站點與無人機組成完整的自動化科技樹。",ongoing:"本站正在對 1.0 成就清單做上手測試。",realDevice:"編輯組正在真機試玩後整理這份清單。"},
+  ja:{arrow:"電力網 → 作業ステーション → ドローンが自動化ルートです。",prerequisite:"作業ステーションは自動化でドローンを使う前提です。",dependency:"オートメーションは電力網に依存してドローン基地を駆動します。",techTree:"農場ステーションとドローンが完全な自動化テックツリーを構成します。",ongoing:"本ガイドは現在、1.0実績一覧をプレイテスト中です。",realDevice:"編集部は実機でテストしながら一覧を編集中です。"},
+  ko:{arrow:"전력망 → 작업 스테이션 → 드론이 자동화 루트입니다.",prerequisite:"작업 스테이션은 자동화에서 드론을 쓰기 위한 전제 조건입니다.",dependency:"자동화는 전력망에 의존해 드론 기지를 구동합니다.",techTree:"농장 스테이션과 드론이 완전한 자동화 테크 트리를 이룹니다.",ongoing:"이 가이드는 현재 1.0 업적 목록을 직접 테스트 중입니다.",realDevice:"편집팀은 실제 기기에서 플레이테스트하며 목록을 편집 중입니다."},
+  es:{arrow:"Red eléctrica → estaciones de trabajo → drones es la ruta de automatización.",prerequisite:"Las estaciones de trabajo son el prerrequisito para usar drones en esta automatización.",dependency:"La automatización depende de la red eléctrica para impulsar las estaciones de drones.",techTree:"Las estaciones agrícolas y los drones forman el árbol tecnológico completo de automatización.",ongoing:"Esta guía está haciendo ahora una prueba práctica de la lista de logros del 1.0.",realDevice:"Nuestro equipo edita la lista tras una prueba en hardware real."},
 };
-const contentClaimFaults = {}, contentClaimFaultNames = [];
+const residualExpectedFamily={arrow:"automation-arrow",prerequisite:"automation-prerequisite",dependency:"automation-dependency",techTree:"automation-technology-tree",ongoing:"hands-on-ongoing",realDevice:"hands-on-real-device"};
 const claimLayers = ["source","effective","visible","metadata","faq","jsonld"];
-const claimRoutes = ["automation","farming","fishing","drone-combat","exploration","how-to-play"];
-for (const [localeIndex, [locale, fixtures]] of Object.entries(automationClaimFixtures).entries()) {
-  let familyIndex = 0;
-  for (const [family, text] of Object.entries(fixtures)) {
-    const layer = claimLayers[(localeIndex + familyIndex) % claimLayers.length];
-    const name = `automation-claim-${locale.toLowerCase()}-${family}-${layer}`;
-    contentClaimFaultNames.push(name);
-    contentClaimFaults[name] = {layer, locale, rel:`${locale === "en" ? "" : `${locale}/`}automation.html`, text};
-    familyIndex += 1;
+const contentClaimFaults = {}, contentClaimFaultNames = [], residualClaimFaultNames=[];
+for (const [locale,fixtures] of Object.entries(coreClaimFixtures)) for (const [family,text] of Object.entries(fixtures)) {
+  const layer=coreLayerByFamily[family], slug=coreRouteByFamily[family];
+  const name=`claim-matrix-${locale.toLowerCase()}-${family}-${layer}`;
+  contentClaimFaultNames.push(name);
+  contentClaimFaults[name]={layer,locale,rel:`${locale==="en"?"":`${locale}/`}${slug}.html`,text,expectedFamily:coreExpectedFamily[family]};
+}
+for (const [localeIndex,[locale,fixtures]] of Object.entries(residualClaimFixtures).entries()) {
+  let familyIndex=0;
+  for (const [family,text] of Object.entries(fixtures)) {
+    const layer=claimLayers[(localeIndex+familyIndex)%claimLayers.length];
+    const slug=family==="ongoing"?"achievements":family==="realDevice"?"fishing":"automation";
+    const name=`claim-proof-${locale.toLowerCase()}-${family}-${layer}`;
+    residualClaimFaultNames.push(name);
+    contentClaimFaults[name]={layer,locale,rel:`${locale==="en"?"":`${locale}/`}${slug}.html`,text,expectedFamily:residualExpectedFamily[family]};
+    familyIndex+=1;
   }
 }
-for (const [localeIndex, [locale, fixtures]] of Object.entries(rareFishFixtures).entries()) {
-  let familyIndex = 0;
-  for (const [family, text] of Object.entries(fixtures)) {
-    const layer = claimLayers[(localeIndex + familyIndex * 3) % claimLayers.length];
-    const slug = claimRoutes[(localeIndex + familyIndex) % claimRoutes.length];
-    const name = `rare-fish-claim-${locale.toLowerCase()}-${family}-${layer}`;
-    contentClaimFaultNames.push(name);
-    contentClaimFaults[name] = {layer, locale, rel:`${locale === "en" ? "" : `${locale}/`}${slug}.html`, text};
-    familyIndex += 1;
-  }
+const matrixCoverage=(faultNames,expectedCount,label)=>{
+  if(faultNames.length!==expectedCount) throw new Error(`${label} fault count ${faultNames.length} != ${expectedCount}`);
+};
+matrixCoverage(contentClaimFaultNames,36,"core-claim");
+matrixCoverage(residualClaimFaultNames,36,"residual-claim");
+for (const family of Object.keys(residualExpectedFamily)) {
+  const specs=residualClaimFaultNames.filter(name=>name.includes(`-${family}-`)).map(name=>contentClaimFaults[name]);
+  if (new Set(specs.map(spec=>spec.locale)).size!==6 || new Set(specs.map(spec=>spec.layer)).size!==6)
+    throw new Error(`residual ${family} must cover six locales and six layers`);
 }
 Object.assign(independentFaults, fishingRecipeFaults, automationPhaseFaults, contentClaimFaults);
 const fishingRecipeFault = fishingRecipeFaults[fault];
@@ -552,14 +840,14 @@ try {
     const page = sourceData.pages?.find(item => item.slug === slug);
     return locale === "en" ? page : page?.i18n?.[locale];
   };
-  for (const locale of contentLocales) {
-    const injected = [automationPhaseFault, contentClaimFault]
-      .filter(item => item?.layer === "effective" && item.locale === locale).map(item => item.text).join(" ");
-    const effectiveSite = `${JSON.stringify((sourceData.pages || []).map(page => localizedPageView(page.slug, locale) || {}))} ${injected}`;
-    const automationHit = unsupportedAutomationHit(effectiveSite);
-    if (automationHit) fail("unsupported-automation-effective", `${locale}:${automationHit.family}:${automationHit.excerpt}`);
-    const fishHit = rareFishClaimHit(effectiveSite);
-    if (fishHit) fail("rare-fish-claim-effective", `${locale}:${fishHit.family}:${fishHit.excerpt}`);
+  for (const locale of contentLocales) for (const page of sourceData.pages || []) {
+    const rel=`${locale==="en"?"":`${locale}/`}${page.slug}.html`;
+    const values=collectStringLeaves(localizedPageView(page.slug,locale)||{});
+    if (contentClaimFault?.layer==="effective" && contentClaimFault.locale===locale && contentClaimFault.rel===rel)
+      values.push(contentClaimFault.text);
+    if (automationPhaseFault?.layer==="effective" && automationPhaseFault.locale===locale && automationPhaseFault.rel===rel)
+      values.push(automationPhaseFault.text);
+    scanClaimRecords({values,locale,route:rel,layer:"effective",source:"data/site.json"});
   }
   const automationSafeBoundaries = [
     "Official 1.0 notes describe farming automation and drone stations.",
@@ -570,18 +858,22 @@ try {
     "Los avisos oficiales describen automatización agrícola; 1.00.03 enumera fallos de drones en ciertas situaciones.",
   ];
   for (const boundary of automationSafeBoundaries) if (unsupportedAutomationHit(boundary)) fail("automation-phase-negative-control", boundary);
-  for (const [locale, fixtures] of Object.entries(automationClaimFixtures)) for (const [family, fixture] of Object.entries(fixtures)) {
-    const hit = unsupportedAutomationHit(fixture);
-    if (!hit) fail("automation-claim-fixture-undetected", `${locale}:${family}`);
+  for (const [locale, fixtures] of Object.entries(coreClaimFixtures)) for (const [family, fixture] of Object.entries(fixtures)) {
+    const hit=claimFamilyHit(fixture,locale), expected=coreExpectedFamily[family];
+    if (!hit || hit.family!==expected) fail("core-claim-fixture-undetected",`${locale}:${family}:${hit?.family||"none"}`);
   }
-  for (const [locale, fixtures] of Object.entries(rareFishFixtures)) for (const [family, fixture] of Object.entries(fixtures)) {
-    const hit = rareFishClaimHit(fixture);
-    if (!hit) fail("rare-fish-fixture-undetected", `${locale}:${family}`);
+  for (const [locale, fixtures] of Object.entries(residualClaimFixtures)) for (const [family, fixture] of Object.entries(fixtures)) {
+    const hit=claimFamilyHit(fixture,locale), expected=residualExpectedFamily[family];
+    if (!hit || hit.family!==expected) fail("residual-claim-fixture-undetected",`${locale}:${family}:${hit?.family||"none"}`);
   }
   for (const safe of [
     "Upgrade the rod before targeting rare fish.", "挑战稀有鱼前先核对鱼竿要求。", "レア魚を狙う前に竿の要件を確認します。",
     "희귀어를 노리기 전에 낙싯대 요구 사항을 확인하세요.", "Mejora la caña antes de buscar peces raros.",
     "Crop gene breeding combines parent traits; it is unrelated to fishing catches.",
+    "The official notes list solar power and drone stations as separate components, not a dependency.",
+    "This is not hands-on verified; source review is still pending.",
+    "Named community testers describe their own device results; this site does not claim a hands-on test.",
+    "Verify the requirement on your own device before spending parts.",
   ]) if (rareFishClaimHit(safe) || unsupportedAutomationHit(safe)) fail("content-claim-negative-control", safe);
   const automationPage = sourceData.pages?.find(item => item.slug === "automation");
   const automationLocalization = {
@@ -811,30 +1103,40 @@ try {
   };
   const sourceEntries = semanticSourceFiles.map(file => ({rel:path.relative(root,file), text:fs.readFileSync(file,"utf8")}));
   if (semanticSourceFaults[fault]) sourceEntries.push({rel:`fault-source:${fault}`, text:semanticSourceFaults[fault]});
-  if (independentFault?.layer === "source") sourceEntries.push({rel:`fault-source:${fault}`, text:independentFault.text});
+  if (independentFault?.layer === "source" && !contentClaimFault) sourceEntries.push({rel:`fault-source:${fault}`, text:independentFault.text});
   for (const {rel,text} of sourceEntries) {
     scanSemantic(text, "source", rel);
     if (removedGameplayPattern.test(text)) fail("removed-gameplay-source", rel);
-    const automationHit = unsupportedAutomationHit(text);
-    if (automationHit) fail("unsupported-automation-source", `${rel}:${automationHit.family}:${automationHit.excerpt}`);
-    const fishHit = rareFishClaimHit(text);
-    if (fishHit) fail("rare-fish-claim-source", `${rel}:${fishHit.family}:${fishHit.excerpt}`);
     for (const [code,re] of forbidden) if(re.test(text)) fail(code,rel);
     for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(text)) fail(code,rel);
   }
+  const buildClaimStrings=quotedSourceStrings(buildRaw);
+  for (const locale of contentLocales)
+    scanClaimRecords({values:buildClaimStrings,locale,route:"data/build_content.py",layer:"source",source:"quoted-string"});
+  scanClaimRecords({values:collectStringLeaves(JSON.parse(fs.readFileSync(path.join(root,"data/site.base.json"),"utf8"))),locale:"en",route:"data/site.base.json",layer:"source",source:"json-leaf"});
+  for (const locale of contentLocales) for (const page of sourceData.pages || []) {
+    const rel=`${locale==="en"?"":`${locale}/`}${page.slug}.html`;
+    scanClaimRecords({values:collectStringLeaves(localizedPageView(page.slug,locale)||{}),locale,route:rel,layer:"source",source:"data/site.json"});
+  }
+  if (contentClaimFault?.layer==="source") scanClaimRecords({values:[contentClaimFault.text],locale:contentClaimFault.locale,route:contentClaimFault.rel,layer:"source",source:`fault:${fault}`});
+  else if (independentFault?.layer==="source") scanClaimRecords({
+    values:[independentFault.text],locale:independentFault.locale||routeLocale(independentFault.rel),
+    route:independentFault.rel,layer:"source",source:`fault:${fault}`,
+  });
   for (const file of generatedFiles) {
     const rel = path.relative(disabled, file);
     const html = fs.readFileSync(file, "utf8");
     const visible = html
       .replace(/<script[\s\S]*?<\/script>/gi, " ")
       .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<details[^>]*class="[^"]*(?:faq|harvest-faq)[^"]*"[^>]*>[\s\S]*?<\/details>/gi," ")
       .replace(/<[^>]+>/g, " ")
       .replace(/&[a-z]+;/gi, " ");
     const metadata = [
       ...(html.match(/<title>[\s\S]*?<\/title>/gi) || []),
       ...(html.match(/<meta\s+[^>]*content="[^"]*"[^>]*>/gi) || []),
     ].join(" ");
-    const faqLayer = (html.match(/<details class="faq">[\s\S]*?<\/details>/gi) || []).join(" ");
+    const faqLayer = (html.match(/<details[^>]*class="[^"]*(?:faq|harvest-faq)[^"]*"[^>]*>[\s\S]*?<\/details>/gi) || []).join(" ");
     const jsonLd = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)].map(match => match[1]);
     generatedVisibleFileCount += 1;
     generatedJsonLdBlockCount += jsonLd.length;
@@ -875,26 +1177,17 @@ try {
     scanSemantic(metadata, "generated_metadata", rel);
     for (const block of jsonLd) scanSemantic(block, "generated_jsonld", rel);
     if (removedGameplayPattern.test(visible) || removedGameplayPattern.test(metadata) || jsonLd.some(block=>removedGameplayPattern.test(block))) fail("removed-gameplay-generated",rel);
-    for (const [layer, text] of [["visible",visible],["metadata",metadata],["faq",faqLayer]]) {
-      const automationHit = unsupportedAutomationHit(text);
-      if (automationHit) fail(`unsupported-automation-generated-${layer}`,`${rel}:${automationHit.family}:${automationHit.excerpt}`);
-      const fishHit = rareFishClaimHit(text);
-      if (fishHit) fail(`rare-fish-claim-generated-${layer}`,`${rel}:${fishHit.family}:${fishHit.excerpt}`);
-    }
-    for (const block of jsonLd) {
-      const automationHit = unsupportedAutomationHit(block);
-      if (automationHit) fail("unsupported-automation-generated-jsonld",`${rel}:${automationHit.family}:${automationHit.excerpt}`);
-      const fishHit = rareFishClaimHit(block);
-      if (fishHit) fail("rare-fish-claim-generated-jsonld",`${rel}:${fishHit.family}:${fishHit.excerpt}`);
-    }
+    const claimLocale=routeLocale(route);
+    for (const layer of ["visible","metadata","faq","jsonld"])
+      scanClaimRecords({values:htmlClaimRecords(html,layer),locale:claimLocale,route,layer,source:"generated-html"});
     if (rel===path.join("zh-TW","make-money.html") && (staleZhTwMoneyMetaPattern.test(metadata) || !metadata.includes(expectedZhTwMoneyMeta))) fail("zh-tw-money-metadata-generated",rel);
     for (const [code,re] of forbidden) if(re.test(html)) fail(code,rel);
     for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(html)) fail(code,rel);
   }
   const badKoAutomationParticle = /농업 자동화이/u;
-  const expectedKoAutomation = "농업 자동화가 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다.";
+  const expectedKoAutomation = "공식 자료는 농업 자동화, 농장 드론 기지와 파종·육성·수확 작업을 각각 설명하며 구성 요소 간 의존 관계는 추론하지 않습니다.";
   if (badKoAutomationParticle.test(buildRaw) || badKoAutomationParticle.test(JSON.stringify(sourceData))) fail("ko-automation-particle-source", "persistent");
-  if (!buildRaw.includes("농업 자동화가 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다.")) fail("ko-automation-particle-raw-correction-missing", "data/build_content.py");
+  if (!buildRaw.includes(expectedKoAutomation)) fail("ko-automation-particle-raw-correction-missing", "data/build_content.py");
   if (!JSON.stringify(sourceData.pages?.find(page => page.slug === "faq")?.i18n?.ko || {}).includes(expectedKoAutomation)) fail("ko-automation-particle-effective-correction-missing", "faq:ko");
   for (const rel of [path.join("ko", "index.html"), path.join("ko", "faq.html")]) {
     const html = fs.readFileSync(path.join(disabled, rel), "utf8");
@@ -1038,7 +1331,7 @@ try {
 } finally { fs.rmSync(disabled,{recursive:true,force:true}); fs.rmSync(enabled,{recursive:true,force:true}); }
 const negativeFixtureExitCodes = {};
 if (!fault && !failures.length) {
-  for (const name of [
+  const negativeFixtureNames = [
     "default-module-leak", "ko-unsupported-semantics", "es-corruption", "ko-flat-field-causality",
     "ko-drought-profit-residue", "es-drought-benefit", "es-farming-malformed", "ko-name-drift",
     "semantic-drought-source", "semantic-drought-visible", "semantic-drought-jsonld",
@@ -1061,15 +1354,40 @@ if (!fault && !failures.length) {
     "global-source-mismatch-literal-source", "global-source-mismatch-paraphrase-faq",
     "global-season-duplicate", "global-season-wrong-source", "global-zh-tw-money-metadata", "global-source-label-fallback",
     "automation-localization-status-fallback", "automation-localization-source-fallback", "automation-localization-reference-fallback",
-    ...fishingRecipeFaultNames, ...automationPhaseFaultNames, ...contentClaimFaultNames, "ko-automation-particle",
-  ]) {
-    const result = spawnSync(process.execPath, [auditScript, root], {
-      env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: name },
-      encoding: "utf8",
-    });
+    ...fishingRecipeFaultNames, ...automationPhaseFaultNames, ...contentClaimFaultNames, ...residualClaimFaultNames, "ko-automation-particle",
+  ];
+  const childResults=new Map();
+  let childIndex=0;
+  const childWorker=async()=>{
+    while (childIndex<negativeFixtureNames.length) {
+      const name=negativeFixtureNames[childIndex++];
+      const result=await new Promise(resolve=>{
+        const child=spawn(process.execPath,[auditScript,root],{env:{...process.env,DOLOC_AMAZON_AUDIT_FAULT:name}});
+        let stdout="",stderr="";
+        child.stdout.setEncoding("utf8"); child.stderr.setEncoding("utf8");
+        child.stdout.on("data",chunk=>{stdout+=chunk;}); child.stderr.on("data",chunk=>{stderr+=chunk;});
+        child.on("error",error=>resolve({status:null,stdout,stderr:`${stderr}${error.message}`}));
+        child.on("close",status=>resolve({status,stdout,stderr}));
+      });
+      childResults.set(name,result);
+    }
+  };
+  await Promise.all(Array.from({length:Math.min(6,negativeFixtureNames.length)},()=>childWorker()));
+  for (const name of negativeFixtureNames) {
+    const result=childResults.get(name);
     negativeFixtureExitCodes[name] = result.status;
     if (!Number.isInteger(result.status) || result.status <= 0) fail("negative-fixture-did-not-fail", name);
+    const claimSpec=contentClaimFaults[name];
+    if (claimSpec) {
+      let child;
+      try { child=JSON.parse(result.stdout); } catch { fail("negative-fixture-invalid-output",name); continue; }
+      const expectedCode=`unsupported-claim-${claimSpec.expectedFamily}-${claimSpec.layer}`;
+      const expectedRoute=claimSpec.rel.replaceAll("\\","/");
+      const matched=(child.failures||[]).some(item=>item.code===expectedCode
+        && String(item.detail).includes(`${claimSpec.locale}:${expectedRoute}:${claimSpec.layer}:`));
+      if (!matched) fail("negative-fixture-wrong-failure",`${name}:${expectedCode}:${claimSpec.locale}:${expectedRoute}:${claimSpec.layer}`);
+    }
   }
 }
-console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fishing_recipe_inventory:fishingRecipeInventory,fishing_recipe_faults:fishingRecipeFaultNames,automation_phase_faults:automationPhaseFaultNames,content_claim_faults:contentClaimFaultNames,automation_claim_families:unsupportedAutomationPatterns.map(([family])=>family),rare_fish_claim_families:rareFishPatterns.map(([family])=>family),gene_breeding_negative_control:"preserved_and_route_scoped",automation_generic_negative_control:"preserved",fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
+console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fishing_recipe_inventory:fishingRecipeInventory,fishing_recipe_faults:fishingRecipeFaultNames,automation_phase_faults:automationPhaseFaultNames,content_claim_faults:contentClaimFaultNames,residual_claim_faults:residualClaimFaultNames,automation_claim_families:unsupportedAutomationPatterns.map(([family])=>family),rare_fish_claim_families:rareFishPatterns.map(([family])=>family),gene_breeding_negative_control:"preserved_and_route_scoped",automation_generic_negative_control:"preserved",fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
 process.exit(failures.length?1:0);

@@ -282,11 +282,11 @@
   "price": "$19.99",
   "steamUrl": "https://store.steampowered.com/app/2285550/Doloc_Town/",
   "officialSite": "",
-  "intro": "Doloc Town is a side-scrolling pixel-art farming sim set in a post-apocalyptic wasteland. Play as a young scavenger who builds a vertical farm one platform at a time under extreme weather: acid rain, scorching heat and thunderstorms. Gather 40+ resources, fish, ranch, modify crop genes, fight alongside your drone and automate production with solar power. The 1.0 full release on August 6, 2026 adds a complete story ending, the Old City Ruins area, farming automation and 37 new achievements.",
+  "intro": "Doloc Town is a side-scrolling pixel-art farming sim set in a post-apocalyptic wasteland. Play as a young scavenger who builds a vertical farm one platform at a time under extreme weather: acid rain, scorching heat and thunderstorms. Gather 40+ resources, fish, ranch, modify crop genes, fight alongside your drone, generate solar and wind power, and use farming automation. The 1.0 full release on August 6, 2026 adds a complete story ending, the Old City Ruins area, farming automation and 37 new achievements.",
   "keyFacts": [
    "1.0 full release: August 6, 2026 with complete story ending",
    "30+ hours of core gameplay, 100+ hours of additional content",
-   "Farming automation: solar power → drone stations (new in 1.0)",
+   "1.0 components include farming automation and farm drone stations; solar and wind are listed power sources",
    "Crop gene system: ~20 mutations across 30+ crops",
    "Extreme weather requires crop protection, watering plans and daily forecasts",
    "80 Steam achievements total (43 base + 37 new in 1.0)"
@@ -2004,7 +2004,7 @@
      "title": "多洛可小镇农业自动化指南（1.0）",
      "metaTitle": "多洛可小镇农业自动化与无人机（1.0）",
      "metaDescription": "多洛可小镇 1.0 农业自动化、任务分配及 1.00.03 无人机已知问题。",
-     "intro": "1.0 把你从农民变成农场经理。这里是发电、部署无人机站、实现整条作物流水线自动化的方法。",
+     "intro": "1.0 增加了农业自动化。官方资料分别列出发电方式、农场无人机站与自动作业；本指南不把它们写成固定流程。",
      "sections": [
       {
        "type": "note",
@@ -2113,7 +2113,7 @@
      "title": "多洛可小鎮農業自動化指南（1.0）",
      "metaTitle": "多洛可小鎮農業自動化與無人機（1.0）",
      "metaDescription": "多洛可小鎮 1.0 農業自動化、任務分配及 1.00.03 無人機已知問題。",
-     "intro": "1.0 把你從農民變成農場經理。這裡是發電、部署無人機站、實現整條作物流水線自動化的方法。",
+     "intro": "1.0 增加了農業自動化。官方資料分別列出發電方式、農場無人機站與自動作業；本指南不把它們寫成固定流程。",
      "sections": [
       {
        "type": "note",
@@ -2709,7 +2709,7 @@
         "用基因读取器、复制器与合成器检查并培育种子。",
         "通过商店、澳柯玛种子研究与野外母本解锁种子母本。",
         "每颗种子最多叠 3 个模块——协同比堆数值更重要。",
-        "⚠️ 具体模块来源仍在 1.0 实测中。"
+        "⚠️ 具体模块来源仍待依据所链接资料核对。"
        ]
       },
       {
@@ -2746,7 +2746,7 @@
         ],
         [
          "+ 约 14 种",
-         "⚠️ 完整列表正在 1.0 实测"
+         "⚠️ 完整列表仍待来源核对"
         ]
        ],
        "rowAttrs": [
@@ -2820,7 +2820,7 @@
         "用基因讀取器、複製器與合成器檢查並培育種子。",
         "通過商店、澳柯瑪種子研究與野外母本解鎖種子母本。",
         "每顆種子最多疊 3 個模塊——協同比堆數值更重要。",
-        "⚠️ 具體模塊來源仍在 1.0 實測中。"
+        "⚠️ 具體模塊來源仍待依據所鏈接資料核對。"
        ]
       },
       {
@@ -2857,7 +2857,7 @@
         ],
         [
          "+ 約 14 種",
-         "⚠️ 完整列表正在 1.0 實測"
+         "⚠️ 完整列表仍待來源核對"
         ]
        ],
        "rowAttrs": [
@@ -2931,7 +2931,7 @@
         "遺伝子リーダー・レプリケーター・シンセサイザーで種子を検査・育成。",
         "ショップ・オーストラリア種子研究・野生母体で種子母体を解放。",
         "種子1つに最大3モジュール——数の暴力よりシナジー。",
-        "⚠️ 正確なモジュール入手先は 1.0 で検証中。"
+        "⚠️ 正確なモジュール入手先はリンク済み資料との照合待ちです。"
        ]
       },
       {
@@ -2968,7 +2968,7 @@
         ],
         [
          "+約14種",
-         "⚠️ 完全リストは 1.0 で検証中"
+         "⚠️ 完全リストは出典確認待ち"
         ]
        ],
        "rowAttrs": [
@@ -7842,7 +7842,7 @@
         ],
         [
          "更多",
-         "⚠️ 完整村民列表正在 1.0 实测"
+         "⚠️ 完整村民列表仍待来源核对"
         ]
        ]
       },
@@ -7876,7 +7876,7 @@
         "每位朋友解锁独特食谱（如炼金台）。",
         "个人剧情场景。",
         "节日参与奖励。",
-        "⚠️ 具体好感阈值正在 1.0 实测。"
+        "⚠️ 具体好感阈值仍待来源核对。"
        ]
       },
       {
@@ -7937,7 +7937,7 @@
         ],
         [
          "更多",
-         "⚠️ 完整村民列表正在 1.0 實測"
+         "⚠️ 完整村民列表仍待來源核對"
         ]
        ]
       },
@@ -7971,7 +7971,7 @@
         "每位朋友解鎖獨特食譜（如鍊金臺）。",
         "個人劇情場景。",
         "節日參與獎勵。",
-        "⚠️ 具體好感閾值正在 1.0 實測。"
+        "⚠️ 具體好感閾值仍待來源核對。"
        ]
       },
       {
@@ -8033,7 +8033,7 @@
         ],
         [
          "その他",
-         "⚠️ 完全リストは 1.0 で検証中"
+         "⚠️ 完全リストは 出典確認待ち"
         ]
        ]
       },
@@ -8068,7 +8068,7 @@
         "友人ごとの固有レシピ（錬金ステーション等）。",
         "町の謎を深める個人ストーリーシーン。",
         "祭りの参加報酬。",
-        "⚠️ 正確なハート閾値は 1.0 で検証中。"
+        "⚠️ 正確なハート閾値は 出典確認待ち。"
        ]
       },
       {
@@ -8695,7 +8695,7 @@
        "heading": "从手工种田到自动化（1.0）",
        "body": "官方 1.0 资料介绍供能选项、农业自动化与农场无人机站；这里仅作编辑核对表，不表示解锁或建造顺序。",
        "items": [
-        "建造太阳能板与自动化设备，为农场生成清洁能源",
+        "建造太阳能板，为农场提供清洁能源；自动化设备另按当前任务核对",
         "建造农场无人机站——让无人机在田间作业的控制点",
         "指派自动化任务：无人机端到端处理播种、培育与收割",
         "改动已运作的布局前，请在当前存档中逐项核对指派的自动任务",
@@ -8902,7 +8902,7 @@
        "heading": "從手工種田到自動化（1.0）",
        "body": "官方 1.0 資料介紹供能選項、農業自動化與農場無人機站；這裡僅作編輯核對表，不表示解鎖或建造順序。",
        "items": [
-        "建造太陽能板與自動化設備，為農場生成清潔能源",
+        "建造太陽能板，為農場提供清潔能源；自動化設備另按當前任務核對",
         "建造農場無人機站——讓無人機在田間作業的控制點",
         "指派自動化任務：無人機端到端處理播種、培育與收割",
         "改動已運作的佈局前，請在當前存檔中逐項核對指派的自動任務",
@@ -9529,7 +9529,7 @@
        "heading": "De la agricultura manual a la automatización (1.0)",
        "body": "Las fuentes oficiales de 1.0 describen energía, automatización agrícola y estaciones de drones. Es una lista editorial, no un orden de desbloqueo o construcción.",
        "items": [
-        "Construye paneles solares y equipos de automatización para suministrar energía a tu granja",
+        "Construye paneles solares para suministrar energía; comprueba por separado los equipos de automatización",
         "Construye estaciones de drones agrícolas: los puntos de control que dejan trabajar a los drones",
         "Asigna tareas de automatización: los drones hacen siembra, cuidado y cosecha de principio a fin",
         "Verifica cada tarea automática en la partida actual antes de cambiar una distribución que ya funciona",
@@ -9567,7 +9567,7 @@
         ],
         [
          "¿El 1.0 automatiza del todo la granja?",
-         "Sí: la energía solar/automatización más las estaciones de drones gestionan siembra, cuidado y cosecha, y te dejan tiempo para explorar, pescar y hacer misiones."
+         "Las fuentes oficiales enumeran energía solar y eólica, automatización agrícola y estaciones de drones como componentes separados. Las estaciones cubren tareas de siembra, cuidado y cosecha; no se infiere una dependencia."
         ]
        ]
       }
@@ -9751,7 +9751,7 @@
         ],
         [
          "⚠️ 完整表格",
-         "1.0 实测中"
+         "待来源核对"
         ]
        ]
       },
@@ -9764,7 +9764,7 @@
         "速度餐——收割日与长途赶路日。",
         "防御餐——废墟探索与 Boss 战。",
         "好感门槛食谱——部分最强增益在村民心后面（如炼金台）。",
-        "⚠️ 逐食谱完整清单正在 1.0 实测中。"
+        "⚠️ 逐食谱完整清单仍待来源核对。"
        ]
       },
       {
@@ -9865,7 +9865,7 @@
         ],
         [
          "⚠️ 完整表格",
-         "1.0 實測中"
+         "待來源核對"
         ]
        ]
       },
@@ -9878,7 +9878,7 @@
         "速度餐——收割日與長途趕路日。",
         "防禦餐——廢墟探索與 Boss 戰。",
         "好感門檻食譜——部分最強增益在村民心後面（如鍊金臺）。",
-        "⚠️ 逐食譜完整清單正在 1.0 實測中。"
+        "⚠️ 逐食譜完整清單仍待來源核對。"
        ]
       },
       {
@@ -9979,7 +9979,7 @@
         ],
         [
          "⚠️ 完全テーブル",
-         "1.0で検証中"
+         "出典確認待ち"
         ]
        ]
       },
@@ -9992,7 +9992,7 @@
         "速度食——収穫日と長距離移動の日。",
         "防御食——遺跡とボス戦。",
         "友好ゲートのレシピ——最強バフの一部は住人のハートの先（錬金ステーション等）。",
-        "⚠️ レシピ単位の完全リストは1.0で検証中。"
+        "⚠️ レシピ単位の完全リストは出典確認待ち。"
        ]
       },
       {
@@ -10782,7 +10782,7 @@
         ],
         [
          "⚠️ 精确门槛",
-         "1.0 实测中"
+         "待来源核对"
         ]
        ]
       },
@@ -10886,7 +10886,7 @@
         ],
         [
          "⚠️ 精確門檻",
-         "1.0 實測中"
+         "待來源核對"
         ]
        ]
       },
@@ -10990,7 +10990,7 @@
         ],
         [
          "⚠️ 正確なしきい値",
-         "1.0で検証中"
+         "出典確認待ち"
         ]
        ]
       },
@@ -11397,7 +11397,7 @@
       {
        "type": "note",
        "heading": "剧透政策",
-       "body": "本页保持轻剧透。深度剧透章节将在实测后补充——并会明确标注。"
+       "body": "本页保持轻剧透。深度剧透章节将在来源核实后补充——并会明确标注。"
       }
      ]
     },
@@ -11466,7 +11466,7 @@
       {
        "type": "note",
        "heading": "劇透政策",
-       "body": "本頁保持輕劇透。深度劇透章節將在實測後補充——並會明確標註。"
+       "body": "本頁保持輕劇透。深度劇透章節將在來源核實後補充——並會明確標註。"
       }
      ]
     },
@@ -11978,7 +11978,7 @@
         "每天早上看天气预报——雷暴与酸雨会提前一天预警。",
         "给露天地块建遮盖，把脆弱作物集中种植。",
         "安装「雨露均沾」基因，旱期自动浇水。",
-        "用雷暴电力驱动 1.0 无人机站与工业区。",
+        "雷暴期间可收集电力；官方 1.0 资料另行列出农场无人机站与工业区。",
         "旱灾前准备作物防护，并在旱灾中规划浇水。"
        ]
       },
@@ -12129,7 +12129,7 @@
         "每天早上看天氣預報——雷暴與酸雨會提前一天預警。",
         "給露天地塊建遮蓋，把脆弱作物集中種植。",
         "安裝「雨露均霑」基因，旱期自動澆水。",
-        "用雷暴電力驅動 1.0 無人機站與工業區。",
+        "雷暴期間可收集電力；官方 1.0 資料另行列出農場無人機站與工業區。",
         "旱災前準備作物防護，並在旱災中規劃澆水。"
        ]
       },
@@ -12830,7 +12830,7 @@
       {
        "type": "note",
        "heading": "备注",
-       "body": "带解锁条件的完整英文 80 成就清单正在 1.0 实测中整理，完成后会替换上方的部分表格。如果你想冲 100%，先从日常类成就（喝水、烹饪、钓鱼）开始——它们自然发生，却又容易被漏记。"
+       "body": "带解锁条件的完整英文 80 成就清单仍待逐项来源核对；核实后会替换上方的部分表格。如果你想冲 100%，先从日常类成就（喝水、烹饪、钓鱼）开始——它们自然发生，却又容易被漏记。"
       }
      ]
     },
@@ -12921,7 +12921,7 @@
       {
        "type": "note",
        "heading": "備註",
-       "body": "帶解鎖條件的完整英文 80 成就清單正在 1.0 實測中整理，完成後會替換上方的部分表格。如果你想衝 100%，先從日常類成就（喝水、烹飪、釣魚）開始——它們自然發生，卻又容易被漏記。"
+       "body": "帶解鎖條件的完整英文 80 成就清單仍待逐項來源核對；核實後會替換上方的部分表格。如果你想衝 100%，先從日常類成就（喝水、烹飪、釣魚）開始——它們自然發生，卻又容易被漏記。"
       }
      ]
     },
@@ -13750,7 +13750,7 @@
        "items": [
         "新区域：旧城废墟（第三大区域）。",
         "完整主线结局。",
-        "农业自动化系统（太阳能+自动化→无人机站）。",
+        "农业自动化与农场无人机站；官方商店另列太阳能和风力供能。",
         "蘑菇节。",
         "更多角色剧情线。",
         "新工具、战斗无人机、鱼与配件。",
@@ -13838,7 +13838,7 @@
        "items": [
         "新區域：舊城廢墟（第三大區域）。",
         "完整主線結局。",
-        "農業自動化系統（太陽能+自動化→無人機站）。",
+        "農業自動化與農場無人機站；官方商店另列太陽能和風力供能。",
         "蘑菇節。",
         "更多角色劇情線。",
         "新工具、戰鬥無人機、魚與配件。",
@@ -14258,7 +14258,7 @@
         ],
         [
          "有农业自动化吗？",
-         "有——1.0 新增。农业自动化驱动农场无人机站，自动播种、培育与收获。"
+         "有——1.0 新增。官方资料分别列出农业自动化、农场无人机站及播种、培育与收获作业，不据此推断组件依赖。"
         ],
         [
          "1.0 有什么新内容？",
@@ -14310,7 +14310,7 @@
         ],
         [
          "有農業自動化嗎？",
-         "有——1.0 新增。農業自動化驅動農場無人機站，自動播種、培育與收穫。"
+         "有——1.0 新增。官方資料分別列出農業自動化、農場無人機站及播種、培育與收穫作業，不據此推斷組件依賴。"
         ],
         [
          "1.0 有什麼新內容？",
@@ -14362,7 +14362,7 @@
         ],
         [
          "農業オートメーションはある？",
-         "あります——1.0で新登場。農業オートメーションがドローン基地を駆動し、播種・育成・収穫を自動化。"
+         "あります——1.0で新登場。公式資料は農業オートメーション、農場ドローン基地、播種・育成・収穫作業をそれぞれ挙げており、構成要素の依存関係は推測しません。"
         ],
         [
          "1.0の新要素は？",
@@ -14414,7 +14414,7 @@
         ],
         [
          "농업 자동화가 있나요?",
-         "네——1.0 신규. 농업 자동화가 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다."
+         "네——1.0 신규. 공식 자료는 농업 자동화, 농장 드론 기지와 파종·육성·수확 작업을 각각 설명하며 구성 요소 간 의존 관계는 추론하지 않습니다."
         ],
         [
          "1.0에 뭐가 새로 있나요?",
@@ -14472,7 +14472,7 @@
         ],
         [
          "¿Hay automatización agrícola?",
-         "Sí, nueva en 1.0: la automatización agrícola alimenta estaciones de drones que siembran, cuidan y cosechan."
+         "Sí, nueva en 1.0: las fuentes oficiales enumeran por separado la automatización agrícola, las estaciones de drones y las tareas de siembra, cuidado y cosecha; no se infiere una dependencia."
         ],
         [
          "¿Qué hay de nuevo en 1.0?",
@@ -15793,7 +15793,7 @@
         "80 个 Steam 成就（基础 43 + 1.0 新增 37）鼓励全收集",
         "作物基因系统：30+ 作物 × 约 20 种突变需要研究与培育",
         "钓鱼：不同池塘、鱼竿与天气有不同渔获——集齐图鉴需要时间",
-        "农业自动化（太阳能+自动化→无人机站）是一整条科技树",
+        "官方资料分别列出太阳能与风力供能、农业自动化和农场无人机站，不据此推断依赖或解锁顺序",
         "5 个区域加上 1.0 新增的旧城废墟带来大量探索时间"
        ]
       },
@@ -15888,7 +15888,7 @@
         "80 個 Steam 成就（基礎 43 + 1.0 新增 37）鼓勵全收集",
         "作物基因系統：30+ 作物 × 約 20 種突變需要研究與培育",
         "釣魚：不同池塘、魚竿與天氣有不同漁獲——集齊圖鑑需要時間",
-        "農業自動化（太陽能+自動化→無人機站）是一整條科技樹",
+        "官方資料分別列出太陽能與風力供能、農業自動化和農場無人機站，不據此推斷依賴或解鎖順序",
         "5 個區域加上 1.0 新增的舊城廢墟帶來大量探索時間"
        ]
       },
@@ -16078,7 +16078,7 @@
         "80개 업적(기본 43 + 1.0 추가 37)이 완주를 유도",
         "작물 유전자 시스템: 30+ 작물 × 약 20개 변이 연구와 육종",
         "낚시: 연못·낚싯대·날씨에 따라 다른 어획 — 도감 완성이 오래 걸림",
-        "농업 자동화와 농장 드론 기지는 하나의 테크 트리",
+        "공식 자료는 농업 자동화와 농장 드론 기지를 별도로 설명하며 하나의 테크 트리로 규정하지 않습니다.",
         "5개 지역 + 1.0의 옛 도시 유적이 탐험 시간을 늘림"
        ]
       },
@@ -16179,7 +16179,7 @@
         "Los 80 logros de Steam (43 base + 37 nuevos en 1.0) invitan a completarlo todo",
         "Sistema genético de cultivos: ~20 mutaciones en más de 30 cultivos por investigar y criar",
         "Pesca: estanques, cañas y clima diferentes dan capturas distintas — completar el catálogo lleva tiempo",
-        "La automatización agrícola (solar + automatización → estaciones de drones) es todo un árbol tecnológico",
+        "Las fuentes oficiales enumeran por separado energía solar y eólica, automatización agrícola y estaciones de drones, sin establecer dependencias ni un orden de desbloqueo",
         "Las 5 regiones más la nueva área de las Ruinas de la Ciudad Vieja añaden tiempo de exploración"
        ]
       },
