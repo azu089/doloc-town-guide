@@ -539,20 +539,20 @@ function consentUi(lang, adsterraEligible){
   <div><h2 id="consent-title-${esc(lang)}">${esc(u.title)}</h2><p>${esc(u.body)}</p><p>${esc(u.change)} <a href="${prefix}/privacy">${esc(u.policy)}</a>.</p></div>
   <div class="consent-actions"><button type="button" class="btn btn-primary" data-consent-accept>${esc(u.accept)}</button><button type="button" class="btn" data-consent-reject>${esc(u.reject)}</button><button type="button" class="consent-link" data-consent-open>${esc(u.settings)}</button></div>
 </section>
-<section id="consent-dialog-${esc(lang)}" class="consent-dialog" data-consent-dialog role="dialog" aria-modal="true" aria-labelledby="consent-dialog-title-${esc(lang)}" hidden>
+<dialog id="consent-dialog-${esc(lang)}" class="consent-dialog" data-consent-dialog aria-labelledby="consent-dialog-title-${esc(lang)}">
   <div class="consent-panel"><div class="consent-panel-head"><h2 id="consent-dialog-title-${esc(lang)}">${esc(u.dialog)}</h2><button type="button" class="consent-close" data-consent-close aria-label="${esc(u.close)}">×</button></div>
   <p class="consent-detail">${esc(u.body)} ${esc(u.change)} <a href="${prefix}/privacy">${esc(u.policy)}</a>.</p>
   <label><input type="checkbox" data-consent-analytics /> <span>${esc(u.analytics)}</span></label>
   <label><input type="checkbox" data-consent-advertising /> <span>${esc(u.advertising)}</span></label>
   <div class="consent-actions"><button type="button" class="btn btn-primary" data-consent-save>${esc(u.save)}</button><button type="button" class="btn" data-consent-withdraw>${esc(u.withdraw)}</button></div></div>
-</section>
+</dialog>
 <script>
 (function(){
   var cfg=${cfg}, banner=document.querySelector('[data-consent-banner]'), dialog=document.querySelector('[data-consent-dialog]');
   var analytics=document.querySelector('[data-consent-analytics]'), advertising=document.querySelector('[data-consent-advertising]');
   var current=null, gaLoaded=false, adLoaded=false, lastFocus=null;
   function read(){try{var v=JSON.parse(localStorage.getItem(cfg.storageKey));return v&&typeof v.analytics==='boolean'&&typeof v.advertising==='boolean'?v:null;}catch(_){return null;}}
-  function persist(v){var reload=!!(current&&((current.analytics&&!v.analytics)||(current.advertising&&!v.advertising)));current=v;try{localStorage.setItem(cfg.storageKey,JSON.stringify(v));}catch(_){} apply(v);banner.hidden=true;dialog.hidden=true;document.querySelector('[data-consent-settings]').setAttribute('aria-expanded','false');if(reload&&location.protocol.indexOf('http')===0)location.reload();}
+  function persist(v){var reload=!!(current&&((current.analytics&&!v.analytics)||(current.advertising&&!v.advertising)));current=v;try{localStorage.setItem(cfg.storageKey,JSON.stringify(v));}catch(_){} apply(v);banner.hidden=true;close();if(reload&&location.protocol.indexOf('http')===0)location.reload();}
   function clearGaCookies(){document.cookie.split(';').forEach(function(row){var n=row.split('=')[0].trim();if(n==='_ga'||n.indexOf('_ga_')===0)document.cookie=n+'=; Max-Age=0; path=/; SameSite=Lax';});}
   function loadGa(){if(!cfg.gaId||gaLoaded||document.getElementById('doloc-ga4-script'))return;window['ga-disable-'+cfg.gaId]=false;window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments);};window.gtag('js',new Date());window.gtag('config',cfg.gaId);var s=document.createElement('script');s.id='doloc-ga4-script';s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(cfg.gaId);document.head.appendChild(s);gaLoaded=true;}
   function blockGa(){if(cfg.gaId)window['ga-disable-'+cfg.gaId]=true;var s=document.getElementById('doloc-ga4-script');if(s)s.remove();gaLoaded=false;clearGaCookies();}
@@ -560,15 +560,17 @@ function consentUi(lang, adsterraEligible){
   function loadAd(){if(!cfg.adsterra||adLoaded||document.getElementById('doloc-adsterra-script'))return;if(!ensureAdContainer())return;var note=document.querySelector('.native-ad-consent-note');if(note)note.remove();var s=document.createElement('script');s.id='doloc-adsterra-script';s.async=true;s.setAttribute('data-cfasync','false');s.src=cfg.adsterra.src;document.body.appendChild(s);adLoaded=true;}
   function blockAd(){var s=document.getElementById('doloc-adsterra-script');if(s)s.remove();if(cfg.adsterra){var c=document.getElementById(cfg.adsterra.containerId);if(c)c.remove();}adLoaded=false;}
   function apply(v){window.DOLOC_CONSENT_ANALYTICS=v.analytics===true;window.DOLOC_CONSENT_ADVERTISING=v.advertising===true;v.analytics?loadGa():blockGa();v.advertising?loadAd():blockAd();}
-  function close(){dialog.hidden=true;document.querySelector('[data-consent-settings]').setAttribute('aria-expanded','false');if(lastFocus&&lastFocus.focus)lastFocus.focus();}
-  function open(){var v=current||{analytics:false,advertising:false};lastFocus=document.activeElement;analytics.checked=v.analytics;advertising.checked=v.advertising;dialog.hidden=false;document.querySelector('[data-consent-settings]').setAttribute('aria-expanded','true');dialog.querySelector('[data-consent-close]').focus();}
+  function close(){if(dialog.open)dialog.close();document.querySelector('[data-consent-settings]').setAttribute('aria-expanded','false');if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+  function open(){var v=current||{analytics:false,advertising:false};lastFocus=document.activeElement;analytics.checked=v.analytics;advertising.checked=v.advertising;if(!dialog.open)dialog.showModal();document.querySelector('[data-consent-settings]').setAttribute('aria-expanded','true');dialog.querySelector('[data-consent-close]').focus();}
   document.querySelector('[data-consent-accept]').addEventListener('click',function(){persist({analytics:true,advertising:true});});
   document.querySelector('[data-consent-reject]').addEventListener('click',function(){persist({analytics:false,advertising:false});});
   document.querySelector('[data-consent-open]').addEventListener('click',open);document.querySelector('[data-consent-settings]').addEventListener('click',open);
   document.querySelector('[data-consent-close]').addEventListener('click',close);
+  dialog.addEventListener('cancel',function(e){e.preventDefault();close();});
+  dialog.addEventListener('keydown',function(e){if(e.key!=='Tab')return;var items=Array.prototype.slice.call(dialog.querySelectorAll('button:not([disabled]),a[href],input:not([disabled])')).filter(function(el){return el.offsetParent!==null;});if(!items.length)return;var first=items[0],last=items[items.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}});
   document.querySelector('[data-consent-save]').addEventListener('click',function(){persist({analytics:analytics.checked,advertising:advertising.checked});});
   document.querySelector('[data-consent-withdraw]').addEventListener('click',function(){persist({analytics:false,advertising:false});});
-  document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;if(!dialog.hidden){close();return;}if(!banner.hidden){banner.hidden=true;document.querySelector('[data-consent-settings]').focus();}});
+  document.addEventListener('keydown',function(e){if(e.key!=='Escape'||dialog.open)return;if(!banner.hidden){banner.hidden=true;document.querySelector('[data-consent-settings]').focus();}});
   current=read();if(current){banner.hidden=true;apply(current);}else{banner.hidden=false;blockGa();blockAd();}
 })();
 </script>`;

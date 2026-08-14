@@ -43,6 +43,12 @@ function inject(relative, html) {
       .replace("gaLoaded||document.getElementById('doloc-ga4-script')", "false")
       .replace("adLoaded||document.getElementById('doloc-adsterra-script')", "false");
   }
+  if (fault === "focus-escape") {
+    return html
+      .replace("<dialog id=\"consent-dialog-", "<section id=\"consent-dialog-")
+      .replace("</dialog>", "</section>")
+      .replace("if(!dialog.open)dialog.showModal();", "dialog.hidden=false;");
+  }
   return html;
 }
 
@@ -61,6 +67,11 @@ for (const { relative, html } of rows) {
   }
   if (!html.includes("aria-controls=\"consent-dialog-") || !html.includes("aria-expanded=\"false\""))
     fail("settings-a11y", relative);
+  if (!html.includes("<dialog id=\"consent-dialog-") ||
+      !html.includes("if(!dialog.open)dialog.showModal();") ||
+      !html.includes("dialog.addEventListener('cancel',function(e){e.preventDefault();close();});") ||
+      !html.includes("dialog.addEventListener('keydown',function(e){if(e.key!=='Tab')return;"))
+    fail("focus-boundary", relative);
   if (!html.includes("document.querySelector('[data-consent-reject]').addEventListener('click',function(){persist({analytics:false,advertising:false});});"))
     fail("reject-not-blocking", relative);
   if (!html.includes("document.querySelector('[data-consent-accept]').addEventListener('click',function(){persist({analytics:true,advertising:true});});"))
@@ -104,7 +115,7 @@ for (const [relative, markers] of Object.entries(privacyMarkers)) {
 
 const negative = {};
 if (!fault && !failures.length) {
-  for (const name of ["no-choice-network", "reject-network", "duplicate-provider"]) {
+  for (const name of ["no-choice-network", "reject-network", "duplicate-provider", "focus-escape"]) {
     const result = spawnSync(process.execPath, [script, root], {
       env: { ...process.env, DOLOC_CONSENT_AUDIT_FAULT: name },
       encoding: "utf8",

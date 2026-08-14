@@ -22,9 +22,12 @@ const boundaryPatterns = [
   /(?:without|does not claim|do not claim)[^.\n]{0,90}(?:unsupported|unverified)[^.\n]{0,40}(?:trading|price-arbitrage|crop risk)/giu,
   /(?:引用的官方公告|引用的官方資訊)[^。\n]{0,50}(?:未建立|未支持)[^。\n]{0,30}(?:倒卖|倒賣|交易)策略/gu,
   /(?:本站|本指南)[^。\n]{0,50}(?:不再声称|不再宣稱|不采用|不採用)[^。\n]{0,50}(?:涨价倒卖|漲價倒賣|交易机制|交易機制)/gu,
+  /不(?:采用未经证实的涨价倒卖说法|採用未證實的漲價倒賣說法)/gu,
   /引用した公式情報は売買攻略を示していません/gu,
   /未確認の(?:価格|取引)攻略は掲載しません/gu,
   /(?:인용한 공식 공지는|이 가이드는)[^.\n]{0,60}(?:거래 전략을 제시하지 않습니다|확인되지 않은 가격 거래 주장은 제외합니다)/gu,
+  /확인되지 않은 가격 거래 주장은 제외합니다/gu,
+  /공식 공지는 가격 변동이나 판매 시점을 뒷받침하지 않습니다/gu,
   /(?:los avisos oficiales citados no establecen|esta guía no afirma|sin)[^.\n]{0,90}(?:estrategia de compraventa|arbitraje de precios|estrategias comerciales)/giu,
 ];
 const droughtPatterns = {
@@ -32,7 +35,14 @@ const droughtPatterns = {
   "zh-CN": [/(?:旱季|干旱|第\s*4\s*月|4\s*月)[^\n]{0,100}(?:价格|物价)[^\n]{0,24}(?:飙升|高涨|最高|最差)/u, /(?:旱季|干旱|第\s*4\s*月|4\s*月)[^\n]{0,100}(?:囤货|倒卖|高价卖出)/u],
   "zh-TW": [/(?:旱季|乾旱|第\s*4\s*月|4\s*月)[^\n]{0,100}(?:價格|物價)[^\n]{0,24}(?:飆升|高漲|最高|最差|最壞)/u, /(?:旱季|乾旱|第\s*4\s*月|4\s*月)[^\n]{0,100}(?:囤貨|倒賣|高價賣出)/u],
   ja: [/(?:干ばつ|乾季|第?4月)[^\n]{0,100}(?:価格|物価)[^\n]{0,24}(?:高騰|上昇|最高|最悪)/u, /(?:干ばつ|乾季|第?4月)[^\n]{0,100}(?:備蓄|高値で売)/u],
-  ko: [/(?:가뭄|건기|4월|4번째\s*달)[^\n]{0,100}(?:가격|물가)[^\n]{0,24}(?:급등|상승|최고|최악)/u, /(?:가뭄|건기|4월|4번째\s*달)[^\n]{0,100}(?:비축|비싸게\s*판매|고가\s*판매)/u],
+  ko: [
+    /(?:가뭄|건기|4월|4번째\s*달)[^\n]{0,100}(?:가격|물가)[^\n]{0,24}(?:급등|상승|최고|최악)/u,
+    /(?:가뭄|건기|4월|4번째\s*달)[^.\n]{0,100}(?:비축|비싸게\s*판매|고가\s*판매|급등기|최고가)/u,
+    /연중\s*(?:최악|최고)[^.\n]{0,24}(?:가격|판매)/u,
+    /작물\s*(?:부담|스트레스)[^.\n]{0,36}(?:판매|수익)/u,
+    /(?:작물\s*보호|보호\s*작물)[^.\n]{0,36}(?:고가|판매\s*시점|판매분)/u,
+    /달력[^.\n]{0,36}(?:가장\s*큰|최대)[^.\n]{0,18}수익/u,
+  ],
   es: [/(?:sequ[ií]a|mes\s*4|temporada\s+seca)[^\n]{0,120}(?:precio(?:s)?[^\n]{0,24}(?:sube|subida|dispara|alto|peor)|acumula|vende\s+caro|arbitraje)/iu, /(?:acumula|vende\s+caro|subida\s+de\s+(?:la\s+)?sequ[ií]a)[^\n]{0,120}(?:sequ[ií]a|mes\s*4)/iu],
 };
 const stripBoundaries = text => boundaryPatterns.reduce((s,re)=>s.replace(re,""), text);
@@ -63,11 +73,20 @@ const safeBoundaries = {
 
 const disabled = fs.mkdtempSync(path.join(os.tmpdir(),"doloc-amz-off-"));
 const enabled = fs.mkdtempSync(path.join(os.tmpdir(),"doloc-amz-on-"));
+let semanticFileCount = 0;
 try {
   generate(disabled,false); generate(enabled,true);
   const offFiles=walk(disabled), onFiles=walk(enabled);
   if (fault === "default-module-leak") {
     fs.appendFileSync(offFiles[0], '<aside class="amazon-gear">fault fixture</aside>');
+  }
+  if (fault === "ko-unsupported-semantics") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("ko", "make-money.html"));
+    fs.appendFileSync(target, "<p>4월 가뭄 전 작물을 비축하고 작물 부담 증가기에 판매하면 달력에서 가장 큰 수익 기회입니다.</p>");
+  }
+  if (fault === "es-corruption") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("es", "how-to-play.html"));
+    fs.appendFileSync(target, "<p>no protege los cultivosr antes del mes 4</p>");
   }
   for (const f of offFiles) {
     const rel=path.relative(disabled,f), html=fs.readFileSync(f,"utf8");
@@ -99,15 +118,18 @@ try {
   // Evidence-semantic guard: inspect the generated data and final HTML, not
   // only one visible route. Exceptions are narrowly limited to warning copy.
   const semanticFiles = [
+    path.join(root,"data/build_content.py"),
     path.join(root,"data/site.base.json"),
     path.join(root,"data/site.json"),
     ...walk(disabled)
   ];
+  semanticFileCount = semanticFiles.length;
   const forbidden = [
     ["wind-claim", /\bwind(?:\s+(?:power|turbines?))\b|aerogeneradores|風力|风力|풍력/i],
     ["unsafe-mod-advice", /DTMAPI.{0,100}(subscribe|install|订阅|訂閱|購読|구독|Suscríbete)|(?:dependencies|依赖|依賴|依存|의존성).{0,40}(first|先|먼저)/i],
     ["new-year-beast-mistranslation", /New Year Beast.{0,20}(difficulty|难度|難度|난이도|dificultad)/i],
-    ["self-backing", /complete.{0,30}(?:change|log)|完整.{0,20}(?:变更|變更)|完全.{0,20}(?:変更|ログ)|완전한.{0,20}(?:변경|로그)|registro completo|site (?:like this )?is the reliable source|本站.{0,20}可靠|本網站.{0,20}可靠|このガイド.{0,20}情報源|이 가이드.{0,20}출처|sitio .*fuente fiable/i]
+    ["self-backing", /complete.{0,30}(?:change|log)|完整.{0,20}(?:变更|變更)|完全.{0,20}(?:変更|ログ)|완전한.{0,20}(?:변경|로그)|registro completo|site (?:like this )?is the reliable source|本站.{0,20}可靠|本網站.{0,20}可靠|このガイド.{0,20}情報源|이 가이드.{0,20}출처|sitio .*fuente fiable/i],
+    ["spanish-corruption", /cultivosr/i]
   ];
   for (const file of semanticFiles) {
     const text=fs.readFileSync(file,"utf8");
@@ -247,14 +269,16 @@ try {
   }
 
 } finally { fs.rmSync(disabled,{recursive:true,force:true}); fs.rmSync(enabled,{recursive:true,force:true}); }
-let negativeFixtureExitCode = null;
+const negativeFixtureExitCodes = {};
 if (!fault && !failures.length) {
-  const result = spawnSync(process.execPath, [auditScript, root], {
-    env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: "default-module-leak" },
-    encoding: "utf8",
-  });
-  negativeFixtureExitCode = result.status;
-  if (!Number.isInteger(result.status) || result.status <= 0) fail("negative-fixture-did-not-fail", "default-module-leak");
+  for (const name of ["default-module-leak", "ko-unsupported-semantics", "es-corruption"]) {
+    const result = spawnSync(process.execPath, [auditScript, root], {
+      env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: name },
+      encoding: "utf8",
+    });
+    negativeFixtureExitCodes[name] = result.status;
+    if (!Number.isInteger(result.status) || result.status <= 0) fail("negative-fixture-did-not-fail", name);
+  }
 }
-console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),negative_fixture_exit_code:negativeFixtureExitCode,failures},null,2));
+console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
 process.exit(failures.length?1:0);

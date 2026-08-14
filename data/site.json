@@ -1531,7 +1531,7 @@
         [
          "가뭄(4월)",
          "작물 시들고 작물 부담 증가",
-         "4월 전 작물 보호 준비, 급등기에 판매"
+         "4월 전에 작물을 보호하고 물주기를 계획"
         ]
        ]
       },
@@ -1558,7 +1558,7 @@
         ],
         [
          "4월 전에 작물 보호 준비 시작",
-         "가뭄 작물 부담 증가으로 작은 작물 보호 준비이 크게 보답합니다."
+         "4월 전에 작물 보호와 물주기를 준비하면 피해를 줄일 수 있습니다."
         ]
        ]
       },
@@ -1592,7 +1592,7 @@
       {
        "type": "note",
        "heading": "초보자의 흔한 실수 (피해야 할 것)",
-       "body": "커뮤니티가 보고한 가장 흔한 런 파괴 요인: 매일 모든 작물에 손으로 물주기(자동화나 '고루 내리는 비' 유전자 사용), 거대한 평지 한 판(폭풍 하나로 전멸), 우정 무시(레시피가 영구히 잠김), Bellad 퀘스트 방치(테크 트리에서 뒤처짐), 4월 전에 아무것도 작물 보호 준비 안 함(1년 중 최악의 가격에 판매)."
+       "body": "커뮤니티가 보고한 가장 흔한 런 파괴 요인: 매일 모든 작물에 손으로 물주기(자동화나 '고루 내리는 비' 유전자 사용), 거대한 평지 한 판(폭풍 하나로 전멸), 우정 무시(레시피가 영구히 잠김), Bellad 퀘스트 방치(테크 트리에서 뒤처짐), 4월 전에 작물 보호와 물주기를 준비하지 않아 작물이 시드는 것."
       },
       {
        "type": "list",
@@ -1814,7 +1814,7 @@
       {
        "type": "note",
        "heading": "Errores comunes de los novatos (evítalos)",
-       "body": "Los finales de partida más comunes según la comunidad: regar a mano todos los cultivos cada día (usa la automatización o el gen Lluvia), plantar un campo plano gigante (una sola tormenta lo borra), ignorar la amistad (te bloquea recetas), saltarte las misiones de Bellad (te atrasas en el árbol tecnológico) y no protege los cultivosr nada antes del mes 4 (proteges los cultivos demasiado tarde del año)."
+       "body": "Los finales de partida más comunes según la comunidad: regar a mano todos los cultivos cada día (usa la automatización o el gen Lluvia), plantar un campo plano gigante (una sola tormenta lo borra), ignorar la amistad (te bloquea recetas), saltarte las misiones de Bellad (te atrasas en el árbol tecnológico) y no proteger los cultivos ni planificar el riego antes del mes 4."
       },
       {
        "type": "list",
@@ -10091,7 +10091,7 @@
         [
          "가뭄 (4월)",
          "작물이 시들고 상점 작물 부담이 커집음",
-         "연중 최고가에 작물 보호 준비분 판매"
+         "작물 보호를 준비하고 물주기를 계획"
         ],
         [
          "어느 계절이든",
@@ -13278,7 +13278,7 @@
          "가뭄 (4월)",
          "시듦, 작물 부담 증가",
          "가장 힘든 농사 달",
-         "연중 최고가에 작물 보호 준비분 판매"
+         "작물 보호를 준비하고 물주기를 계획"
         ],
         [
          "어느 계절이든",
@@ -13303,7 +13303,7 @@
         ],
         [
          "가뭄 타이밍 잡기",
-         "4월 전에 작물 보호 준비하고 작물 부담 증가기에 판매."
+         "4월 전에 작물 보호와 물주기를 준비하세요."
         ]
        ]
       },
@@ -13316,7 +13316,7 @@
         "노출된 구획에 덮개를 짓고 약한 작물은 모아서 심으세요.",
         "'고루 내리는 비' 유전자로 건조기에도 자동 물 주기.",
         "뇌우 전력을 1.0 드론 스테이션과 공업 지구에.",
-        "가뭄 전에 작물 보호 준비하고 가뭄 중에 판매."
+        "가뭄 전에 작물 보호와 물주기를 준비하세요."
        ]
       },
       {
@@ -13339,11 +13339,11 @@
         ],
         [
          "가뭄은 언제인가요?",
-         "4월, 건기 끝. 작물이 시들고 상점 작물 부담이 커집습니다."
+         "4월의 Harsh Dry Season입니다. 작물이 시들 수 있으므로 보호와 물주기 계획이 필요합니다."
         ],
         [
-         "가뭄에서 어떻게 이익을 내나요?",
-         "4월 전에 작물 보호 준비하고 작물 부담 증가기에 판매하세요."
+         "가뭄에는 어떻게 대비하나요?",
+         "4월 전에 작물을 보호하고 물주기를 계획하세요."
         ],
         [
          "우기가 있나요?",
@@ -17606,7 +17606,7 @@
       },
       {
        "heading": "흔한 돈 버는 실수",
-       "body": "커뮤니티가 지적하는 돈을 놓치는 패턴: 원자재를 전부 그대로 판매(10-20% 가공 마진 포기), 4월 전 작물 보호 준비 안 함(연중 최악의 가격으로 판매), 퀘스트 건너뛰기(수입 증폭기인 기술 포인트를 놓침), 물고기를 전부 판매(수조 전용 13종의 번식 쌍 상실), 가방 업그레이드 미루기(왕복에 몇 시간 낭비).",
+       "body": "커뮤니티가 지적하는 돈을 놓치는 패턴: 원자재를 전부 그대로 판매(10-20% 가공 마진 포기), 4월 전 작물 보호와 물주기를 준비하지 않아 작물이 시드는 것, 퀘스트 건너뛰기(수입 증폭기인 기술 포인트를 놓침), 물고기를 전부 판매(수조 전용 13종의 번식 쌍 상실), 가방 업그레이드 미루기(왕복에 몇 시간 낭비).",
        "type": "note"
       },
       {
@@ -17626,8 +17626,8 @@
          "절임·건조·직조 각각 품목당 약 10-20%, 커뮤니티 보고 기준 [L2]."
         ],
         [
-         "작물 보호 준비물은 언제 팔아야 하나요?",
-         "4월 가뭄 전에 작물 보호 준비하고 작물 부담 증가기에 판매 — 달력에서 가장 큰 수익 기회입니다."
+         "4월에는 어떻게 대비하나요?",
+         "4월 Harsh Dry Season 전에 작물을 보호하고 물주기를 계획하세요. 공식 공지는 가격 변동이나 판매 시점을 뒷받침하지 않습니다."
         ],
         [
          "가방 업그레이드는 가치 있나요?",
@@ -17739,7 +17739,7 @@
       },
       {
        "heading": "Errores de dinero comunes",
-       "body": "La comunidad señala estas formas de dejar dinero sobre la mesa: vender todo crudo (te saltas el 10-20% del procesado), no protege los cultivosr antes del mes 4 (proteges los cultivos demasiado tarde del año), saltarte misiones (pierdes Puntos de Tecnología, el multiplicador de ingresos), vender todos los peces (pierdes las parejas de 13 especies de tanque) y retrasar la mochila (horas yendo a casa).",
+       "body": "La comunidad señala estas formas de dejar dinero sobre la mesa: vender todo crudo (te saltas el 10-20% del procesado), no proteger los cultivos ni planificar el riego antes del mes 4, saltarte misiones (pierdes Puntos de Tecnología, el multiplicador de ingresos), vender todos los peces (pierdes las parejas de 13 especies de tanque) y retrasar la mochila (horas yendo a casa).",
        "type": "note"
       },
       {
