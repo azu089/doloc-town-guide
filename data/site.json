@@ -13079,13 +13079,13 @@
         ],
         [
          "雷雨",
-         "農地を破壊",
+         "落雷で電力を供給",
          "雷を電力に"
         ],
         [
          "豪雨",
-         "低地が浸水",
-         "無料灌漑"
+         "雨による灌漑",
+         "雨に灌漑を任せる"
         ],
         [
          "干ばつ（第4月）",
@@ -17147,7 +17147,7 @@
       "Review current inventory upgrades in the shop before spending resources.",
       "Run villager quests to obtain the rewards and Tech Points shown in game.",
       "Use the calendar before planting slow crops so they have time to mature.",
-      "Check the fishing tables for weather-specific catches and keep any fish needed for breeding.",
+      "Check the fishing tables for weather-specific catches and verify current in-game requirements before processing or selling.",
       "Compare raw and processed values in your current save before deciding what to sell."
      ]
     },
@@ -17188,11 +17188,11 @@
      "type": "steps",
      "tag": "STARTER LOOP",
      "heading": "Fishing and Processing Checklist",
-     "body": "Use the free tutorial rod, weather tables and unlocked equipment as a checklist; this guide does not claim a single best-profit route.",
+     "body": "Use weather tables and currently unlocked equipment as a checklist; this guide does not claim a single best-profit route.",
      "items": [
       [
-       "Get the free rod",
-       "Do the Lightman fishing tutorial and use the rod it provides."
+       "Check current fishing equipment",
+       "Use the equipment requirements displayed in your current game before targeting harder catches."
       ],
       [
        "Fish through weather",
@@ -17207,8 +17207,8 @@
        "Check the current in-game requirements before targeting harder catches."
       ],
       [
-       "Keep breeding pairs",
-       "13 tank-only species need specific parents — keep spares, sell the surplus."
+       "Verify before processing",
+       "Check the current in-game requirements and displayed values before keeping, processing or selling a catch."
       ]
      ]
     },
@@ -17221,6 +17221,7 @@
       "Month 4 is Harsh Dry Season — protect crops and plan watering.",
       "Rainy season (Jan-Feb) reshuffles the fish tables — fish the uncommon catches while they last.",
       "Thunderstorms can charge farm power used by the 1.0 automation system.",
+      "The official Steam store lists both solar and wind power for supplying the farm.",
       "Plant for the season — off-season crops wither, so rotate what you grow with the calendar."
      ]
     },
@@ -17228,13 +17229,13 @@
      "type": "note",
      "tag": "MISTAKES",
      "heading": "Common Money Mistakes",
-     "body": "Before selling or spending, check current in-game values, keep fish required for breeding, review quest rewards and protect crops and plan watering before Month 4. Exact returns and upgrade value are not verified here."
+     "body": "Before selling or spending, check current in-game values, review quest rewards and plan crop protection and watering before Month 4. Exact returns and upgrade value are not verified here."
     },
     {
      "type": "note",
      "tag": "SOURCES",
      "heading": "Sources & Verification",
-     "body": "The linked official announcements support the dated 1.0 release and two-stage automation, but do not provide processing returns, rod thresholds or upgrade value. We have not hands-on tested those exact values, so this page does not recommend them."
+     "body": "The official Steam store supports solar and wind power, while the linked announcement supports the dated 1.0 release and two-stage automation. These sources do not provide processing returns, fishing-equipment thresholds or upgrade value; those exact values remain not hands-on verified."
     },
     {
      "type": "faq",
@@ -17264,6 +17265,20 @@
      ]
     }
    ],
+   "sources": [
+    {
+     "label": "Official Steam store — solar and wind power",
+     "url": "https://store.steampowered.com/app/2285550/Doloc_Town/"
+    },
+    {
+     "label": "Official Doloc Town patch 1.00.03",
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
+    },
+    {
+     "label": "Official Doloc Town 1.0 release notes",
+     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293019702"
+    }
+   ],
    "i18n": {
     "zh-CN": {
      "sections": [
@@ -17286,7 +17301,7 @@
         "购买升级前先查看当前商店要求。",
         "完成村民任务，并以游戏内显示的奖励与技术点为准。",
         "种植生长期较长的作物前先核对日历。",
-        "按天气渔获表选择钓点，并保留繁殖需要的鱼。",
+        "按天气渔获表选择钓点，并核对当前游戏显示的装备要求。",
         "出售前比较当前存档显示的原料与加工品售价。"
        ],
        "type": "list"
@@ -17325,11 +17340,11 @@
       },
       {
        "heading": "钓鱼与加工检查清单",
-       "body": "把教程鱼竿、天气表与已解锁设备当作检查清单；本站不声称存在唯一最佳收益路线。",
+       "body": "把天气表与当前已解锁的设备当作检查清单；本站不声称存在唯一最佳收益路线。",
        "items": [
         [
-         "拿教程鱼竿",
-         "完成 Lightman 钓鱼教程并使用它提供的鱼竿。"
+         "核对钓鱼装备",
+         "挑战更难渔获前，查看当前游戏显示的装备要求。"
         ],
         [
          "按天气钓鱼",
@@ -17340,24 +17355,35 @@
          "出售前比较当前存档显示的原料与加工品售价。"
         ],
         [
-         "查看鱼竿要求",
-         "挑战更难的渔获前查看游戏内当前升级要求。"
+         "查看装备要求",
+         "挑战更难的渔获前查看游戏内当前要求。"
         ],
         [
-         "保留繁殖对",
-         "需要特定亲本的鱼请保留，出售多余部分。"
+         "处理前再核对",
+         "保留、加工或出售渔获前，以当前游戏显示的要求与数值为准。"
         ]
        ],
        "type": "steps"
       },
       {
+       "heading": "季节规划",
+       "body": "使用官方日历安排作物防护、浇水与农场供能，不推断未验证的经济回报。",
+       "items": [
+        "第 4 月是 Harsh Dry Season；请保护作物并规划浇水。",
+        "雨季（1-2 月）会改变渔获表，请核对期间可捕获的鱼。",
+        "雷暴的落雷可为农场提供电力；Steam 官方商店页也明确介绍太阳能与风力供能。",
+        "雨水可用于灌溉；按季节轮换种植，避免非应季作物枯萎。"
+       ],
+       "type": "list"
+      },
+      {
        "heading": "资源规划检查",
-       "body": "出售或购买前查看游戏内当前数值。保留繁殖所需的鱼，核对任务奖励，并在第 4 月前保护作物、规划浇水。本站不验证具体回报。",
+       "body": "核对游戏内当前数值与任务奖励，并在第 4 月前规划作物防护与浇水。本站不验证具体回报。",
        "type": "note"
       },
       {
        "heading": "来源与验证",
-       "body": "所链接的官方公告支持 1.0 日期与两阶段自动化，但没有提供加工回报、鱼竿门槛或升级价值。本站尚未亲自实测这些具体数值，因此不作推荐。",
+       "body": "Steam 官方商店页支持太阳能与风力供能，所链接的官方公告支持 1.0 日期与两阶段自动化。这些来源没有提供加工回报、钓鱼装备门槛或升级价值；这些具体数值仍未经本站亲自实测。",
        "type": "note"
       },
       {
@@ -17413,7 +17439,7 @@
         "強化を買う前に現在の店頭要件を確認する。",
         "村人クエストを進め、ゲーム内表示の報酬とテックポイントを確認する。",
         "成長の遅い作物は収穫までの日数をカレンダーで確認する。",
-        "天候別の魚表を確認し、繁殖に必要な魚を残す。",
+        "天候別の魚表を確認し、加工や販売の前に現在のゲーム内要件を確認する。",
         "売る前に現在のセーブで素材と加工品の表示額を比較する。"
        ],
        "type": "list"
@@ -17452,11 +17478,11 @@
       },
       {
        "heading": "釣りと加工の確認リスト",
-       "body": "チュートリアルの竿、天候表、解放済み設備を確認します。本ガイドは唯一の最高収益ルートを主張しません。",
+       "body": "天候表と現在解放済みの設備を確認します。本ガイドは唯一の最高収益ルートを主張しません。",
        "items": [
         [
-         "チュートリアルの竿",
-         "Lightman の釣りチュートリアルで受け取った竿を使う。"
+         "現在の釣り装備を確認",
+         "難しい魚を狙う前に、現在のゲーム内に表示される装備要件を確認する。"
         ],
         [
          "天候表を確認",
@@ -17467,24 +17493,35 @@
          "売る前に現在のセーブに表示される値を比較する。"
         ],
         [
-         "竿の要件を確認",
-         "難しい魚を狙う前に現在の強化要件を確認する。"
+         "装備要件を確認",
+         "難しい魚を狙う前に現在のゲーム内要件を確認する。"
         ],
         [
-         "繁殖ペアを残す",
-         "特定の親が必要な魚を残し、余剰だけを売る。"
+         "加工前に確認",
+         "保管・加工・販売の前に、現在のゲーム内要件と表示額を確認する。"
         ]
        ],
        "type": "steps"
       },
       {
+       "heading": "季節計画",
+       "body": "公式カレンダーを使い、未確認の価格メカニズムを前提にせず作物と釣りを計画します。",
+       "items": [
+        "第4月は Harsh Dry Season——作物を保護し、水やりを計画する。",
+        "雨季（1〜2月）には魚の表が変わるため、期間限定の漁獲を確認する。",
+        "雷雨の落雷で農場に電力を供給でき、公式 Steam ストアは太陽光と風力発電も明記している。",
+        "雨は作物を灌漑する。季節に合わせて作物を替え、季節外れの枯れを避ける。"
+       ],
+       "type": "list"
+      },
+      {
        "heading": "資源計画の確認",
-       "body": "売買前に現在のゲーム内表示を確認し、繁殖に必要な魚を残し、クエスト報酬を確認し、第4月前に作物保護と水やりを準備します。具体的な収益は検証していません。",
+       "body": "売買前に現在のゲーム内表示とクエスト報酬を確認し、第4月前に作物保護と水やりを準備します。具体的な収益は検証していません。",
        "type": "note"
       },
       {
        "heading": "出典と検証",
-       "body": "リンクした公式発表は1.0の日付と二段階自動化を裏付けますが、加工収益、竿の閾値、強化価値は示しません。当サイトはそれらを実機検証していないため推奨しません。",
+       "body": "Steam 公式ストアは太陽光と風力発電を、公式発表は1.0の日付と二段階自動化を裏付けます。これらは加工収益、釣り装備の閾値、強化価値を示しておらず、当サイトはそれらを実機検証していません。",
        "type": "note"
       },
       {
@@ -17540,7 +17577,7 @@
         "업그레이드 구매 전에 현재 상점 요구 사항을 확인하세요.",
         "마을 퀘스트를 수행하고 게임에 표시된 보상과 기술 포인트를 확인하세요.",
         "성장이 느린 작물은 수확까지 남은 날짜를 달력에서 확인하세요.",
-        "날씨별 어종 표를 확인하고 번식에 필요한 물고기를 보관하세요.",
+        "날씨별 어종 표를 확인하고 가공하거나 판매하기 전에 현재 게임 요구 사항을 확인하세요.",
         "판매 전에 현재 세이브에 표시된 원재료와 가공품 가격을 비교하세요."
        ],
        "type": "list"
@@ -17579,11 +17616,11 @@
       },
       {
        "heading": "낚시와 가공 점검 목록",
-       "body": "튜토리얼 낚싯대, 날씨 표, 해금한 장비를 점검하세요. 이 가이드는 하나의 최고 수익 경로를 주장하지 않습니다.",
+       "body": "날씨 표와 현재 해금한 장비를 점검하세요. 이 가이드는 하나의 최고 수익 경로를 주장하지 않습니다.",
        "items": [
         [
-         "튜토리얼 낚싯대",
-         "Lightman 낚시 튜토리얼에서 받은 낚싯대를 사용하세요."
+         "현재 낚시 장비 확인",
+         "어려운 어종을 노리기 전에 현재 게임에 표시된 장비 요구 사항을 확인하세요."
         ],
         [
          "날씨 표 확인",
@@ -17594,24 +17631,35 @@
          "판매 전에 현재 세이브의 표시값을 비교하세요."
         ],
         [
-         "낚싯대 요구 사항",
-         "어려운 어종을 노리기 전에 현재 업그레이드 요구 사항을 확인하세요."
+         "장비 요구 사항",
+         "어려운 어종을 노리기 전에 현재 게임 요구 사항을 확인하세요."
         ],
         [
-         "번식 쌍 보관",
-         "특정 부모가 필요한 물고기를 보관하고 남는 것만 판매하세요."
+         "가공 전 확인",
+         "보관·가공·판매 전에 현재 게임 요구 사항과 표시값을 확인하세요."
         ]
        ],
        "type": "steps"
       },
       {
+       "heading": "계절 계획",
+       "body": "공식 달력으로 확인되지 않은 가격 메커니즘을 가정하지 않고 작물과 낚시를 계획하세요.",
+       "items": [
+        "4월은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요.",
+        "우기(1~2월)에는 어종 표가 바뀌므로 기간 한정 어획을 확인하세요.",
+        "뇌우의 번개는 농장에 전력을 공급하며, 공식 Steam 상점은 태양광과 풍력 발전도 명시합니다.",
+        "비는 작물을 관개합니다. 계절에 맞춰 작물을 바꾸고 비수기 시듦을 피하세요."
+       ],
+       "type": "list"
+      },
+      {
        "heading": "자원 계획 점검",
-       "body": "판매나 구매 전에 현재 게임 수치를 확인하고, 번식에 필요한 물고기를 보관하고, 퀘스트 보상을 확인하고, 4월 전에 작물 보호와 물주기를 준비하세요. 구체적인 수익은 검증하지 않았습니다.",
+       "body": "판매나 구매 전에 현재 게임 수치와 퀘스트 보상을 확인하고, 4월 전에 작물 보호와 물주기를 준비하세요. 구체적인 수익은 검증하지 않았습니다.",
        "type": "note"
       },
       {
        "heading": "출처와 검증",
-       "body": "연결된 공식 공지는 1.0 날짜와 2단계 자동화를 뒷받침하지만 가공 수익, 낚싯대 기준, 업그레이드 가치는 제공하지 않습니다. 이 가이드는 해당 수치를 직접 검증하지 않았으므로 추천하지 않습니다.",
+       "body": "공식 Steam 상점은 태양광과 풍력 발전을, 공식 공지는 1.0 날짜와 2단계 자동화를 뒷받침합니다. 이 자료는 가공 수익, 낚시 장비 기준, 업그레이드 가치를 제공하지 않으며 이 가이드는 해당 수치를 직접 검증하지 않았습니다.",
        "type": "note"
       },
       {
@@ -17673,7 +17721,7 @@
         "Revisa los requisitos actuales de la tienda antes de comprar mejoras.",
         "Completa misiones y usa las recompensas y Puntos de Tecnología mostrados en el juego.",
         "Consulta el calendario antes de plantar cultivos lentos.",
-        "Mira las tablas de pesca por clima y conserva los peces necesarios para criar.",
+        "Mira las tablas de pesca por clima y revisa los requisitos actuales antes de procesar o vender.",
         "Compara en tu partida los valores de materias primas y productos antes de vender."
        ],
        "type": "list"
@@ -17712,11 +17760,11 @@
       },
       {
        "heading": "Lista de pesca y procesado",
-       "body": "Usa la caña del tutorial, las tablas del clima y el equipo desbloqueado como lista de control. No afirmamos que exista una única ruta de máximo beneficio.",
+       "body": "Usa las tablas del clima y el equipo actualmente desbloqueado como lista de control. No afirmamos que exista una única ruta de máximo beneficio.",
        "items": [
         [
-         "Caña del tutorial",
-         "Completa el tutorial de pesca de Lightman y usa la caña que entrega."
+         "Revisa el equipo de pesca",
+         "Antes de buscar capturas difíciles, consulta los requisitos que muestra tu partida."
         ],
         [
          "Consulta el clima",
@@ -17731,20 +17779,31 @@
          "Consulta los requisitos actuales antes de buscar capturas difíciles."
         ],
         [
-         "Guarda parejas",
-         "Conserva los peces necesarios para criar y vende solo el excedente."
+         "Comprueba antes de procesar",
+         "Revisa los requisitos y valores actuales antes de guardar, procesar o vender una captura."
         ]
        ],
        "type": "steps"
       },
       {
+       "heading": "Planificación estacional",
+       "body": "Usa el calendario oficial para planificar cultivos y pesca sin suponer una mecánica de precios no verificada.",
+       "items": [
+        "El mes 4 es Harsh Dry Season: protege los cultivos y planifica el riego.",
+        "La temporada de lluvias (ene-feb) cambia las tablas de peces; consulta las capturas disponibles durante ese periodo.",
+        "Los rayos de las tormentas suministran energía a la granja, y la tienda oficial de Steam también enumera la energía solar y eólica.",
+        "La lluvia riega los cultivos; rota lo que plantas con la estación para evitar que se marchite fuera de temporada."
+       ],
+       "type": "list"
+      },
+      {
        "heading": "Comprobación de recursos",
-       "body": "Antes de vender o comprar, revisa los valores actuales, conserva los peces necesarios para criar, consulta las recompensas y protege cultivos y planifica el riego antes del mes 4. No verificamos rendimientos concretos.",
+       "body": "Antes de vender o comprar, revisa los valores actuales y las recompensas, y protege los cultivos y planifica el riego antes del mes 4. No verificamos rendimientos concretos.",
        "type": "note"
       },
       {
        "heading": "Fuentes y verificación",
-       "body": "Los anuncios oficiales enlazados respaldan la fecha del 1.0 y la automatización en dos etapas, pero no indican rendimientos, umbrales de caña ni valor de mejoras. No hemos probado esas cifras de primera mano y no las recomendamos.",
+       "body": "La tienda oficial de Steam respalda la energía solar y eólica, y los anuncios oficiales respaldan la fecha del 1.0 y la automatización en dos etapas. Estas fuentes no indican rendimientos, requisitos del equipo de pesca ni valor de mejoras; no hemos probado esas cifras de primera mano.",
        "type": "note"
       },
       {
@@ -17800,7 +17859,7 @@
         "購買升級前先查看當前商店要求。",
         "完成村民任務，並以遊戲內顯示的獎勵與技術點為準。",
         "種植生長期較長的作物前先核對日曆。",
-        "按天氣漁獲表選擇釣點，並保留繁殖需要的魚。",
+        "按天氣漁獲表選擇釣點，並核對當前遊戲顯示的裝備要求。",
         "出售前比較當前存檔顯示的原料與加工品售價。"
        ],
        "type": "list"
@@ -17839,11 +17898,11 @@
       },
       {
        "heading": "釣魚與加工檢查清單",
-       "body": "把教程魚竿、天氣表與已解鎖設備當作檢查清單；本站不聲稱存在唯一最佳收益路線。",
+       "body": "把天氣表與當前已解鎖的設備當作檢查清單；本站不聲稱存在唯一最佳收益路線。",
        "items": [
         [
-         "拿教程魚竿",
-         "完成 Lightman 釣魚教程並使用它提供的魚竿。"
+         "核對釣魚裝備",
+         "挑戰更難漁獲前，查看當前遊戲顯示的裝備要求。"
         ],
         [
          "按天氣釣魚",
@@ -17854,24 +17913,35 @@
          "出售前比較當前存檔顯示的原料與加工品售價。"
         ],
         [
-         "查看魚竿要求",
-         "挑戰更難的漁獲前查看遊戲內當前升級要求。"
+         "查看裝備要求",
+         "挑戰更難的漁獲前查看遊戲內當前要求。"
         ],
         [
-         "保留繁殖對",
-         "需要特定親本的魚請保留，出售多餘部分。"
+         "處理前再核對",
+         "保留、加工或出售漁獲前，以當前遊戲顯示的要求與數值為準。"
         ]
        ],
        "type": "steps"
       },
       {
+       "heading": "季節規劃",
+       "body": "使用官方日曆安排作物防護、澆水與農場供能，不推斷未驗證的經濟回報。",
+       "items": [
+        "第 4 月是 Harsh Dry Season；請保護作物並規劃澆水。",
+        "雨季（1-2 月）會改變漁獲表，請核對期間可捕獲的魚。",
+        "雷暴的落雷可為農場提供電力；Steam 官方商店頁也明確介紹太陽能與風力供能。",
+        "雨水可用於灌溉；按季節輪換種植，避免非應季作物枯萎。"
+       ],
+       "type": "list"
+      },
+      {
        "heading": "資源規劃檢查",
-       "body": "出售或購買前查看遊戲內當前數值。保留繁殖所需的魚，核對任務獎勵，並在第 4 月前保護作物、規劃澆水。本站不驗證具體回報。",
+       "body": "核對遊戲內當前數值與任務獎勵，並在第 4 月前規劃作物防護與澆水。本站不驗證具體回報。",
        "type": "note"
       },
       {
        "heading": "來源與驗證",
-       "body": "所鏈接的官方公告支持 1.0 日期與兩階段自動化，但沒有提供加工回報、魚竿門檻或升級價值。本站尚未親自實測這些具體數值，因此不作推薦。",
+       "body": "Steam 官方商店頁支持太陽能與風力供能，所鏈接的官方公告支持 1.0 日期與兩階段自動化。這些來源沒有提供加工回報、釣魚裝備門檻或升級價值；這些具體數值仍未經本站親自實測。",
        "type": "note"
       },
       {
@@ -17906,17 +17976,7 @@
      "metaDescription": "多洛可小鎮賺錢攻略：區分社群技巧與官方事實，介紹加工、釣魚和前期優先事項，不採用未證實的漲價倒賣說法。",
      "intro": "本指南只採用有一手資料支持的機制；具體售價、升級成本與回報尚未由本站親自實測。"
     }
-   },
-   "sources": [
-    {
-     "label": "Official Doloc Town patch 1.00.03",
-     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586"
-    },
-    {
-     "label": "Official Doloc Town 1.0 release notes",
-     "url": "https://steamcommunity.com/games/2285550/announcements/detail/703275952293019702"
-    }
-   ]
+   }
   },
   {
    "slug": "gifts",

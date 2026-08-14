@@ -317,7 +317,7 @@ ZH.update({
     "columns":["天气","风险","应对"],
     "rows":[["酸雨","侵蚀作物","遮盖；收集酸液"],["酷热","烤干土壤","按时浇水；耐热基因"],["雷暴","提供闪电电力","用闪电给农场蓄电"],["暴雨","提供雨水灌溉","免费灌溉"],["旱季（4月）","枯萎+作物压力增加","准备作物防护，规划浇水"]]},
    {"heading":"把风暴变成能源","body":"天气就是能源。",
-    "items":[["安装闪电收集","雷暴给农场充电。"],["让雨水灌溉","暴雨期间跳过手动浇水。"],["把握旱季时机","4 月前准备作物防护大有赚头。"]]},
+    "items":[["安装闪电收集","雷暴给农场充电。"],["让雨水灌溉","暴雨期间跳过手动浇水。"],["把握旱季时机","4 月前准备作物防护并规划浇水。"]]},
    {"heading":"像天气一样经营农场","body":"每天看预报。明天有暴风雨，今天就不用浇水——但今天蓄电却价值连城。"}
   ]
  },
@@ -5524,13 +5524,13 @@ JA["weather"] = {
     ],
     [
      "雷雨",
-     "農地を破壊",
+     "落雷で電力を供給",
      "雷を電力に"
     ],
     [
      "豪雨",
-     "低地が浸水",
-     "無料灌漑"
+     "雨による灌漑",
+     "雨に灌漑を任せる"
     ],
     [
      "干ばつ（第4月）",
@@ -7094,16 +7094,16 @@ _EXTRA = {
    "intro": "本指南只采用有一手资料支持的机制；具体售价、升级成本与回报尚未由本站亲自实测。",
    "sections": [
     {"en": "The Money Loop, From Zero", "heading": "从零开始的资源规划", "body": "结合游戏内日历、任务和已解锁设备安排资源，不预设未经验证的回报。",
-     "items": ["购买升级前先查看当前商店要求。", "完成村民任务，并以游戏内显示的奖励与技术点为准。", "种植生长期较长的作物前先核对日历。", "按天气渔获表选择钓点，并保留繁殖需要的鱼。", "出售前比较当前存档显示的原料与加工品售价。"]},
+     "items": ["购买升级前先查看当前商店要求。", "完成村民任务，并以游戏内显示的奖励与技术点为准。", "种植生长期较长的作物前先核对日历。", "按天气渔获表选择钓点，并核对当前游戏显示的装备要求。", "出售前比较当前存档显示的原料与加工品售价。"]},
     {"en": "Processing Equipment: Verify Values In-Game", "heading": "加工设备：在游戏内核对数值", "body": "游戏提供腌制、烘干与织布设备。本站尚未亲自实测具体售价和加工回报；请以当前存档显示的数值为准。",
      "columns": ["原料", "加工方式", "结果"],
      "rows": [["蓝莓", "腌菜罐", "查看游戏内数值"], ["鱼", "烘干机", "查看游戏内数值"], ["纤维", "织布机", "查看游戏内数值"], ["盈余作物", "出售前比较", "按当前存档决定"]]},
-    {"en": "Fishing and Processing Checklist", "heading": "钓鱼与加工检查清单", "body": "把教程鱼竿、天气表与已解锁设备当作检查清单；本站不声称存在唯一最佳收益路线。",
-     "items": [["拿教程鱼竿", "完成 Lightman 钓鱼教程并使用它提供的鱼竿。"], ["按天气钓鱼", "选点前先核对钓鱼指南中的天气表。"], ["比较加工前后数值", "出售前比较当前存档显示的原料与加工品售价。"], ["查看鱼竿要求", "挑战更难的渔获前查看游戏内当前升级要求。"], ["保留繁殖对", "需要特定亲本的鱼请保留，出售多余部分。"]]},
-    {"en": "Season Timing: Protect Crops and Plan Watering", "heading": "季节时机：保护作物并规划浇水", "body": "游戏日历帮助你安排作物保护和浇水。",
-     "items": ["旱季（4 月）作物压力增加——旱季前准备作物防护，按预报调整种植。", "雨季（1-2 月）重置渔获表——趁稀有渔获还在赶紧钓。", "雷暴能给农场充电——1.0 里这能降低自动化的运行成本。", "按季节种植——非应季作物会枯萎，跟着日历轮换。"]},
-    {"en": "Common Money Mistakes", "heading": "资源规划检查", "body": "出售或购买前查看游戏内当前数值。保留繁殖所需的鱼，核对任务奖励，并在第 4 月前保护作物、规划浇水。本站不验证具体回报。"},
-    {"en": "Sources & Verification", "heading": "来源与验证", "body": "所链接的官方公告支持 1.0 日期与两阶段自动化，但没有提供加工回报、鱼竿门槛或升级价值。本站尚未亲自实测这些具体数值，因此不作推荐。"},
+    {"en": "Fishing and Processing Checklist", "heading": "钓鱼与加工检查清单", "body": "把天气表与当前已解锁的设备当作检查清单；本站不声称存在唯一最佳收益路线。",
+     "items": [["核对钓鱼装备", "挑战更难渔获前，查看当前游戏显示的装备要求。"], ["按天气钓鱼", "选点前先核对钓鱼指南中的天气表。"], ["比较加工前后数值", "出售前比较当前存档显示的原料与加工品售价。"], ["查看装备要求", "挑战更难的渔获前查看游戏内当前要求。"], ["处理前再核对", "保留、加工或出售渔获前，以当前游戏显示的要求与数值为准。"]]},
+    {"en": "Season Planning", "heading": "季节规划", "body": "使用官方日历安排作物防护、浇水与农场供能，不推断未验证的经济回报。",
+     "items": ["第 4 月是 Harsh Dry Season；请保护作物并规划浇水。", "雨季（1-2 月）会改变渔获表，请核对期间可捕获的鱼。", "雷暴的落雷可为农场提供电力；Steam 官方商店页也明确介绍太阳能与风力供能。", "雨水可用于灌溉；按季节轮换种植，避免非应季作物枯萎。"]},
+    {"en": "Common Money Mistakes", "heading": "资源规划检查", "body": "核对游戏内当前数值与任务奖励，并在第 4 月前规划作物防护与浇水。本站不验证具体回报。"},
+    {"en": "Sources & Verification", "heading": "来源与验证", "body": "Steam 官方商店页支持太阳能与风力供能，所链接的官方公告支持 1.0 日期与两阶段自动化。这些来源没有提供加工回报、钓鱼装备门槛或升级价值；这些具体数值仍未经本站亲自实测。"},
     {"en": "Quick Answers", "heading": "常见问题速答",
      "items": [["多洛可小镇赚钱最快的方法是什么？", "本站没有验证唯一最快路线；请结合任务、日历与当前存档数值决定保留、加工或出售。"], ["加工能增值多少？", "本站尚未验证具体变化；请比较当前存档显示的加工前后数值。"], ["4 月旱季怎么准备？", "提前保护作物，并按预报规划浇水。"], ["背包升级值得吗？", "本站不验证升级回报；购买前请查看当前成本与容量。"], ["自动化需要钱吗？", "官方信息确认两阶段农业自动化；具体解锁要求和成本请以游戏内为准。"]]}
    ]
@@ -7125,16 +7125,16 @@ _EXTRA = {
    "intro": "本ガイドは一次情報で確認できる仕組みだけを扱い、販売額・強化費用・収益は当サイトで実機検証していないと明記します。",
    "sections": [
     {"en": "The Money Loop, From Zero", "heading": "ゼロからの資源計画", "body": "ゲーム内カレンダー、クエスト、解放済み設備を使い、未確認の収益を前提にせず資源を計画します。",
-     "items": ["強化を買う前に現在の店頭要件を確認する。", "村人クエストを進め、ゲーム内表示の報酬とテックポイントを確認する。", "成長の遅い作物は収穫までの日数をカレンダーで確認する。", "天候別の魚表を確認し、繁殖に必要な魚を残す。", "売る前に現在のセーブで素材と加工品の表示額を比較する。"]},
+     "items": ["強化を買う前に現在の店頭要件を確認する。", "村人クエストを進め、ゲーム内表示の報酬とテックポイントを確認する。", "成長の遅い作物は収穫までの日数をカレンダーで確認する。", "天候別の魚表を確認し、加工や販売の前に現在のゲーム内要件を確認する。", "売る前に現在のセーブで素材と加工品の表示額を比較する。"]},
     {"en": "Processing Equipment: Verify Values In-Game", "heading": "加工設備：ゲーム内の値を確認", "body": "漬物瓶・乾燥機・織機を利用できます。販売額と加工後の収益は当サイトで実機検証していないため、現在のセーブに表示される値を比較してください。",
      "columns": ["素材", "加工", "結果"],
      "rows": [["ブルーベリー", "ピクルス瓶", "ゲーム内表示を確認"], ["魚", "乾燥機", "ゲーム内表示を確認"], ["繊維", "織機", "ゲーム内表示を確認"], ["余剰作物", "売る前に比較", "現在のセーブで判断"]]},
-    {"en": "Fishing and Processing Checklist", "heading": "釣りと加工の確認リスト", "body": "チュートリアルの竿、天候表、解放済み設備を確認します。本ガイドは唯一の最高収益ルートを主張しません。",
-     "items": [["チュートリアルの竿", "Lightman の釣りチュートリアルで受け取った竿を使う。"], ["天候表を確認", "場所を選ぶ前に釣りガイドの天候表を確認する。"], ["加工前後を比較", "売る前に現在のセーブに表示される値を比較する。"], ["竿の要件を確認", "難しい魚を狙う前に現在の強化要件を確認する。"], ["繁殖ペアを残す", "特定の親が必要な魚を残し、余剰だけを売る。"]]},
-    {"en": "Season Timing: Protect Crops and Plan Watering", "heading": "季節のタイミング：作物保護と水やり", "body": "ゲーム内カレンダーで作物保護と水やりを計画します。",
-     "items": ["干ばつ（4月）前に作物保護と水やりを準備する。", "雨季（1-2月）で漁獲表が変わる——レア漁獲があるうちに釣る。", "雷雨で農場に充電——1.0では自動化の運用コストを下げる。", "季節に合わせて作付け——季節外れは枯れる。カレンダーで輪作。"]},
-    {"en": "Common Money Mistakes", "heading": "資源計画の確認", "body": "売買前に現在のゲーム内表示を確認し、繁殖に必要な魚を残し、クエスト報酬を確認し、第4月前に作物保護と水やりを準備します。具体的な収益は検証していません。"},
-    {"en": "Sources & Verification", "heading": "出典と検証", "body": "リンクした公式発表は1.0の日付と二段階自動化を裏付けますが、加工収益、竿の閾値、強化価値は示しません。当サイトはそれらを実機検証していないため推奨しません。"},
+    {"en": "Fishing and Processing Checklist", "heading": "釣りと加工の確認リスト", "body": "天候表と現在解放済みの設備を確認します。本ガイドは唯一の最高収益ルートを主張しません。",
+     "items": [["現在の釣り装備を確認", "難しい魚を狙う前に、現在のゲーム内に表示される装備要件を確認する。"], ["天候表を確認", "場所を選ぶ前に釣りガイドの天候表を確認する。"], ["加工前後を比較", "売る前に現在のセーブに表示される値を比較する。"], ["装備要件を確認", "難しい魚を狙う前に現在のゲーム内要件を確認する。"], ["加工前に確認", "保管・加工・販売の前に、現在のゲーム内要件と表示額を確認する。"]]},
+    {"en": "Season Planning", "heading": "季節計画", "body": "公式カレンダーを使い、未確認の価格メカニズムを前提にせず作物と釣りを計画します。",
+     "items": ["第4月は Harsh Dry Season——作物を保護し、水やりを計画する。", "雨季（1〜2月）には魚の表が変わるため、期間限定の漁獲を確認する。", "雷雨の落雷で農場に電力を供給でき、公式 Steam ストアは太陽光と風力発電も明記している。", "雨は作物を灌漑する。季節に合わせて作物を替え、季節外れの枯れを避ける。"]},
+    {"en": "Common Money Mistakes", "heading": "資源計画の確認", "body": "売買前に現在のゲーム内表示とクエスト報酬を確認し、第4月前に作物保護と水やりを準備します。具体的な収益は検証していません。"},
+    {"en": "Sources & Verification", "heading": "出典と検証", "body": "Steam 公式ストアは太陽光と風力発電を、公式発表は1.0の日付と二段階自動化を裏付けます。これらは加工収益、釣り装備の閾値、強化価値を示しておらず、当サイトはそれらを実機検証していません。"},
     {"en": "Quick Answers", "heading": "よくある質問",
      "items": [["ドロックタウンで一番早く稼ぐ方法は？", "唯一の最速ルートは検証していません。クエスト、カレンダー、現在のセーブ表示を基に判断してください。"], ["加工の付加価値はどのくらい？", "具体的な変化は未検証です。現在のセーブで加工前後の値を比較してください。"], ["4月にどう備える？", "4月の Harsh Dry Season 前に作物保護と水やりを準備する。"], ["バックパック強化は価値がある？", "強化の収益は検証していません。購入前に現在の費用と容量を確認してください。"], ["自動化にお金は必要？", "公式情報は二段階農業自動化を確認しています。具体的な解放要件と費用はゲーム内で確認してください。"]]}
    ]
@@ -7156,16 +7156,16 @@ _EXTRA = {
    "intro": "이 가이드는 1차 자료로 확인되는 메커니즘만 다루며, 판매가·업그레이드 비용·수익은 직접 플레이로 검증하지 않았다고 밝힙니다.",
    "sections": [
     {"en": "The Money Loop, From Zero", "heading": "제로부터 시작하는 자원 계획", "body": "게임 달력, 퀘스트, 해금한 장비를 이용해 확인되지 않은 수익을 전제로 하지 않고 자원을 계획하세요.",
-     "items": ["업그레이드 구매 전에 현재 상점 요구 사항을 확인하세요.", "마을 퀘스트를 수행하고 게임에 표시된 보상과 기술 포인트를 확인하세요.", "성장이 느린 작물은 수확까지 남은 날짜를 달력에서 확인하세요.", "날씨별 어종 표를 확인하고 번식에 필요한 물고기를 보관하세요.", "판매 전에 현재 세이브에 표시된 원재료와 가공품 가격을 비교하세요."]},
+     "items": ["업그레이드 구매 전에 현재 상점 요구 사항을 확인하세요.", "마을 퀘스트를 수행하고 게임에 표시된 보상과 기술 포인트를 확인하세요.", "성장이 느린 작물은 수확까지 남은 날짜를 달력에서 확인하세요.", "날씨별 어종 표를 확인하고 가공하거나 판매하기 전에 현재 게임 요구 사항을 확인하세요.", "판매 전에 현재 세이브에 표시된 원재료와 가공품 가격을 비교하세요."]},
     {"en": "Processing Equipment: Verify Values In-Game", "heading": "가공 장비: 게임 내 수치 확인", "body": "절임·건조·직조 장비를 사용할 수 있습니다. 정확한 판매가와 가공 수익은 이 가이드에서 직접 검증하지 않았으므로 현재 세이브의 표시값을 비교하세요.",
      "columns": ["원료", "가공", "결과"],
      "rows": [["블루베리", "절임 단지", "게임 내 표시 확인"], ["물고기", "건조기", "게임 내 표시 확인"], ["섬유", "직조기", "게임 내 표시 확인"], ["잉여 작물", "판매 전 비교", "현재 세이브로 판단"]]},
-    {"en": "Fishing and Processing Checklist", "heading": "낚시와 가공 점검 목록", "body": "튜토리얼 낚싯대, 날씨 표, 해금한 장비를 점검하세요. 이 가이드는 하나의 최고 수익 경로를 주장하지 않습니다.",
-     "items": [["튜토리얼 낚싯대", "Lightman 낚시 튜토리얼에서 받은 낚싯대를 사용하세요."], ["날씨 표 확인", "장소를 고르기 전에 낚시 가이드의 날씨 표를 확인하세요."], ["가공 전후 비교", "판매 전에 현재 세이브의 표시값을 비교하세요."], ["낚싯대 요구 사항", "어려운 어종을 노리기 전에 현재 업그레이드 요구 사항을 확인하세요."], ["번식 쌍 보관", "특정 부모가 필요한 물고기를 보관하고 남는 것만 판매하세요."]]},
-    {"en": "Season Timing: Protect Crops and Plan Watering", "heading": "계절 타이밍: 작물 보호와 물주기", "body": "게임 달력에 맞춰 작물 보호와 물주기를 계획하세요.",
-     "items": ["가뭄(4월)에는 작물 보호와 물주기를 미리 준비하세요.", "우기(1-2월)에 어종 표가 바뀜 — 희귀 어종이 있는 동안 낚시.", "뇌우가 농장 전력 충전 — 1.0에서 자동화 운영비를 줄임.", "계절에 맞춰 재배 — 비수기 작물은 시듭니다. 달력에 맞춰 윤작."]},
-    {"en": "Common Money Mistakes", "heading": "자원 계획 점검", "body": "판매나 구매 전에 현재 게임 수치를 확인하고, 번식에 필요한 물고기를 보관하고, 퀘스트 보상을 확인하고, 4월 전에 작물 보호와 물주기를 준비하세요. 구체적인 수익은 검증하지 않았습니다."},
-    {"en": "Sources & Verification", "heading": "출처와 검증", "body": "연결된 공식 공지는 1.0 날짜와 2단계 자동화를 뒷받침하지만 가공 수익, 낚싯대 기준, 업그레이드 가치는 제공하지 않습니다. 이 가이드는 해당 수치를 직접 검증하지 않았으므로 추천하지 않습니다."},
+    {"en": "Fishing and Processing Checklist", "heading": "낚시와 가공 점검 목록", "body": "날씨 표와 현재 해금한 장비를 점검하세요. 이 가이드는 하나의 최고 수익 경로를 주장하지 않습니다.",
+     "items": [["현재 낚시 장비 확인", "어려운 어종을 노리기 전에 현재 게임에 표시된 장비 요구 사항을 확인하세요."], ["날씨 표 확인", "장소를 고르기 전에 낚시 가이드의 날씨 표를 확인하세요."], ["가공 전후 비교", "판매 전에 현재 세이브의 표시값을 비교하세요."], ["장비 요구 사항", "어려운 어종을 노리기 전에 현재 게임 요구 사항을 확인하세요."], ["가공 전 확인", "보관·가공·판매 전에 현재 게임 요구 사항과 표시값을 확인하세요."]]},
+    {"en": "Season Planning", "heading": "계절 계획", "body": "공식 달력으로 확인되지 않은 가격 메커니즘을 가정하지 않고 작물과 낚시를 계획하세요.",
+     "items": ["4월은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요.", "우기(1~2월)에는 어종 표가 바뀌므로 기간 한정 어획을 확인하세요.", "뇌우의 번개는 농장에 전력을 공급하며, 공식 Steam 상점은 태양광과 풍력 발전도 명시합니다.", "비는 작물을 관개합니다. 계절에 맞춰 작물을 바꾸고 비수기 시듦을 피하세요."]},
+    {"en": "Common Money Mistakes", "heading": "자원 계획 점검", "body": "판매나 구매 전에 현재 게임 수치와 퀘스트 보상을 확인하고, 4월 전에 작물 보호와 물주기를 준비하세요. 구체적인 수익은 검증하지 않았습니다."},
+    {"en": "Sources & Verification", "heading": "출처와 검증", "body": "공식 Steam 상점은 태양광과 풍력 발전을, 공식 공지는 1.0 날짜와 2단계 자동화를 뒷받침합니다. 이 자료는 가공 수익, 낚시 장비 기준, 업그레이드 가치를 제공하지 않으며 이 가이드는 해당 수치를 직접 검증하지 않았습니다."},
     {"en": "Quick Answers", "heading": "자주 묻는 질문",
      "items": [["돌록 타운에서 돈을 가장 빨리 버는 방법은?", "유일한 최단 경로는 검증하지 않았습니다. 퀘스트, 달력, 현재 세이브 표시값을 기준으로 선택하세요."], ["가공은 얼마나 붙나요?", "정확한 변화는 검증하지 않았습니다. 현재 세이브에서 가공 전후 값을 비교하세요."], ["4월에는 어떻게 대비하나요?", "4월 Harsh Dry Season 전에 작물을 보호하고 물주기를 계획하세요."], ["가방 업그레이드는 가치 있나요?", "업그레이드 수익은 검증하지 않았습니다. 구매 전 현재 비용과 용량을 확인하세요."], ["자동화에 돈이 필요한가요?", "공식 정보는 2단계 농업 자동화를 확인합니다. 구체적인 해금 요구 사항과 비용은 게임 안에서 확인하세요."]]}
    ]
@@ -7187,16 +7187,16 @@ _EXTRA = {
    "intro": "Esta guía usa mecánicas respaldadas por fuentes primarias y deja claro que no hemos probado de primera mano precios, costes ni rendimientos exactos.",
    "sections": [
     {"en": "The Money Loop, From Zero", "heading": "Planificación de recursos desde cero", "body": "Usa el calendario, las misiones y el equipo desbloqueado para planificar recursos sin asumir rendimientos no verificados.",
-     "items": ["Revisa los requisitos actuales de la tienda antes de comprar mejoras.", "Completa misiones y usa las recompensas y Puntos de Tecnología mostrados en el juego.", "Consulta el calendario antes de plantar cultivos lentos.", "Mira las tablas de pesca por clima y conserva los peces necesarios para criar.", "Compara en tu partida los valores de materias primas y productos antes de vender."]},
+     "items": ["Revisa los requisitos actuales de la tienda antes de comprar mejoras.", "Completa misiones y usa las recompensas y Puntos de Tecnología mostrados en el juego.", "Consulta el calendario antes de plantar cultivos lentos.", "Mira las tablas de pesca por clima y revisa los requisitos actuales antes de procesar o vender.", "Compara en tu partida los valores de materias primas y productos antes de vender."]},
     {"en": "Processing Equipment: Verify Values In-Game", "heading": "Equipo de procesado: verifica los valores", "body": "Hay equipos para encurtir, secar y tejer. No hemos probado de primera mano los precios ni los rendimientos exactos; compara los valores que muestra tu partida.",
      "columns": ["Entrada", "Proceso", "Resultado"],
      "rows": [["Arándanos", "Tarro de encurtir", "Consulta el valor mostrado"], ["Pescado", "Secadora", "Consulta el valor mostrado"], ["Fibra", "Telar", "Consulta el valor mostrado"], ["Excedentes", "Compara antes de vender", "Decide según tu partida"]]},
-    {"en": "Fishing and Processing Checklist", "heading": "Lista de pesca y procesado", "body": "Usa la caña del tutorial, las tablas del clima y el equipo desbloqueado como lista de control. No afirmamos que exista una única ruta de máximo beneficio.",
-     "items": [["Caña del tutorial", "Completa el tutorial de pesca de Lightman y usa la caña que entrega."], ["Consulta el clima", "Mira las tablas de la guía antes de elegir lugar."], ["Compara antes y después", "Compara en tu partida los valores antes de vender."], ["Revisa requisitos", "Consulta los requisitos actuales antes de buscar capturas difíciles."], ["Guarda parejas", "Conserva los peces necesarios para criar y vende solo el excedente."]]},
-    {"en": "Season Timing: Protect Crops and Plan Watering", "heading": "Calendario estacional: protege cultivos y planifica el riego", "body": "Usa el calendario para proteger cultivos y planificar el riego.",
-     "items": ["El mes 4 es Harsh Dry Season: protege los cultivos y planifica el riego.", "La temporada de lluvias (ene-feb) cambia las tablas de peces — pesca las capturas raras mientras duran.", "Las tormentas cargan la energía de tu granja — en el 1.0 reduce los costes de la automatización.", "Planta según la estación — los cultivos fuera de temporada se marchitan; rota con el calendario."]},
-    {"en": "Common Money Mistakes", "heading": "Comprobación de recursos", "body": "Antes de vender o comprar, revisa los valores actuales, conserva los peces necesarios para criar, consulta las recompensas y protege cultivos y planifica el riego antes del mes 4. No verificamos rendimientos concretos."},
-    {"en": "Sources & Verification", "heading": "Fuentes y verificación", "body": "Los anuncios oficiales enlazados respaldan la fecha del 1.0 y la automatización en dos etapas, pero no indican rendimientos, umbrales de caña ni valor de mejoras. No hemos probado esas cifras de primera mano y no las recomendamos."},
+    {"en": "Fishing and Processing Checklist", "heading": "Lista de pesca y procesado", "body": "Usa las tablas del clima y el equipo actualmente desbloqueado como lista de control. No afirmamos que exista una única ruta de máximo beneficio.",
+     "items": [["Revisa el equipo de pesca", "Antes de buscar capturas difíciles, consulta los requisitos que muestra tu partida."], ["Consulta el clima", "Mira las tablas de la guía antes de elegir lugar."], ["Compara antes y después", "Compara en tu partida los valores antes de vender."], ["Revisa requisitos", "Consulta los requisitos actuales antes de buscar capturas difíciles."], ["Comprueba antes de procesar", "Revisa los requisitos y valores actuales antes de guardar, procesar o vender una captura."]]},
+    {"en": "Season Planning", "heading": "Planificación estacional", "body": "Usa el calendario oficial para planificar cultivos y pesca sin suponer una mecánica de precios no verificada.",
+     "items": ["El mes 4 es Harsh Dry Season: protege los cultivos y planifica el riego.", "La temporada de lluvias (ene-feb) cambia las tablas de peces; consulta las capturas disponibles durante ese periodo.", "Los rayos de las tormentas suministran energía a la granja, y la tienda oficial de Steam también enumera la energía solar y eólica.", "La lluvia riega los cultivos; rota lo que plantas con la estación para evitar que se marchite fuera de temporada."]},
+    {"en": "Common Money Mistakes", "heading": "Comprobación de recursos", "body": "Antes de vender o comprar, revisa los valores actuales y las recompensas, y protege los cultivos y planifica el riego antes del mes 4. No verificamos rendimientos concretos."},
+    {"en": "Sources & Verification", "heading": "Fuentes y verificación", "body": "La tienda oficial de Steam respalda la energía solar y eólica, y los anuncios oficiales respaldan la fecha del 1.0 y la automatización en dos etapas. Estas fuentes no indican rendimientos, requisitos del equipo de pesca ni valor de mejoras; no hemos probado esas cifras de primera mano."},
     {"en": "Quick Answers", "heading": "Respuestas rápidas",
      "items": [["¿Cuál es la forma más rápida de ganar dinero?", "No hemos verificado una única ruta más rápida. Usa misiones, calendario y valores actuales de tu partida para decidir."], ["¿Cuánto añade el procesado?", "No hemos verificado el cambio exacto; compara en tu partida los valores antes y después."], ["¿Cómo me preparo para el mes 4?", "Antes del mes 4, protege los cultivos y planifica el riego."], ["¿Merece la pena la mochila?", "No verificamos el retorno de la mejora. Revisa el coste y la capacidad actuales antes de comprar."], ["¿Necesito dinero para la automatización?", "La información oficial confirma automatización agrícola en dos etapas; consulta en el juego los requisitos y costes actuales."]]}
    ]

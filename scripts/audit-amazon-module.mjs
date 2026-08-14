@@ -16,6 +16,7 @@ const generate = (out, fixture) => execFileSync(process.execPath,[path.join(root
 const canonicalSources = {
   patch: "https://steamcommunity.com/games/2285550/announcements/detail/703275952293020586",
   release: "https://steamcommunity.com/games/2285550/announcements/detail/703275952293019702",
+  store: "https://store.steampowered.com/app/2285550/Doloc_Town/",
 };
 const genericNewsHubSources = [
   "https://store.steampowered.com/news/app/2285550/view/1840310314351178",
@@ -94,6 +95,8 @@ const safeBoundaries = {
   es:"El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa.",
 };
 const semanticFamilyPatterns = [
+  ["ja-weather-unsupported-damage", /(?:雷雨[^。\n]{0,40}農地[^。\n]{0,20}破壊|農地を破壊|豪雨[^。\n]{0,40}低地[^。\n]{0,20}浸水|低地が浸水)/u],
+  ["raw-economic-causality", /(?:4\s*月前[^。\n]{0,35}作物防[护護][^。\n]{0,20}大有赚头|雷暴[^。\n]{0,55}降低自动化的运行成本|雷雨[^。\n]{0,55}自動化の運用コストを下げる|뇌우[^.\n]{0,55}자동화 운영비를 줄임|tormentas[^.\n]{0,75}reduce los costes de la automatización)/iu],
   ["en-flat-field-weather-causality", /(?:(?:flat|horizontal|single[- ]level|one[- ]level)[^.\n]{0,50}(?:field|plot)[^.\n]{0,70}(?:drought|storm)[^.\n]{0,35}(?:risk|magnet|target|wipe|destroy)|(?:drought|storm)[^.\n]{0,70}(?:target|seek|wipe|destroy|attract)[^.\n]{0,55}(?:flat|horizontal|single[- ]level|one[- ]level)[^.\n]{0,20}(?:field|plot))/iu],
   ["zh-flat-field-weather-causality", /(?:(?:平坦|平地|單層|单层|單一|单一|一大片|一整片)[^。\n]{0,36}(?:田地|農田|农田|地塊|地块|田)[^。\n]{0,55}(?:旱災|旱灾|乾旱|干旱|風暴|风暴|暴風|暴风)[^。\n]{0,28}(?:風險|风险|靶子|標靶|目标|目標|全毀|全毁|摧毀|摧毁|吸引)|(?:旱災|旱灾|乾旱|干旱|風暴|风暴|暴風|暴风)[^。\n]{0,55}(?:摧毀|摧毁|吸引|鎖定|锁定|瞄準|瞄准|毀掉|毁掉)[^。\n]{0,36}(?:平坦|平地|單層|单层|單一|单一)[^。\n]{0,18}(?:田地|農田|农田|地塊|地块|田))/u],
   ["ja-flat-field-weather-causality", /(?:(?:平ら|一枚畑|単層|一段|単一|水平)[^。\n]{0,50}(?:畑|農地|区画)[^。\n]{0,60}(?:干ばつ|嵐|暴風)[^。\n]{0,28}(?:リスク|的|標的|全滅|壊滅|引き寄せ)|(?:干ばつ|嵐|暴風)[^。\n]{0,60}(?:狙(?:う|って)|全滅させ(?:る|て)|壊滅させ(?:る|て)|引き寄せ(?:る|て))[^。\n]{0,45}(?:平ら|一枚畑|単層|一段|単一|水平))/u],
@@ -143,6 +146,23 @@ const semanticSourceFaults = {
   "semantic-weather-profit-source": "Weather timing changes the profit math completely, a community-verified advantage for clever farms.",
 };
 const independentFaults = {
+  "evidence-ja-weather-source": {layer:"source", rel:"ja/weather.html", text:"雷雨で農地を破壊し、豪雨で低地が浸水する。"},
+  "evidence-ja-weather-visible": {layer:"visible", rel:"ja/weather.html", text:"雷雨で農地を破壊し、豪雨で低地が浸水する。"},
+  "evidence-ja-weather-metadata": {layer:"metadata", rel:"ja/weather.html", text:"雷雨で農地を破壊し、豪雨で低地が浸水する。"},
+  "evidence-ja-weather-jsonld": {layer:"jsonld", rel:"ja/weather.html", text:"雷雨で農地を破壊し、豪雨で低地が浸水する。"},
+  "evidence-economic-zh-profitable": {layer:"source", rel:"zh-CN/weather.html", text:"4 月前准备作物防护大有赚头。"},
+  "evidence-economic-zh-cost": {layer:"source", rel:"zh-CN/make-money.html", text:"雷暴能给农场充电，这能降低自动化的运行成本。"},
+  "evidence-economic-ja-cost": {layer:"source", rel:"ja/make-money.html", text:"雷雨で農場に充電すると自動化の運用コストを下げる。"},
+  "evidence-economic-ko-cost": {layer:"source", rel:"ko/make-money.html", text:"뇌우가 농장 전력 충전 — 자동화 운영비를 줄임."},
+  "evidence-economic-es-cost": {layer:"source", rel:"es/make-money.html", text:"Las tormentas cargan la energía y reduce los costes de la automatización."},
+  "evidence-gameplay-source": {layer:"source", rel:"make-money.html", text:"The Lightman tutorial gives a free rod and 13 tank-only species need specific parents."},
+  "evidence-gameplay-visible": {layer:"visible", rel:"make-money.html", text:"The Lightman tutorial gives a free rod and 13 tank-only species need specific parents."},
+  "evidence-gameplay-metadata": {layer:"metadata", rel:"make-money.html", text:"The Lightman tutorial gives a free rod and 13 tank-only species need specific parents."},
+  "evidence-gameplay-faq": {layer:"faq", rel:"make-money.html", text:"Does the Lightman tutorial give a free rod and do 13 tank-only species need specific parents?"},
+  "evidence-gameplay-jsonld": {layer:"jsonld", rel:"make-money.html", text:"The Lightman tutorial gives a free rod and 13 tank-only species need specific parents."},
+  "evidence-season-missing": {layer:"remove-visible", rel:"zh-TW/make-money.html", text:"季節規劃"},
+  "evidence-wind-missing": {layer:"remove-visible", rel:"ja/make-money.html", text:"風力発電"},
+  "evidence-zh-tw-fallback": {layer:"visible", rel:"zh-TW/make-money.html", text:"季节提示：看天气预报——雷暴蓄电、雨水免费灌溉。"},
   "matrix-ja-reverse-source": {layer:"source", rel:"ja/how-to-play.html", text:"嵐が狙って壊滅させるのは水平な畑です。"},
   "matrix-ja-reverse-visible": {layer:"visible", rel:"ja/how-to-play.html", text:"嵐が狙って壊滅させるのは水平な畑です。"},
   "matrix-ja-reverse-metadata": {layer:"metadata", rel:"ja/how-to-play.html", text:"嵐が狙って壊滅させるのは水平な畑です。"},
@@ -184,6 +204,7 @@ const semanticInventory = {
   generated_metadata: {documents: 0, hits: 0},
   generated_jsonld: {blocks: 0, hits: 0},
 };
+const evidenceLayerInventory = {raw:0,effective:0,visible:0,metadata:0,faq:0,jsonld:0};
 try {
   generate(disabled,false); generate(enabled,true);
   const offFiles=walk(disabled), onFiles=walk(enabled);
@@ -194,6 +215,8 @@ try {
     else if (independentFault.layer === "visible") fs.appendFileSync(target, `<p>${independentFault.text}</p>`);
     else if (independentFault.layer === "metadata") fs.appendFileSync(target, `<meta name="description" content="${independentFault.text}">`);
     else if (independentFault.layer === "jsonld") fs.appendFileSync(target, `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage",name:independentFault.text})}</script>`);
+    else if (independentFault.layer === "faq") fs.appendFileSync(target, `<details class="faq"><summary>${independentFault.text}</summary></details>`);
+    else if (independentFault.layer === "remove-visible") fs.writeFileSync(target, fs.readFileSync(target,"utf8").replaceAll(independentFault.text, ""));
   }
   if (fault === "default-module-leak") {
     fs.appendFileSync(offFiles[0], '<aside class="amazon-gear">fault fixture</aside>');
@@ -286,6 +309,66 @@ try {
   for (const page of sourceData.pages || []) for (const source of page.sources || []) {
     if (/patch 1\.00\.03/i.test(source.label || "") && source.url !== canonicalSources.patch) fail("patch-source-identity", `${page.slug}:${source.url}`);
     if (/1\.0 release notes/i.test(source.label || "") && source.url !== canonicalSources.release) fail("release-source-identity", `${page.slug}:${source.url}`);
+  }
+  const localeSpecs = {
+    en:{season:/Season Planning/i,wind:/wind power/i,unsupported:/(?:Lightman[^.\n]{0,80}(?:tutorial|rod)|13\s+tank-only[^.\n]{0,80}(?:parent|breed)|specific parents)/iu},
+    "zh-CN":{season:/季节规划/u,wind:/风力/u,unsupported:/(?:Lightman[^。\n]{0,60}(?:教程|鱼竿)|繁殖[^。\n]{0,45}(?:亲本|父母|配对)|特定亲本)/u},
+    "zh-TW":{season:/季節規劃/u,wind:/風力/u,unsupported:/(?:Lightman[^。\n]{0,60}(?:教程|魚竿)|繁殖[^。\n]{0,45}(?:親本|父母|配對)|特定親本)/u},
+    ja:{season:/季節計画/u,wind:/風力/u,unsupported:/(?:Lightman[^。\n]{0,60}(?:チュートリアル|竿)|繁殖[^。\n]{0,45}(?:親|ペア)|特定の親|水槽限定13種)/u},
+    ko:{season:/계절 계획/u,wind:/풍력/u,unsupported:/(?:Lightman[^.\n]{0,60}(?:튜토리얼|낚싯대)|번식[^.\n]{0,45}(?:부모|쌍)|특정 부모|수조 전용 13종)/u},
+    es:{season:/Planificaci[oó]n estacional/iu,wind:/e[oó]lica/iu,unsupported:/(?:Lightman[^.\n]{0,70}(?:tutorial|caña)|(?:criar|reproducci[oó]n)[^.\n]{0,50}(?:padres|parejas)|padres espec[ií]ficos|13 especies)/iu},
+  };
+  const makeMoney = (locale) => {
+    const page=sourceData.pages.find(p=>p.slug==="make-money");
+    return locale==="en" ? page : page?.i18n?.[locale];
+  };
+  const buildRaw=fs.readFileSync(path.join(root,"data/build_content.py"),"utf8");
+  const baseRaw=JSON.parse(fs.readFileSync(path.join(root,"data/site.base.json"),"utf8"));
+  const extraAt=buildRaw.indexOf("_EXTRA = {");
+  const rawMakeMoney = {en:JSON.stringify(baseRaw.pages.find(p=>p.slug==="make-money"))};
+  const ordered=["zh-CN","ja","ko","es"];
+  for (let i=0;i<ordered.length;i++) {
+    const start=buildRaw.indexOf(` "${ordered[i]}": {`,extraAt);
+    const end=i+1<ordered.length?buildRaw.indexOf(` "${ordered[i+1]}": {`,start):buildRaw.indexOf("\n}\n\n# 注入",start);
+    const localeBlock=buildRaw.slice(start,end);
+    rawMakeMoney[ordered[i]]=localeBlock.slice(localeBlock.indexOf('  "make-money": {'));
+  }
+  if (independentFault?.layer==="source" && fault==="evidence-gameplay-source") rawMakeMoney.en += independentFault.text;
+  for (const [locale,spec] of Object.entries(localeSpecs)) {
+    const effective=JSON.stringify(makeMoney(locale) || {});
+    evidenceLayerInventory.effective += 1;
+    if (spec.unsupported.test(effective)) fail("make-money-unsupported-effective",locale);
+    if (!spec.season.test(effective)) fail("season-planning-effective-missing",locale);
+    if (!spec.wind.test(effective)) fail("wind-power-effective-missing",locale);
+    const faq=JSON.stringify((makeMoney(locale)?.sections||[]).filter(s=>s.type==="faq"));
+    evidenceLayerInventory.faq += 1;
+    if (spec.unsupported.test(faq)) fail("make-money-unsupported-faq-effective",locale);
+    if (rawMakeMoney[locale]) {
+      evidenceLayerInventory.raw += 1;
+      if (spec.unsupported.test(rawMakeMoney[locale])) fail("make-money-unsupported-raw",locale);
+    }
+    const rel=locale==="en"?"make-money.html":`${locale}/make-money.html`;
+    const file=offFiles.find(f=>path.relative(disabled,f)===path.normalize(rel));
+    if (!file) { fail("make-money-generated-missing",locale); continue; }
+    const html=fs.readFileSync(file,"utf8");
+    const visible=html.replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<style[\s\S]*?<\/style>/gi," ").replace(/<[^>]+>/g," ");
+    const metadata=[...(html.match(/<title>[\s\S]*?<\/title>/gi)||[]),...(html.match(/<meta\s+[^>]*content="[^"]*"[^>]*>/gi)||[])].join(" ");
+    const faqVisible=(html.match(/<details class="faq">[\s\S]*?<\/details>/gi)||[]).join(" ");
+    const jsonld=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)].map(m=>m[1]).join(" ");
+    for (const [layer,text] of Object.entries({visible,metadata,faq:faqVisible,jsonld})) {
+      evidenceLayerInventory[layer] += 1;
+      if (spec.unsupported.test(text)) fail(`make-money-unsupported-${layer}`,locale);
+    }
+    if (!spec.season.test(visible)) fail("season-planning-visible-missing",locale);
+    if (!spec.wind.test(visible)) fail("wind-power-visible-missing",locale);
+  }
+  const makeMoneyPage=sourceData.pages.find(p=>p.slug==="make-money");
+  if (!(makeMoneyPage.sources||[]).some(s=>s.url===canonicalSources.store)) fail("wind-primary-source-missing","make-money");
+  const simplifiedFallback=/(?:季节提示|看天气预报|雷暴蓄电|雨水免费灌溉|种子|嫩芽|生长|收获|页面|深度拆解|快速答案|搜索攻略|联系我们|我们通常)/u;
+  for (const file of offFiles.filter(f=>path.relative(disabled,f).startsWith(`zh-TW${path.sep}`))) {
+    const html=fs.readFileSync(file,"utf8");
+    const visible=html.replace(/<script[\s\S]*?<\/script>/gi," ").replace(/<style[\s\S]*?<\/style>/gi," ").replace(/<[^>]+>/g," ");
+    if (simplifiedFallback.test(visible)) fail("zh-tw-simplified-fallback",path.relative(disabled,file));
   }
   for (const f of offFiles) {
     const rel=path.relative(disabled,f), html=fs.readFileSync(f,"utf8");
@@ -521,6 +604,10 @@ if (!fault && !failures.length) {
     "matrix-es-passive-layer-source", "matrix-es-passive-layer-visible", "matrix-es-passive-layer-metadata", "matrix-es-passive-layer-jsonld",
     "natural-zh-shop-pressure", "natural-es-whole-tier", "natural-es-community-profit", "natural-es-mojibake",
     "language-zh-cn-intro", "language-zh-tw-intro", "language-ko-grammar", "language-en-grammar",
+    "evidence-ja-weather-source", "evidence-ja-weather-visible", "evidence-ja-weather-metadata", "evidence-ja-weather-jsonld",
+    "evidence-economic-zh-profitable", "evidence-economic-zh-cost", "evidence-economic-ja-cost", "evidence-economic-ko-cost", "evidence-economic-es-cost",
+    "evidence-gameplay-source", "evidence-gameplay-visible", "evidence-gameplay-metadata", "evidence-gameplay-faq", "evidence-gameplay-jsonld",
+    "evidence-season-missing", "evidence-wind-missing", "evidence-zh-tw-fallback",
   ]) {
     const result = spawnSync(process.execPath, [auditScript, root], {
       env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: name },
@@ -530,5 +617,5 @@ if (!fault && !failures.length) {
     if (!Number.isInteger(result.status) || result.status <= 0) fail("negative-fixture-did-not-fail", name);
   }
 }
-console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
+console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
 process.exit(failures.length?1:0);

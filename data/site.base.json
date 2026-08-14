@@ -2930,7 +2930,7 @@
       "Review current inventory upgrades in the shop before spending resources.",
       "Run villager quests to obtain the rewards and Tech Points shown in game.",
       "Use the calendar before planting slow crops so they have time to mature.",
-      "Check the fishing tables for weather-specific catches and keep any fish needed for breeding.",
+      "Check the fishing tables for weather-specific catches and verify current in-game requirements before processing or selling.",
       "Compare raw and processed values in your current save before deciding what to sell."
      ]
     },
@@ -2971,11 +2971,11 @@
      "type": "steps",
      "tag": "STARTER LOOP",
      "heading": "Fishing and Processing Checklist",
-     "body": "Use the free tutorial rod, weather tables and unlocked equipment as a checklist; this guide does not claim a single best-profit route.",
+     "body": "Use weather tables and currently unlocked equipment as a checklist; this guide does not claim a single best-profit route.",
      "items": [
       [
-       "Get the free rod",
-       "Do the Lightman fishing tutorial and use the rod it provides."
+       "Check current fishing equipment",
+       "Use the equipment requirements displayed in your current game before targeting harder catches."
       ],
       [
        "Fish through weather",
@@ -2990,8 +2990,8 @@
        "Check the current in-game requirements before targeting harder catches."
       ],
       [
-       "Keep breeding pairs",
-       "13 tank-only species need specific parents — keep spares, sell the surplus."
+       "Verify before processing",
+       "Check the current in-game requirements and displayed values before keeping, processing or selling a catch."
       ]
      ]
     },
@@ -3004,6 +3004,7 @@
       "Month 4 is Harsh Dry Season — protect crops and plan watering.",
       "Rainy season (Jan-Feb) reshuffles the fish tables — fish the uncommon catches while they last.",
       "Thunderstorms can charge farm power used by the 1.0 automation system.",
+      "The official Steam store lists both solar and wind power for supplying the farm.",
       "Plant for the season — off-season crops wither, so rotate what you grow with the calendar."
      ]
     },
@@ -3011,13 +3012,13 @@
      "type": "note",
      "tag": "MISTAKES",
      "heading": "Common Money Mistakes",
-     "body": "Before selling or spending, check current in-game values, keep fish required for breeding, review quest rewards and protect crops and plan watering before Month 4. Exact returns and upgrade value are not verified here."
+     "body": "Before selling or spending, check current in-game values, review quest rewards and plan crop protection and watering before Month 4. Exact returns and upgrade value are not verified here."
     },
     {
      "type": "note",
      "tag": "SOURCES",
      "heading": "Sources & Verification",
-     "body": "The linked official announcements support the dated 1.0 release and two-stage automation, but do not provide processing returns, rod thresholds or upgrade value. We have not hands-on tested those exact values, so this page does not recommend them."
+     "body": "The official Steam store supports solar and wind power, while the linked announcement supports the dated 1.0 release and two-stage automation. These sources do not provide processing returns, fishing-equipment thresholds or upgrade value; those exact values remain not hands-on verified."
     },
     {
      "type": "faq",
@@ -3045,6 +3046,12 @@
        "Official notes confirm two-stage farming automation; check the current in-game unlock requirements and costs."
       ]
      ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "Official Steam store — solar and wind power",
+     "url": "https://store.steampowered.com/app/2285550/Doloc_Town/"
     }
    ]
   }

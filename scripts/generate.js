@@ -480,9 +480,9 @@ function header(lang, active){
     const _disp = NAV_LABELS[lang]?.[slug] || _t;
     return `<a href="${prefix}/${slug}" class="${slug===active?"active":""}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(_disp)}</span></a>`;
   }).join("")}</div>`;
-  const guides = `<div class="dd-menu dd-manual">${drop(lang==="en"?"Core guides":lang==="ja"?"コア攻略":lang==="ko"?"핵심 가이드":lang==="es"?"Guías principales":"核心攻略", P0)}${drop(lang==="en"?"Deep dives":lang==="ja"?"深掘り":lang==="ko"?"심층 가이드":lang==="es"?"A fondo":"深度拆解", P1)}${drop(lang==="en"?"Quick answers":lang==="ja"?"クイック回答":lang==="ko"?"빠른 답변":lang==="es"?"Respuestas rápidas":"快速答案", P2)}</div>`;
-  const searchPh = lang==="en"?"Search guides…":lang==="ja"?"ガイドを検索…":lang==="ko"?"공략 검색…":lang==="es"?"Buscar guías…":"搜索攻略…";
-  const searchLabel = lang==="en"?"Search guides":lang==="ja"?"ガイドを検索":lang==="ko"?"공략 검색":lang==="es"?"Buscar guías":"搜索攻略";
+  const guides = `<div class="dd-menu dd-manual">${drop(lang==="en"?"Core guides":lang==="zh-TW"?"核心攻略":lang==="ja"?"コア攻略":lang==="ko"?"핵심 가이드":lang==="es"?"Guías principales":"核心攻略", P0)}${drop(lang==="en"?"Deep dives":lang==="zh-TW"?"深入解析":lang==="ja"?"深掘り":lang==="ko"?"심층 가이드":lang==="es"?"A fondo":"深度拆解", P1)}${drop(lang==="en"?"Quick answers":lang==="zh-TW"?"快速解答":lang==="ja"?"クイック回答":lang==="ko"?"빠른 답변":lang==="es"?"Respuestas rápidas":"快速答案", P2)}</div>`;
+  const searchPh = lang==="en"?"Search guides…":lang==="zh-TW"?"搜尋攻略…":lang==="ja"?"ガイドを検索…":lang==="ko"?"공략 검색…":lang==="es"?"Buscar guías…":"搜索攻略…";
+  const searchLabel = lang==="en"?"Search guides":lang==="zh-TW"?"搜尋攻略":lang==="ja"?"ガイドを検索":lang==="ko"?"공략 검색":lang==="es"?"Buscar guías":"搜索攻略";
   return `<header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="${prefix}/"><span class="logo-badge">${SVG.logo}</span><span class="logo-txt">${esc(s.name)}</span></a>
@@ -875,7 +875,24 @@ function renderHome(lang){
   const keyFacts = keyFactsArr.map(f=>`<li>${esc(f)}</li>`).join("");
   const keyFactsFirst3 = keyFactsArr.slice(0,3).map(f=>`<div class="plot-note-card"><span class="plot-note-ic">${SVG.sprout}</span><p>${esc(f)}</p></div>`).join("");
   // ---- 四季数据：每个季节有主题色 / 农事历 / 推荐攻略 ----
-  const L = (en, zh, ja, ko, es) => lang==="zh-CN"||lang==="zh-TW" ? zh : lang==="ja" ? ja : lang==="ko" ? ko : lang==="es" ? es : en;
+  const ZH_TW_HOME = {
+    "春":"春", "播种速生作物、翻整土地。":"播種速生作物、翻整土地。", "种香草——2 天速生填充作物":"種香草——2 天速生填充作物",
+    "为季节清理新地块":"為季節清理新地塊", "尽早保存种子母本":"儘早保留種子母株", "夏":"夏",
+    "雷暴可蓄电——建闪电收集。":"雷暴可蓄電——建造閃電收集器。", "让暴雨免费灌溉":"讓暴雨免費灌溉", "雷暴前升级无人机电池":"雷暴前升級無人機電池",
+    "趁天气钓鱼拿稀有渔获":"趁天氣釣取稀有漁獲", "秋":"秋", "收获、烹饪、参加蘑菇节。":"收成、烹飪、參加蘑菇節。",
+    "收集秋季蘑菇":"收集秋季蘑菇", "探索前做增益餐":"探索前製作增益餐", "在节日提升好感":"在節日提升好感", "冬":"冬",
+    "第 4 月是 Harsh Dry Season——保护作物并规划浇水。":"第 4 月是 Harsh Dry Season——保護作物並規劃澆水。", "第 4 月前准备作物防护":"第 4 月前準備作物防護",
+    "推进 1.0 旧城废墟剧情":"推進 1.0 舊城廢墟劇情", "用自动站做室内种植":"用自動化站進行室內種植", "农事历":"農事曆", "本季攻略":"本季攻略",
+    "种植与生长":"種植與生長", "自动化与能源":"自動化與能源", "探索与战斗":"探索與戰鬥", "收获与生活":"收成與生活", "农场攻略图":"農場攻略圖"
+  };
+  const L = (en, zh, ja, ko, es) => {
+    if (lang === "zh-CN") return zh;
+    if (lang === "zh-TW") {
+      if (!Object.prototype.hasOwnProperty.call(ZH_TW_HOME, zh)) throw new Error(`Missing independent zh-TW home copy for: ${zh}`);
+      return ZH_TW_HOME[zh];
+    }
+    return lang==="ja" ? ja : lang==="ko" ? ko : lang==="es" ? es : en;
+  };
   const SEASONS = [
     {key:"spring", name:L("Spring","春","春","봄","Primavera"), emoji:"🌱",
      accent:"#7FB069", soft:"#A8D08D",
@@ -949,6 +966,7 @@ function renderHome(lang){
     </div>`;
   }).join("");
   const badgeTxt = lang==="en" ? "Post-apocalyptic farming sim — 1.0 full release guides"
+    : lang==="zh-TW" ? "後末日農場模擬 — 1.0 完整攻略"
     : lang==="ja" ? "終末世界の農場シム — 1.0 完全版攻略"
     : lang==="ko" ? "포스트 아포칼립스 농장 시뮬 — 1.0 공략"
     : lang==="es" ? "Simulador de granja post-apocalíptico — guías 1.0"
@@ -1083,10 +1101,10 @@ function renderPage(lang, page){
   const noImgCls = heroImg ? "" : " noimg";
   // 生长进度条（耕作手册特色组件）
   const growthSteps = [
-    [lang==="en"?"Seed":lang==="ja"?"種":lang==="ko"?"씨앗":lang==="es"?"Semilla":"种子"],
-    [lang==="en"?"Sprout":lang==="ja"?"芽":lang==="ko"?"새싹":lang==="es"?"Brote":"嫩芽"],
-    [lang==="en"?"Grow":lang==="ja"?"育つ":lang==="ko"?"성장":lang==="es"?"Crecer":"生长"],
-    [lang==="en"?"Harvest":lang==="ja"?"収穫":lang==="ko"?"수확":lang==="es"?"Cosecha":"收获"],
+    [lang==="en"?"Seed":lang==="zh-TW"?"種子":lang==="ja"?"種":lang==="ko"?"씨앗":lang==="es"?"Semilla":"种子"],
+    [lang==="en"?"Sprout":lang==="zh-TW"?"新芽":lang==="ja"?"芽":lang==="ko"?"새싹":lang==="es"?"Brote":"嫩芽"],
+    [lang==="en"?"Grow":lang==="zh-TW"?"生長":lang==="ja"?"育つ":lang==="ko"?"성장":lang==="es"?"Crecer":"生长"],
+    [lang==="en"?"Harvest":lang==="zh-TW"?"收成":lang==="ja"?"収穫":lang==="ko"?"수확":lang==="es"?"Cosecha":"收获"],
   ].map((n,i)=>`<div class="growth-step ${i===3?'done':''}"><span class="growth-dot"></span><span>${esc(n[0])}</span></div>`).join("");
   const body = `
   <main class="container">
@@ -1111,13 +1129,13 @@ function renderPage(lang, page){
       <aside class="manual-side">
         <div class="plot-meta reveal">
           <span class="cm-tag">${esc(s.plotTag)}</span>
-          <div class="cm-row"><span class="cm-k">${esc(lang==="en"?"Page":lang==="ja"?"ページ":lang==="ko"?"페이지":lang==="es"?"Página":"页面")}</span><b>${esc(t.title)}</b></div>
-          <div class="cm-row"><span class="cm-k">${esc(lang==="en"?"Category":lang==="ja"?"分類":lang==="ko"?"분류":lang==="es"?"Categoría":"分类")}</span><b>${esc(t.title.split(":")[0].split("—")[0].trim())}</b></div>
+          <div class="cm-row"><span class="cm-k">${esc(lang==="en"?"Page":lang==="zh-TW"?"頁面":lang==="ja"?"ページ":lang==="ko"?"페이지":lang==="es"?"Página":"页面")}</span><b>${esc(t.title)}</b></div>
+          <div class="cm-row"><span class="cm-k">${esc(lang==="en"?"Category":lang==="zh-TW"?"分類":lang==="ja"?"分類":lang==="ko"?"분류":lang==="es"?"Categoría":"分类")}</span><b>${esc(t.title.split(":")[0].split("—")[0].trim())}</b></div>
           <div class="cm-row"><span class="cm-k">${esc(updLabel(lang))}</span><b>${today}</b></div>
           <div class="weather-card">
             <span class="weather-ic">${SVG.weather}</span>
-            <div><b>${esc(lang==="en"?"Season tip":lang==="ja"?"季節のヒント":lang==="ko"?"계절 팁":lang==="es"?"Consejo de temporada":"季节提示")}</b>
-            <p>${esc(lang==="en"?"Check the forecast — storms charge power, rain irrigates free.":lang==="ja"?"予報を確認——嵐で充電、雨で無料灌漑。":lang==="ko"?"예보를 확인하세요——폭풍은 충전, 비는 무료 관개.":lang==="es"?"Mira el pronóstico: las tormentas cargan y la lluvia riega gratis.":"看天气预报——雷暴蓄电、雨水免费灌溉。")}</p></div>
+            <div><b>${esc(lang==="en"?"Season tip":lang==="zh-TW"?"季節提示":lang==="ja"?"季節のヒント":lang==="ko"?"계절 팁":lang==="es"?"Consejo de temporada":"季节提示")}</b>
+            <p>${esc(lang==="en"?"Check the forecast — storms charge power, rain irrigates free.":lang==="zh-TW"?"查看天氣預報——雷暴可蓄電，雨水可免費灌溉。":lang==="ja"?"予報を確認——嵐で充電、雨で無料灌漑。":lang==="ko"?"예보를 확인하세요——폭풍은 충전, 비는 무료 관개.":lang==="es"?"Mira el pronóstico: las tormentas cargan y la lluvia riega gratis.":"看天气预报——雷暴蓄电、雨水免费灌溉。")}</p></div>
           </div>
         </div>
         <div class="related reveal">
@@ -1210,12 +1228,14 @@ function genStatic(lang){
     (PRIVACY_CMP_BOUNDARY[lang] || PRIVACY_CMP_BOUNDARY.en) +
     privacyBodyLegacy.slice(thirdHeadingAt);
   writePage(path.join(dir,"privacy.html"), "privacy", lang, renderStatic(lang,"privacy", s.privacyTitle, privacyBody, privacyDescOf(lang, s.name)));
-  const contactPh = lang==="zh-CN"||lang==="zh-TW" ? "联系我们："
+  const contactPh = lang==="zh-CN" ? "联系我们："
+    : lang==="zh-TW" ? "聯絡我們："
     : lang==="ja" ? "お問い合わせ："
     : lang==="ko" ? "문의하기: "
     : lang==="es" ? "Contáctanos: "
     : "Reach us at:";
-  const contactReply = lang==="zh-CN"||lang==="zh-TW" ? "我们通常会在 2-3 个工作日内回复。"
+  const contactReply = lang==="zh-CN" ? "我们通常会在 2-3 个工作日内回复。"
+    : lang==="zh-TW" ? "我們通常會在 2–3 個工作天內回覆。"
     : lang==="ja" ? "通常 2〜3 営業日以内に返信します。"
     : lang==="ko" ? "보통 2~3 영업일 내에 답변드립니다."
     : lang==="es" ? "Normalmente respondemos en 2-3 días laborables."
