@@ -32,9 +32,21 @@ const boundaryPatterns = [
 ];
 const droughtPatterns = {
   en: [/(?:drought|month\s*4|harsh dry season)[^\n]{0,120}(?:price(?:s)?\s*(?:spike|rise|surge)|worst prices?|highest prices?|stockpil(?:e|ing)|hoard|sell(?:ing)?\s+high|arbitrag)/iu, /(?:price(?:s)?\s*(?:spike|rise|surge)|worst prices?|highest prices?|stockpil(?:e|ing)|hoard|sell(?:ing)?\s+high)[^\n]{0,120}(?:drought|month\s*4|harsh dry season)/iu],
-  "zh-CN": [/(?:旱季|干旱|第\s*4\s*月|4\s*月)[^\n]{0,100}(?:价格|物价)[^\n]{0,24}(?:飙升|高涨|最高|最差)/u, /(?:旱季|干旱|第\s*4\s*月|4\s*月)[^\n]{0,100}(?:囤货|倒卖|高价卖出)/u],
-  "zh-TW": [/(?:旱季|乾旱|第\s*4\s*月|4\s*月)[^\n]{0,100}(?:價格|物價)[^\n]{0,24}(?:飆升|高漲|最高|最差|最壞)/u, /(?:旱季|乾旱|第\s*4\s*月|4\s*月)[^\n]{0,100}(?:囤貨|倒賣|高價賣出)/u],
-  ja: [/(?:干ばつ|乾季|第?4月)[^\n]{0,100}(?:価格|物価)[^\n]{0,24}(?:高騰|上昇|最高|最悪)/u, /(?:干ばつ|乾季|第?4月)[^\n]{0,100}(?:備蓄|高値で売)/u],
+  "zh-CN": [
+    /(?:旱灾|旱季|干旱|第\s*4\s*月|4\s*月|作物压力)[^。\n]{0,120}(?:价格|物价)[^。\n]{0,24}(?:飙升|高涨|最高|最差)/u,
+    /(?:旱灾|旱季|干旱|第\s*4\s*月|4\s*月|作物压力)[^。\n]{0,120}(?:囤货|倒卖|高价卖出|卖出|出售|获利|利润|回报)/u,
+    /(?:卖出|出售)[^。；;\n]{0,55}(?:旱灾|旱季|干旱|第\s*4\s*月|4\s*月|作物压力)/u,
+  ],
+  "zh-TW": [
+    /(?:旱災|旱季|乾旱|第\s*4\s*月|4\s*月|作物壓力)[^。\n]{0,120}(?:價格|物價)[^。\n]{0,24}(?:飆升|高漲|最高|最差|最壞)/u,
+    /(?:旱災|旱季|乾旱|第\s*4\s*月|4\s*月|作物壓力)[^。\n]{0,120}(?:囤貨|倒賣|高價賣出|賣出|出售|獲利|利潤|回報)/u,
+    /(?:賣出|出售)[^。；;\n]{0,55}(?:旱災|旱季|乾旱|第\s*4\s*月|4\s*月|作物壓力)/u,
+  ],
+  ja: [
+    /(?:干ばつ|乾季|第?4月)[^。\n]{0,120}(?:価格|物価)[^。\n]{0,24}(?:高騰|上昇|最高|最悪)/u,
+    /(?:干ばつ|乾季|第?4月)[^。\n]{0,120}(?:備蓄|高値で売|高騰期に売|利益|稼ぐ)/u,
+    /(?:高値で売|高騰期に売)[^。；;\n]{0,55}(?:干ばつ|乾季|第?4月)/u,
+  ],
   ko: [
     /(?:가뭄|건기|4월|4번째\s*달)[^\n]{0,100}(?:가격|물가)[^\n]{0,24}(?:급등|상승|최고|최악)/u,
     /(?:가뭄|건기|4월|4번째\s*달)[^.\n]{0,100}(?:비축|비싸게\s*판매|고가\s*판매|급등기|최고가)/u,
@@ -43,7 +55,10 @@ const droughtPatterns = {
     /(?:작물\s*보호|보호\s*작물)[^.\n]{0,36}(?:고가|판매\s*시점|판매분)/u,
     /달력[^.\n]{0,36}(?:가장\s*큰|최대)[^.\n]{0,18}수익/u,
   ],
-  es: [/(?:sequ[ií]a|mes\s*4|temporada\s+seca)[^\n]{0,120}(?:precio(?:s)?[^\n]{0,24}(?:sube|subida|dispara|alto|peor)|acumula|vende\s+caro|arbitraje)/iu, /(?:acumula|vende\s+caro|subida\s+de\s+(?:la\s+)?sequ[ií]a)[^\n]{0,120}(?:sequ[ií]a|mes\s*4)/iu],
+  es: [
+    /(?:sequ[ií]a|mes\s*4|temporada\s+seca)[^.\n]{0,120}(?:precio(?:s)?[^.\n]{0,24}(?:sube|subida|dispara|alto|peor)|acumula|vende\s+caro|arbitraje|ganar|beneficio|provecho)/iu,
+    /(?:acumula|vende\s+caro|ganar|beneficio|provecho|subida\s+de\s+(?:la\s+)?sequ[ií]a)[^.\n]{0,120}(?:sequ[ií]a|mes\s*4|temporada\s+seca)/iu,
+  ],
 };
 const stripBoundaries = text => boundaryPatterns.reduce((s,re)=>s.replace(re,""), text);
 const droughtHit = text => {
@@ -70,19 +85,47 @@ const safeBoundaries = {
   ko:"4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다.",
   es:"El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa.",
 };
-const contentIntegrityPatterns = [
+const semanticFamilyPatterns = [
+  ["en-flat-field-weather-causality", /(?:(?:flat|horizontal|single[- ]level|one[- ]level)[^.\n]{0,50}(?:field|plot)[^.\n]{0,70}(?:drought|storm)[^.\n]{0,35}(?:risk|magnet|target|wipe|destroy)|(?:drought|storm)[^.\n]{0,70}(?:target|seek|wipe|destroy|attract)[^.\n]{0,55}(?:flat|horizontal|single[- ]level|one[- ]level)[^.\n]{0,20}(?:field|plot))/iu],
+  ["zh-flat-field-weather-causality", /(?:(?:平坦|平地|單層|单层|單一|单一|一大片|一整片)[^。\n]{0,36}(?:田地|農田|农田|地塊|地块|田)[^。\n]{0,55}(?:旱災|旱灾|乾旱|干旱|風暴|风暴|暴風|暴风)[^。\n]{0,28}(?:風險|风险|靶子|標靶|目标|目標|全毀|全毁|摧毀|摧毁|吸引)|(?:旱災|旱灾|乾旱|干旱|風暴|风暴|暴風|暴风)[^。\n]{0,55}(?:摧毀|摧毁|吸引|鎖定|锁定|瞄準|瞄准|毀掉|毁掉)[^。\n]{0,36}(?:平坦|平地|單層|单层|單一|单一)[^。\n]{0,18}(?:田地|農田|农田|地塊|地块|田))/u],
+  ["ja-flat-field-weather-causality", /(?:(?:平ら|一枚畑|単層|一段|単一|水平)[^。\n]{0,50}(?:畑|農地|区画)[^。\n]{0,60}(?:干ばつ|嵐|暴風)[^。\n]{0,28}(?:リスク|的|標的|全滅|壊滅|引き寄せ)|(?:干ばつ|嵐|暴風)[^。\n]{0,60}(?:狙う|全滅させる|壊滅させる|引き寄せる)[^。\n]{0,45}(?:平ら|一枚畑|単層|一段|単一|水平))/u],
   ["ko-flat-field-weather-causality", /(?:평평한|평지|단층|한\s*판)[^.\n]{0,60}(?:가뭄\s*위험|폭풍의\s*표적|폭풍\s*하나로\s*전멸)/u],
+  ["es-flat-field-weather-causality", /(?:(?:campo|parcela)[^.\n]{0,35}(?:plano|llano|un\s+solo\s+nivel|una\s+sola\s+capa)[^.\n]{0,70}(?:sequ[ií]a|tormenta)[^.\n]{0,30}(?:riesgo|im[aá]n|objetivo|borra|destruye|atrae)|(?:sequ[ií]a|tormenta)[^.\n]{0,70}(?:busca|borra|destruye|atrae|apunta)[^.\n]{0,50}(?:campo|parcela)[^.\n]{0,30}(?:plano|llano|un\s+solo\s+nivel|una\s+sola\s+capa))/iu],
+  ["en-broad-threat-benefit", /(?:(?:every|each|all|any)[^.\n]{0,45}(?:threat|storm|extreme weather|weather event)[^.\n]{0,65}(?:advantage|bonus|benefit|reward)|(?:advantage|bonus|benefit|reward)[^.\n]{0,65}(?:every|each|all|any)[^.\n]{0,45}(?:threat|storm|weather)|weather[^.\n]{0,35}(?:bonus|advantage)[^.\n]{0,30}(?:not|rather than)[^.\n]{0,20}disaster)/iu],
+  ["zh-broad-threat-benefit", /(?:(?:每一|每种|每種|所有|任何)[^。\n]{0,40}(?:威胁|威脅|风暴|風暴|极端天气|極端天氣)[^。\n]{0,65}(?:优势|優勢|红利|紅利|奖励|獎勵|获利|獲利)|(?:优势|優勢|红利|紅利|奖励|獎勵|获利|獲利)[^。\n]{0,65}(?:每一|每种|每種|所有|任何)[^。\n]{0,40}(?:威胁|威脅|风暴|風暴|天气|天氣)|(?:天气|天氣)[^。\n]{0,45}(?:不是|并非|而非)[^。\n]{0,22}(?:灾难|災難)[^。\n]{0,30}(?:红利|紅利|优势|優勢))/u],
+  ["ja-broad-threat-benefit", /(?:(?:すべて|各|あらゆる)[^。\n]{0,40}(?:脅威|嵐|異常気象|天候)[^。\n]{0,65}(?:アドバンテージ|ボーナス|利益|恩恵)|(?:アドバンテージ|ボーナス|利益|恩恵)[^。\n]{0,65}(?:すべて|各|あらゆる)[^。\n]{0,40}(?:脅威|嵐|異常気象|天候)|天候[^。\n]{0,45}(?:災害ではなく|災害でなく)[^。\n]{0,25}(?:ボーナス|アドバンテージ))/u],
+  ["ko-broad-threat-benefit", /(?:(?:모든|각|어떤|어느)[^.\n]{0,45}(?:위협|폭풍|극한\s*날씨|날씨)[^.\n]{0,65}(?:이점|장점|보너스|혜택|수익)|(?:이점|장점|보너스|혜택|수익)[^.\n]{0,65}(?:모든|각|어떤|어느)[^.\n]{0,45}(?:위협|폭풍|극한\s*날씨|날씨)|날씨[^.\n]{0,45}(?:재난이\s*아니라|위협이\s*아니라)[^.\n]{0,25}(?:보너스|이점|장점))/u],
+  ["es-broad-threat-benefit", /(?:(?:cada|tod[oa]s?|cualquier)[^.\n]{0,45}(?:amenaza|tormenta|clima\s+extremo|fen[oó]meno)[^.\n]{0,65}(?:ventaja|bonus|bono|beneficio|provecho)|(?:ventaja|bonus|bono|beneficio|provecho)[^.\n]{0,65}(?:cada|tod[oa]s?|cualquier)[^.\n]{0,45}(?:amenaza|tormenta|clima|fen[oó]meno)|(?:clima|tiempo)[^.\n]{0,45}(?:no\s+(?:es|sea)|en\s+vez\s+de)[^.\n]{0,25}(?:desastre|amenaza)[^.\n]{0,25}(?:bonus|bono|ventaja))/iu],
   ["ko-drought-profit-benefit", /(?:Harsh Dry Season|가뭄|건기)[^.\n]{0,90}(?:수익|이익)(?:\s*(?:내기|보기|기회))?/u],
   ["es-drought-profit-benefit", /(?:aprovecha(?:r)?(?:\s+el)?\s+(?:momento\s+de\s+la\s+)?sequ[ií]a|sac(?:o|ar)\s+provecho\s+de\s+la\s+sequ[ií]a|gan(?:a|ar)\s+con[^.\n]{0,80}Harsh Dry Season|benefici(?:o|arse)[^.\n]{0,60}sequ[ií]a)/iu],
+];
+const contentIntegrityPatterns = [
+  ...semanticFamilyPatterns,
   ["es-farming-malformed", /(?:turbinas\s+automatizaci[oó]ns|cultivoss|cultivosr)/iu],
   ["ko-game-name-drift", /도록 타운/u],
 ];
+const semanticSourceFaults = {
+  "semantic-drought-source": "作物压力上升后卖出库存，就能从第 4 月旱灾获利。作物壓力升高時賣出庫存，可從旱災獲利。",
+  "semantic-flat-en-source": "A one-level horizontal field attracts storms and creates a drought risk.",
+  "semantic-flat-source": "嵐が狙うのは平らな一枚畑なので、単層の配置は避ける。",
+  "semantic-benefit-source": "이점으로 만들 수 있는 것은 모든 극한 날씨 위협입니다.",
+};
+const semanticFamilyCodes = new Set(semanticFamilyPatterns.map(([code]) => code));
+const nonSemanticIntegrityPatterns = contentIntegrityPatterns.filter(([code]) => !semanticFamilyCodes.has(code));
 
 const disabled = fs.mkdtempSync(path.join(os.tmpdir(),"doloc-amz-off-"));
 const enabled = fs.mkdtempSync(path.join(os.tmpdir(),"doloc-amz-on-"));
 let semanticFileCount = 0;
 let generatedVisibleFileCount = 0;
 let generatedJsonLdBlockCount = 0;
+const semanticInventory = {
+  locales: ["en", "zh-CN", "zh-TW", "ja", "ko", "es"],
+  families: ["drought-commercial-correlation", "flat-field-weather-causality", "broad-threat-benefit"],
+  source: {files: 3, hits: 0},
+  generated_visible: {files: 0, hits: 0},
+  generated_metadata: {documents: 0, hits: 0},
+  generated_jsonld: {blocks: 0, hits: 0},
+};
 try {
   generate(disabled,false); generate(enabled,true);
   const offFiles=walk(disabled), onFiles=walk(enabled);
@@ -117,6 +160,34 @@ try {
     const target = offFiles.find(file => path.relative(disabled, file) === path.join("ko", "make-money.html"));
     fs.appendFileSync(target, '<script type="application/ld+json">{"headline":"도록 타운 돈 버는 가이드"}</script>');
   }
+  if (fault === "semantic-drought-visible") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("zh-TW", "weather.html"));
+    fs.appendFileSync(target, "<p>趁作物壓力升高賣出庫存，就能從旱災獲利。</p>");
+  }
+  if (fault === "semantic-drought-jsonld") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("zh-CN", "weather.html"));
+    fs.appendFileSync(target, '<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","name":"旱灾期间怎样通过卖出作物获利？"}</script>');
+  }
+  if (fault === "semantic-flat-visible") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("es", "how-to-play.html"));
+    fs.appendFileSync(target, "<p>Las tormentas buscan los campos de un solo nivel y los destruyen.</p>");
+  }
+  if (fault === "semantic-flat-zh-tw-visible") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("zh-TW", "how-to-play.html"));
+    fs.appendFileSync(target, "<p>單層平坦田地會吸引風暴並造成旱災風險。</p>");
+  }
+  if (fault === "semantic-flat-jsonld") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("zh-CN", "how-to-play.html"));
+    fs.appendFileSync(target, '<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","name":"风暴会摧毁平坦田地吗？"}</script>');
+  }
+  if (fault === "semantic-benefit-visible") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("es", "weather.html"));
+    fs.appendFileSync(target, "<p>Obtén una ventaja de cualquier amenaza meteorológica.</p>");
+  }
+  if (fault === "semantic-benefit-jsonld") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("ko", "weather.html"));
+    fs.appendFileSync(target, '<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","name":"날씨는 재난이 아니라 보너스인가요?"}</script>');
+  }
   for (const f of offFiles) {
     const rel=path.relative(disabled,f), html=fs.readFileSync(f,"utf8");
     if (count(html,'class="amazon-gear"')) fail("disabled-module",rel);
@@ -146,13 +217,13 @@ try {
 
   // Evidence-semantic guard: inspect the generated data and final HTML, not
   // only one visible route. Exceptions are narrowly limited to warning copy.
-  const semanticFiles = [
+  const semanticSourceFiles = [
     path.join(root,"data/build_content.py"),
     path.join(root,"data/site.base.json"),
     path.join(root,"data/site.json"),
-    ...walk(disabled)
   ];
-  semanticFileCount = semanticFiles.length;
+  const generatedFiles = walk(disabled);
+  semanticFileCount = semanticSourceFiles.length + generatedFiles.length;
   const forbidden = [
     ["wind-claim", /\bwind(?:\s+(?:power|turbines?))\b|aerogeneradores|風力|风力|풍력/i],
     ["unsafe-mod-advice", /DTMAPI.{0,100}(subscribe|install|订阅|訂閱|購読|구독|Suscríbete)|(?:dependencies|依赖|依賴|依存|의존성).{0,40}(first|先|먼저)/i],
@@ -160,27 +231,47 @@ try {
     ["self-backing", /complete.{0,30}(?:change|log)|完整.{0,20}(?:变更|變更)|完全.{0,20}(?:変更|ログ)|완전한.{0,20}(?:변경|로그)|registro completo|site (?:like this )?is the reliable source|本站.{0,20}可靠|本網站.{0,20}可靠|このガイド.{0,20}情報源|이 가이드.{0,20}출처|sitio .*fuente fiable/i],
     ["spanish-corruption", /(?:turbinas\s+automatizaci[oó]ns|cultivoss|cultivosr)/iu]
   ];
-  for (const file of semanticFiles) {
-    const text=fs.readFileSync(file,"utf8");
+  const scanSemantic = (text, layer, rel) => {
     const drought=droughtHit(text);
-    if (drought) fail("drought-arbitrage",`${path.relative(root,file)}:${drought.locale}:${drought.excerpt}`);
-    for (const [code,re] of forbidden) if(re.test(text)) fail(code,path.relative(root,file));
-    for (const [code,re] of contentIntegrityPatterns) if(re.test(text)) fail(code,path.relative(root,file));
+    if (drought) {
+      semanticInventory[layer].hits += 1;
+      fail(`drought-arbitrage-${layer}`,`${rel}:${drought.locale}:${drought.excerpt}`);
+    }
+    for (const [code,re] of semanticFamilyPatterns) if(re.test(text)) {
+      semanticInventory[layer].hits += 1;
+      fail(`${code}-${layer}`, rel);
+    }
+  };
+  const sourceEntries = semanticSourceFiles.map(file => ({rel:path.relative(root,file), text:fs.readFileSync(file,"utf8")}));
+  if (semanticSourceFaults[fault]) sourceEntries.push({rel:`fault-source:${fault}`, text:semanticSourceFaults[fault]});
+  for (const {rel,text} of sourceEntries) {
+    scanSemantic(text, "source", rel);
+    for (const [code,re] of forbidden) if(re.test(text)) fail(code,rel);
+    for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(text)) fail(code,rel);
   }
-  for (const file of offFiles) {
+  for (const file of generatedFiles) {
+    const rel = path.relative(disabled, file);
     const html = fs.readFileSync(file, "utf8");
     const visible = html
       .replace(/<script[\s\S]*?<\/script>/gi, " ")
       .replace(/<style[\s\S]*?<\/style>/gi, " ")
       .replace(/<[^>]+>/g, " ")
       .replace(/&[a-z]+;/gi, " ");
+    const metadata = [
+      ...(html.match(/<title>[\s\S]*?<\/title>/gi) || []),
+      ...(html.match(/<meta\s+[^>]*content="[^"]*"[^>]*>/gi) || []),
+    ].join(" ");
     const jsonLd = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)].map(match => match[1]);
     generatedVisibleFileCount += 1;
     generatedJsonLdBlockCount += jsonLd.length;
-    for (const [code,re] of contentIntegrityPatterns) {
-      if (re.test(visible)) fail(`${code}-visible`, path.relative(disabled, file));
-      for (const block of jsonLd) if (re.test(block)) fail(`${code}-jsonld`, path.relative(disabled, file));
-    }
+    semanticInventory.generated_visible.files += 1;
+    semanticInventory.generated_metadata.documents += 1;
+    semanticInventory.generated_jsonld.blocks += jsonLd.length;
+    scanSemantic(visible, "generated_visible", rel);
+    scanSemantic(metadata, "generated_metadata", rel);
+    for (const block of jsonLd) scanSemantic(block, "generated_jsonld", rel);
+    for (const [code,re] of forbidden) if(re.test(html)) fail(code,rel);
+    for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(html)) fail(code,rel);
   }
   for (const [locale,fixture] of Object.entries(faultFixtures)) {
     const hit=droughtHit(fixture);
@@ -316,7 +407,13 @@ try {
 } finally { fs.rmSync(disabled,{recursive:true,force:true}); fs.rmSync(enabled,{recursive:true,force:true}); }
 const negativeFixtureExitCodes = {};
 if (!fault && !failures.length) {
-  for (const name of ["default-module-leak", "ko-unsupported-semantics", "es-corruption", "ko-flat-field-causality", "ko-drought-profit-residue", "es-drought-benefit", "es-farming-malformed", "ko-name-drift"]) {
+  for (const name of [
+    "default-module-leak", "ko-unsupported-semantics", "es-corruption", "ko-flat-field-causality",
+    "ko-drought-profit-residue", "es-drought-benefit", "es-farming-malformed", "ko-name-drift",
+    "semantic-drought-source", "semantic-drought-visible", "semantic-drought-jsonld",
+    "semantic-flat-en-source", "semantic-flat-source", "semantic-flat-visible", "semantic-flat-zh-tw-visible", "semantic-flat-jsonld",
+    "semantic-benefit-source", "semantic-benefit-visible", "semantic-benefit-jsonld",
+  ]) {
     const result = spawnSync(process.execPath, [auditScript, root], {
       env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: name },
       encoding: "utf8",
@@ -325,5 +422,5 @@ if (!fault && !failures.length) {
     if (!Number.isInteger(result.status) || result.status <= 0) fail("negative-fixture-did-not-fail", name);
   }
 }
-console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
+console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
 process.exit(failures.length?1:0);

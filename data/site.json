@@ -288,7 +288,7 @@
    "30+ hours of core gameplay, 100+ hours of additional content",
    "Farming automation: solar power → drone stations (new in 1.0)",
    "Crop gene system: ~20 mutations across 30+ crops",
-   "Extreme weather you can turn to your advantage (acid rain, storms, drought)",
+   "Extreme weather requires crop protection, watering plans and daily forecasts",
    "80 Steam achievements total (43 base + 37 new in 1.0)"
   ],
   "stats": [
@@ -475,7 +475,7 @@
     "主线 30+ 小时，全收集 100+ 小时",
     "农业自动化：两阶段农事自动化（1.0 新增）",
     "作物基因系统：30+ 作物 × 约 20 种突变",
-    "可利用的极端天气（酸雨/雷暴/旱季）",
+    "极端天气需要作物防护、浇水规划与每日预报",
     "Steam 成就共 80 个（基础 43 + 1.0 新增 37）"
    ],
    "zh-TW": [
@@ -483,7 +483,7 @@
     "主線 30+ 小時，全收集 100+ 小時",
     "農業自動化：兩階段農事自動化（1.0 新增）",
     "作物基因系統：30+ 作物 × 約 20 種突變",
-    "可利用的極端天氣（酸雨/雷暴/旱季）",
+    "極端天氣需要作物防護、澆水規劃與每日預報",
     "Steam 成就共 80 個（基礎 43 + 1.0 新增 37）"
    ],
    "ja": [
@@ -491,7 +491,7 @@
     "メイン30時間+、全収集100時間+",
     "農業オートメーション：二段階の農作業自動化（1.0新）",
     "作物遺伝子システム：30+作物×約20変異",
-    "活用できる異常気象（酸性雨/雷雨/乾季）",
+    "異常気象には作物保護・水やり計画・毎日の予報確認が必要",
     "Steam実績80個（基礎43+1.0新37）"
    ],
    "ko": [
@@ -499,7 +499,7 @@
     "메인 30시간+, 전체 수집 100시간+",
     "농업 자동화: 2단계 농작업 자동화 (1.0 신규)",
     "작물 유전자 시스템: 30+ 작물 × 약 20 돌연변이",
-    "활용 가능한 극한 날씨 (산성비/뇌우/가뭄)",
+    "극한 날씨에는 작물 보호, 물주기 계획, 매일의 일기예보 확인이 필요",
     "Steam 업적 80개 (기본 43 + 1.0 신규 37)"
    ],
    "es": [
@@ -580,7 +580,7 @@
       ],
       [
        "Farm vertically",
-       "Craft planters and stack platforms to build upward. A single horizontal field is a drought risk and a storm magnet; vertical layers give you room to spread crops, protect them and add automation later."
+       "Craft planters and stack platforms to build upward. Vertical layers use limited space efficiently, help organize crops and leave room for automation. Plan weather protection and watering separately from the farm layout."
       ],
       [
        "Build and upgrade",
@@ -608,12 +608,12 @@
     {
      "type": "table",
      "tag": "WEATHER",
-     "heading": "Weather Effects & How to Weaponize Them",
+     "heading": "Weather Effects & How to Respond",
      "body": "Extreme weather is the game's signature. It kills careless farms and powers clever ones.",
      "columns": [
       "Weather",
       "What it does",
-      "Turn it into an advantage"
+      "Response"
      ],
      "rows": [
       [
@@ -703,7 +703,7 @@
      "type": "note",
      "tag": "COMMON MISTAKES",
      "heading": "Common Mistakes New Players Make (Avoid These)",
-     "body": "The most common early run-enders, from community reports: watering everything by hand every single day (automate or use the Rain gene), planting one giant flat field (a single storm wipes it), ignoring friendship (you lock yourself out of recipes), skipping Bellad's quests (you fall behind the tech tree), and failing to protect crops before Month 4 (Harsh Dry Season can ruin an unprepared field)."
+     "body": "The most common early run-enders, from community reports: watering everything by hand every single day (automate or use the Rain gene), building without clear access lanes, ignoring friendship (you lock yourself out of recipes), skipping Bellad's quests (you fall behind the tech tree), and failing to protect crops and plan watering before Month 4."
     },
     {
      "type": "list",
@@ -796,7 +796,7 @@
     "zh-CN": {
      "title": "多洛可小镇怎么玩：新手指南（1.0）",
      "metaTitle": "多洛可小镇怎么玩：完整新手入门指南（1.0）",
-     "metaDescription": "多洛可小镇怎么玩？本指南讲清「清障→收集→种田→建造→探索」循环、垂直农场、极端天气利用、无人机战斗基础与 1.0 自动化。",
+     "metaDescription": "多洛可小镇怎么玩？本指南讲清「清障→收集→种田→建造→探索」循环、垂直农场、极端天气应对、无人机战斗基础与 1.0 自动化。",
      "intro": "多洛可小镇把横版平台跳跃与后末日农场模拟结合在一起。你从拾荒者起步，最终成为农场大亨——这里是从第一天到无人机时代的完整循环。",
      "sections": [
       {
@@ -826,7 +826,7 @@
         ],
         [
          "垂直种田",
-         "制作花盆并堆叠平台向上建家。单一平坦田地是旱灾风险与风暴靶子；垂直分层让你有空间分散作物、保护它们并接入自动化。"
+         "制作花盆并堆叠平台向上建家。垂直分层能高效利用有限空间、分类管理作物，并为自动化留出位置；天气防护与浇水需要另行规划。"
         ],
         [
          "建造与升级",
@@ -852,12 +852,12 @@
       },
       {
        "type": "table",
-       "heading": "天气影响与利用方法",
-       "body": "极端天气是游戏的招牌。它杀死粗心的农场，也成就聪明的农场。",
+       "heading": "天气影响与应对方法",
+       "body": "极端天气是游戏的招牌。先识别风险，再准备对应的防护、浇水与响应。",
        "columns": [
         "天气",
         "影响",
-        "转化为优势"
+        "应对方法"
        ],
        "rows": [
         [
@@ -944,7 +944,7 @@
       {
        "type": "steps",
        "heading": "新手常见错误（避免这些）",
-       "body": "社区报告中最常见的毁局行为：每天手动给所有作物浇水（用自动化或雨露均沾基因）、种一大片平地（一场风暴全毁）、忽略好感（把自己锁在食谱之外）、跳过 Bellad 任务（科技树落后）、4 月前没有保护作物并规划浇水。"
+       "body": "社区报告中最常见的毁局行为：每天手动给所有作物浇水（用自动化或雨露均沾基因）、建造时不留通行路线、忽略好感（把自己锁在食谱之外）、跳过 Bellad 任务（科技树落后）、4 月前没有保护作物并规划浇水。"
       },
       {
        "type": "note",
@@ -1012,7 +1012,7 @@
     "zh-TW": {
      "title": "多洛可小鎮怎麼玩：新手指南（1.0）",
      "metaTitle": "多洛可小鎮怎麼玩：完整新手入門指南（1.0）",
-     "metaDescription": "多洛可小鎮怎麼玩？本指南講清「清障→收集→種田→建造→探索」循環、垂直農場、極端天氣利用、無人機戰鬥基礎與 1.0 自動化。",
+     "metaDescription": "多洛可小鎮怎麼玩？本指南講清「清障→收集→種田→建造→探索」循環、垂直農場、極端天氣應對、無人機戰鬥基礎與 1.0 自動化。",
      "intro": "多洛可小鎮把橫版平臺跳躍與後末日農場模擬結合在一起。你從拾荒者起步，最終成為農場大亨——這裡是從第一天到無人機時代的完整循環。",
      "sections": [
       {
@@ -1042,7 +1042,7 @@
         ],
         [
          "垂直種田",
-         "製作花盆並堆疊平臺向上建家。單一平坦田地是旱災風險與風暴靶子；垂直分層讓你有空間分散作物、保護它們並接入自動化。"
+         "製作花盆並堆疊平臺向上建家。垂直分層能高效利用有限空間、分類管理作物，併為自動化留出位置；天氣防護與澆水需要另行規劃。"
         ],
         [
          "建造與升級",
@@ -1068,12 +1068,12 @@
       },
       {
        "type": "table",
-       "heading": "天氣影響與利用方法",
-       "body": "極端天氣是遊戲的招牌。它殺死粗心的農場，也成就聰明的農場。",
+       "heading": "天氣影響與應對方法",
+       "body": "極端天氣是遊戲的招牌。先識別風險，再準備對應的防護、澆水與響應。",
        "columns": [
         "天氣",
         "影響",
-        "轉化為優勢"
+        "應對方法"
        ],
        "rows": [
         [
@@ -1160,7 +1160,7 @@
       {
        "type": "steps",
        "heading": "新手常見錯誤（避免這些）",
-       "body": "社區報告中最常見的毀局行為：每天手動給所有作物澆水（用自動化或雨露均霑基因）、種一大片平地（一場風暴全毀）、忽略好感（把自己鎖在食譜之外）、跳過 Bellad 任務（科技樹落後）、4 月前沒有保護作物並規劃澆水。"
+       "body": "社區報告中最常見的毀局行為：每天手動給所有作物澆水（用自動化或雨露均霑基因）、建造時不留通行路線、忽略好感（把自己鎖在食譜之外）、跳過 Bellad 任務（科技樹落後）、4 月前沒有保護作物並規劃澆水。"
       },
       {
        "type": "note",
@@ -1228,7 +1228,7 @@
     "ja": {
      "title": "ドロックタウンの遊び方：初心者ガイド（1.0）",
      "metaTitle": "ドロックタウンの遊び方：完全初心者ガイド（1.0）",
-     "metaDescription": "ドロックタウンの遊び方を解説：「瓦礫撤去→採取→農業→建築→探索」の循環、垂直農場、異常気象の活用、ドローン戦闘の基礎、1.0 オートメーションまで。",
+     "metaDescription": "ドロックタウンの遊び方を解説：「瓦礫撤去→採取→農業→建築→探索」の循環、垂直農場、異常気象への対応、ドローン戦闘の基礎、1.0 オートメーションまで。",
      "intro": "ドロックタウンは横スクロールのプラットフォーマーと終末世界の農場シムを融合した作品。スカベンジャーから始まり農場王になるまでの完全ループを解説します。",
      "sections": [
       {
@@ -1258,7 +1258,7 @@
         ],
         [
          "垂直に農場を作る",
-         "プランターを作りプラットフォームを積んで上へ建てる。平らな一枚畑は干ばつリスクと嵐の的。垂直に積むことで作物を分散・保護し、後から自動化も追加できる。"
+         "プランターを作りプラットフォームを積んで上へ建てる。垂直に積むと限られた空間を効率よく使い、作物を整理し、自動化の余地も残せる。天候対策と水やりは配置とは別に計画する。"
         ],
         [
          "建築とアップグレード",
@@ -1284,12 +1284,12 @@
       },
       {
        "type": "table",
-       "heading": "天候の影響と活用法",
-       "body": "異常気象はこのゲームの看板。怠慢な農場を殺し、賢い農場を成功させる。",
+       "heading": "天候の影響と対応",
+       "body": "異常気象には、予報確認・作物保護・水やりで対応する。",
        "columns": [
         "天候",
         "影響",
-        "活用法"
+        "対応"
        ],
        "rows": [
         [
@@ -1342,7 +1342,7 @@
         ],
         [
          "4月前に作物保護を準備開始",
-         "乾季の作物への負担で、小さな作物保護を準備が大きく報われる。"
+         "Harsh Dry Season 前に作物保護と水やりを準備する。"
         ]
        ]
       },
@@ -1376,7 +1376,7 @@
       {
        "type": "note",
        "heading": "初心者のよくある失敗（避けること）",
-       "body": "コミュニティ報告で最も多いラン崩壊要因：毎日すべての作物を手で水やり（自動化か「雨露均等」遺伝子を使う）、巨大な一枚畑（嵐ひとつで全滅）、友好度を無視（レシピがロックされる）、Bellad のクエストを放置（テックツリーで遅れる）、4月前に作物保護と水やりを準備しない。"
+       "body": "コミュニティ報告で最も多いラン崩壊要因：毎日すべての作物を手で水やり（自動化か「雨露均等」遺伝子を使う）、移動経路を考えずにプラットフォームを配置する、友好度を無視（レシピがロックされる）、Bellad のクエストを放置（テックツリーで遅れる）、4月前に作物保護と水やりを準備しない。"
       },
       {
        "type": "list",
@@ -1444,7 +1444,7 @@
     "ko": {
      "title": "돌록 타운 하는 법: 초보자 가이드 (1.0)",
      "metaTitle": "돌록 타운 하는 법: 완전 초보자 가이드 (1.0)",
-     "metaDescription": "돌록 타운 하는 법: 잔해 치우기→수집→농사→건설→탐험의 순환, 수직 농장, 극한 날씨 활용, 드론 전투 기초와 1.0 자동화까지. ",
+     "metaDescription": "돌록 타운 하는 법: 잔해 치우기→수집→농사→건설→탐험의 순환, 수직 농장, 극한 날씨 대응, 드론 전투 기초와 1.0 자동화까지. ",
      "intro": "돌록 타운은 횡스크롤 플랫포머와 종말 후 농장 시뮬을 결합한 게임입니다. 스캐빈저에서 시작해 농장 거물이 되기까지의 전체 순환을 설명합니다.",
      "sections": [
       {
@@ -1500,12 +1500,12 @@
       },
       {
        "type": "table",
-       "heading": "날씨 영향과 활용법",
-       "body": "극한 날씨는 이 게임의 상징입니다. 부주의한 농장을 죽이고, 영리한 농장을 성공시킵니다.",
+       "heading": "날씨 영향과 대응",
+       "body": "극한 날씨에는 예보 확인, 작물 보호, 물주기로 대응합니다.",
        "columns": [
         "날씨",
         "영향",
-        "활용법"
+        "대응"
        ],
        "rows": [
         [
@@ -1696,7 +1696,7 @@
         ],
         [
          "Cultiva en vertical",
-         "Crea maceteros y apila plataformas para construir hacia arriba. Un campo plano gigante es un riesgo de sequía y un imán de tormentas; las capas verticales te dan espacio para repartir, proteger y automatizar."
+         "Crea maceteros y apila plataformas para construir hacia arriba. Las capas verticales aprovechan el espacio limitado, organizan los cultivos y dejan sitio para automatizar. Planifica aparte la protección contra el clima y el riego."
         ],
         [
          "Construye y mejora",
@@ -1722,12 +1722,12 @@
       },
       {
        "type": "table",
-       "heading": "Efectos del clima y cómo aprovecharlos",
-       "body": "El clima extremo es la seña del juego: mata granjas descuidadas y hace triunfar a las inteligentes.",
+       "heading": "Efectos del clima y cómo responder",
+       "body": "El clima extremo exige previsión, protección de cultivos y riego planificado.",
        "columns": [
         "Clima",
         "Efecto",
-        "Conviértelo en ventaja"
+        "Respuesta"
        ],
        "rows": [
         [
@@ -1814,7 +1814,7 @@
       {
        "type": "note",
        "heading": "Errores comunes de los novatos (evítalos)",
-       "body": "Los finales de partida más comunes según la comunidad: regar a mano todos los cultivos cada día (usa la automatización o el gen Lluvia), plantar un campo plano gigante (una sola tormenta lo borra), ignorar la amistad (te bloquea recetas), saltarte las misiones de Bellad (te atrasas en el árbol tecnológico) y no proteger los cultivos ni planificar el riego antes del mes 4."
+       "body": "Los finales de partida más comunes según la comunidad: regar a mano todos los cultivos cada día (usa la automatización o el gen Lluvia), construir sin dejar rutas de acceso, ignorar la amistad (te bloquea recetas), saltarte las misiones de Bellad (te atrasas en el árbol tecnológico) y no proteger los cultivos ni planificar el riego antes del mes 4."
       },
       {
        "type": "list",
@@ -9470,7 +9470,7 @@
         [
          "旱灾（4 月）",
          "作物枯萎、商店作物压力增加",
-         "在全年旱季压力时卖出准备作物防护"
+         "提前准备作物防护，并按预报规划浇水"
         ],
         [
          "任何季节",
@@ -9559,7 +9559,7 @@
       {
        "type": "note",
        "heading": "旱季策略与常见错误",
-       "body": "旱灾月（4 月）作物枯萎、作物压力增加。旱灾前准备作物防护，旱灾中规划浇水。常见错误：种一整片巨大的平地（一场风暴全毁）、早期忽略果树（它们后来是免费的钱）、从不升级镰刀（群体收割是巨大的省时工具）、在有「雨露均沾」基因时还全手工浇水、跳过 Bellad 的任务（科技点是唯一可靠的早期收入）。"
+       "body": "旱灾月（4 月）作物枯萎、作物压力增加。旱灾前准备作物防护，旱灾中规划浇水。常见错误：建造时不留通行路线、早期忽略果树（它们后来是免费的钱）、从不升级镰刀（群体收割是巨大的省时工具）、在有「雨露均沾」基因时还全手工浇水、跳过 Bellad 的任务（科技点是唯一可靠的早期收入）。"
       },
       {
        "type": "faq",
@@ -9575,7 +9575,7 @@
         ],
         [
          "旱灾月是哪个月？",
-         "4 月，在旱季。作物枯萎、商店作物压力增加——之前准备作物防护，期间卖出。"
+         "4 月，在旱季。作物可能枯萎——提前准备作物防护并规划浇水。"
         ],
         [
          "基因模块怎么用？",
@@ -9677,7 +9677,7 @@
         [
          "旱災（4 月）",
          "作物枯萎、商店作物壓力增加",
-         "在全年旱季壓力時賣出準備作物防護"
+         "提前準備作物防護，並按預報規劃澆水"
         ],
         [
          "任何季節",
@@ -9766,7 +9766,7 @@
       {
        "type": "note",
        "heading": "旱季策略與常見錯誤",
-       "body": "旱災月（4 月）作物枯萎、作物壓力增加。旱災前準備作物防護，旱災中規劃澆水。常見錯誤：種一整片巨大的平地（一場風暴全毀）、早期忽略果樹（它們後來是免費的錢）、從不升級鐮刀（群體收割是巨大的省時工具）、在有「雨露均霑」基因時還全手工澆水、跳過 Bellad 的任務（科技點是唯一可靠的早期收入）。"
+       "body": "旱災月（4 月）作物枯萎、作物壓力增加。旱災前準備作物防護，旱災中規劃澆水。常見錯誤：建造時不留通行路線、早期忽略果樹（它們後來是免費的錢）、從不升級鐮刀（群體收割是巨大的省時工具）、在有「雨露均霑」基因時還全手工澆水、跳過 Bellad 的任務（科技點是唯一可靠的早期收入）。"
       },
       {
        "type": "faq",
@@ -9782,7 +9782,7 @@
         ],
         [
          "旱災月是哪個月？",
-         "4 月，在旱季。作物枯萎、商店作物壓力增加——之前準備作物防護，期間賣出。"
+         "4 月，在旱季。作物可能枯萎——提前準備作物防護並規劃澆水。"
         ],
         [
          "基因模塊怎麼用？",
@@ -9973,7 +9973,7 @@
       {
        "type": "note",
        "heading": "乾季の戦略とよくある失敗",
-       "body": "第4月は Harsh Dry Season。事前に作物保護と水やりを準備する。よくある失敗：巨大な一枚畑（嵐ひとつで全滅）、果樹を後回し（後で無料の収入源）、鎌の強化を怠る（群収穫は大きな時短）、「雨露均等」があるのに全部手で水やり、Belladのクエストを飛ばす（技術ポイントが唯一の安定した序盤収入）。"
+       "body": "第4月は Harsh Dry Season。事前に作物保護と水やりを準備する。よくある失敗：移動経路を考えずにプラットフォームを配置する、果樹を後回し（後で無料の収入源）、鎌の強化を怠る（群収穫は大きな時短）、「雨露均等」があるのに全部手で水やり、Belladのクエストを飛ばす（技術ポイントが唯一の安定した序盤収入）。"
       },
       {
        "type": "faq",
@@ -10090,7 +10090,7 @@
         ],
         [
          "가뭄 (4월)",
-         "작물이 시들고 상점 작물 부담이 커집음",
+         "작물이 시들고 토양이 건조해짐",
          "작물 보호를 준비하고 물주기를 계획"
         ],
         [
@@ -10196,7 +10196,7 @@
         ],
         [
          "가뭄 달은 언제인가요?",
-         "4월, 건기 중간입니다. 작물이 시들고 상점 작물 부담이 커집습니다——미리 작물 보호 준비하고 그동안 파세요."
+         "4월은 Harsh Dry Season입니다. 작물을 미리 보호하고 물주기를 계획하세요."
         ],
         [
          "유전자 모듈은 어떻게 쓰나요?",
@@ -10393,7 +10393,7 @@
       {
        "type": "note",
        "heading": "Estrategia de sequía y errores comunes",
-       "body": "El mes 4 es Harsh Dry Season. Protege los cultivos y planifica el riego antes de la temporada. Errores comunes: plantar un único campo plano gigante (una tormenta lo borra), ignorar los árboles frutales al principio (son dinero gratis después), no mejorar nunca la hoz (la cosecha en grupo ahorra muchísimo tiempo), regar todo a mano cuando existe el gen Lluvia, y saltarse las misiones de Bellad (los puntos de tecnología son el único ingreso inicial fiable)."
+       "body": "El mes 4 es Harsh Dry Season. Protege los cultivos y planifica el riego antes de la temporada. Errores comunes: construir sin dejar rutas de acceso, ignorar los árboles frutales al principio (son dinero gratis después), no mejorar nunca la hoz (la cosecha en grupo ahorra muchísimo tiempo), regar todo a mano cuando existe el gen Lluvia, y saltarse las misiones de Bellad (los puntos de tecnología son el único ingreso inicial fiable)."
       },
       {
        "type": "faq",
@@ -12544,7 +12544,7 @@
    "title": "Doloc Town Weather Guide: Acid Rain, Storms & Drought",
    "metaTitle": "Doloc Town Weather: Acid Rain, Storms & Drought Guide",
    "metaDescription": "Extreme weather in Doloc Town: protect crops from acid rain and heat, understand Harsh Dry Season, and prepare for storms.",
-   "intro": "Extreme weather defines Doloc Town. Learn each threat, read the seasonal calendar, and turn every storm into an advantage.",
+   "intro": "Extreme weather defines Doloc Town. Learn each threat, read the seasonal calendar, and prepare the right protection, watering and response.",
    "sections": [
     {
      "type": "note",
@@ -12562,7 +12562,7 @@
      "type": "table",
      "tag": "THREATS",
      "heading": "Weather Threats & Counters",
-     "body": "Learn each threat, then turn it into an advantage.",
+     "body": "Learn each threat, then prepare the matching protection and response.",
      "columns": [
       "Weather",
       "Risk",
@@ -12658,7 +12658,7 @@
      "type": "list",
      "tag": "SETUP",
      "heading": "A Weather-Ready Farm Setup",
-     "body": "Build your farm so weather is a bonus, not a disaster.",
+     "body": "Build your farm for timely protection and watering throughout the weather calendar.",
      "items": [
       "Check the forecast every morning — storms and acid rain give you a day's warning.",
       "Build covers over exposed plots and group vulnerable crops together.",
@@ -12692,7 +12692,7 @@
        "Month 4 is officially named Harsh Dry Season in 1.0."
       ],
       [
-       "How do I profit from the drought?",
+       "How should I prepare for the drought?",
        "Prepare crop protection and watering for Month 4."
       ],
       [
@@ -12729,7 +12729,7 @@
      "title": "多洛可小镇天气指南：酸雨、雷暴与旱季",
      "metaTitle": "多洛可小镇天气：酸雨、雷暴与旱季指南",
      "metaDescription": "多洛可小镇天气攻略：应对酸雨、酷热、雷暴与第 4 月 Harsh Dry Season，保护作物并安排浇水。",
-     "intro": "极端天气定义多洛可小镇。认清每一种威胁、读懂季节日历，并把每一场风暴变成优势。",
+     "intro": "极端天气定义多洛可小镇。认清每一种威胁、读懂季节日历，并准备对应的防护、浇水与响应。",
      "sections": [
       {
        "type": "note",
@@ -12746,7 +12746,7 @@
       {
        "type": "table",
        "heading": "天气威胁与应对",
-       "body": "认清每种威胁，然后把它变成优势。",
+       "body": "认清每种威胁，然后准备对应的防护与响应。",
        "columns": [
         "天气",
         "风险",
@@ -12807,7 +12807,7 @@
          "旱灾（4 月）",
          "作物枯萎、作物压力增加",
          "最难的种田月",
-         "在全年旱季压力卖出准备作物防护"
+         "提前准备作物防护，并按预报规划浇水"
         ],
         [
          "任何季节",
@@ -12831,21 +12831,21 @@
          "暴雨期间省掉手动浇水，省下体力。"
         ],
         [
-         "把握旱灾时机",
-         "第 4 月前准备作物防护，在作物压力增加期卖出。"
+         "为旱灾做准备",
+         "第 4 月前准备作物防护，并规划浇水。"
         ]
        ]
       },
       {
        "type": "list",
        "heading": "天气就绪的农场配置",
-       "body": "把农场建得让天气成为红利而非灾难。",
+       "body": "按天气日历安排农场防护与浇水。",
        "items": [
         "每天早上看天气预报——雷暴与酸雨会提前一天预警。",
         "给露天地块建遮盖，把脆弱作物集中种植。",
         "安装「雨露均沾」基因，旱期自动浇水。",
         "用雷暴电力驱动 1.0 无人机站与工业区。",
-        "旱灾前准备作物防护、旱灾中卖出。"
+        "旱灾前准备作物防护，并在旱灾中规划浇水。"
        ]
       },
       {
@@ -12871,8 +12871,8 @@
          "4 月，旱季末尾。作物枯萎、商店作物压力增加。"
         ],
         [
-         "怎么从旱灾获利？",
-         "第 4 月前准备作物防护，在作物压力增加期卖出。"
+         "怎么为旱灾做准备？",
+         "第 4 月前准备作物防护，并规划浇水。"
         ],
         [
          "有雨季吗？",
@@ -12886,7 +12886,7 @@
      "title": "多洛可小鎮天氣指南：酸雨、雷暴與旱季",
      "metaTitle": "多洛可小鎮天氣：酸雨、雷暴與旱季指南",
      "metaDescription": "多洛可小鎮天氣攻略：應對酸雨、酷熱、雷暴與第 4 月 Harsh Dry Season，保護作物並安排澆水。",
-     "intro": "極端天氣定義多洛可小鎮。認清每一種威脅、讀懂季節日曆，並把每一場風暴變成優勢。",
+     "intro": "極端天氣定義多洛可小鎮。認清每一種威脅、讀懂季節日曆，並準備對應的防護、澆水與響應。",
      "sections": [
       {
        "type": "note",
@@ -12903,7 +12903,7 @@
       {
        "type": "table",
        "heading": "天氣威脅與應對",
-       "body": "認清每種威脅，然後把它變成優勢。",
+       "body": "認清每種威脅，然後準備對應的防護與響應。",
        "columns": [
         "天氣",
         "風險",
@@ -12964,7 +12964,7 @@
          "旱災（4 月）",
          "作物枯萎、作物壓力增加",
          "最難的種田月",
-         "在全年旱季壓力賣出準備作物防護"
+         "提前準備作物防護，並按預報規劃澆水"
         ],
         [
          "任何季節",
@@ -12988,21 +12988,21 @@
          "暴雨期間省掉手動澆水，省下體力。"
         ],
         [
-         "把握旱災時機",
-         "第 4 月前準備作物防護，在作物壓力增加期賣出。"
+         "為旱災做準備",
+         "第 4 月前準備作物防護，並規劃澆水。"
         ]
        ]
       },
       {
        "type": "list",
        "heading": "天氣就緒的農場配置",
-       "body": "把農場建得讓天氣成為紅利而非災難。",
+       "body": "按天氣日曆安排農場防護與澆水。",
        "items": [
         "每天早上看天氣預報——雷暴與酸雨會提前一天預警。",
         "給露天地塊建遮蓋，把脆弱作物集中種植。",
         "安裝「雨露均霑」基因，旱期自動澆水。",
         "用雷暴電力驅動 1.0 無人機站與工業區。",
-        "旱災前準備作物防護、旱災中賣出。"
+        "旱災前準備作物防護，並在旱災中規劃澆水。"
        ]
       },
       {
@@ -13028,8 +13028,8 @@
          "4 月，旱季末尾。作物枯萎、商店作物壓力增加。"
         ],
         [
-         "怎麼從旱災獲利？",
-         "第 4 月前準備作物防護，在作物壓力增加期賣出。"
+         "怎麼為旱災做準備？",
+         "第 4 月前準備作物防護，並規劃澆水。"
         ],
         [
          "有雨季嗎？",
@@ -13043,7 +13043,7 @@
      "title": "ドロックタウン天候ガイド：酸性雨・嵐・乾季",
      "metaTitle": "ドロックタウン天候：酸性雨・嵐・乾季ガイド",
      "metaDescription": "ドロックタウンの酸性雨・猛暑・雷雨・第4月 Harsh Dry Season に備え、作物保護と水やりを計画する天候ガイド。",
-     "intro": "過酷な天候がドロックタウンを定義します。各脅威を覚え、季節カレンダーを読み、嵐をすべてアドバンテージに変えましょう。",
+     "intro": "過酷な天候がドロックタウンを定義します。各脅威を覚え、季節カレンダーを読み、必要な作物保護と対応を準備しましょう。",
      "sections": [
       {
        "type": "note",
@@ -13060,7 +13060,7 @@
       {
        "type": "table",
        "heading": "天候の脅威と対策",
-       "body": "各脅威を覚え、アドバンテージに変えましょう。",
+       "body": "各脅威を覚え、必要な作物保護と対応を準備しましょう。",
        "columns": [
         "天候",
         "リスク",
@@ -13090,7 +13090,7 @@
         [
          "干ばつ（第4月）",
          "枯死＋作物への負担",
-         "作物保護を準備、水やりを計画却"
+         "作物を保護し、水やりを計画"
         ]
        ]
       },
@@ -13153,7 +13153,7 @@
       {
        "type": "list",
        "heading": "天候対応の農場セットアップ",
-       "body": "天候を災害でなくボーナスにする農場づくり。",
+       "body": "天候カレンダーに合わせて作物保護と水やりを整える農場づくり。",
        "items": [
         "毎朝天気予報を確認——嵐と酸性雨は1日前に分かる。",
         "露出区画にカバーを建て、弱い作物はまとめて育てる。",
@@ -13200,7 +13200,7 @@
      "title": "돌록 타운 날씨 가이드: 산성비·폭풍·건기",
      "metaTitle": "돌록 타운 날씨: 산성비·폭풍·건기 가이드",
      "metaDescription": "돌록 타운의 산성비·폭염·뇌우·4번째 달 Harsh Dry Season에 대비해 작물 보호와 물주기를 계획하는 날씨 가이드.",
-     "intro": "극한 날씨가 돌록 타운을 정의합니다. 각 위협을 배우고, 계절 달력을 읽고, 모든 폭풍을 이점으로 바꾸세요.",
+     "intro": "극한 날씨가 돌록 타운을 정의합니다. 각 위협을 배우고 계절 달력에 맞는 보호와 대응을 준비하세요.",
      "sections": [
       {
        "type": "note",
@@ -13217,7 +13217,7 @@
       {
        "type": "table",
        "heading": "날씨 위협과 대응",
-       "body": "각 위협을 배운 뒤 이점으로 바꾸세요.",
+       "body": "각 위협을 배운 뒤 알맞은 보호와 대응을 준비하세요.",
        "columns": [
         "날씨",
         "위험",
@@ -13310,7 +13310,7 @@
       {
        "type": "list",
        "heading": "날씨 대비 농장 구성",
-       "body": "날씨를 재난이 아니라 보너스로 만드는 농장 설계.",
+       "body": "날씨 달력에 맞춰 작물 보호와 물주기를 준비하는 농장 설계.",
        "items": [
         "매일 아침 일기예보 확인 — 폭풍과 산성비는 하루 전에 알 수 있습니다.",
         "노출된 구획에 덮개를 짓고 약한 작물은 모아서 심으세요.",
@@ -13357,7 +13357,7 @@
      "title": "Guía del clima de Doloc Town: lluvia ácida, tormentas y sequía",
      "metaTitle": "Clima de Doloc Town: lluvia ácida y tormentas",
      "metaDescription": "Guía del clima de Doloc Town: protege cultivos de lluvia ácida y calor y prepárate para tormentas y Harsh Dry Season.",
-     "intro": "El clima extremo define Doloc Town. Aprende cada amenaza, lee el calendario estacional y convierte cada tormenta en una ventaja.",
+     "intro": "El clima extremo define Doloc Town. Aprende cada amenaza, lee el calendario estacional y prepara la protección y respuesta adecuadas.",
      "sections": [
       {
        "type": "note",
@@ -13380,7 +13380,7 @@
       {
        "type": "table",
        "heading": "Amenazas del clima y cómo contrarrestarlas",
-       "body": "Aprende cada amenaza y conviértela en ventaja.",
+       "body": "Aprende cada amenaza y prepara la protección y respuesta adecuadas.",
        "columns": [
         "Clima",
         "Riesgo",
@@ -13473,7 +13473,7 @@
       {
        "type": "list",
        "heading": "Una granja preparada para el clima",
-       "body": "Construye tu granja para que el clima sea un bonus, no un desastre.",
+       "body": "Prepara la granja para proteger cultivos y planificar el riego según el calendario climático.",
        "items": [
         "Revisa el pronóstico cada mañana: las tormentas y la lluvia ácida avisan con un día de antelación.",
         "Construye cubiertas sobre las parcelas expuestas y agrupa los cultivos vulnerables.",
@@ -17352,7 +17352,7 @@
       },
       {
        "heading": "常见的赚钱错误",
-       "body": "社区报告指出这些是玩家漏钱的方式：全卖原料（跳过 10-20% 的加工利润）、4 月前不准备作物防护（在全年最差的价格卖出）、跳过任务（错过技术点这个收入放大器）、把鱼全卖光（失去 13 种鱼缸专属鱼的繁殖对）、迟迟不升背包（浪费几小时跑回家）。",
+       "body": "社区报告指出这些是玩家漏钱的方式：全卖原料（跳过 10-20% 的加工利润）、4 月前不准备作物防护与浇水、跳过任务（错过技术点这个收入放大器）、把鱼全卖光（失去 13 种鱼缸专属鱼的繁殖对）、迟迟不升背包（浪费几小时跑回家）。",
        "type": "note"
       },
       {
@@ -17372,8 +17372,8 @@
          "腌菜、烘干、织布各约增值 10-20%，据社区报告 [L2]。"
         ],
         [
-         "什么时候卖准备作物防护？",
-         "4 月旱季前准备作物防护，趁作物压力增加时卖出——那是日历上最大的一笔回报。"
+         "4 月旱季怎么准备？",
+         "提前保护作物，并按预报规划浇水。"
         ],
         [
          "背包升级值得吗？",
@@ -17479,7 +17479,7 @@
       },
       {
        "heading": "よくある金策ミス",
-       "body": "コミュニティ報告が指摘するお金を逃すパターン：素材を全部生売り（10-20%の加工マージンを捨てる）、4月前に作物保護を準備しない（一年で最悪の価格で売る）、クエストをスキップ（収入の増幅器・テックポイントを逃す）、魚を全部売る（水槽限定13種の繁殖ペアを失う）、バックパック強化を後回し（往復で何時間も無駄にする）。",
+       "body": "コミュニティ報告が指摘するお金を逃すパターン：素材を全部生売り（10-20%の加工マージンを捨てる）、4月前に作物保護と水やりを準備しない、クエストをスキップ（収入の増幅器・テックポイントを逃す）、魚を全部売る（水槽限定13種の繁殖ペアを失う）、バックパック強化を後回し（往復で何時間も無駄にする）。",
        "type": "note"
       },
       {
@@ -17866,7 +17866,7 @@
       },
       {
        "heading": "常見的賺錢錯誤",
-       "body": "社區報告指出這些是玩家漏錢的方式：全賣原料（跳過 10-20% 的加工利潤）、4 月前不準備作物防護（在全年最差的價格賣出）、跳過任務（錯過技術點這個收入放大器）、把魚全賣光（失去 13 種魚缸專屬魚的繁殖對）、遲遲不升揹包（浪費幾小時跑回家）。",
+       "body": "社區報告指出這些是玩家漏錢的方式：全賣原料（跳過 10-20% 的加工利潤）、4 月前不準備作物防護與澆水、跳過任務（錯過技術點這個收入放大器）、把魚全賣光（失去 13 種魚缸專屬魚的繁殖對）、遲遲不升揹包（浪費幾小時跑回家）。",
        "type": "note"
       },
       {
@@ -17886,8 +17886,8 @@
          "醃菜、烘乾、織布各約增值 10-20%，據社區報告 [L2]。"
         ],
         [
-         "什麼時候賣準備作物防護？",
-         "4 月旱季前準備作物防護，趁作物壓力增加時賣出——那是日曆上最大的一筆回報。"
+         "4 月旱季怎麼準備？",
+         "提前保護作物，並按預報規劃澆水。"
         ],
         [
          "揹包升級值得嗎？",
