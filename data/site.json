@@ -507,7 +507,7 @@
     "30+ horas de historia, 100+ con todo",
     "Automatización agrícola en dos etapas (nueva en 1.0)",
     "Sistema genético: 30+ cultivos × ~20 mutaciones",
-    "Clima extremo aprovechable (lluvia ácida, tormentas, sequía)",
+    "Clima extremo que exige preparación (lluvia ácida, tormentas, sequía)",
     "80 logros de Steam (43 base + 37 nuevos en 1.0)"
    ]
   },
@@ -1474,7 +1474,7 @@
         ],
         [
          "수직 농사",
-         "화분을 만들어 플랫폼을 쌓아 위로 짓습니다. 평평한 한 판 밭은 가뭄 위험이자 폭풍의 표적입니다. 수직 층으로 작물을 분산·보호하고 나중에 자동화도 추가할 수 있습니다."
+         "화분을 만들어 플랫폼을 쌓아 위로 짓습니다. 수직 층은 한정된 공간을 효율적으로 쓰고 작물을 나눠 관리하는 데 유리합니다. 덮개와 물주기를 계획하고 나중에 자동화도 추가할 수 있습니다."
         ],
         [
          "건설과 업그레이드",
@@ -1592,7 +1592,7 @@
       {
        "type": "note",
        "heading": "초보자의 흔한 실수 (피해야 할 것)",
-       "body": "커뮤니티가 보고한 가장 흔한 런 파괴 요인: 매일 모든 작물에 손으로 물주기(자동화나 '고루 내리는 비' 유전자 사용), 거대한 평지 한 판(폭풍 하나로 전멸), 우정 무시(레시피가 영구히 잠김), Bellad 퀘스트 방치(테크 트리에서 뒤처짐), 4월 전에 작물 보호와 물주기를 준비하지 않아 작물이 시드는 것."
+       "body": "커뮤니티가 보고한 가장 흔한 런 파괴 요인: 매일 모든 작물에 손으로 물주기(자동화나 '고루 내리는 비' 유전자 사용), 노출된 작물을 보호하지 않기(극한 날씨에 취약), 우정 무시(레시피가 영구히 잠김), Bellad 퀘스트 방치(테크 트리에서 뒤처짐), 4월 전에 작물 보호와 물주기를 준비하지 않아 작물이 시드는 것."
       },
       {
        "type": "list",
@@ -10180,7 +10180,7 @@
       {
        "type": "note",
        "heading": "가뭄 전략과 흔한 실수",
-       "body": "가뭄 달(4월)에는 작물이 시들고 작물 부담이 커집습니다. 가뭄 전에 작물 보호 준비하고 그동안 물주기를 계획하세요. 흔한 실수: 거대한 평지 한 판(폭풍 하나로 전멸), 과일나무를 미루기(나중에 공짜 돈), 낫 업그레이드 안 하기(집단 수확이 큰 시간 절약), '고루 내리는 비' 유전자가 있는데 전부 손으로 물주기, Bellad 퀘스트 건너뛰기(기술 포인트가 유일한 안정적인 초반 수입)."
+       "body": "가뭄 달(4월)에는 작물이 시들고 작물 부담이 커집습니다. 가뭄 전에 작물 보호 준비하고 그동안 물주기를 계획하세요. 흔한 실수: 노출된 작물을 보호하지 않기(극한 날씨에 취약), 과일나무를 미루기(나중에 공짜 돈), 낫 업그레이드 안 하기(집단 수확이 큰 시간 절약), '고루 내리는 비' 유전자가 있는데 전부 손으로 물주기, Bellad 퀘스트 건너뛰기(기술 포인트가 유일한 안정적인 초반 수입)."
       },
       {
        "type": "faq",
@@ -10383,7 +10383,7 @@
        "heading": "De la agricultura manual a la automatización (1.0)",
        "body": "El 1.0 te convierte de granjero en gestor de granja. La ruta de mejora es: energía primero, estaciones después, y luego deja trabajar a los drones.",
        "items": [
-        "Construye paneles solares y turbinas automatizacións para generar energía limpia para tu granja",
+        "Construye paneles solares y equipos de automatización para suministrar energía a tu granja",
         "Construye estaciones de drones agrícolas: los puntos de control que dejan trabajar a los drones",
         "Asigna tareas de automatización: los drones hacen siembra, cuidado y cosecha de principio a fin",
         "El apilado vertical importa: deja pasillos de vuelo claros entre plataformas para que los drones lleguen a cada macetero",
@@ -10405,7 +10405,7 @@
         ],
         [
          "¿Cuándo planto los árboles frutales?",
-         "En la primera semana. Tardan 7 días en madurar y luego producen para siempre: cuanto antes, más ingreso gratis protege los cultivoss."
+         "En la primera semana. Tardan 7 días en madurar y después producen de forma continua: cuanto antes los plantes, más cosechas obtendrás. Protege los cultivos ante el clima extremo."
         ],
         [
          "¿Cuál es el mes de la sequía?",
@@ -13465,7 +13465,7 @@
          "Sáltate el riego manual en los chaparrones y ahorra esfuerzo."
         ],
         [
-         "Aprovecha el momento de la sequía",
+         "Prepárate para la sequía",
          "Protege los cultivos y planifica el riego antes del mes 4."
         ]
        ]
@@ -13505,7 +13505,7 @@
          "Abril, al final de la estación seca. Harsh Dry Season exige protección de cultivos y riego planificado."
         ],
         [
-         "¿Cómo saco provecho de la sequía?",
+         "¿Cómo me preparo para la sequía?",
          "Protege los cultivos y planifica el riego antes del mes 4."
         ],
         [
@@ -17535,7 +17535,7 @@
       },
       {
        "heading": "제로부터 시작하는 돈 루프",
-       "body": "도록 타운의 수입은 복리입니다 — 각 단계가 이전 단계의 수입을 증폭합니다. 이 순서로 쌓아 올리세요.",
+       "body": "돌록 타운의 수입은 복리입니다 — 각 단계가 이전 단계의 수입을 증폭합니다. 이 순서로 쌓아 올리세요.",
        "items": [
         "첫날에 가방 업그레이드를 구매 — 커뮤니티 제보: 기술 상인의 첫 번째 가방이 슬롯을 약 2배로 늘려 왕복 시간을 크게 줄입니다.",
         "마을 퀘스트 수행 — 골드와 기술 포인트를 주며, 초반 돈 버는 기반이 됩니다.",
@@ -17618,7 +17618,7 @@
        "heading": "자주 묻는 질문",
        "items": [
         [
-         "도록 타운에서 돈을 가장 빨리 버는 방법은?",
+         "돌록 타운에서 돈을 가장 빨리 버는 방법은?",
          "커뮤니티 합의는 물고기→건조→판매: 씨앗 비용 없음, 첫날부터 가능, 건조기 +10-20% [L2]."
         ],
         [
@@ -17641,10 +17641,10 @@
        "type": "faq"
       }
      ],
-     "title": "도록 타운에서 빨리 돈 버는 법 (1.0)",
-     "metaTitle": "도록 타운 돈 버는 가이드: 빠르고 안정적인 수입 (1.0)",
+     "title": "돌록 타운에서 빨리 돈 버는 법 (1.0)",
+     "metaTitle": "돌록 타운 돈 버는 가이드: 빠르고 안정적인 수입 (1.0)",
      "metaDescription": "공식 사실과 커뮤니티 팁을 구분해 가공·낚시·초반 우선순위를 다루는 돈 가이드. 확인되지 않은 가격 거래 주장은 제외합니다.",
-     "intro": "도록 타운에서 원자재를 그대로 파는 것으로는 돈을 거의 벌 수 없습니다. 가공, 날씨 타이밍, 그리고 초반 업그레이드 하나가 수익 곡선을 완전히 바꿉니다 — 여기 커뮤니티가 이미 검증한 방법을 정리했습니다."
+     "intro": "돌록 타운에서 원자재를 그대로 파는 것으로는 돈을 거의 벌 수 없습니다. 가공, 날씨 타이밍, 그리고 초반 업그레이드 하나가 수익 곡선을 완전히 바꿉니다 — 여기 커뮤니티가 이미 검증한 방법을 정리했습니다."
     },
     "es": {
      "sections": [

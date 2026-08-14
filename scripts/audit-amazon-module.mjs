@@ -70,10 +70,19 @@ const safeBoundaries = {
   ko:"4번째 달은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요. 인용한 공식 공지는 거래 전략을 제시하지 않습니다.",
   es:"El mes 4 es Harsh Dry Season. Protege cultivos y planifica el riego; los avisos oficiales citados no establecen una estrategia de compraventa.",
 };
+const contentIntegrityPatterns = [
+  ["ko-flat-field-weather-causality", /(?:평평한|평지|단층|한\s*판)[^.\n]{0,60}(?:가뭄\s*위험|폭풍의\s*표적|폭풍\s*하나로\s*전멸)/u],
+  ["ko-drought-profit-benefit", /(?:Harsh Dry Season|가뭄|건기)[^.\n]{0,90}(?:수익|이익)(?:\s*(?:내기|보기|기회))?/u],
+  ["es-drought-profit-benefit", /(?:aprovecha(?:r)?(?:\s+el)?\s+(?:momento\s+de\s+la\s+)?sequ[ií]a|sac(?:o|ar)\s+provecho\s+de\s+la\s+sequ[ií]a|gan(?:a|ar)\s+con[^.\n]{0,80}Harsh Dry Season|benefici(?:o|arse)[^.\n]{0,60}sequ[ií]a)/iu],
+  ["es-farming-malformed", /(?:turbinas\s+automatizaci[oó]ns|cultivoss|cultivosr)/iu],
+  ["ko-game-name-drift", /도록 타운/u],
+];
 
 const disabled = fs.mkdtempSync(path.join(os.tmpdir(),"doloc-amz-off-"));
 const enabled = fs.mkdtempSync(path.join(os.tmpdir(),"doloc-amz-on-"));
 let semanticFileCount = 0;
+let generatedVisibleFileCount = 0;
+let generatedJsonLdBlockCount = 0;
 try {
   generate(disabled,false); generate(enabled,true);
   const offFiles=walk(disabled), onFiles=walk(enabled);
@@ -87,6 +96,26 @@ try {
   if (fault === "es-corruption") {
     const target = offFiles.find(file => path.relative(disabled, file) === path.join("es", "how-to-play.html"));
     fs.appendFileSync(target, "<p>no protege los cultivosr antes del mes 4</p>");
+  }
+  if (fault === "ko-flat-field-causality") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("ko", "how-to-play.html"));
+    fs.appendFileSync(target, "<p>평평한 한 판 밭은 가뭄 위험이자 폭풍의 표적입니다.</p>");
+  }
+  if (fault === "ko-drought-profit-residue") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("ko", "weather.html"));
+    fs.appendFileSync(target, "<p>Harsh Dry Season 대비로 수익 내기.</p>");
+  }
+  if (fault === "es-drought-benefit") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("es", "weather.html"));
+    fs.appendFileSync(target, '<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","name":"¿Cómo saco provecho de la sequía?"}</script>');
+  }
+  if (fault === "es-farming-malformed") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("es", "farming.html"));
+    fs.appendFileSync(target, '<p>Construye turbinas automatizacións para proteger los cultivoss.</p><script type="application/ld+json">{"text":"cultivoss"}</script>');
+  }
+  if (fault === "ko-name-drift") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.join("ko", "make-money.html"));
+    fs.appendFileSync(target, '<script type="application/ld+json">{"headline":"도록 타운 돈 버는 가이드"}</script>');
   }
   for (const f of offFiles) {
     const rel=path.relative(disabled,f), html=fs.readFileSync(f,"utf8");
@@ -129,13 +158,29 @@ try {
     ["unsafe-mod-advice", /DTMAPI.{0,100}(subscribe|install|订阅|訂閱|購読|구독|Suscríbete)|(?:dependencies|依赖|依賴|依存|의존성).{0,40}(first|先|먼저)/i],
     ["new-year-beast-mistranslation", /New Year Beast.{0,20}(difficulty|难度|難度|난이도|dificultad)/i],
     ["self-backing", /complete.{0,30}(?:change|log)|完整.{0,20}(?:变更|變更)|完全.{0,20}(?:変更|ログ)|완전한.{0,20}(?:변경|로그)|registro completo|site (?:like this )?is the reliable source|本站.{0,20}可靠|本網站.{0,20}可靠|このガイド.{0,20}情報源|이 가이드.{0,20}출처|sitio .*fuente fiable/i],
-    ["spanish-corruption", /cultivosr/i]
+    ["spanish-corruption", /(?:turbinas\s+automatizaci[oó]ns|cultivoss|cultivosr)/iu]
   ];
   for (const file of semanticFiles) {
     const text=fs.readFileSync(file,"utf8");
     const drought=droughtHit(text);
     if (drought) fail("drought-arbitrage",`${path.relative(root,file)}:${drought.locale}:${drought.excerpt}`);
     for (const [code,re] of forbidden) if(re.test(text)) fail(code,path.relative(root,file));
+    for (const [code,re] of contentIntegrityPatterns) if(re.test(text)) fail(code,path.relative(root,file));
+  }
+  for (const file of offFiles) {
+    const html = fs.readFileSync(file, "utf8");
+    const visible = html
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&[a-z]+;/gi, " ");
+    const jsonLd = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)].map(match => match[1]);
+    generatedVisibleFileCount += 1;
+    generatedJsonLdBlockCount += jsonLd.length;
+    for (const [code,re] of contentIntegrityPatterns) {
+      if (re.test(visible)) fail(`${code}-visible`, path.relative(disabled, file));
+      for (const block of jsonLd) if (re.test(block)) fail(`${code}-jsonld`, path.relative(disabled, file));
+    }
   }
   for (const [locale,fixture] of Object.entries(faultFixtures)) {
     const hit=droughtHit(fixture);
@@ -271,7 +316,7 @@ try {
 } finally { fs.rmSync(disabled,{recursive:true,force:true}); fs.rmSync(enabled,{recursive:true,force:true}); }
 const negativeFixtureExitCodes = {};
 if (!fault && !failures.length) {
-  for (const name of ["default-module-leak", "ko-unsupported-semantics", "es-corruption"]) {
+  for (const name of ["default-module-leak", "ko-unsupported-semantics", "es-corruption", "ko-flat-field-causality", "ko-drought-profit-residue", "es-drought-benefit", "es-farming-malformed", "ko-name-drift"]) {
     const result = spawnSync(process.execPath, [auditScript, root], {
       env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: name },
       encoding: "utf8",
@@ -280,5 +325,5 @@ if (!fault && !failures.length) {
     if (!Number.isInteger(result.status) || result.status <= 0) fail("negative-fixture-did-not-fail", name);
   }
 }
-console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
+console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
 process.exit(failures.length?1:0);

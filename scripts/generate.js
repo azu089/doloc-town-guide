@@ -78,6 +78,43 @@ const FLAGS = {
 };
 const flagOf = lang => FLAGS[lang] || "🌐";
 
+const NAV_LABELS = {
+  en: {
+    "how-to-play":"How to Play", "make-money":"How to Make Money Fast", "where-to-buy":"Where to Buy",
+    farming:"Farming Guide: Crops, Seasons & Soil", automation:"Farming Automation Guide (1.0)",
+    "gene-system":"Gene System Guide: Mutations & Seeds", fishing:"Fishing Guide: Ponds, Weather & Rare Fish",
+    "drone-combat":"Drone Combat Guide: Upgrades & Modules", exploration:"Exploration Guide: All 5 Regions",
+    friendship:"Friendship Guide: Villagers, Gifts & Festivals", weather:"Weather Guide: Acid Rain, Storms & Drought",
+    cooking:"Cooking Guide: Recipes, Buffs & Ingredients", ranching:"Ranching Guide: Barns, Fences & Animals",
+    characters:"Characters: Villager Profiles & Secrets", story:"Story Guide: Mysteries & the 1.0 Ending",
+    gifts:"Gift Guide: Every Villager's Loves, Likes & Dislikes", romance:"Romance: The Straight Answer",
+    achievements:"Achievements: All 80 (1.0)", "how-long-to-beat":"How Long to Beat",
+    mods:"Mods & Steam Workshop Guide", "update-log":"Update Log: 1.0 & Early Access History",
+    faq:"FAQ: 1.0 Answers to Common Questions", "system-requirements":"System Requirements",
+    "steam-deck":"Steam Deck Compatibility Guide",
+  },
+  es: {
+    "how-to-play":"Cómo jugar: guía para principiantes (1.0)", "make-money":"Cómo ganar dinero rápido (1.0)",
+    "where-to-buy":"Dónde comprar (precios, descuentos y plataformas)", farming:"Guía de agricultura: cultivos, estaciones y suelo",
+    automation:"Guía de automatización agrícola (1.0)", "gene-system":"Guía del sistema genético: mutaciones y semillas",
+    fishing:"Guía de pesca: estanques, clima y peces raros", "drone-combat":"Guía de combate con dron: mejoras y módulos",
+    exploration:"Guía de exploración: las 5 regiones", friendship:"Guía de amistad: vecinos, regalos y festivales",
+    weather:"Guía del clima: lluvia ácida, tormentas y sequía", cooking:"Guía de cocina: recetas, buffs e ingredientes",
+    ranching:"Guía de ganadería: establos, vallas y animales", characters:"Personajes: perfiles de aldeanos y secretos",
+    story:"Guía de la historia: misterios y final 1.0", gifts:"Guía de regalos: gustos y rechazos de cada aldeano",
+    romance:"Romance: la respuesta directa", achievements:"Logros: los 80 (1.0)",
+    "how-long-to-beat":"¿Cuánto se tarda en completar el juego?", mods:"Guía de mods y Steam Workshop",
+    "update-log":"Registro de actualizaciones: 1.0 e historia de EA", faq:"Preguntas frecuentes: respuestas del 1.0",
+    "system-requirements":"Requisitos del sistema", "steam-deck":"Steam Deck: guía de compatibilidad",
+  },
+};
+
+const FAVICON_LINKS = `
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />`;
+
 const metaOf = slug => (DATA.pages.find(p=>p.slug===slug)?.meta) || {};
 const normalizeSectionSchema = (page, lang, sections) => {
   const list = (sections || []).map(section => ({ ...section }));
@@ -370,10 +407,7 @@ function head(title, desc, extraLd, slug, lang, ogImage){
 <link rel="canonical" href="${urlOf(slug,lang)}" />
 ${hreflang(slug)}
 <meta name="theme-color" content="#16211A" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+${FAVICON_LINKS}
 ${gsc}
   ${adsenseMeta()}${awin}${impact}
 <meta property="og:type" content="website" />
@@ -443,7 +477,7 @@ function header(lang, active){
     const p=DATA.pages.find(x=>x.slug===slug); if(!p) return "";
     const m=metaOf(slug);
     const _t = pageOf(p,lang).title;
-    const _disp = _t.replace(/\s*Doloc Town\s*/g," ").replace(/\s+/g," ").trim() || _t;
+    const _disp = NAV_LABELS[lang]?.[slug] || _t;
     return `<a href="${prefix}/${slug}" class="${slug===active?"active":""}"><span class="nav-ic">${SVG[m.icon]}</span><span>${esc(_disp)}</span></a>`;
   }).join("")}</div>`;
   const guides = `<div class="dd-menu dd-manual">${drop(lang==="en"?"Core guides":lang==="ja"?"コア攻略":lang==="ko"?"핵심 가이드":lang==="es"?"Guías principales":"核心攻略", P0)}${drop(lang==="en"?"Deep dives":lang==="ja"?"深掘り":lang==="ko"?"심층 가이드":lang==="es"?"A fondo":"深度拆解", P1)}${drop(lang==="en"?"Quick answers":lang==="ja"?"クイック回答":lang==="ko"?"빠른 답변":lang==="es"?"Respuestas rápidas":"快速答案", P2)}</div>`;
@@ -1181,7 +1215,7 @@ function genStatic(lang){
 function gen404(){
   const s404 = siteI18n(DEF);
   const pop404 = DATA.pages.filter(p=>["how-to-play","fishing","automation","faq"].includes(p.slug)).map(p=>`<a href="/${p.slug}" style="display:inline-block;margin:6px;padding:9px 16px;border:1px solid var(--border);border-radius:10px;color:var(--muted);text-decoration:none">${esc(p.title)}</a>`).join("");
-  fs.writeFileSync(path.join(OUT,"404.html"), `<!DOCTYPE html><html lang="${LANG_META[DEF].html}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>404 - ${esc(s404.name)}</title><meta name="robots" content="noindex" />${adsenseMeta()}<link rel="stylesheet" href="/css/style.css?v=${CSS_V}"></head><body>${header(DEF,"")}<main class="container" style="padding-top:70px;text-align:center"><section class="card grow-card" style="max-width:560px;margin:0 auto"><h1 style="font-size:3rem">404</h1><p>This page doesn't exist. Try one of these guides instead:</p><div style="margin:18px 0">${pop404}</div><p><a class="btn btn-primary" href="/">← Back to Home</a></p></section></main>${footer(DEF)}</body></html>`);
+  fs.writeFileSync(path.join(OUT,"404.html"), `<!DOCTYPE html><html lang="${LANG_META[DEF].html}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>404 - ${esc(s404.name)}</title><meta name="robots" content="noindex" />${FAVICON_LINKS}${adsenseMeta()}<link rel="stylesheet" href="/css/style.css?v=${CSS_V}"></head><body>${header(DEF,"")}<main class="container" style="padding-top:70px;text-align:center"><section class="card grow-card" style="max-width:560px;margin:0 auto"><h1 style="font-size:3rem">404</h1><p>This page doesn't exist. Try one of these guides instead:</p><div style="margin:18px 0">${pop404}</div><p><a class="btn btn-primary" href="/">← Back to Home</a></p></section></main>${footer(DEF)}</body></html>`);
 }
 
 /* ---------- JSON-LD ---------- */
