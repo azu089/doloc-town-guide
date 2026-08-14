@@ -957,7 +957,7 @@
         ],
         [
          "新玩家",
-         "你比 EA 玩家更早实现自动化——农业自动化→无人机站代劳杂务。"
+         "你比 EA 玩家更早实现自动化——农场无人机站会代劳杂务。"
         ],
         [
          "旧城废墟",
@@ -1167,7 +1167,7 @@
         ],
         [
          "新玩家",
-         "你比 EA 玩家更早實現自動化——農業自動化→無人機站代勞雜務。"
+         "你比 EA 玩家更早實現自動化——農場無人機站會代勞雜務。"
         ],
         [
          "舊城廢墟",
@@ -1377,7 +1377,7 @@
         ],
         [
          "新規プレイヤー",
-         "EAより早く自動化に到達できる——農業オートメーション→ドローン基地が雑務を代行。"
+         "EAより早く自動化に到達できる——農場ドローン基地が雑務を代行。"
         ],
         [
          "旧市街遺跡",
@@ -1587,7 +1587,7 @@
         ],
         [
          "새 플레이어",
-         "EA보다 일찍 자동화에 도달——농업 자동화→드론 기지가 잡일을 대신."
+         "EA보다 일찍 자동화에 도달——농장 드론 기지가 잡일을 대신."
         ],
         [
          "구시가지 유적",
@@ -1803,7 +1803,7 @@
         ],
         [
          "Nuevos jugadores",
-         "Llegas a la automatización antes que en EA: automatización agrícola → estaciones de drones."
+         "Llegas a la automatización antes que en EA: estaciones de drones para automatizar las tareas agrícolas."
         ],
         [
          "Ruinas de la Ciudad Vieja",
@@ -1997,7 +1997,7 @@
        "body": "自动化有三层：能源、站点与无人机。",
        "items": [
         [
-         "利用农业自动化",
+         "配置农业自动化",
          "建造太阳能板与自动化设备，为农场生成清洁能源。"
         ],
         [
@@ -2105,7 +2105,7 @@
        "body": "自動化有三層：能源、站點與無人機。",
        "items": [
         [
-         "利用農業自動化",
+         "配置農業自動化",
          "建造太陽能板與自動化設備，為農場生成清潔能源。"
         ],
         [
@@ -2198,7 +2198,7 @@
     "ja": {
      "title": "ドロックタウン農業オートメーションガイド（1.0）",
      "metaTitle": "ドロックタウン農業自動化（1.0）",
-     "metaDescription": "1.0 の農業自動化と 1.00.03 のドローン既知問題。",
+     "metaDescription": "1.0 の農業オートメーションと 1.00.03 のドローン既知問題。",
      "intro": "1.0 で、あなたは農家から農場マネージャーになる。クリーンエネルギーを生み、ドローン基地を展開し、作物サイクル全体を自動化する方法を解説。",
      "sections": [
       {
@@ -2455,7 +2455,7 @@
       {
        "type": "list",
        "heading": "¿Solar o automatización? Qué construir primero",
-       "body": "Empieza por comprobar la automatización agrícola y las tareas de las estaciones de drones.",
+       "body": "Empieza por comprobar la automatización agrícola oficial y las tareas de las estaciones de drones.",
        "items": [
         "Comprueba los requisitos de desbloqueo y los materiales necesarios.",
         "Asigna a las estaciones de drones tareas de siembra, cuidado y cosecha.",
@@ -3251,7 +3251,7 @@
     {
      "type": "table",
      "heading": "All-Year Fish",
-     "body": "These fish can be caught at any time of year. Locations are player-verified and compiled by 18183.",
+     "body": "These fish can be caught at any time of year. Locations are documented by the Doloc Town Huiji Wiki community.",
      "columns": [
       "Fish",
       "Time",
@@ -3641,7 +3641,7 @@
     {
      "type": "note",
      "heading": "Sources & Notes",
-     "body": "Fish locations, seasons and weather are player-verified and compiled from 18183's catalog (L2). Some spawns may vary after patches — treat this as a field guide, not a fixed database. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client."
+     "body": "Fish locations, seasons and weather are compiled from the community-maintained Doloc Town Huiji Wiki fishing page (L2). Some spawns may vary after patches — treat this as a field guide, not a fixed database. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client."
     }
    ],
    "sources": [
@@ -3650,8 +3650,15 @@
      "url": "https://store.steampowered.com/app/2285550/Doloc_Town/"
     },
     {
-     "label": "Doloc Town Huiji Wiki (Chinese, fish tables)",
-     "url": "https://doloctown.huijiwiki.com/"
+     "label": "Doloc Town Huiji Wiki — Fishing (community source)",
+     "url": "https://doloctown.huijiwiki.com/wiki/%E9%92%93%E9%B1%BC",
+     "labels": {
+      "zh-CN": "Doloc Town Huiji Wiki——钓鱼（社区来源）",
+      "zh-TW": "Doloc Town Huiji Wiki——釣魚（社群來源）",
+      "ja": "Doloc Town Huiji Wiki——釣り（コミュニティ情報）",
+      "ko": "Doloc Town Huiji Wiki — 낚시 (커뮤니티 출처)",
+      "es": "Doloc Town Huiji Wiki — Pesca (fuente comunitaria)"
+     }
     },
     {
      "label": "Official Doloc Town patch 1.00.03",
@@ -3684,7 +3691,7 @@
       {
        "type": "table",
        "heading": "全年鱼类",
-       "body": "这些鱼全年任何时间都能钓到。钓点信息由玩家实测并经 18183 汇总。",
+       "body": "这些鱼全年任何时间都能钓到。钓点信息整理自社区维护的 Doloc Town Huiji Wiki 钓鱼页面。",
        "columns": [
         "鱼",
         "时间",
@@ -4073,7 +4080,7 @@
       {
        "type": "list",
        "heading": "来源与说明",
-       "body": "钓点、季节与天气由玩家实测，并整理自 18183 的图鉴（L2）。部分刷新点可能随补丁变化——请把它当作野外手册，而非固定数据库。⚠️ 中文名为游戏内中文图鉴译名，可能与英文客户端不同。"
+       "body": "钓点、季节与天气整理自社区维护的 Doloc Town Huiji Wiki 钓鱼页面（L2）。部分刷新点可能随补丁变化——请把它当作野外手册，而非固定数据库。⚠️ 中文名为游戏内中文图鉴译名，可能与英文客户端不同。"
       }
      ]
     },
@@ -4098,7 +4105,7 @@
       {
        "type": "table",
        "heading": "全年魚類",
-       "body": "這些魚全年任何時間都能釣到。釣點信息由玩家實測並經 18183 彙總。",
+       "body": "這些魚全年任何時間都能釣到。釣點信息整理自社區維護的 Doloc Town Huiji Wiki 釣魚頁面。",
        "columns": [
         "魚",
         "時間",
@@ -4487,7 +4494,7 @@
       {
        "type": "list",
        "heading": "來源與說明",
-       "body": "釣點、季節與天氣由玩家實測，並整理自 18183 的圖鑑（L2）。部分刷新點可能隨補丁變化——請把它當作野外手冊，而非固定數據庫。⚠️ 中文名為遊戲內中文圖鑑譯名，可能與英文客戶端不同。"
+       "body": "釣點、季節與天氣整理自社區維護的 Doloc Town Huiji Wiki 釣魚頁面（L2）。部分刷新點可能隨補丁變化——請把它當作野外手冊，而非固定數據庫。⚠️ 中文名為遊戲內中文圖鑑譯名，可能與英文客戶端不同。"
       }
      ]
     },
@@ -4512,7 +4519,7 @@
       {
        "type": "table",
        "heading": "周年魚",
-       "body": "これらの魚は一年中いつでも釣れます。釣り場はプレイヤー検証済みで、18183 の図鑑を元に編集。",
+       "body": "これらの魚は一年中いつでも釣れます。釣り場はコミュニティ運営の Doloc Town Huiji Wiki 釣りページを元に整理しています。",
        "columns": [
         "魚",
         "時間",
@@ -4901,7 +4908,7 @@
       {
        "type": "list",
        "heading": "出典と注記",
-       "body": "釣り場・季節・天候はプレイヤー検証済みで、18183 の図鑑（L2）を元に編集。パッチで出現が変わる可能性があります——固定データベースではなくフィールドガイドとして扱ってください。⚠️ 日本語名はゲーム内中国語図鑑の訳で、英語クライアントと異なる場合があります。"
+       "body": "釣り場・季節・天候はコミュニティ運営の Doloc Town Huiji Wiki 釣りページ（L2）を元に整理しています。パッチで出現が変わる可能性があります——固定データベースではなくフィールドガイドとして扱ってください。⚠️ 日本語名はゲーム内中国語図鑑の訳で、英語クライアントと異なる場合があります。"
       }
      ]
     },
@@ -4926,7 +4933,7 @@
       {
        "type": "table",
        "heading": "연중 어종",
-       "body": "이 물고기들은 연중 언제든 낚을 수 있습니다. 낚시터 정보는 플레이어 검증 후 18183 도감을 바탕으로 정리했습니다.",
+       "body": "이 물고기들은 연중 언제든 낚을 수 있습니다. 낚시터 정보는 커뮤니티가 관리하는 Doloc Town Huiji Wiki 낚시 페이지를 바탕으로 정리했습니다.",
        "columns": [
         "물고기",
         "시간",
@@ -5315,7 +5322,7 @@
       {
        "type": "list",
        "heading": "출처 및 주의",
-       "body": "낚시터·계절·날씨는 플레이어 검증 후 18183의 도감(L2)을 바탕으로 정리했습니다. 패치로 일부 출현이 달라질 수 있습니다——고정 데이터베이스가 아닌 현장 가이드로 다뤄주세요. ⚠️ 한국어 이름은 게임 내 중국어 도감의 번역이며 영어 클라이언트와 다를 수 있습니다."
+       "body": "낚시터·계절·날씨는 커뮤니티가 관리하는 Doloc Town Huiji Wiki 낚시 페이지(L2)를 바탕으로 정리했습니다. 패치로 일부 출현이 달라질 수 있습니다——고정 데이터베이스가 아닌 현장 가이드로 다뤄주세요. ⚠️ 한국어 이름은 게임 내 중국어 도감의 번역이며 영어 클라이언트와 다를 수 있습니다."
       }
      ]
     },
@@ -5346,7 +5353,7 @@
       {
        "type": "table",
        "heading": "Peces de todo el año",
-       "body": "Estos peces pueden capturarse en cualquier época del año. Las ubicaciones están verificadas por jugadores y recopiladas por 18183.",
+       "body": "Estos peces pueden capturarse en cualquier época del año. Las ubicaciones se recopilan de la página de pesca de Doloc Town Huiji Wiki, mantenida por la comunidad.",
        "columns": [
         "Pez",
         "Hora",
@@ -5735,7 +5742,7 @@
       {
        "type": "list",
        "heading": "Fuentes y notas",
-       "body": "Ubicaciones, estaciones y clima están verificados por jugadores y recopilados del catálogo de 18183 (L2). Algunas apariciones pueden variar tras los parches: trátalo como una guía de campo, no como una base de datos fija. ⚠️ Los nombres en español son traducciones del catálogo chino del juego y pueden diferir del cliente en inglés."
+       "body": "Las ubicaciones, estaciones y el clima se recopilan de la página de pesca de Doloc Town Huiji Wiki, mantenida por la comunidad (L2). Algunas apariciones pueden variar tras los parches: trátalo como una guía de campo, no como una base de datos fija. ⚠️ Los nombres en español son traducciones del catálogo chino del juego y pueden diferir del cliente en inglés."
       }
      ]
     }
@@ -13893,7 +13900,7 @@
        "items": [
         "新地域：旧市街遺跡（3つ目の大型マップ地域）。",
         "完全なメインストーリー結末。",
-        "農業オートメーション（農業オートメーション→ドローン基地）。",
+        "農業オートメーションと農場ドローン基地。",
         "キノコ祭り。",
         "追加のキャラクターストーリー。",
         "新ツール・戦闘ドローン・魚・アクセサリー。",
@@ -13981,7 +13988,7 @@
        "items": [
         "새 지역: 구시가지 유적 (세 번째 대형 맵 지역).",
         "완전한 메인 스토리 결말.",
-        "농업 자동화 시스템 (농업 자동화→드론 기지).",
+        "농업 자동화 시스템과 농장 드론 기지.",
         "버섯 축제.",
         "추가 캐릭터 스토리.",
         "새 도구·전투 드론·물고기·액세서리.",
@@ -14075,7 +14082,7 @@
        "items": [
         "Nueva área: Ruinas de la Ciudad Vieja (tercera gran zona).",
         "Final completo de la historia principal.",
-        "Sistema de automatización agrícola (automatización agrícola → drones).",
+        "Sistema de automatización agrícola con estaciones de drones.",
         "Festival de las Setas.",
         "Historias de personajes adicionales.",
         "Nuevas herramientas, drones de combate, peces y accesorios.",
@@ -15950,7 +15957,7 @@
         "全80実績（基礎43＋1.0で37）がコンプを促す",
         "作物遺伝子システム：30+作物×約20変異の研究と育成",
         "釣り：池・竿・天候で違う獲物 — 図鑑コンプに時間がかかる",
-        "農業オートメーション（農業オートメーション→ドローン基地）は一つのツリー",
+        "農業オートメーションと農場ドローン基地は一つのツリー",
         "5地域＋1.0の旧市街遺跡が探索時間を増やす"
        ]
       },
@@ -16045,7 +16052,7 @@
         "80개 업적(기본 43 + 1.0 추가 37)이 완주를 유도",
         "작물 유전자 시스템: 30+ 작물 × 약 20개 변이 연구와 육종",
         "낚시: 연못·낚싯대·날씨에 따라 다른 어획 — 도감 완성이 오래 걸림",
-        "농업 자동화(농업 자동화→드론 기지)는 하나의 테크 트리",
+        "농업 자동화와 농장 드론 기지는 하나의 테크 트리",
         "5개 지역 + 1.0의 옛 도시 유적이 탐험 시간을 늘림"
        ]
       },

@@ -664,7 +664,7 @@
     {
      "type": "table",
      "heading": "All-Year Fish",
-     "body": "These fish can be caught at any time of year. Locations are player-verified and compiled by 18183.",
+     "body": "These fish can be caught at any time of year. Locations are documented by the Doloc Town Huiji Wiki community.",
      "columns": [
       "Fish",
       "Time",
@@ -870,7 +870,7 @@
     {
      "type": "note",
      "heading": "Sources & Notes",
-     "body": "Fish locations, seasons and weather are player-verified and compiled from 18183's catalog (L2). Some spawns may vary after patches — treat this as a field guide, not a fixed database. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client."
+     "body": "Fish locations, seasons and weather are compiled from the community-maintained Doloc Town Huiji Wiki fishing page (L2). Some spawns may vary after patches — treat this as a field guide, not a fixed database. ⚠️ English names are translations of the in-game Chinese catalog and may differ from the English client."
     }
    ],
    "sources": [
@@ -879,8 +879,15 @@
      "url": "https://store.steampowered.com/app/2285550/Doloc_Town/"
     },
     {
-     "label": "Doloc Town Huiji Wiki (Chinese, fish tables)",
-     "url": "https://doloctown.huijiwiki.com/"
+     "label": "Doloc Town Huiji Wiki — Fishing (community source)",
+     "url": "https://doloctown.huijiwiki.com/wiki/%E9%92%93%E9%B1%BC",
+     "labels": {
+      "zh-CN": "Doloc Town Huiji Wiki——钓鱼（社区来源）",
+      "zh-TW": "Doloc Town Huiji Wiki——釣魚（社群來源）",
+      "ja": "Doloc Town Huiji Wiki——釣り（コミュニティ情報）",
+      "ko": "Doloc Town Huiji Wiki — 낚시 (커뮤니티 출처)",
+      "es": "Doloc Town Huiji Wiki — Pesca (fuente comunitaria)"
+     }
     }
    ],
    "meta": {

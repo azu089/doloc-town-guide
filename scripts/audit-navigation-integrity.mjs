@@ -60,6 +60,7 @@ const menuLinks = html => {
 
 const out = fs.mkdtempSync(path.join(os.tmpdir(), "doloc-nav-audit-"));
 const negativeFixtureExitCodes = {};
+let searchComputedMinimums = null;
 try {
   execFileSync(process.execPath, [path.join(root, "scripts/generate.js")], {
     cwd: root,
@@ -93,6 +94,21 @@ try {
   } else if (fault === "inline-target-contract") {
     const target = path.join(out, "css", "style.css");
     fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("min-inline-size:44px", "min-inline-size:34px"));
+  } else if (fault === "search-under-44") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace(/(\.site-search input\[type="search"\]\{[^}]*min-block-size:)44px/, "$1 8px"));
+  } else if (fault === "search-focus-ring-loss") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("outline:2px solid var(--amber-soft)", "outline:none"));
+  } else if (fault === "search-icon-captures-click") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("pointer-events:none;z-index:1", "pointer-events:auto;z-index:1"));
+  } else if (fault === "search-input-not-full-control") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace(/(\.site-search input\[type="search"\]\{[^}]*?)width:100%/, "$1width:calc(100% - 20px)"));
+  } else if (fault === "search-late-cascade-override") {
+    const target = path.join(out, "css", "style.css");
+    fs.appendFileSync(target, '\n.site-search input[type="search"]{min-block-size:8px;pointer-events:none}\n');
   } else if (fault === "transition-shorthand") {
     const target = path.join(out, "css", "style.css");
     fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("transition:color .16s ease,background-color .16s ease,box-shadow .16s ease", "transition:.16s"));
@@ -142,6 +158,36 @@ try {
     /\.dd-manual a\{(?=[^}]*min-inline-size:44px)(?=[^}]*min-block-size:44px)(?=[^}]*justify-content:center)[^}]*\}/,
   ];
   for (const re of targetContracts) if (!re.test(css)) fail("touch-target-css-contract", String(re));
+  // Resolve repeated exact-selector declarations in source order so a later
+  // cascade override cannot hide behind the first authored 44px rule. The
+  // task's real-Chromium pass separately verifies the rendered interaction.
+  const resolvedRule = selector => {
+    const escaped = selector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const bodies = [...css.matchAll(new RegExp(`${escaped}\\{([^}]*)\\}`, "g"))].map(match => match[1]);
+    const resolved = {};
+    for (const body of bodies) for (const declaration of body.split(";")) {
+      const splitAt = declaration.indexOf(":");
+      if (splitAt > 0) resolved[declaration.slice(0, splitAt).trim()] = declaration.slice(splitAt + 1).trim();
+    }
+    return resolved;
+  };
+  const pxValue = (rule, property) => Number((String(rule[property] || "").match(/^([0-9.]+)px$/) || [])[1] || 0);
+  const searchFormRule = resolvedRule(".site-search");
+  const searchInputRule = resolvedRule('.site-search input[type="search"]');
+  const searchIconRule = resolvedRule(".search-ic");
+  const searchFocusRule = resolvedRule('.site-search input[type="search"]:focus-visible');
+  searchComputedMinimums = {
+    form: { inline: pxValue(searchFormRule, "min-inline-size"), block: pxValue(searchFormRule, "min-block-size") },
+    input: { inline: pxValue(searchInputRule, "min-inline-size"), block: pxValue(searchInputRule, "min-block-size") },
+  };
+  for (const [target, size] of Object.entries(searchComputedMinimums)) {
+    if (size.inline < 44 || size.block < 44) fail("search-computed-size-contract", `${target}:${size.inline}x${size.block}`);
+  }
+  if (searchInputRule.width !== "100%" || searchInputRule.padding !== "0 12px 0 35px" || searchFormRule.padding !== "0" || searchInputRule["pointer-events"] === "none")
+    fail("search-full-control-click-contract", "visible search pill must be the full-width search input");
+  if (searchIconRule["pointer-events"] !== "none") fail("search-icon-click-through", "search icon must pass clicks to the input");
+  if (searchFocusRule.outline !== "2px solid var(--amber-soft)" || /^(?:0|none)$/.test(searchFocusRule.outline || ""))
+    fail("search-focus-visible", "search input requires a visible keyboard focus outline");
   if (!/\.logo\{[^}]*transition:none[^}]*\}/.test(css)) fail("logo-transition-property", "logo transition must compute to none, never all");
   if (!/\.dd-manual\{[^}]*max-block-size:calc\(100dvh - 132px\)[^}]*overflow-y:auto/.test(css)) fail("menu-keyboard-reachability-css", "mobile guide menu requires a bounded scroll region");
   const navigationRules = (css.match(/\.(?:logo|nav|dd-menu|dd-manual|lang-dd|site-search)[^{]*\{[^}]*\}/g) || []).join("\n");
@@ -157,6 +203,8 @@ try {
   for (const file of allFiles) {
     const rel = path.relative(out, file);
     const html = fs.readFileSync(file, "utf8");
+    if (!/<form class="site-search"[^>]*role="search"[\s\S]*?<input type="search"[^>]*name="q"[^>]*>[\s\S]*?<input type="hidden"[^>]*name="as_sitesearch"/.test(html))
+      fail("search-keyboard-focus-contract", rel);
     for (const token of [
       "function closeNavigationDetails(details, restoreFocus)",
       "details.querySelector(':scope > summary')",
@@ -186,7 +234,7 @@ try {
   }
 
   if (!fault && !failures.length) {
-    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset", "escape-focus-loss", "consent-escape-steals-focus", "touch-target-contract", "inline-target-contract", "transition-shorthand", "unscoped-navigation-hover", "logo-transition-all"]) {
+    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset", "escape-focus-loss", "consent-escape-steals-focus", "touch-target-contract", "inline-target-contract", "search-under-44", "search-focus-ring-loss", "search-icon-captures-click", "search-input-not-full-control", "search-late-cascade-override", "transition-shorthand", "unscoped-navigation-hover", "logo-transition-all"]) {
       const child = spawnSync(process.execPath, [auditScript, root], { env: { ...process.env, DOLOC_NAV_AUDIT_FAULT: name }, encoding: "utf8" });
       negativeFixtureExitCodes[name] = child.status;
       if (!Number.isInteger(child.status) || child.status <= 0) fail("negative-fixture-did-not-fail", name);
@@ -203,6 +251,8 @@ console.log(JSON.stringify({
   malformed_english_occurrences: failures.filter(item => item.code === "en-label").length,
   malformed_spanish_occurrences: failures.filter(item => item.code === "es-label").length,
   favicon_pages: 169,
+  search_target_pages: 169,
+  search_computed_minimums: searchComputedMinimums,
   negative_fixture_exit_codes: negativeFixtureExitCodes,
   failures,
 }, null, 2));

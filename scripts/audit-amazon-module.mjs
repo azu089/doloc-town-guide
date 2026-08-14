@@ -147,7 +147,7 @@ const semanticSourceFaults = {
   "semantic-weather-profit-source": "Weather timing changes the profit math completely, a community-verified advantage for clever farms.",
 };
 const removedGameplayPattern = /(?:Lightman[^.\n。]{0,90}(?:tutorial|rod|教程|鱼竿|魚竿|チュートリアル|竿|튜토리얼|낚싯대|caña)|13\s*(?:tank-only|aquatic|fish)[^.\n]{0,90}(?:parent|pair|breed)|(?:specific|predetermined)\s+(?:breeding\s+)?(?:parents|pairs)|(?:13\s*种鱼缸|特定亲本|特定親本|水槽限定13種|特定の親|수조\s*전용\s*13종|특정\s*부모|13\s*especies[^.\n]{0,70}(?:padres|parejas)))/iu;
-const unsupportedPhasePattern = /(?:two[- ](?:stage|phase)|automation[^.\n]{0,45}(?:two separate phases|first phase[^.\n]{0,30}second phase)|两阶段|兩階段|二段階|2단계|(?:dos|dos distintas)\s+(?:etapas|fases))/iu;
+const unsupportedPhasePattern = /(?:two[- ](?:stage|phase)|automation[^.\n]{0,70}(?:(?:two separate|initial and later) phases|(?:first|initial) phase[^.\n]{0,45}(?:second|later) phase)|两阶段|两个(?:阶段|环节)|先[^。\n]{0,35}再[^。\n]{0,35}(?:两个环节|分为两步)|兩階段|兩個(?:階段|環節)|先[^。\n]{0,35}再[^。\n]{0,35}(?:兩個環節|分為兩步)|二段階|前半[^。\n]{0,35}後半[^。\n]{0,35}分か|2단계|앞 단계[^.\n]{0,35}뒤 단계|(?:dos|dos distintas)\s+(?:etapas|fases)|fase inicial[^.\n]{0,45}(?:otra|fase) posterior)/iu;
 const staleZhTwMoneyMetaPattern = /(?:區分社群技巧與官方事實|介紹加工、釣魚和前期優先事項)/u;
 const independentFaults = {
   "evidence-ja-weather-source": {layer:"source", rel:"ja/weather.html", text:"雷雨で農地を破壊し、豪雨で低地が浸水する。"},
@@ -252,9 +252,10 @@ const fishingRecipeSignals = {
 const fishingRecipeHit = (text, locale) => {
   const s = fishingRecipeSignals[locale];
   if (!s) return null;
-  const exclusive = text.match(s.exclusive);
+  const prose = String(text).replace(/https?:\/\/[^\s"']+/giu, " ");
+  const exclusive = prose.match(s.exclusive);
   if (exclusive) return exclusive[0];
-  const countHit = text.match(s.count), actionHit = text.match(s.action), probabilityHit = text.match(s.probability);
+  const countHit = prose.match(s.count), actionHit = prose.match(s.action), probabilityHit = prose.match(s.probability);
   return countHit && actionHit && probabilityHit ? `${countHit[0]} | ${actionHit[0]} | ${probabilityHit[0]}` : null;
 };
 const fishingRecipeAnyHit = text => {
@@ -276,8 +277,32 @@ for (const [locale, text] of Object.entries(fishingRecipeFixtures)) {
   }
 }
 fishingRecipeFaults["ko-automation-particle"] = {layer:"source", rel:"ko/faq.html", locale:"ko", text:"농업 자동화이 농장 드론 기지를 구동합니다."};
-Object.assign(independentFaults, fishingRecipeFaults);
+const automationPhaseFixtures = {
+  en: { structural:"Official two-stage farming automation.", natural:"Automation begins in an initial phase and moves to a later phase." },
+  "zh-CN": { structural:"官方公告介绍两阶段农业自动化。", natural:"农业自动化先完成供能，再进入无人机作业，分为两个环节。" },
+  "zh-TW": { structural:"官方公告介紹兩階段農業自動化。", natural:"農業自動化先完成供能，再進入無人機作業，分為兩個環節。" },
+  ja: { structural:"公式情報は二段階の農業オートメーションを説明します。", natural:"農業オートメーションは前半と後半に分かれます。" },
+  ko: { structural:"공식 공지는 2단계 농업 자동화를 설명합니다.", natural:"농업 자동화는 앞 단계와 뒤 단계로 나뉩니다." },
+  es: { structural:"Los avisos describen automatización agrícola en dos etapas.", natural:"La automatización comienza en una fase inicial y continúa en otra posterior." },
+};
+const automationPhaseFaults = {};
+const automationPhaseFaultNames = [];
+for (const [locale, fixture] of Object.entries(automationPhaseFixtures)) {
+  const rel = locale === "en" ? "automation.html" : `${locale}/automation.html`;
+  for (const [suffix, text] of [["raw-structural", fixture.structural], ["raw-natural", fixture.natural]]) {
+    const name = `automation-phase-${locale.toLowerCase()}-${suffix}`;
+    automationPhaseFaultNames.push(name);
+    automationPhaseFaults[name] = {layer:"source", rel, locale, text};
+  }
+  for (const layer of ["effective", "visible", "metadata", "faq", "jsonld"]) {
+    const name = `automation-phase-${locale.toLowerCase()}-${layer}`;
+    automationPhaseFaultNames.push(name);
+    automationPhaseFaults[name] = {layer, rel, locale, text:fixture.natural};
+  }
+}
+Object.assign(independentFaults, fishingRecipeFaults, automationPhaseFaults);
 const fishingRecipeFault = fishingRecipeFaults[fault];
+const automationPhaseFault = automationPhaseFaults[fault];
 const extractBalancedObject = (text, openAt) => {
   let depth = 0, quote = "", escaped = false;
   for (let i = openAt; i < text.length; i += 1) {
@@ -429,6 +454,36 @@ try {
   for (const url of genericNewsHubSources) if (persistentSourceText.includes(url)) fail("generic-news-hub-source", url);
   for (const url of Object.values(canonicalSources)) if (!persistentSourceText.includes(url)) fail("canonical-announcement-source-missing", url);
   const sourceData = JSON.parse(fs.readFileSync(path.join(root, "data/site.json"), "utf8"));
+  const contentLocales = ["en", "zh-CN", "zh-TW", "ja", "ko", "es"];
+  const localizedPageView = (slug, locale) => {
+    const page = sourceData.pages?.find(item => item.slug === slug);
+    return locale === "en" ? page : page?.i18n?.[locale];
+  };
+  for (const locale of contentLocales) {
+    const injected = automationPhaseFault?.layer === "effective" && automationPhaseFault.locale === locale
+      ? automationPhaseFault.text : "";
+    const effectiveAutomation = `${JSON.stringify(localizedPageView("automation", locale) || {})} ${JSON.stringify(localizedPageView("faq", locale) || {})} ${injected}`;
+    if (unsupportedPhasePattern.test(effectiveAutomation)) fail("unsupported-phase-effective", locale);
+  }
+  const automationSafeBoundaries = [
+    "Official 1.0 notes describe farming automation and drone stations.",
+    "Patch 1.00.03 lists drone failures in certain situations as a known issue.",
+    "官方 1.0 公告介绍农业自动化；1.00.03 列出特定情况下的无人机失效。",
+    "公式 1.0 情報は農業オートメーションを説明し、1.00.03 はドローン不具合を既知事項としています。",
+    "공식 1.0 공지는 농업 자동화를 설명하며 1.00.03은 특정 상황의 드론 실패를 알려진 문제로 명시합니다.",
+    "Los avisos oficiales describen automatización agrícola; 1.00.03 enumera fallos de drones en ciertas situaciones.",
+  ];
+  for (const boundary of automationSafeBoundaries) if (unsupportedPhasePattern.test(boundary)) fail("automation-phase-negative-control", boundary);
+  const fishingSourceUrl = "https://doloctown.huijiwiki.com/wiki/%E9%92%93%E9%B1%BC";
+  const fishingPage = sourceData.pages?.find(item => item.slug === "fishing");
+  const fishingCommunitySource = fishingPage?.sources?.find(source => source.url === fishingSourceUrl);
+  if (!fishingCommunitySource) fail("fishing-community-deep-source", fishingSourceUrl);
+  for (const locale of contentLocales) {
+    const fishingView = localizedPageView("fishing", locale);
+    if (/18183/u.test(JSON.stringify(fishingView || {}))) fail("fishing-stale-source-identity", locale);
+    const expectedLabel = locale === "en" ? fishingCommunitySource?.label : fishingCommunitySource?.labels?.[locale];
+    if (!expectedLabel || !/Doloc Town Huiji Wiki/i.test(expectedLabel)) fail("fishing-community-source-label", locale);
+  }
   for (const page of sourceData.pages || []) for (const source of page.sources || []) {
     if (/patch 1\.00\.03/i.test(source.label || "") && source.url !== canonicalSources.patch) fail("patch-source-identity", `${page.slug}:${source.url}`);
     if (/1\.0 release notes/i.test(source.label || "") && source.url !== canonicalSources.release) fail("release-source-identity", `${page.slug}:${source.url}`);
@@ -630,7 +685,7 @@ try {
   for (const {rel,text} of sourceEntries) {
     scanSemantic(text, "source", rel);
     if (removedGameplayPattern.test(text)) fail("removed-gameplay-source", rel);
-    if (!rel.endsWith("build_content.py") && unsupportedPhasePattern.test(text)) fail("unsupported-phase-source", rel);
+    if (unsupportedPhasePattern.test(text)) fail("unsupported-phase-source", rel);
     for (const [code,re] of forbidden) if(re.test(text)) fail(code,rel);
     for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(text)) fail(code,rel);
   }
@@ -646,6 +701,7 @@ try {
       ...(html.match(/<title>[\s\S]*?<\/title>/gi) || []),
       ...(html.match(/<meta\s+[^>]*content="[^"]*"[^>]*>/gi) || []),
     ].join(" ");
+    const faqLayer = (html.match(/<details class="faq">[\s\S]*?<\/details>/gi) || []).join(" ");
     const jsonLd = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)].map(match => match[1]);
     generatedVisibleFileCount += 1;
     generatedJsonLdBlockCount += jsonLd.length;
@@ -678,12 +734,18 @@ try {
           fail("fishing-recipe-generated-jsonld", `${route}:${jsonLdHit}`);
         }
       }
+      if (/18183/u.test(`${visible} ${metadata} ${jsonLd.join(" ")}`)) fail("fishing-stale-source-generated", route);
+      const expectedFishingLabel = fishingLocale === "en" ? fishingCommunitySource?.label : fishingCommunitySource?.labels?.[fishingLocale];
+      if (!expectedFishingLabel || !html.includes(expectedFishingLabel)) fail("fishing-community-source-visible", route);
     }
     scanSemantic(visible, "generated_visible", rel);
     scanSemantic(metadata, "generated_metadata", rel);
     for (const block of jsonLd) scanSemantic(block, "generated_jsonld", rel);
     if (removedGameplayPattern.test(visible) || removedGameplayPattern.test(metadata) || jsonLd.some(block=>removedGameplayPattern.test(block))) fail("removed-gameplay-generated",rel);
-    if (unsupportedPhasePattern.test(visible) || unsupportedPhasePattern.test(metadata) || jsonLd.some(block=>unsupportedPhasePattern.test(block))) fail("unsupported-phase-generated",rel);
+    if (unsupportedPhasePattern.test(visible)) fail("unsupported-phase-generated-visible",rel);
+    if (unsupportedPhasePattern.test(metadata)) fail("unsupported-phase-generated-metadata",rel);
+    if (unsupportedPhasePattern.test(faqLayer)) fail("unsupported-phase-generated-faq",rel);
+    if (jsonLd.some(block=>unsupportedPhasePattern.test(block))) fail("unsupported-phase-generated-jsonld",rel);
     if (rel===path.join("zh-TW","make-money.html") && (staleZhTwMoneyMetaPattern.test(metadata) || !metadata.includes(expectedZhTwMoneyMeta))) fail("zh-tw-money-metadata-generated",rel);
     for (const [code,re] of forbidden) if(re.test(html)) fail(code,rel);
     for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(html)) fail(code,rel);
@@ -691,7 +753,7 @@ try {
   const badKoAutomationParticle = /농업 자동화이/u;
   const expectedKoAutomation = "농업 자동화가 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다.";
   if (badKoAutomationParticle.test(buildRaw) || badKoAutomationParticle.test(JSON.stringify(sourceData))) fail("ko-automation-particle-source", "persistent");
-  if (!buildRaw.includes("2단계 자동화가 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다.")) fail("ko-automation-particle-raw-correction-missing", "data/build_content.py");
+  if (!buildRaw.includes("농업 자동화가 농장 드론 기지를 구동해 파종·육성·수확을 자동화합니다.")) fail("ko-automation-particle-raw-correction-missing", "data/build_content.py");
   if (!JSON.stringify(sourceData.pages?.find(page => page.slug === "faq")?.i18n?.ko || {}).includes(expectedKoAutomation)) fail("ko-automation-particle-effective-correction-missing", "faq:ko");
   for (const rel of [path.join("ko", "index.html"), path.join("ko", "faq.html")]) {
     const html = fs.readFileSync(path.join(disabled, rel), "utf8");
@@ -857,7 +919,7 @@ if (!fault && !failures.length) {
     "global-gameplay-literal-source", "global-gameplay-paraphrase-visible",
     "global-source-mismatch-literal-source", "global-source-mismatch-paraphrase-faq",
     "global-season-duplicate", "global-season-wrong-source", "global-zh-tw-money-metadata", "global-source-label-fallback",
-    ...fishingRecipeFaultNames, "ko-automation-particle",
+    ...fishingRecipeFaultNames, ...automationPhaseFaultNames, "ko-automation-particle",
   ]) {
     const result = spawnSync(process.execPath, [auditScript, root], {
       env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: name },
@@ -867,5 +929,5 @@ if (!fault && !failures.length) {
     if (!Number.isInteger(result.status) || result.status <= 0) fail("negative-fixture-did-not-fail", name);
   }
 }
-console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fishing_recipe_inventory:fishingRecipeInventory,fishing_recipe_faults:fishingRecipeFaultNames,gene_breeding_negative_control:"preserved_and_route_scoped",fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
+console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fishing_recipe_inventory:fishingRecipeInventory,fishing_recipe_faults:fishingRecipeFaultNames,automation_phase_faults:automationPhaseFaultNames,gene_breeding_negative_control:"preserved_and_route_scoped",automation_generic_negative_control:"preserved",fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
 process.exit(failures.length?1:0);
