@@ -31,6 +31,13 @@ const ADSENSE_SERVING_ENABLED = Boolean(
     )
   )
 );
+const ADSTERRA_CONFIG = (() => {
+  const markup = String(DATA.site.adsterra || "");
+  const src = (markup.match(/src=\"([^\"]*effectivecpmnetwork\.com[^\"]*)\"/) || [])[1] || "";
+  const containerId = (markup.match(/id=\"([^\"]+)\"/) || [])[1] || "";
+  if (markup && (!src || !containerId)) throw new Error("data/site.json adsterra markup must include one provider src and container id");
+  return src && containerId ? { src, containerId } : null;
+})();
 const adsenseMeta = () => ADSENSE_CLIENT_ID
   ? `<meta name="google-adsense-account" content="${esc(ADSENSE_CLIENT_ID)}" />`
   : "";
@@ -72,12 +79,23 @@ const FLAGS = {
 const flagOf = lang => FLAGS[lang] || "🌐";
 
 const metaOf = slug => (DATA.pages.find(p=>p.slug===slug)?.meta) || {};
+const normalizeSectionSchema = (page, lang, sections) => {
+  const list = (sections || []).map(section => ({ ...section }));
+  const override = DATA.site.sectionSchemaOverrides?.[page.slug]?.[lang];
+  const tailTypes = override?.tailTypes;
+  if (Array.isArray(tailTypes)) {
+    if (list.length < tailTypes.length) throw new Error(`section schema override exceeds ${lang}:${page.slug}`);
+    const start = list.length - tailTypes.length;
+    tailTypes.forEach((type, index) => { list[start + index].type = type; });
+  }
+  return list;
+};
 const pageOf = (page, lang) => {
   if (lang === DEF || !page.i18n || !page.i18n[lang]) {
-    return { title: page.title, metaTitle: page.metaTitle, metaDescription: page.metaDescription, intro: page.intro, sections: page.sections, heroImage: page.heroImage };
+    return { title: page.title, metaTitle: page.metaTitle, metaDescription: page.metaDescription, intro: page.intro, sections: normalizeSectionSchema(page, lang, page.sections), heroImage: page.heroImage };
   }
   const t = page.i18n[lang];
-  return { title: t.title || page.title, metaTitle: t.metaTitle || page.metaTitle, metaDescription: t.metaDescription || page.metaDescription, intro: t.intro || page.intro, sections: t.sections || page.sections, heroImage: t.heroImage || page.heroImage };
+  return { title: t.title || page.title, metaTitle: t.metaTitle || page.metaTitle, metaDescription: t.metaDescription || page.metaDescription, intro: t.intro || page.intro, sections: normalizeSectionSchema(page, lang, t.sections || page.sections), heroImage: t.heroImage || page.heroImage };
 };
 const siteI18n = lang => {
   const s = (DATA.site.i18n && DATA.site.i18n[lang]) || {};
@@ -370,8 +388,6 @@ ${gsc}
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/style.css?v=${CSS_V}" />${slug === "index" ? "\n" + KIT.heroPreload({ srcset: HERO_SET, sizes: "100vw" }) : ""}
 <script type="application/ld+json">${ld}</script>
-${DATA.site.gaId ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(DATA.site.gaId)}"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${esc(DATA.site.gaId)}');</script>` : ""}
 </head>
 <body>`;
 }
@@ -462,7 +478,7 @@ function decisionEventsScript() {
   return `<script>
 (function(){
   function send(name, params){
-    if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+    if (window.DOLOC_CONSENT_ANALYTICS === true && typeof window.gtag === "function") window.gtag("event", name, params || {});
   }
   function toolRoot(el){
     return el && el.closest && el.closest('.ff,.ach,.tool-shell,.tool-panel,.tracker,[data-tool]');
@@ -501,7 +517,63 @@ function decisionEventsScript() {
 })();
 </script>`;
 }
-function footer(lang, { omitAdsterra = false } = {}){
+const CONSENT_UI = {
+  en: { title:"Privacy choices", body:"Google Analytics and, on seven eligible guides, Adsterra stay blocked until you choose. They may use IP, device, page, referrer, approximate-region and cookie or identifier data for analytics, advertising, fraud prevention and reporting.", change:"You can change or withdraw your choice at any time.", accept:"Accept analytics & ads", reject:"Reject optional services", settings:"Privacy settings", dialog:"Privacy settings", analytics:"Analytics (Google Analytics / GA4)", advertising:"Advertising (Adsterra on eligible guides)", save:"Save choices", withdraw:"Withdraw all", close:"Close", policy:"Privacy policy and provider links", adBlocked:"Optional ad blocked until you accept advertising." },
+  "zh-CN": { title:"隐私选择", body:"在您作出选择前，Google Analytics 以及 7 个符合条件攻略页上的 Adsterra 均保持阻止。它们可能为分析、广告、防欺诈和报告处理 IP、设备、页面、来源、大致地区以及 Cookie 或类似标识符。", change:"您可以随时更改或撤回选择。", accept:"接受分析与广告", reject:"拒绝可选服务", settings:"隐私设置", dialog:"隐私设置", analytics:"分析（Google Analytics / GA4）", advertising:"广告（仅符合条件攻略页上的 Adsterra）", save:"保存选择", withdraw:"全部撤回", close:"关闭", policy:"隐私政策与服务商链接", adBlocked:"接受广告前，可选广告保持阻止。" },
+  "zh-TW": { title:"隱私選擇", body:"在您做出選擇前，Google Analytics 及 7 個符合條件攻略頁上的 Adsterra 都會維持封鎖。它們可能為分析、廣告、防詐欺與報告處理 IP、裝置、頁面、來源、大致地區，以及 Cookie 或類似識別碼。", change:"您可以隨時變更或撤回選擇。", accept:"接受分析與廣告", reject:"拒絕選用服務", settings:"隱私設定", dialog:"隱私設定", analytics:"分析（Google Analytics / GA4）", advertising:"廣告（僅符合條件攻略頁上的 Adsterra）", save:"儲存選擇", withdraw:"全部撤回", close:"關閉", policy:"隱私政策與服務商連結", adBlocked:"接受廣告前，選用廣告維持封鎖。" },
+  ja: { title:"プライバシー設定", body:"選択するまで Google Analytics と、対象となる 7 つの攻略ページの Adsterra はブロックされます。分析、広告、不正防止、レポートのため IP、端末、ページ、参照元、おおよその地域、Cookie や類似識別子を処理する場合があります。", change:"選択はいつでも変更・撤回できます。", accept:"分析と広告を許可", reject:"任意サービスを拒否", settings:"プライバシー設定", dialog:"プライバシー設定", analytics:"分析（Google Analytics / GA4）", advertising:"広告（対象ページの Adsterra のみ）", save:"選択を保存", withdraw:"すべて撤回", close:"閉じる", policy:"プライバシーポリシーと事業者リンク", adBlocked:"広告を許可するまで任意広告はブロックされます。" },
+  ko: { title:"개인정보 선택", body:"선택하기 전에는 Google Analytics와 대상 가이드 7개의 Adsterra가 차단됩니다. 분석, 광고, 사기 방지 및 보고를 위해 IP, 기기, 페이지, 유입 경로, 대략적 지역, 쿠키나 유사 식별자를 처리할 수 있습니다.", change:"선택은 언제든 변경하거나 철회할 수 있습니다.", accept:"분석 및 광고 허용", reject:"선택 서비스 거부", settings:"개인정보 설정", dialog:"개인정보 설정", analytics:"분석 (Google Analytics / GA4)", advertising:"광고 (대상 가이드의 Adsterra만)", save:"선택 저장", withdraw:"모두 철회", close:"닫기", policy:"개인정보 처리방침 및 공급자 링크", adBlocked:"광고를 허용하기 전까지 선택 광고가 차단됩니다." },
+  es: { title:"Opciones de privacidad", body:"Google Analytics y, en siete guías aptas, Adsterra permanecen bloqueados hasta que elijas. Pueden tratar IP, dispositivo, página, referencia, región aproximada y cookies o identificadores para análisis, publicidad, prevención del fraude e informes.", change:"Puedes cambiar o retirar tu elección en cualquier momento.", accept:"Aceptar análisis y anuncios", reject:"Rechazar servicios opcionales", settings:"Ajustes de privacidad", dialog:"Ajustes de privacidad", analytics:"Análisis (Google Analytics / GA4)", advertising:"Publicidad (Adsterra solo en guías aptas)", save:"Guardar opciones", withdraw:"Retirar todo", close:"Cerrar", policy:"Política de privacidad y enlaces de proveedores", adBlocked:"El anuncio opcional sigue bloqueado hasta que aceptes publicidad." },
+};
+function consentUi(lang, adsterraEligible){
+  const u = CONSENT_UI[lang] || CONSENT_UI.en;
+  const prefix = lang === DEF ? "" : `/${lang}`;
+  const adConfig = adsterraEligible && ADSTERRA_CONFIG ? ADSTERRA_CONFIG : null;
+  const cfg = JSON.stringify({
+    storageKey: DATA.site.consentStorageKey || "doloc_consent_v1",
+    gaId: DATA.site.gaId || "",
+    adsterra: adConfig,
+  }).replace(/</g, "\\u003c");
+  return `<button type="button" class="privacy-settings-button" data-consent-settings aria-haspopup="dialog" aria-controls="consent-dialog-${esc(lang)}" aria-expanded="false">${esc(u.settings)}</button>
+<section class="consent-banner" data-consent-banner role="dialog" aria-modal="false" aria-labelledby="consent-title-${esc(lang)}">
+  <div><h2 id="consent-title-${esc(lang)}">${esc(u.title)}</h2><p>${esc(u.body)}</p><p>${esc(u.change)} <a href="${prefix}/privacy">${esc(u.policy)}</a>.</p></div>
+  <div class="consent-actions"><button type="button" class="btn btn-primary" data-consent-accept>${esc(u.accept)}</button><button type="button" class="btn" data-consent-reject>${esc(u.reject)}</button><button type="button" class="consent-link" data-consent-open>${esc(u.settings)}</button></div>
+</section>
+<section id="consent-dialog-${esc(lang)}" class="consent-dialog" data-consent-dialog role="dialog" aria-modal="true" aria-labelledby="consent-dialog-title-${esc(lang)}" hidden>
+  <div class="consent-panel"><div class="consent-panel-head"><h2 id="consent-dialog-title-${esc(lang)}">${esc(u.dialog)}</h2><button type="button" class="consent-close" data-consent-close aria-label="${esc(u.close)}">×</button></div>
+  <p class="consent-detail">${esc(u.body)} ${esc(u.change)} <a href="${prefix}/privacy">${esc(u.policy)}</a>.</p>
+  <label><input type="checkbox" data-consent-analytics /> <span>${esc(u.analytics)}</span></label>
+  <label><input type="checkbox" data-consent-advertising /> <span>${esc(u.advertising)}</span></label>
+  <div class="consent-actions"><button type="button" class="btn btn-primary" data-consent-save>${esc(u.save)}</button><button type="button" class="btn" data-consent-withdraw>${esc(u.withdraw)}</button></div></div>
+</section>
+<script>
+(function(){
+  var cfg=${cfg}, banner=document.querySelector('[data-consent-banner]'), dialog=document.querySelector('[data-consent-dialog]');
+  var analytics=document.querySelector('[data-consent-analytics]'), advertising=document.querySelector('[data-consent-advertising]');
+  var current=null, gaLoaded=false, adLoaded=false, lastFocus=null;
+  function read(){try{var v=JSON.parse(localStorage.getItem(cfg.storageKey));return v&&typeof v.analytics==='boolean'&&typeof v.advertising==='boolean'?v:null;}catch(_){return null;}}
+  function persist(v){var reload=!!(current&&((current.analytics&&!v.analytics)||(current.advertising&&!v.advertising)));current=v;try{localStorage.setItem(cfg.storageKey,JSON.stringify(v));}catch(_){} apply(v);banner.hidden=true;dialog.hidden=true;document.querySelector('[data-consent-settings]').setAttribute('aria-expanded','false');if(reload&&location.protocol.indexOf('http')===0)location.reload();}
+  function clearGaCookies(){document.cookie.split(';').forEach(function(row){var n=row.split('=')[0].trim();if(n==='_ga'||n.indexOf('_ga_')===0)document.cookie=n+'=; Max-Age=0; path=/; SameSite=Lax';});}
+  function loadGa(){if(!cfg.gaId||gaLoaded||document.getElementById('doloc-ga4-script'))return;window['ga-disable-'+cfg.gaId]=false;window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments);};window.gtag('js',new Date());window.gtag('config',cfg.gaId);var s=document.createElement('script');s.id='doloc-ga4-script';s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(cfg.gaId);document.head.appendChild(s);gaLoaded=true;}
+  function blockGa(){if(cfg.gaId)window['ga-disable-'+cfg.gaId]=true;var s=document.getElementById('doloc-ga4-script');if(s)s.remove();gaLoaded=false;clearGaCookies();}
+  function ensureAdContainer(){if(!cfg.adsterra)return null;var mount=document.querySelector('[data-adsterra-mount]');if(!mount)return null;var c=document.getElementById(cfg.adsterra.containerId);if(!c){c=document.createElement('div');c.id=cfg.adsterra.containerId;mount.appendChild(c);}return c;}
+  function loadAd(){if(!cfg.adsterra||adLoaded||document.getElementById('doloc-adsterra-script'))return;if(!ensureAdContainer())return;var note=document.querySelector('.native-ad-consent-note');if(note)note.remove();var s=document.createElement('script');s.id='doloc-adsterra-script';s.async=true;s.setAttribute('data-cfasync','false');s.src=cfg.adsterra.src;document.body.appendChild(s);adLoaded=true;}
+  function blockAd(){var s=document.getElementById('doloc-adsterra-script');if(s)s.remove();if(cfg.adsterra){var c=document.getElementById(cfg.adsterra.containerId);if(c)c.remove();}adLoaded=false;}
+  function apply(v){window.DOLOC_CONSENT_ANALYTICS=v.analytics===true;window.DOLOC_CONSENT_ADVERTISING=v.advertising===true;v.analytics?loadGa():blockGa();v.advertising?loadAd():blockAd();}
+  function close(){dialog.hidden=true;document.querySelector('[data-consent-settings]').setAttribute('aria-expanded','false');if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+  function open(){var v=current||{analytics:false,advertising:false};lastFocus=document.activeElement;analytics.checked=v.analytics;advertising.checked=v.advertising;dialog.hidden=false;document.querySelector('[data-consent-settings]').setAttribute('aria-expanded','true');dialog.querySelector('[data-consent-close]').focus();}
+  document.querySelector('[data-consent-accept]').addEventListener('click',function(){persist({analytics:true,advertising:true});});
+  document.querySelector('[data-consent-reject]').addEventListener('click',function(){persist({analytics:false,advertising:false});});
+  document.querySelector('[data-consent-open]').addEventListener('click',open);document.querySelector('[data-consent-settings]').addEventListener('click',open);
+  document.querySelector('[data-consent-close]').addEventListener('click',close);
+  document.querySelector('[data-consent-save]').addEventListener('click',function(){persist({analytics:analytics.checked,advertising:advertising.checked});});
+  document.querySelector('[data-consent-withdraw]').addEventListener('click',function(){persist({analytics:false,advertising:false});});
+  document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;if(!dialog.hidden){close();return;}if(!banner.hidden){banner.hidden=true;document.querySelector('[data-consent-settings]').focus();}});
+  current=read();if(current){banner.hidden=true;apply(current);}else{banner.hidden=false;blockGa();blockAd();}
+})();
+</script>`;
+}
+function footer(lang, { adsterraEligible = false } = {}){
   const s = siteI18n(lang);
   const prefix = lang === DEF ? "" : `/${lang}`;
   const cols = DATA.pages.slice(0, 10).map(p => `<a href="${prefix}/${p.slug}">${esc(pageOf(p,lang).title)}</a>`).join("");
@@ -522,7 +594,7 @@ function footer(lang, { omitAdsterra = false } = {}){
         <p>${esc(s.footerSource)} · ${today}</p>
       </div>
     </div>
-    ${adsenseScript()}\n    ${DATA.site.adsterra && !omitAdsterra ? DATA.site.adsterra : ""}
+    ${adsenseScript()}
   </div>
 ${decisionEventsScript()}
 <script>
@@ -615,7 +687,7 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });
 </script>
-</footer>`;
+</footer>${consentUi(lang, adsterraEligible)}`;
 }
 
 /* ---------- section renderer (Farmstead Manual components — 田园农具语言, 全局独立) ---------- */
@@ -922,9 +994,11 @@ function articleAdInsertionCount(sections){
 }
 function renderArticleAd(lang){
   const label = AD_LABELS[lang] || AD_LABELS.en;
+  const consent = (CONSENT_UI[lang] || CONSENT_UI.en).adBlocked;
+  if (!ADSTERRA_CONFIG) return "";
   return `<aside class="native-ad-slot" aria-label="${esc(label)}" data-ad-placement="article-mid-late" data-experiment="${ARTICLE_AD_EXPERIMENT}">
     <span class="native-ad-label">${esc(label)}</span>
-    ${DATA.site.adsterra || ""}
+    <div data-adsterra-mount><p class="native-ad-consent-note">${esc(consent)}</p><div id="${esc(ADSTERRA_CONFIG.containerId)}"></div></div>
   </aside>`;
 }
 function renderPage(lang, page){
@@ -1014,7 +1088,7 @@ function renderPage(lang, page){
   const extraLd = [articleLd(page, lang), breadcrumbLd(page, lang)];
   const fq = faqLd(t.sections);
   if (fq) extraLd.push(fq);
-  return renderFull(lang, t.metaTitle || t.title, t.metaDescription, extraLd, page.slug, body, heroImg || DATA.site.ogImage, { omitAdsterra: eligibleArticleAd });
+  return renderFull(lang, t.metaTitle || t.title, t.metaDescription, extraLd, page.slug, body, heroImg || DATA.site.ogImage, { adsterraEligible: eligibleArticleAd });
 }
 function gnameOf(lang){ return (DATA.game.nameI18n && DATA.game.nameI18n[lang]) || DATA.game.name; }
 
@@ -1042,6 +1116,22 @@ const PRIVACY_SERVICE_SECTIONS = {
   ko: `<h2 style="font-size:1.05rem;margin:18px 0 8px">수집하는 정보</h2><p>본 사이트는 분석용 Google Analytics(GA4)를 로드하고, 대상 가이드 7개에서 Adsterra(effectivecpmnetwork) 광고를 로드합니다. Google AdSense 계정 메타데이터와 ads.txt는 설정되어 있지만, 광고 게재, 공급자 준비, 인증 CMP 준비의 세 조건이 모두 명시적으로 활성화되지 않으면 AdSense 게재 스크립트는 로드되지 않습니다. 설정되었다고 해서 현재 AdSense 광고가 게재 중이라는 뜻은 아닙니다. 로드되는 서비스는 IP 주소, 브라우저·기기 정보, 방문 페이지, 유입 경로, 대략적인 지역, 쿠키나 유사 식별자를 분석과 광고, 사기 방지, 보고 목적으로 처리할 수 있습니다.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">쿠키 및 식별자</h2><p>Google Analytics와 대상 페이지의 Adsterra는 쿠키나 유사 식별자를 설정할 수 있습니다. 향후 Google AdSense 게재를 활성화하면 Google 정책에 따라 광고 식별자를 사용할 수도 있습니다. 브라우저 설정에서 쿠키를 차단·삭제할 수 있고, <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics 차단 부가기능</a>으로 Google Analytics를 거부할 수 있습니다. 본 사이트는 동의 배너를 표시하지 않으며, 제3자 추적에 대한 동의를 받았다고 주장하지 않습니다.</p>`,
   es: `<h2 style="font-size:1.05rem;margin:18px 0 8px">Qué recopilamos</h2><p>Este sitio carga Google Analytics (GA4) para análisis y publicidad de Adsterra (effectivecpmnetwork) en las siete guías que cumplen los criterios. Los metadatos de cuenta de Google AdSense y ads.txt están configurados, pero su script de publicación permanece bloqueado salvo que se habiliten expresamente la publicación, la preparación del proveedor y la de un CMP certificado. La configuración no significa que los anuncios de AdSense se estén publicando ahora. Los servicios activos pueden procesar tu dirección IP, información del navegador o dispositivo, las páginas visitadas, la referencia, una región aproximada y cookies o identificadores similares para análisis y publicidad, prevención de fraude e informes.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookies e identificadores</h2><p>Google Analytics y Adsterra en las páginas aptas pueden instalar cookies o identificadores similares. Si Google AdSense se habilita más adelante, también podrá usar identificadores publicitarios según las políticas de Google. Puedes bloquear o eliminar cookies en la configuración del navegador y excluirte de Google Analytics con el <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">complemento de exclusión de Google Analytics</a>. Este sitio no muestra un banner de consentimiento ni afirma haber obtenido consentimiento para el rastreo de terceros.</p>`,
 };
+const PRIVACY_CONSENT_SECTIONS = {
+  en: `<h2 style="font-size:1.05rem;margin:18px 0 8px">Optional services and data</h2><p>Google Analytics (GA4) is available for audience measurement on every page. Adsterra (effectivecpmnetwork) advertising is available only on seven eligible guide pages. Until you choose, neither service is requested. If you accept, GA4 may process your IP address, browser and device information, visited page, referrer, approximate region, and cookies or similar identifiers for analytics and reporting; on an eligible guide, Adsterra may process the same categories for advertising, fraud prevention and reporting. Reject keeps both blocked.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Your controls</h2><p>The initial privacy panel offers accept, reject and detailed settings. The always-visible Privacy settings button lets you change individual preferences or withdraw all consent. Withdrawal blocks future GA4 and Adsterra requests on this site and removes accessible GA cookies where the browser permits. You may also use the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out add-on</a>. Google AdSense metadata and ads.txt are configured, but its serving script remains gated off unless serving, provider readiness and certified CMP readiness are all explicitly enabled; configuration does not mean that AdSense ads are currently serving.</p>`,
+  "zh-CN": `<h2 style="font-size:1.05rem;margin:18px 0 8px">可选服务与数据</h2><p>Google Analytics（GA4）可在所有页面用于受众分析；Adsterra（effectivecpmnetwork）广告仅可在 7 个符合条件的攻略页使用。在您选择前，本站不会请求这两项服务。接受后，GA4 可能处理 IP 地址、浏览器与设备信息、访问页面、来源页面、大致地区以及 Cookie 或类似标识符，用于分析和报告；在符合条件的攻略页上，Adsterra 可能为广告、防欺诈和报告处理相同类别。拒绝会继续阻止两者。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">您的控制方式</h2><p>首次隐私面板提供接受、拒绝和详细设置。始终可见的“隐私设置”按钮可单独更改偏好或全部撤回。撤回后，本站会阻止后续 GA4 与 Adsterra 请求，并在浏览器允许时删除可访问的 GA Cookie。您也可使用 <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics 停用浏览器插件</a>。Google AdSense 元数据与 ads.txt 已配置，但只有投放、服务商就绪和认证 CMP 就绪三个条件都明确开启时才会加载投放脚本；已配置不代表 AdSense 广告目前正在投放。</p>`,
+  "zh-TW": `<h2 style="font-size:1.05rem;margin:18px 0 8px">選用服務與資料</h2><p>Google Analytics（GA4）可在所有頁面用於受眾分析；Adsterra（effectivecpmnetwork）廣告只可在 7 個符合條件的攻略頁使用。在您選擇前，本站不會請求這兩項服務。接受後，GA4 可能處理 IP 位址、瀏覽器與裝置資訊、造訪頁面、來源頁面、大致地區，以及 Cookie 或類似識別碼，用於分析與報告；在符合條件的攻略頁上，Adsterra 可能為廣告、防詐欺與報告處理相同類別。拒絕會繼續封鎖兩者。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">您的控制方式</h2><p>首次隱私面板提供接受、拒絕與詳細設定。永遠可見的「隱私設定」按鈕可個別變更偏好或全部撤回。撤回後，本站會封鎖後續 GA4 與 Adsterra 請求，並在瀏覽器允許時刪除可存取的 GA Cookie。您也可使用 <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics 停用瀏覽器外掛</a>。Google AdSense 後設資料與 ads.txt 已設定，但只有投放、服務商就緒及認證 CMP 就緒三個條件都明確開啟時才會載入投放指令碼；已設定不代表目前正在投放。</p>`,
+  ja: `<h2 style="font-size:1.05rem;margin:18px 0 8px">任意サービスとデータ</h2><p>Google Analytics（GA4）は全ページの利用状況分析に、Adsterra（effectivecpmnetwork）広告は対象となる 7 つの攻略ページだけで利用できます。選択前はどちらにもリクエストしません。許可すると、GA4 は分析・レポートのため IP アドレス、ブラウザー・端末情報、閲覧ページ、参照元、おおよその地域、Cookie や類似識別子を処理する場合があります。対象ページでは Adsterra が広告、不正防止、レポートのため同じ種類を処理する場合があります。拒否すると両方をブロックします。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">設定と撤回</h2><p>最初のパネルで許可、拒否、詳細設定を選べます。常に表示される「プライバシー設定」から個別設定の変更や全撤回ができます。撤回後は今後の GA4 と Adsterra リクエストをブロックし、ブラウザーが許す範囲で GA Cookie を削除します。Google AdSense のメタデータと ads.txt は設定済みですが、配信、プロバイダー準備、認定 CMP 準備がすべて明示的に有効になるまで配信スクリプトは読み込まれません。設定済みでも現在の配信を意味しません。</p>`,
+  ko: `<h2 style="font-size:1.05rem;margin:18px 0 8px">선택 서비스 및 데이터</h2><p>Google Analytics(GA4)는 모든 페이지의 이용 분석에 사용할 수 있고, Adsterra(effectivecpmnetwork) 광고는 대상 가이드 7개에서만 사용할 수 있습니다. 선택 전에는 두 서비스 모두 요청하지 않습니다. 허용하면 GA4가 분석 및 보고를 위해 IP 주소, 브라우저·기기 정보, 방문 페이지, 유입 경로, 대략적 지역, 쿠키나 유사 식별자를 처리할 수 있습니다. 대상 페이지에서는 Adsterra가 광고, 사기 방지 및 보고를 위해 같은 범주를 처리할 수 있습니다. 거부하면 둘 다 계속 차단됩니다.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">설정 및 철회</h2><p>첫 개인정보 패널에서 허용, 거부 또는 상세 설정을 선택할 수 있습니다. 항상 보이는 개인정보 설정 버튼에서 개별 선택을 변경하거나 모두 철회할 수 있습니다. 철회 후에는 향후 GA4 및 Adsterra 요청을 차단하고 브라우저가 허용하는 GA 쿠키를 삭제합니다. Google AdSense 메타데이터와 ads.txt는 설정되어 있지만 게재, 공급자 준비, 인증 CMP 준비가 모두 명시적으로 활성화되기 전에는 게재 스크립트를 로드하지 않습니다. 설정만으로 현재 게재 중이라는 뜻은 아닙니다.</p>`,
+  es: `<h2 style="font-size:1.05rem;margin:18px 0 8px">Servicios opcionales y datos</h2><p>Google Analytics (GA4) puede usarse para medir la audiencia en todas las páginas. La publicidad de Adsterra (effectivecpmnetwork) solo puede usarse en siete guías aptas. Antes de elegir, no se solicita ninguno. Si aceptas, GA4 puede tratar la dirección IP, datos del navegador y dispositivo, página visitada, referencia, región aproximada y cookies o identificadores similares para análisis e informes; en una guía apta, Adsterra puede tratar las mismas categorías para publicidad, prevención del fraude e informes. Rechazar mantiene ambos bloqueados.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Tus controles</h2><p>El panel inicial ofrece aceptar, rechazar y ajustes detallados. El botón siempre visible de Ajustes de privacidad permite cambiar preferencias o retirar todo. Tras retirar, se bloquean futuras solicitudes de GA4 y Adsterra y se eliminan las cookies de GA accesibles cuando el navegador lo permite. Los metadatos de Google AdSense y ads.txt están configurados, pero su script sigue bloqueado hasta que publicación, proveedor y CMP certificado estén listos y habilitados expresamente; estar configurado no significa que publique anuncios ahora.</p>`,
+};
+const PRIVACY_CMP_BOUNDARY = {
+  en: `<p><strong>CMP boundary:</strong> This is a first-party preference control. It is not presented as a Google-certified CMP and does not enable AdSense serving.</p>`,
+  "zh-CN": `<p><strong>CMP 边界：</strong>这是本站自有的偏好控制，不会被表述为 Google 认证 CMP，也不会开启 AdSense 投放。</p>`,
+  "zh-TW": `<p><strong>CMP 邊界：</strong>這是本站自有的偏好控制，不會被表述為 Google 認證 CMP，也不會開啟 AdSense 投放。</p>`,
+  ja: `<p><strong>CMP の範囲：</strong>これは本サイト独自の設定機能です。Google 認定 CMP とは表示せず、AdSense 配信を有効にするものでもありません。</p>`,
+  ko: `<p><strong>CMP 범위:</strong> 이 기능은 사이트 자체 선택 설정입니다. Google 인증 CMP라고 표시하지 않으며 AdSense 게재를 활성화하지 않습니다.</p>`,
+  es: `<p><strong>Límite del CMP:</strong> Este es un control propio de preferencias. No se presenta como CMP certificado por Google ni activa la publicación de AdSense.</p>`,
+};
 const PRIVACY_THIRD_PARTY_HEADING = {
   en: "Third-party services", "zh-CN": "第三方服务", "zh-TW": "第三方服務",
   ja: "第三者サービス", ko: "제3자 서비스", es: "Servicios de terceros",
@@ -1068,7 +1158,10 @@ function genStatic(lang){
   const thirdHeading = `<h2 style="font-size:1.05rem;margin:18px 0 8px">${PRIVACY_THIRD_PARTY_HEADING[lang] || PRIVACY_THIRD_PARTY_HEADING.en}</h2>`;
   const thirdHeadingAt = privacyBodyLegacy.indexOf(thirdHeading);
   if (firstHeading < 0 || thirdHeadingAt < 0) throw new Error(`Privacy section boundary missing for ${lang}`);
-  const privacyBody = privacyBodyLegacy.slice(0, firstHeading) + (PRIVACY_SERVICE_SECTIONS[lang] || PRIVACY_SERVICE_SECTIONS.en) + privacyBodyLegacy.slice(thirdHeadingAt);
+  const privacyBody = privacyBodyLegacy.slice(0, firstHeading) +
+    (PRIVACY_CONSENT_SECTIONS[lang] || PRIVACY_CONSENT_SECTIONS.en) +
+    (PRIVACY_CMP_BOUNDARY[lang] || PRIVACY_CMP_BOUNDARY.en) +
+    privacyBodyLegacy.slice(thirdHeadingAt);
   writePage(path.join(dir,"privacy.html"), "privacy", lang, renderStatic(lang,"privacy", s.privacyTitle, privacyBody, privacyDescOf(lang, s.name)));
   const contactPh = lang==="zh-CN"||lang==="zh-TW" ? "联系我们："
     : lang==="ja" ? "お問い合わせ："

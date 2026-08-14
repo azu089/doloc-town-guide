@@ -8,8 +8,12 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 
 const root = path.resolve(process.argv[2] || ".");
+const auditScript = fileURLToPath(import.meta.url);
+const fault = process.env.DOLOC_VIEWABILITY_AUDIT_FAULT || "";
 const pub = path.join(root, "public");
 const cfgPath = path.join(root, "data", "site.json");
 const cssPath = path.join(root, "templates", "style.css");
@@ -58,20 +62,22 @@ if (!failures.length) {
   const seenEligible = new Set();
   for (const file of htmlFiles) {
     const rel = path.relative(pub, file).split(path.sep).join("/");
-    const html = fs.readFileSync(file, "utf8");
+    let html = fs.readFileSync(file, "utf8");
+    if (fault === "footer-provider-leak" && rel === "index.html")
+      html = html.replace("</footer>", `<script src="${providerSrc}"></script></footer>`);
     const expected = cohort.get(rel);
     const slotCount = countOf(html, 'class="native-ad-slot"');
     const footer = (html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/) || [""])[0];
     checkedPages++;
 
-    if (providerSrc && countOf(html, providerSrc) !== 1)
-      fail("ad-provider-count", `${rel} (script=${countOf(html, providerSrc)})`);
-    if (containerId && countOf(html, `id="${containerId}"`) !== 1)
-      fail("ad-container-count", `${rel} (container=${countOf(html, `id="${containerId}"`)})`);
-
     if (expected) {
       seenEligible.add(rel);
       checkedEligible++;
+      if (providerSrc && countOf(html, providerSrc) !== 1)
+        fail("ad-provider-config-count", `${rel} (config=${countOf(html, providerSrc)})`);
+      if (containerId && countOf(html, `id="${containerId}"`) !== 1)
+        fail("ad-container-count", `${rel} (container=${countOf(html, `id="${containerId}"`)})`);
+      if (/<script[^>]+src=["'][^"']*effectivecpmnetwork/i.test(html)) fail("ad-before-choice-request", rel);
       if (slotCount !== 1) fail("ad-cohort-slot", `${rel} (slot=${slotCount})`);
       if (providerSrc && footer.includes(providerSrc)) fail("ad-eligible-footer", rel);
       const slot = (html.match(/<aside class="native-ad-slot"[\s\S]*?<\/aside>/) || [""])[0];
@@ -92,7 +98,8 @@ if (!failures.length) {
         fail("ad-motion-class", rel);
     } else {
       if (slotCount !== 0) fail("ad-cohort-leak", rel);
-      if (providerSrc && !footer.includes(providerSrc)) fail("ad-footer-missing", rel);
+      if (providerSrc && html.includes(providerSrc)) fail("ad-provider-leak", rel);
+      if (containerId && html.includes(`id="${containerId}"`)) fail("ad-container-leak", rel);
     }
   }
 
@@ -115,11 +122,23 @@ if (!failures.length) {
     fail("ad-motion-position", "slot/label must stay static");
 }
 
+let negativeFixtureExitCode = null;
+if (!fault && !failures.length) {
+  const result = spawnSync(process.execPath, [auditScript, root], {
+    env: { ...process.env, DOLOC_VIEWABILITY_AUDIT_FAULT: "footer-provider-leak" },
+    encoding: "utf8",
+  });
+  negativeFixtureExitCode = result.status;
+  if (!(Number.isInteger(result.status) && result.status > 0))
+    fail("negative-fixture-did-not-fail", "footer-provider-leak");
+}
+
 const result = {
   root,
   checked_pages: checkedPages,
   eligible_pages: checkedEligible,
   expected_eligible_pages: cohort.size,
+  negative_fixture_exit_code: negativeFixtureExitCode,
   failures
 };
 console.log(JSON.stringify(result, null, 2));

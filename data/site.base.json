@@ -44,7 +44,14 @@
    "marketplaceHost": "www.amazon.com",
    "trackingTag": "cozysimhub20-20"
   },
-  "adsterra": "<script async=\"async\" data-cfasync=\"false\" src=\"https://pl30754261.effectivecpmnetwork.com/b77bc61705d2dcbe2c5239c8553cdb1a/invoke.js\"></script> <div id=\"container-b77bc61705d2dcbe2c5239c8553cdb1a\"></div>"
+  "adsterra": "<script async=\"async\" data-cfasync=\"false\" src=\"https://pl30754261.effectivecpmnetwork.com/b77bc61705d2dcbe2c5239c8553cdb1a/invoke.js\"></script> <div id=\"container-b77bc61705d2dcbe2c5239c8553cdb1a\"></div>",
+  "consentStorageKey": "doloc_consent_v1",
+  "sectionSchemaOverrides": {
+   "how-to-play": {
+    "zh-CN": { "tailTypes": ["note", "list", "timeline", "faq"] },
+    "zh-TW": { "tailTypes": ["note", "list", "timeline", "faq"] }
+   }
+  }
  },
  "game": {
   "name": "Doloc Town",

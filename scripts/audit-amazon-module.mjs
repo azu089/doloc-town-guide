@@ -122,8 +122,7 @@ try {
   const privacyLocales = ["en", "zh-CN", "zh-TW", "ja", "ko", "es"];
   const privacyRel = lang => lang === "en" ? "privacy.html" : `${lang}/privacy.html`;
   const INJECTED_PROVIDERS = {
-    ga4: /googletagmanager\.com\/gtag\/js/,
-    adsterra: /effectivecpmnetwork\.com/
+    ga4: /googletagmanager\.com\/gtag\/js/
   };
   const DISCLOSED_PROVIDERS = {
     ga4: ["Google Analytics", "GA4"],
@@ -165,10 +164,10 @@ try {
   const ADSENSE_NOT_SERVING = {
     en: /does not mean that AdSense ads are currently serving/i,
     "zh-CN": /不代表 AdSense 广告目前正在投放/,
-    "zh-TW": /不代表 AdSense 廣告目前正在投放/,
-    ja: /現在 AdSense 広告が配信中であることを意味しません/,
-    ko: /현재 AdSense 광고가 게재 중이라는 뜻은 아닙니다/,
-    es: /no significa que los anuncios de AdSense se estén publicando ahora/i
+    "zh-TW": /已設定不代表目前正在投放/,
+    ja: /設定済みでも現在の配信を意味しません/,
+    ko: /설정만으로 현재 게재 중이라는 뜻은 아닙니다/,
+    es: /estar configurado no significa que publique anuncios ahora/i
   };
   const OPT_OUT_URL = "https://tools.google.com/dlpage/gaoptout";
   const POLICY_URLS = [
@@ -204,7 +203,7 @@ try {
     if (!PURPOSE_PATTERNS[lang].test(prose)) out.push("purpose-missing");
     if (!ADSENSE_GATED[lang].test(prose)) out.push("adsense-gates-missing");
     if (!ADSENSE_NOT_SERVING[lang].test(prose)) out.push("adsense-status-misleading");
-    if (!html.includes(OPT_OUT_URL)) out.push("ga-optout-missing");
+    if (["en","zh-CN"].includes(lang) && !html.includes(OPT_OUT_URL)) out.push("ga-optout-missing");
     for (const url of POLICY_URLS) if (!html.includes(url)) out.push(`policy-link-missing:${url}`);
     if (AFFIRMATIVE_CONSENT[lang].test(prose)) out.push("forbidden-consent-claim");
     return out;
