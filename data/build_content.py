@@ -1900,7 +1900,7 @@ ZH["fishing"] = {
     "升级鱼竿：更高品质的鱼竿解锁更好的鱼，也让钓鱼小游戏更宽容",
     "看天气钓鱼：雨天和雷暴会带来晴天没有的稀有渔获",
     "盯紧季节：雨季（1–2 月）与旱季（3–4 月）会完全改变渔获表",
-    "繁殖稀有鱼：13 种鱼缸专属鱼需要特定亲本——留几条别全卖",
+    "繁殖前先在当前游戏内核对需求，再处理多余鱼类",
     "稀有鱼掉落高级无人机与工具零件，一次好的钓鱼就够升级开支"
    ]
   },
@@ -2162,7 +2162,7 @@ JA["fishing"] = {
     "竿を強化する：上位の竿でより良い魚が解禁され、ミニゲームも寛容に",
     "天候を活かす：雨と雷雨は晴れの日には出ない珍しい釣果をもたらす",
     "季節に注意：雨季（1〜2月）と乾季（3〜4月）で釣果テーブルが完全に変わる",
-    "レア魚を繁殖する：水槽限定13種は特定の親魚が必要——全部売らずに残そう",
+    "繁殖前に現在のゲーム内要件を確認し、余剰分だけを扱う",
     "レア魚はドローン・道具の高度なパーツを落とす——良い釣りは強化費の財源"
    ]
   },
@@ -2424,7 +2424,7 @@ KO["fishing"] = {
     "낚싯대를 업그레이드하세요: 상위 낚싯대는 더 좋은 물고기를 해금하고 미니게임도 관대해집니다",
     "날씨를 활용하세요: 비와 뇌우는 맑은 날에는 안 나오는 진귀한 어획을 줍니다",
     "계절을 주시하세요: 우기(1–2월)와 건기(3–4월)는 어획표를 완전히 바꿉니다",
-    "희귀어를 번식하세요: 수조 전용 13종은 특정 부모어가 필요——전부 팔지 말고 여분을 남기세요",
+    "번식 전에 현재 게임 내 요구 사항을 확인하고 남는 물고기만 처리하세요",
     "희귀어는 드론·도구 고급 부품을 줍니다——좋은 낚시 한 번이 강화 비용을 채웁니다"
    ]
   },
@@ -2686,7 +2686,7 @@ ES["fishing"] = {
     "Mejora tu caña: las cañas superiores desbloquean mejores peces y hacen el minijuego más permisivo",
     "Pesca según el clima: la lluvia y las tormentas traen capturas poco comunes que no aparecen en días secos",
     "Vigila la estación: la lluviosa (ene–feb) y la seca (mar–abr) cambian por completo las tablas de captura",
-    "Cría peces raros: las 13 especies de tanque necesitan padres concretos — guarda sobras en vez de venderlo todo",
+    "Antes de criar, revisa los requisitos actuales del juego y usa solo los peces que sobren",
     "Los peces raros dan piezas avanzadas de dron y herramientas: una buena sesión de pesca financia tus mejoras"
    ]
   },
@@ -7081,11 +7081,11 @@ _EXTRA = {
  "zh-CN": {
   "how-to-play": {"sections": [
    {"en": "Day One: What to Do First", "heading": "第一天：优先做什么", "body": "游戏中的第一天会影响开局节奏。以下优先级结合已核对机制与玩家报告；具体商店价格请在自己的存档中确认。[L2]",
-    "items": [["查看背包升级", "购买前先在当前存档核对商店要求与容量。"], ["第一天就做村民任务", "以游戏内显示的奖励与技术点为准。"], ["查看 Endyams 生长期", "只有日历留出足够成熟时间时再种。"], ["完整清理起始地块", "清理可打开建造空间并暴露资源。"], ["拿教程鱼竿", "完成 Lightman 钓鱼教程并使用它提供的鱼竿。"]]}
+    "items": [["查看背包升级", "购买前先在当前存档核对商店要求与容量。"], ["第一天就做村民任务", "以游戏内显示的奖励与技术点为准。"], ["查看 Endyams 生长期", "只有日历留出足够成熟时间时再种。"], ["完整清理起始地块", "清理可打开建造空间并暴露资源。"], ["核对钓鱼装备", "挑战更难渔获前，查看当前游戏内的鱼竿要求。"]]}
   ]},
   "fishing": {"sections": [
    {"en": "Fishing Tips: Common Failures & Fixes", "heading": "钓鱼技巧：常见失败与对策", "body": "早期钓鱼的大量挫败感来自鱼竿等级与时机，而不是运气。这些技巧来自社区经验——在我们于 1.0 实测前，请把数字当作玩家报告。[L2]",
-    "items": ["先做 Lightman 钓鱼教程并使用它提供的鱼竿。", "挑战更难的渔获前查看游戏内当前鱼竿要求。", "手柄操作不顺时先练习小游戏节奏并查看游戏内设置。", "选点前核对天气与渔获表。", "加工或出售前比较当前存档显示的数值。", "保留繁殖需要的鱼，只处理多余部分。"]}
+    "items": ["挑战更难的渔获前查看游戏内当前鱼竿要求。", "手柄操作不顺时先练习小游戏节奏并查看游戏内设置。", "选点前核对天气与渔获表。", "加工或出售前比较当前存档显示的数值。", "繁殖前先核对当前游戏内要求，只处理多余鱼类。"]}
   ]},
   "make-money": {
    "title": "多洛可小镇怎么快速赚钱（1.0）",
@@ -7103,20 +7103,20 @@ _EXTRA = {
     {"en": "Season Planning", "heading": "季节规划", "body": "使用官方日历安排作物防护、浇水与农场供能，不推断未验证的经济回报。",
      "items": ["第 4 月是 Harsh Dry Season；请保护作物并规划浇水。", "雨季（1-2 月）会改变渔获表，请核对期间可捕获的鱼。", "雷暴的落雷可为农场提供电力；Steam 官方商店页也明确介绍太阳能与风力供能。", "雨水可用于灌溉；按季节轮换种植，避免非应季作物枯萎。"]},
     {"en": "Common Money Mistakes", "heading": "资源规划检查", "body": "核对游戏内当前数值与任务奖励，并在第 4 月前规划作物防护与浇水。本站不验证具体回报。"},
-    {"en": "Sources & Verification", "heading": "来源与验证", "body": "Steam 官方商店页支持太阳能与风力供能，所链接的官方公告支持 1.0 日期与两阶段自动化。这些来源没有提供加工回报、钓鱼装备门槛或升级价值；这些具体数值仍未经本站亲自实测。"},
+    {"en": "Sources & Verification", "heading": "来源与验证", "body": "Steam 官方商店页支持太阳能、风力供能与农业自动化；所链接的 1.0 公告支持正式版日期。这些来源没有提供加工回报、钓鱼装备门槛或升级价值；这些具体数值仍未经本站亲自实测。"},
     {"en": "Quick Answers", "heading": "常见问题速答",
-     "items": [["多洛可小镇赚钱最快的方法是什么？", "本站没有验证唯一最快路线；请结合任务、日历与当前存档数值决定保留、加工或出售。"], ["加工能增值多少？", "本站尚未验证具体变化；请比较当前存档显示的加工前后数值。"], ["4 月旱季怎么准备？", "提前保护作物，并按预报规划浇水。"], ["背包升级值得吗？", "本站不验证升级回报；购买前请查看当前成本与容量。"], ["自动化需要钱吗？", "官方信息确认两阶段农业自动化；具体解锁要求和成本请以游戏内为准。"]]}
+     "items": [["多洛可小镇赚钱最快的方法是什么？", "本站没有验证唯一最快路线；请结合任务、日历与当前存档数值决定保留、加工或出售。"], ["加工能增值多少？", "本站尚未验证具体变化；请比较当前存档显示的加工前后数值。"], ["4 月旱季怎么准备？", "提前保护作物，并按预报规划浇水。"], ["背包升级值得吗？", "本站不验证升级回报；购买前请查看当前成本与容量。"], ["自动化需要钱吗？", "Steam 官方商店页确认农业自动化；具体解锁要求和成本请以游戏内为准。"]]}
    ]
   }
  },
  "ja": {
   "how-to-play": {"sections": [
    {"en": "Day One: What to Do First", "heading": "初日：最初にやること", "body": "初日は序盤の流れに影響する。以下は確認済みの仕組みとプレイヤー報告を区別した優先事項で、正確な店頭価格は自分のセーブで確認してください。[L2]",
-    "items": [["バックパック強化を確認", "購入前に現在の店頭要件と容量を確認する。"], ["初日に村人クエスト", "ゲーム内表示の報酬とテックポイントを確認する。"], ["Endyams の生育日数を確認", "収穫までの日数をカレンダーで確保できる場合に植える。"], ["開始区画を完全に撤去", "撤去で建築スペースと資源を開く。"], ["チュートリアルの竿を入手", "Lightman の釣りチュートリアルで受け取った竿を使う。"]]}
+    "items": [["バックパック強化を確認", "購入前に現在の店頭要件と容量を確認する。"], ["初日に村人クエスト", "ゲーム内表示の報酬とテックポイントを確認する。"], ["Endyams の生育日数を確認", "収穫までの日数をカレンダーで確保できる場合に植える。"], ["開始区画を完全に撤去", "撤去で建築スペースと資源を開く。"], ["釣り道具を確認", "難しい魚を狙う前に、現在のゲーム内の竿要件を確認する。"]]}
   ]},
   "fishing": {"sections": [
    {"en": "Fishing Tips: Common Failures & Fixes", "heading": "釣りのコツ：よくある失敗と対策", "body": "序盤の釣りで挫折する原因は、ほとんどが運ではなく竿のレベルとタイミング。以下のコツはコミュニティ経験に基づく——1.0 で実測するまでは数値をプレイヤー報告として扱ってほしい。[L2]",
-    "items": ["Lightman の釣りチュートリアルで受け取った竿を使う。", "難しい魚を狙う前に現在の竿の要件を確認する。", "操作しにくい場合はミニゲームのリズムと設定を確認する。", "場所を選ぶ前に天候と魚の表を確認する。", "加工または販売前に現在のセーブ表示を比較する。", "繁殖に必要な魚を残し、余剰だけを扱う。"]}
+    "items": ["難しい魚を狙う前に現在の竿の要件を確認する。", "操作しにくい場合はミニゲームのリズムと設定を確認する。", "場所を選ぶ前に天候と魚の表を確認する。", "加工または販売前に現在のセーブ表示を比較する。", "繁殖前に現在のゲーム内要件を確認し、余剰分だけを扱う。"]}
   ]},
   "make-money": {
    "title": "ドロックタウンで早く稼ぐ方法（1.0）",
@@ -7134,20 +7134,20 @@ _EXTRA = {
     {"en": "Season Planning", "heading": "季節計画", "body": "公式カレンダーを使い、未確認の価格メカニズムを前提にせず作物と釣りを計画します。",
      "items": ["第4月は Harsh Dry Season——作物を保護し、水やりを計画する。", "雨季（1〜2月）には魚の表が変わるため、期間限定の漁獲を確認する。", "雷雨の落雷で農場に電力を供給でき、公式 Steam ストアは太陽光と風力発電も明記している。", "雨は作物を灌漑する。季節に合わせて作物を替え、季節外れの枯れを避ける。"]},
     {"en": "Common Money Mistakes", "heading": "資源計画の確認", "body": "売買前に現在のゲーム内表示とクエスト報酬を確認し、第4月前に作物保護と水やりを準備します。具体的な収益は検証していません。"},
-    {"en": "Sources & Verification", "heading": "出典と検証", "body": "Steam 公式ストアは太陽光と風力発電を、公式発表は1.0の日付と二段階自動化を裏付けます。これらは加工収益、釣り装備の閾値、強化価値を示しておらず、当サイトはそれらを実機検証していません。"},
+    {"en": "Sources & Verification", "heading": "出典と検証", "body": "Steam 公式ストアは太陽光・風力発電と農業オートメーションを、リンク先の 1.0 発表は正式版の日付を裏付けます。これらは加工収益、釣り装備の閾値、強化価値を示しておらず、当サイトはそれらを実機検証していません。"},
     {"en": "Quick Answers", "heading": "よくある質問",
-     "items": [["ドロックタウンで一番早く稼ぐ方法は？", "唯一の最速ルートは検証していません。クエスト、カレンダー、現在のセーブ表示を基に判断してください。"], ["加工の付加価値はどのくらい？", "具体的な変化は未検証です。現在のセーブで加工前後の値を比較してください。"], ["4月にどう備える？", "4月の Harsh Dry Season 前に作物保護と水やりを準備する。"], ["バックパック強化は価値がある？", "強化の収益は検証していません。購入前に現在の費用と容量を確認してください。"], ["自動化にお金は必要？", "公式情報は二段階農業自動化を確認しています。具体的な解放要件と費用はゲーム内で確認してください。"]]}
+     "items": [["ドロックタウンで一番早く稼ぐ方法は？", "唯一の最速ルートは検証していません。クエスト、カレンダー、現在のセーブ表示を基に判断してください。"], ["加工の付加価値はどのくらい？", "具体的な変化は未検証です。現在のセーブで加工前後の値を比較してください。"], ["4月にどう備える？", "4月の Harsh Dry Season 前に作物保護と水やりを準備する。"], ["バックパック強化は価値がある？", "強化の収益は検証していません。購入前に現在の費用と容量を確認してください。"], ["自動化にお金は必要？", "Steam 公式ストアは農業オートメーションを記載しています。具体的な解放要件と費用はゲーム内で確認してください。"]]}
    ]
   }
  },
  "ko": {
   "how-to-play": {"sections": [
    {"en": "Day One: What to Do First", "heading": "첫날: 가장 먼저 할 일", "body": "첫날은 초반 진행에 영향을 줍니다. 아래 우선순위는 확인된 메커니즘과 플레이어 제보를 구분하며, 정확한 상점 가격은 자신의 세이브에서 확인하세요. [L2]",
-    "items": [["가방 업그레이드 확인", "구매 전에 현재 상점 요구 사항과 용량을 확인하세요."], ["첫날 마을 퀘스트", "게임에 표시된 보상과 기술 포인트를 확인하세요."], ["Endyams 성장 기간 확인", "달력에 수확할 시간이 충분할 때 심으세요."], ["시작 구역 정리", "정리해 건설 공간과 자원을 확보하세요."], ["튜토리얼 낚싯대", "Lightman 낚시 튜토리얼에서 받은 낚싯대를 사용하세요."]]}
+    "items": [["가방 업그레이드 확인", "구매 전에 현재 상점 요구 사항과 용량을 확인하세요."], ["첫날 마을 퀘스트", "게임에 표시된 보상과 기술 포인트를 확인하세요."], ["Endyams 성장 기간 확인", "달력에 수확할 시간이 충분할 때 심으세요."], ["시작 구역 정리", "정리해 건설 공간과 자원을 확보하세요."], ["낚시 장비 확인", "어려운 어종을 노리기 전에 현재 게임의 낚싯대 요구 사항을 확인하세요."]]}
   ]},
   "fishing": {"sections": [
    {"en": "Fishing Tips: Common Failures & Fixes", "heading": "낚시 팁: 흔한 실패와 해결법", "body": "초반 낚시의 좌절감 대부분은 운이 아니라 낚싯대 레벨과 타이밍에서 옵니다. 이 팁은 커뮤니티 경험에 기반합니다 — 1.0에서 직접 검증하기 전까지는 숫자를 플레이어 제보로 취급하세요. [L2]",
-    "items": ["Lightman 낚시 튜토리얼에서 받은 낚싯대를 사용하세요.", "어려운 어종을 노리기 전에 현재 낚싯대 요구 사항을 확인하세요.", "조작이 어렵다면 미니게임 리듬과 설정을 확인하세요.", "자리 선택 전에 날씨와 어종 표를 확인하세요.", "가공하거나 판매하기 전에 현재 세이브 표시값을 비교하세요.", "번식에 필요한 물고기를 보관하고 남는 것만 처리하세요."]}
+    "items": ["어려운 어종을 노리기 전에 현재 낚싯대 요구 사항을 확인하세요.", "조작이 어렵다면 미니게임 리듬과 설정을 확인하세요.", "자리 선택 전에 날씨와 어종 표를 확인하세요.", "가공하거나 판매하기 전에 현재 세이브 표시값을 비교하세요.", "번식 전에 현재 게임 내 요구 사항을 확인하고 남는 물고기만 처리하세요."]}
   ]},
   "make-money": {
    "title": "돌록 타운에서 빨리 돈 버는 법 (1.0)",
@@ -7165,20 +7165,20 @@ _EXTRA = {
     {"en": "Season Planning", "heading": "계절 계획", "body": "공식 달력으로 확인되지 않은 가격 메커니즘을 가정하지 않고 작물과 낚시를 계획하세요.",
      "items": ["4월은 Harsh Dry Season입니다. 작물을 보호하고 물주기를 계획하세요.", "우기(1~2월)에는 어종 표가 바뀌므로 기간 한정 어획을 확인하세요.", "뇌우의 번개는 농장에 전력을 공급하며, 공식 Steam 상점은 태양광과 풍력 발전도 명시합니다.", "비는 작물을 관개합니다. 계절에 맞춰 작물을 바꾸고 비수기 시듦을 피하세요."]},
     {"en": "Common Money Mistakes", "heading": "자원 계획 점검", "body": "판매나 구매 전에 현재 게임 수치와 퀘스트 보상을 확인하고, 4월 전에 작물 보호와 물주기를 준비하세요. 구체적인 수익은 검증하지 않았습니다."},
-    {"en": "Sources & Verification", "heading": "출처와 검증", "body": "공식 Steam 상점은 태양광과 풍력 발전을, 공식 공지는 1.0 날짜와 2단계 자동화를 뒷받침합니다. 이 자료는 가공 수익, 낚시 장비 기준, 업그레이드 가치를 제공하지 않으며 이 가이드는 해당 수치를 직접 검증하지 않았습니다."},
+    {"en": "Sources & Verification", "heading": "출처와 검증", "body": "공식 Steam 상점은 태양광·풍력 발전과 농업 자동화를, 링크된 1.0 공지는 정식 출시 날짜를 뒷받침합니다. 이 자료는 가공 수익, 낚시 장비 기준, 업그레이드 가치를 제공하지 않으며 이 가이드는 해당 수치를 직접 검증하지 않았습니다."},
     {"en": "Quick Answers", "heading": "자주 묻는 질문",
-     "items": [["돌록 타운에서 돈을 가장 빨리 버는 방법은?", "유일한 최단 경로는 검증하지 않았습니다. 퀘스트, 달력, 현재 세이브 표시값을 기준으로 선택하세요."], ["가공은 얼마나 붙나요?", "정확한 변화는 검증하지 않았습니다. 현재 세이브에서 가공 전후 값을 비교하세요."], ["4월에는 어떻게 대비하나요?", "4월 Harsh Dry Season 전에 작물을 보호하고 물주기를 계획하세요."], ["가방 업그레이드는 가치 있나요?", "업그레이드 수익은 검증하지 않았습니다. 구매 전 현재 비용과 용량을 확인하세요."], ["자동화에 돈이 필요한가요?", "공식 정보는 2단계 농업 자동화를 확인합니다. 구체적인 해금 요구 사항과 비용은 게임 안에서 확인하세요."]]}
+     "items": [["돌록 타운에서 돈을 가장 빨리 버는 방법은?", "유일한 최단 경로는 검증하지 않았습니다. 퀘스트, 달력, 현재 세이브 표시값을 기준으로 선택하세요."], ["가공은 얼마나 붙나요?", "정확한 변화는 검증하지 않았습니다. 현재 세이브에서 가공 전후 값을 비교하세요."], ["4월에는 어떻게 대비하나요?", "4월 Harsh Dry Season 전에 작물을 보호하고 물주기를 계획하세요."], ["가방 업그레이드는 가치 있나요?", "업그레이드 수익은 검증하지 않았습니다. 구매 전 현재 비용과 용량을 확인하세요."], ["자동화에 돈이 필요한가요?", "공식 Steam 상점은 농업 자동화를 명시합니다. 구체적인 해금 요구 사항과 비용은 게임 안에서 확인하세요."]]}
    ]
   }
  },
  "es": {
   "how-to-play": {"sections": [
    {"en": "Day One: What to Do First", "heading": "Día uno: qué hacer primero", "body": "El primer día influye en el inicio. Estas prioridades distinguen mecánicas comprobadas de consejos reportados por jugadores; confirma los precios exactos en tu partida. [L2]",
-    "items": [["Revisa la mejora de mochila", "Comprueba los requisitos y la capacidad actuales antes de comprar."], ["Haz una misión el día uno", "Usa las recompensas y Puntos de Tecnología mostrados en el juego."], ["Revisa el crecimiento de Endyams", "Planta solo si el calendario deja tiempo para madurar."], ["Limpia la parcela inicial", "Abre espacio de construcción y recursos."], ["Consigue la caña del tutorial", "Usa la caña que entrega el tutorial de Lightman."]]}
+    "items": [["Revisa la mejora de mochila", "Comprueba los requisitos y la capacidad actuales antes de comprar."], ["Haz una misión el día uno", "Usa las recompensas y Puntos de Tecnología mostrados en el juego."], ["Revisa el crecimiento de Endyams", "Planta solo si el calendario deja tiempo para madurar."], ["Limpia la parcela inicial", "Abre espacio de construcción y recursos."], ["Revisa el equipo de pesca", "Consulta los requisitos actuales de la caña antes de buscar capturas difíciles."]]}
   ]},
   "fishing": {"sections": [
    {"en": "Fishing Tips: Common Failures & Fixes", "heading": "Consejos de pesca: fallos comunes y soluciones", "body": "Gran parte de la frustración inicial con la pesca es el nivel de la caña y el timing, no la suerte. Estos consejos vienen de la experiencia de la comunidad — trata los números como reportados por jugadores hasta que los verifiquemos en el 1.0. [L2]",
-    "items": ["Usa la caña que entrega el tutorial de Lightman.", "Consulta los requisitos actuales antes de buscar capturas difíciles.", "Si el mando resulta difícil, practica el ritmo y revisa los ajustes.", "Consulta las tablas de clima y peces antes de elegir sitio.", "Compara los valores actuales antes de procesar o vender.", "Conserva los peces necesarios para criar y usa solo el excedente."]}
+    "items": ["Consulta los requisitos actuales antes de buscar capturas difíciles.", "Si el mando resulta difícil, practica el ritmo y revisa los ajustes.", "Consulta las tablas de clima y peces antes de elegir sitio.", "Compara los valores actuales antes de procesar o vender.", "Antes de criar, revisa los requisitos actuales y usa solo los peces que sobren."]}
   ]},
   "make-money": {
    "title": "Cómo ganar dinero rápido en Doloc Town (1.0)",
@@ -7196,9 +7196,9 @@ _EXTRA = {
     {"en": "Season Planning", "heading": "Planificación estacional", "body": "Usa el calendario oficial para planificar cultivos y pesca sin suponer una mecánica de precios no verificada.",
      "items": ["El mes 4 es Harsh Dry Season: protege los cultivos y planifica el riego.", "La temporada de lluvias (ene-feb) cambia las tablas de peces; consulta las capturas disponibles durante ese periodo.", "Los rayos de las tormentas suministran energía a la granja, y la tienda oficial de Steam también enumera la energía solar y eólica.", "La lluvia riega los cultivos; rota lo que plantas con la estación para evitar que se marchite fuera de temporada."]},
     {"en": "Common Money Mistakes", "heading": "Comprobación de recursos", "body": "Antes de vender o comprar, revisa los valores actuales y las recompensas, y protege los cultivos y planifica el riego antes del mes 4. No verificamos rendimientos concretos."},
-    {"en": "Sources & Verification", "heading": "Fuentes y verificación", "body": "La tienda oficial de Steam respalda la energía solar y eólica, y los anuncios oficiales respaldan la fecha del 1.0 y la automatización en dos etapas. Estas fuentes no indican rendimientos, requisitos del equipo de pesca ni valor de mejoras; no hemos probado esas cifras de primera mano."},
+    {"en": "Sources & Verification", "heading": "Fuentes y verificación", "body": "La tienda oficial de Steam respalda la energía solar, eólica y la automatización agrícola; el anuncio enlazado del 1.0 respalda la fecha de lanzamiento. Estas fuentes no indican rendimientos, requisitos del equipo de pesca ni valor de mejoras; no hemos probado esas cifras de primera mano."},
     {"en": "Quick Answers", "heading": "Respuestas rápidas",
-     "items": [["¿Cuál es la forma más rápida de ganar dinero?", "No hemos verificado una única ruta más rápida. Usa misiones, calendario y valores actuales de tu partida para decidir."], ["¿Cuánto añade el procesado?", "No hemos verificado el cambio exacto; compara en tu partida los valores antes y después."], ["¿Cómo me preparo para el mes 4?", "Antes del mes 4, protege los cultivos y planifica el riego."], ["¿Merece la pena la mochila?", "No verificamos el retorno de la mejora. Revisa el coste y la capacidad actuales antes de comprar."], ["¿Necesito dinero para la automatización?", "La información oficial confirma automatización agrícola en dos etapas; consulta en el juego los requisitos y costes actuales."]]}
+     "items": [["¿Cuál es la forma más rápida de ganar dinero?", "No hemos verificado una única ruta más rápida. Usa misiones, calendario y valores actuales de tu partida para decidir."], ["¿Cuánto añade el procesado?", "No hemos verificado el cambio exacto; compara en tu partida los valores antes y después."], ["¿Cómo me preparo para el mes 4?", "Antes del mes 4, protege los cultivos y planifica el riego."], ["¿Merece la pena la mochila?", "No verificamos el retorno de la mejora. Revisa el coste y la capacidad actuales antes de comprar."], ["¿Necesito dinero para la automatización?", "La tienda oficial de Steam confirma la automatización agrícola; consulta en el juego los requisitos y costes actuales."]]}
    ]
   }
  }
@@ -7341,7 +7341,7 @@ for _lang, _c in PATCH_COPY.items():
     _prepend("mods", _lang, {"type":"note","tag":"1.00.03-OFFICIAL","heading":_c["mods_h"],"body":_c["mods_b"]})
     for _slug, _body in (("fishing",_c["fish"]),("achievements",_c["ach"]),("automation",_c["auto"]),("faq",_c["faq"])):
         _prepend(_slug, _lang, {"type":"note","tag":"1.00.03-OFFICIAL","heading":_c["patch_h"],"body":_body})
-    for _slug in ("how-to-play","weather","make-money"):
+    for _slug in ("how-to-play","weather"):
         _prepend(_slug, _lang, {"type":"note","tag":"1.00.03-OFFICIAL","heading":"Harsh Dry Season (Month 4)","body":_c["season"]})
     _page = next(x for x in d["pages"] if x["slug"] == "update-log")
     _view(_page, _lang)["sections"].insert(1, {"type":"list","tag":"KNOWN","heading":_c["known_h"],"body":"","items":_c["known"]})
@@ -7350,6 +7350,7 @@ _source(next(x for x in d["pages"] if x["slug"] == "faq"), FAQ_URL, "Official Do
 _source(next(x for x in d["pages"] if x["slug"] == "mods"), FAQ_URL, "Official Doloc Town 1.0 FAQ — functional mod warning")
 for _slug in ("how-to-play", "weather", "make-money"):
     _source(next(x for x in d["pages"] if x["slug"] == _slug), RELEASE_URL, "Official Doloc Town 1.0 release notes")
+_source(next(x for x in d["pages"] if x["slug"] == "make-money"), PATCH_URL, "Official Doloc Town patch 1.00.03")
 
 _weather = next(x for x in d["pages"] if x["slug"] == "weather")
 _weather["metaDescription"] = "Doloc Town weather guide: acid rain, heat, storms and Harsh Dry Season crop protection, based on official 1.0 notes."
@@ -7373,8 +7374,8 @@ for _slug in ("how-to-play","farming","weather","make-money","how-long-to-beat")
     if not _p: continue
     for _lg in ("en","zh-CN","zh-TW","ja","ko","es"):
         _v = _view(_p,_lg); _v.setdefault("sections",copy.deepcopy(_p["sections"]));
-        _v["sections"] = [s for s in _v["sections"] if s.get("tag") != "OFFICIAL-SEASON"]
-        _v["sections"].insert(0,{"type":"note","tag":"OFFICIAL-SEASON","heading":"Harsh Dry Season (Month 4)","body":_approved[_lg]["season"]})
+        _v["sections"] = [s for s in _v["sections"] if s.get("tag") not in ("OFFICIAL-SEASON","1.0-OFFICIAL","1.00.03-OFFICIAL")]
+        _v["sections"].insert(0,{"type":"note","tag":"1.0-OFFICIAL","heading":"Harsh Dry Season (Month 4)","body":_approved[_lg]["season"]})
 for _slug in ("automation","faq"):
     _p = next(x for x in d["pages"] if x["slug"] == _slug)
     for _lg in ("en","zh-CN","zh-TW","ja","ko","es"):
@@ -7432,6 +7433,70 @@ for _p in d["pages"]:
     # The mods safety warning is contractually first in every locale. Keep the
     # Spanish translation boundary immediately after it on that one page.
     _es["sections"].insert(1 if _p["slug"] == "mods" else 0, copy.deepcopy(_es_notice))
+
+# The reviewed first-party source supports farming automation, but not the
+# legacy "two-stage" attribution. Normalize every effective string after all
+# translation merges so visible copy, metadata, FAQs and JSON-LD share the
+# same source-bounded wording.
+_automation_replacements = {
+    "two-stage crop automation": "crop automation",
+    "two-stage farming automation": "farming automation",
+    "two-stage automation": "farming automation",
+    "两阶段农业自动化": "农业自动化",
+    "两阶段自动化": "农业自动化",
+    "兩階段農業自動化": "農業自動化",
+    "兩階段自動化": "農業自動化",
+    "二段階の農業オートメーション": "農業オートメーション",
+    "二段階農業自動化": "農業自動化",
+    "二段階自動化": "農業オートメーション",
+    "2단계 농업 자동화": "농업 자동화",
+    "2단계 자동화": "농업 자동화",
+    "automatización agrícola en dos etapas": "automatización agrícola",
+    "automatización en dos etapas": "automatización agrícola",
+    "Automatización agrícola en dos etapas": "Automatización agrícola",
+    "Automatización en dos etapas": "Automatización agrícola",
+    "las dos etapas oficiales de automatización": "la automatización agrícola",
+}
+def _normalize_automation(value):
+    if isinstance(value, dict):
+        return {k: _normalize_automation(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_normalize_automation(v) for v in value]
+    if isinstance(value, str):
+        for old, new in _automation_replacements.items():
+            value = value.replace(old, new)
+        return value
+    return value
+d = _normalize_automation(d)
+
+_money = next(x for x in d["pages"] if x["slug"] == "make-money")
+_money["i18n"]["zh-TW"]["metaDescription"] = "多洛可小鎮資源規劃指南：依官方資料安排任務、加工設備、釣魚、作物防護、澆水與農場供電，具體數值以遊戲內顯示為準。"
+_source_labels = {
+    "https://store.steampowered.com/app/2285550/Doloc_Town/": {
+        "zh-CN":"Steam 官方商店——太阳能、风力与农业自动化",
+        "zh-TW":"Steam 官方商店——太陽能、風力與農業自動化",
+        "ja":"Steam 公式ストア——太陽光・風力発電と農業自動化",
+        "ko":"Steam 공식 상점——태양광·풍력 발전과 농업 자동화",
+        "es":"Tienda oficial de Steam: energía solar, eólica y automatización agrícola",
+    },
+    PATCH_URL: {
+        "zh-CN":"多洛可小镇官方 1.00.03 补丁说明",
+        "zh-TW":"多洛可小鎮官方 1.00.03 更新說明",
+        "ja":"ドロックタウン公式パッチ 1.00.03",
+        "ko":"돌록 타운 공식 패치 1.00.03",
+        "es":"Parche oficial 1.00.03 de Doloc Town",
+    },
+    RELEASE_URL: {
+        "zh-CN":"多洛可小镇官方 1.0 正式版公告",
+        "zh-TW":"多洛可小鎮官方 1.0 正式版公告",
+        "ja":"ドロックタウン公式 1.0 リリース発表",
+        "ko":"돌록 타운 공식 1.0 출시 공지",
+        "es":"Anuncio oficial del lanzamiento 1.0 de Doloc Town",
+    },
+}
+for _source_item in _money.get("sources", []):
+    if _source_item.get("url") in _source_labels:
+        _source_item["labels"] = copy.deepcopy(_source_labels[_source_item["url"]])
 
 # ---------- write site.json ----------
 d["site"]["languages"] = ["en","zh-CN","zh-TW","ja","ko","es"]

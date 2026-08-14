@@ -84,6 +84,9 @@ try {
   } else if (fault === "escape-focus-loss") {
     const target = path.join(out, "index.html");
     fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("if (restoreFocus && summary) summary.focus();", "if (restoreFocus && summary) return;"));
+  } else if (fault === "consent-escape-steals-focus") {
+    const target = path.join(out, "index.html");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("||!banner.contains(document.activeElement)", ""));
   } else if (fault === "touch-target-contract") {
     const target = path.join(out, "css", "style.css");
     fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("min-block-size:44px", "min-block-size:34px"));
@@ -159,6 +162,7 @@ try {
       "details.querySelector(':scope > summary')",
       "if (restoreFocus && summary) summary.focus();",
       "details.dd[open], details.lang-dd[open]",
+      "banner.hidden||!banner.contains(document.activeElement)",
     ]) if (!html.includes(token)) fail("escape-focus-runtime-contract", `${rel}:${token}`);
   }
 
@@ -182,7 +186,7 @@ try {
   }
 
   if (!fault && !failures.length) {
-    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset", "escape-focus-loss", "touch-target-contract", "inline-target-contract", "transition-shorthand", "unscoped-navigation-hover", "logo-transition-all"]) {
+    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset", "escape-focus-loss", "consent-escape-steals-focus", "touch-target-contract", "inline-target-contract", "transition-shorthand", "unscoped-navigation-hover", "logo-transition-all"]) {
       const child = spawnSync(process.execPath, [auditScript, root], { env: { ...process.env, DOLOC_NAV_AUDIT_FAULT: name }, encoding: "utf8" });
       negativeFixtureExitCodes[name] = child.status;
       if (!Number.isInteger(child.status) || child.status <= 0) fail("negative-fixture-did-not-fail", name);

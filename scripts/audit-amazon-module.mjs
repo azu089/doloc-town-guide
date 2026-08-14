@@ -145,6 +145,9 @@ const semanticSourceFaults = {
   "semantic-whole-layer-source": "Acid rain can erase an entire tier of crops; storms destroy a whole layer too.",
   "semantic-weather-profit-source": "Weather timing changes the profit math completely, a community-verified advantage for clever farms.",
 };
+const removedGameplayPattern = /(?:Lightman[^.\n。]{0,90}(?:tutorial|rod|教程|鱼竿|魚竿|チュートリアル|竿|튜토리얼|낚싯대|caña)|13\s*(?:tank-only|aquatic|fish)[^.\n]{0,90}(?:parent|pair|breed)|(?:specific|predetermined)\s+(?:breeding\s+)?(?:parents|pairs)|(?:13\s*种鱼缸|特定亲本|特定親本|水槽限定13種|特定の親|수조\s*전용\s*13종|특정\s*부모|13\s*especies[^.\n]{0,70}(?:padres|parejas)))/iu;
+const unsupportedPhasePattern = /(?:two[- ](?:stage|phase)|automation[^.\n]{0,45}(?:two separate phases|first phase[^.\n]{0,30}second phase)|两阶段|兩階段|二段階|2단계|(?:dos|dos distintas)\s+(?:etapas|fases))/iu;
+const staleZhTwMoneyMetaPattern = /(?:區分社群技巧與官方事實|介紹加工、釣魚和前期優先事項)/u;
 const independentFaults = {
   "evidence-ja-weather-source": {layer:"source", rel:"ja/weather.html", text:"雷雨で農地を破壊し、豪雨で低地が浸水する。"},
   "evidence-ja-weather-visible": {layer:"visible", rel:"ja/weather.html", text:"雷雨で農地を破壊し、豪雨で低地が浸水する。"},
@@ -187,6 +190,14 @@ const independentFaults = {
   "language-zh-tw-intro": {layer:"visible", rel:"zh-TW/farming.html", text:"學會計什麼、何時種。"},
   "language-ko-grammar": {layer:"metadata", rel:"ko/farming.html", text:"작물 부담이 커집습니다."},
   "language-en-grammar": {layer:"jsonld", rel:"update-log.html", text:"This is not a selected highlights."},
+  "global-gameplay-literal-source": {layer:"source", rel:"how-to-play.html", text:"The Lightman tutorial gives a free rod."},
+  "global-gameplay-paraphrase-visible": {layer:"visible", rel:"fishing.html", text:"Thirteen aquatic species require predetermined breeding pairs."},
+  "global-source-mismatch-literal-source": {layer:"source", rel:"automation.html", text:"Official two-stage farming automation."},
+  "global-source-mismatch-paraphrase-faq": {layer:"faq", rel:"automation.html", text:"Does automation proceed in two separate phases?"},
+  "global-season-duplicate": {layer:"visible", rel:"make-money.html", text:"<h2>Harsh Dry Season (Month 4)</h2>"},
+  "global-season-wrong-source": {layer:"visible", rel:"make-money.html", text:"<span>1.00.03-OFFICIAL</span>"},
+  "global-zh-tw-money-metadata": {layer:"metadata", rel:"zh-TW/make-money.html", text:"區分社群技巧與官方事實，介紹加工、釣魚和前期優先事項。"},
+  "global-source-label-fallback": {layer:"visible", rel:"ja/make-money.html", text:"Official Doloc Town 1.0 release notes"},
 };
 const semanticFamilyCodes = new Set(semanticFamilyPatterns.map(([code]) => code));
 const nonSemanticIntegrityPatterns = contentIntegrityPatterns.filter(([code]) => !semanticFamilyCodes.has(code));
@@ -364,6 +375,33 @@ try {
   }
   const makeMoneyPage=sourceData.pages.find(p=>p.slug==="make-money");
   if (!(makeMoneyPage.sources||[]).some(s=>s.url===canonicalSources.store)) fail("wind-primary-source-missing","make-money");
+  const expectedZhTwMoneyMeta = "多洛可小鎮資源規劃指南：依官方資料安排任務、加工設備、釣魚、作物防護、澆水與農場供電，具體數值以遊戲內顯示為準。";
+  if (makeMoneyPage.i18n?.["zh-TW"]?.metaDescription !== expectedZhTwMoneyMeta) fail("zh-tw-money-metadata-contract", makeMoneyPage.i18n?.["zh-TW"]?.metaDescription || "missing");
+  const localizedSourceLabels = {
+    "zh-CN":{[canonicalSources.store]:"Steam 官方商店——太阳能、风力与农业自动化",[canonicalSources.patch]:"多洛可小镇官方 1.00.03 补丁说明",[canonicalSources.release]:"多洛可小镇官方 1.0 正式版公告"},
+    "zh-TW":{[canonicalSources.store]:"Steam 官方商店——太陽能、風力與農業自動化",[canonicalSources.patch]:"多洛可小鎮官方 1.00.03 更新說明",[canonicalSources.release]:"多洛可小鎮官方 1.0 正式版公告"},
+    ja:{[canonicalSources.store]:"Steam 公式ストア——太陽光・風力発電と農業自動化",[canonicalSources.patch]:"ドロックタウン公式パッチ 1.00.03",[canonicalSources.release]:"ドロックタウン公式 1.0 リリース発表"},
+    ko:{[canonicalSources.store]:"Steam 공식 상점——태양광·풍력 발전과 농업 자동화",[canonicalSources.patch]:"돌록 타운 공식 패치 1.00.03",[canonicalSources.release]:"돌록 타운 공식 1.0 출시 공지"},
+    es:{[canonicalSources.store]:"Tienda oficial de Steam: energía solar, eólica y automatización agrícola",[canonicalSources.patch]:"Parche oficial 1.00.03 de Doloc Town",[canonicalSources.release]:"Anuncio oficial del lanzamiento 1.0 de Doloc Town"},
+  };
+  for (const [locale, labels] of Object.entries(localizedSourceLabels)) {
+    for (const [url, expected] of Object.entries(labels)) {
+      const source=makeMoneyPage.sources?.find(item=>item.url===url);
+      if (source?.labels?.[locale] !== expected) fail("localized-source-label-data", `${locale}:${url}`);
+      const rel=`${locale}/make-money.html`, html=fs.readFileSync(path.join(disabled,rel),"utf8");
+      if (!html.includes(expected)) fail("localized-source-label-visible", `${locale}:${url}`);
+    }
+    const localizedHtml=fs.readFileSync(path.join(disabled,`${locale}/make-money.html`),"utf8");
+    for (const fallback of ["Official Steam store — solar and wind power","Official Doloc Town patch 1.00.03","Official Doloc Town 1.0 release notes"])
+      if (localizedHtml.includes(fallback)) fail("source-label-english-fallback",`${locale}:${fallback}`);
+  }
+  for (const locale of localeSpecs ? Object.keys(localeSpecs) : []) {
+    const rel=locale==="en"?"make-money.html":`${locale}/make-money.html`;
+    const html=fs.readFileSync(path.join(disabled,rel),"utf8");
+    const headingCount=count(html,">Harsh Dry Season (Month 4)</h2>");
+    if (headingCount!==1) fail("season-block-count",`${locale}:${headingCount}`);
+    if (count(html,"1.0-OFFICIAL")!==1 || html.includes("1.00.03-OFFICIAL")) fail("season-source-tag",locale);
+  }
   const simplifiedFallback=/(?:季节提示|看天气预报|雷暴蓄电|雨水免费灌溉|种子|嫩芽|生长|收获|页面|深度拆解|快速答案|搜索攻略|联系我们|我们通常)/u;
   for (const file of offFiles.filter(f=>path.relative(disabled,f).startsWith(`zh-TW${path.sep}`))) {
     const html=fs.readFileSync(file,"utf8");
@@ -428,6 +466,8 @@ try {
   if (independentFault?.layer === "source") sourceEntries.push({rel:`fault-source:${fault}`, text:independentFault.text});
   for (const {rel,text} of sourceEntries) {
     scanSemantic(text, "source", rel);
+    if (removedGameplayPattern.test(text)) fail("removed-gameplay-source", rel);
+    if (!rel.endsWith("build_content.py") && unsupportedPhasePattern.test(text)) fail("unsupported-phase-source", rel);
     for (const [code,re] of forbidden) if(re.test(text)) fail(code,rel);
     for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(text)) fail(code,rel);
   }
@@ -452,6 +492,9 @@ try {
     scanSemantic(visible, "generated_visible", rel);
     scanSemantic(metadata, "generated_metadata", rel);
     for (const block of jsonLd) scanSemantic(block, "generated_jsonld", rel);
+    if (removedGameplayPattern.test(visible) || removedGameplayPattern.test(metadata) || jsonLd.some(block=>removedGameplayPattern.test(block))) fail("removed-gameplay-generated",rel);
+    if (unsupportedPhasePattern.test(visible) || unsupportedPhasePattern.test(metadata) || jsonLd.some(block=>unsupportedPhasePattern.test(block))) fail("unsupported-phase-generated",rel);
+    if (rel===path.join("zh-TW","make-money.html") && (staleZhTwMoneyMetaPattern.test(metadata) || !metadata.includes(expectedZhTwMoneyMeta))) fail("zh-tw-money-metadata-generated",rel);
     for (const [code,re] of forbidden) if(re.test(html)) fail(code,rel);
     for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(html)) fail(code,rel);
   }
@@ -608,6 +651,9 @@ if (!fault && !failures.length) {
     "evidence-economic-zh-profitable", "evidence-economic-zh-cost", "evidence-economic-ja-cost", "evidence-economic-ko-cost", "evidence-economic-es-cost",
     "evidence-gameplay-source", "evidence-gameplay-visible", "evidence-gameplay-metadata", "evidence-gameplay-faq", "evidence-gameplay-jsonld",
     "evidence-season-missing", "evidence-wind-missing", "evidence-zh-tw-fallback",
+    "global-gameplay-literal-source", "global-gameplay-paraphrase-visible",
+    "global-source-mismatch-literal-source", "global-source-mismatch-paraphrase-faq",
+    "global-season-duplicate", "global-season-wrong-source", "global-zh-tw-money-metadata", "global-source-label-fallback",
   ]) {
     const result = spawnSync(process.execPath, [auditScript, root], {
       env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: name },

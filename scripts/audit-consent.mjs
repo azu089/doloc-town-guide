@@ -49,6 +49,9 @@ function inject(relative, html) {
       .replace("</dialog>", "</section>")
       .replace("if(!dialog.open)dialog.showModal();", "dialog.hidden=false;");
   }
+  if (fault === "navigation-escape-ownership") {
+    return html.replace("||!banner.contains(document.activeElement)", "");
+  }
   return html;
 }
 
@@ -79,6 +82,10 @@ for (const { relative, html } of rows) {
   if (!html.includes("gaLoaded||document.getElementById('doloc-ga4-script')") ||
       !html.includes("adLoaded||document.getElementById('doloc-adsterra-script')"))
     fail("duplicate-load-guard", relative);
+  if (!html.includes("banner.hidden||!banner.contains(document.activeElement)") ||
+      !html.includes("function closeNavigationDetails(details, restoreFocus)") ||
+      !html.includes("if (restoreFocus && summary) summary.focus();"))
+    fail("navigation-escape-ownership", relative);
   const footer = (html.match(/<footer class="site-footer">[\s\S]*?<\/footer>/) || [""])[0];
   if (footer.includes(providerHost) || footer.includes(providerContainer)) fail("footer-provider-leak", relative);
   if (eligible.has(relative)) {
@@ -115,7 +122,7 @@ for (const [relative, markers] of Object.entries(privacyMarkers)) {
 
 const negative = {};
 if (!fault && !failures.length) {
-  for (const name of ["no-choice-network", "reject-network", "duplicate-provider", "focus-escape"]) {
+  for (const name of ["no-choice-network", "reject-network", "duplicate-provider", "focus-escape", "navigation-escape-ownership"]) {
     const result = spawnSync(process.execPath, [script, root], {
       env: { ...process.env, DOLOC_CONSENT_AUDIT_FAULT: name },
       encoding: "utf8",

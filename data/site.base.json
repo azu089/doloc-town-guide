@@ -107,17 +107,17 @@
   "nameI18n": {},
   "statsI18n": {},
   "introI18n": {
-   "zh-CN": "多洛可小镇是一款横版卷轴像素风的后末日农场模拟游戏。你扮演年轻的拾荒者，在极端天气下用平台搭建垂直农场。收集资源、钓鱼、畜牧、改造作物基因、与无人机并肩战斗，并使用官方介绍的两阶段农业自动化。",
-   "zh-TW": "多洛可小鎮是一款橫版卷軸像素風的後末日農場模擬遊戲。你扮演年輕的拾荒者，在極端天氣下用平台搭建垂直農場。收集資源、釣魚、畜牧、改造作物基因、與無人機並肩戰鬥，並使用官方介紹的兩階段農業自動化。",
-   "ja": "ドロックタウンは横スクロールのピクセルアート農場シム。極限気象の中で垂直農場を築き、資源収集・釣り・牧場・遺伝子改良・ドローン戦闘と、公式に紹介された二段階の農業オートメーションを進める。",
-   "ko": "돌록 타운은 횡스크롤 픽셀아트 농장 시뮬입니다. 극한 날씨 속에서 수직 농장을 짓고 자원 수집, 낚시, 목장, 유전자 개량, 드론 전투와 공식 설명의 2단계 농업 자동화를 진행합니다.",
-   "es": "Doloc Town es un simulador de granja pixel-art lateral. Construye una granja vertical bajo clima extremo, reúne recursos, pesca, cría animales, modifica genes, combate con tu dron y usa la automatización agrícola oficial en dos etapas."
+   "zh-CN": "多洛可小镇是一款横版卷轴像素风的后末日农场模拟游戏。你扮演年轻的拾荒者，在极端天气下用平台搭建垂直农场。收集资源、钓鱼、畜牧、改造作物基因、与无人机并肩战斗，并使用农业自动化。",
+   "zh-TW": "多洛可小鎮是一款橫版卷軸像素風的後末日農場模擬遊戲。你扮演年輕的拾荒者，在極端天氣下用平台搭建垂直農場。收集資源、釣魚、畜牧、改造作物基因、與無人機並肩戰鬥，並使用農業自動化。",
+   "ja": "ドロックタウンは横スクロールのピクセルアート農場シム。極限気象の中で垂直農場を築き、資源収集・釣り・牧場・遺伝子改良・ドローン戦闘と農業オートメーションを進める。",
+   "ko": "돌록 타운은 횡스크롤 픽셀아트 농장 시뮬입니다. 극한 날씨 속에서 수직 농장을 짓고 자원 수집, 낚시, 목장, 유전자 개량, 드론 전투와 농업 자동화를 진행합니다.",
+   "es": "Doloc Town es un simulador de granja pixel-art lateral. Construye una granja vertical bajo clima extremo, reúne recursos, pesca, cría animales, modifica genes, combate con tu dron y usa la automatización agrícola."
   },
   "keyFactsI18n": {
    "zh-CN": [
     "1.0 正式版：2026 年 8 月 6 日，含完整故事结局",
     "主线 30+ 小时，全收集 100+ 小时",
-    "农业自动化：两阶段农事自动化（1.0 新增）",
+    "农业自动化：1.0 新增农事自动化",
     "作物基因系统：30+ 作物 × 约 20 种突变",
     "极端天气需要作物防护、浇水规划与每日预报",
     "Steam 成就共 80 个（基础 43 + 1.0 新增 37）"
@@ -125,7 +125,7 @@
    "zh-TW": [
     "1.0 正式版：2026 年 8 月 6 日，含完整故事結局",
     "主線 30+ 小時，全收集 100+ 小時",
-    "農業自動化：兩階段農事自動化（1.0 新增）",
+    "農業自動化：1.0 新增農事自動化",
     "作物基因系統：30+ 作物 × 約 20 種突變",
     "極端天氣需要作物防護、澆水規劃與每日預報",
     "Steam 成就共 80 個（基礎 43 + 1.0 新增 37）"
@@ -133,7 +133,7 @@
    "ja": [
     "1.0 正式版：2026年8月6日、完全なストーリー結末",
     "メイン30時間+、全収集100時間+",
-    "農業オートメーション：二段階の農作業自動化（1.0新）",
+    "農業オートメーション：1.0 で追加",
     "作物遺伝子システム：30+作物×約20変異",
     "異常気象には作物保護・水やり計画・毎日の予報確認が必要",
     "Steam実績80個（基礎43+1.0新37）"
@@ -141,7 +141,7 @@
    "ko": [
     "1.0 정식: 2026년 8월 6일, 완전한 스토리 결말",
     "메인 30시간+, 전체 수집 100시간+",
-    "농업 자동화: 2단계 농작업 자동화 (1.0 신규)",
+    "농업 자동화: 1.0에서 추가",
     "작물 유전자 시스템: 30+ 작물 × 약 20 돌연변이",
     "극한 날씨에는 작물 보호, 물주기 계획, 매일의 일기예보 확인이 필요",
     "Steam 업적 80개 (기본 43 + 1.0 신규 37)"
@@ -149,7 +149,7 @@
    "es": [
     "Lanzamiento 1.0: 6 ago 2026, final completo de la historia",
     "30+ horas de historia, 100+ con todo",
-    "Automatización agrícola en dos etapas (nueva en 1.0)",
+    "Automatización agrícola (nueva en 1.0)",
     "Sistema genético: 30+ cultivos × ~20 mutaciones",
     "Clima extremo que exige preparación (lluvia ácida, tormentas, sequía)",
     "80 logros de Steam (43 base + 37 nuevos en 1.0)"
@@ -326,8 +326,8 @@
        "Hidden corners hide scrap that funds your first planter batch."
       ],
       [
-       "Pick up the free fishing rod",
-       "The Lightman fishing tutorial hands you a rod — free gear, no reason to skip it."
+       "Check the current fishing setup",
+       "Review the in-game rod requirements before targeting harder catches."
       ]
      ]
     },
@@ -362,7 +362,7 @@
       ],
       [
        "New players",
-       "You can reach the official two-stage farming automation earlier than EA players."
+       "You can reach farming automation earlier than EA players."
       ],
       [
        "Old City Ruins",
@@ -421,8 +421,8 @@
    "slug": "automation",
    "title": "Doloc Town Farming Automation Guide (1.0)",
    "metaTitle": "Doloc Town Farming Automation & Drone Guide (1.0)",
-   "metaDescription": "How Doloc Town 1.0 farming automation works: two-stage crop automation, task assignment and current drone issues from official notes.",
-   "intro": "Official 1.0 notes describe two-stage farming automation and drone stations for crop tasks. This guide separates those mechanics from player-reported details.",
+   "metaDescription": "How Doloc Town 1.0 farming automation works: crop tasks, drone stations and current drone issues from official sources.",
+   "intro": "Official sources describe farming automation and drone stations for crop tasks. This guide separates those mechanics from player-reported details.",
    "sections": [
     {
      "type": "steps",
@@ -432,7 +432,7 @@
      "items": [
       [
        "Build the automation chain",
-       "Follow the official two-stage farming automation flow and unlock each task before expanding the layout."
+       "Follow the in-game farming automation flow and unlock each task before expanding the layout."
       ],
       [
        "Build farming drone stations",
@@ -659,7 +659,7 @@
    "title": "Doloc Town Fishing Guide: Ponds, Weather & Rare Fish",
    "metaTitle": "Doloc Town Fish Chart: All 33 Fish, Locations & Weather",
    "metaDescription": "Every Doloc Town fish in one searchable, filterable chart: all 33 species, time, weather, pond and season, plus the rare breeding-only fish.",
-   "intro": "Fishing is a full second career in Doloc Town. This catalog lists every confirmed fish — where it spawns, which season and weather it needs, and how to breed the rare tank-only species.",
+   "intro": "Fishing is a full second career in Doloc Town. This catalog lists fish locations, seasons, weather and current in-game requirements.",
    "sections": [
     {
      "type": "table",
@@ -906,7 +906,7 @@
       "Upgrade your rod: higher-tier rods unlock better fish and make the fishing minigame more forgiving",
       "Fish through weather: rain and thunderstorms bring uncommon catches that dry days don't",
       "Watch the season: rainy season (Jan–Feb) and dry season (Mar–Apr) change the catch tables completely",
-      "Breed rare fish: the 13 tank-only species need specific parents — keep spares instead of selling everything",
+      "Review current in-game breeding requirements before using spare fish",
       "Rare fish drop advanced drone and tool parts, so a good fishing session funds your upgrades"
      ]
     },
@@ -915,12 +915,12 @@
      "heading": "Fishing Tips: Common Failures & Fixes",
      "body": "A lot of early fishing frustration comes down to rod level and timing, not luck. These tips come from community experience — treat the numbers as player-reported until we verify them in 1.0. [L2]",
      "items": [
-      "Do the Lightman fishing tutorial first — it gives you a free rod, so you are not stuck with the starting stick.",
-      "Use the free rod from Lightman's tutorial, then check the current in-game upgrade requirements before targeting harder catches.",
+      "Check the current in-game rod requirements before targeting harder catches.",
+      "Review the fishing controls and settings before moving to harder catches.",
       "Controller players report the most failures: if a catch keeps slipping on a gamepad, upgrade the rod before assuming your timing is the problem.",
       "Fish through weather: rain and thunderstorms bring catches that dry days never do — check the tables above before choosing a spot.",
       "Use unlocked processing equipment for surplus catches, and compare the current in-game values before selling.",
-      "Keep one of each species: rare fish drop advanced drone and tool parts, and 13 tank-only species need specific parents to breed."
+      "Keep spare fish until you have checked the current in-game breeding requirements."
      ]
     },
     {
@@ -1582,7 +1582,7 @@
      "heading": "From Hand-Farming to Automation (1.0)",
      "body": "The 1.0 release turns you from a farmer into a farm manager. The upgrade path is: energy first, stations second, then let the drones work.",
      "items": [
-      "Follow the two-stage automation tasks described in the official 1.0 notes.",
+      "Follow the farming automation tasks shown in the current game.",
       "Construct farm drone stations — the control points that let drones work the fields.",
       "Assign automation tasks: drones handle seeding, nurturing and harvesting end to end.",
       "Vertical stacking matters: leave clear flight lanes between platforms so drones can reach every planter.",
@@ -1622,7 +1622,7 @@
       ],
       [
        "Does 1.0 fully automate farming?",
-       "Yes. Official 1.0 notes describe two-stage farming automation; patch 1.00.03 also lists drone failures in certain situations."
+       "Yes. The official Steam store describes farming automation; patch 1.00.03 also lists drone failures in certain situations."
       ]
      ]
     }
@@ -2441,7 +2441,7 @@
      "items": [
       "New area: Old City Ruins (third large map area).",
       "Complete main story ending.",
-      "Two-stage farming automation system.",
+      "Farming automation system.",
       "Mushroom Fest festival.",
       "Additional character storylines.",
       "New tools, combat drones, fish and accessories.",
@@ -2510,7 +2510,7 @@
       ],
       [
        "Is there farming automation?",
-       "Yes — new in 1.0. Official notes describe two-stage farming automation."
+       "Yes — farming automation is part of the current game."
       ],
       [
        "What's new in 1.0?",
@@ -2852,7 +2852,7 @@
       "80 Steam achievements (43 base + 37 new in 1.0) encourage full completion",
       "Crop gene system: ~20 mutations across 30+ crops to research and breed",
       "Fishing: different ponds, rods and weather give different catches — completing the catalog takes a while",
-      "Two-stage farming automation is a progression system to build toward",
+      "Farming automation is a progression system to build toward",
       "The 5 regions plus the new Old City Ruins area add exploration time"
      ]
     },
@@ -3018,7 +3018,7 @@
      "type": "note",
      "tag": "SOURCES",
      "heading": "Sources & Verification",
-     "body": "The official Steam store supports solar and wind power, while the linked announcement supports the dated 1.0 release and two-stage automation. These sources do not provide processing returns, fishing-equipment thresholds or upgrade value; those exact values remain not hands-on verified."
+     "body": "The official Steam store supports solar, wind power and farming automation, while the linked announcement supports the dated 1.0 release. These sources do not provide processing returns, fishing-equipment thresholds or upgrade value; those exact values remain not hands-on verified."
     },
     {
      "type": "faq",
@@ -3043,7 +3043,7 @@
       ],
       [
        "Do I need money for automation?",
-       "Official notes confirm two-stage farming automation; check the current in-game unlock requirements and costs."
+       "The official Steam store confirms farming automation; check the current in-game unlock requirements and costs."
       ]
      ]
     }
