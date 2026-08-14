@@ -96,7 +96,7 @@ const safeBoundaries = {
 const semanticFamilyPatterns = [
   ["en-flat-field-weather-causality", /(?:(?:flat|horizontal|single[- ]level|one[- ]level)[^.\n]{0,50}(?:field|plot)[^.\n]{0,70}(?:drought|storm)[^.\n]{0,35}(?:risk|magnet|target|wipe|destroy)|(?:drought|storm)[^.\n]{0,70}(?:target|seek|wipe|destroy|attract)[^.\n]{0,55}(?:flat|horizontal|single[- ]level|one[- ]level)[^.\n]{0,20}(?:field|plot))/iu],
   ["zh-flat-field-weather-causality", /(?:(?:平坦|平地|單層|单层|單一|单一|一大片|一整片)[^。\n]{0,36}(?:田地|農田|农田|地塊|地块|田)[^。\n]{0,55}(?:旱災|旱灾|乾旱|干旱|風暴|风暴|暴風|暴风)[^。\n]{0,28}(?:風險|风险|靶子|標靶|目标|目標|全毀|全毁|摧毀|摧毁|吸引)|(?:旱災|旱灾|乾旱|干旱|風暴|风暴|暴風|暴风)[^。\n]{0,55}(?:摧毀|摧毁|吸引|鎖定|锁定|瞄準|瞄准|毀掉|毁掉)[^。\n]{0,36}(?:平坦|平地|單層|单层|單一|单一)[^。\n]{0,18}(?:田地|農田|农田|地塊|地块|田))/u],
-  ["ja-flat-field-weather-causality", /(?:(?:平ら|一枚畑|単層|一段|単一|水平)[^。\n]{0,50}(?:畑|農地|区画)[^。\n]{0,60}(?:干ばつ|嵐|暴風)[^。\n]{0,28}(?:リスク|的|標的|全滅|壊滅|引き寄せ)|(?:干ばつ|嵐|暴風)[^。\n]{0,60}(?:狙う|全滅させる|壊滅させる|引き寄せる)[^。\n]{0,45}(?:平ら|一枚畑|単層|一段|単一|水平))/u],
+  ["ja-flat-field-weather-causality", /(?:(?:平ら|一枚畑|単層|一段|単一|水平)[^。\n]{0,50}(?:畑|農地|区画)[^。\n]{0,60}(?:干ばつ|嵐|暴風)[^。\n]{0,28}(?:リスク|的|標的|全滅|壊滅|引き寄せ)|(?:干ばつ|嵐|暴風)[^。\n]{0,60}(?:狙(?:う|って)|全滅させ(?:る|て)|壊滅させ(?:る|て)|引き寄せ(?:る|て))[^。\n]{0,45}(?:平ら|一枚畑|単層|一段|単一|水平))/u],
   ["ko-flat-field-weather-causality", /(?:평평한|평지|단층|한\s*판)[^.\n]{0,60}(?:가뭄\s*위험|폭풍의\s*표적|폭풍\s*하나로\s*전멸)/u],
   ["es-flat-field-weather-causality", /(?:(?:campo|parcela)[^.\n]{0,35}(?:plano|llano|un\s+solo\s+nivel|una\s+sola\s+capa)[^.\n]{0,70}(?:sequ[ií]a|tormenta)[^.\n]{0,30}(?:riesgo|im[aá]n|objetivo|borra|destruye|atrae)|(?:sequ[ií]a|tormenta)[^.\n]{0,70}(?:busca|borra|destruye|atrae|apunta)[^.\n]{0,50}(?:campo|parcela)[^.\n]{0,30}(?:plano|llano|un\s+solo\s+nivel|una\s+sola\s+capa))/iu],
   ["en-broad-threat-benefit", /(?:(?:every|each|all|any)[^.\n]{0,45}(?:threat|storm|extreme weather|weather event)[^.\n]{0,65}(?:advantage|bonus|benefit|reward)|(?:advantage|bonus|benefit|reward)[^.\n]{0,65}(?:every|each|all|any)[^.\n]{0,45}(?:threat|storm|weather)|weather[^.\n]{0,35}(?:bonus|advantage)[^.\n]{0,30}(?:not|rather than)[^.\n]{0,20}disaster)/iu],
@@ -106,22 +106,32 @@ const semanticFamilyPatterns = [
   ["es-broad-threat-benefit", /(?:(?:cada|tod[oa]s?|cualquier)[^.\n]{0,45}(?:amenaza|tormenta|clima\s+extremo|fen[oó]meno)[^.\n]{0,65}(?:ventaja|bonus|bono|beneficio|provecho)|(?:ventaja|bonus|bono|beneficio|provecho)[^.\n]{0,65}(?:cada|tod[oa]s?|cualquier)[^.\n]{0,45}(?:amenaza|tormenta|clima|fen[oó]meno)|(?:clima|tiempo)[^.\n]{0,45}(?:no\s+(?:es|sea)|en\s+vez\s+de)[^.\n]{0,25}(?:desastre|amenaza)[^.\n]{0,25}(?:bonus|bono|ventaja))/iu],
   ["ko-drought-profit-benefit", /(?:Harsh Dry Season|가뭄|건기)[^.\n]{0,90}(?:수익|이익)(?:\s*(?:내기|보기|기회))?/u],
   ["es-drought-profit-benefit", /(?:aprovecha(?:r)?(?:\s+el)?\s+(?:momento\s+de\s+la\s+)?sequ[ií]a|sac(?:o|ar)\s+provecho\s+de\s+la\s+sequ[ií]a|gan(?:a|ar)\s+con[^.\n]{0,80}Harsh Dry Season|benefici(?:o|arse)[^.\n]{0,60}sequ[ií]a)/iu],
-  ["zh-shop-crop-pressure", /(?:(?:商店|店铺|店舖|店內|店内)[^。\n]{0,45}(?:作物|农产品|農產品)[^。\n]{0,35}(?:压力|壓力|紧张|緊張|短缺)|(?:作物|农产品|農產品)[^。\n]{0,35}(?:压力|壓力|紧张|緊張|短缺)[^。\n]{0,45}(?:商店|店铺|店舖|店內|店内))/u],
+  ["zh-shop-crop-pressure", /(?:(?:商店|店铺|店舖|店內|店内)[^。\n]{0,45}(?:作物|农产品|農產品|农货|農貨)[^。\n]{0,45}(?:压力|壓力|紧张|緊張|吃紧|吃緊|短缺)|(?:作物|农产品|農產品|农货|農貨)[^。\n]{0,45}(?:压力|壓力|紧张|緊張|吃紧|吃緊|短缺)[^。\n]{0,45}(?:商店|店铺|店舖|店內|店内))/u],
   ["en-whole-layer-destruction", /(?:(?:storm|acid rain)[^.\n]{0,70}(?:wipe|destroy|erase|ruin)[^.\n]{0,30}(?:whole|entire)[ -](?:layer|tier)|(?:whole|entire)[ -](?:layer|tier)[^.\n]{0,70}(?:wiped|destroyed|erased|ruined)[^.\n]{0,30}(?:storm|acid rain))/iu],
   ["zh-whole-layer-destruction", /(?:(?:风暴|風暴|酸雨)[^。\n]{0,55}(?:毁掉|毀掉|摧毁|摧毀|全毁|全毀|清空)[^。\n]{0,25}(?:整层|整層|全层|全層)|(?:整层|整層|全层|全層)[^。\n]{0,55}(?:被)?(?:风暴|風暴|酸雨)[^。\n]{0,25}(?:毁掉|毀掉|摧毁|摧毀|全毁|全毀|清空))/u],
   ["ja-whole-layer-destruction", /(?:(?:嵐|酸性雨)[^。\n]{0,55}(?:一層|層全体)[^。\n]{0,25}(?:全滅|壊滅|破壊|消し去)|(?:一層|層全体)[^。\n]{0,55}(?:嵐|酸性雨)[^。\n]{0,25}(?:全滅|壊滅|破壊|消し去))/u],
   ["ko-whole-layer-destruction", /(?:(?:폭풍|산성비)[^.\n]{0,55}(?:한\s*층|층\s*전체)[^.\n]{0,25}(?:전멸|파괴|쓸어버)|(?:한\s*층|층\s*전체)[^.\n]{0,55}(?:폭풍|산성비)[^.\n]{0,25}(?:전멸|파괴|쓸어버))/u],
-  ["es-whole-layer-destruction", /(?:(?:tormenta|lluvia\s+ácida)[^.\n]{0,70}(?:borra|destruye|arrasa|elimina)[^.\n]{0,30}(?:capa|nivel)\s+(?:entera|completa)|(?:capa|nivel)\s+(?:entera|completa)[^.\n]{0,70}(?:tormenta|lluvia\s+ácida)[^.\n]{0,30}(?:borra|destruye|arrasa|elimina)|(?:capa|nivel)\s+(?:entera|completa)[^.\n]{0,40}(?:borra|destruye|arrasa|elimina)[^.\n]{0,40}(?:tormenta|lluvia\s+ácida))/iu],
+  ["es-whole-layer-destruction", /(?:(?:tormenta|lluvia\s+ácida)[^.\n]{0,70}(?:borra|destruye|arrasa|elimina|acaba)[^.\n]{0,35}(?:(?:capa|nivel)\s+(?:entera|completa)|tod[oa]\s+un[ao]?\s+(?:capa|nivel))|(?:capa|nivel)\s+(?:entera|completa)[^.\n]{0,70}(?:tormenta|lluvia\s+ácida)[^.\n]{0,30}(?:borra|destruye|arrasa|elimina)|(?:capa|nivel)\s+(?:entera|completa)[^.\n]{0,45}(?:borra|destruye|arrasa|elimina|queda\s+destruid[oa]|acaba\s+por\s+completo)[^.\n]{0,45}(?:tormenta|lluvia\s+ácida)|tod[oa]\s+un[ao]?\s+(?:capa|nivel)[^.\n]{0,45}(?:destruid[oa]|arrasad[oa]|eliminad[oa]))/iu],
   ["en-weather-profit-frame", /(?:weather\s+timing[^.\n]{0,60}(?:profit|math|returns?)[^.\n]{0,30}(?:completely|entirely)|(?:profit|math|returns?)[^.\n]{0,60}weather\s+timing|(?:storm|extreme weather)[^.\n]{0,45}(?:powers?\s+clever\s+farms?|guarantees?\s+(?:farm\s+)?success)|community[- ]verified\s+(?:for\s+)?1\.0)/iu],
   ["zh-weather-profit-frame", /(?:(?:天气|天氣)[^。\n]{0,45}(?:收益|利润|利潤|回报|回報)[^。\n]{0,25}(?:完全|彻底|徹底)(?:改变|改變)|(?:聪明|聰明)农场|(?:社区|社區|社群)(?:已经|已經)(?:验证|驗證)(?:过|過)?的(?:打法|方法))/u],
   ["ja-weather-profit-frame", /(?:(?:天候|天気)[^。\n]{0,45}(?:収支|利益|儲け)[^。\n]{0,25}(?:根本|完全)(?:に)?変え|賢い農場|コミュニティが検証済みの方法)/u],
   ["ko-weather-profit-frame", /(?:(?:날씨|기상)[^.\n]{0,45}(?:수익|이익|수지)[^.\n]{0,30}(?:완전히|통째로)\s*(?:바꾸|바꿉|변화)|영리한\s*농장|커뮤니티가\s*이미\s*검증한\s*방법)/u],
   ["es-weather-profit-frame", /(?:(?:timing|momento)\s+del\s+clima[^.\n]{0,55}(?:beneficio|rentabilidad|cálculo|lo\s+cambia\s+todo)|(?:beneficio|rentabilidad|cálculo)[^.\n]{0,55}(?:timing|momento)\s+del\s+clima|granjas?\s+inteligentes?|verificad[oa]\s+por\s+la\s+comunidad)/iu],
+  ["community-profit-guidance", /(?:community[^.\n]{0,55}(?:consensus|agree|recommend|favo(?:u)?rite|verified)[^.\n]{0,70}(?:profit|money|return|margin|loop|processing)|(?:社区|社區|社群)[^。\n]{0,55}(?:共识|共識|公认|公認|推荐|推薦|验证|驗證)[^。\n]{0,70}(?:获利|獲利|赚钱|賺錢|收益|利润|利潤|回报|回報|路线|路線|循环|循環)|コミュニティ[^。\n]{0,55}(?:合意|おすすめ|推奨|検証)[^。\n]{0,70}(?:利益|収益|稼|ループ)|커뮤니티[^.\n]{0,55}(?:의견|합의|추천|검증)[^.\n]{0,70}(?:수익|이익|돈|루프)|(?:comunidad|consenso)[^.\n]{0,55}(?:coincide|recomienda|verifica|acuerda)[^.\n]{0,70}(?:beneficio|rentabilidad|ganar|dinero|ruta|bucle))/iu],
 ];
 const contentIntegrityPatterns = [
   ...semanticFamilyPatterns,
   ["es-farming-malformed", /(?:turbinas\s+automatizaci[oó]ns|cultivoss|cultivosr)/iu],
   ["ko-game-name-drift", /도록 타운/u],
+  ["zh-cn-farming-intro-malformed", /学会计什么/u],
+  ["zh-tw-farming-intro-malformed", /學會計什麼/u],
+  ["ko-farming-grammar-malformed", /커집습니다/u],
+  ["en-update-log-grammar-malformed", /not a selected highlights/iu],
+  ["es-automation-mojibake", /automatizaciÃ(?:³|\u00b3)n|automatizaciÃ/i],
+  ["unsupported-money-quantitative", /(?:processing|procesad[oa]|加工|處理|加工品|가공)[^.。\n]{0,100}10\s*[-–—]\s*20\s*%|10\s*[-–—]\s*20\s*%[^.。\n]{0,100}(?:processing|procesad[oa]|加工|處理|加工品|가공)/iu],
+  ["unsupported-money-upgrade-multiplier", /(?:backpack|mochila|背包|リュック|배낭)[^.。\n]{0,100}(?:roughly\s+)?(?:double|doubles|2x|twofold|两倍|兩倍|2\s*倍|두\s*배|duplica)/iu],
+  ["unsupported-money-level-two-rod", /(?:level|nivel|等级|等級|レベル|레벨)\s*2[^.。\n]{0,35}(?:rod|caña|鱼竿|魚竿|釣り竿|낚싯대)/iu],
+  ["unsupported-money-compounding", /(?:(?:income|profit|margin|收益|利润|利潤|利益|収益|수익|이익|beneficio|margen)[^.。\n]{0,50}(?:compound|compounds|compounding|复利|複利|累积|累積|積み上|복리|누적|acumula|compuest[oa])|(?:compound|compounds|compounding|复利|複利|累积|累積|積み上|복리|누적|acumula|compuest[oa])[^.。\n]{0,50}(?:income|profit|margin|收益|利润|利潤|利益|収益|수익|이익|beneficio|margen))/iu],
 ];
 const semanticSourceFaults = {
   "semantic-drought-source": "作物压力上升后卖出库存，就能从第 4 月旱灾获利。作物壓力升高時賣出庫存，可從旱災獲利。",
@@ -131,6 +141,32 @@ const semanticSourceFaults = {
   "semantic-shop-pressure-source": "作物供应变少以后，商店里的农产品压力会明显增加。",
   "semantic-whole-layer-source": "Acid rain can erase an entire tier of crops; storms destroy a whole layer too.",
   "semantic-weather-profit-source": "Weather timing changes the profit math completely, a community-verified advantage for clever farms.",
+};
+const independentFaults = {
+  "matrix-ja-reverse-source": {layer:"source", rel:"ja/how-to-play.html", text:"嵐が狙って壊滅させるのは水平な畑です。"},
+  "matrix-ja-reverse-visible": {layer:"visible", rel:"ja/how-to-play.html", text:"嵐が狙って壊滅させるのは水平な畑です。"},
+  "matrix-ja-reverse-metadata": {layer:"metadata", rel:"ja/how-to-play.html", text:"嵐が狙って壊滅させるのは水平な畑です。"},
+  "matrix-ja-reverse-jsonld": {layer:"jsonld", rel:"ja/how-to-play.html", text:"嵐が狙って壊滅させるのは水平な畑です。"},
+  "matrix-ko-benefit-source": {layer:"source", rel:"ko/weather.html", text:"보너스는 모든 극한 날씨 위협에서 나옵니다."},
+  "matrix-ko-benefit-visible": {layer:"visible", rel:"ko/weather.html", text:"보너스는 모든 극한 날씨 위협에서 나옵니다."},
+  "matrix-ko-benefit-metadata": {layer:"metadata", rel:"ko/weather.html", text:"보너스는 모든 극한 날씨 위협에서 나옵니다."},
+  "matrix-ko-benefit-jsonld": {layer:"jsonld", rel:"ko/weather.html", text:"보너스는 모든 극한 날씨 위협에서 나옵니다."},
+  "matrix-es-benefit-source": {layer:"source", rel:"es/weather.html", text:"La ventaja nace de todas las amenazas del clima extremo."},
+  "matrix-es-benefit-visible": {layer:"visible", rel:"es/weather.html", text:"La ventaja nace de todas las amenazas del clima extremo."},
+  "matrix-es-benefit-metadata": {layer:"metadata", rel:"es/weather.html", text:"La ventaja nace de todas las amenazas del clima extremo."},
+  "matrix-es-benefit-jsonld": {layer:"jsonld", rel:"es/weather.html", text:"La ventaja nace de todas las amenazas del clima extremo."},
+  "matrix-es-passive-layer-source": {layer:"source", rel:"es/how-to-play.html", text:"Una capa completa queda destruida por una tormenta."},
+  "matrix-es-passive-layer-visible": {layer:"visible", rel:"es/how-to-play.html", text:"Una capa completa queda destruida por una tormenta."},
+  "matrix-es-passive-layer-metadata": {layer:"metadata", rel:"es/how-to-play.html", text:"Una capa completa queda destruida por una tormenta."},
+  "matrix-es-passive-layer-jsonld": {layer:"jsonld", rel:"es/how-to-play.html", text:"Una capa completa queda destruida por una tormenta."},
+  "natural-zh-shop-pressure": {layer:"visible", rel:"zh-CN/weather.html", text:"店内农货吃紧，会让作物承受更大压力。"},
+  "natural-es-whole-tier": {layer:"jsonld", rel:"es/how-to-play.html", text:"Una capa completa queda destruida por una tormenta."},
+  "natural-es-community-profit": {layer:"source", rel:"es/make-money.html", text:"La comunidad coincide en que procesar pescado maximiza el beneficio."},
+  "natural-es-mojibake": {layer:"metadata", rel:"es/automation.html", text:"Guía de automatizaciÃ³n agrícola"},
+  "language-zh-cn-intro": {layer:"source", rel:"zh-CN/farming.html", text:"学会计什么、何时种。"},
+  "language-zh-tw-intro": {layer:"visible", rel:"zh-TW/farming.html", text:"學會計什麼、何時種。"},
+  "language-ko-grammar": {layer:"metadata", rel:"ko/farming.html", text:"작물 부담이 커집습니다."},
+  "language-en-grammar": {layer:"jsonld", rel:"update-log.html", text:"This is not a selected highlights."},
 };
 const semanticFamilyCodes = new Set(semanticFamilyPatterns.map(([code]) => code));
 const nonSemanticIntegrityPatterns = contentIntegrityPatterns.filter(([code]) => !semanticFamilyCodes.has(code));
@@ -142,7 +178,7 @@ let generatedVisibleFileCount = 0;
 let generatedJsonLdBlockCount = 0;
 const semanticInventory = {
   locales: ["en", "zh-CN", "zh-TW", "ja", "ko", "es"],
-  families: ["drought-commercial-correlation", "flat-field-weather-causality", "broad-threat-benefit", "shop-crop-pressure", "whole-layer-destruction", "weather-profit-advantage"],
+  families: ["drought-commercial-correlation", "flat-field-weather-causality", "broad-threat-benefit", "shop-crop-pressure", "whole-layer-destruction", "weather-profit-advantage", "community-profit-guidance"],
   source: {files: 3, hits: 0},
   generated_visible: {files: 0, hits: 0},
   generated_metadata: {documents: 0, hits: 0},
@@ -151,6 +187,14 @@ const semanticInventory = {
 try {
   generate(disabled,false); generate(enabled,true);
   const offFiles=walk(disabled), onFiles=walk(enabled);
+  const independentFault = independentFaults[fault];
+  if (independentFault && independentFault.layer !== "source") {
+    const target = offFiles.find(file => path.relative(disabled, file) === path.normalize(independentFault.rel));
+    if (!target) fail("fault-target-missing", `${fault}:${independentFault.rel}`);
+    else if (independentFault.layer === "visible") fs.appendFileSync(target, `<p>${independentFault.text}</p>`);
+    else if (independentFault.layer === "metadata") fs.appendFileSync(target, `<meta name="description" content="${independentFault.text}">`);
+    else if (independentFault.layer === "jsonld") fs.appendFileSync(target, `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"FAQPage",name:independentFault.text})}</script>`);
+  }
   if (fault === "default-module-leak") {
     fs.appendFileSync(offFiles[0], '<aside class="amazon-gear">fault fixture</aside>');
   }
@@ -280,10 +324,9 @@ try {
   const generatedFiles = walk(disabled);
   semanticFileCount = semanticSourceFiles.length + generatedFiles.length;
   const forbidden = [
-    ["wind-claim", /\bwind(?:\s+(?:power|turbines?))\b|aerogeneradores|風力|风力|풍력/i],
     ["unsafe-mod-advice", /DTMAPI.{0,100}(subscribe|install|订阅|訂閱|購読|구독|Suscríbete)|(?:dependencies|依赖|依賴|依存|의존성).{0,40}(first|先|먼저)/i],
     ["new-year-beast-mistranslation", /New Year Beast.{0,20}(difficulty|难度|難度|난이도|dificultad)/i],
-    ["self-backing", /complete.{0,30}(?:change|log)|完整.{0,20}(?:变更|變更)|完全.{0,20}(?:変更|ログ)|완전한.{0,20}(?:변경|로그)|registro completo|site (?:like this )?is the reliable source|本站.{0,20}可靠|本網站.{0,20}可靠|このガイド.{0,20}情報源|이 가이드.{0,20}출처|sitio .*fuente fiable/i],
+    ["self-backing", /(?:is|provides|contains|offers|publishes)(?![^.\n]{0,15}\bnot\b)[^.\n]{0,30}(?:a\s+)?complete[^.\n]{0,30}(?:change|log)|完整.{0,20}(?:变更|變更)|完全.{0,20}(?:変更|ログ)|완전한.{0,20}(?:변경|로그)|registro completo|site (?:like this )?is the reliable source|本站.{0,20}可靠|本網站.{0,20}可靠|このガイド.{0,20}情報源|이 가이드.{0,20}출처|sitio .*fuente fiable/i],
     ["spanish-corruption", /(?:turbinas\s+automatizaci[oó]ns|cultivoss|cultivosr)/iu]
   ];
   const scanSemantic = (text, layer, rel) => {
@@ -299,6 +342,7 @@ try {
   };
   const sourceEntries = semanticSourceFiles.map(file => ({rel:path.relative(root,file), text:fs.readFileSync(file,"utf8")}));
   if (semanticSourceFaults[fault]) sourceEntries.push({rel:`fault-source:${fault}`, text:semanticSourceFaults[fault]});
+  if (independentFault?.layer === "source") sourceEntries.push({rel:`fault-source:${fault}`, text:independentFault.text});
   for (const {rel,text} of sourceEntries) {
     scanSemantic(text, "source", rel);
     for (const [code,re] of forbidden) if(re.test(text)) fail(code,rel);
@@ -471,6 +515,12 @@ if (!fault && !failures.length) {
     "semantic-shop-pressure-source", "semantic-shop-pressure-visible", "semantic-shop-pressure-jsonld",
     "semantic-whole-layer-source", "semantic-whole-layer-visible", "semantic-whole-layer-jsonld",
     "semantic-weather-profit-source", "semantic-weather-profit-visible", "semantic-weather-profit-jsonld",
+    "matrix-ja-reverse-source", "matrix-ja-reverse-visible", "matrix-ja-reverse-metadata", "matrix-ja-reverse-jsonld",
+    "matrix-ko-benefit-source", "matrix-ko-benefit-visible", "matrix-ko-benefit-metadata", "matrix-ko-benefit-jsonld",
+    "matrix-es-benefit-source", "matrix-es-benefit-visible", "matrix-es-benefit-metadata", "matrix-es-benefit-jsonld",
+    "matrix-es-passive-layer-source", "matrix-es-passive-layer-visible", "matrix-es-passive-layer-metadata", "matrix-es-passive-layer-jsonld",
+    "natural-zh-shop-pressure", "natural-es-whole-tier", "natural-es-community-profit", "natural-es-mojibake",
+    "language-zh-cn-intro", "language-zh-tw-intro", "language-ko-grammar", "language-en-grammar",
   ]) {
     const result = spawnSync(process.execPath, [auditScript, root], {
       env: { ...process.env, DOLOC_AMAZON_AUDIT_FAULT: name },

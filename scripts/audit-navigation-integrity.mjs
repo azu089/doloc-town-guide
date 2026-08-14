@@ -87,12 +87,18 @@ try {
   } else if (fault === "touch-target-contract") {
     const target = path.join(out, "css", "style.css");
     fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("min-block-size:44px", "min-block-size:34px"));
+  } else if (fault === "inline-target-contract") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("min-inline-size:44px", "min-inline-size:34px"));
   } else if (fault === "transition-shorthand") {
     const target = path.join(out, "css", "style.css");
     fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("transition:color .16s ease,background-color .16s ease,box-shadow .16s ease", "transition:.16s"));
   } else if (fault === "unscoped-navigation-hover") {
     const target = path.join(out, "css", "style.css");
     fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("@media (hover:hover) and (pointer:fine)", "@media (min-width:1px)"));
+  } else if (fault === "logo-transition-all") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("white-space:nowrap;transition:none", "white-space:nowrap;transition:all .16s ease"));
   }
 
   const allFiles = walkHtml(out);
@@ -126,13 +132,14 @@ try {
 
   const css = fs.readFileSync(path.join(out, "css", "style.css"), "utf8");
   const targetContracts = [
-    /\.logo\{[^}]*min-block-size:44px/,
-    /\.nav>a,\.nav summary\{[^}]*min-block-size:44px/,
-    /\.lang-dd summary\{[^}]*min-block-size:44px/,
-    /\.dd-menu a\{[^}]*min-block-size:44px/,
-    /\.dd-manual a\{[^}]*min-block-size:44px/,
+    /\.logo\{(?=[^}]*min-inline-size:44px)(?=[^}]*min-block-size:44px)(?=[^}]*justify-content:center)[^}]*\}/,
+    /\.nav>a,\.nav summary\{(?=[^}]*min-inline-size:44px)(?=[^}]*min-block-size:44px)(?=[^}]*justify-content:center)[^}]*\}/,
+    /\.lang-dd summary\{(?=[^}]*min-inline-size:44px)(?=[^}]*min-block-size:44px)(?=[^}]*justify-content:center)[^}]*\}/,
+    /\.dd-menu a\{(?=[^}]*min-inline-size:44px)(?=[^}]*min-block-size:44px)(?=[^}]*justify-content:center)[^}]*\}/,
+    /\.dd-manual a\{(?=[^}]*min-inline-size:44px)(?=[^}]*min-block-size:44px)(?=[^}]*justify-content:center)[^}]*\}/,
   ];
   for (const re of targetContracts) if (!re.test(css)) fail("touch-target-css-contract", String(re));
+  if (!/\.logo\{[^}]*transition:none[^}]*\}/.test(css)) fail("logo-transition-property", "logo transition must compute to none, never all");
   if (!/\.dd-manual\{[^}]*max-block-size:calc\(100dvh - 132px\)[^}]*overflow-y:auto/.test(css)) fail("menu-keyboard-reachability-css", "mobile guide menu requires a bounded scroll region");
   const navigationRules = (css.match(/\.(?:logo|nav|dd-menu|dd-manual|lang-dd|site-search)[^{]*\{[^}]*\}/g) || []).join("\n");
   if (/transition\s*:\s*(?:\d|\.)/.test(navigationRules)) fail("navigation-transition-shorthand", "navigation transition must name changed properties");
@@ -175,7 +182,7 @@ try {
   }
 
   if (!fault && !failures.length) {
-    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset", "escape-focus-loss", "touch-target-contract", "transition-shorthand", "unscoped-navigation-hover"]) {
+    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset", "escape-focus-loss", "touch-target-contract", "inline-target-contract", "transition-shorthand", "unscoped-navigation-hover", "logo-transition-all"]) {
       const child = spawnSync(process.execPath, [auditScript, root], { env: { ...process.env, DOLOC_NAV_AUDIT_FAULT: name }, encoding: "utf8" });
       negativeFixtureExitCodes[name] = child.status;
       if (!Number.isInteger(child.status) || child.status <= 0) fail("negative-fixture-did-not-fail", name);

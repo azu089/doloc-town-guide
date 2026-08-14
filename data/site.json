@@ -601,7 +601,7 @@
       "Platforms stack freely; each level you climb adds buildable surface.",
       "Jump and climb between levels — platforming is part of the daily loop, not a loading screen.",
       "Planters sit on platforms; group crops by season so you can re-plant in one pass.",
-      "Build covers or use the Rain gene to protect exposed crops from storms and acid rain.",
+      "Build covers or use the Rain gene to protect exposed crops from acid-rain erosion.",
       "Leave vertical gaps for drone flight paths — automation in 1.0 needs clear lanes."
      ]
     },
@@ -628,12 +628,12 @@
       ],
       [
        "Thunderstorm",
-       "Damages exposed fields",
+       "Provides lightning power",
        "Harness lightning to charge farm power (key for 1.0 automation)"
       ],
       [
        "Torrential rain",
-       "Floods low plots",
+       "Provides rain irrigation",
        "Let it irrigate for free; save watering energy"
       ],
       [
@@ -678,8 +678,8 @@
      "body": "The first in-game day sets your momentum. These priorities combine sourced mechanics with player-reported tips; confirm exact shop prices in your own save. [L2]",
      "items": [
       [
-       "Unlock the backpack upgrade first",
-       "Community reports: find the tech merchant and buy the first backpack tier — it roughly doubles your slots and stops the constant trips home."
+       "Review inventory upgrades",
+       "Check the current shop requirements in your own save before choosing an inventory upgrade."
       ],
       [
        "Do a villager quest on day one",
@@ -687,7 +687,7 @@
       ],
       [
        "Plant Endyams early",
-       "A slow-maturing staple that pays off all season — community consensus is to get it in the ground on day one."
+       "A slow-maturing staple; plant it only when the calendar leaves enough time to mature."
       ],
       [
        "Clear your starting plot fully",
@@ -846,7 +846,7 @@
         "平台可自由堆叠；每爬上一层都增加可建造表面。",
         "跳跃与攀爬穿梭各层——平台跳跃是每日循环的一部分。",
         "花盆放在平台上；按季节分组种植，便于一次换季补种。",
-        "用遮盖或「雨露均沾」基因保护露天作物，降低风暴与酸雨造成的侵蚀风险。",
+        "用遮盖或「雨露均沾」基因保护露天作物，降低酸雨造成的侵蚀风险。",
         "为无人机飞行留出垂直空隙——1.0 自动化需要清晰航线。"
        ]
       },
@@ -872,12 +872,12 @@
         ],
         [
          "雷暴",
-         "破坏露天农田",
+         "提供闪电电力",
          "用闪电给农场充电（1.0 自动化关键）"
         ],
         [
          "暴雨",
-         "淹没低处地块",
+         "提供雨水灌溉",
          "让雨水免费灌溉；省下浇水体力"
         ],
         [
@@ -919,24 +919,24 @@
        "body": "游戏中的第一天会影响开局节奏。以下优先级结合已核对机制与玩家报告；具体商店价格请在自己的存档中确认。[L2]",
        "items": [
         [
-         "先解锁背包升级",
-         "社区报告：找到科技商人买第一层背包——槽位大约翻倍，省下反复跑回家的时间。"
+         "查看背包升级",
+         "购买前先在当前存档核对商店要求与容量。"
         ],
         [
          "第一天就做村民任务",
-         "任务给金币和技术点——是整个开局单位时间回报最高的投入。"
+         "以游戏内显示的奖励与技术点为准。"
         ],
         [
-         "早点种 Endyams",
-         "一种长得慢但整个季节都持续产出的主粮——社区共识是第一天就种下。"
+         "查看 Endyams 生长期",
+         "只有日历留出足够成熟时间时再种。"
         ],
         [
          "完整清理起始地块",
-         "隐藏角落的废料能换来第一批花盆。"
+         "清理可打开建造空间并暴露资源。"
         ],
         [
-         "拿免费鱼竿",
-         "Lightman 钓鱼教程会送你一根鱼竿——免费的装备，没理由跳过。"
+         "拿教程鱼竿",
+         "完成 Lightman 钓鱼教程并使用它提供的鱼竿。"
         ]
        ],
        "type": "steps"
@@ -1062,7 +1062,7 @@
         "平臺可自由堆疊；每爬上一層都增加可建造表面。",
         "跳躍與攀爬穿梭各層——平臺跳躍是每日循環的一部分。",
         "花盆放在平臺上；按季節分組種植，便於一次換季補種。",
-        "用遮蓋或「雨露均霑」基因保護露天作物，降低風暴與酸雨造成的侵蝕風險。",
+        "用遮蓋或「雨露均霑」基因保護露天作物，降低酸雨造成的侵蝕風險。",
         "為無人機飛行留出垂直空隙——1.0 自動化需要清晰航線。"
        ]
       },
@@ -1088,12 +1088,12 @@
         ],
         [
          "雷暴",
-         "破壞露天農田",
+         "提供閃電電力",
          "用閃電給農場充電（1.0 自動化關鍵）"
         ],
         [
          "暴雨",
-         "淹沒低處地塊",
+         "提供雨水灌溉",
          "讓雨水免費灌溉；省下澆水體力"
         ],
         [
@@ -1135,24 +1135,24 @@
        "body": "遊戲中的第一天會影響開局節奏。以下優先級結合已核對機制與玩家報告；具體商店價格請在自己的存檔中確認。[L2]",
        "items": [
         [
-         "先解鎖揹包升級",
-         "社區報告：找到科技商人買第一層揹包——槽位大約翻倍，省下反覆跑回家的時間。"
+         "查看揹包升級",
+         "購買前先在當前存檔核對商店要求與容量。"
         ],
         [
          "第一天就做村民任務",
-         "任務給金幣和技術點——是整個開局單位時間回報最高的投入。"
+         "以遊戲內顯示的獎勵與技術點為準。"
         ],
         [
-         "早點種 Endyams",
-         "一種長得慢但整個季節都持續產出的主糧——社區共識是第一天就種下。"
+         "查看 Endyams 生長期",
+         "只有日曆留出足夠成熟時間時再種。"
         ],
         [
          "完整清理起始地塊",
-         "隱藏角落的廢料能換來第一批花盆。"
+         "清理可打開建造空間並暴露資源。"
         ],
         [
-         "拿免費魚竿",
-         "Lightman 釣魚教程會送你一根魚竿——免費的裝備，沒理由跳過。"
+         "拿教程魚竿",
+         "完成 Lightman 釣魚教程並使用它提供的魚竿。"
         ]
        ],
        "type": "steps"
@@ -1278,7 +1278,7 @@
         "プラットフォームは自由に積める。登るほど建築可能面が増える。",
         "ジャンプと登攀で階層を行き来——プラットフォーミングも日常の一部。",
         "プランターをプラットフォームに置き、季節ごとに作物をまとめて植え替える。",
-        "カバーか「雨露均等」遺伝子で露出した作物を守り、嵐と酸性雨による侵食リスクを抑える。",
+        "カバーか「雨露均等」遺伝子で露出した作物を守り、酸性雨による侵食リスクを抑える。",
         "ドローンの飛行経路用に垂直の隙間を残す——1.0の自動化には通路が必要。"
        ]
       },
@@ -1304,12 +1304,12 @@
         ],
         [
          "雷雨",
-         "露地を荒らす",
+         "落雷で電力を供給",
          "落雷で農場に充電（1.0自動化の鍵）"
         ],
         [
          "豪雨",
-         "低い区画を水没",
+         "雨による灌漑",
          "無料の灌漑に任せ、水やりの労力を節約"
         ],
         [
@@ -1351,24 +1351,24 @@
        "body": "初日は序盤の流れに影響する。以下は確認済みの仕組みとプレイヤー報告を区別した優先事項で、正確な店頭価格は自分のセーブで確認してください。[L2]",
        "items": [
         [
-         "まずバックパック強化",
-         "コミュニティ報告：テック商人から最初のバックパックを買う——スロットがほぼ倍増し、往復の時間が激減する。"
+         "バックパック強化を確認",
+         "購入前に現在の店頭要件と容量を確認する。"
         ],
         [
          "初日に村人クエスト",
-         "報酬はコインとテックポイント——序盤で最も時間効率の良い投資。"
+         "ゲーム内表示の報酬とテックポイントを確認する。"
         ],
         [
-         "Endyams を早めに植える",
-         "成長は遅いがシーズン中ずっと報われる主食——初日に植えるのがコミュニティの一致した見解。"
+         "Endyams の生育日数を確認",
+         "収穫までの日数をカレンダーで確保できる場合に植える。"
         ],
         [
          "開始区画を完全に撤去",
-         "隠れた隅のがらくたが最初のプランター資金になる。"
+         "撤去で建築スペースと資源を開く。"
         ],
         [
-         "無料の釣り竿を入手",
-         "Lightman の釣りチュートリアルで竿がもらえる——無料装備、スキップする理由なし。"
+         "チュートリアルの竿を入手",
+         "Lightman の釣りチュートリアルで受け取った竿を使う。"
         ]
        ],
        "type": "steps"
@@ -1494,7 +1494,7 @@
         "플랫폼은 자유롭게 쌓을 수 있고, 오를수록 건설 가능 면이 늘어납니다.",
         "층 사이를 점프·등반하며 오갑니다——플랫포밍도 일상의 일부입니다.",
         "화분은 플랫폼 위에 둡니다. 계절별로 작물을 모아 한 번에 다시 심습니다.",
-        "덮개나 '고루 내리는 비' 유전자로 노출된 작물을 보호하고 폭풍·산성비의 침식 위험을 줄입니다.",
+        "덮개나 '고루 내리는 비' 유전자로 노출된 작물을 보호하고 산성비의 침식 위험을 줄입니다.",
         "드론 비행 경로용 수직 틈을 남기세요——1.0 자동화에는 통로가 필요합니다."
        ]
       },
@@ -1520,12 +1520,12 @@
         ],
         [
          "뇌우",
-         "노지 작물 피해",
+         "번개 전력 제공",
          "번개로 농장 충전 (1.0 자동화의 핵심)"
         ],
         [
          "폭우",
-         "낮은 구획 침수",
+         "빗물 관개 제공",
          "무료 관개에 맡기고 물주기 노력 절약"
         ],
         [
@@ -1567,24 +1567,24 @@
        "body": "첫날은 초반 진행에 영향을 줍니다. 아래 우선순위는 확인된 메커니즘과 플레이어 제보를 구분하며, 정확한 상점 가격은 자신의 세이브에서 확인하세요. [L2]",
        "items": [
         [
-         "가방 업그레이드를 먼저",
-         "커뮤니티 제보: 기술 상인에게 첫 번째 가방을 구매 — 슬롯이 약 2배로 늘어 집을 오가는 시간이 사라집니다."
+         "가방 업그레이드 확인",
+         "구매 전에 현재 상점 요구 사항과 용량을 확인하세요."
         ],
         [
-         "첫날에 마을 퀘스트",
-         "보상은 골드와 기술 포인트 — 오프닝에서 분당 가장 효율적인 투자입니다."
+         "첫날 마을 퀘스트",
+         "게임에 표시된 보상과 기술 포인트를 확인하세요."
         ],
         [
-         "Endyams는 일찍 심기",
-         "성장은 느리지만 시즌 내내 계속 수익을 내는 주작물 — 첫날에 심는 것이 커뮤니티 합의입니다."
+         "Endyams 성장 기간 확인",
+         "달력에 수확할 시간이 충분할 때 심으세요."
         ],
         [
-         "시작 구역을 완전히 정리",
-         "숨겨진 구석의 고철이 첫 화분 자금이 됩니다."
+         "시작 구역 정리",
+         "정리해 건설 공간과 자원을 확보하세요."
         ],
         [
-         "무료 낚싯대 받기",
-         "Lightman 낚시 튜토리얼이 낚싯대를 줍니다 — 공짜 장비, 건너뛸 이유가 없습니다."
+         "튜토리얼 낚싯대",
+         "Lightman 낚시 튜토리얼에서 받은 낚싯대를 사용하세요."
         ]
        ],
        "type": "steps"
@@ -1716,7 +1716,7 @@
         "Las plataformas se apilan libremente; cada nivel añade superficie construible.",
         "Salta y trepa entre niveles: el plataformeo es parte de la rutina diaria.",
         "Los maceteros van en plataformas; agrupa por temporada para replantar de una vez.",
-        "Construye cubiertas o usa el gen Lluvia para proteger los cultivos expuestos y reducir la erosión de tormentas y lluvia ácida.",
+        "Construye cubiertas o usa el gen Lluvia para proteger los cultivos expuestos y reducir la erosión de la lluvia ácida.",
         "Deja huecos verticales para el vuelo de los drones: la automatización del 1.0 necesita carriles."
        ]
       },
@@ -1742,12 +1742,12 @@
         ],
         [
          "Tormenta",
-         "Daña campos abiertos",
+         "Aporta energía de rayos",
          "Aprovecha los rayos para cargar la granja (clave en 1.0)"
         ],
         [
          "Lluvia torrencial",
-         "Inunda parcelas bajas",
+         "Aporta riego con lluvia",
          "Déjala regar gratis y ahorra esfuerzo"
         ],
         [
@@ -1789,24 +1789,24 @@
        "body": "El primer día influye en el inicio. Estas prioridades distinguen mecánicas comprobadas de consejos reportados por jugadores; confirma los precios exactos en tu partida. [L2]",
        "items": [
         [
-         "Desbloquea primero la mochila",
-         "Reportes de la comunidad: encuentra al mercader tecnológico y compra el primer nivel de mochila — casi duplica tus espacios y evita los viajes constantes a casa."
+         "Revisa la mejora de mochila",
+         "Comprueba los requisitos y la capacidad actuales antes de comprar."
         ],
         [
-         "Haz una misión de aldeano el día uno",
-         "Las misiones pagan dinero y Puntos de Tecnología: la mejor inversión por minuto de todo el inicio."
+         "Haz una misión el día uno",
+         "Usa las recompensas y Puntos de Tecnología mostrados en el juego."
         ],
         [
-         "Planta Endyams pronto",
-         "Un cultivo básico de crecimiento lento que rinde toda la temporada: el consenso de la comunidad es plantarlo el día uno."
+         "Revisa el crecimiento de Endyams",
+         "Planta solo si el calendario deja tiempo para madurar."
         ],
         [
-         "Limpia tu parcela inicial por completo",
-         "Los rincones ocultos esconden chatarra que financia tus primeros maceteros."
+         "Limpia la parcela inicial",
+         "Abre espacio de construcción y recursos."
         ],
         [
-         "Consigue la caña gratis",
-         "El tutorial de pesca de Lightman te da una caña — equipo gratis, no hay razón para saltárselo."
+         "Consigue la caña del tutorial",
+         "Usa la caña que entrega el tutorial de Lightman."
         ]
        ],
        "type": "steps"
@@ -2491,7 +2491,7 @@
       {
        "type": "list",
        "heading": "¿Solar o automatización? Qué construir primero",
-       "body": "Empieza por comprobar las dos etapas oficiales de automatizaciÃ³n y las tareas de las estaciones de drones.",
+       "body": "Empieza por comprobar las dos etapas oficiales de automatización y las tareas de las estaciones de drones.",
        "items": [
         "Comprueba los requisitos de desbloqueo y los materiales necesarios.",
         "Asigna a las estaciones de drones tareas de siembra, cuidado y cosecha.",
@@ -3808,10 +3808,10 @@
      "body": "A lot of early fishing frustration comes down to rod level and timing, not luck. These tips come from community experience — treat the numbers as player-reported until we verify them in 1.0. [L2]",
      "items": [
       "Do the Lightman fishing tutorial first — it gives you a free rod, so you are not stuck with the starting stick.",
-      "Upgrade your rod early: community reports say a Level 2 rod (~1,000 coins) can catch every fish in the game, and higher-tier rods make the minigame noticeably more forgiving.",
+      "Use the free rod from Lightman's tutorial, then check the current in-game upgrade requirements before targeting harder catches.",
       "Controller players report the most failures: if a catch keeps slipping on a gamepad, upgrade the rod before assuming your timing is the problem.",
       "Fish through weather: rain and thunderstorms bring catches that dry days never do — check the tables above before choosing a spot.",
-      "Dry your catch instead of selling raw: fish + dryer is the easiest early money loop (see our money-making guide).",
+      "Use unlocked processing equipment for surplus catches, and compare the current in-game values before selling.",
       "Keep one of each species: rare fish drop advanced drone and tool parts, and 13 tank-only species need specific parents to breed."
      ]
     },
@@ -4380,12 +4380,12 @@
        "heading": "钓鱼技巧：常见失败与对策",
        "body": "早期钓鱼的大量挫败感来自鱼竿等级与时机，而不是运气。这些技巧来自社区经验——在我们于 1.0 实测前，请把数字当作玩家报告。[L2]",
        "items": [
-        "先做 Lightman 钓鱼教程——它会送你一根鱼竿，让你不用拿着初始竿硬钓。",
-        "尽早升级鱼竿：社区报告称 Level 2 鱼竿（约 1000 金币）能钓到游戏里所有鱼，且更高等级的鱼竿会让钓鱼小游戏明显更宽容。",
-        "手柄玩家反馈失败率最高：如果用手柄老是脱钩，先升级鱼竿，别急着怀疑自己的时机。",
-        "看天气钓鱼：雨天和雷暴会带来晴天永远没有的渔获——选点前先看上面的表。",
-        "把渔获烘干再卖：鱼 + 烘干机是前期最轻松的赚钱循环（见我们的赚钱指南）。",
-        "每种鱼留一条：稀有鱼掉高级无人机与工具零件，且 13 种鱼缸专属鱼需要特定亲本繁殖。"
+        "先做 Lightman 钓鱼教程并使用它提供的鱼竿。",
+        "挑战更难的渔获前查看游戏内当前鱼竿要求。",
+        "手柄操作不顺时先练习小游戏节奏并查看游戏内设置。",
+        "选点前核对天气与渔获表。",
+        "加工或出售前比较当前存档显示的数值。",
+        "保留繁殖需要的鱼，只处理多余部分。"
        ],
        "type": "list"
       },
@@ -4936,12 +4936,12 @@
        "heading": "釣魚技巧：常見失敗與對策",
        "body": "早期釣魚的大量挫敗感來自魚竿等級與時機，而不是運氣。這些技巧來自社區經驗——在我們於 1.0 實測前，請把數字當作玩家報告。[L2]",
        "items": [
-        "先做 Lightman 釣魚教程——它會送你一根魚竿，讓你不用拿著初始竿硬釣。",
-        "儘早升級魚竿：社區報告稱 Level 2 魚竿（約 1000 金幣）能釣到遊戲裡所有魚，且更高等級的魚竿會讓釣魚小遊戲明顯更寬容。",
-        "手柄玩家反饋失敗率最高：如果用手柄老是脫鉤，先升級魚竿，別急著懷疑自己的時機。",
-        "看天氣釣魚：雨天和雷暴會帶來晴天永遠沒有的漁獲——選點前先看上面的表。",
-        "把漁獲烘乾再賣：魚 + 烘乾機是前期最輕鬆的賺錢循環（見我們的賺錢指南）。",
-        "每種魚留一條：稀有魚掉高級無人機與工具零件，且 13 種魚缸專屬魚需要特定親本繁殖。"
+        "先做 Lightman 釣魚教程並使用它提供的魚竿。",
+        "挑戰更難的漁獲前查看遊戲內當前魚竿要求。",
+        "手柄操作不順時先練習小遊戲節奏並查看遊戲內設置。",
+        "選點前核對天氣與漁獲表。",
+        "加工或出售前比較當前存檔顯示的數值。",
+        "保留繁殖需要的魚，只處理多餘部分。"
        ],
        "type": "list"
       },
@@ -5492,12 +5492,12 @@
        "heading": "釣りのコツ：よくある失敗と対策",
        "body": "序盤の釣りで挫折する原因は、ほとんどが運ではなく竿のレベルとタイミング。以下のコツはコミュニティ経験に基づく——1.0 で実測するまでは数値をプレイヤー報告として扱ってほしい。[L2]",
        "items": [
-        "Lightman の釣りチュートリアルを先に——無料の竿がもらえ、初期竿で無理に釣らなくて済む。",
-        "早めに竿を強化：コミュニティ報告では Level 2 の竿（約1000コイン）で全魚種が釣れ、上位竿ほどミニゲームが明らかに易しくなる。",
-        "コントローラー勢は失敗率が最も高いと報告されている：ゲームパッドで何度も失敗するなら、タイミングを疑う前に竿を強化しよう。",
-        "天候を狙って釣る：雨と雷雨は晴天では出ない魚をもたらす——場所選びの前に上の表を確認。",
-        "獲った魚は干してから売る：魚＋乾燥機は序盤最強の金策ループ（当サイトの金策ガイド参照）。",
-        "各種1匹は残す：レア魚は高級ドローン・工具パーツを落とし、13種の水槽限定魚は特定の親が必要。"
+        "Lightman の釣りチュートリアルで受け取った竿を使う。",
+        "難しい魚を狙う前に現在の竿の要件を確認する。",
+        "操作しにくい場合はミニゲームのリズムと設定を確認する。",
+        "場所を選ぶ前に天候と魚の表を確認する。",
+        "加工または販売前に現在のセーブ表示を比較する。",
+        "繁殖に必要な魚を残し、余剰だけを扱う。"
        ],
        "type": "list"
       },
@@ -6048,12 +6048,12 @@
        "heading": "낚시 팁: 흔한 실패와 해결법",
        "body": "초반 낚시의 좌절감 대부분은 운이 아니라 낚싯대 레벨과 타이밍에서 옵니다. 이 팁은 커뮤니티 경험에 기반합니다 — 1.0에서 직접 검증하기 전까지는 숫자를 플레이어 제보로 취급하세요. [L2]",
        "items": [
-        "Lightman 낚시 튜토리얼부터 — 무료 낚싯대를 주므로 시작용 낚싯대로 고생하지 않아도 됩니다.",
-        "낚싯대를 일찍 업그레이드: 커뮤니티 제보에 따르면 Level 2 낚싯대(약 1,000코인)로 게임의 모든 물고기를 잡을 수 있고, 상위 낚싯대일수록 미니게임이 확실히 쉬워집니다.",
-        "컨트롤러 유저의 실패율이 가장 높다고 보고됩니다: 패드로 계속 놓친다면 타이밍을 의심하기 전에 낚싯대를 업그레이드하세요.",
-        "날씨를 노려 낚시: 비와 뇌우는 맑은 날에는 나오지 않는 어종을 줍니다 — 자리 선택 전에 위 표를 확인하세요.",
-        "잡은 물고기는 말려서 판매: 물고기 + 건조기는 초반 최고의 돈 루프입니다(당사 돈 버는 가이드 참조).",
-        "종별 1마리는 보관: 희귀어는 고급 드론·도구 부품을 드롭하고, 수조 전용 13종은 특정 부모가 필요합니다."
+        "Lightman 낚시 튜토리얼에서 받은 낚싯대를 사용하세요.",
+        "어려운 어종을 노리기 전에 현재 낚싯대 요구 사항을 확인하세요.",
+        "조작이 어렵다면 미니게임 리듬과 설정을 확인하세요.",
+        "자리 선택 전에 날씨와 어종 표를 확인하세요.",
+        "가공하거나 판매하기 전에 현재 세이브 표시값을 비교하세요.",
+        "번식에 필요한 물고기를 보관하고 남는 것만 처리하세요."
        ],
        "type": "list"
       },
@@ -6610,12 +6610,12 @@
        "heading": "Consejos de pesca: fallos comunes y soluciones",
        "body": "Gran parte de la frustración inicial con la pesca es el nivel de la caña y el timing, no la suerte. Estos consejos vienen de la experiencia de la comunidad — trata los números como reportados por jugadores hasta que los verifiquemos en el 1.0. [L2]",
        "items": [
-        "Haz primero el tutorial de pesca de Lightman — te da una caña gratis y no te quedas con la caña inicial.",
-        "Mejora la caña pronto: la comunidad reporta que una caña nivel 2 (~1.000 monedas) captura todos los peces, y las cañas superiores hacen el minijuego mucho más permisivo.",
-        "Los jugadores de mando reportan más fallos: si el pez se escapa con el gamepad, mejora la caña antes de culpar a tu timing.",
-        "Pesca con clima: la lluvia y las tormentas traen capturas que los días secos nunca dan — consulta las tablas antes de elegir sitio.",
-        "Seca tu captura en vez de venderla cruda: pescado + secadora es el bucle de dinero más fácil al inicio (ver nuestra guía de dinero).",
-        "Guarda uno de cada especie: los peces raros dan piezas avanzadas de dron y herramientas, y 13 especies de tanque necesitan padres específicos."
+        "Usa la caña que entrega el tutorial de Lightman.",
+        "Consulta los requisitos actuales antes de buscar capturas difíciles.",
+        "Si el mando resulta difícil, practica el ritmo y revisa los ajustes.",
+        "Consulta las tablas de clima y peces antes de elegir sitio.",
+        "Compara los valores actuales antes de procesar o vender.",
+        "Conserva los peces necesarios para criar y usa solo el excedente."
        ],
        "type": "list"
       },
@@ -9390,7 +9390,7 @@
      "title": "多洛可小镇种田指南：作物、季节与土壤",
      "metaTitle": "多洛可小镇种田指南：作物、季节、果树与土壤",
      "metaDescription": "多洛可小镇种田全解：季节作物、果树、香草、蘑菇、花盆与土壤，加上改变种田方式的基因突变与 1.0 自动化。",
-     "intro": "种田是废土农场的根基。学会计什么、什么时候种、如何抵御极端天气——以及基因与 1.0 自动化如何替你省掉杂活。",
+     "intro": "种田是废土农场的根基。学会种什么、什么时候种、如何抵御极端天气——以及基因与 1.0 自动化如何替你省掉杂活。",
      "sections": [
       {
        "type": "note",
@@ -9597,7 +9597,7 @@
      "title": "多洛可小鎮種田指南：作物、季節與土壤",
      "metaTitle": "多洛可小鎮種田指南：作物、季節、果樹與土壤",
      "metaDescription": "多洛可小鎮種田全解：季節作物、果樹、香草、蘑菇、花盆與土壤，加上改變種田方式的基因突變與 1.0 自動化。",
-     "intro": "種田是廢土農場的根基。學會計什麼、什麼時候種、如何抵禦極端天氣——以及基因與 1.0 自動化如何替你省掉雜活。",
+     "intro": "種田是廢土農場的根基。學會種什麼、什麼時候種、如何抵禦極端天氣——以及基因與 1.0 自動化如何替你省掉雜活。",
      "sections": [
       {
        "type": "note",
@@ -10180,7 +10180,7 @@
       {
        "type": "note",
        "heading": "가뭄 전략과 흔한 실수",
-       "body": "가뭄 달(4월)에는 작물이 시들고 작물 부담이 커집습니다. 가뭄 전에 작물 보호 준비하고 그동안 물주기를 계획하세요. 흔한 실수: 노출된 작물을 보호하지 않기(극한 날씨에 취약), 과일나무를 미루기(나중에 공짜 돈), 낫 업그레이드 안 하기(집단 수확이 큰 시간 절약), '고루 내리는 비' 유전자가 있는데 전부 손으로 물주기, Bellad 퀘스트 건너뛰기(기술 포인트가 유일한 안정적인 초반 수입)."
+       "body": "가뭄 달(4월)에는 작물이 시들고 작물 부담이 커집니다. 가뭄 전에 작물 보호를 준비하고 그동안 물주기를 계획하세요. 흔한 실수: 노출된 작물을 보호하지 않기(극한 날씨에 취약), 과일나무를 미루기, 낫 업그레이드 안 하기, '고루 내리는 비' 유전자가 있는데 전부 손으로 물주기, Bellad 퀘스트 건너뛰기."
       },
       {
        "type": "faq",
@@ -11153,7 +11153,7 @@
      "type": "steps",
      "tag": "SETUP",
      "heading": "Setting Up a Ranch",
-     "body": "Ranching is a steady-income system that compounds.",
+     "body": "Ranching provides recurring products when animals are fed and cared for.",
      "items": [
       [
        "Build a barn",
@@ -12581,12 +12581,12 @@
       ],
       [
        "Thunderstorm",
-       "Field damage",
+       "Provides lightning power",
        "Harness lightning for power"
       ],
       [
        "Torrential rain",
-       "Flooding",
+       "Provides rain irrigation",
        "Free irrigation"
       ],
       [
@@ -12765,12 +12765,12 @@
         ],
         [
          "雷暴",
-         "破坏农田",
+         "提供闪电电力",
          "把闪电变成能源"
         ],
         [
          "暴雨",
-         "淹没低地",
+         "提供雨水灌溉",
          "免费灌溉"
         ],
         [
@@ -12922,12 +12922,12 @@
         ],
         [
          "雷暴",
-         "破壞農田",
+         "提供閃電電力",
          "把閃電變成能源"
         ],
         [
          "暴雨",
-         "淹沒低地",
+         "提供雨水灌溉",
          "免費灌溉"
         ],
         [
@@ -13236,12 +13236,12 @@
         ],
         [
          "뇌우",
-         "밭 피해",
+         "번개 전력 제공",
          "번개를 전력으로"
         ],
         [
          "폭우",
-         "저지대 침수",
+         "빗물 관개 제공",
          "무료 관개"
         ],
         [
@@ -13399,12 +13399,12 @@
         ],
         [
          "Tormenta eléctrica",
-         "Daña los campos",
+         "Aporta energía de rayos",
          "Aprovecha el rayo para energía"
         ],
         [
          "Lluvia torrencial",
-         "Inundaciones",
+         "Aporta riego con lluvia",
          "Riego gratis"
         ],
         [
@@ -14473,7 +14473,7 @@
      "type": "list",
      "tag": "1.00.03-OFFICIAL",
      "heading": "Official patch 1.00.03 — August 10, 2026",
-     "body": "Official patch highlights; this is not a selected highlights.",
+     "body": "Official patch highlights; this is not a complete changelog.",
      "items": [
       "Fixed some Early Access saves failing to load because a removed planter remained in the tent.",
       "Fixed truncated naming text and a repeating Old City Ruins quest animation.",
@@ -14551,7 +14551,7 @@
      "type": "note",
      "tag": "SOURCE-BOUNDARY",
      "heading": "Source boundary",
-     "body": "Use the dated official Steam announcements as the source record; this page presents selected highlights, not a selected highlights."
+     "body": "Use the dated official Steam announcements as the source record; this page presents selected highlights rather than a complete changelog."
     }
    ],
    "sources": [
@@ -17121,8 +17121,8 @@
     "icon": "make-money"
    },
    "metaTitle": "Doloc Town Money Guide: Fast Income (1.0)",
-   "metaDescription": "Doloc Town money guide using clearly labelled community tips for processing, fishing and early priorities, without unsupported price-arbitrage claims.",
-   "intro": "This guide separates official mechanics from player-reported processing, fishing and early-upgrade tips; confirm exact values in your own save.",
+   "metaDescription": "Doloc Town resource planning for quests, processing equipment, fishing, crop protection, watering and verified 1.0 automation boundaries.",
+   "intro": "This guide uses first-party-supported mechanics and marks exact sale values, upgrade costs and returns as not hands-on verified.",
    "heroImage": null,
    "seasonAccent": null,
    "sections": [
@@ -17142,20 +17142,20 @@
      "type": "list",
      "tag": "THE LOOP",
      "heading": "The Money Loop, From Zero",
-     "body": "Income in Doloc Town compounds: each layer multiplies what the last one earned. Build them in this order.",
+     "body": "Use the in-game calendar, quests and unlocked equipment to plan resources without assuming unverified returns.",
      "items": [
-      "Buy the backpack upgrade on day one — community reports say the first tier from the tech merchant roughly doubles your slots, which stops the hours lost walking home.",
-      "Run villager quests — they pay cash and Tech Points, the two things early money-making scales with.",
-      "Plant Endyams early — a slow staple that keeps paying all season; get it in the ground on day one.",
-      "Fish through weather and dry the catch — the easiest loop in the game (detailed below).",
-      "Process crops instead of selling raw — pickling, drying and weaving each add 10-20% value."
+      "Review current inventory upgrades in the shop before spending resources.",
+      "Run villager quests to obtain the rewards and Tech Points shown in game.",
+      "Use the calendar before planting slow crops so they have time to mature.",
+      "Check the fishing tables for weather-specific catches and keep any fish needed for breeding.",
+      "Compare raw and processed values in your current save before deciding what to sell."
      ]
     },
     {
      "type": "table",
      "tag": "PROCESSING",
-     "heading": "Processing: The 10-20% Value Add",
-     "body": "Community reports (L2) put the margin from processing at 10-20% per item. The machines run around the clock, so the margin compounds while you do anything else. Exact 1.0 margins are pending our own testing.",
+     "heading": "Processing Equipment: Verify Values In-Game",
+     "body": "Doloc Town provides machines for pickling, drying and weaving. Exact sale values and processing returns have not been hands-on verified for this guide; compare the displayed values in your current save.",
      "columns": [
       "Input",
       "Process",
@@ -17165,34 +17165,34 @@
       [
        "Blueberries",
        "Pickle jar",
-       "+10-20% value [L2]"
+       "Check the displayed value"
       ],
       [
        "Fish",
        "Dryer",
-       "+10-20% value [L2] — the easiest loop"
+       "Check the displayed value"
       ],
       [
        "Fiber",
        "Loom",
-       "+10-20% value [L2]"
+       "Check the displayed value"
       ],
       [
        "Any surplus crop",
        "Process before selling",
-       "Margin compounds 24/7 [L2]"
+       "Compare before selling"
       ]
      ]
     },
     {
      "type": "steps",
      "tag": "STARTER LOOP",
-     "heading": "The Easiest Starter Loop: Fish, Dry, Sell",
-     "body": "This is the community's most-recommended early routine: low risk, no seed cost, and it funds everything else.",
+     "heading": "Fishing and Processing Checklist",
+     "body": "Use the free tutorial rod, weather tables and unlocked equipment as a checklist; this guide does not claim a single best-profit route.",
      "items": [
       [
        "Get the free rod",
-       "Do the Lightman fishing tutorial — it gives you a rod so you start the loop with zero cost."
+       "Do the Lightman fishing tutorial and use the rod it provides."
       ],
       [
        "Fish through weather",
@@ -17200,11 +17200,11 @@
       ],
       [
        "Dry instead of selling raw",
-       "A dryer adds 10-20% value [L2]; the loop becomes fish → dry → sell."
+       "Compare the raw and dried values shown in your current save before selling."
       ],
       [
-       "Upgrade the rod when you can",
-       "A Level 2 rod (~1,000 coins) can catch every fish per community reports [L2]."
+       "Review rod requirements",
+       "Check the current in-game requirements before targeting harder catches."
       ],
       [
        "Keep breeding pairs",
@@ -17220,7 +17220,7 @@
      "items": [
       "Month 4 is Harsh Dry Season — protect crops and plan watering.",
       "Rainy season (Jan-Feb) reshuffles the fish tables — fish the uncommon catches while they last.",
-      "Thunderstorms charge your farm's power — in 1.0 that cuts the running costs of automation.",
+      "Thunderstorms can charge farm power used by the 1.0 automation system.",
       "Plant for the season — off-season crops wither, so rotate what you grow with the calendar."
      ]
     },
@@ -17228,13 +17228,13 @@
      "type": "note",
      "tag": "MISTAKES",
      "heading": "Common Money Mistakes",
-     "body": "Community reports flag these as the ways players leave money on the table: selling everything raw (you skip the 10-20% processing margin), skipping quests (you miss Tech Points, the income multiplier), selling every fish (you lose the breeding pairs for 13 tank-only species), and delaying the backpack upgrade (hours lost running home). Protect crops and plan watering before Month 4."
+     "body": "Before selling or spending, check current in-game values, keep fish required for breeding, review quest rewards and protect crops and plan watering before Month 4. Exact returns and upgrade value are not verified here."
     },
     {
      "type": "note",
      "tag": "SOURCES",
      "heading": "Sources & Verification",
-     "body": "The 10-20% processing margins, the Level 2 rod and the Day-1 backpack tips are community-reported (L2, e.g. grindnstrat and Steam discussions). We have not verified exact margins in the 1.0 client yet — treat specific numbers as player-reported and confirm in your own save."
+     "body": "The linked official announcements support the dated 1.0 release and two-stage automation, but do not provide processing returns, rod thresholds or upgrade value. We have not hands-on tested those exact values, so this page does not recommend them."
     },
     {
      "type": "faq",
@@ -17243,11 +17243,11 @@
      "items": [
       [
        "What is the fastest way to make money in Doloc Town?",
-       "The community consensus is fish → dry → sell: no seed cost, works from day one, and the dryer adds 10-20% value [L2]."
+       "No single fastest route is verified here. Use quests, the calendar and the values displayed in your current save to choose what to keep, process or sell."
       ],
       [
        "How much value does processing add?",
-       "Pickling, drying and weaving each add roughly 10-20% per item, per community reports [L2]."
+       "The exact change is not verified here; compare the raw and processed values displayed in your current save."
       ],
       [
        "How should I prepare for Month 4?",
@@ -17255,11 +17255,11 @@
       ],
       [
        "Is the backpack upgrade worth it?",
-       "Yes — the first tier roughly doubles your slots and is the community's most-recommended first purchase [L2]."
+       "This guide does not verify an upgrade return. Check its current cost and capacity in your own save before buying."
       ],
       [
        "Do I need money for automation?",
-       "Later, yes: the automation progression costs materials and Tech Points, so early income supports the 1.0 endgame."
+       "Official notes confirm two-stage farming automation; check the current in-game unlock requirements and costs."
       ]
      ]
     }
@@ -17280,20 +17280,20 @@
        "body": "1.0 中第 4 月的正式名称是 Harsh Dry Season。请为作物防护与浇水做准备；本站不再声称未经证实的交易机制。"
       },
       {
-       "heading": "从零开始的赚钱循环",
-       "body": "多洛可小镇的收入是复利的：每一层都会放大上一层赚到的钱。按这个顺序搭建。",
+       "heading": "从零开始的资源规划",
+       "body": "结合游戏内日历、任务和已解锁设备安排资源，不预设未经验证的回报。",
        "items": [
-        "第一天就买背包升级——社区报告称科技商人的第一层背包大约翻倍槽位，省下大量来回跑的时间。",
-        "做村民任务——任务给金币和技术点，这两样正是早期赚钱放大的基础。",
-        "早点种 Endyams——一种长得慢但整季持续产出的主粮；第一天就种下。",
-        "趁天气钓鱼并把渔获烘干——游戏里最轻松的循环（详见下文）。",
-        "加工而不是直接卖原料——腌菜、烘干、织布各增值 10-20%。"
+        "购买升级前先查看当前商店要求。",
+        "完成村民任务，并以游戏内显示的奖励与技术点为准。",
+        "种植生长期较长的作物前先核对日历。",
+        "按天气渔获表选择钓点，并保留繁殖需要的鱼。",
+        "出售前比较当前存档显示的原料与加工品售价。"
        ],
        "type": "list"
       },
       {
-       "heading": "加工：10-20% 的增值",
-       "body": "社区报告（L2）显示加工每件物品的增值在 10-20%。机器 24/7 运转，所以你做任何事时利润都在复利。1.0 的精确利润率待我们亲自测试。",
+       "heading": "加工设备：在游戏内核对数值",
+       "body": "游戏提供腌制、烘干与织布设备。本站尚未亲自实测具体售价和加工回报；请以当前存档显示的数值为准。",
        "columns": [
         "原料",
         "加工方式",
@@ -17303,61 +17303,61 @@
         [
          "蓝莓",
          "腌菜罐",
-         "+10-20% 价值 [L2]"
+         "查看游戏内数值"
         ],
         [
          "鱼",
          "烘干机",
-         "+10-20% 价值 [L2]——最轻松的循环"
+         "查看游戏内数值"
         ],
         [
          "纤维",
          "织布机",
-         "+10-20% 价值 [L2]"
+         "查看游戏内数值"
         ],
         [
-         "任何盈余作物",
-         "卖前先加工",
-         "利润 24/7 复利 [L2]"
+         "盈余作物",
+         "出售前比较",
+         "按当前存档决定"
         ]
        ],
        "type": "table"
       },
       {
-       "heading": "最轻松的起手循环：钓鱼→烘干→卖",
-       "body": "这是社区最推荐的早期日常：低风险、无种子成本，还能给其他一切供血。",
+       "heading": "钓鱼与加工检查清单",
+       "body": "把教程鱼竿、天气表与已解锁设备当作检查清单；本站不声称存在唯一最佳收益路线。",
        "items": [
         [
-         "拿免费鱼竿",
-         "做 Lightman 钓鱼教程——它会送你一根鱼竿，让这个循环零成本起步。"
+         "拿教程鱼竿",
+         "完成 Lightman 钓鱼教程并使用它提供的鱼竿。"
         ],
         [
-         "趁天气钓鱼",
-         "雨天和雷暴会带来晴天没有的渔获——先看钓鱼指南的表。"
+         "按天气钓鱼",
+         "选点前先核对钓鱼指南中的天气表。"
         ],
         [
-         "烘干而不是生卖",
-         "烘干机增值 10-20% [L2]；循环变成 鱼→烘干→卖。"
+         "比较加工前后数值",
+         "出售前比较当前存档显示的原料与加工品售价。"
         ],
         [
-         "攒钱升级鱼竿",
-         "社区报告称 Level 2 鱼竿（约 1000 金币）能钓到所有鱼 [L2]。"
+         "查看鱼竿要求",
+         "挑战更难的渔获前查看游戏内当前升级要求。"
         ],
         [
          "保留繁殖对",
-         "13 种鱼缸专属鱼需要特定亲本——留一对，卖多余的。"
+         "需要特定亲本的鱼请保留，出售多余部分。"
         ]
        ],
        "type": "steps"
       },
       {
-       "heading": "常见的赚钱错误",
-       "body": "社区报告指出这些是玩家漏钱的方式：全卖原料（跳过 10-20% 的加工利润）、4 月前不准备作物防护与浇水、跳过任务（错过技术点这个收入放大器）、把鱼全卖光（失去 13 种鱼缸专属鱼的繁殖对）、迟迟不升背包（浪费几小时跑回家）。",
+       "heading": "资源规划检查",
+       "body": "出售或购买前查看游戏内当前数值。保留繁殖所需的鱼，核对任务奖励，并在第 4 月前保护作物、规划浇水。本站不验证具体回报。",
        "type": "note"
       },
       {
        "heading": "来源与验证",
-       "body": "10-20% 加工利润率、Level 2 鱼竿和第一天背包技巧均为社区报告（L2，如 grindnstrat 与 Steam 讨论）。我们尚未在 1.0 客户端实测确切利润率——请把具体数字当作玩家报告，并在自己的存档中确认。",
+       "body": "所链接的官方公告支持 1.0 日期与两阶段自动化，但没有提供加工回报、鱼竿门槛或升级价值。本站尚未亲自实测这些具体数值，因此不作推荐。",
        "type": "note"
       },
       {
@@ -17365,11 +17365,11 @@
        "items": [
         [
          "多洛可小镇赚钱最快的方法是什么？",
-         "社区共识是 鱼→烘干→卖：无种子成本、第一天就能做，烘干机增值 10-20% [L2]。"
+         "本站没有验证唯一最快路线；请结合任务、日历与当前存档数值决定保留、加工或出售。"
         ],
         [
          "加工能增值多少？",
-         "腌菜、烘干、织布各约增值 10-20%，据社区报告 [L2]。"
+         "本站尚未验证具体变化；请比较当前存档显示的加工前后数值。"
         ],
         [
          "4 月旱季怎么准备？",
@@ -17377,11 +17377,11 @@
         ],
         [
          "背包升级值得吗？",
-         "值得——第一层大约翻倍槽位，是社区最推荐的第一笔购买 [L2]。"
+         "本站不验证升级回报；购买前请查看当前成本与容量。"
         ],
         [
          "自动化需要钱吗？",
-         "后期需要：两阶段自动化与无人机站要材料和技术点，早期收入为 1.0 终局供血。"
+         "官方信息确认两阶段农业自动化；具体解锁要求和成本请以游戏内为准。"
         ]
        ],
        "type": "faq"
@@ -17389,8 +17389,8 @@
      ],
      "title": "多洛可小镇怎么快速赚钱（1.0）",
      "metaTitle": "多洛可小镇赚钱攻略：快速可靠的收入来源（1.0）",
-     "metaDescription": "多洛可小镇赚钱攻略：区分社区技巧与官方事实，介绍加工、钓鱼和前期优先级，不采用未经证实的涨价倒卖说法。",
-     "intro": "本指南区分官方机制与玩家报告的加工、钓鱼和前期升级技巧；具体数值请在自己的存档中确认。"
+     "metaDescription": "多洛可小镇资源规划攻略：结合任务、加工设备、钓鱼、作物保护、浇水与 1.0 自动化机制，并明确未实测的数值边界。",
+     "intro": "本指南只采用有一手资料支持的机制；具体售价、升级成本与回报尚未由本站亲自实测。"
     },
     "ja": {
      "sections": [
@@ -17407,20 +17407,20 @@
        "body": "1.0 では第4月の公式名は Harsh Dry Season です。作物保護と水やりを準備してください。未確認の取引攻略は掲載しません。"
       },
       {
-       "heading": "ゼロからの金策ループ",
-       "body": "ドロックタウンの収入は複利——各層が前の層の収入を増幅する。この順で積み上げよう。",
+       "heading": "ゼロからの資源計画",
+       "body": "ゲーム内カレンダー、クエスト、解放済み設備を使い、未確認の収益を前提にせず資源を計画します。",
        "items": [
-        "初日にバックパック強化を買う——コミュニティ報告ではテック商人の第1層でスロットがほぼ倍増し、往復の時間が大幅に減る。",
-        "村人クエストをこなす——報酬はコインとテックポイント。序盤の金策が伸びる土台。",
-        "Endyams を早めに植える——成長は遅いがシーズン中ずっと産む主作物。初日に植える。",
-        "天候を狙って釣り、獲った魚を干す——ゲームで最も楽なループ（詳細は下記）。",
-        "加工してから売る——漬ける・干す・織るで各 +10-20%。"
+        "強化を買う前に現在の店頭要件を確認する。",
+        "村人クエストを進め、ゲーム内表示の報酬とテックポイントを確認する。",
+        "成長の遅い作物は収穫までの日数をカレンダーで確認する。",
+        "天候別の魚表を確認し、繁殖に必要な魚を残す。",
+        "売る前に現在のセーブで素材と加工品の表示額を比較する。"
        ],
        "type": "list"
       },
       {
-       "heading": "加工：10-20% の付加価値",
-       "body": "コミュニティ報告（L2）では、加工による付加価値は1品あたり10-20%。機械は24時間稼働するので、何かをしている間も利益が複利で増える。1.0 の正確なマージンは実測待ち。",
+       "heading": "加工設備：ゲーム内の値を確認",
+       "body": "漬物瓶・乾燥機・織機を利用できます。販売額と加工後の収益は当サイトで実機検証していないため、現在のセーブに表示される値を比較してください。",
        "columns": [
         "素材",
         "加工",
@@ -17430,61 +17430,61 @@
         [
          "ブルーベリー",
          "ピクルス瓶",
-         "+10-20% [L2]"
+         "ゲーム内表示を確認"
         ],
         [
          "魚",
          "乾燥機",
-         "+10-20% [L2]——最易ループ"
+         "ゲーム内表示を確認"
         ],
         [
          "繊維",
          "織機",
-         "+10-20% [L2]"
+         "ゲーム内表示を確認"
         ],
         [
          "余剰作物",
-         "売る前に加工",
-         "24時間複利 [L2]"
+         "売る前に比較",
+         "現在のセーブで判断"
         ]
        ],
        "type": "table"
       },
       {
-       "heading": "最易スターターループ：釣り→乾燥→販売",
-       "body": "コミュニティで最も推奨される序盤ルーチン：低リスク・種代ゼロで、他すべての資金になる。",
+       "heading": "釣りと加工の確認リスト",
+       "body": "チュートリアルの竿、天候表、解放済み設備を確認します。本ガイドは唯一の最高収益ルートを主張しません。",
        "items": [
         [
-         "無料の竿を入手",
-         "Lightman の釣りチュートリアルで竿がもらえる——コストゼロでループ開始。"
+         "チュートリアルの竿",
+         "Lightman の釣りチュートリアルで受け取った竿を使う。"
         ],
         [
-         "天候を狙って釣る",
-         "雨と雷雨は晴天のない漁獲をもたらす——先に釣りガイドの表を確認。"
+         "天候表を確認",
+         "場所を選ぶ前に釣りガイドの天候表を確認する。"
         ],
         [
-         "生売りせず乾燥",
-         "乾燥機で +10-20% [L2]；ループは 魚→乾燥→販売 に。"
+         "加工前後を比較",
+         "売る前に現在のセーブに表示される値を比較する。"
         ],
         [
-         "竿の強化を目指す",
-         "Level 2 の竿（約1000コイン）で全魚種が釣れるという報告 [L2]。"
+         "竿の要件を確認",
+         "難しい魚を狙う前に現在の強化要件を確認する。"
         ],
         [
          "繁殖ペアを残す",
-         "水槽限定13種は特定の親が必要——余りだけ売る。"
+         "特定の親が必要な魚を残し、余剰だけを売る。"
         ]
        ],
        "type": "steps"
       },
       {
-       "heading": "よくある金策ミス",
-       "body": "コミュニティ報告が指摘するお金を逃すパターン：素材を全部生売り（10-20%の加工マージンを捨てる）、4月前に作物保護と水やりを準備しない、クエストをスキップ（収入の増幅器・テックポイントを逃す）、魚を全部売る（水槽限定13種の繁殖ペアを失う）、バックパック強化を後回し（往復で何時間も無駄にする）。",
+       "heading": "資源計画の確認",
+       "body": "売買前に現在のゲーム内表示を確認し、繁殖に必要な魚を残し、クエスト報酬を確認し、第4月前に作物保護と水やりを準備します。具体的な収益は検証していません。",
        "type": "note"
       },
       {
        "heading": "出典と検証",
-       "body": "10-20% の加工マージン、Level 2 の竿、初日のバックパックのコツはすべてコミュニティ報告（L2、grindnstrat や Steam 議論など）。1.0 クライアントでの正確なマージンは未実測——具体的な数字はプレイヤー報告として扱い、自分のセーブで確認してほしい。",
+       "body": "リンクした公式発表は1.0の日付と二段階自動化を裏付けますが、加工収益、竿の閾値、強化価値は示しません。当サイトはそれらを実機検証していないため推奨しません。",
        "type": "note"
       },
       {
@@ -17492,11 +17492,11 @@
        "items": [
         [
          "ドロックタウンで一番早く稼ぐ方法は？",
-         "コミュニティの一致した見解は 魚→乾燥→販売：種代ゼロで初日から可能、乾燥機で +10-20% [L2]。"
+         "唯一の最速ルートは検証していません。クエスト、カレンダー、現在のセーブ表示を基に判断してください。"
         ],
         [
          "加工の付加価値はどのくらい？",
-         "漬ける・干す・織るで1品あたり約10-20%、コミュニティ報告による [L2]。"
+         "具体的な変化は未検証です。現在のセーブで加工前後の値を比較してください。"
         ],
         [
          "4月にどう備える？",
@@ -17504,11 +17504,11 @@
         ],
         [
          "バックパック強化は価値がある？",
-         "ある——第1層でスロットがほぼ倍増し、コミュニティで最も推奨される最初の買い物 [L2]。"
+         "強化の収益は検証していません。購入前に現在の費用と容量を確認してください。"
         ],
         [
          "自動化にお金は必要？",
-         "後半は必要：二段階自動化とドローン基地は素材とテックポイントが要る。序盤の収入が1.0終盤を支える。"
+         "公式情報は二段階農業自動化を確認しています。具体的な解放要件と費用はゲーム内で確認してください。"
         ]
        ],
        "type": "faq"
@@ -17516,8 +17516,8 @@
      ],
      "title": "ドロックタウンで早く稼ぐ方法（1.0）",
      "metaTitle": "ドロックタウン金策ガイド：速くて安定した収入（1.0）",
-     "metaDescription": "公式情報とコミュニティ報告を区別し、加工・釣り・序盤の優先事項をまとめた金策ガイド。未確認の価格攻略は掲載しません。",
-     "intro": "本ガイドは、公式の仕組みと、加工・釣り・序盤強化に関するプレイヤー報告を区別します。正確な数値は自分のセーブで確認してください。"
+     "metaDescription": "ドロックタウンの資源計画ガイド。依頼、加工設備、釣り、作物保護、水やり、確認済みの 1.0 オートメーション範囲を扱います。",
+     "intro": "本ガイドは一次情報で確認できる仕組みだけを扱い、販売額・強化費用・収益は当サイトで実機検証していないと明記します。"
     },
     "ko": {
      "sections": [
@@ -17534,20 +17534,20 @@
        "body": "1.0에서 4번째 달의 공식 명칭은 Harsh Dry Season입니다. 작물 보호와 물주기를 준비하세요. 확인되지 않은 거래 요령은 안내하지 않습니다."
       },
       {
-       "heading": "제로부터 시작하는 돈 루프",
-       "body": "돌록 타운의 수입은 복리입니다 — 각 단계가 이전 단계의 수입을 증폭합니다. 이 순서로 쌓아 올리세요.",
+       "heading": "제로부터 시작하는 자원 계획",
+       "body": "게임 달력, 퀘스트, 해금한 장비를 이용해 확인되지 않은 수익을 전제로 하지 않고 자원을 계획하세요.",
        "items": [
-        "첫날에 가방 업그레이드를 구매 — 커뮤니티 제보: 기술 상인의 첫 번째 가방이 슬롯을 약 2배로 늘려 왕복 시간을 크게 줄입니다.",
-        "마을 퀘스트 수행 — 골드와 기술 포인트를 주며, 초반 돈 버는 기반이 됩니다.",
-        "Endyams를 일찍 심기 — 성장은 느리지만 시즌 내내 계속 생산하는 주작물; 첫날에 심으세요.",
-        "날씨를 노려 낚시하고 말려서 판매 — 게임에서 가장 쉬운 루프(아래 상세).",
-        "가공 후 판매 — 절임·건조·직조가 각각 +10-20%."
+        "업그레이드 구매 전에 현재 상점 요구 사항을 확인하세요.",
+        "마을 퀘스트를 수행하고 게임에 표시된 보상과 기술 포인트를 확인하세요.",
+        "성장이 느린 작물은 수확까지 남은 날짜를 달력에서 확인하세요.",
+        "날씨별 어종 표를 확인하고 번식에 필요한 물고기를 보관하세요.",
+        "판매 전에 현재 세이브에 표시된 원재료와 가공품 가격을 비교하세요."
        ],
        "type": "list"
       },
       {
-       "heading": "가공: 10-20%의 부가가치",
-       "body": "커뮤니티 보고(L2)에 따르면 가공의 부가가치는 품목당 10-20%입니다. 기계는 24/7 돌아가므로 다른 일을 하는 동안에도 이익이 복리로 쌓입니다. 1.0의 정확한 마진은 직접 테스트 대기 중.",
+       "heading": "가공 장비: 게임 내 수치 확인",
+       "body": "절임·건조·직조 장비를 사용할 수 있습니다. 정확한 판매가와 가공 수익은 이 가이드에서 직접 검증하지 않았으므로 현재 세이브의 표시값을 비교하세요.",
        "columns": [
         "원료",
         "가공",
@@ -17557,61 +17557,61 @@
         [
          "블루베리",
          "절임 단지",
-         "+10-20% [L2]"
+         "게임 내 표시 확인"
         ],
         [
          "물고기",
          "건조기",
-         "+10-20% [L2] — 가장 쉬운 루프"
+         "게임 내 표시 확인"
         ],
         [
          "섬유",
          "직조기",
-         "+10-20% [L2]"
+         "게임 내 표시 확인"
         ],
         [
          "잉여 작물",
-         "팔기 전에 가공",
-         "24/7 복리 [L2]"
+         "판매 전 비교",
+         "현재 세이브로 판단"
         ]
        ],
        "type": "table"
       },
       {
-       "heading": "가장 쉬운 시작 루프: 낚시→건조→판매",
-       "body": "커뮤니티가 가장 추천하는 초반 루틴: 저위험, 씨앗 비용 없음, 다른 모든 것을 위한 자금이 됩니다.",
+       "heading": "낚시와 가공 점검 목록",
+       "body": "튜토리얼 낚싯대, 날씨 표, 해금한 장비를 점검하세요. 이 가이드는 하나의 최고 수익 경로를 주장하지 않습니다.",
        "items": [
         [
-         "무료 낚싯대 받기",
-         "Lightman 낚시 튜토리얼이 낚싯대를 줍니다 — 비용 제로로 루프 시작."
+         "튜토리얼 낚싯대",
+         "Lightman 낚시 튜토리얼에서 받은 낚싯대를 사용하세요."
         ],
         [
-         "날씨를 노려 낚시",
-         "비와 뇌우는 맑은 날에는 없는 어종을 줍니다 — 먼저 낚시 가이드 표를 확인."
+         "날씨 표 확인",
+         "장소를 고르기 전에 낚시 가이드의 날씨 표를 확인하세요."
         ],
         [
-         "생으로 팔지 말고 건조",
-         "건조기가 +10-20% [L2]; 루프는 물고기→건조→판매."
+         "가공 전후 비교",
+         "판매 전에 현재 세이브의 표시값을 비교하세요."
         ],
         [
-         "낚싯대 업그레이드 목표",
-         "Level 2 낚싯대(약 1,000코인)로 모든 물고기를 잡을 수 있다는 제보 [L2]."
+         "낚싯대 요구 사항",
+         "어려운 어종을 노리기 전에 현재 업그레이드 요구 사항을 확인하세요."
         ],
         [
          "번식 쌍 보관",
-         "수조 전용 13종은 특정 부모가 필요 — 남는 것만 판매."
+         "특정 부모가 필요한 물고기를 보관하고 남는 것만 판매하세요."
         ]
        ],
        "type": "steps"
       },
       {
-       "heading": "흔한 돈 버는 실수",
-       "body": "커뮤니티가 지적하는 돈을 놓치는 패턴: 원자재를 전부 그대로 판매(10-20% 가공 마진 포기), 4월 전 작물 보호와 물주기를 준비하지 않아 작물이 시드는 것, 퀘스트 건너뛰기(수입 증폭기인 기술 포인트를 놓침), 물고기를 전부 판매(수조 전용 13종의 번식 쌍 상실), 가방 업그레이드 미루기(왕복에 몇 시간 낭비).",
+       "heading": "자원 계획 점검",
+       "body": "판매나 구매 전에 현재 게임 수치를 확인하고, 번식에 필요한 물고기를 보관하고, 퀘스트 보상을 확인하고, 4월 전에 작물 보호와 물주기를 준비하세요. 구체적인 수익은 검증하지 않았습니다.",
        "type": "note"
       },
       {
        "heading": "출처와 검증",
-       "body": "10-20% 가공 마진, Level 2 낚싯대, 첫날 가방 팁은 모두 커뮤니티 보고(L2, grindnstrat 및 Steam 토론 등)입니다. 1.0 클라이언트에서 정확한 마진을 아직 실측하지 못했습니다 — 구체적 수치는 플레이어 제보로 취급하고 자신의 세이브에서 확인하세요.",
+       "body": "연결된 공식 공지는 1.0 날짜와 2단계 자동화를 뒷받침하지만 가공 수익, 낚싯대 기준, 업그레이드 가치는 제공하지 않습니다. 이 가이드는 해당 수치를 직접 검증하지 않았으므로 추천하지 않습니다.",
        "type": "note"
       },
       {
@@ -17619,23 +17619,23 @@
        "items": [
         [
          "돌록 타운에서 돈을 가장 빨리 버는 방법은?",
-         "커뮤니티 합의는 물고기→건조→판매: 씨앗 비용 없음, 첫날부터 가능, 건조기 +10-20% [L2]."
+         "유일한 최단 경로는 검증하지 않았습니다. 퀘스트, 달력, 현재 세이브 표시값을 기준으로 선택하세요."
         ],
         [
          "가공은 얼마나 붙나요?",
-         "절임·건조·직조 각각 품목당 약 10-20%, 커뮤니티 보고 기준 [L2]."
+         "정확한 변화는 검증하지 않았습니다. 현재 세이브에서 가공 전후 값을 비교하세요."
         ],
         [
          "4월에는 어떻게 대비하나요?",
-         "4월 Harsh Dry Season 전에 작물을 보호하고 물주기를 계획하세요. 공식 공지는 가격 변동이나 판매 시점을 뒷받침하지 않습니다."
+         "4월 Harsh Dry Season 전에 작물을 보호하고 물주기를 계획하세요."
         ],
         [
          "가방 업그레이드는 가치 있나요?",
-         "네 — 첫 단계가 슬롯을 약 2배로 늘리며 커뮤니티가 가장 추천하는 첫 구매입니다 [L2]."
+         "업그레이드 수익은 검증하지 않았습니다. 구매 전 현재 비용과 용량을 확인하세요."
         ],
         [
          "자동화에 돈이 필요한가요?",
-         "후반에는 필요: 2단계 자동화과 드론 기지에 재료와 기술 포인트가 듭니다. 초반 수입이 1.0 엔드게임을 뒷받침합니다."
+         "공식 정보는 2단계 농업 자동화를 확인합니다. 구체적인 해금 요구 사항과 비용은 게임 안에서 확인하세요."
         ]
        ],
        "type": "faq"
@@ -17643,8 +17643,8 @@
      ],
      "title": "돌록 타운에서 빨리 돈 버는 법 (1.0)",
      "metaTitle": "돌록 타운 돈 버는 가이드: 빠르고 안정적인 수입 (1.0)",
-     "metaDescription": "공식 사실과 커뮤니티 팁을 구분해 가공·낚시·초반 우선순위를 다루는 돈 가이드. 확인되지 않은 가격 거래 주장은 제외합니다.",
-     "intro": "이 가이드는 공식 메커니즘과 플레이어가 제보한 가공·낚시·초반 업그레이드 팁을 구분합니다. 정확한 수치는 자신의 세이브에서 확인하세요."
+     "metaDescription": "돌록 타운 자원 계획 가이드. 퀘스트, 가공 장비, 낚시, 작물 보호, 물주기와 확인된 1.0 자동화 범위를 다룹니다.",
+     "intro": "이 가이드는 1차 자료로 확인되는 메커니즘만 다루며, 판매가·업그레이드 비용·수익은 직접 플레이로 검증하지 않았다고 밝힙니다."
     },
     "es": {
      "sections": [
@@ -17667,20 +17667,20 @@
        "body": "En 1.0, el nombre oficial del mes 4 es Harsh Dry Season. Prepara protección y riego; esta guía no afirma estrategias comerciales sin verificar."
       },
       {
-       "heading": "El bucle de dinero desde cero",
-       "body": "Los ingresos en Doloc Town son compuestos: cada capa multiplica a la anterior. Construye en este orden.",
+       "heading": "Planificación de recursos desde cero",
+       "body": "Usa el calendario, las misiones y el equipo desbloqueado para planificar recursos sin asumir rendimientos no verificados.",
        "items": [
-        "Compra la mejora de mochila el día uno — la comunidad reporta que el primer nivel del mercader tecnológico casi duplica tus espacios y evita horas yendo a casa.",
-        "Haz misiones de aldeanos — pagan dinero y Puntos de Tecnología, las dos cosas con las que escala el dinero temprano.",
-        "Planta Endyams pronto — un cultivo básico lento que paga toda la temporada; plántalo el día uno.",
-        "Pesca con clima y seca la captura — el bucle más fácil del juego (detallado abajo).",
-        "Procesa en vez de vender crudo — encurtir, secar y tejer añade 10-20% cada uno."
+        "Revisa los requisitos actuales de la tienda antes de comprar mejoras.",
+        "Completa misiones y usa las recompensas y Puntos de Tecnología mostrados en el juego.",
+        "Consulta el calendario antes de plantar cultivos lentos.",
+        "Mira las tablas de pesca por clima y conserva los peces necesarios para criar.",
+        "Compara en tu partida los valores de materias primas y productos antes de vender."
        ],
        "type": "list"
       },
       {
-       "heading": "Procesado: el +10-20% de valor",
-       "body": "Los reportes de la comunidad (L2) sitúan el margen del procesado en 10-20% por artículo. Las máquinas funcionan 24/7, así que el margen se compone mientras haces cualquier otra cosa. Los márgenes exactos del 1.0 están pendientes de nuestras pruebas.",
+       "heading": "Equipo de procesado: verifica los valores",
+       "body": "Hay equipos para encurtir, secar y tejer. No hemos probado de primera mano los precios ni los rendimientos exactos; compara los valores que muestra tu partida.",
        "columns": [
         "Entrada",
         "Proceso",
@@ -17690,61 +17690,61 @@
         [
          "Arándanos",
          "Tarro de encurtir",
-         "+10-20% [L2]"
+         "Consulta el valor mostrado"
         ],
         [
          "Pescado",
          "Secadora",
-         "+10-20% [L2] — el bucle más fácil"
+         "Consulta el valor mostrado"
         ],
         [
          "Fibra",
          "Telar",
-         "+10-20% [L2]"
+         "Consulta el valor mostrado"
         ],
         [
-         "Cualquier excedente",
-         "Procesa antes de vender",
-         "Margen compuesto 24/7 [L2]"
+         "Excedentes",
+         "Compara antes de vender",
+         "Decide según tu partida"
         ]
        ],
        "type": "table"
       },
       {
-       "heading": "El bucle inicial más fácil: pescar, secar, vender",
-       "body": "La rutina temprana más recomendada por la comunidad: bajo riesgo, sin coste de semillas y financia todo lo demás.",
+       "heading": "Lista de pesca y procesado",
+       "body": "Usa la caña del tutorial, las tablas del clima y el equipo desbloqueado como lista de control. No afirmamos que exista una única ruta de máximo beneficio.",
        "items": [
         [
-         "Consigue la caña gratis",
-         "Haz el tutorial de pesca de Lightman — te da una caña, así empiezas el bucle sin coste."
+         "Caña del tutorial",
+         "Completa el tutorial de pesca de Lightman y usa la caña que entrega."
         ],
         [
-         "Pesca con clima",
-         "La lluvia y las tormentas traen capturas que los días secos nunca dan — mira antes las tablas de la guía de pesca."
+         "Consulta el clima",
+         "Mira las tablas de la guía antes de elegir lugar."
         ],
         [
-         "Seca en vez de vender crudo",
-         "La secadora añade 10-20% [L2]; el bucle pasa a ser pescar → secar → vender."
+         "Compara antes y después",
+         "Compara en tu partida los valores antes de vender."
         ],
         [
-         "Mejora la caña cuando puedas",
-         "Una caña nivel 2 (~1.000 monedas) captura todos los peces según la comunidad [L2]."
+         "Revisa requisitos",
+         "Consulta los requisitos actuales antes de buscar capturas difíciles."
         ],
         [
-         "Guarda parejas reproductoras",
-         "13 especies de tanque necesitan padres específicos — guarda sobras, vende el excedente."
+         "Guarda parejas",
+         "Conserva los peces necesarios para criar y vende solo el excedente."
         ]
        ],
        "type": "steps"
       },
       {
-       "heading": "Errores de dinero comunes",
-       "body": "La comunidad señala estas formas de dejar dinero sobre la mesa: vender todo crudo (te saltas el 10-20% del procesado), no proteger los cultivos ni planificar el riego antes del mes 4, saltarte misiones (pierdes Puntos de Tecnología, el multiplicador de ingresos), vender todos los peces (pierdes las parejas de 13 especies de tanque) y retrasar la mochila (horas yendo a casa).",
+       "heading": "Comprobación de recursos",
+       "body": "Antes de vender o comprar, revisa los valores actuales, conserva los peces necesarios para criar, consulta las recompensas y protege cultivos y planifica el riego antes del mes 4. No verificamos rendimientos concretos.",
        "type": "note"
       },
       {
        "heading": "Fuentes y verificación",
-       "body": "Los márgenes del 10-20%, la caña nivel 2 y los consejos del día uno son reportados por la comunidad (L2, p. ej. grindnstrat y discusiones de Steam). Aún no hemos verificado los márgenes exactos en el cliente 1.0 — trata los números como reportados por jugadores y confírmalos en tu partida.",
+       "body": "Los anuncios oficiales enlazados respaldan la fecha del 1.0 y la automatización en dos etapas, pero no indican rendimientos, umbrales de caña ni valor de mejoras. No hemos probado esas cifras de primera mano y no las recomendamos.",
        "type": "note"
       },
       {
@@ -17752,11 +17752,11 @@
        "items": [
         [
          "¿Cuál es la forma más rápida de ganar dinero?",
-         "El consenso de la comunidad es pescar → secar → vender: sin coste de semillas, funciona desde el día uno y la secadora añade 10-20% [L2]."
+         "No hemos verificado una única ruta más rápida. Usa misiones, calendario y valores actuales de tu partida para decidir."
         ],
         [
          "¿Cuánto añade el procesado?",
-         "Encurtir, secar y tejer añaden cada uno un 10-20% por artículo, según la comunidad [L2]."
+         "No hemos verificado el cambio exacto; compara en tu partida los valores antes y después."
         ],
         [
          "¿Cómo me preparo para el mes 4?",
@@ -17764,11 +17764,11 @@
         ],
         [
          "¿Merece la pena la mochila?",
-         "Sí — el primer nivel casi duplica tus espacios y es la compra inicial más recomendada [L2]."
+         "No verificamos el retorno de la mejora. Revisa el coste y la capacidad actuales antes de comprar."
         ],
         [
          "¿Necesito dinero para la automatización?",
-         "Más tarde sí: la energía solar/automatización y las estaciones de drones cuestan materiales y Puntos de Tecnología, así que los ingresos tempranos financian el final del 1.0."
+         "La información oficial confirma automatización agrícola en dos etapas; consulta en el juego los requisitos y costes actuales."
         ]
        ],
        "type": "faq"
@@ -17776,8 +17776,8 @@
      ],
      "title": "Cómo ganar dinero rápido en Doloc Town (1.0)",
      "metaTitle": "Guía de dinero en Doloc Town: ingresos rápidos (1.0)",
-     "metaDescription": "Guía de dinero de Doloc Town con consejos comunitarios señalados sobre procesado, pesca y prioridades, sin arbitraje de precios sin verificar.",
-     "intro": "Esta guía distingue las mecánicas oficiales de los consejos de jugadores sobre procesado, pesca y mejoras tempranas; confirma los valores exactos en tu partida."
+     "metaDescription": "Planificación de recursos en Doloc Town: misiones, equipos de procesado, pesca, protección de cultivos, riego y límites verificados de la automatización 1.0.",
+     "intro": "Esta guía usa mecánicas respaldadas por fuentes primarias y deja claro que no hemos probado de primera mano precios, costes ni rendimientos exactos."
     },
     "zh-TW": {
      "sections": [
@@ -17794,20 +17794,20 @@
        "body": "1.0 中第 4 月的正式名稱是 Harsh Dry Season。請為作物防護與澆水準備；本站不再宣稱未經證實的交易機制。"
       },
       {
-       "heading": "從零開始的賺錢循環",
-       "body": "多洛可小鎮的收入是複利的：每一層都會放大上一層賺到的錢。按這個順序搭建。",
+       "heading": "從零開始的資源規劃",
+       "body": "結合遊戲內日曆、任務和已解鎖設備安排資源，不預設未經驗證的回報。",
        "items": [
-        "第一天就買揹包升級——社區報告稱科技商人的第一層揹包大約翻倍槽位，省下大量來回跑的時間。",
-        "做村民任務——任務給金幣和技術點，這兩樣正是早期賺錢放大的基礎。",
-        "早點種 Endyams——一種長得慢但整季持續產出的主糧；第一天就種下。",
-        "趁天氣釣魚並把漁獲烘乾——遊戲裡最輕鬆的循環（詳見下文）。",
-        "加工而不是直接賣原料——醃菜、烘乾、織布各增值 10-20%。"
+        "購買升級前先查看當前商店要求。",
+        "完成村民任務，並以遊戲內顯示的獎勵與技術點為準。",
+        "種植生長期較長的作物前先核對日曆。",
+        "按天氣漁獲表選擇釣點，並保留繁殖需要的魚。",
+        "出售前比較當前存檔顯示的原料與加工品售價。"
        ],
        "type": "list"
       },
       {
-       "heading": "加工：10-20% 的增值",
-       "body": "社區報告（L2）顯示加工每件物品的增值在 10-20%。機器 24/7 運轉，所以你做任何事時利潤都在複利。1.0 的精確利潤率待我們親自測試。",
+       "heading": "加工設備：在遊戲內核對數值",
+       "body": "遊戲提供醃製、烘乾與織布設備。本站尚未親自實測具體售價和加工回報；請以當前存檔顯示的數值為準。",
        "columns": [
         "原料",
         "加工方式",
@@ -17817,61 +17817,61 @@
         [
          "藍莓",
          "醃菜罐",
-         "+10-20% 價值 [L2]"
+         "查看遊戲內數值"
         ],
         [
          "魚",
          "烘乾機",
-         "+10-20% 價值 [L2]——最輕鬆的循環"
+         "查看遊戲內數值"
         ],
         [
          "纖維",
          "織布機",
-         "+10-20% 價值 [L2]"
+         "查看遊戲內數值"
         ],
         [
-         "任何盈餘作物",
-         "賣前先加工",
-         "利潤 24/7 複利 [L2]"
+         "盈餘作物",
+         "出售前比較",
+         "按當前存檔決定"
         ]
        ],
        "type": "table"
       },
       {
-       "heading": "最輕鬆的起手循環：釣魚→烘乾→賣",
-       "body": "這是社區最推薦的早期日常：低風險、無種子成本，還能給其他一切供血。",
+       "heading": "釣魚與加工檢查清單",
+       "body": "把教程魚竿、天氣表與已解鎖設備當作檢查清單；本站不聲稱存在唯一最佳收益路線。",
        "items": [
         [
-         "拿免費魚竿",
-         "做 Lightman 釣魚教程——它會送你一根魚竿，讓這個循環零成本起步。"
+         "拿教程魚竿",
+         "完成 Lightman 釣魚教程並使用它提供的魚竿。"
         ],
         [
-         "趁天氣釣魚",
-         "雨天和雷暴會帶來晴天沒有的漁獲——先看釣魚指南的表。"
+         "按天氣釣魚",
+         "選點前先核對釣魚指南中的天氣表。"
         ],
         [
-         "烘乾而不是生賣",
-         "烘乾機增值 10-20% [L2]；循環變成 魚→烘乾→賣。"
+         "比較加工前後數值",
+         "出售前比較當前存檔顯示的原料與加工品售價。"
         ],
         [
-         "攢錢升級魚竿",
-         "社區報告稱 Level 2 魚竿（約 1000 金幣）能釣到所有魚 [L2]。"
+         "查看魚竿要求",
+         "挑戰更難的漁獲前查看遊戲內當前升級要求。"
         ],
         [
          "保留繁殖對",
-         "13 種魚缸專屬魚需要特定親本——留一對，賣多餘的。"
+         "需要特定親本的魚請保留，出售多餘部分。"
         ]
        ],
        "type": "steps"
       },
       {
-       "heading": "常見的賺錢錯誤",
-       "body": "社區報告指出這些是玩家漏錢的方式：全賣原料（跳過 10-20% 的加工利潤）、4 月前不準備作物防護與澆水、跳過任務（錯過技術點這個收入放大器）、把魚全賣光（失去 13 種魚缸專屬魚的繁殖對）、遲遲不升揹包（浪費幾小時跑回家）。",
+       "heading": "資源規劃檢查",
+       "body": "出售或購買前查看遊戲內當前數值。保留繁殖所需的魚，核對任務獎勵，並在第 4 月前保護作物、規劃澆水。本站不驗證具體回報。",
        "type": "note"
       },
       {
        "heading": "來源與驗證",
-       "body": "10-20% 加工利潤率、Level 2 魚竿和第一天揹包技巧均為社區報告（L2，如 grindnstrat 與 Steam 討論）。我們尚未在 1.0 客戶端實測確切利潤率——請把具體數字當作玩家報告，並在自己的存檔中確認。",
+       "body": "所鏈接的官方公告支持 1.0 日期與兩階段自動化，但沒有提供加工回報、魚竿門檻或升級價值。本站尚未親自實測這些具體數值，因此不作推薦。",
        "type": "note"
       },
       {
@@ -17879,11 +17879,11 @@
        "items": [
         [
          "多洛可小鎮賺錢最快的方法是什麼？",
-         "社區共識是 魚→烘乾→賣：無種子成本、第一天就能做，烘乾機增值 10-20% [L2]。"
+         "本站沒有驗證唯一最快路線；請結合任務、日曆與當前存檔數值決定保留、加工或出售。"
         ],
         [
          "加工能增值多少？",
-         "醃菜、烘乾、織布各約增值 10-20%，據社區報告 [L2]。"
+         "本站尚未驗證具體變化；請比較當前存檔顯示的加工前後數值。"
         ],
         [
          "4 月旱季怎麼準備？",
@@ -17891,11 +17891,11 @@
         ],
         [
          "揹包升級值得嗎？",
-         "值得——第一層大約翻倍槽位，是社區最推薦的第一筆購買 [L2]。"
+         "本站不驗證升級回報；購買前請查看當前成本與容量。"
         ],
         [
          "自動化需要錢嗎？",
-         "後期需要：兩階段自動化與無人機站要材料和技術點，早期收入為 1.0 終局供血。"
+         "官方信息確認兩階段農業自動化；具體解鎖要求和成本請以遊戲內為準。"
         ]
        ],
        "type": "faq"
@@ -17904,7 +17904,7 @@
      "title": "多洛可小鎮怎麼快速賺錢（1.0）",
      "metaTitle": "多洛可小鎮賺錢攻略：快速可靠的收入來源（1.0）",
      "metaDescription": "多洛可小鎮賺錢攻略：區分社群技巧與官方事實，介紹加工、釣魚和前期優先事項，不採用未證實的漲價倒賣說法。",
-     "intro": "本指南區分官方機制與玩家報告的加工、釣魚和前期升級技巧；具體數值請在自己的存檔中確認。"
+     "intro": "本指南只採用有一手資料支持的機制；具體售價、升級成本與回報尚未由本站親自實測。"
     }
    },
    "sources": [

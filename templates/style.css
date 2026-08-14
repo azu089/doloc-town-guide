@@ -64,12 +64,12 @@ a{color:var(--sprout);text-decoration:none}
 /* ---------- header / nav ---------- */
 .site-header{position:sticky;top:0;z-index:50;background:rgba(22,33,26,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
 .header-inner{height:var(--nav-h);display:flex;align-items:center;gap:16px}
-.logo{display:flex;align-items:center;gap:10px;min-block-size:44px;color:var(--text);font-weight:700;font-size:1rem;white-space:nowrap}
+.logo{display:flex;align-items:center;justify-content:center;gap:10px;min-inline-size:44px;min-block-size:44px;color:var(--text);font-weight:700;font-size:1rem;white-space:nowrap;transition:none}
 .logo-badge{width:34px;height:34px;display:inline-flex;flex:0 0 auto}
 .logo-badge svg{width:34px;height:34px;filter:drop-shadow(0 4px 14px rgba(127,176,105,.35))}
 .logo-txt{font-family:var(--display);letter-spacing:.01em}
 .nav{display:flex;align-items:center;gap:2px;margin-left:auto}
-.nav>a,.nav summary{color:var(--muted);font-size:.9rem;font-weight:600;min-block-size:44px;padding:9px 12px;border-radius:9px;transition:color .16s ease,background-color .16s ease,box-shadow .16s ease;display:inline-flex;align-items:center;gap:7px;cursor:pointer;list-style:none;font-family:var(--body)}
+.nav>a,.nav summary{color:var(--muted);font-size:.9rem;font-weight:600;min-inline-size:44px;min-block-size:44px;padding:9px 12px;border-radius:9px;transition:color .16s ease,background-color .16s ease,box-shadow .16s ease;display:inline-flex;align-items:center;justify-content:center;gap:7px;cursor:pointer;list-style:none;font-family:var(--body)}
 .nav>a.active{color:var(--text);background:rgba(127,176,105,.16);box-shadow:inset 0 0 0 1px rgba(127,176,105,.35)}
 .nav .caret{font-size:.7rem;opacity:.7}
 .nav-ic{width:15px;height:15px;display:inline-flex;flex:0 0 auto}
@@ -81,7 +81,7 @@ a{color:var(--sprout);text-decoration:none}
   padding:10px;box-shadow:var(--shadow);z-index:60;
 }
 .dd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
-.dd-menu a{display:flex;align-items:center;gap:9px;min-block-size:44px;color:var(--muted);padding:9px 11px;border-radius:9px;font-size:.86rem;line-height:1.35;transition:color .14s ease,background-color .14s ease}
+.dd-menu a{display:flex;align-items:center;justify-content:center;gap:9px;min-inline-size:44px;min-block-size:44px;color:var(--muted);padding:9px 11px;border-radius:9px;font-size:.86rem;line-height:1.35;transition:color .14s ease,background-color .14s ease}
 .dd-menu a .nav-ic{margin-top:2px}
 .dd-menu a.active{color:var(--amber-soft)}
 .site-search{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:6px 12px;width:200px;transition:border-color .18s ease,background-color .18s ease}
@@ -91,7 +91,7 @@ a{color:var(--sprout);text-decoration:none}
 .search-ic{width:15px;height:15px;color:var(--muted);flex:0 0 auto}
 .search-ic svg{width:15px;height:15px}
 .lang-dd{position:relative}
-.lang-dd summary{display:inline-flex;align-items:center;gap:7px;min-block-size:44px;color:var(--muted);font-size:.87rem;font-weight:600;padding:8px 11px;border-radius:9px;cursor:pointer;list-style:none;transition:color .16s ease,background-color .16s ease}
+.lang-dd summary{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-inline-size:44px;min-block-size:44px;color:var(--muted);font-size:.87rem;font-weight:600;padding:8px 11px;border-radius:9px;cursor:pointer;list-style:none;transition:color .16s ease,background-color .16s ease}
 .flag{display:inline-flex;width:20px;height:14px;border-radius:3px;overflow:hidden;flex:0 0 auto}
 .svg-flag svg{width:20px;height:14px;display:block}
 .dd-lang{grid-template-columns:1fr;min-width:170px;right:0}
@@ -322,7 +322,7 @@ tbody tr:hover td{background:rgba(127,176,105,.05)}
 .dd-manual{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;min-width:640px;padding:14px}
 .dd-group{display:flex;flex-direction:column;gap:2px}
 .dd-title{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-soft);padding:6px 10px 8px}
-.dd-manual a{display:flex;align-items:center;gap:9px;min-block-size:44px;color:var(--muted);padding:8px 10px;border-radius:8px;font-size:.85rem;line-height:1.35;transition:color .14s ease,background-color .14s ease}
+.dd-manual a{display:flex;align-items:center;justify-content:center;gap:9px;min-inline-size:44px;min-block-size:44px;color:var(--muted);padding:8px 10px;border-radius:8px;font-size:.85rem;line-height:1.35;transition:color .14s ease,background-color .14s ease}
 .dd-manual a.active{color:var(--amber-soft)}
 
 /* ---------- toc (播种计划表样式) ---------- */
