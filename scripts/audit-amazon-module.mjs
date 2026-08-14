@@ -115,18 +115,14 @@ try {
   }
   for (const [locale,fixture] of Object.entries(safeBoundaries)) if(droughtHit(fixture)) fail(`boundary-false-positive-${locale}`,fixture);
   // ---------- G4 privacy / commercial disclosure (six locales) ----------
-  // Every privacy page must disclose the provider scripts actually injected
-  // into that same HTML (GA4 / Google AdSense / Adsterra-effectivecpmnetwork),
-  // must disclose the data categories and purposes, must give cookie controls
-  // and provider policy links, and must not contain absolute anonymous /
-  // no-PII wording or an invented consent state. Fault injection per locale
-  // proves each check can fail (non-zero exit), so a vacuous assertion is
-  // itself a failure.
+  // Every privacy page must distinguish the services actually injected in the
+  // default build (GA4 and Adsterra) from configured-but-gated AdSense. It must
+  // disclose data categories, purposes, controls and provider policy links,
+  // without claiming active AdSense serving or an obtained consent state.
   const privacyLocales = ["en", "zh-CN", "zh-TW", "ja", "ko", "es"];
   const privacyRel = lang => lang === "en" ? "privacy.html" : `${lang}/privacy.html`;
   const INJECTED_PROVIDERS = {
     ga4: /googletagmanager\.com\/gtag\/js/,
-    adsense: /googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/,
     adsterra: /effectivecpmnetwork\.com/
   };
   const DISCLOSED_PROVIDERS = {
@@ -158,6 +154,22 @@ try {
     ko: /분석.{0,40}광고/,
     es: /análisis.{0,40}publicidad|publicidad.{0,40}análisis/is
   };
+  const ADSENSE_GATED = {
+    en: /AdSense.{0,220}(?:gated off|unless).{0,180}(?:serving|provider readiness).{0,120}(?:certified CMP readiness)/is,
+    "zh-CN": /AdSense.{0,220}(?:只有|条件).{0,180}(?:投放|服务商就绪).{0,120}(?:认证 CMP 就绪)/is,
+    "zh-TW": /AdSense.{0,220}(?:只有|條件).{0,180}(?:投放|服務商就緒).{0,120}(?:認證 CMP 就緒)/is,
+    ja: /AdSense.{0,320}配信.{0,120}プロバイダー準備.{0,120}認定 CMP 準備/is,
+    ko: /AdSense.{0,320}게재.{0,120}공급자 준비.{0,120}인증 CMP 준비/is,
+    es: /AdSense.{0,220}(?:bloqueado|salvo que).{0,180}(?:publicación|preparación del proveedor).{0,120}(?:CMP certificado)/is
+  };
+  const ADSENSE_NOT_SERVING = {
+    en: /does not mean that AdSense ads are currently serving/i,
+    "zh-CN": /不代表 AdSense 广告目前正在投放/,
+    "zh-TW": /不代表 AdSense 廣告目前正在投放/,
+    ja: /現在 AdSense 広告が配信中であることを意味しません/,
+    ko: /현재 AdSense 광고가 게재 중이라는 뜻은 아닙니다/,
+    es: /no significa que los anuncios de AdSense se estén publicando ahora/i
+  };
   const OPT_OUT_URL = "https://tools.google.com/dlpage/gaoptout";
   const POLICY_URLS = [
     "https://policies.google.com/privacy",
@@ -179,6 +191,8 @@ try {
   const checkPrivacy = (lang, html) => {
     const out = [];
     for (const [name, re] of Object.entries(INJECTED_PROVIDERS)) if (!re.test(html)) out.push(`injected-${name}-missing`);
+    if ((html.match(/<meta name="google-adsense-account" content="ca-pub-4174270222899193" \/>/g) || []).length !== 1) out.push("adsense-account-meta-count");
+    if (/googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/.test(html)) out.push("adsense-serving-default-on");
     const prose = privacyTextOf(html);
     const desc = metaDescOf(html);
     for (const [name, tokens] of Object.entries(DISCLOSED_PROVIDERS)) {
@@ -188,6 +202,8 @@ try {
       if (re.test(prose) || re.test(desc)) out.push(`forbidden-absolute:${re}`);
     }
     if (!PURPOSE_PATTERNS[lang].test(prose)) out.push("purpose-missing");
+    if (!ADSENSE_GATED[lang].test(prose)) out.push("adsense-gates-missing");
+    if (!ADSENSE_NOT_SERVING[lang].test(prose)) out.push("adsense-status-misleading");
     if (!html.includes(OPT_OUT_URL)) out.push("ga-optout-missing");
     for (const url of POLICY_URLS) if (!html.includes(url)) out.push(`policy-link-missing:${url}`);
     if (AFFIRMATIVE_CONSENT[lang].test(prose)) out.push("forbidden-consent-claim");

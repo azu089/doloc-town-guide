@@ -16,10 +16,34 @@ const KIT = require("./lib/site-kit");   // 共用基建：URL/图片/sitemap/la
 const AFF = KIT.createAffiliate(DATA.site.affiliates);
 const esc = KIT.esc;
 const clean = KIT.clean;
+const ADSENSE_FIXTURE_ENABLED = process.env.NODE_ENV === "test" && process.env.DOLOC_ADSENSE_FIXTURE === "enabled";
+const ADSENSE_PUBLISHER_ID = /^pub-\d+$/.test(String(DATA.site.adsenseId || "").trim())
+  ? String(DATA.site.adsenseId).trim()
+  : "";
+const ADSENSE_CLIENT_ID = ADSENSE_PUBLISHER_ID ? `ca-${ADSENSE_PUBLISHER_ID}` : "";
+const ADSENSE_SERVING_ENABLED = Boolean(
+  ADSENSE_CLIENT_ID && (
+    ADSENSE_FIXTURE_ENABLED || (
+      DATA.site.adsenseServing &&
+      DATA.site.adsenseServing.enabled === true &&
+      DATA.site.adsenseServing.providerReady === true &&
+      DATA.site.adsenseServing.certifiedCmpReady === true
+    )
+  )
+);
+const adsenseMeta = () => ADSENSE_CLIENT_ID
+  ? `<meta name="google-adsense-account" content="${esc(ADSENSE_CLIENT_ID)}" />`
+  : "";
+const adsenseScript = () => ADSENSE_SERVING_ENABLED
+  ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(ADSENSE_CLIENT_ID)}" crossorigin="anonymous"></script>`
+  : "";
 const LANGS = DATA.site.languages || ["en"];
 const DEF = DATA.site.defaultLanguage || "en";
 const CSS_V = crypto.createHash("md5").update(fs.readFileSync(path.join(ROOT,"templates","style.css"),"utf8")).digest("hex").slice(0,8);
-const today = new Date().toISOString().slice(0,10);
+const today = DATA.site.contentUpdatedAt;
+if (!/^\d{4}-\d{2}-\d{2}$/.test(today || "")) {
+  throw new Error("data/site.json site.contentUpdatedAt must be YYYY-MM-DD");
+}
 const urlOf = KIT.createUrl({ domain: DATA.site.domain, defaultLang: DEF });
 const LASTMOD_PATH = process.env.DOLOC_LASTMOD_PATH
   ? path.resolve(process.env.DOLOC_LASTMOD_PATH)
@@ -298,7 +322,6 @@ function hreflang(slug){
 function head(title, desc, extraLd, slug, lang, ogImage){
   const ld = JSON.stringify([siteLd(lang)].concat(extraLd || []));
   const gsc = DATA.site.gscVerification ? `<meta name="google-site-verification" content="${esc(DATA.site.gscVerification)}" />` : "";
-  const adsenseMeta = DATA.site.adsenseId ? `<meta name="google-adsense-account" content="ca-${esc(DATA.site.adsenseId)}" />` : "";
   // Awin 联盟所有权验证：官方要求是「源代码里出现 Awin 字样」，没有规定 meta 名称，这里用描述性名字。
   // 值可以是任意字符串（拿到正式验证码就换成那个）；未配置时不输出。
   const awin = DATA.site.awinVerification ? `<meta name="awin-site-verification" content="${esc(DATA.site.awinVerification)}" />` : "";
@@ -334,7 +357,7 @@ ${hreflang(slug)}
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 ${gsc}
-${adsenseMeta}${awin}${impact}
+  ${adsenseMeta()}${awin}${impact}
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="${esc(siteI18n(lang).name)}" />
 <meta property="og:title" content="${esc(title)}" />
@@ -499,7 +522,7 @@ function footer(lang, { omitAdsterra = false } = {}){
         <p>${esc(s.footerSource)} · ${today}</p>
       </div>
     </div>
-    ${DATA.site.adsenseId ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${esc(DATA.site.adsenseId)}" crossorigin="anonymous"></script>` : ""}\n    ${DATA.site.adsterra && !omitAdsterra ? DATA.site.adsterra : ""}
+    ${adsenseScript()}\n    ${DATA.site.adsterra && !omitAdsterra ? DATA.site.adsterra : ""}
   </div>
 ${decisionEventsScript()}
 <script>
@@ -1003,14 +1026,26 @@ function renderStatic(lang, slug, title, body, descOverride){
   return renderFull(lang, title, desc, [breadcrumbLd({slug,title}, lang)], slug, `<main class="container"><div class="article-wrap single"><article><div class="page-hero reveal"><span class="evidence-tag">${esc(s.plotTag)} // ${esc(slug.toUpperCase())}</span><h1>${esc(title)}</h1></div>${body}</article></div></main>`);
 }
 const PRIVACY_DESC = {
-  en: n => `Privacy policy for ${n}: which analytics and advertising services we use, how cookies work, and how to control them.`,
-  "zh-CN": n => `关于${n}的隐私政策：我们使用哪些分析与广告服务、Cookie 如何使用，以及如何控制。`,
-  "zh-TW": n => `關於${n}的隱私政策：我們使用哪些分析與廣告服務、Cookie 如何使用，以及如何控制。`,
-  ja: n => `${n}のプライバシーポリシー：利用している分析・広告サービス、Cookie の使い方と制御方法について。`,
-  ko: n => `${n} 개인정보 처리방침: 이용 중인 분석·광고 서비스, 쿠키 사용 방식과 통제 방법을 안내합니다.`,
-  es: n => `Política de privacidad de ${n}: qué servicios de análisis y publicidad usamos, cómo se usan las cookies y cómo controlarlas.`
+  en: n => `Privacy policy for ${n}: which analytics and advertising services load or are configured, how cookies work, and how to control them.`,
+  "zh-CN": n => `关于${n}的隐私政策：哪些分析与广告服务会加载或仅已配置、Cookie 如何使用，以及如何控制。`,
+  "zh-TW": n => `關於${n}的隱私政策：哪些分析與廣告服務會載入或僅已設定、Cookie 如何使用，以及如何控制。`,
+  ja: n => `${n}のプライバシーポリシー：読み込まれるものと設定のみの分析・広告サービス、Cookie の使い方と制御方法について。`,
+  ko: n => `${n} 개인정보 처리방침: 로드되는 분석·광고 서비스와 설정만 된 서비스, 쿠키 사용 방식과 통제 방법을 안내합니다.`,
+  es: n => `Política de privacidad de ${n}: servicios de análisis o publicidad cargados o configurados, cookies y controles.`
 };
 const privacyDescOf = (lang, siteName) => (PRIVACY_DESC[lang] || PRIVACY_DESC.en)(siteName);
+const PRIVACY_SERVICE_SECTIONS = {
+  en: `<h2 style="font-size:1.05rem;margin:18px 0 8px">What we collect</h2><p>This site loads Google Analytics (GA4) for analytics and loads Adsterra (effectivecpmnetwork) advertising on the seven eligible guide pages. Google AdSense account metadata and ads.txt are configured, but its serving script is gated off unless serving, provider readiness and certified CMP readiness are all explicitly enabled. Configuration does not mean that AdSense ads are currently serving. The active services may process your IP address, browser and device information, the pages you visit, the referring page, an approximate region, and cookies or similar identifiers for analytics, advertising, fraud prevention and reporting.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookies and identifiers</h2><p>Google Analytics and eligible-page Adsterra may set cookies or similar identifiers. If Google AdSense serving is enabled later, it may also use advertising identifiers under Google's policies. You can block or delete cookies in your browser settings and opt out of Google Analytics with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out browser add-on</a>. This site does not show a consent banner and does not claim that consent for third-party tracking has been obtained.</p>`,
+  "zh-CN": `<h2 style="font-size:1.05rem;margin:18px 0 8px">我们收集什么</h2><p>本站会加载用于分析的 Google Analytics（GA4），并在 7 个符合条件的攻略页加载 Adsterra（effectivecpmnetwork）广告。Google AdSense 账户元数据与 ads.txt 已配置，但只有在投放、服务商就绪和认证 CMP 就绪三个条件都被明确开启时，才会加载 AdSense 投放脚本。已配置不代表 AdSense 广告目前正在投放。正在加载的服务可能处理您的 IP 地址、浏览器与设备信息、访问页面、来源页面、大致地区及 Cookie 或类似标识符，用于分析与广告、防欺诈及报告。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookie 与标识符</h2><p>Google Analytics 与符合条件页面上的 Adsterra 可能设置 Cookie 或类似标识符。如果日后开启 Google AdSense 投放，它也可能依据 Google 政策使用广告标识符。您可以在浏览器设置中阻止或删除 Cookie，也可以安装 <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics 停用浏览器插件</a> 选择退出 Google Analytics。本站未显示同意横幅，也不声称已获得任何第三方跟踪同意。</p>`,
+  "zh-TW": `<h2 style="font-size:1.05rem;margin:18px 0 8px">我們收集什麼</h2><p>本站會載入用於分析的 Google Analytics（GA4），並在 7 個符合條件的攻略頁載入 Adsterra（effectivecpmnetwork）廣告。Google AdSense 帳戶後設資料與 ads.txt 已設定，但只有在投放、服務商就緒和認證 CMP 就緒三個條件都被明確開啟時，才會載入 AdSense 投放腳本。已設定不代表 AdSense 廣告目前正在投放。正在載入的服務可能處理您的 IP 位址、瀏覽器與裝置資訊、造訪頁面、來源頁面、大致地區及 Cookie 或類似識別碼，用於分析與廣告、防詐欺及報告。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookie 與識別碼</h2><p>Google Analytics 與符合條件頁面上的 Adsterra 可能設定 Cookie 或類似識別碼。如果日後開啟 Google AdSense 投放，它也可能依 Google 政策使用廣告識別碼。您可以在瀏覽器設定中封鎖或刪除 Cookie，也可以安裝 <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics 停用瀏覽器外掛</a> 選擇退出 Google Analytics。本站未顯示同意橫幅，也不聲稱已獲得任何第三方追蹤同意。</p>`,
+  ja: `<h2 style="font-size:1.05rem;margin:18px 0 8px">収集する情報</h2><p>本サイトは分析用の Google Analytics（GA4）を読み込み、7 つの対象攻略ページで Adsterra（effectivecpmnetwork）広告を読み込みます。Google AdSense のアカウント用メタデータと ads.txt は設定済みですが、配信、プロバイダー準備、認定 CMP 準備の 3 条件がすべて明示的に有効化されない限り、AdSense 配信スクリプトは読み込まれません。設定済みであることは、現在 AdSense 広告が配信中であることを意味しません。読み込まれるサービスは、IP アドレス、ブラウザー・端末情報、閲覧ページ、参照元、おおよその地域、Cookie や類似の識別子を、分析と広告、不正防止、レポートのために処理する場合があります。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookie と識別子</h2><p>Google Analytics と対象ページの Adsterra は Cookie や類似の識別子を設定する場合があります。将来 Google AdSense 配信を有効化した場合は、Google のポリシーに従って広告識別子を利用する可能性もあります。ブラウザー設定で Cookie をブロック・削除できるほか、<a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics オプトアウトアドオン</a>で Google Analytics を無効化できます。本サイトは同意バナーを表示しておらず、第三者によるトラッキングの同意を得たとは主張しません。</p>`,
+  ko: `<h2 style="font-size:1.05rem;margin:18px 0 8px">수집하는 정보</h2><p>본 사이트는 분석용 Google Analytics(GA4)를 로드하고, 대상 가이드 7개에서 Adsterra(effectivecpmnetwork) 광고를 로드합니다. Google AdSense 계정 메타데이터와 ads.txt는 설정되어 있지만, 광고 게재, 공급자 준비, 인증 CMP 준비의 세 조건이 모두 명시적으로 활성화되지 않으면 AdSense 게재 스크립트는 로드되지 않습니다. 설정되었다고 해서 현재 AdSense 광고가 게재 중이라는 뜻은 아닙니다. 로드되는 서비스는 IP 주소, 브라우저·기기 정보, 방문 페이지, 유입 경로, 대략적인 지역, 쿠키나 유사 식별자를 분석과 광고, 사기 방지, 보고 목적으로 처리할 수 있습니다.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">쿠키 및 식별자</h2><p>Google Analytics와 대상 페이지의 Adsterra는 쿠키나 유사 식별자를 설정할 수 있습니다. 향후 Google AdSense 게재를 활성화하면 Google 정책에 따라 광고 식별자를 사용할 수도 있습니다. 브라우저 설정에서 쿠키를 차단·삭제할 수 있고, <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics 차단 부가기능</a>으로 Google Analytics를 거부할 수 있습니다. 본 사이트는 동의 배너를 표시하지 않으며, 제3자 추적에 대한 동의를 받았다고 주장하지 않습니다.</p>`,
+  es: `<h2 style="font-size:1.05rem;margin:18px 0 8px">Qué recopilamos</h2><p>Este sitio carga Google Analytics (GA4) para análisis y publicidad de Adsterra (effectivecpmnetwork) en las siete guías que cumplen los criterios. Los metadatos de cuenta de Google AdSense y ads.txt están configurados, pero su script de publicación permanece bloqueado salvo que se habiliten expresamente la publicación, la preparación del proveedor y la de un CMP certificado. La configuración no significa que los anuncios de AdSense se estén publicando ahora. Los servicios activos pueden procesar tu dirección IP, información del navegador o dispositivo, las páginas visitadas, la referencia, una región aproximada y cookies o identificadores similares para análisis y publicidad, prevención de fraude e informes.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookies e identificadores</h2><p>Google Analytics y Adsterra en las páginas aptas pueden instalar cookies o identificadores similares. Si Google AdSense se habilita más adelante, también podrá usar identificadores publicitarios según las políticas de Google. Puedes bloquear o eliminar cookies en la configuración del navegador y excluirte de Google Analytics con el <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">complemento de exclusión de Google Analytics</a>. Este sitio no muestra un banner de consentimiento ni afirma haber obtenido consentimiento para el rastreo de terceros.</p>`,
+};
+const PRIVACY_THIRD_PARTY_HEADING = {
+  en: "Third-party services", "zh-CN": "第三方服务", "zh-TW": "第三方服務",
+  ja: "第三者サービス", ko: "제3자 서비스", es: "Servicios de terceros",
+};
 function genStatic(lang){
   const s = siteI18n(lang);
   const dir = path.join(OUT, lang === DEF ? "" : lang);
@@ -1018,7 +1053,7 @@ function genStatic(lang){
   const aboutBody = `<p>${esc(s.aboutText)}</p><h2 style="font-size:1.05rem;margin:18px 0 8px">${esc(s.aboutSources)}</h2><ul class="checks">${aboutPoints.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
   writePage(path.join(dir,"about.html"), "about", lang, renderStatic(lang,"about", s.aboutTitle,
     aboutBody + `<section class="card">` + KIT.editorialPolicy(lang, { siteName: s.name, contactEmail: `contact@${DATA.site.domain}` }) + `</section>`));
-  const privacyBody = lang==="zh-CN"
+  const privacyBodyLegacy = lang==="zh-CN"
     ? `<p>这是游戏攻略网站，我们尊重访问者隐私。以下说明我们收集什么、如何使用。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">我们收集什么</h2><p>本站会加载用于分析与广告的第三方脚本：Google Analytics（GA4）、Google AdSense 与 Adsterra（effectivecpmnetwork）。这些服务可能处理您的 IP 地址、浏览器与设备信息、您访问的页面、来源页面、大致地区，以及 Cookie 或类似标识符。相关信息用于分析、广告、防欺诈与报告。正常浏览攻略时我们不会主动索取您的姓名或邮箱，我们也不出售访客数据。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookie 与标识符</h2><p>上述服务可能在您的设备上设置 Cookie 或类似标识符。您可以在浏览器设置中阻止或删除 Cookie，也可以安装 <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics 停用浏览器插件</a> 选择退出 Google Analytics。本站未显示同意横幅，也不声称已获得任何第三方跟踪同意。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">第三方服务</h2><p>字体来自 Google Fonts，站点由 Cloudflare CDN 提供服务。这些服务商可能记录标准访问日志（如 IP 地址、用户代理与时间），并遵循各自的保留政策；我们无法控制其保留期限。请查看相关隐私政策：<a href="https://policies.google.com/privacy" rel="noopener">Google 隐私政策</a>（Google Analytics 与 AdSense）、<a href="https://policies.google.com/technologies/ads" rel="noopener">Google 广告技术</a>、<a href="https://adsterra.com/privacy-policy/" rel="noopener">Adsterra 隐私政策</a>、<a href="https://developers.google.com/fonts/faq" rel="noopener">Google Fonts FAQ</a> 与 <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare 隐私政策</a>。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">联系我们</h2><p>隐私问题请邮件 <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a>。</p><p style="margin-top:14px;opacity:.75">生效日期：${today}</p>`
     : lang==="zh-TW"
     ? `<p>這是遊戲攻略網站，我們尊重訪問者隱私。以下說明我們收集什麼、如何使用。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">我們收集什麼</h2><p>本站會載入用於分析與廣告的第三方腳本：Google Analytics（GA4）、Google AdSense 與 Adsterra（effectivecpmnetwork）。這些服務可能處理您的 IP 位址、瀏覽器與裝置資訊、您造訪的頁面、來源頁面、大致地區，以及 Cookie 或類似識別碼。相關資訊用於分析、廣告、防詐欺與報告。正常瀏覽攻略時我們不會主動索取您的姓名或電子郵件，我們也不出售訪客資料。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookie 與識別碼</h2><p>上述服務可能在您的裝置上設定 Cookie 或類似識別碼。您可以在瀏覽器設定中封鎖或刪除 Cookie，也可以安裝 <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics 停用瀏覽器外掛</a> 選擇退出 Google Analytics。本站未顯示同意橫幅，也不聲稱已獲得任何第三方追蹤同意。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">第三方服務</h2><p>字型來自 Google Fonts，網站由 Cloudflare CDN 提供服務。這些服務商可能記錄標準存取記錄（如 IP 位址、使用者代理與時間），並遵循各自的保留政策；我們無法控制其保留期限。請查看相關隱私政策：<a href="https://policies.google.com/privacy" rel="noopener">Google 隱私政策</a>（Google Analytics 與 AdSense）、<a href="https://policies.google.com/technologies/ads" rel="noopener">Google 廣告技術</a>、<a href="https://adsterra.com/privacy-policy/" rel="noopener">Adsterra 隱私政策</a>、<a href="https://developers.google.com/fonts/faq" rel="noopener">Google Fonts FAQ</a> 與 <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare 隱私政策</a>。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">聯絡我們</h2><p>隱私問題請寄電子郵件至 <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a>。</p><p style="margin-top:14px;opacity:.75">生效日期：${today}</p>`
@@ -1029,6 +1064,11 @@ function genStatic(lang){
     : lang==="ja"
     ? `<p>これはゲーム攻略サイトです。訪問者のプライバシーを尊重します。以下、収集内容と利用方法を説明します。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">収集する情報</h2><p>このサイトは分析と広告のために第三者スクリプト（Google Analytics（GA4）、Google AdSense、Adsterra（effectivecpmnetwork））を読み込みます。これらのサービスは、IP アドレス、ブラウザー・端末情報、閲覧したページ、参照元、おおよその地域、Cookie や類似の識別子を処理する可能性があります。情報は分析、広告、不正防止、レポートのために利用されます。通常の攻略ページの閲覧では氏名やメールアドレスの入力は求めません。訪問者データを販売することはありません。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookie と識別子</h2><p>上記のサービスはお使いの端末に Cookie や類似の識別子を設定する場合があります。ブラウザー設定で Cookie をブロック・削除できるほか、<a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics オプトアウトアドオン</a>で Google Analytics を無効化できます。本サイトは同意バナーを表示しておらず、第三者によるトラッキングの同意を得たとは主張しません。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">第三者サービス</h2><p>フォントは Google Fonts から、サイトは Cloudflare の CDN から提供されています。これらの事業者は標準的なアクセスログ（IP アドレス・ユーザーエージェント・時刻など）を記録し、それぞれの保存ポリシーに従います。保存期間を当サイトが管理することはできません。関連するプライバシーポリシーをご確認ください：<a href="https://policies.google.com/privacy" rel="noopener">Google プライバシーポリシー</a>（Google Analytics と AdSense）、<a href="https://policies.google.com/technologies/ads" rel="noopener">Google 広告テクノロジー</a>、<a href="https://adsterra.com/privacy-policy/" rel="noopener">Adsterra プライバシーポリシー</a>、<a href="https://developers.google.com/fonts/faq" rel="noopener">Google Fonts FAQ</a>、<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare プライバシーポリシー</a>。</p><h2 style="font-size:1.05rem;margin:18px 0 8px">お問い合わせ</h2><p>プライバシーに関する質問は <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a> まで。</p><p style="margin-top:14px;opacity:.75">発効日：${today}</p>`
     : `<p>This is a game guide website and we respect visitor privacy. This policy explains what we collect and how it is used.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">What we collect</h2><p>This site loads third-party scripts for analytics and advertising: Google Analytics (GA4), Google AdSense and Adsterra (effectivecpmnetwork). These services may process your IP address, browser and device information, the pages you visit, the referring page, an approximate region, and cookies or similar identifiers. The information is used for analytics, advertising, fraud prevention and reporting. Browsing the guides does not require you to provide your name or email address, and we do not sell visitor data.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Cookies and identifiers</h2><p>The services mentioned above may set cookies or similar identifiers on your device. You can block or delete cookies in your browser settings, and you can opt out of Google Analytics with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out browser add-on</a>. This site does not show a consent banner and does not claim that consent for third-party tracking has been obtained.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Third-party services</h2><p>Fonts are loaded from Google Fonts and the site is served through Cloudflare's CDN. These providers may record standard access logs (such as IP address, user agent and time) and follow their own retention policies, which we do not control. Please review the privacy policies of the providers we use: <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> (Google Analytics and AdSense), <a href="https://policies.google.com/technologies/ads" rel="noopener">Google Ads technologies</a>, <a href="https://adsterra.com/privacy-policy/" rel="noopener">Adsterra Privacy Policy</a>, <a href="https://developers.google.com/fonts/faq" rel="noopener">Google Fonts FAQ</a> and <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare Privacy Policy</a>.</p><h2 style="font-size:1.05rem;margin:18px 0 8px">Contact</h2><p>For privacy questions, email <a href="mailto:contact@${esc(DATA.site.domain)}">contact@${esc(DATA.site.domain)}</a>.</p><p style="margin-top:14px;opacity:.75">Effective date: ${today}</p>`;
+  const firstHeading = privacyBodyLegacy.indexOf("<h2");
+  const thirdHeading = `<h2 style="font-size:1.05rem;margin:18px 0 8px">${PRIVACY_THIRD_PARTY_HEADING[lang] || PRIVACY_THIRD_PARTY_HEADING.en}</h2>`;
+  const thirdHeadingAt = privacyBodyLegacy.indexOf(thirdHeading);
+  if (firstHeading < 0 || thirdHeadingAt < 0) throw new Error(`Privacy section boundary missing for ${lang}`);
+  const privacyBody = privacyBodyLegacy.slice(0, firstHeading) + (PRIVACY_SERVICE_SECTIONS[lang] || PRIVACY_SERVICE_SECTIONS.en) + privacyBodyLegacy.slice(thirdHeadingAt);
   writePage(path.join(dir,"privacy.html"), "privacy", lang, renderStatic(lang,"privacy", s.privacyTitle, privacyBody, privacyDescOf(lang, s.name)));
   const contactPh = lang==="zh-CN"||lang==="zh-TW" ? "联系我们："
     : lang==="ja" ? "お問い合わせ："
@@ -1046,7 +1086,7 @@ function genStatic(lang){
 function gen404(){
   const s404 = siteI18n(DEF);
   const pop404 = DATA.pages.filter(p=>["how-to-play","fishing","automation","faq"].includes(p.slug)).map(p=>`<a href="/${p.slug}" style="display:inline-block;margin:6px;padding:9px 16px;border:1px solid var(--border);border-radius:10px;color:var(--muted);text-decoration:none">${esc(p.title)}</a>`).join("");
-  fs.writeFileSync(path.join(OUT,"404.html"), `<!DOCTYPE html><html lang="${LANG_META[DEF].html}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>404 - ${esc(s404.name)}</title><meta name="robots" content="noindex" /><link rel="stylesheet" href="/css/style.css?v=${CSS_V}"></head><body>${header(DEF,"")}<main class="container" style="padding-top:70px;text-align:center"><section class="card grow-card" style="max-width:560px;margin:0 auto"><h1 style="font-size:3rem">404</h1><p>This page doesn't exist. Try one of these guides instead:</p><div style="margin:18px 0">${pop404}</div><p><a class="btn btn-primary" href="/">← Back to Home</a></p></section></main>${footer(DEF)}</body></html>`);
+  fs.writeFileSync(path.join(OUT,"404.html"), `<!DOCTYPE html><html lang="${LANG_META[DEF].html}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>404 - ${esc(s404.name)}</title><meta name="robots" content="noindex" />${adsenseMeta()}<link rel="stylesheet" href="/css/style.css?v=${CSS_V}"></head><body>${header(DEF,"")}<main class="container" style="padding-top:70px;text-align:center"><section class="card grow-card" style="max-width:560px;margin:0 auto"><h1 style="font-size:3rem">404</h1><p>This page doesn't exist. Try one of these guides instead:</p><div style="margin:18px 0">${pop404}</div><p><a class="btn btn-primary" href="/">← Back to Home</a></p></section></main>${footer(DEF)}</body></html>`);
 }
 
 /* ---------- JSON-LD ---------- */
