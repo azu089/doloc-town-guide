@@ -517,6 +517,11 @@ function decisionEventsScript() {
   function toolRoot(el){
     return el && el.closest && el.closest('.ff,.ach,.tool-shell,.tool-panel,.tracker,[data-tool]');
   }
+  function placementOf(a){
+    if (a.closest('.store-compare')) return 'store_compare';
+    if (a.closest('.sources')) return 'source_list';
+    return 'content';
+  }
   document.addEventListener('click', function(e){
     var a = e.target.closest && e.target.closest('a[href]');
     if (a) {
@@ -527,7 +532,8 @@ function decisionEventsScript() {
           send(affiliate ? 'affiliate_click' : 'outbound_click', {
             link_domain: u.hostname,
             link_url: u.origin + u.pathname,
-            page_path: location.pathname
+            page_path: location.pathname,
+            link_placement: placementOf(a)
           });
         }
       } catch (_) {}
