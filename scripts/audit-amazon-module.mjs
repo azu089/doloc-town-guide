@@ -184,6 +184,7 @@ const claimLexicons = {
     station:/\b(?:(?:work|farm|drone) ?stations?|bases?)\b/iu,
     drone:/\b(?:drones?|drone crews?|drone fleet)\b/iu,
     relation:/(?:→|->|\b(?:first|before|then|next|after|finally|last|follow(?:s|ing)?|lead(?:s)? to|progress(?:es)? through|unlock(?:s|ed)?|open(?:s|ed)?|enable(?:s|d)?|powers|powered|feed(?:s)?|drive(?:s)?|require(?:s|d)?|depend(?:s|ed)?|must|only after|once)\b)/iu,
+    orderCausality:/(?:→|->|\bfirst\b[^.!?]{0,120}\b(?:then|next|finally|last)\b|\b(?:then|next)\b[^.!?]{0,120}\b(?:finally|last)\b|\bin (?:this|the) order\b|\b(?:build|progress(?:es)?)\b[^.!?]{0,80}\bsequence\b)/iu,
     prerequisite:/\b(?:prerequisite|precondition|required before|must (?:be|come|finish)|need(?:s|ed)? to .* before|only after)\b/iu,
     dependency:/\b(?:depend(?:s|ed|ency)?|requir(?:e|es|ed)|rel(?:y|ies) on|powered by|drives?|feeds?|leads? to|unlocks?|enables?)\b/iu,
     architecture:/\b(?:architecture|stack|layers?|tiers?|stages?|phases?|pipeline|chain|whole system|fixed system|standard system|technology tree|tech tree)\b/iu,
@@ -296,6 +297,7 @@ const claimLexicons = {
     station:/(?:작업 스테이션|스테이션|기지|드론 기지)/u,
     drone:/드론/u,
     relation:/(?:→|->|전제|필수|필요|먼저|다음|그 후|마지막|이후|해금|잠금 해제|의존|구동|이어지|거쳐)/u,
+    orderCausality:/(?:→|->|먼저[^.!?。\n]{0,120}(?:다음|그 다음|마지막)|(?:다음|그 다음)[^.!?。\n]{0,120}마지막|(?:이|그)\s*순서(?:로|대로)|순서대로)/u,
     prerequisite:/(?:전제|필수 조건|먼저[^.]{0,25}(?:완성|구축|필요)|끝내야|완료해야)/u,
     dependency:/(?:의존|구동|이어지|해금|필요로|공급해야)/u,
     architecture:/(?:아키텍처|구조|고정|표준|층|단계|페이즈|스택|체인|테크 트리)/u,
@@ -438,7 +440,7 @@ const claimFamilyHit = (input, localeHint="") => {
         if (lex.techTree.test(unit) && (lex.auto.test(unit) || componentCount>=1)) return hit("automation-technology-tree");
         if (lex.prerequisite.test(unit) && componentCount>=2) return hit("automation-prerequisite");
         if (lex.dependency.test(unit) && componentCount>=2) return hit("automation-dependency");
-        if (lex.relation.test(unit) && componentCount>=2) return hit("automation-order");
+        if ((lex.orderCausality || lex.relation).test(unit) && componentCount>=2) return hit("automation-order");
         if (lex.early.test(unit) && lex.mid.test(unit) && lex.late.test(unit)) return hit("automation-timing");
         if (lex.community.test(unit) && lex.general.test(unit) && (lex.route.test(unit) || lex.relation.test(unit) || componentCount>=2)) return hit("automation-consensus");
         if (lex.architecture.test(unit) && (componentCount>=2 || (automationNamed && /(?:2|3|two|three|两|兩|二|三|두|세|dos|tres)/iu.test(unit)))) return hit("automation-architecture");
@@ -717,6 +719,10 @@ const naturalJapaneseTreeFixtures = [
   "農業オートメーションと農場ドローン基地は一個の技術ツリーです。",
   "農業オートメーションと農場ドローン基地は単一のツリーです。",
 ];
+const safeChronologyFixtures = {
+  en:{rel:"automation.html",text:"After Early Access, the official 1.0 notes list solar power, wind power, farming automation and drone stations."},
+  ko:{rel:"ko/automation.html",text:"앞서 해보기 이후 공식 1.0 공지는 태양광, 풍력, 농업 자동화와 드론 기지를 나열합니다."},
+};
 contentClaimFaults["natural-ja-one-tree-source"]={layer:"source",locale:"ja",rel:"ja/how-long-to-beat.html",text:naturalJapaneseTreeFixtures[0],expectedFamily:"automation-technology-tree"};
 residualClaimFaultNames.push("natural-ja-one-tree-source");
 const matrixCoverage=(faultNames,expectedCount,label)=>{
@@ -784,6 +790,7 @@ const fishingRecipeInventory = {
   generated_metadata: {documents:0, recipe_hits:0},
   generated_jsonld: {documents:0, recipe_hits:0},
 };
+const safeChronologyInventory = {source:[], effective:[]};
 try {
   generate(disabled,false); generate(enabled,true);
   const offFiles=walk(disabled), onFiles=walk(enabled);
@@ -899,6 +906,14 @@ try {
       values.push(automationPhaseFault.text);
     scanClaimRecords({values,locale,route:rel,layer:"effective",source:"data/site.json"});
   }
+  for (const [locale,spec] of Object.entries(safeChronologyFixtures)) {
+    const record={
+      values:collectStringLeaves({sections:[{body:spec.text}]}),
+      locale,route:spec.rel,layer:"effective",source:"safe-chronology:effective-extractor",
+    };
+    scanClaimRecords(record);
+    safeChronologyInventory.effective.push(`${locale}:${spec.rel}`);
+  }
   const automationSafeBoundaries = [
     "Official 1.0 notes describe farming automation and drone stations.",
     "Patch 1.00.03 lists drone failures in certain situations as a known issue.",
@@ -929,6 +944,7 @@ try {
     "Named community testers describe their own device results; this site does not claim a hands-on test.",
     "Verify the requirement on your own device before spending parts.",
     "After Early Access, the official 1.0 notes separately list solar power, wind power, farming automation and drone stations.",
+    ...Object.values(safeChronologyFixtures).map(spec=>spec.text),
     "抢先体验结束后，官方 1.0 公告分别列出太阳能、风力、农业自动化与无人机站。",
     "搶先體驗結束後，官方 1.0 公告分別列出太陽能、風力、農業自動化與無人機站。",
     "早期アクセス終了後、公式1.0情報は太陽光、風力、農業オートメーション、ドローン基地を別々に列挙しています。",
@@ -1184,6 +1200,9 @@ try {
     return `${text}\n${localeVar}_AUDIT = ${JSON.stringify({[slug]:{body:spec.text}},null,2)}\n`;
   };
   const faultedBuildRaw=appendSourceFixture(buildRaw,sourceFaultSpec);
+  const safeChronologyBuildRaw=Object.entries(safeChronologyFixtures).reduce(
+    (text,[locale,spec])=>appendSourceFixture(text,{...spec,locale}),faultedBuildRaw,
+  );
   const sourceEntries = semanticSourceFiles.map(file => {
     const rel=path.relative(root,file);
     return {rel,text:rel==="data/build_content.py"?faultedBuildRaw:fs.readFileSync(file,"utf8")};
@@ -1201,6 +1220,15 @@ try {
     {rel:"data/gifts_pages.py",text:fs.readFileSync(path.join(root,"data/gifts_pages.py"),"utf8"),defaultLocale:"en"},
     {rel:"data/build_base.py",text:fs.readFileSync(path.join(root,"data/build_base.py"),"utf8"),defaultLocale:"en"},
   ]) for (const record of pythonSourceRecords({...spec,slugs})) { scanClaimRecords(record); scanSourceLanguageRecords(record); }
+  const chronologySourceRecords=pythonSourceRecords({text:safeChronologyBuildRaw,rel:"data/build_content.py",slugs,defaultLocale:"en"});
+  for (const [locale,spec] of Object.entries(safeChronologyFixtures)) {
+    const record=chronologySourceRecords.find(item=>item.locale===locale && item.route===spec.rel && item.values.includes(spec.text));
+    if (!record) fail("safe-chronology-source-extractor-missing",`${locale}:${spec.rel}`);
+    else {
+      scanClaimRecords(record);
+      safeChronologyInventory.source.push(`${locale}:${spec.rel}`);
+    }
+  }
   const baseData=JSON.parse(fs.readFileSync(path.join(root,"data/site.base.json"),"utf8"));
   scanClaimRecords({values:collectStringLeaves({site:baseData.site,game:baseData.game}),locale:"en",route:"index.html",layer:"source",source:"data/site.base.json:json-leaf"});
   for (const page of baseData.pages||[]) scanClaimRecords({values:collectStringLeaves(page),locale:"en",route:`${page.slug}.html`,layer:"source",source:"data/site.base.json:json-leaf"});
@@ -1484,5 +1512,5 @@ if (!fault && !failures.length) {
     }
   }
 }
-console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:trackedSourceInventory.length,tracked_source_inventory:trackedSourceInventory,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fishing_recipe_inventory:fishingRecipeInventory,fishing_recipe_faults:fishingRecipeFaultNames,automation_phase_faults:automationPhaseFaultNames,content_claim_faults:contentClaimFaultNames,residual_claim_faults:residualClaimFaultNames,automation_claim_families:unsupportedAutomationPatterns.map(([family])=>family),rare_fish_claim_families:rareFishPatterns.map(([family])=>family),gene_breeding_negative_control:"preserved_and_route_scoped",automation_generic_negative_control:"preserved",fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
+console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:trackedSourceInventory.length,tracked_source_inventory:trackedSourceInventory,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fishing_recipe_inventory:fishingRecipeInventory,fishing_recipe_faults:fishingRecipeFaultNames,automation_phase_faults:automationPhaseFaultNames,content_claim_faults:contentClaimFaultNames,residual_claim_faults:residualClaimFaultNames,automation_claim_families:unsupportedAutomationPatterns.map(([family])=>family),rare_fish_claim_families:rareFishPatterns.map(([family])=>family),safe_chronology_inventory:safeChronologyInventory,gene_breeding_negative_control:"preserved_and_route_scoped",automation_generic_negative_control:"preserved",fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
 process.exit(failures.length?1:0);
