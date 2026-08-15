@@ -38,9 +38,9 @@ site = {
   "keyFacts": [
    "1.0 full release: August 6, 2026 with complete story ending",
    "30+ hours of core gameplay, 100+ hours of additional content",
-   "Farming automation: solar + wind power → drone stations (new in 1.0)",
+   "Farming automation, solar and wind power, and drone stations (new in 1.0)",
    "Crop gene system: ~20 mutations across 30+ crops",
-   "Extreme weather you can turn to your advantage (acid rain, storms, drought)",
+   "Extreme weather with distinct crop-protection needs (acid rain, storms, drought)",
    "80 Steam achievements total (43 base + 37 new in 1.0)"
   ],
   "stats": [
@@ -55,7 +55,7 @@ site = {
    "Doloc Town is developed by RedSaw Games Studio and published by Logoi Games with Pathea Games as co-publisher.",
    "The game left Early Access on August 6, 2026 after launching in EA on May 8, 2025.",
    "Information on this site is fact-checked against the official Steam store page, official 1.0 announcement, publisher news and reputable media (CGMagazine, PCGamesN, RPGamer).",
-   "Community-sourced details are marked with a ⚠️ note until verified by hands-on play."
+   "Community-sourced details are marked with a ⚠️ note until their sources are verified."
   ],
   "nameI18n": {},
   "statsI18n": {}
@@ -83,21 +83,21 @@ P0 = [
    {"type":"list","tag":"PLATFORMS","heading":"Vertical Farming Basics","body":"Doloc Town's signature is building up, not out.",
     "items":["Craft planters and place them on stacked platforms to expand your farm vertically.","Jump and climb between levels — platforming is part of the farming.","Protect crops from acid rain, scorching heat and thunderstorms with covers and placement.","Sow, water and harvest by hand at first; drones take over after 1.0 automation."]},
    {"type":"table","tag":"WEATHER","heading":"Weather Effects at a Glance","body":"Extreme weather is dangerous — but you can weaponize it.",
-    "columns":["Weather","Effect on crops","How to turn it to your advantage"],
+    "columns":["Weather","Effect on crops","Source-backed response"],
     "rows":[["Acid rain","Erodes unprotected crops","Build covers; collect acid as a resource"],
     ["Scorching heat","Bakes the earth, dries soil","Time watering; plant heat-resistant gene strains"],
     ["Thunderstorm","Damages exposed fields","Harness lightning to power your farm"],
     ["Torrential rain","Floods low plots","Let it irrigate fields for free"],
-    ["Drought (Month 4)","Crops wither, prices spike","Stockpile and sell high during the price surge"]]},
+    ["Drought (Month 4)","Crops wither","Prepare crop protection and plan watering"]]},
    {"type":"steps","tag":"FIRST WEEK","heading":"First Week Priorities (Do This First)","body":"These five moves set up the whole run.",
     "items":[["Clear your starting plot","More build space = more crops = faster progress."],
     ["Build a planter and plant fast crops","Quick harvests fund everything else."],
     ["Talk to the townsfolk daily","Friendship unlocks recipes, tech and story — including Blooming Friendship."],
     ["Unlock the Guildmaster's quests","Bellad's tasks pay Tech Points for the tech tree."],
-    ["Start a stockpile before Month 4","Drought prices make a hoard profitable."]]},
+    ["Prepare before Month 4","Protect crops and plan watering for the dry season."]]},
    {"type":"list","tag":"COMBAT","heading":"Drone Combat for Beginners","body":"Your drone is your weapon and your survival tool.",
     "items":["RMB locks on, LMB shoots, Space dodges, R reloads.","Upgrade chassis, barrels and batteries for fire rate, damage and energy.","Charge beam (F) breaks shields on armored Scavenger Bugs.","Fit weapon and lighting modules before exploring ruins."]},
-   {"type":"note","tag":"1.0","heading":"What the 1.0 Release Changes for New Players","body":"The 1.0 update (August 6, 2026) adds a complete story ending, the Old City Ruins region, farming automation (solar + wind → drone stations), the Mushroom Fest and 37 new achievements. If you are starting now, you can automate chores much earlier than Early Access players could. ⚠️ Exact unlock order is still being verified in 1.0."},
+   {"type":"note","tag":"1.0","heading":"What the 1.0 Release Changes for New Players","body":"The 1.0 update (August 6, 2026) adds a complete story ending, the Old City Ruins region, farming automation, solar and wind power, drone stations, the Mushroom Fest and 37 new achievements. The official materials list these components but do not establish an unlock order. ⚠️ Exact unlock details remain pending source verification."},
    {"type":"faq","tag":"QUICK","heading":"Quick Answers",
     "items":[["Is Doloc Town single-player?","Yes. The developers have confirmed the 1.0 release is a single-player experience; co-op/multiplayer may be discussed later based on community feedback."],
     ["Do I need to water every day?","Yes at the start — but the 'Rain' mutation auto-waters neighbors, and 1.0 drone stations automate watering entirely."],
@@ -116,7 +116,7 @@ P0 = [
   "metaDescription":"How farming automation works in Doloc Town 1.0: build solar and wind power, deploy farming drone stations and let drones seed, nurture and harvest for you.",
   "intro":"The 1.0 release turns you from a farmer into a farm manager. Here is how to generate clean energy, deploy drone stations and automate the whole crop cycle.",
   "sections":[
-   {"type":"steps","tag":"1.0","heading":"How Farming Automation Works","body":"Automation has three layers: energy, stations and drones.",
+   {"type":"steps","tag":"1.0","heading":"Officially listed automation components","body":"Official materials list energy systems, farming drone stations and automated chores as separate components; no dependency is inferred.",
     "items":[["Harness solar and wind power","Build solar panels and wind turbines to generate clean energy for your farm."],
     ["Build farming drone stations","Stations are the control point that lets drones run farm operations."],
     ["Assign automated tasks","Drones handle seeding, nurturing plants and gathering yields end-to-end."],
@@ -133,7 +133,7 @@ P0 = [
     ["First drone station","Automated seeding","Mid game ⚠️"],
     ["Full crop cycle","Seed → nurture → harvest","Late game ⚠️"],
     ["Industrial line","Conveyor + new areas","1.0 endgame"]]},
-   {"type":"note","tag":"1.0","heading":"Why This Page Matters","body":"English guides for Doloc Town automation are virtually non-existent — most coverage stops at Early Access basics. This page is one of the first 1.0-specific automation references in English. Details marked ⚠️ will be updated after hands-on verification."}
+   {"type":"note","tag":"1.0","heading":"Source boundary","body":"This page summarizes the 1.0-specific automation components named by official materials. Details marked ⚠️ remain pending source verification."}
   ],
   "sources":[
    {"label":"Official Steam page (Farming Automation)","url":STEAM_URL},
@@ -174,11 +174,11 @@ P0 = [
   "slug":"fishing",
   "title":"Doloc Town Fishing Guide: Ponds, Weather & Rare Fish",
   "metaTitle":"Doloc Town Fishing Guide: Ponds, Weather, Rods & Rare Fish",
-  "metaDescription":"Doloc Town fishing explained: different ponds, rods and weather give different catches, plus how rare fish drop advanced parts for your drone.",
-  "intro":"Fishing is a full second career in Doloc Town. Different ponds, rods and weather change what you catch — and rare fish drop advanced drone parts.",
+  "metaDescription":"Doloc Town fishing guide: compare ponds, rods and weather, and verify current equipment requirements before targeting harder catches.",
+  "intro":"Fishing is a full second career in Doloc Town. Compare ponds, rods and weather, then verify current equipment requirements in your own game.",
   "sections":[
    {"type":"list","tag":"BASICS","heading":"Fishing Basics","body":"No bait required — just a rod and the right spot.",
-    "items":["Different ponds yield different fish.","Rod quality changes what you can catch.","Weather changes the catch table.","Rare fish drop advanced parts used in drone and tool upgrades."]},
+    "items":["Different ponds yield different fish.","Rod quality changes what you can catch.","Weather changes the catch table.","Verify each catch's current uses and equipment requirements in your own game."]},
    {"type":"table","tag":"CONDITIONS","heading":"What Changes Your Catch",
     "columns":["Factor","Effect"],
     "rows":[["Pond / water type","Each body of water has its own fish pool"],
@@ -189,7 +189,7 @@ P0 = [
     "items":[["Map the ponds","Visit every body of water and note what bites."],
     ["Match rod to target","Upgrade before chasing rare fish."],
     ["Fish through weather","Storms often bring uncommon catches."],
-    ["Turn fish into parts","Rare fish fund drone and tool upgrades."]]},
+    ["Check each catch","Verify its current sale value and uses in your own game before deciding what to keep."]]},
    {"type":"note","tag":"1.0","heading":"New Fish in 1.0","body":"The 1.0 update adds new fish species. ⚠️ The complete English fish list with per-pond and per-weather tables is being compiled and will be added here."}
   ],
   "sources":[
@@ -223,7 +223,7 @@ P0 = [
     "items":[["Upgrade battery first","Downtime kills; energy wins fights."],
     ["Then barrel","More damage per energy spent."],
     ["Fit a tactical module","Capacitor/Shadow Shooter scale with your build."],
-    ["Save parts from fishing","Rare fish drop advanced parts — fish to fund combat."]]},
+    ["Review catches before selling","Check each catch's current uses and value in your own game."]]},
    {"type":"note","tag":"TIP","heading":"Fighting Scavenger Bugs","body":"Armored Scavenger Bugs ignore normal fire. Charge the beam (F) to break their shield, then unload. ⚠️ Details from community guides; verify in 1.0."}
   ],
   "sources":[
@@ -313,7 +313,7 @@ P1 = [
     ["Build covers","Shield exposed plots before storms."],
     ["Use the Rain gene","Auto-watering mutation keeps soil moist."],
     ["Automate in 1.0","Drone stations handle seeding, nurturing and harvest."]]},
-   {"type":"note","tag":"TIP","heading":"Drought Strategy","body":"In drought month (Month 4) crops wither and prices spike. Stockpile your harvest before the drought and sell high during it."}
+   {"type":"note","tag":"TIP","heading":"Drought Strategy","body":"In drought month (Month 4), prepare crop protection and plan watering. The cited official notes do not establish a Month 4 price-arbitrage strategy."}
   ],
   "sources":[
    {"label":"Official Steam page (Farming)","url":STEAM_URL},
@@ -420,7 +420,7 @@ P1 = [
   "title":"Doloc Town Weather Guide: Acid Rain, Storms & Drought",
   "metaTitle":"Doloc Town Weather Guide: Acid Rain, Thunderstorms & Drought Strategies",
   "metaDescription":"Master Doloc Town extreme weather: protect crops from acid rain and heat, harness storms for power and profit from drought prices.",
-  "intro":"Extreme weather defines Doloc Town. Learn each threat — and how to turn it into an advantage.",
+  "intro":"Extreme weather defines Doloc Town. Learn each source-backed effect and prepare the corresponding protection.",
   "sections":[
    {"type":"table","tag":"THREATS","heading":"Weather Threats & Counters",
     "columns":["Weather","Risk","Counter"],
@@ -428,11 +428,11 @@ P1 = [
     ["Scorching heat","Bakes soil","Timed watering; heat-resistant genes"],
     ["Thunderstorm","Field damage","Harness lightning for power"],
     ["Torrential rain","Flooding","Free irrigation"],
-    ["Drought (Month 4)","Wither + price spike","Stockpile, sell high"]]},
+    ["Drought (Month 4)","Crops wither","Protect crops and plan watering"]]},
    {"type":"steps","tag":"POWER","heading":"Turning Storms into Power","body":"Weather is an energy source.",
     "items":[["Install lightning capture","Thunderstorms charge your farm's power."],
     ["Let rain irrigate","Skip manual watering during downpours."],
-    ["Time the drought","Hoarding before Month 4 pays off."]]},
+    ["Prepare for drought","Set up crop protection and a watering plan before Month 4."]]},
    {"type":"note","tag":"TIP","heading":"Farm Like the Weather Knows","body":"Check the forecast daily. A storm tomorrow means water today is wasted — but charging today is priceless."}
   ],
   "sources":[
@@ -497,7 +497,7 @@ P2 = [
     ["Jul 2026","1.0 pre-launch update."],
     ["Aug 6, 2026","1.0 full release."],["Aug 10, 2026","150,000+ copies sold — 4 days after the 1.0 full release (official announcement)."]]},
    {"type":"list","tag":"1.0","heading":"1.0 Full Release Highlights","body":"The complete 1.0 changelog, per the official announcement.",
-    "items":["New area: Old City Ruins (third large map area).","Complete main story ending.","Farming automation system (solar + wind → drone stations).","Mushroom Fest festival.","Additional character storylines.","New tools, combat drones, fish and accessories.","37 new achievements (80 total).","Season-themed weather changes and expanded localization."]}
+    "items":["New area: Old City Ruins (third large map area).","Complete main story ending.","Farming automation, solar and wind power, and drone stations.","Mushroom Fest festival.","Additional character storylines.","New tools, combat drones, fish and accessories.","37 new achievements (80 total).","Season-themed weather changes and expanded localization."]}
   ],
   "sources":[
    {"label":"Official 1.0 announcement","url":NEWS_URL},
@@ -518,7 +518,7 @@ P2 = [
     ["How long is the game?","30+ hours for the core story; 100+ hours with all the extras."],
     ["Is there romance in Doloc Town?","No — the developers confirmed there is no romance/marriage system. Social play is friendship-based."],
     ["What platforms is it on?","PC (Windows) via Steam. Minimum specs: i3 6100, 8GB RAM, GTX 460, DX11, 2GB storage."],
-    ["Is there farming automation?","Yes — new in 1.0. Solar and wind power drive farming drone stations that seed, nurture and harvest automatically."],
+    ["Is there farming automation?","Yes — new in 1.0. Official materials list solar and wind power, farming drone stations, and automatic seeding, nurturing and harvesting without establishing dependencies between those components."],
     ["What's new in 1.0?","Old City Ruins, complete story ending, farming automation, Mushroom Fest, new tools/drones/fish/accessories and 37 new achievements."]]}
   ],
   "sources":[

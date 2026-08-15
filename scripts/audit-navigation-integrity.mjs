@@ -130,6 +130,24 @@ try {
   } else if (fault === "logo-transition-all") {
     const target = path.join(out, "css", "style.css");
     fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("white-space:nowrap;transition:none", "white-space:nowrap;transition:all .16s ease"));
+  } else if (fault === "component-stats-layout") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace(".stats{display:grid", ".stats{display:block"));
+  } else if (fault === "component-button-target") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("min-block-size:var(--control-min)", "min-block-size:20px"));
+  } else if (fault === "component-button-focus") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace(".btn:focus-visible{outline:3px solid var(--amber-soft)", ".btn:focus-visible{outline:none"));
+  } else if (fault === "mobile-header-height") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replaceAll("padding-top:3px;padding-bottom:3px", "padding-top:6px;padding-bottom:6px"));
+  } else if (fault === "season-motion-duration") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("animation:fadeUp 240ms", "animation:fadeUp 400ms"));
+  } else if (fault === "season-motion-easing") {
+    const target = path.join(out, "css", "style.css");
+    fs.writeFileSync(target, fs.readFileSync(target, "utf8").replace("cubic-bezier(0,0,.2,1)", "ease"));
   }
 
   const allFiles = walkHtml(out);
@@ -170,6 +188,20 @@ try {
     /\.dd-manual a\{(?=[^}]*min-inline-size:44px)(?=[^}]*min-block-size:44px)(?=[^}]*justify-content:center)[^}]*\}/,
   ];
   for (const re of targetContracts) if (!re.test(css)) fail("touch-target-css-contract", String(re));
+  for (const [code,re] of [
+    ["component-stats-contract",/\.stats\{(?=[^}]*display:grid)(?=[^}]*grid-template-columns:repeat\(3,minmax\(0,1fr\)\))(?=[^}]*gap:var\(--space-3\))[^}]*\}/],
+    ["component-stat-contract",/\.stat\{(?=[^}]*padding:var\(--space-3\))(?=[^}]*border:1px solid var\(--line-strong\))(?=[^}]*text-align:center)[^}]*\}/],
+    ["component-cta-contract",/\.cta-row\{(?=[^}]*display:flex)(?=[^}]*flex-wrap:wrap)(?=[^}]*gap:var\(--space-3\))[^}]*\}/],
+    ["component-button-contract",/\.btn\{(?=[^}]*appearance:none)(?=[^}]*min-inline-size:var\(--control-min\))(?=[^}]*min-block-size:var\(--control-min\))(?=[^}]*padding:10px 16px)(?=[^}]*font:700)[^}]*\}/],
+    ["component-button-focus",/\.btn:focus-visible\{outline:3px solid var\(--amber-soft\);outline-offset:3px\}/],
+    ["component-button-active",/\.btn:active\{transform:scale\(\.98\)\}/],
+  ]) if (!re.test(css)) fail(code, String(re));
+  const mobileHeaderRules=[...css.matchAll(/@media \(max-width:900px\)\{[\s\S]*?\.header-inner\{[^}]*padding-top:([0-9.]+)px;padding-bottom:([0-9.]+)px[^}]*\}/g)];
+  if (!mobileHeaderRules.length || mobileHeaderRules.some(match=>Number(match[1])+Number(match[2])>6)) fail("mobile-header-height-css-contract", "375px header padding budget must be no more than 6px total");
+  const seasonMotion=css.match(/\.season-panel\{[^}]*animation:fadeUp\s+([0-9.]+)(ms|s)\s+([^;}]+)/);
+  const seasonMs=seasonMotion ? Number(seasonMotion[1])*(seasonMotion[2]==="s"?1000:1) : Infinity;
+  if (seasonMs>300) fail("season-motion-duration-contract", String(seasonMs));
+  if (!seasonMotion || !/^cubic-bezier\(0,0,\.2,1\)$/.test(seasonMotion[3].trim())) fail("season-motion-easing-contract", seasonMotion?.[3]||"missing");
   // Minimal cascade evaluator for the real header DOM. It resolves importance,
   // specificity, source order and width/pointer media applicability. This is
   // intentionally narrower than a browser CSS engine, but broader than exact
@@ -353,10 +385,16 @@ try {
   }
 
   if (!fault && !failures.length) {
-    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset", "escape-focus-loss", "consent-escape-steals-focus", "touch-target-contract", "inline-target-contract", "search-under-44", "search-focus-ring-loss", "search-icon-captures-click", "search-input-not-full-control", "search-late-cascade-override", "search-specificity-shrink", "search-important-focus-loss", "search-specificity-icon-capture", "search-mobile-only-shrink", "transition-shorthand", "unscoped-navigation-hover", "logo-transition-all"]) {
+    for (const name of ["blind-removal", "spanish-malformed-label", "korean-name-drift", "missing-404-icon", "missing-icon-asset", "escape-focus-loss", "consent-escape-steals-focus", "touch-target-contract", "inline-target-contract", "search-under-44", "search-focus-ring-loss", "search-icon-captures-click", "search-input-not-full-control", "search-late-cascade-override", "search-specificity-shrink", "search-important-focus-loss", "search-specificity-icon-capture", "search-mobile-only-shrink", "transition-shorthand", "unscoped-navigation-hover", "logo-transition-all", "component-stats-layout", "component-button-target", "component-button-focus", "mobile-header-height", "season-motion-duration", "season-motion-easing"]) {
       const child = spawnSync(process.execPath, [auditScript, root], { env: { ...process.env, DOLOC_NAV_AUDIT_FAULT: name }, encoding: "utf8" });
       negativeFixtureExitCodes[name] = child.status;
       if (!Number.isInteger(child.status) || child.status <= 0) fail("negative-fixture-did-not-fail", name);
+      const expected={"component-stats-layout":"component-stats-contract","component-button-target":"component-button-contract","component-button-focus":"component-button-focus","mobile-header-height":"mobile-header-height-css-contract","season-motion-duration":"season-motion-duration-contract","season-motion-easing":"season-motion-easing-contract"}[name];
+      if (expected) {
+        let report;
+        try { report=JSON.parse(child.stdout); } catch { fail("negative-fixture-invalid-output",name); continue; }
+        if (!(report.failures||[]).some(item=>item.code===expected)) fail("negative-fixture-wrong-failure",`${name}:${expected}`);
+      }
     }
   }
 } finally {

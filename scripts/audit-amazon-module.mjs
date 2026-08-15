@@ -128,7 +128,7 @@ const contentIntegrityPatterns = [
   ["ko-game-name-drift", /도록 타운/u],
   ["zh-cn-farming-intro-malformed", /学会计什么/u],
   ["zh-tw-farming-intro-malformed", /學會計什麼/u],
-  ["ko-farming-grammar-malformed", /커집습니다/u],
+  ["ko-farming-grammar-malformed", /(?:커집습니다|커짐하고)/u],
   ["ko-automation-particle", /농업 자동화이/u],
   ["en-update-log-grammar-malformed", /not a selected highlights/iu],
   ["es-automation-mojibake", /automatizaciÃ(?:³|\u00b3)n|automatizaciÃ/i],
@@ -203,7 +203,7 @@ const claimLexicons = {
     realDevice:/\b(?:real[- ]device|real hardware|physical device|on-device)\b/iu,
     progress:/\b(?:currently|right now|now testing|in progress|being edited|we are|we have|our current|version 1\.0|1\.0 build)\b/iu,
     persona:/\b(?:we|our|this guide|this site|the site|our team)\b/iu,
-    automationBoundary:/\b(?:do(?:es)? not|not|no|without)\b[^.!?]{0,70}\b(?:infer|imply|establish|show|claim|dependency|prerequisite|order|sequence|progression|technology tree)\b|\b(?:separate|independent) components?\b/iu,
+    automationBoundary:/\b(?:do(?:es)? not|not|no|without)\b[^.!?]{0,70}\b(?:infer|imply|establish|show|claim|dependency|prerequisite|order|sequence|progression|technology tree)\b|\b(?:separate|independent) components?\b|\b(?:separately|independently) (?:list|name|describe)s?\b/iu,
     testBoundary:/\b(?:not|never|have not|has not|without)\b[^.!?]{0,70}\b(?:hands[- ]on|playtest|tested|testing|verified)\b|\b(?:pending source verification|awaiting source verification|source verification pending)\b/iu,
   },
   "zh-CN": {
@@ -271,7 +271,7 @@ const claimLexicons = {
     prerequisite:/(?:前提|必須|必要条件|先に[^。]{0,25}(?:必要|ないと)|終えてから|済ませてから)/u,
     dependency:/(?:依存|駆動|つながる|導く|解放|必要とする)/u,
     architecture:/(?:アーキテクチャ|構成|固定|標準|層|段階|フェーズ|スタック|チェーン|テックツリー)/u,
-    techTree:/テックツリー/u,
+    techTree:/(?:テックツリー|(?:一つ|ひとつ|一個|単一)の(?:技術)?ツリー)/u,
     early:/(?:序盤|開始直後|冒頭|初期)/u,
     mid:/(?:中盤|中ほど|折り返し|中期)/u,
     late:/(?:終盤|エンドゲーム|結末前|最後の区間)/u,
@@ -383,6 +383,40 @@ const quotedSourceStrings = text => {
   }
   return out;
 };
+const quotedSourceTokens = text => {
+  const out=[];
+  for (let i=0;i<text.length;i+=1) {
+    const start=i, quote=text[i];
+    if (quote!=="\"" && quote!=="'") continue;
+    let escaped=false, value="", closed=false;
+    for (i+=1;i<text.length;i+=1) {
+      const ch=text[i];
+      if (escaped) { value+=ch; escaped=false; continue; }
+      if (ch==="\\") { escaped=true; continue; }
+      if (ch===quote) { closed=true; break; }
+      value+=ch;
+    }
+    if (closed && value.trim()) out.push({value,start});
+  }
+  return out;
+};
+const lastMatch = (text, regex) => {
+  let found=null;
+  for (const match of text.matchAll(regex)) found=match;
+  return found;
+};
+const pythonSourceRecords = ({text,rel,slugs,defaultLocale="en"}) => quotedSourceTokens(text).map(token => {
+  const prefix=text.slice(0,token.start);
+  const variableLocale=lastMatch(prefix,/(?:^|\n)\s*(EN|ZH_TW|ZHTW|ZH|JA|KO|ES)(?:_[A-Z0-9]+)?(?:\.update)?\s*(?:=|\()/gmu);
+  const keyedLocale=lastMatch(prefix,/["'](en|zh-CN|zh-TW|ja|ko|es)["']\s*:/gu);
+  const variableMap={EN:"en",ZH:"zh-CN",ZH_TW:"zh-TW",ZHTW:"zh-TW",JA:"ja",KO:"ko",ES:"es"};
+  const variableAt=variableLocale?.index ?? -1, keyedAt=keyedLocale?.index ?? -1;
+  const locale=variableAt>keyedAt ? variableMap[variableLocale[1]] : (keyedLocale?.[1] || defaultLocale);
+  const routeMatch=lastMatch(prefix,new RegExp(`["'](${slugs.map(item=>item.replace(/[.*+?^${}()|[\\]\\]/g,"\\$&")).join("|")})["']\\s*(?::|\\])`,"gu"));
+  const slug=routeMatch?.[1];
+  const route=slug ? `${locale==="en"?"":`${locale}/`}${slug}.html` : `${locale==="en"?"":`${locale}/`}index.html`;
+  return {values:[token.value],locale,route,layer:"source",source:`${rel}:quoted-string`};
+});
 const claimUnitsOf = (input, locale="en") => {
   const values=Array.isArray(input)?input:[input];
   return values.flatMap(value=>sentenceClaimUnits(value,locale));
@@ -459,6 +493,12 @@ const scanClaimRecords = ({values, locale, route, layer, source}) => {
       `${locale}:${route}:${layer}:${source}:${hit.excerpt || decodeClaimText(unit).slice(0,280)}`);
   }
 };
+const scanSourceLanguageRecords = ({values,locale,route,layer,source}) => {
+  for (const value of values) {
+    const hit=String(value).match(/(?:커집습니다|커짐하고)/u);
+    if (hit) fail("ko-farming-grammar-malformed-source",`${locale}:${route}:${layer}:${source}:${hit[0]}`);
+  }
+};
 const stripMarkup = value => decodeClaimText(String(value).replace(/<[^>]+>/gu," "));
 const htmlClaimRecords = (html, layer) => {
   if (layer === "visible") {
@@ -518,6 +558,7 @@ const independentFaults = {
   "language-zh-cn-intro": {layer:"source", rel:"zh-CN/farming.html", text:"学会计什么、何时种。"},
   "language-zh-tw-intro": {layer:"visible", rel:"zh-TW/farming.html", text:"學會計什麼、何時種。"},
   "language-ko-grammar": {layer:"metadata", rel:"ko/farming.html", text:"작물 부담이 커집습니다."},
+  "language-ko-connector-source": {layer:"source", rel:"ko/how-long-to-beat.html", locale:"ko", text:"작물 부담이 커짐하고 작물이 시듦"},
   "language-en-grammar": {layer:"jsonld", rel:"update-log.html", text:"This is not a selected highlights."},
   "global-gameplay-literal-source": {layer:"source", rel:"how-to-play.html", text:"The Lightman tutorial gives a free rod."},
   "global-gameplay-paraphrase-visible": {layer:"visible", rel:"fishing.html", text:"Thirteen aquatic species require predetermined breeding pairs."},
@@ -670,11 +711,19 @@ for (const [localeIndex,[locale,fixtures]] of Object.entries(residualClaimFixtur
     familyIndex+=1;
   }
 }
+const naturalJapaneseTreeFixtures = [
+  "農業オートメーションと農場ドローン基地は一つのツリーです。",
+  "農業オートメーションと農場ドローン基地はひとつのツリーです。",
+  "農業オートメーションと農場ドローン基地は一個の技術ツリーです。",
+  "農業オートメーションと農場ドローン基地は単一のツリーです。",
+];
+contentClaimFaults["natural-ja-one-tree-source"]={layer:"source",locale:"ja",rel:"ja/how-long-to-beat.html",text:naturalJapaneseTreeFixtures[0],expectedFamily:"automation-technology-tree"};
+residualClaimFaultNames.push("natural-ja-one-tree-source");
 const matrixCoverage=(faultNames,expectedCount,label)=>{
   if(faultNames.length!==expectedCount) throw new Error(`${label} fault count ${faultNames.length} != ${expectedCount}`);
 };
 matrixCoverage(contentClaimFaultNames,36,"core-claim");
-matrixCoverage(residualClaimFaultNames,36,"residual-claim");
+matrixCoverage(residualClaimFaultNames.filter(name=>name!=="natural-ja-one-tree-source"),36,"residual-claim");
 for (const family of Object.keys(residualExpectedFamily)) {
   const specs=residualClaimFaultNames.filter(name=>name.includes(`-${family}-`)).map(name=>contentClaimFaults[name]);
   if (new Set(specs.map(spec=>spec.locale)).size!==6 || new Set(specs.map(spec=>spec.layer)).size!==6)
@@ -718,10 +767,11 @@ const enabled = fs.mkdtempSync(path.join(os.tmpdir(),"doloc-amz-on-"));
 let semanticFileCount = 0;
 let generatedVisibleFileCount = 0;
 let generatedJsonLdBlockCount = 0;
+let trackedSourceInventory = [];
 const semanticInventory = {
   locales: ["en", "zh-CN", "zh-TW", "ja", "ko", "es"],
   families: ["drought-commercial-correlation", "flat-field-weather-causality", "broad-threat-benefit", "shop-crop-pressure", "whole-layer-destruction", "weather-profit-advantage", "community-profit-guidance"],
-  source: {files: 3, hits: 0},
+  source: {files: 7, hits: 0},
   generated_visible: {files: 0, hits: 0},
   generated_metadata: {documents: 0, hits: 0},
   generated_jsonld: {blocks: 0, hits: 0},
@@ -866,6 +916,10 @@ try {
     const hit=claimFamilyHit(fixture,locale), expected=residualExpectedFamily[family];
     if (!hit || hit.family!==expected) fail("residual-claim-fixture-undetected",`${locale}:${family}:${hit?.family||"none"}`);
   }
+  for (const fixture of naturalJapaneseTreeFixtures) {
+    const hit=claimFamilyHit(fixture,"ja");
+    if (!hit || hit.family!=="automation-technology-tree") fail("natural-ja-tree-fixture-undetected",`${hit?.family||"none"}:${fixture}`);
+  }
   for (const safe of [
     "Upgrade the rod before targeting rare fish.", "挑战稀有鱼前先核对鱼竿要求。", "レア魚を狙う前に竿の要件を確認します。",
     "희귀어를 노리기 전에 낙싯대 요구 사항을 확인하세요.", "Mejora la caña antes de buscar peces raros.",
@@ -874,6 +928,12 @@ try {
     "This is not hands-on verified; source review is still pending.",
     "Named community testers describe their own device results; this site does not claim a hands-on test.",
     "Verify the requirement on your own device before spending parts.",
+    "After Early Access, the official 1.0 notes separately list solar power, wind power, farming automation and drone stations.",
+    "抢先体验结束后，官方 1.0 公告分别列出太阳能、风力、农业自动化与无人机站。",
+    "搶先體驗結束後，官方 1.0 公告分別列出太陽能、風力、農業自動化與無人機站。",
+    "早期アクセス終了後、公式1.0情報は太陽光、風力、農業オートメーション、ドローン基地を別々に列挙しています。",
+    "앞서 해보기 종료 후 공식 1.0 공지는 태양광, 풍력, 농업 자동화와 드론 기지를 별도로 나열합니다.",
+    "Tras el Acceso anticipado, las notas oficiales del 1.0 enumeran por separado energía solar, eólica, automatización y estaciones de drones.",
   ]) if (rareFishClaimHit(safe) || unsupportedAutomationHit(safe)) fail("content-claim-negative-control", safe);
   const automationPage = sourceData.pages?.find(item => item.slug === "automation");
   const automationLocalization = {
@@ -1077,11 +1137,16 @@ try {
 
   // Evidence-semantic guard: inspect the generated data and final HTML, not
   // only one visible route. Exceptions are narrowly limited to warning copy.
-  const semanticSourceFiles = [
-    path.join(root,"data/build_content.py"),
-    path.join(root,"data/site.base.json"),
-    path.join(root,"data/site.json"),
+  trackedSourceInventory = [
+    {rel:"data/build_content.py",kind:"python",status:"canonical-authoring"},
+    {rel:"data/site.base.json",kind:"json",status:"canonical-authoring"},
+    {rel:"data/zh_p12.py",kind:"python",status:"canonical-import"},
+    {rel:"data/gifts_pages.py",kind:"python",status:"canonical-import"},
+    {rel:"data/gifts-raw.json",kind:"json",status:"canonical-import"},
+    {rel:"data/site.json",kind:"json",status:"generated-effective"},
+    {rel:"data/build_base.py",kind:"python",status:"legacy-generator-excluded-but-hygiene-scanned"},
   ];
+  const semanticSourceFiles = trackedSourceInventory.map(item=>path.join(root,item.rel));
   const generatedFiles = walk(disabled);
   semanticFileCount = semanticSourceFiles.length + generatedFiles.length;
   const forbidden = [
@@ -1101,28 +1166,52 @@ try {
       fail(`${code}-${layer}`, rel);
     }
   };
-  const sourceEntries = semanticSourceFiles.map(file => ({rel:path.relative(root,file), text:fs.readFileSync(file,"utf8")}));
-  if (semanticSourceFaults[fault]) sourceEntries.push({rel:`fault-source:${fault}`, text:semanticSourceFaults[fault]});
-  if (independentFault?.layer === "source" && !contentClaimFault) sourceEntries.push({rel:`fault-source:${fault}`, text:independentFault.text});
+  const semanticSourceFaultSpecs = {
+    "semantic-drought-source":{locale:"zh-CN",rel:"zh-CN/weather.html",text:semanticSourceFaults["semantic-drought-source"]},
+    "semantic-flat-en-source":{locale:"en",rel:"how-to-play.html",text:semanticSourceFaults["semantic-flat-en-source"]},
+    "semantic-flat-source":{locale:"ja",rel:"ja/how-to-play.html",text:semanticSourceFaults["semantic-flat-source"]},
+    "semantic-benefit-source":{locale:"ko",rel:"ko/weather.html",text:semanticSourceFaults["semantic-benefit-source"]},
+    "semantic-shop-pressure-source":{locale:"zh-CN",rel:"zh-CN/weather.html",text:semanticSourceFaults["semantic-shop-pressure-source"]},
+    "semantic-whole-layer-source":{locale:"en",rel:"how-to-play.html",text:semanticSourceFaults["semantic-whole-layer-source"]},
+    "semantic-weather-profit-source":{locale:"en",rel:"make-money.html",text:semanticSourceFaults["semantic-weather-profit-source"]},
+  };
+  const sourceFaultSpec = contentClaimFault?.layer==="source" ? contentClaimFault
+    : semanticSourceFaultSpecs[fault] || (independentFault?.layer==="source" ? independentFault : null);
+  const appendSourceFixture = (text,spec) => {
+    if (!spec) return text;
+    const localeVar={en:"EN", "zh-CN":"ZH", "zh-TW":"ZH_TW", ja:"JA", ko:"KO", es:"ES"}[spec.locale || routeLocale(spec.rel)];
+    const slug=String(spec.rel).replaceAll("\\","/").split("/").at(-1).replace(/\.html$/u,"");
+    return `${text}\n${localeVar}_AUDIT = ${JSON.stringify({[slug]:{body:spec.text}},null,2)}\n`;
+  };
+  const faultedBuildRaw=appendSourceFixture(buildRaw,sourceFaultSpec);
+  const sourceEntries = semanticSourceFiles.map(file => {
+    const rel=path.relative(root,file);
+    return {rel,text:rel==="data/build_content.py"?faultedBuildRaw:fs.readFileSync(file,"utf8")};
+  });
   for (const {rel,text} of sourceEntries) {
     scanSemantic(text, "source", rel);
     if (removedGameplayPattern.test(text)) fail("removed-gameplay-source", rel);
     for (const [code,re] of forbidden) if(re.test(text)) fail(code,rel);
     for (const [code,re] of nonSemanticIntegrityPatterns) if(re.test(text)) fail(code,rel);
   }
-  const buildClaimStrings=quotedSourceStrings(buildRaw);
-  for (const locale of contentLocales)
-    scanClaimRecords({values:buildClaimStrings,locale,route:"data/build_content.py",layer:"source",source:"quoted-string"});
-  scanClaimRecords({values:collectStringLeaves(JSON.parse(fs.readFileSync(path.join(root,"data/site.base.json"),"utf8"))),locale:"en",route:"data/site.base.json",layer:"source",source:"json-leaf"});
+  const slugs=(sourceData.pages||[]).map(page=>page.slug);
+  for (const spec of [
+    {rel:"data/build_content.py",text:faultedBuildRaw,defaultLocale:"en"},
+    {rel:"data/zh_p12.py",text:fs.readFileSync(path.join(root,"data/zh_p12.py"),"utf8"),defaultLocale:"zh-CN"},
+    {rel:"data/gifts_pages.py",text:fs.readFileSync(path.join(root,"data/gifts_pages.py"),"utf8"),defaultLocale:"en"},
+    {rel:"data/build_base.py",text:fs.readFileSync(path.join(root,"data/build_base.py"),"utf8"),defaultLocale:"en"},
+  ]) for (const record of pythonSourceRecords({...spec,slugs})) { scanClaimRecords(record); scanSourceLanguageRecords(record); }
+  const baseData=JSON.parse(fs.readFileSync(path.join(root,"data/site.base.json"),"utf8"));
+  scanClaimRecords({values:collectStringLeaves({site:baseData.site,game:baseData.game}),locale:"en",route:"index.html",layer:"source",source:"data/site.base.json:json-leaf"});
+  for (const page of baseData.pages||[]) scanClaimRecords({values:collectStringLeaves(page),locale:"en",route:`${page.slug}.html`,layer:"source",source:"data/site.base.json:json-leaf"});
+  scanClaimRecords({values:collectStringLeaves(JSON.parse(fs.readFileSync(path.join(root,"data/gifts-raw.json"),"utf8"))),locale:"en",route:"gifts.html",layer:"source",source:"data/gifts-raw.json:json-leaf"});
   for (const locale of contentLocales) for (const page of sourceData.pages || []) {
     const rel=`${locale==="en"?"":`${locale}/`}${page.slug}.html`;
     scanClaimRecords({values:collectStringLeaves(localizedPageView(page.slug,locale)||{}),locale,route:rel,layer:"source",source:"data/site.json"});
   }
-  if (contentClaimFault?.layer==="source") scanClaimRecords({values:[contentClaimFault.text],locale:contentClaimFault.locale,route:contentClaimFault.rel,layer:"source",source:`fault:${fault}`});
-  else if (independentFault?.layer==="source") scanClaimRecords({
-    values:[independentFault.text],locale:independentFault.locale||routeLocale(independentFault.rel),
-    route:independentFault.rel,layer:"source",source:`fault:${fault}`,
-  });
+  const buildBaseRaw=fs.readFileSync(path.join(root,"data/build_base.py"),"utf8");
+  if (buildRaw.includes("build_base") || /from\s+build_base\s+import|import\s+build_base/u.test(buildRaw)) fail("legacy-source-exclusion", "data/build_base.py must remain outside the canonical import graph");
+  if (/hands-on (?:play|verification)|solar\s*\+\s*wind\s*(?:→|->)\s*drone/iu.test(buildBaseRaw)) fail("legacy-source-hygiene", "data/build_base.py contains the excluded stale claim family");
   for (const file of generatedFiles) {
     const rel = path.relative(disabled, file);
     const html = fs.readFileSync(file, "utf8");
@@ -1345,7 +1434,7 @@ if (!fault && !failures.length) {
     "matrix-es-benefit-source", "matrix-es-benefit-visible", "matrix-es-benefit-metadata", "matrix-es-benefit-jsonld",
     "matrix-es-passive-layer-source", "matrix-es-passive-layer-visible", "matrix-es-passive-layer-metadata", "matrix-es-passive-layer-jsonld",
     "natural-zh-shop-pressure", "natural-es-whole-tier", "natural-es-community-profit", "natural-es-mojibake",
-    "language-zh-cn-intro", "language-zh-tw-intro", "language-ko-grammar", "language-en-grammar",
+    "language-zh-cn-intro", "language-zh-tw-intro", "language-ko-grammar", "language-ko-connector-source", "language-en-grammar",
     "evidence-ja-weather-source", "evidence-ja-weather-visible", "evidence-ja-weather-metadata", "evidence-ja-weather-jsonld",
     "evidence-economic-zh-profitable", "evidence-economic-zh-cost", "evidence-economic-ja-cost", "evidence-economic-ko-cost", "evidence-economic-es-cost",
     "evidence-gameplay-source", "evidence-gameplay-visible", "evidence-gameplay-metadata", "evidence-gameplay-faq", "evidence-gameplay-jsonld",
@@ -1387,7 +1476,13 @@ if (!fault && !failures.length) {
         && String(item.detail).includes(`${claimSpec.locale}:${expectedRoute}:${claimSpec.layer}:`));
       if (!matched) fail("negative-fixture-wrong-failure",`${name}:${expectedCode}:${claimSpec.locale}:${expectedRoute}:${claimSpec.layer}`);
     }
+    if (name==="language-ko-connector-source") {
+      let child;
+      try { child=JSON.parse(result.stdout); } catch { fail("negative-fixture-invalid-output",name); continue; }
+      const matched=(child.failures||[]).some(item=>item.code==="ko-farming-grammar-malformed-source" && String(item.detail).includes("ko:ko/how-long-to-beat.html:source:data/build_content.py:quoted-string:"));
+      if (!matched) fail("negative-fixture-wrong-failure",`${name}:ko-farming-grammar-malformed-source:ko:ko/how-long-to-beat.html:source`);
+    }
   }
 }
-console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:3,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fishing_recipe_inventory:fishingRecipeInventory,fishing_recipe_faults:fishingRecipeFaultNames,automation_phase_faults:automationPhaseFaultNames,content_claim_faults:contentClaimFaultNames,residual_claim_faults:residualClaimFaultNames,automation_claim_families:unsupportedAutomationPatterns.map(([family])=>family),rare_fish_claim_families:rareFishPatterns.map(([family])=>family),gene_breeding_negative_control:"preserved_and_route_scoped",automation_generic_negative_control:"preserved",fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
+console.log(JSON.stringify({disabled_pages:"all",enabled_fixture_pages:"all",semantic_locales:Object.keys(droughtPatterns),semantic_files:semanticFileCount,semantic_source_files:trackedSourceInventory.length,tracked_source_inventory:trackedSourceInventory,generated_visible_files:generatedVisibleFileCount,generated_jsonld_blocks:generatedJsonLdBlockCount,semantic_inventory:semanticInventory,evidence_layer_inventory:evidenceLayerInventory,fishing_recipe_inventory:fishingRecipeInventory,fishing_recipe_faults:fishingRecipeFaultNames,automation_phase_faults:automationPhaseFaultNames,content_claim_faults:contentClaimFaultNames,residual_claim_faults:residualClaimFaultNames,automation_claim_families:unsupportedAutomationPatterns.map(([family])=>family),rare_fish_claim_families:rareFishPatterns.map(([family])=>family),gene_breeding_negative_control:"preserved_and_route_scoped",automation_generic_negative_control:"preserved",fault_injections:Object.keys(faultFixtures),source_boundaries:Object.keys(safeBoundaries),content_integrity_rules:contentIntegrityPatterns.map(([code])=>code),negative_fixture_exit_codes:negativeFixtureExitCodes,failures},null,2));
 process.exit(failures.length?1:0);
