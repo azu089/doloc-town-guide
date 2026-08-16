@@ -185,6 +185,21 @@ function auditSite(root) {
   const ads = path.join(pub, "ads.txt");
   if (fs.existsSync(ads) && fs.statSync(ads).size === 0) F("empty-ads-txt", "未接 AdSense 时不应输出空文件");
 
+  // — 404 页 icon 声明（通用审计规则）。
+  //   404.html 若缺 icon 链接，Chromium 会请求 /favicon.ico → HTTP 404（网络层可见）。
+  //   断言 built 404.html 含全站统一的 icon 声明，且 icon 资源存在于 build 输出且非空。
+  const notFound = path.join(pub, "404.html");
+  if (!fs.existsSync(notFound)) F("no-404-page", "404.html 缺失");
+  else {
+    const nf = fs.readFileSync(notFound, "utf8");
+    for (const href of ["/favicon.svg", "/apple-touch-icon.png"]) {
+      const link = new RegExp(`<link[^>]*rel="(?:icon|apple-touch-icon)"[^>]*href="${href}"`);
+      if (!link.test(nf)) F("404-missing-icon-link", `${href} 未在 404.html 声明`);
+      const asset = path.join(pub, href.replace(/^\//, ""));
+      if (!fs.existsSync(asset) || !fs.statSync(asset).isFile() || fs.statSync(asset).size === 0) F("404-missing-icon-asset", href);
+    }
+  }
+
   return { root, domain: cfg.domain, pages, langs: langs.length, fail, warn };
 }
 
