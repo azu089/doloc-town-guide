@@ -59,8 +59,14 @@ function auditSite(root) {
   if (!fs.existsSync(pub)) return { root, fatal: `没有 ${pub}，先跑 node scripts/generate.js` };
   if (!fs.existsSync(cfgPath)) return { root, fatal: `没有 ${cfgPath}` };
 
-  const cfg = JSON.parse(fs.readFileSync(cfgPath, "utf8")).site;
+  const siteJson = JSON.parse(fs.readFileSync(cfgPath, "utf8"));
+  const cfg = siteJson.site;
   const langs = cfg.languages || ["en"];
+  // 页面级语言白名单：slug -> languages（无声明页回退全量）
+  const pageLangs = new Map();
+  for (const p of siteJson.pages || []) {
+    if (p.languages && p.languages.length) pageLangs.set(p.slug, p.languages);
+  }
   const files = walk(pub);
   const fail = [], warn = [];
   const F = (code, detail) => fail.push({ code, detail });
@@ -106,7 +112,11 @@ function auditSite(root) {
     if (h1 !== 1) F("h1-count", `${rel} (h1=${h1})`);
 
     const hl = (html.match(/hreflang="/g) || []).length;
-    if (hl && hl !== langs.length + 1) F("hreflang-count", `${rel} (${hl}, 期望 ${langs.length + 1})`);
+    let pageSlug = slug;
+    // 去掉语言前缀（/ko/sandustry/x -> /sandustry/x）与首尾斜杠
+    pageSlug = pageSlug.replace(/^\/[a-z]{2}(-[A-Z]{2})?\//, "/").replace(/^\//, "").replace(/\/$/, "");
+    const pageExpected = pageLangs.has(pageSlug) ? pageLangs.get(pageSlug).length + 1 : langs.length + 1;
+    if (hl && hl !== pageExpected) F("hreflang-count", `${rel} (${hl}, 期望 ${pageExpected})`);
 
     // — 坑（本项目 P0 惯犯）：加语言/改语言代码后，硬编码 lang==="zh" 失效 → 整页回落英文
     if (isCJK(lang)) {
