@@ -28,6 +28,19 @@ VILL = {k: v for k, v in RAW["villagers"].items()
 UNTESTED = [k for k in RAW["villagers"] if k not in VILL]
 N = len(VILL)
 
+# ---------- 灰机 1.0 数据管道（data/gifts-raw-hj-1.0.json）----------
+# 合并规则（研究 §3.3）：灰机 1.0 优先、rockechic 兜底、冲突不并表（记入对照清单）。
+# 只并入「已确认英名映射」的新增最爱项：蜂蜡=Beeswax、陈酿龙舌兰酒=Aged Agave Wine
+# （陈酿*=Aged * 与龙舌兰酒=Agave Wine 均与现表英文名同源）。伊甸果酒/月光之歌/豪华套餐等
+# 无官方中↔英对照表，禁止凭中文名猜英文名，未入表。飞廉页乱码条目（UTF-8 替换字符编码损坏）已剔除。
+HJ = json.loads((ROOT / "gifts-raw-hj-1.0.json").read_text(encoding="utf-8"))
+_HJ_CONFIRMED_ADD = ("Beeswax", "Aged Agave Wine")
+_villain_loves = VILL["Villain"]["loves"]
+VILL["Villain"]["loves"] = _villain_loves + [it for it in _HJ_CONFIRMED_ADD if it not in _villain_loves]
+HJ_ADDED = [it for it in _HJ_CONFIRMED_ADD if it in VILL["Villain"]["loves"]]
+HJ_NUM_WITH = len(HJ["affinity"]["with_content"])
+HJ_NUM_WITHOUT = len(HJ["affinity"]["without_content"])
+
 # ---------- 机械反查：villager→item 转成 item→villager ----------
 IDX = defaultdict(lambda: {"loves": [], "likes": [], "dislikes": []})
 for _name, _p in VILL.items():
@@ -105,34 +118,55 @@ def _mixed_line(lang):
 
 SOURCE_NOTE = {
     "en":    (f"Every row below comes from the community Steam guide \"Doloc Town - Character Gifts\" by {SRC['author']}, "
-              f"read directly from its two data tables. Two limits you should know before you spend a gift: the author states it is "
-              f"\"still a work in progress\" and was built during Early Access, so it predates 1.0 (5 August 2026) by more than a year; "
-              f"and {len(UNTESTED)} of the {len(RAW['villagers'])} characters have no data at all. "
-              f"An item that is not listed may simply be untested — it is not proof that it is safe. "
+              f"read directly from its two data tables. Two limits to know before you spend a gift: the guide was built during "
+              f"Early Access (the author calls it \"still a work in progress\"), so it predates 1.0 (5 August 2026) by more than a year; "
+              f"and the {len(UNTESTED)} characters with no entries are not a collection gap — the Doloc Town Huiji Wiki 1.0 "
+              f"(checked 2026-08-17) confirms these characters have no gift/affinity system in the current version, so they cannot be "
+              f"gifted to yet (full list below). A 1.0 cross-check confirms the {N} characters with data here match the Huiji 1.0 roster "
+              f"of characters with affinity content, and Villain's row was upgraded with two confirmed 1.0 items ({J(HJ_ADDED)}). "
+              f"Community 1.0 data also indicates that items not on any preference list default to the \"no strong feeling\" tier (+10%) — "
+              f"but an item missing from this guide's tables is not proof it was tested, so treat unlisted items as neutral but unverified. "
               f"Item and villager names are kept exactly as they appear in the English client."),
     "zh-CN": (f"下面每一行都来自社区 Steam 攻略《Doloc Town - Character Gifts》（作者 {SRC['author']}），"
               f"从它的两张数据表逐行读出。花礼物之前先知道两个局限：作者自述这份表\"仍在完善中\"、"
               f"是抢先体验期做的，比 1.0（2026 年 8 月 5 日）早了一年多；"
-              f"而且 {len(RAW['villagers'])} 个角色里有 {len(UNTESTED)} 个完全没有数据。"
-              f"某个物品没被列出，可能只是没人测过——**不等于送了安全**。"
+              f"而且 {len(RAW['villagers'])} 个角色里有 {len(UNTESTED)} 个没有任何条目——这**不是采集缺口**："
+              f"灰机 1.0 友谊页（2026-08-17 核对）确认这 {len(UNTESTED)} 位在 1.0 当前版本没有好感度/送礼系统（名单见下方），目前无法送礼。"
+              f"与灰机 1.0 名单交叉核对后确认：本表 {N} 位有数据的角色恰为灰机 1.0 标注「有好感度内容及专属剧情」的角色；"
+              f"Villain 一行已按灰机 1.0 升级两个已确认映射的物品（{J(HJ_ADDED)}）。"
+              f"社区 1.0 数据还表明：未被任何偏好表收录的物品默认归入「无感」档（+10%）——"
+              f"但**某个物品没被本表列出，不代表它被测试过**，未列出物品请按「中性但未验证」对待。"
               f"物品名与村民名保持英文客户端里的原样。"),
     "ja":    (f"以下の各行はコミュニティ製 Steam ガイド『Doloc Town - Character Gifts』（作者 {SRC['author']}）の"
               f"2 枚のデータ表から直接読み取ったもの。贈り物を使う前に 2 つの限界を知っておきたい。"
               f"作者自身が「まだ作成途中」と述べており、アーリーアクセス期に作られたため 1.0（2026 年 8 月 5 日）より 1 年以上前のものだ。"
-              f"さらに {len(RAW['villagers'])} 人のうち {len(UNTESTED)} 人はデータが一切ない。"
-              f"表に無い物品は単に未検証かもしれず、**安全である証拠にはならない**。"
+              f"さらに {len(RAW['villagers'])} 人のうち {len(UNTESTED)} 人は項目が一切ない——これは**収集の欠落ではなく**、"
+              f"Huiji 1.0 の友誼ページ（2026-08-17 確認）がこの {len(UNTESTED)} 人が現行バージョンに好感度・贈り物システムを持たないと明記している（リストは下記）。"
+              f"Huiji 1.0 のリストと突き合わせた結果、データのある {N} 人は「好感度コンテンツのあるキャラ」と一致し、"
+              f"Villain の行は確認済みマッピングの {len(HJ_ADDED)} 品（{J(HJ_ADDED)}）で 1.0 更新した。"
+              f"コミュニティ 1.0 データでは、どの好み表にも載っていない物品は「無関心」枠（+10%）として扱われる——"
+              f"ただし本表に無い物が「テスト済み」を意味するわけではなく、未記載の物は「中立だが未検証」として扱ってほしい。"
               f"物品名と住民名は英語クライアントの表記のまま。"),
     "ko":    (f"아래 모든 행은 커뮤니티 Steam 가이드 《Doloc Town - Character Gifts》(작성자 {SRC['author']})의 "
-              f"데이터 표 두 장에서 그대로 옮긴 것이다. 선물을 쓰기 전에 알아둘 한계가 두 가지 있다. "
-              f"작성자 본인이 \"아직 작업 중\"이라고 밝혔고 얼리 액세스 시기에 만든 자료라 1.0(2026년 8월 5일)보다 1년 이상 앞선다. "
-              f"게다가 캐릭터 {len(RAW['villagers'])}명 중 {len(UNTESTED)}명은 데이터가 전혀 없다. "
-              f"목록에 없는 물건은 그냥 아직 검증되지 않았을 수 있으며 **안전하다는 뜻이 아니다**. "
-              f"아이템명과 주민 이름은 영어 클라이언트 표기 그대로 두었다."),
+              f"데이터 표 두 장에서 그대로 옮긴 것입니다. 선물을 쓰기 전에 알아둘 한계가 두 가지 있습니다. "
+              f"작성자 본인이 \"아직 작업 중\"이라고 밝혔고 얼리 액세스 시기에 만든 자료라 1.0(2026년 8월 5일)보다 1년 이상 앞섭니다. "
+              f"게다가 캐릭터 {len(RAW['villagers'])}명 중 {len(UNTESTED)}명은 항목이 전혀 없습니다——이것은 **수집 누락이 아니라** "
+              f"Doloc Town Huiji Wiki 1.0(2026-08-17 확인)이 이 {len(UNTESTED)}명이 현재 버전에 호감도·선물 시스템을 갖고 있지 않다고 명시한 사실입니다(명단은 아래). "
+              f"Huiji 1.0 명단과 교차 확인한 결과 데이터가 있는 {N}명은 호감도 콘텐츠가 있는 캐릭터와 정확히 일치하며, "
+              f"Villain 행은 확인된 매핑 {len(HJ_ADDED)}종({J(HJ_ADDED)})으로 1.0 기준 갱신했습니다. "
+              f"커뮤니티 1.0 데이터에 따르면 어떤 취향 표에도 없는 아이템은 기본적으로 '무감' 등급(+10%)으로 처리됩니다——"
+              f"하지만 이 표에 없는 아이템이 '테스트 완료'라는 뜻은 아니며, 미기재 아이템은 '중립이지만 미검증'으로 다뤄주세요. "
+              f"아이템명과 주민 이름은 영어 클라이언트 표기 그대로 두었습니다."),
     "es":    (f"Cada fila procede de la guía comunitaria de Steam \"Doloc Town - Character Gifts\" de {SRC['author']}, "
-              f"leída directamente de sus dos tablas. Dos límites antes de gastar un regalo: el autor indica que "
-              f"\"sigue en proceso\" y la creó durante el Acceso Anticipado, más de un año antes de la 1.0 (5 de agosto de 2026); "
-              f"y {len(UNTESTED)} de los {len(RAW['villagers'])} personajes no tienen datos. "
-              f"Que un objeto no aparezca puede significar solo que nadie lo ha probado — no que sea seguro. "
+              f"leída directamente de sus dos tablas. Dos límites antes de gastar un regalo: la guía se creó durante el "
+              f"Acceso Anticipado (el autor la llama \"sigue en proceso\"), más de un año antes de la 1.0 (5 de agosto de 2026); "
+              f"y que {len(UNTESTED)} de los {len(RAW['villagers'])} personajes no tengan entradas no es una laguna de datos: "
+              f"la wiki Doloc Town Huiji Wiki 1.0 (verificada el 2026-08-17) confirma que no tienen sistema de regalos/afinidad "
+              f"en la versión actual, así que todavía no se les puede regalar (lista abajo). El cruce con la lista 1.0 confirma que "
+              f"los {N} personajes con datos coinciden con los que tienen contenido de afinidad, y la fila de Villain se actualizó "
+              f"con {len(HJ_ADDED)} objetos confirmados del 1.0 ({J(HJ_ADDED)}). Los datos comunitarios del 1.0 indican además que "
+              f"los objetos no listados en ninguna tabla de preferencias se tratan por defecto como \"indiferente\" (+10 %), pero que "
+              f"un objeto no aparezca en esta guía no prueba que se haya probado: trátalo como neutral sin verificar. "
               f"Los nombres se mantienen como aparecen en el cliente en inglés."),
 }
 
@@ -175,68 +209,108 @@ _T = {  # 每语言的固定文案
  "en": {"title":"Doloc Town Gift Guide: Every Villager's Loves, Likes & Dislikes",
    "mt":"Doloc Town Gifts: Villager Loves, Likes & Dislikes",
    "md":f"Which gifts each Doloc Town villager loves, likes and dislikes — plus the {_FF}/{N} universal gift and the three items you should never hand over.",
-   "intro":f"Give the right item and friendship jumps; give the wrong one and you have wasted a day. This page maps {len(ITEMS)} items against the {N} villagers the community has actually tested, from both directions: look up an item to see who wants it, or look up a villager to see what to bring.",
-   "h_src":"Where This Data Comes From", "h_find":"Three Things Worth Knowing First",
+   "intro":f"Give the right item and friendship jumps; give the wrong one and you have wasted a day. This page maps {len(ITEMS)} items against the {N} villagers the community has tested, cross-checked against the Huiji 1.0 roster of characters with affinity content, from both directions: look up an item to see who wants it, or look up a villager to see what to bring.",
+   "h_src":"Where This Data Comes From", "h_mech":"How the Gift System Works in 1.0 (Community Data)",
+   "h_find":"Three Things Worth Knowing First",
+   "mech":[
+     f"Gifting is limited: each villager can be given at most two gifts per week (Doloc Town Huiji Wiki 1.0, L2). Some guides say twice per day — that conflicts, so we follow the 1.0 wiki until we verify it in-game.",
+     "Birthdays are special: a birthday gift does not count toward the weekly limit; gifts that raise friendship are worth 3×, and gifts that would lower it have no effect that day.",
+     "Five tiers with values: adored +30%, liked +17.5%, no strong feeling +10%, disliked −7.5%, loathed −12.5% (L2, pending in-game verification). This guide's \"dislikes\" column merges the two negative tiers.",
+     "Unlisted items default to neutral: any item not on a character's preference list counts as \"no strong feeling\" (+10%) — this rule applies regardless of the character.",
+     "Check the address book in-game: after you give a gift that raises friendship, the game's Contacts page records the liked items — the reliable way to verify preferences yourself without outside data.",
+     "A generic gift table exists: the Huiji 1.0 friendship page also lists tier-based generic gifts with exceptions. We will add those item names once an official Chinese↔English table is available — never by guessing from the Chinese names."],
    "h_item":"Look Up an Item — Who Wants It?", "b_item":"Sorted by how decisive the answer is: universal gifts first, then the items to avoid, then the ones villagers disagree about.",
-   "h_vill":"Look Up a Villager — What Should I Bring?", "b_vill":f"The {N} villagers with community-tested data. The other {len(UNTESTED)} characters ({J(UNTESTED)}) have no gift data recorded yet.",
+   "h_vill":"Look Up a Villager — What Should I Bring?", "b_vill":f"The {N} villagers with community-tested data. The other {len(UNTESTED)} characters ({J(UNTESTED)}) have no gift/affinity system in the current 1.0 version — a design fact confirmed by the Huiji 1.0 wiki (2026-08-17), not a data gap. If an update opens affinity for them, this table will be extended first.",
    "cols_i":["Item","Loved by","Liked by","Disliked by","Verdict"], "cols_v":["Villager","Loves","Likes","Dislikes"],
    "h_faq":"Quick Answers",
    "faq":[["What is the best all-purpose gift in Doloc Town?",f"Fern Fossil. Of the {N} villagers with tested data, {_FF} like it and none dislike it. Honey is a close second at {_HN}/{N} with no dislikes."],
           ["What should I never give as a gift?",f"{J(NEVER)}. Each is disliked by {_NV} of {N} villagers and loved by nobody."],
           ["Is there romance or marriage in Doloc Town?","No. The developers confirmed Doloc Town has no romance or marriage system — gifts raise friendship only."],
-          ["Why do some villagers have no gifts listed?",f"The community guide this data comes from was built during Early Access and is explicitly unfinished. {len(UNTESTED)} characters have no entries at all, and an unlisted item may simply be untested rather than neutral."]]},
+          ["Why do some villagers have no gifts listed?",f"The reason is a design fact, not a missing measurement: the Huiji 1.0 wiki (checked 2026-08-17) confirms these {len(UNTESTED)} characters have no gift/affinity system in the current version — they are trader, faction or story-oriented NPCs, so they cannot be gifted to yet. The Early-Access-era community guide also predates 1.0, and an unlisted item may be untested rather than neutral."]]},
  "zh-CN": {"title":"多洛可小镇送礼指南：每位村民的喜好与雷区",
    "mt":"多洛可小镇送礼：村民喜好、讨厌物一览",
    "md":f"多洛可小镇每位村民爱什么、喜欢什么、讨厌什么——外加 {_FF}/{N} 的万能礼物，以及绝对不能送的三样东西。",
-   "intro":f"送对了好感度猛涨，送错了白费一天。本页把 {len(ITEMS)} 件物品和社区实测过的 {N} 位村民做了双向对照：可以按物品查谁想要，也可以按村民查该带什么。",
-   "h_src":"这些数据从哪来", "h_find":"先看这三条",
+   "intro":f"送对了好感度猛涨，送错了白费一天。本页把 {len(ITEMS)} 件物品和社区实测过的 {N} 位村民做了双向对照。名单已与灰机 1.0 的好感度内容角色交叉核对：可以按物品查谁想要，也可以按村民查该带什么。",
+   "h_src":"这些数据从哪来", "h_mech":"1.0 送礼机制怎么运作（社区数据）",
+   "h_find":"先看这三条",
+   "mech":[
+     "送礼有限次：每位村民每周最多收 2 次礼物（灰机 1.0 友谊页，L2）。有攻略称「每天 2 份」——两者冲突，本站以 1.0 口径为准，游戏内验证后再更新。",
+     "生日特殊规则：生日当天送礼不计入周次数；增加好感的礼物 3 倍加成；会减少好感的礼物当天变为不影响。",
+     "五档数值：最爱 +30% / 喜欢 +17.5% / 无感 +10% / 讨厌 −7.5% / 厌恶 −12.5%（L2 标注，待游戏内实测）。本页的「讨厌」列合并了讨厌与厌恶两档。",
+     "未收录物品默认中性：任何没出现在角色偏好表里的物品，默认按「无感」+10% 计算——这条规则与角色无关。",
+     "游戏内自查：送过增加好感的礼物后，图鉴「通讯录」页会记录喜欢的物品——这是不依赖外部数据的可靠自查方法。",
+     "通用礼物表：灰机 1.0 友谊页还有按档位的「通用礼物+例外」表；具体物品的英文名要等官方中↔英对照表出来后才会并入本页，绝不凭中文名猜英文名。"],
    "h_item":"按物品查——谁会要它？", "b_item":"按结论的确定程度排序：万能礼物在最前，其次是该避开的，最后是村民意见不一的。",
-   "h_vill":"按村民查——该带什么？", "b_vill":f"社区已实测的 {N} 位村民。另外 {len(UNTESTED)} 个角色（{J(UNTESTED)}）目前没有任何礼物数据。",
+   "h_vill":"按村民查——该带什么？", "b_vill":f"社区已实测的 {N} 位村民。另外 {len(UNTESTED)} 个角色（{J(UNTESTED)}）在 1.0 当前版本**没有好感度/送礼系统**——这是灰机 1.0 友谊页（2026-08-17 核对）确认的设计事实，不是采集缺口。游戏更新若开放好感度，本站会第一时间补表。",
    "cols_i":["物品","谁爱它","谁喜欢","谁讨厌","判定"], "cols_v":["村民","爱","喜欢","讨厌"],
    "h_faq":"快速解答",
    "faq":[["多洛可小镇最万能的礼物是什么？",f"Fern Fossil。在 {N} 位有实测数据的村民里，{_FF} 位喜欢它，没有一个人讨厌。Honey 紧随其后，{_HN}/{N}，同样零讨厌。"],
           ["什么东西绝对不能送？",f"{J(NEVER)}。这三样每样都被 {N} 人中的 {_NV} 人讨厌，且无人喜欢。"],
           ["多洛可小镇有恋爱或结婚系统吗？","没有。开发者已确认本作没有恋爱与结婚系统，送礼只提升友谊好感度。"],
-          ["为什么有些村民没有礼物数据？",f"这份数据来自的社区攻略是抢先体验期做的，作者自述尚未完成。有 {len(UNTESTED)} 个角色完全没有条目；而某个物品没被列出，可能只是没人测过，不代表它是中性的。"]]},
+          ["为什么有些村民没有礼物数据？",f"原因是游戏设计事实，不是没测：灰机 1.0 友谊页（2026-08-17 核对）确认这 {len(UNTESTED)} 位角色在 1.0 当前版本没有好感度/送礼系统——他们是商人、阵营交易或剧情类 NPC，目前无法送礼。数据来源的社区攻略本身也是抢先体验期做的，早于 1.0；某个物品没被列出，也可能只是没人测过，不代表它是中性的。"]]},
  "ja": {"title":"ドロックタウン 贈り物ガイド：住民ごとの好みと地雷",
    "mt":"ドロックタウン 贈り物：住民の好き嫌い一覧",
    "md":f"ドロックタウンの住民が何を愛し、何を好み、何を嫌うか。{_FF}/{N} の万能ギフトと、絶対に渡してはいけない 3 品も掲載。",
-   "intro":f"正しい品を渡せば友好度は跳ね上がり、間違えれば一日を無駄にする。本ページは {len(ITEMS)} 品とコミュニティが実際に検証した住民 {N} 人を双方向で対照した。品物から「誰が欲しがるか」を引くことも、住民から「何を持っていくか」を引くこともできる。",
-   "h_src":"このデータの出どころ", "h_find":"まず知っておきたい 3 点",
+   "intro":f"正しい品を渡せば友好度は跳ね上がり、間違えれば一日を無駄にする。本ページは {len(ITEMS)} 品とコミュニティが実際に検証した住民 {N} 人を双方向で対照した（リストは Huiji 1.0 の好感度コンテンツ一覧と突き合わせ済み）。品物から「誰が欲しがるか」を引くことも、住民から「何を持っていくか」を引くこともできる。",
+   "h_src":"このデータの出どころ", "h_mech":"1.0 の贈り物システムの仕組み（コミュニティ情報）",
+   "h_find":"まず知っておきたい 3 点",
+   "mech":[
+     "回数制限：各住民へは週に最大 2 回まで贈れる（Huiji 1.0 友誼ページ, L2）。「1 日 2 回」とする攻略もあり矛盾するため、ゲーム内で確認するまで 1.0 側を採用する。",
+     "誕生日は特別：誕生日の贈り物は週の回数に数えられず、友好度が上がる品は 3 倍、下がる品はその日は影響なしになる。",
+     "5 段階の数値：大好き +30% / 好き +17.5% / 無関心 +10% / 嫌い −7.5% / 大嫌い −12.5%（L2、ゲーム内検証待ち）。本ページの「嫌う」列は否定的な 2 段階をまとめたもの。",
+     "未掲載アイテムは無関心扱い：どの好み表にも載っていない物品は「無関心」（+10%）として扱われる——キャラに関係しない共通ルール。",
+     "ゲーム内で確認：友好度が上がる品を贈ると図鑑「連絡帳」に好きな物が記録される。外部データに頼らない確認方法。",
+     "汎用ギフト表：Huiji 1.0 の友誼ページには段階別の「汎用ギフト＋例外」表もある。正式な中英対照表が揃うまで物品名は追加しない——中国語名からの推測はしない。"],
    "h_item":"品物から引く——誰が欲しがる？", "b_item":"結論の確度順に並べた。万能ギフトが先、次に避けるべき品、最後に住民の評価が割れる品。",
-   "h_vill":"住民から引く——何を持っていく？", "b_vill":f"コミュニティ検証済みの住民 {N} 人。残る {len(UNTESTED)} 人（{J(UNTESTED)}）は贈り物データが未記録。",
+   "h_vill":"住民から引く——何を持っていく？", "b_vill":f"コミュニティ検証済みの住民 {N} 人。残り {len(UNTESTED)} 人（{J(UNTESTED)}）は現行 1.0 に好感度・贈り物システムが無い——Huiji 1.0 友誼ページ（2026-08-17 確認）による設計上の事実で、データ不足ではない。好感度が実装されたら最優先で表を更新する。",
    "cols_i":["品物","愛する人","好む人","嫌う人","判定"], "cols_v":["住民","愛する","好む","嫌う"],
    "h_faq":"クイック回答",
    "faq":[["ドロックタウンで最も万能な贈り物は？",f"Fern Fossil。検証データのある住民 {N} 人中 {_FF} 人が好み、嫌う人はいない。次点は Honey で {_HN}/{N}、こちらも嫌う人なし。"],
           ["絶対に贈ってはいけない物は？",f"{J(NEVER)}。いずれも {N} 人中 {_NV} 人に嫌われ、好む人は皆無。"],
           ["ドロックタウンに恋愛や結婚はある？","ない。開発者が本作に恋愛・結婚システムは無いと明言している。贈り物は友好度のみを上げる。"],
-          ["贈り物データが無い住民がいるのはなぜ？",f"元になったコミュニティガイドはアーリーアクセス期に作られ、作者自身が未完成と述べている。{len(UNTESTED)} 人は項目自体が無く、表に無い品は「中立」ではなく単に未検証の可能性がある。"]]},
+          ["贈り物データが無い住民がいるのはなぜ？",f"理由は計測漏れではなく設計上の事実です。Huiji 1.0 友誼ページ（2026-08-17 確認）は、この {len(UNTESTED)} 人が現行バージョンに好感度・贈り物システムを持たないと明記しています——商人・陣営取引・ストーリー系 NPC で、現時点では贈れません。元のコミュニティガイドも 1.0 より前のアーリーアクセス期のもので、表に無い品は中立ではなく単に未検証の可能性があります。"]]},
  "ko": {"title":"돌록 타운 선물 가이드: 주민별 선호 아이템과 지뢰",
    "mt":"돌록 타운 선물: 주민 선호·비선호 정리",
    "md":f"돌록 타운 주민이 무엇을 아주 좋아하고, 좋아하고, 싫어하는지 정리했다. {_FF}/{N}의 만능 선물과 절대 주면 안 되는 세 가지도 함께.",
-   "intro":f"제대로 주면 호감도가 크게 오르고, 잘못 주면 하루를 날린다. 이 문서는 아이템 {len(ITEMS)}종과 커뮤니티가 실제로 검증한 주민 {N}명을 양방향으로 대조했다. 아이템으로 누가 원하는지 찾을 수도, 주민으로 무엇을 가져갈지 찾을 수도 있다.",
-   "h_src":"이 데이터의 출처", "h_find":"먼저 알아둘 세 가지",
+   "intro":f"제대로 주면 호감도가 크게 오르고, 잘못 주면 하루를 날립니다. 이 문서는 아이템 {len(ITEMS)}종과 커뮤니티가 실제로 검증한 주민 {N}명을 양방향으로 대조했습니다(명단은 Huiji 1.0의 호감도 콘텐츠 캐릭터 목록과 교차 확인). 아이템으로 누가 원하는지 찾을 수도, 주민으로 무엇을 가져갈지 찾을 수도 있습니다.",
+   "h_src":"이 데이터의 출처", "h_mech":"1.0 선물 시스템의 작동 방식 (커뮤니티 정보)",
+   "h_find":"먼저 알아둘 세 가지",
+   "mech":[
+     "선물 횟수 제한: 주민 한 명에게 선물은 주당 최대 2번까지(Doloc Town Huiji Wiki 1.0, L2). '하루 2번'이라고 적은 공략도 있어 충돌하므로, 게임 내 확인 전까지는 1.0 기준을 따릅니다.",
+     "생일 특별 규칙: 생일날 선물은 주간 횟수에 포함되지 않고, 호감도를 올리는 선물은 3배, 내리는 선물은 그날 영향이 없습니다.",
+     "5단계 수치: 가장 좋아함 +30% / 좋아함 +17.5% / 무감 +10% / 싫어함 −7.5% / 아주 싫어함 −12.5%(L2, 게임 내 확인 대기). 이 가이드의 '싫어함' 열은 부정 등급 두 개를 합친 것입니다.",
+     "미기재 아이템은 무감 처리: 어떤 취향 표에도 없는 아이템은 기본적으로 '무감'(+10%)으로 계산됩니다——캐릭터와 무관한 공통 규칙입니다.",
+     "게임 내 확인 방법: 호감도를 올리는 선물을 주면 도감 '연락처'에 좋아하는 물건이 기록됩니다——외부 데이터 없이 확인하는 방법입니다.",
+     "공용 선물 표: Huiji 1.0 우정 페이지에는 단계별 '공용 선물+예외' 표도 있습니다. 공식 중영 대조표가 나오면 물품명을 추가합니다——중국어 이름으로 영어 이름을 추측하지 않습니다."],
    "h_item":"아이템으로 찾기 — 누가 원하나?", "b_item":"결론이 확실한 순서로 정렬했다. 만능 선물이 먼저, 그다음 피해야 할 것, 마지막이 주민마다 갈리는 것.",
-   "h_vill":"주민으로 찾기 — 무엇을 가져갈까?", "b_vill":f"커뮤니티가 검증한 주민 {N}명. 나머지 {len(UNTESTED)}명({J(UNTESTED)})은 아직 선물 데이터가 없다.",
+   "h_vill":"주민으로 찾기 — 무엇을 가져갈까?", "b_vill":f"커뮤니티가 검증한 주민 {N}명. 나머지 {len(UNTESTED)}명({J(UNTESTED)})은 1.0 현재 버전에 호감도/선물 시스템이 없습니다——Huiji 1.0 우정 페이지(2026-08-17 확인)가 확인한 게임 설계 사실이지 수집 누락이 아닙니다. 업데이트로 호감도가 열리면 이 표를 가장 먼저 갱신합니다.",
    "cols_i":["아이템","아주 좋아함","좋아함","싫어함","판정"], "cols_v":["주민","아주 좋아함","좋아함","싫어함"],
    "h_faq":"빠른 답변",
    "faq":[["돌록 타운에서 가장 무난한 선물은?",f"Fern Fossil이다. 검증 데이터가 있는 주민 {N}명 중 {_FF}명이 좋아하고 싫어하는 사람은 없다. 그다음은 Honey로 {_HN}/{N}, 역시 싫어하는 사람이 없다."],
           ["절대 주면 안 되는 것은?",f"{J(NEVER)}. 각각 주민 {N}명 중 {_NV}명이 싫어하고 좋아하는 사람은 아무도 없다."],
           ["돌록 타운에 연애나 결혼이 있나요?","없다. 개발진이 본작에 연애·결혼 시스템이 없다고 확인했다. 선물은 우정 호감도만 올린다."],
-          ["선물 데이터가 없는 주민은 왜 그런가요?",f"출처인 커뮤니티 가이드는 얼리 액세스 시기에 작성됐고 작성자 본인이 미완성이라고 밝혔다. {len(UNTESTED)}명은 항목 자체가 없으며, 목록에 없는 아이템은 중립이 아니라 그냥 미검증일 수 있다."]]},
+          ["선물 데이터가 없는 주민은 왜 그런가요?",f"이유는 측정 누락이 아니라 게임 설계 사실입니다. Huiji 1.0 우정 페이지(2026-08-17 확인)는 이 {len(UNTESTED)}명이 현재 버전에 호감도/선물 시스템을 갖고 있지 않다고 명시합니다——상인·진영 거래·스토리 NPC라 아직 선물할 수 없습니다. 출처인 커뮤니티 가이드도 1.0보다 앞선 얼리 액세스 시기 자료이며, 목록에 없는 아이템은 중립이 아니라 그냥 미검증일 수 있습니다."]]},
  "es": {"title":"Guía de regalos de Doloc Town: gustos y rechazos de cada aldeano",
    "mt":"Regalos de Doloc Town: gustos y rechazos por aldeano",
    "md":f"Qué adora, qué le gusta y qué rechaza cada aldeano de Doloc Town — más el regalo universal ({_FF}/{N}) y los tres objetos que nunca debes entregar.",
-   "intro":f"Acierta con el objeto y la amistad sube de golpe; falla y habrás perdido el día. Esta página cruza {len(ITEMS)} objetos con los {N} aldeanos que la comunidad ha probado, en ambos sentidos: busca un objeto para ver quién lo quiere, o un aldeano para ver qué llevarle.",
-   "h_src":"De dónde salen estos datos", "h_find":"Tres cosas que conviene saber antes",
+   "intro":f"Acierta con el objeto y la amistad sube de golpe; falla y habrás perdido el día. Esta página cruza {len(ITEMS)} objetos con los {N} aldeanos que la comunidad ha probado (lista contrastada con el roster 1.0 de Huiji de personajes con afinidad), en ambos sentidos: busca un objeto para ver quién lo quiere, o un aldeano para ver qué llevarle.",
+   "h_src":"De dónde salen estos datos", "h_mech":"Cómo funciona el sistema de regalos en 1.0 (datos de la comunidad)",
+   "h_find":"Tres cosas que conviene saber antes",
+   "mech":[
+     "Límite de regalos: cada aldeano acepta como máximo dos regalos por semana (wiki Huiji 1.0, L2). Algunas guías dicen dos al día: hay conflicto, así que seguimos la wiki 1.0 hasta verificarlo en el juego.",
+     "Cumpleaños especiales: el regalo de cumpleaños no cuenta para el límite semanal; los regalos que suben la amistad valen 3× y los que la bajarían no tienen efecto ese día.",
+     "Cinco niveles con valores: adorado +30 %, gustado +17,5 %, indiferente +10 %, disgustado −7,5 %, odiado −12,5 % (L2, pendiente de verificación en el juego). La columna \"rechaza\" de esta guía fusiona los dos niveles negativos.",
+     "Los no listados cuentan como indiferente: cualquier objeto que no aparezca en una tabla de preferencias se trata como \"indiferente\" (+10 %), una regla independiente del personaje.",
+     "Comprueba la agenda en el juego: tras dar un regalo que sube la amistad, la página \"Contactos\" del catálogo registra los objetos que le gustan: la forma fiable de verificarlo sin datos externos.",
+     "Existe una tabla de regalos genéricos: la página de amistad de Huiji 1.0 también enumera regalos genéricos por nivel con excepciones. Añadiremos esos nombres cuando haya una tabla oficial chino-inglés, nunca adivinando desde el chino."],
    "h_item":"Buscar por objeto — ¿quién lo quiere?", "b_item":"Ordenado por lo concluyente de la respuesta: primero los regalos universales, luego los que hay que evitar y por último aquellos en los que los aldeanos discrepan.",
-   "h_vill":"Buscar por aldeano — ¿qué le llevo?", "b_vill":f"Los {N} aldeanos con datos probados por la comunidad. Los otros {len(UNTESTED)} personajes ({J(UNTESTED)}) todavía no tienen datos de regalos.",
+   "h_vill":"Buscar por aldeano — ¿qué le llevo?", "b_vill":f"Los {N} aldeanos con datos probados por la comunidad. Los otros {len(UNTESTED)} personajes ({J(UNTESTED)}) no tienen sistema de regalos/afinidad en la versión 1.0 actual — confirmado por la wiki Huiji 1.0 (2026-08-17), no es una laguna de datos. Si una actualización añade afinidad, esta tabla se ampliará lo antes posible.",
    "cols_i":["Objeto","Lo adoran","Les gusta","Lo rechazan","Veredicto"], "cols_v":["Aldeano","Adora","Le gusta","Rechaza"],
    "h_faq":"Respuestas rápidas",
    "faq":[["¿Cuál es el mejor regalo para todos en Doloc Town?",f"Fern Fossil. De los {N} aldeanos con datos probados, a {_FF} les gusta y a ninguno le disgusta. Honey queda segundo con {_HN}/{N}, también sin rechazos."],
           ["¿Qué no debo regalar nunca?",f"{J(NEVER)}. A cada uno lo rechazan {_NV} de {N} aldeanos y no le gusta a nadie."],
           ["¿Hay romance o matrimonio en Doloc Town?","No. Los desarrolladores confirmaron que Doloc Town no tiene sistema de romance ni de matrimonio; los regalos solo suben la amistad."],
-          ["¿Por qué algunos aldeanos no tienen regalos listados?",f"La guía comunitaria de la que proceden los datos se hizo durante el Acceso Anticipado y su autor la declara inacabada. {len(UNTESTED)} personajes no tienen ninguna entrada, y que un objeto no aparezca puede significar solo que nadie lo ha probado."]]},
+          ["¿Por qué algunos aldeanos no tienen regalos listados?",f"Es un hecho de diseño, no una medición pendiente: la wiki Huiji 1.0 (verificada el 2026-08-17) confirma que estos {len(UNTESTED)} personajes no tienen sistema de regalos/afinidad en la versión actual — son NPC de comercio, facción o historia, así que todavía no se les puede regalar. Además, la guía comunitaria original es de la época del Acceso Anticipado, anterior al 1.0, y que un objeto no aparezca puede significar solo que nadie lo ha probado."]]},
 }
 
 
@@ -308,9 +382,10 @@ LANGS = ["en", "zh-CN", "ja", "ko", "es"]
 
 def _gifts(lang):
     t, w = _T[lang], VERDICT_W[lang]
-    return {"heading_set": [t["h_src"], t["h_find"], t["h_item"], t["h_vill"], t["h_faq"]],
+    return {"heading_set": [t["h_src"], t["h_mech"], t["h_find"], t["h_item"], t["h_vill"], t["h_faq"]],
             "sections": [
       {"type":"note", "heading":t["h_src"], "body":SOURCE_NOTE[lang]},
+      {"type":"list", "heading":t["h_mech"], "body":"", "items":t["mech"]},
       {"type":"list", "heading":t["h_find"], "items":_FIND[lang]},
       {"type":"giftfilter"},
       {"type":"table","heading":t["h_item"],"body":t["b_item"],"columns":t["cols_i"],"rows":item_rows(lang),"rowAttrs":item_attrs()},
@@ -332,10 +407,26 @@ def _romance(lang):
 def en_pages():
     """注入 site.base.json 的两页（en）。"""
     g, t, r = _gifts("en"), _T["en"], _R["en"]
+    _hj_labels = {
+      "zh-CN": "Doloc Town 灰机 Wiki——友谊页（1.0 好感度名单与送礼机制）",
+      "zh-TW": "Doloc Town 灰機 Wiki——友誼頁（1.0 好感度名單與送禮機制）",
+      "ja": "Doloc Town Huiji Wiki——友誼ページ（1.0 好感度リストと贈り物メカニズム）",
+      "ko": "Doloc Town Huiji Wiki — 우정 페이지 (1.0 호감도 명단·선물 메커니즘)",
+      "es": "Doloc Town Huiji Wiki — página de amistad (lista de afinidad 1.0 y mecánica de regalos)",
+    }
+    _feilian_labels = {
+      "zh-CN": "Doloc Town 灰机 Wiki——飞廉角色页（1.0 喜好档位）",
+      "zh-TW": "Doloc Town 灰機 Wiki——飛廉角色頁（1.0 喜好檔位）",
+      "ja": "Doloc Town Huiji Wiki——飛廉キャラページ（1.0 好みの段階）",
+      "ko": "Doloc Town Huiji Wiki — Feilian(Villain) 캐릭터 페이지 (1.0 선호 단계)",
+      "es": "Doloc Town Huiji Wiki — página del personaje Feilian (niveles de preferencia 1.0)",
+    }
     return [
       {"slug":"gifts","title":t["title"],"metaTitle":t["mt"],"metaDescription":t["md"],
        "intro":t["intro"],"sections":g["sections"],"meta":{"icon":"friendship"},
        "sources":[{"label":"Steam Community guide: Doloc Town - Character Gifts (community-tested, Early Access era)","url":SRC["url"]},
+                  {"label":"Doloc Town Huiji Wiki — Friendship page (1.0, affinity roster + gift mechanics)","url":"https://doloctown.huijiwiki.com/wiki/%E5%8F%8B%E8%B0%8A","labels":_hj_labels},
+                  {"label":"Doloc Town Huiji Wiki — Feilian/Villain character page (1.0, preference tiers)","url":"https://doloctown.huijiwiki.com/wiki/%E9%A3%9E%E5%BB%89","labels":_feilian_labels},
                   {"label":"Official Steam page — Doloc Town","url":"https://store.steampowered.com/app/2285550/Doloc_Town/"}]},
       {"slug":"romance","title":r["title"],"metaTitle":r["mt"],"metaDescription":r["md"],
        "intro":r["intro"],"sections":_romance("en")["sections"],"meta":{"icon":"friendship"},

@@ -4940,8 +4940,8 @@
     },
     "ko": {
      "title": "돌록 타운 낚시 가이드: 연못·날씨·희귀어",
-     "metaTitle": "돌록 타운 낚시 도감: 낚시터·날씨·계절 (1.0)",
-     "metaDescription": "돌록 타운 어획표에서 낚시터, 시간, 날씨, 계절과 현재 낚싯대·코어 요구 사항을 검색하세요.",
+     "metaTitle": "돌록 타운 낚시 공략: 낚시터·날씨·계절별 어획 (1.0)",
+     "metaDescription": "돌록 타운 낚시 공략: 어획표에서 낚시터, 시간, 날씨, 계절과 현재 낚싯대·코어 요구 사항을 검색하세요.",
      "intro": "낚시는 돌록 타운에서 두 번째 본업입니다. 이 도감은 현재 기록된 어획의 위치, 계절, 날씨와 낚싯대·코어 요구 사항을 정리합니다.",
      "sections": [
       {
@@ -5349,6 +5349,24 @@
        "type": "list",
        "heading": "출처 및 주의",
        "body": "낚시터·계절·날씨는 커뮤니티가 관리하는 Doloc Town Huiji Wiki 낚시 페이지(L2)를 바탕으로 정리했습니다. 패치로 일부 출현이 달라질 수 있습니다——고정 데이터베이스가 아닌 현장 가이드로 다뤄주세요. ⚠️ 한국어 이름은 게임 내 중국어 도감의 번역이며 영어 클라이언트와 다를 수 있습니다."
+      },
+      {
+       "type": "note",
+       "heading": "공식 한국어 지원",
+       "body": "Steam 상점 페이지에서 한국어가 지원 언어로 확인되었습니다 [L0]. 개발사는 《1.0 Update Preview & Public Localization Test Branch》 공지에서 한국어를 포함한 현지화 투자를 밝혔습니다 [L0]. 게임의 공식 한국어 표기가 확정되면 이 페이지의 번역을 그에 맞춰 갱신합니다."
+      },
+      {
+       "type": "list",
+       "heading": "월별 어획 요약 (이 페이지 표에서 정리)",
+       "body": "아래 요약은 이 페이지 어획표의 정리본이며 별도 출처가 아닙니다. 표와 함께 보세요.",
+       "items": [
+        "1월: 철갑상어(물 코어 필요), 연어(연어 축제·대나무 낚싯대).",
+        "1–2월(우기): 무지개송어, 미꾸라지, 대구·참치(대나무 낚싯대).",
+        "3월: 철갑상어(물 코어 필요).",
+        "3–4월(건기): 이빨고기, 다슬기, 위장 해골 물고기, 뱀장어(암석 코어 샘플), 발광 뱀장어(4월 작열하는 태양).",
+        "연중: 위 표의 연중 어종(잉어, 메기, 초어, 정어리, 배스, 새우, 반짝이는 금붕어, 비단잉어, 드렁허리, 강꼬치고기, 수생 아메바).",
+        "조건 확인: 목표 어획 전에 표의 시간·날씨·낚싯대·코어 조건을 다시 확인하세요."
+       ]
       }
      ]
     },
@@ -7369,8 +7387,8 @@
     },
     "ko": {
      "title": "돌록 타운 탐험 가이드: 전체 5개 지역",
-     "metaTitle": "돌록 타운 지역: 전체 5개 구역과 구시가지 유적 (1.0)",
-     "metaDescription": "돌록 타운의 모든 지역 해설: 교외, 리버 밸리, 습지, 동굴, 그리고 1.0의 구시가지 유적 — 자원·비밀·출발 준비까지.",
+     "metaTitle": "돌록 타운 탐험 공략: 전체 5개 지역과 구시가지 유적 (1.0)",
+     "metaDescription": "돌록 타운 탐험 공략: 교외, 리버 밸리, 습지, 동굴, 그리고 1.0의 구시가지 유적 — 자원·비밀·출발 준비까지.",
      "intro": "탐험은 돌록 타운의 핵심입니다. 5개 지역마다 독특한 자원과 적, 이야기가 있으며 — 1.0에서 추가된 구시가지 유적도 있습니다. 각 지역의 가치와 무사히 돌아오는 법을 정리했습니다.",
      "sections": [
       {
@@ -7522,6 +7540,16 @@
          "현재 게임의 제작·업그레이드 요구 사항을 확인하세요. 이 가이드는 낚시에서 직접 재료가 나온다고 추론하지 않습니다."
         ]
        ]
+      },
+      {
+       "type": "note",
+       "heading": "공식 한국어 지원",
+       "body": "Steam 상점 페이지에서 한국어가 지원 언어로 확인되었습니다 [L0]. 개발사는 《1.0 Update Preview & Public Localization Test Branch》 공지에서 한국어를 포함한 현지화 투자를 밝혔습니다 [L0]. 게임의 공식 한국어 표기가 확정되면 이 페이지의 번역을 그에 맞춰 갱신합니다."
+      },
+      {
+       "type": "note",
+       "heading": "선물 호감도가 없는 NPC (1.0)",
+       "body": "1.0 현재 버전에서 Paiea와 Shylock은 개인 선물 호감도 시스템이 없는 NPC입니다——각각 진영 거래와 사막 거래를 담당합니다 (Huiji 1.0 기준) [L2]. 호감도가 없는 캐릭터 전체 명단과 선물 시스템은 /gifts 페이지를 참고하세요."
       }
      ]
     },
@@ -10054,8 +10082,8 @@
     },
     "ko": {
      "title": "돌록 타운 요리 가이드: 레시피·버프·재료",
-     "metaTitle": "돌록 타운 요리 가이드: 레시피·버프·음식",
-     "metaDescription": "돌록 타운 요리 완전 해설: 80+ 레시피 해금법, 음식 버프 효과, 요리가 탐험·농사·전투를 뒷받침하는 방식.",
+     "metaTitle": "돌록 타운 레시피: 요리 가이드와 음식 버프 (1.0)",
+     "metaDescription": "돌록 타운 레시피와 요리 시스템: 80+ 레시피 해금법, 음식 버프 효과, 요리가 탐험·농사·전투를 뒷받침하는 방식.",
      "intro": "요리는 수확물을 생존력으로 바꿉니다. 80+ 레시피가 있다면, 한 끼로 체력을 회복하거나 속도·방어 버프를 얻을 수 있습니다 — 무엇을, 언제, 왜 중요한지 정리했습니다.",
      "sections": [
       {
@@ -10162,6 +10190,35 @@
          "초반에 요리가 가치 있나요?",
          "네 — 조리 식사는 인벤토리 한 칸당 에너지 효율이 높고 버프는 본전을 뽑습니다. "
         ]
+       ]
+      },
+      {
+       "type": "note",
+       "heading": "공식 한국어 지원",
+       "body": "Steam 상점 페이지에서 한국어가 지원 언어로 확인되었습니다 [L0]. 개발사는 《1.0 Update Preview & Public Localization Test Branch》 공지에서 한국어를 포함한 현지화 투자를 밝혔습니다 [L0]. 게임의 공식 한국어 표기가 확정되면 이 페이지의 번역을 그에 맞춰 갱신합니다."
+      },
+      {
+       "type": "list",
+       "heading": "요리 자료 범위 (Huiji 1.0)",
+       "body": "커뮤니티가 관리하는 Doloc Town Huiji Wiki의 《요리》 페이지(2026-08-17 확인)는 다음 주제를 다룹니다. 세부 수치는 패치마다 달라질 수 있으니 게임 내 레시피 창에서 확인하세요. [L2]",
+       "items": [
+        "재료: 요리 재료는 작물·낚시·목장 등에서 얻습니다. [L2]",
+        "레시피: 레시피 목록과 해금 조건을 정리합니다. [L2]",
+        "일괄 조리: 한 번에 여러 개를 만들어 시간과 재료를 아낍니다. [L2]",
+        "레시피 모드: 레시피 창에서 재료와 도구 요구 사항을 확인합니다. [L2]",
+        "신선한 재료 조리: 재료 상태에 따라 결과가 달라질 수 있으니 상태를 확인하세요. [L2]",
+        "운영 제안: 우정·테크 트리 해금 레시피를 우선 노리고, 남는 재료는 가공 장비로 처리합니다. [L2]"
+       ]
+      },
+      {
+       "type": "list",
+       "heading": "남는 수확물 활용: 가공 장비",
+       "body": "절임 단지·건조기·직조기 등 가공 장비로 남는 수확물을 처리할 수 있습니다. 가공 전후 가치는 현재 세이브에 표시된 값을 비교하세요——이 가이드는 구체적인 수치를 검증하지 않았습니다.",
+       "items": [
+        "절임 단지: 블루베리 등 열매를 절임으로 가공. [L2]",
+        "건조기: 물고기 등 수산물을 건조. [L2]",
+        "직조기: 섬유를 직물로 가공. [L2]",
+        "가치 비교: 판매 전 현재 세이브의 원재료·가공품 가격을 비교하세요."
        ]
       }
      ]
@@ -17078,12 +17135,25 @@
    "title": "Doloc Town Gift Guide: Every Villager's Loves, Likes & Dislikes",
    "metaTitle": "Doloc Town Gifts: Villager Loves, Likes & Dislikes",
    "metaDescription": "Which gifts each Doloc Town villager loves, likes and dislikes — plus the 12/13 universal gift and the three items you should never hand over.",
-   "intro": "Give the right item and friendship jumps; give the wrong one and you have wasted a day. This page maps 65 items against the 13 villagers the community has actually tested, from both directions: look up an item to see who wants it, or look up a villager to see what to bring.",
+   "intro": "Give the right item and friendship jumps; give the wrong one and you have wasted a day. This page maps 67 items against the 13 villagers the community has tested, cross-checked against the Huiji 1.0 roster of characters with affinity content, from both directions: look up an item to see who wants it, or look up a villager to see what to bring.",
    "sections": [
     {
      "type": "note",
      "heading": "Where This Data Comes From",
-     "body": "Every row below comes from the community Steam guide \"Doloc Town - Character Gifts\" by rockechic, read directly from its two data tables. Two limits you should know before you spend a gift: the author states it is \"still a work in progress\" and was built during Early Access, so it predates 1.0 (5 August 2026) by more than a year; and 12 of the 25 characters have no data at all. An item that is not listed may simply be untested — it is not proof that it is safe. Item and villager names are kept exactly as they appear in the English client."
+     "body": "Every row below comes from the community Steam guide \"Doloc Town - Character Gifts\" by rockechic, read directly from its two data tables. Two limits to know before you spend a gift: the guide was built during Early Access (the author calls it \"still a work in progress\"), so it predates 1.0 (5 August 2026) by more than a year; and the 12 characters with no entries are not a collection gap — the Doloc Town Huiji Wiki 1.0 (checked 2026-08-17) confirms these characters have no gift/affinity system in the current version, so they cannot be gifted to yet (full list below). A 1.0 cross-check confirms the 13 characters with data here match the Huiji 1.0 roster of characters with affinity content, and Villain's row was upgraded with two confirmed 1.0 items (Beeswax, Aged Agave Wine). Community 1.0 data also indicates that items not on any preference list default to the \"no strong feeling\" tier (+10%) — but an item missing from this guide's tables is not proof it was tested, so treat unlisted items as neutral but unverified. Item and villager names are kept exactly as they appear in the English client."
+    },
+    {
+     "type": "list",
+     "heading": "How the Gift System Works in 1.0 (Community Data)",
+     "body": "",
+     "items": [
+      "Gifting is limited: each villager can be given at most two gifts per week (Doloc Town Huiji Wiki 1.0, L2). Some guides say twice per day — that conflicts, so we follow the 1.0 wiki until we verify it in-game.",
+      "Birthdays are special: a birthday gift does not count toward the weekly limit; gifts that raise friendship are worth 3×, and gifts that would lower it have no effect that day.",
+      "Five tiers with values: adored +30%, liked +17.5%, no strong feeling +10%, disliked −7.5%, loathed −12.5% (L2, pending in-game verification). This guide's \"dislikes\" column merges the two negative tiers.",
+      "Unlisted items default to neutral: any item not on a character's preference list counts as \"no strong feeling\" (+10%) — this rule applies regardless of the character.",
+      "Check the address book in-game: after you give a gift that raises friendship, the game's Contacts page records the liked items — the reliable way to verify preferences yourself without outside data.",
+      "A generic gift table exists: the Huiji 1.0 friendship page also lists tier-based generic gifts with exceptions. We will add those item names once an official Chinese↔English table is available — never by guessing from the Chinese names."
+     ]
     },
     {
      "type": "list",
@@ -17390,6 +17460,13 @@
        "Limited data (1/13)"
       ],
       [
+       "Aged Agave Wine",
+       "Villain",
+       "—",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
        "Aged Grape Wine",
        "Villain",
        "—",
@@ -17414,6 +17491,13 @@
        "Battery",
        "—",
        "Villain",
+       "—",
+       "Limited data (1/13)"
+      ],
+      [
+       "Beeswax",
+       "Villain",
+       "—",
        "—",
        "Limited data (1/13)"
       ],
@@ -17760,13 +17844,19 @@
       },
       {
        "v": "limited"
+      },
+      {
+       "v": "limited"
+      },
+      {
+       "v": "limited"
       }
      ]
     },
     {
      "type": "table",
      "heading": "Look Up a Villager — What Should I Bring?",
-     "body": "The 13 villagers with community-tested data. The other 12 characters (Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch) have no gift data recorded yet.",
+     "body": "The 13 villagers with community-tested data. The other 12 characters (Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch) have no gift/affinity system in the current 1.0 version — a design fact confirmed by the Huiji 1.0 wiki (2026-08-17), not a data gap. If an update opens affinity for them, this table will be extended first.",
      "columns": [
       "Villager",
       "Loves",
@@ -17842,7 +17932,7 @@
       ],
       [
        "Villain",
-       "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+       "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console, Beeswax, Aged Agave Wine",
        "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
        "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
       ],
@@ -17872,7 +17962,7 @@
       ],
       [
        "Why do some villagers have no gifts listed?",
-       "The community guide this data comes from was built during Early Access and is explicitly unfinished. 12 characters have no entries at all, and an unlisted item may simply be untested rather than neutral."
+       "The reason is a design fact, not a missing measurement: the Huiji 1.0 wiki (checked 2026-08-17) confirms these 12 characters have no gift/affinity system in the current version — they are trader, faction or story-oriented NPCs, so they cannot be gifted to yet. The Early-Access-era community guide also predates 1.0, and an unlisted item may be untested rather than neutral."
       ]
      ]
     }
@@ -17886,6 +17976,28 @@
      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3487656041"
     },
     {
+     "label": "Doloc Town Huiji Wiki — Friendship page (1.0, affinity roster + gift mechanics)",
+     "url": "https://doloctown.huijiwiki.com/wiki/%E5%8F%8B%E8%B0%8A",
+     "labels": {
+      "zh-CN": "Doloc Town 灰机 Wiki——友谊页（1.0 好感度名单与送礼机制）",
+      "zh-TW": "Doloc Town 灰機 Wiki——友誼頁（1.0 好感度名單與送禮機制）",
+      "ja": "Doloc Town Huiji Wiki——友誼ページ（1.0 好感度リストと贈り物メカニズム）",
+      "ko": "Doloc Town Huiji Wiki — 우정 페이지 (1.0 호감도 명단·선물 메커니즘)",
+      "es": "Doloc Town Huiji Wiki — página de amistad (lista de afinidad 1.0 y mecánica de regalos)"
+     }
+    },
+    {
+     "label": "Doloc Town Huiji Wiki — Feilian/Villain character page (1.0, preference tiers)",
+     "url": "https://doloctown.huijiwiki.com/wiki/%E9%A3%9E%E5%BB%89",
+     "labels": {
+      "zh-CN": "Doloc Town 灰机 Wiki——飞廉角色页（1.0 喜好档位）",
+      "zh-TW": "Doloc Town 灰機 Wiki——飛廉角色頁（1.0 喜好檔位）",
+      "ja": "Doloc Town Huiji Wiki——飛廉キャラページ（1.0 好みの段階）",
+      "ko": "Doloc Town Huiji Wiki — Feilian(Villain) 캐릭터 페이지 (1.0 선호 단계)",
+      "es": "Doloc Town Huiji Wiki — página del personaje Feilian (niveles de preferencia 1.0)"
+     }
+    },
+    {
      "label": "Official Steam page — Doloc Town",
      "url": "https://store.steampowered.com/app/2285550/Doloc_Town/"
     }
@@ -17895,12 +18007,25 @@
      "title": "多洛可小镇送礼指南：每位村民的喜好与雷区",
      "metaTitle": "多洛可小镇送礼：村民喜好、讨厌物一览",
      "metaDescription": "多洛可小镇每位村民爱什么、喜欢什么、讨厌什么——外加 12/13 的万能礼物，以及绝对不能送的三样东西。",
-     "intro": "送对了好感度猛涨，送错了白费一天。本页把 65 件物品和社区实测过的 13 位村民做了双向对照：可以按物品查谁想要，也可以按村民查该带什么。",
+     "intro": "送对了好感度猛涨，送错了白费一天。本页把 67 件物品和社区实测过的 13 位村民做了双向对照。名单已与灰机 1.0 的好感度内容角色交叉核对：可以按物品查谁想要，也可以按村民查该带什么。",
      "sections": [
       {
        "type": "note",
        "heading": "这些数据从哪来",
-       "body": "下面每一行都来自社区 Steam 攻略《Doloc Town - Character Gifts》（作者 rockechic），从它的两张数据表逐行读出。花礼物之前先知道两个局限：作者自述这份表\"仍在完善中\"、是抢先体验期做的，比 1.0（2026 年 8 月 5 日）早了一年多；而且 25 个角色里有 12 个完全没有数据。某个物品没被列出，可能只是没人测过——**不等于送了安全**。物品名与村民名保持英文客户端里的原样。"
+       "body": "下面每一行都来自社区 Steam 攻略《Doloc Town - Character Gifts》（作者 rockechic），从它的两张数据表逐行读出。花礼物之前先知道两个局限：作者自述这份表\"仍在完善中\"、是抢先体验期做的，比 1.0（2026 年 8 月 5 日）早了一年多；而且 25 个角色里有 12 个没有任何条目——这**不是采集缺口**：灰机 1.0 友谊页（2026-08-17 核对）确认这 12 位在 1.0 当前版本没有好感度/送礼系统（名单见下方），目前无法送礼。与灰机 1.0 名单交叉核对后确认：本表 13 位有数据的角色恰为灰机 1.0 标注「有好感度内容及专属剧情」的角色；Villain 一行已按灰机 1.0 升级两个已确认映射的物品（Beeswax, Aged Agave Wine）。社区 1.0 数据还表明：未被任何偏好表收录的物品默认归入「无感」档（+10%）——但**某个物品没被本表列出，不代表它被测试过**，未列出物品请按「中性但未验证」对待。物品名与村民名保持英文客户端里的原样。"
+      },
+      {
+       "type": "list",
+       "heading": "1.0 送礼机制怎么运作（社区数据）",
+       "body": "",
+       "items": [
+        "送礼有限次：每位村民每周最多收 2 次礼物（灰机 1.0 友谊页，L2）。有攻略称「每天 2 份」——两者冲突，本站以 1.0 口径为准，游戏内验证后再更新。",
+        "生日特殊规则：生日当天送礼不计入周次数；增加好感的礼物 3 倍加成；会减少好感的礼物当天变为不影响。",
+        "五档数值：最爱 +30% / 喜欢 +17.5% / 无感 +10% / 讨厌 −7.5% / 厌恶 −12.5%（L2 标注，待游戏内实测）。本页的「讨厌」列合并了讨厌与厌恶两档。",
+        "未收录物品默认中性：任何没出现在角色偏好表里的物品，默认按「无感」+10% 计算——这条规则与角色无关。",
+        "游戏内自查：送过增加好感的礼物后，图鉴「通讯录」页会记录喜欢的物品——这是不依赖外部数据的可靠自查方法。",
+        "通用礼物表：灰机 1.0 友谊页还有按档位的「通用礼物+例外」表；具体物品的英文名要等官方中↔英对照表出来后才会并入本页，绝不凭中文名猜英文名。"
+       ]
       },
       {
        "type": "list",
@@ -18207,6 +18332,13 @@
          "数据有限 (1/13)"
         ],
         [
+         "Aged Agave Wine",
+         "Villain",
+         "—",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
          "Aged Grape Wine",
          "Villain",
          "—",
@@ -18231,6 +18363,13 @@
          "Battery",
          "—",
          "Villain",
+         "—",
+         "数据有限 (1/13)"
+        ],
+        [
+         "Beeswax",
+         "Villain",
+         "—",
          "—",
          "数据有限 (1/13)"
         ],
@@ -18577,13 +18716,19 @@
         },
         {
          "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
         }
        ]
       },
       {
        "type": "table",
        "heading": "按村民查——该带什么？",
-       "body": "社区已实测的 13 位村民。另外 12 个角色（Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch）目前没有任何礼物数据。",
+       "body": "社区已实测的 13 位村民。另外 12 个角色（Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch）在 1.0 当前版本**没有好感度/送礼系统**——这是灰机 1.0 友谊页（2026-08-17 核对）确认的设计事实，不是采集缺口。游戏更新若开放好感度，本站会第一时间补表。",
        "columns": [
         "村民",
         "爱",
@@ -18659,7 +18804,7 @@
         ],
         [
          "Villain",
-         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console, Beeswax, Aged Agave Wine",
          "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
          "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
         ],
@@ -18689,7 +18834,7 @@
         ],
         [
          "为什么有些村民没有礼物数据？",
-         "这份数据来自的社区攻略是抢先体验期做的，作者自述尚未完成。有 12 个角色完全没有条目；而某个物品没被列出，可能只是没人测过，不代表它是中性的。"
+         "原因是游戏设计事实，不是没测：灰机 1.0 友谊页（2026-08-17 核对）确认这 12 位角色在 1.0 当前版本没有好感度/送礼系统——他们是商人、阵营交易或剧情类 NPC，目前无法送礼。数据来源的社区攻略本身也是抢先体验期做的，早于 1.0；某个物品没被列出，也可能只是没人测过，不代表它是中性的。"
         ]
        ]
       }
@@ -18699,12 +18844,25 @@
      "title": "ドロックタウン 贈り物ガイド：住民ごとの好みと地雷",
      "metaTitle": "ドロックタウン 贈り物：住民の好き嫌い一覧",
      "metaDescription": "ドロックタウンの住民が何を愛し、何を好み、何を嫌うか。12/13 の万能ギフトと、絶対に渡してはいけない 3 品も掲載。",
-     "intro": "正しい品を渡せば友好度は跳ね上がり、間違えれば一日を無駄にする。本ページは 65 品とコミュニティが実際に検証した住民 13 人を双方向で対照した。品物から「誰が欲しがるか」を引くことも、住民から「何を持っていくか」を引くこともできる。",
+     "intro": "正しい品を渡せば友好度は跳ね上がり、間違えれば一日を無駄にする。本ページは 67 品とコミュニティが実際に検証した住民 13 人を双方向で対照した（リストは Huiji 1.0 の好感度コンテンツ一覧と突き合わせ済み）。品物から「誰が欲しがるか」を引くことも、住民から「何を持っていくか」を引くこともできる。",
      "sections": [
       {
        "type": "note",
        "heading": "このデータの出どころ",
-       "body": "以下の各行はコミュニティ製 Steam ガイド『Doloc Town - Character Gifts』（作者 rockechic）の2 枚のデータ表から直接読み取ったもの。贈り物を使う前に 2 つの限界を知っておきたい。作者自身が「まだ作成途中」と述べており、アーリーアクセス期に作られたため 1.0（2026 年 8 月 5 日）より 1 年以上前のものだ。さらに 25 人のうち 12 人はデータが一切ない。表に無い物品は単に未検証かもしれず、**安全である証拠にはならない**。物品名と住民名は英語クライアントの表記のまま。"
+       "body": "以下の各行はコミュニティ製 Steam ガイド『Doloc Town - Character Gifts』（作者 rockechic）の2 枚のデータ表から直接読み取ったもの。贈り物を使う前に 2 つの限界を知っておきたい。作者自身が「まだ作成途中」と述べており、アーリーアクセス期に作られたため 1.0（2026 年 8 月 5 日）より 1 年以上前のものだ。さらに 25 人のうち 12 人は項目が一切ない——これは**収集の欠落ではなく**、Huiji 1.0 の友誼ページ（2026-08-17 確認）がこの 12 人が現行バージョンに好感度・贈り物システムを持たないと明記している（リストは下記）。Huiji 1.0 のリストと突き合わせた結果、データのある 13 人は「好感度コンテンツのあるキャラ」と一致し、Villain の行は確認済みマッピングの 2 品（Beeswax, Aged Agave Wine）で 1.0 更新した。コミュニティ 1.0 データでは、どの好み表にも載っていない物品は「無関心」枠（+10%）として扱われる——ただし本表に無い物が「テスト済み」を意味するわけではなく、未記載の物は「中立だが未検証」として扱ってほしい。物品名と住民名は英語クライアントの表記のまま。"
+      },
+      {
+       "type": "list",
+       "heading": "1.0 の贈り物システムの仕組み（コミュニティ情報）",
+       "body": "",
+       "items": [
+        "回数制限：各住民へは週に最大 2 回まで贈れる（Huiji 1.0 友誼ページ, L2）。「1 日 2 回」とする攻略もあり矛盾するため、ゲーム内で確認するまで 1.0 側を採用する。",
+        "誕生日は特別：誕生日の贈り物は週の回数に数えられず、友好度が上がる品は 3 倍、下がる品はその日は影響なしになる。",
+        "5 段階の数値：大好き +30% / 好き +17.5% / 無関心 +10% / 嫌い −7.5% / 大嫌い −12.5%（L2、ゲーム内検証待ち）。本ページの「嫌う」列は否定的な 2 段階をまとめたもの。",
+        "未掲載アイテムは無関心扱い：どの好み表にも載っていない物品は「無関心」（+10%）として扱われる——キャラに関係しない共通ルール。",
+        "ゲーム内で確認：友好度が上がる品を贈ると図鑑「連絡帳」に好きな物が記録される。外部データに頼らない確認方法。",
+        "汎用ギフト表：Huiji 1.0 の友誼ページには段階別の「汎用ギフト＋例外」表もある。正式な中英対照表が揃うまで物品名は追加しない——中国語名からの推測はしない。"
+       ]
       },
       {
        "type": "list",
@@ -19011,6 +19169,13 @@
          "データ不足 (1/13)"
         ],
         [
+         "Aged Agave Wine",
+         "Villain",
+         "—",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
          "Aged Grape Wine",
          "Villain",
          "—",
@@ -19035,6 +19200,13 @@
          "Battery",
          "—",
          "Villain",
+         "—",
+         "データ不足 (1/13)"
+        ],
+        [
+         "Beeswax",
+         "Villain",
+         "—",
          "—",
          "データ不足 (1/13)"
         ],
@@ -19381,13 +19553,19 @@
         },
         {
          "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
         }
        ]
       },
       {
        "type": "table",
        "heading": "住民から引く——何を持っていく？",
-       "body": "コミュニティ検証済みの住民 13 人。残る 12 人（Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch）は贈り物データが未記録。",
+       "body": "コミュニティ検証済みの住民 13 人。残り 12 人（Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch）は現行 1.0 に好感度・贈り物システムが無い——Huiji 1.0 友誼ページ（2026-08-17 確認）による設計上の事実で、データ不足ではない。好感度が実装されたら最優先で表を更新する。",
        "columns": [
         "住民",
         "愛する",
@@ -19463,7 +19641,7 @@
         ],
         [
          "Villain",
-         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console, Beeswax, Aged Agave Wine",
          "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
          "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
         ],
@@ -19493,7 +19671,7 @@
         ],
         [
          "贈り物データが無い住民がいるのはなぜ？",
-         "元になったコミュニティガイドはアーリーアクセス期に作られ、作者自身が未完成と述べている。12 人は項目自体が無く、表に無い品は「中立」ではなく単に未検証の可能性がある。"
+         "理由は計測漏れではなく設計上の事実です。Huiji 1.0 友誼ページ（2026-08-17 確認）は、この 12 人が現行バージョンに好感度・贈り物システムを持たないと明記しています——商人・陣営取引・ストーリー系 NPC で、現時点では贈れません。元のコミュニティガイドも 1.0 より前のアーリーアクセス期のもので、表に無い品は中立ではなく単に未検証の可能性があります。"
         ]
        ]
       }
@@ -19503,12 +19681,25 @@
      "title": "돌록 타운 선물 가이드: 주민별 선호 아이템과 지뢰",
      "metaTitle": "돌록 타운 선물: 주민 선호·비선호 정리",
      "metaDescription": "돌록 타운 주민이 무엇을 아주 좋아하고, 좋아하고, 싫어하는지 정리했다. 12/13의 만능 선물과 절대 주면 안 되는 세 가지도 함께.",
-     "intro": "제대로 주면 호감도가 크게 오르고, 잘못 주면 하루를 날린다. 이 문서는 아이템 65종과 커뮤니티가 실제로 검증한 주민 13명을 양방향으로 대조했다. 아이템으로 누가 원하는지 찾을 수도, 주민으로 무엇을 가져갈지 찾을 수도 있다.",
+     "intro": "제대로 주면 호감도가 크게 오르고, 잘못 주면 하루를 날립니다. 이 문서는 아이템 67종과 커뮤니티가 실제로 검증한 주민 13명을 양방향으로 대조했습니다(명단은 Huiji 1.0의 호감도 콘텐츠 캐릭터 목록과 교차 확인). 아이템으로 누가 원하는지 찾을 수도, 주민으로 무엇을 가져갈지 찾을 수도 있습니다.",
      "sections": [
       {
        "type": "note",
        "heading": "이 데이터의 출처",
-       "body": "아래 모든 행은 커뮤니티 Steam 가이드 《Doloc Town - Character Gifts》(작성자 rockechic)의 데이터 표 두 장에서 그대로 옮긴 것이다. 선물을 쓰기 전에 알아둘 한계가 두 가지 있다. 작성자 본인이 \"아직 작업 중\"이라고 밝혔고 얼리 액세스 시기에 만든 자료라 1.0(2026년 8월 5일)보다 1년 이상 앞선다. 게다가 캐릭터 25명 중 12명은 데이터가 전혀 없다. 목록에 없는 물건은 그냥 아직 검증되지 않았을 수 있으며 **안전하다는 뜻이 아니다**. 아이템명과 주민 이름은 영어 클라이언트 표기 그대로 두었다."
+       "body": "아래 모든 행은 커뮤니티 Steam 가이드 《Doloc Town - Character Gifts》(작성자 rockechic)의 데이터 표 두 장에서 그대로 옮긴 것입니다. 선물을 쓰기 전에 알아둘 한계가 두 가지 있습니다. 작성자 본인이 \"아직 작업 중\"이라고 밝혔고 얼리 액세스 시기에 만든 자료라 1.0(2026년 8월 5일)보다 1년 이상 앞섭니다. 게다가 캐릭터 25명 중 12명은 항목이 전혀 없습니다——이것은 **수집 누락이 아니라** Doloc Town Huiji Wiki 1.0(2026-08-17 확인)이 이 12명이 현재 버전에 호감도·선물 시스템을 갖고 있지 않다고 명시한 사실입니다(명단은 아래). Huiji 1.0 명단과 교차 확인한 결과 데이터가 있는 13명은 호감도 콘텐츠가 있는 캐릭터와 정확히 일치하며, Villain 행은 확인된 매핑 2종(Beeswax, Aged Agave Wine)으로 1.0 기준 갱신했습니다. 커뮤니티 1.0 데이터에 따르면 어떤 취향 표에도 없는 아이템은 기본적으로 '무감' 등급(+10%)으로 처리됩니다——하지만 이 표에 없는 아이템이 '테스트 완료'라는 뜻은 아니며, 미기재 아이템은 '중립이지만 미검증'으로 다뤄주세요. 아이템명과 주민 이름은 영어 클라이언트 표기 그대로 두었습니다."
+      },
+      {
+       "type": "list",
+       "heading": "1.0 선물 시스템의 작동 방식 (커뮤니티 정보)",
+       "body": "",
+       "items": [
+        "선물 횟수 제한: 주민 한 명에게 선물은 주당 최대 2번까지(Doloc Town Huiji Wiki 1.0, L2). '하루 2번'이라고 적은 공략도 있어 충돌하므로, 게임 내 확인 전까지는 1.0 기준을 따릅니다.",
+        "생일 특별 규칙: 생일날 선물은 주간 횟수에 포함되지 않고, 호감도를 올리는 선물은 3배, 내리는 선물은 그날 영향이 없습니다.",
+        "5단계 수치: 가장 좋아함 +30% / 좋아함 +17.5% / 무감 +10% / 싫어함 −7.5% / 아주 싫어함 −12.5%(L2, 게임 내 확인 대기). 이 가이드의 '싫어함' 열은 부정 등급 두 개를 합친 것입니다.",
+        "미기재 아이템은 무감 처리: 어떤 취향 표에도 없는 아이템은 기본적으로 '무감'(+10%)으로 계산됩니다——캐릭터와 무관한 공통 규칙입니다.",
+        "게임 내 확인 방법: 호감도를 올리는 선물을 주면 도감 '연락처'에 좋아하는 물건이 기록됩니다——외부 데이터 없이 확인하는 방법입니다.",
+        "공용 선물 표: Huiji 1.0 우정 페이지에는 단계별 '공용 선물+예외' 표도 있습니다. 공식 중영 대조표가 나오면 물품명을 추가합니다——중국어 이름으로 영어 이름을 추측하지 않습니다."
+       ]
       },
       {
        "type": "list",
@@ -19815,6 +20006,13 @@
          "데이터 부족 (1/13)"
         ],
         [
+         "Aged Agave Wine",
+         "Villain",
+         "—",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
          "Aged Grape Wine",
          "Villain",
          "—",
@@ -19839,6 +20037,13 @@
          "Battery",
          "—",
          "Villain",
+         "—",
+         "데이터 부족 (1/13)"
+        ],
+        [
+         "Beeswax",
+         "Villain",
+         "—",
          "—",
          "데이터 부족 (1/13)"
         ],
@@ -20185,13 +20390,19 @@
         },
         {
          "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
         }
        ]
       },
       {
        "type": "table",
        "heading": "주민으로 찾기 — 무엇을 가져갈까?",
-       "body": "커뮤니티가 검증한 주민 13명. 나머지 12명(Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch)은 아직 선물 데이터가 없다.",
+       "body": "커뮤니티가 검증한 주민 13명. 나머지 12명(Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch)은 1.0 현재 버전에 호감도/선물 시스템이 없습니다——Huiji 1.0 우정 페이지(2026-08-17 확인)가 확인한 게임 설계 사실이지 수집 누락이 아닙니다. 업데이트로 호감도가 열리면 이 표를 가장 먼저 갱신합니다.",
        "columns": [
         "주민",
         "아주 좋아함",
@@ -20267,7 +20478,7 @@
         ],
         [
          "Villain",
-         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console, Beeswax, Aged Agave Wine",
          "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
          "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
         ],
@@ -20297,7 +20508,7 @@
         ],
         [
          "선물 데이터가 없는 주민은 왜 그런가요?",
-         "출처인 커뮤니티 가이드는 얼리 액세스 시기에 작성됐고 작성자 본인이 미완성이라고 밝혔다. 12명은 항목 자체가 없으며, 목록에 없는 아이템은 중립이 아니라 그냥 미검증일 수 있다."
+         "이유는 측정 누락이 아니라 게임 설계 사실입니다. Huiji 1.0 우정 페이지(2026-08-17 확인)는 이 12명이 현재 버전에 호감도/선물 시스템을 갖고 있지 않다고 명시합니다——상인·진영 거래·스토리 NPC라 아직 선물할 수 없습니다. 출처인 커뮤니티 가이드도 1.0보다 앞선 얼리 액세스 시기 자료이며, 목록에 없는 아이템은 중립이 아니라 그냥 미검증일 수 있습니다."
         ]
        ]
       }
@@ -20307,7 +20518,7 @@
      "title": "Guía de regalos de Doloc Town: gustos y rechazos de cada aldeano",
      "metaTitle": "Regalos de Doloc Town: gustos y rechazos por aldeano",
      "metaDescription": "Qué adora, qué le gusta y qué rechaza cada aldeano de Doloc Town — más el regalo universal (12/13) y los tres objetos que nunca debes entregar.",
-     "intro": "Acierta con el objeto y la amistad sube de golpe; falla y habrás perdido el día. Esta página cruza 65 objetos con los 13 aldeanos que la comunidad ha probado, en ambos sentidos: busca un objeto para ver quién lo quiere, o un aldeano para ver qué llevarle.",
+     "intro": "Acierta con el objeto y la amistad sube de golpe; falla y habrás perdido el día. Esta página cruza 67 objetos con los 13 aldeanos que la comunidad ha probado (lista contrastada con el roster 1.0 de Huiji de personajes con afinidad), en ambos sentidos: busca un objeto para ver quién lo quiere, o un aldeano para ver qué llevarle.",
      "sections": [
       {
        "type": "note",
@@ -20318,7 +20529,20 @@
       {
        "type": "note",
        "heading": "De dónde salen estos datos",
-       "body": "Cada fila procede de la guía comunitaria de Steam \"Doloc Town - Character Gifts\" de rockechic, leída directamente de sus dos tablas. Dos límites antes de gastar un regalo: el autor indica que \"sigue en proceso\" y la creó durante el Acceso Anticipado, más de un año antes de la 1.0 (5 de agosto de 2026); y 12 de los 25 personajes no tienen datos. Que un objeto no aparezca puede significar solo que nadie lo ha probado — no que sea seguro. Los nombres se mantienen como aparecen en el cliente en inglés."
+       "body": "Cada fila procede de la guía comunitaria de Steam \"Doloc Town - Character Gifts\" de rockechic, leída directamente de sus dos tablas. Dos límites antes de gastar un regalo: la guía se creó durante el Acceso Anticipado (el autor la llama \"sigue en proceso\"), más de un año antes de la 1.0 (5 de agosto de 2026); y que 12 de los 25 personajes no tengan entradas no es una laguna de datos: la wiki Doloc Town Huiji Wiki 1.0 (verificada el 2026-08-17) confirma que no tienen sistema de regalos/afinidad en la versión actual, así que todavía no se les puede regalar (lista abajo). El cruce con la lista 1.0 confirma que los 13 personajes con datos coinciden con los que tienen contenido de afinidad, y la fila de Villain se actualizó con 2 objetos confirmados del 1.0 (Beeswax, Aged Agave Wine). Los datos comunitarios del 1.0 indican además que los objetos no listados en ninguna tabla de preferencias se tratan por defecto como \"indiferente\" (+10 %), pero que un objeto no aparezca en esta guía no prueba que se haya probado: trátalo como neutral sin verificar. Los nombres se mantienen como aparecen en el cliente en inglés."
+      },
+      {
+       "type": "list",
+       "heading": "Cómo funciona el sistema de regalos en 1.0 (datos de la comunidad)",
+       "body": "",
+       "items": [
+        "Límite de regalos: cada aldeano acepta como máximo dos regalos por semana (wiki Huiji 1.0, L2). Algunas guías dicen dos al día: hay conflicto, así que seguimos la wiki 1.0 hasta verificarlo en el juego.",
+        "Cumpleaños especiales: el regalo de cumpleaños no cuenta para el límite semanal; los regalos que suben la amistad valen 3× y los que la bajarían no tienen efecto ese día.",
+        "Cinco niveles con valores: adorado +30 %, gustado +17,5 %, indiferente +10 %, disgustado −7,5 %, odiado −12,5 % (L2, pendiente de verificación en el juego). La columna \"rechaza\" de esta guía fusiona los dos niveles negativos.",
+        "Los no listados cuentan como indiferente: cualquier objeto que no aparezca en una tabla de preferencias se trata como \"indiferente\" (+10 %), una regla independiente del personaje.",
+        "Comprueba la agenda en el juego: tras dar un regalo que sube la amistad, la página \"Contactos\" del catálogo registra los objetos que le gustan: la forma fiable de verificarlo sin datos externos.",
+        "Existe una tabla de regalos genéricos: la página de amistad de Huiji 1.0 también enumera regalos genéricos por nivel con excepciones. Añadiremos esos nombres cuando haya una tabla oficial chino-inglés, nunca adivinando desde el chino."
+       ]
       },
       {
        "type": "list",
@@ -20625,6 +20849,13 @@
          "Datos limitados (1/13)"
         ],
         [
+         "Aged Agave Wine",
+         "Villain",
+         "—",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
          "Aged Grape Wine",
          "Villain",
          "—",
@@ -20649,6 +20880,13 @@
          "Battery",
          "—",
          "Villain",
+         "—",
+         "Datos limitados (1/13)"
+        ],
+        [
+         "Beeswax",
+         "Villain",
+         "—",
          "—",
          "Datos limitados (1/13)"
         ],
@@ -20995,13 +21233,19 @@
         },
         {
          "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
         }
        ]
       },
       {
        "type": "table",
        "heading": "Buscar por aldeano — ¿qué le llevo?",
-       "body": "Los 13 aldeanos con datos probados por la comunidad. Los otros 12 personajes (Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch) todavía no tienen datos de regalos.",
+       "body": "Los 13 aldeanos con datos probados por la comunidad. Los otros 12 personajes (Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch) no tienen sistema de regalos/afinidad en la versión 1.0 actual — confirmado por la wiki Huiji 1.0 (2026-08-17), no es una laguna de datos. Si una actualización añade afinidad, esta tabla se ampliará lo antes posible.",
        "columns": [
         "Aldeano",
         "Adora",
@@ -21077,7 +21321,7 @@
         ],
         [
          "Villain",
-         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console, Beeswax, Aged Agave Wine",
          "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
          "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
         ],
@@ -21107,7 +21351,7 @@
         ],
         [
          "¿Por qué algunos aldeanos no tienen regalos listados?",
-         "La guía comunitaria de la que proceden los datos se hizo durante el Acceso Anticipado y su autor la declara inacabada. 12 personajes no tienen ninguna entrada, y que un objeto no aparezca puede significar solo que nadie lo ha probado."
+         "Es un hecho de diseño, no una medición pendiente: la wiki Huiji 1.0 (verificada el 2026-08-17) confirma que estos 12 personajes no tienen sistema de regalos/afinidad en la versión actual — son NPC de comercio, facción o historia, así que todavía no se les puede regalar. Además, la guía comunitaria original es de la época del Acceso Anticipado, anterior al 1.0, y que un objeto no aparezca puede significar solo que nadie lo ha probado."
         ]
        ]
       }
@@ -21117,12 +21361,25 @@
      "title": "多洛可小鎮送禮指南：每位村民的喜好與雷區",
      "metaTitle": "多洛可小鎮送禮：村民喜好、討厭物一覽",
      "metaDescription": "多洛可小鎮每位村民愛什麼、喜歡什麼、討厭什麼——外加 12/13 的萬能禮物，以及絕對不能送的三樣東西。",
-     "intro": "送對了好感度猛漲，送錯了白費一天。本頁把 65 件物品和社區實測過的 13 位村民做了雙向對照：可以按物品查誰想要，也可以按村民查該帶什麼。",
+     "intro": "送對了好感度猛漲，送錯了白費一天。本頁把 67 件物品和社區實測過的 13 位村民做了雙向對照。名單已與灰機 1.0 的好感度內容角色交叉核對：可以按物品查誰想要，也可以按村民查該帶什麼。",
      "sections": [
       {
        "type": "note",
        "heading": "這些數據從哪來",
-       "body": "下面每一行都來自社區 Steam 攻略《Doloc Town - Character Gifts》（作者 rockechic），從它的兩張數據表逐行讀出。花禮物之前先知道兩個侷限：作者自述這份表\"仍在完善中\"、是搶先體驗期做的，比 1.0（2026 年 8 月 5 日）早了一年多；而且 25 個角色裡有 12 個完全沒有數據。某個物品沒被列出，可能只是沒人測過——**不等於送了安全**。物品名與村民名保持英文客戶端裡的原樣。"
+       "body": "下面每一行都來自社區 Steam 攻略《Doloc Town - Character Gifts》（作者 rockechic），從它的兩張數據表逐行讀出。花禮物之前先知道兩個侷限：作者自述這份表\"仍在完善中\"、是搶先體驗期做的，比 1.0（2026 年 8 月 5 日）早了一年多；而且 25 個角色裡有 12 個沒有任何條目——這**不是採集缺口**：灰機 1.0 友誼頁（2026-08-17 核對）確認這 12 位在 1.0 當前版本沒有好感度/送禮系統（名單見下方），目前無法送禮。與灰機 1.0 名單交叉核對後確認：本表 13 位有數據的角色恰為灰機 1.0 標註「有好感度內容及專屬劇情」的角色；Villain 一行已按灰機 1.0 升級兩個已確認映射的物品（Beeswax, Aged Agave Wine）。社區 1.0 數據還表明：未被任何偏好表收錄的物品默認歸入「無感」檔（+10%）——但**某個物品沒被本表列出，不代表它被測試過**，未列出物品請按「中性但未驗證」對待。物品名與村民名保持英文客戶端裡的原樣。"
+      },
+      {
+       "type": "list",
+       "heading": "1.0 送禮機制怎麼運作（社區數據）",
+       "body": "",
+       "items": [
+        "送禮有限次：每位村民每週最多收 2 次禮物（灰機 1.0 友誼頁，L2）。有攻略稱「每天 2 份」——兩者衝突，本站以 1.0 口徑為準，遊戲內驗證後再更新。",
+        "生日特殊規則：生日當天送禮不計入周次數；增加好感的禮物 3 倍加成；會減少好感的禮物當天變為不影響。",
+        "五檔數值：最愛 +30% / 喜歡 +17.5% / 無感 +10% / 討厭 −7.5% / 厭惡 −12.5%（L2 標註，待遊戲內實測）。本頁的「討厭」列合併了討厭與厭惡兩檔。",
+        "未收錄物品默認中性：任何沒出現在角色偏好表裡的物品，默認按「無感」+10% 計算——這條規則與角色無關。",
+        "遊戲內自查：送過增加好感的禮物後，圖鑑「通訊錄」頁會記錄喜歡的物品——這是不依賴外部數據的可靠自查方法。",
+        "通用禮物表：灰機 1.0 友誼頁還有按檔位的「通用禮物+例外」表；具體物品的英文名要等官方中↔英對照表出來後才會併入本頁，絕不憑中文名猜英文名。"
+       ]
       },
       {
        "type": "list",
@@ -21429,6 +21686,13 @@
          "數據有限 (1/13)"
         ],
         [
+         "Aged Agave Wine",
+         "Villain",
+         "—",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
          "Aged Grape Wine",
          "Villain",
          "—",
@@ -21453,6 +21717,13 @@
          "Battery",
          "—",
          "Villain",
+         "—",
+         "數據有限 (1/13)"
+        ],
+        [
+         "Beeswax",
+         "Villain",
+         "—",
          "—",
          "數據有限 (1/13)"
         ],
@@ -21799,13 +22070,19 @@
         },
         {
          "v": "limited"
+        },
+        {
+         "v": "limited"
+        },
+        {
+         "v": "limited"
         }
        ]
       },
       {
        "type": "table",
        "heading": "按村民查——該帶什麼？",
-       "body": "社區已實測的 13 位村民。另外 12 個角色（Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch）目前沒有任何禮物數據。",
+       "body": "社區已實測的 13 位村民。另外 12 個角色（Gabryl, Gerald, Kel, Kuma, Licca, Lightman, Loveyer, Mira, Paiea, Pike, Shylock, Witch）在 1.0 當前版本**沒有好感度/送禮系統**——這是灰機 1.0 友誼頁（2026-08-17 核對）確認的設計事實，不是採集缺口。遊戲更新若開放好感度，本站會第一時間補表。",
        "columns": [
         "村民",
         "愛",
@@ -21881,7 +22158,7 @@
         ],
         [
          "Villain",
-         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console",
+         "Aged Rice Wine, Aged Beer, Aged Grape Wine, Agave Wine, Grape Wine, Rice Wine, Game Console, Beeswax, Aged Agave Wine",
          "Fern Fossil, Iced Tea, Beer, Old Chip, Battery",
          "Combat Chip, Copper Ingot, 33 FCS, Bamboo Tube, Bottled Water"
         ],
@@ -21911,7 +22188,7 @@
         ],
         [
          "為什麼有些村民沒有禮物數據？",
-         "這份數據來自的社區攻略是搶先體驗期做的，作者自述尚未完成。有 12 個角色完全沒有條目；而某個物品沒被列出，可能只是沒人測過，不代表它是中性的。"
+         "原因是遊戲設計事實，不是沒測：灰機 1.0 友誼頁（2026-08-17 核對）確認這 12 位角色在 1.0 當前版本沒有好感度/送禮系統——他們是商人、陣營交易或劇情類 NPC，目前無法送禮。數據來源的社區攻略本身也是搶先體驗期做的，早於 1.0；某個物品沒被列出，也可能只是沒人測過，不代表它是中性的。"
         ]
        ]
       }

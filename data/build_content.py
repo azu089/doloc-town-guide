@@ -7295,6 +7295,71 @@ for _source_item in _auto_page.get("sources", []):
     if _source_item.get("url") in _source_labels:
         _source_item["labels"] = copy.deepcopy(_source_labels[_source_item["url"]])
 
+# ================= 2026-08-17 ko 深化（K1-K9 证据，见 work/planning/2026-08-17-doloc-gifts-ko-research.md §4）=================
+# ko 是本站护城河语言：按韩国用户搜索意向原生写作，不搞英文直译（stack.md i18n 进阶做法）。
+# 只追加 ko-only section（不改 en 页面），且全部为非 table 类型（保护 fishing rowAttrs 对齐）。
+# 元数据统一使用「돌록 타운 레시피/낚시/탐험」检索词；韩语全站游戏名称必须为 돌록 타운。
+_KO_OFFICIAL = (
+  "공식 한국어 지원",
+  "Steam 상점 페이지에서 한국어가 지원 언어로 확인되었습니다 [L0]. 개발사는 《1.0 Update Preview & Public Localization Test Branch》 공지에서 한국어를 포함한 현지화 투자를 밝혔습니다 [L0]. 게임의 공식 한국어 표기가 확정되면 이 페이지의 번역을 그에 맞춰 갱신합니다.",
+)
+KO_DEEPEN = {
+ "cooking": {
+  "metaTitle": "돌록 타운 레시피: 요리 가이드와 음식 버프 (1.0)",
+  "metaDescription": "돌록 타운 레시피와 요리 시스템: 80+ 레시피 해금법, 음식 버프 효과, 요리가 탐험·농사·전투를 뒷받침하는 방식.",
+  "sections": [
+   {"type":"note","heading":_KO_OFFICIAL[0],"body":_KO_OFFICIAL[1]},
+   {"type":"list","heading":"요리 자료 범위 (Huiji 1.0)","body":"커뮤니티가 관리하는 Doloc Town Huiji Wiki의 《요리》 페이지(2026-08-17 확인)는 다음 주제를 다룹니다. 세부 수치는 패치마다 달라질 수 있으니 게임 내 레시피 창에서 확인하세요. [L2]",
+    "items":[
+      "재료: 요리 재료는 작물·낚시·목장 등에서 얻습니다. [L2]",
+      "레시피: 레시피 목록과 해금 조건을 정리합니다. [L2]",
+      "일괄 조리: 한 번에 여러 개를 만들어 시간과 재료를 아낍니다. [L2]",
+      "레시피 모드: 레시피 창에서 재료와 도구 요구 사항을 확인합니다. [L2]",
+      "신선한 재료 조리: 재료 상태에 따라 결과가 달라질 수 있으니 상태를 확인하세요. [L2]",
+      "운영 제안: 우정·테크 트리 해금 레시피를 우선 노리고, 남는 재료는 가공 장비로 처리합니다. [L2]"]},
+   {"type":"list","heading":"남는 수확물 활용: 가공 장비","body":"절임 단지·건조기·직조기 등 가공 장비로 남는 수확물을 처리할 수 있습니다. 가공 전후 가치는 현재 세이브에 표시된 값을 비교하세요——이 가이드는 구체적인 수치를 검증하지 않았습니다.",
+    "items":[
+      "절임 단지: 블루베리 등 열매를 절임으로 가공. [L2]",
+      "건조기: 물고기 등 수산물을 건조. [L2]",
+      "직조기: 섬유를 직물로 가공. [L2]",
+      "가치 비교: 판매 전 현재 세이브의 원재료·가공품 가격을 비교하세요."]},
+  ]
+ },
+ "fishing": {
+  "metaTitle": "돌록 타운 낚시 공략: 낚시터·날씨·계절별 어획 (1.0)",
+  "metaDescription": "돌록 타운 낚시 공략: 어획표에서 낚시터, 시간, 날씨, 계절과 현재 낚싯대·코어 요구 사항을 검색하세요.",
+  "sections": [
+   {"type":"note","heading":_KO_OFFICIAL[0],"body":_KO_OFFICIAL[1]},
+   {"type":"list","heading":"월별 어획 요약 (이 페이지 표에서 정리)","body":"아래 요약은 이 페이지 어획표의 정리본이며 별도 출처가 아닙니다. 표와 함께 보세요.",
+    "items":[
+      "1월: 철갑상어(물 코어 필요), 연어(연어 축제·대나무 낚싯대).",
+      "1–2월(우기): 무지개송어, 미꾸라지, 대구·참치(대나무 낚싯대).",
+      "3월: 철갑상어(물 코어 필요).",
+      "3–4월(건기): 이빨고기, 다슬기, 위장 해골 물고기, 뱀장어(암석 코어 샘플), 발광 뱀장어(4월 작열하는 태양).",
+      "연중: 위 표의 연중 어종(잉어, 메기, 초어, 정어리, 배스, 새우, 반짝이는 금붕어, 비단잉어, 드렁허리, 강꼬치고기, 수생 아메바).",
+      "조건 확인: 목표 어획 전에 표의 시간·날씨·낚싯대·코어 조건을 다시 확인하세요."]},
+  ]
+ },
+ "exploration": {
+  "metaTitle": "돌록 타운 탐험 공략: 전체 5개 지역과 구시가지 유적 (1.0)",
+  "metaDescription": "돌록 타운 탐험 공략: 교외, 리버 밸리, 습지, 동굴, 그리고 1.0의 구시가지 유적 — 자원·비밀·출발 준비까지.",
+  "sections": [
+   {"type":"note","heading":_KO_OFFICIAL[0],"body":_KO_OFFICIAL[1]},
+   {"type":"note","heading":"선물 호감도가 없는 NPC (1.0)","body":"1.0 현재 버전에서 Paiea와 Shylock은 개인 선물 호감도 시스템이 없는 NPC입니다——각각 진영 거래와 사막 거래를 담당합니다 (Huiji 1.0 기준) [L2]. 호감도가 없는 캐릭터 전체 명단과 선물 시스템은 /gifts 페이지를 참고하세요."},
+  ]
+ },
+}
+for _slug, _ko in KO_DEEPEN.items():
+    _p = next((x for x in d["pages"] if x["slug"] == _slug), None)
+    if _p is None:
+        print("  [warn] ko-deepen no page for", _slug); continue
+    _ko_view = _p.setdefault("i18n", {}).setdefault("ko", {})
+    if "metaTitle" in _ko: _ko_view["metaTitle"] = _ko["metaTitle"]
+    if "metaDescription" in _ko: _ko_view["metaDescription"] = _ko["metaDescription"]
+    _ko_secs = _ko_view.setdefault("sections", copy.deepcopy(_p.get("sections", [])))
+    _ko_secs.extend(_ko.get("sections", []))
+print("ko deepen injected:", ", ".join(f"{s}(+{len(v.get('sections', []))} sec)" for s, v in KO_DEEPEN.items()))
+
 # ---------- write site.json ----------
 d["site"]["languages"] = ["en","zh-CN","zh-TW","ja","ko","es"]
 d["site"]["defaultLanguage"] = "en"

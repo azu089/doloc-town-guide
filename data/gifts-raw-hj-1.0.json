@@ -1,0 +1,99 @@
+{
+  "_source": {
+    "title": "Doloc Town 灰机 Wiki —— 1.0 友谊/好感度数据（友谊页 + 13 张逐角色页）",
+    "grade": "L2",
+    "fetched": "2026-08-17",
+    "fetch_method": "直接 curl 403（Cloudflare 挑战），经 r.jina.ai 只读代理抓取全文（HTTP 200）；关键页建议浏览器复核",
+    "pages": {
+      "友谊": "https://doloctown.huijiwiki.com/wiki/%E5%8F%8B%E8%B0%8A",
+      "飞廉": "https://doloctown.huijiwiki.com/wiki/%E9%A3%9E%E5%BB%89",
+      "澳柯玛": "https://doloctown.huijiwiki.com/wiki/%E6%BE%B3%E6%9F%AF%E7%8E%9B",
+      "克劳德": "https://doloctown.huijiwiki.com/wiki/%E5%85%8B%E5%8A%B3%E5%BE%B7",
+      "柯奥德": "https://doloctown.huijiwiki.com/wiki/%E6%9F%AF%E5%A5%A5%E5%BE%B7",
+      "达达": "https://doloctown.huijiwiki.com/wiki/%E8%BE%BE%E8%BE%BE",
+      "霍特": "https://doloctown.huijiwiki.com/wiki/%E9%9C%8D%E7%89%B9",
+      "卡莎": "https://doloctown.huijiwiki.com/wiki/%E5%8D%A1%E8%8E%8E",
+      "朗克": "https://doloctown.huijiwiki.com/wiki/%E6%9C%97%E5%85%8B",
+      "梅林": "https://doloctown.huijiwiki.com/wiki/%E6%A2%85%E6%9E%97",
+      "墨翟": "https://doloctown.huijiwiki.com/wiki/%E5%A2%A8%E7%BF%A1",
+      "奥兰多": "https://doloctown.huijiwiki.com/wiki/%E5%A5%A5%E5%85%B0%E5%A4%9A",
+      "萨科": "https://doloctown.huijiwiki.com/wiki/%E8%90%A8%E7%A7%91",
+      "泽尼瑟": "https://doloctown.huijiwiki.com/wiki/%E6%B3%BD%E5%B0%BC%E7%91%9F"
+    },
+    "garbled_removed": [
+      "飞廉页「最爱」一览含 1 个乱码条目（UTF-8 替换字符编码损坏的中文乱码形态）——已剔除，未上表，本文件亦不含该乱码字符序列。"
+    ],
+    "mapping_boundary": "站点铁律：物品名保留英文客户端原样。灰机为中文章节、物品页未见英文名标注，无官方中↔英（↔韩）对照表。因此仅采用可确认映射的物品级升级：蜂蜡=Beeswax、米酒=Rice Wine、啤酒=Beer、龙舌兰酒=Agave Wine、陈酿*=Aged *（均与现 rockechic 表英文名同源，见对照清单）。伊甸果酒/陈酿伊甸果酒/月光之歌/豪华套餐等无对照表可依，禁止凭中文名猜英文名，未入表。",
+    "conflicts": [
+      "Villain=飞廉 啤酒档位冲突：rockechic 表 likes=Beer，灰机 1.0 飞廉页「最爱」=啤酒(Beer)。按「灰机 1.0 优先、rockechic 兜底、冲突不并表（记入对照清单）」裁决，未并表，保留 rockechic 的 likes=Beer；待游戏内通讯录实测后裁决。",
+      "机制数值冲突：另一家中文攻略站（2026-07-30 发布的《全 NPC 好感送礼攻略》）称「每日每位 NPC 仅能赠送 2 份」，与灰机 1.0 友谊页「每周最多 2 次」矛盾。裁决：优先灰机 1.0 口径，未采纳该攻略的数值，未并表；写入页面时标注游戏内实测待补。",
+      "档位数值（+30%/+17.5%/+10%/-7.5%/-12.5%）与该中文攻略站数值相同但来源不同：本站以灰机 1.0 友谊页（L2，社区数据挖掘口径）为来源并标注，不引用该攻略站。"
+    ],
+    "warning": "社区数据挖掘口径（L2）：机制数值（每周 2 次、生日 3 倍、五档百分比）未经游戏内实测（L0 待补）。"
+  },
+  "affinity": {
+    "with_content": [
+      {"cn": "澳柯玛", "en": "Alchemy"},
+      {"cn": "克劳德", "en": "Claud"},
+      {"cn": "柯奥德", "en": "Cod"},
+      {"cn": "达达", "en": "Dada"},
+      {"cn": "霍特", "en": "Hult"},
+      {"cn": "卡莎", "en": "Kasia"},
+      {"cn": "朗克", "en": "Lank"},
+      {"cn": "梅林", "en": "Merlin"},
+      {"cn": "墨翟", "en": "Mody"},
+      {"cn": "奥兰多", "en": "Orlando"},
+      {"cn": "萨科", "en": "Sacco"},
+      {"cn": "飞廉", "en": "Villain"},
+      {"cn": "泽尼瑟", "en": "Zenis"}
+    ],
+    "without_content": [
+      {"cn": "加百列", "en": "Gabryl"},
+      {"cn": "杰拉德", "en": "Gerald"},
+      {"cn": "凯尔", "en": "Kel"},
+      {"cn": "库玛桑", "en": "Kuma"},
+      {"cn": "莉卡", "en": "Licca"},
+      {"cn": "灯男", "en": "Lightman"},
+      {"cn": "洛维那", "en": "Loveyer"},
+      {"cn": "米拉", "en": "Mira"},
+      {"cn": "帕伊雅", "en": "Paiea"},
+      {"cn": "派克", "en": "Pike"},
+      {"cn": "夏洛克", "en": "Shylock"},
+      {"cn": "女巫", "en": "Witch"},
+      {"cn": "凯涅尼木", "en": null},
+      {"cn": "奇普", "en": null},
+      {"cn": "希伦", "en": null}
+    ],
+    "note": "13 位有好感度内容及专属剧情的角色恰为现表 13 人；15 位暂无好感度内容的角色 = 12 位缺失角色（全部在内）+ 3 位 rockechic 表外角色（凯涅尼木/奇普/希伦，灰机角色页 28 人 > 攻略 25 人）。12 位缺失角色个人页「喜好一览」均标注「当前版本暂无好感度内容」——这是游戏设计事实，不是采集缺口。"
+  },
+  "mechanisms": {
+    "weekly_gift_limit": "每周最多送 2 次（与另一家中文攻略站「每日 2 份」的说法冲突，优先灰机 1.0 口径；待游戏内实测确认）。",
+    "birthday": "生日当天送礼不计入周次数；增加好感的礼物 3 倍加成；会减少好感的礼物变为不影响。",
+    "five_tiers": {"最爱": 30.0, "喜欢": 17.5, "无感": 10.0, "讨厌": -7.5, "厌恶": -12.5},
+    "unlisted_default": "凡未被收录的物品默认归入「无感」+10%（与角色偏好无关的通用规则）。",
+    "address_book": "赠送增加好感的礼物后，游戏图鉴「通讯录」页会记录历史喜欢的物品——游戏内自查的 L0 路径。",
+    "generic_gift_table": "灰机友谊页提供各档「通用礼物+例外」表；具体物品的英文名需官方中↔英对照表确认后并入反查表，本文件仅记录机制级描述。"
+  },
+  "villagers_1_0": {
+    "Villain": {
+      "cn": "飞廉",
+      "tiers": {
+        "loves": ["Beeswax", "Rice Wine", "Beer", "Grape Wine", "Agave Wine", "Aged Rice Wine", "Aged Beer", "Aged Grape Wine", "Aged Agave Wine", "Game Console"]
+      },
+      "unmapped_cn": ["伊甸果酒", "陈酿伊甸果酒", "月光之歌", "豪华套餐"],
+      "note": "灰机 1.0 飞廉页「最爱」档（乱码条目已剔除）。已确认英名映射项：蜂蜡=Beeswax（新增）、陈酿龙舌兰酒=Aged Agave Wine（新增，按 陈酿*=Aged * + 龙舌兰酒=Agave Wine 同源映射）；米酒/啤酒/葡萄酒/龙舌兰酒/陈酿米酒/陈酿啤酒/陈酿葡萄酒/游戏机与 rockechic 表同源。啤酒档位冲突未并表（见 _source.conflicts）。未映射中文项（伊甸果酒/陈酿伊甸果酒/月光之歌/豪华套餐）待官方对照表。"
+    },
+    "Alchemy": {"cn": "澳柯玛", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"},
+    "Claud": {"cn": "克劳德", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"},
+    "Cod": {"cn": "柯奥德", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"},
+    "Dada": {"cn": "达达", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"},
+    "Hult": {"cn": "霍特", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"},
+    "Kasia": {"cn": "卡莎", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"},
+    "Lank": {"cn": "朗克", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"},
+    "Merlin": {"cn": "梅林", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"},
+    "Mody": {"cn": "墨翟", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"},
+    "Orlando": {"cn": "奥兰多", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"},
+    "Sacco": {"cn": "萨科", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"},
+    "Zenis": {"cn": "泽尼瑟", "note": "灰机 1.0 确认有好感度内容及专属剧情（L2）；物品级英名映射待官方中↔英对照表，未新增入表。"}
+  }
+}

@@ -125,13 +125,16 @@ const semanticFamilyPatterns = [
 const contentIntegrityPatterns = [
   ...semanticFamilyPatterns,
   ["es-farming-malformed", /(?:turbinas\s+automatizaci[oó]ns|cultivoss|cultivosr)/iu],
-  ["ko-game-name-drift", /도록 타운/u],
+  ["ko-game-name-drift", /도록\s*타운|도로크\s*타운/u],
   ["zh-cn-farming-intro-malformed", /学会计什么/u],
   ["zh-tw-farming-intro-malformed", /學會計什麼/u],
   ["ko-farming-grammar-malformed", /(?:커집습니다|커짐하고)/u],
   ["ko-automation-particle", /농업 자동화이/u],
   ["en-update-log-grammar-malformed", /not a selected highlights/iu],
   ["es-automation-mojibake", /automatizaciÃ(?:³|\u00b3)n|automatizaciÃ/i],
+  ["hj-garbled-mojibake", /锟斤拷/u],
+  ["unsourced-18183-numbers", /18183/u],
+  ["fabricated-12-no-system-gift", /(?:Gabryl|Gerald|Kel|Kuma|Licca|Lightman|Loveyer|Mira|Paiea|Pike|Shylock|Witch)[^.\n。]{0,60}\b(?:loves|likes|dislikes)\b(?=\s+(?:(?:a|an|the)\s+)?[A-Z])/iu],
   ["unsupported-money-quantitative", /(?:processing|procesad[oa]|加工|處理|加工品|가공)[^.。\n]{0,100}10\s*[-–—]\s*20\s*%|10\s*[-–—]\s*20\s*%[^.。\n]{0,100}(?:processing|procesad[oa]|加工|處理|加工品|가공)/iu],
   ["unsupported-money-upgrade-multiplier", /(?:backpack|mochila|背包|リュック|배낭)[^.。\n]{0,100}(?:roughly\s+)?(?:double|doubles|2x|twofold|两倍|兩倍|2\s*倍|두\s*배|duplica)/iu],
   ["unsupported-money-level-two-rod", /(?:level|nivel|等级|等級|レベル|레벨)\s*2[^.。\n]{0,35}(?:rod|caña|鱼竿|魚竿|釣り竿|낚싯대)/iu],
@@ -831,6 +834,10 @@ try {
     const target = offFiles.find(file => path.relative(disabled, file) === path.join("es", "farming.html"));
     fs.appendFileSync(target, '<p>Construye turbinas automatizacións para proteger los cultivoss.</p><script type="application/ld+json">{"text":"cultivoss"}</script>');
   }
+  if (fault === "fabricated-12-gift-data") {
+    const target = offFiles.find(file => path.relative(disabled, file) === "gifts.html");
+    fs.appendFileSync(target, "<p>Gabryl loves a Fern Fossil and Licca likes Copper Ingot.</p>");
+  }
   if (fault === "ko-name-drift") {
     const target = offFiles.find(file => path.relative(disabled, file) === path.join("ko", "make-money.html"));
     fs.appendFileSync(target, '<script type="application/ld+json">{"headline":"도록 타운 돈 버는 가이드"}</script>');
@@ -1159,6 +1166,7 @@ try {
     {rel:"data/zh_p12.py",kind:"python",status:"canonical-import"},
     {rel:"data/gifts_pages.py",kind:"python",status:"canonical-import"},
     {rel:"data/gifts-raw.json",kind:"json",status:"canonical-import"},
+    {rel:"data/gifts-raw-hj-1.0.json",kind:"json",status:"canonical-import"},
     {rel:"data/site.json",kind:"json",status:"generated-effective"},
     {rel:"data/build_base.py",kind:"python",status:"legacy-generator-excluded-but-hygiene-scanned"},
   ];
@@ -1451,6 +1459,7 @@ if (!fault && !failures.length) {
   const negativeFixtureNames = [
     "default-module-leak", "ko-unsupported-semantics", "es-corruption", "ko-flat-field-causality",
     "ko-drought-profit-residue", "es-drought-benefit", "es-farming-malformed", "ko-name-drift",
+    "fabricated-12-gift-data",
     "semantic-drought-source", "semantic-drought-visible", "semantic-drought-jsonld",
     "semantic-flat-en-source", "semantic-flat-source", "semantic-flat-visible", "semantic-flat-zh-tw-visible", "semantic-flat-jsonld",
     "semantic-benefit-source", "semantic-benefit-visible", "semantic-benefit-jsonld",
