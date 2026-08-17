@@ -2750,6 +2750,17 @@
       "ko": "isThereAnyDeal — 돌록 타운 가격 비교",
       "es": "isThereAnyDeal — precios de Doloc Town"
      }
+    },
+    {
+     "label": "SteamDB — Doloc Town price history",
+     "url": "https://steamdb.info/app/2285550/",
+     "labels": {
+      "zh-CN": "SteamDB — 多洛可小镇价格历史",
+      "zh-TW": "SteamDB — 多洛可小鎮價格歷史",
+      "ja": "SteamDB — ドロックタウン価格履歴",
+      "ko": "SteamDB — 돌록 타운 가격 이력",
+      "es": "SteamDB — historial de precios de Doloc Town"
+     }
     }
    ],
    "meta": {

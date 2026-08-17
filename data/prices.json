@@ -1,0 +1,75 @@
+{
+  "appid": "2285550",
+  "name": "Doloc Town",
+  "data_date": "2026-08-18",
+  "fetched_at": "2026-08-18T06:25:14+08:00",
+  "steam": {
+    "url": "https://store.steampowered.com/app/2285550/Doloc_Town/",
+    "discount_deadline": "2026-08-19",
+    "discount_deadline_source": "steam_store_page",
+    "regions": {
+      "us": {
+        "cc": "us",
+        "currency": "USD",
+        "initial_cents": 1999,
+        "final_cents": 1599,
+        "discount_percent": 20,
+        "initial_formatted": "$19.99",
+        "final_formatted": "$15.99",
+        "discount_expiration": null
+      },
+      "cn": {
+        "cc": "cn",
+        "currency": "CNY",
+        "initial_cents": 5800,
+        "final_cents": 4640,
+        "discount_percent": 20,
+        "initial_formatted": "¥ 58.00",
+        "final_formatted": "¥ 46.40",
+        "discount_expiration": null
+      },
+      "jp": {
+        "cc": "jp",
+        "currency": "JPY",
+        "initial_cents": 200000,
+        "final_cents": 160000,
+        "discount_percent": 20,
+        "initial_formatted": "¥ 2,000",
+        "final_formatted": "¥ 1,600",
+        "discount_expiration": null
+      },
+      "kr": {
+        "cc": "kr",
+        "currency": "KRW",
+        "initial_cents": 2000000,
+        "final_cents": 1600000,
+        "discount_percent": 20,
+        "initial_formatted": "₩ 20,000",
+        "final_formatted": "₩ 16,000",
+        "discount_expiration": null
+      },
+      "es": {
+        "cc": "es",
+        "currency": "EUR",
+        "initial_cents": 1999,
+        "final_cents": 1599,
+        "discount_percent": 20,
+        "initial_formatted": "19,99€",
+        "final_formatted": "15,99€",
+        "discount_expiration": null
+      }
+    }
+  },
+  "cheapshark": {
+    "game_id": "300069",
+    "game_url": "https://www.cheapshark.com/game/300069/DOLOCTOWN",
+    "cheapest_price_ever_usd": 10.75,
+    "cheapest_price_ever_date": "2025-11-21",
+    "cheapest_now_usd": 12.69,
+    "cheapest_now_store": "IndieGala"
+  },
+  "authority": {
+    "steamdb_url": "https://steamdb.info/app/2285550/",
+    "itad_url": "https://isthereanydeal.com/product/01961f57-3655-7097-a075-9645a29770a9/"
+  }
+}

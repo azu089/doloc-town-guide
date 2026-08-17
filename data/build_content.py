@@ -6718,6 +6718,197 @@ apply_lang("ja", JA)
 apply_lang("ko", KO)
 apply_lang("es", ES)
 
+# ================= where-to-buy: 当前价格块（T1 price pilot, 2026-08-18） =================
+# 单一事实来源：data/prices.json —— 由 data/fetch_prices.py 抓取，每日 CI 刷新后提交。
+# 构建只读已提交快照、绝不联网，保证两次构建字节一致（G4 确定性）。
+# 本块放在 zh-TW OpenCC 转换之前，因此 zh-TW 由 zh-CN 自动转换，六语言一次对齐。
+_PRICES_PATH = ROOT / "prices.json"
+if not _PRICES_PATH.exists():
+    raise SystemExit("data/prices.json 缺失：请先运行 data/fetch_prices.py（构建只读已提交快照，禁止联网）")
+_PRICES = json.loads(_PRICES_PATH.read_text(encoding="utf-8"))
+
+def _pf(s):
+    """与站点既有写法一致：去掉 ¥/₩ 货币符号后的空格（¥ 58.00 → ¥58.00）。"""
+    return re.sub(r"^([¥₩])\s+", r"\1", s or "")
+
+_EN_MONTHS = ["January","February","March","April","May","June",
+              "July","August","September","October","November","December"]
+_ES_MONTHS = ["enero","febrero","marzo","abril","mayo","junio",
+              "julio","agosto","septiembre","octubre","noviembre","diciembre"]
+
+def _fmt_date(iso, lang):
+    """ISO YYYY-MM-DD → 各语言日期写法。"""
+    if not iso:
+        return ""
+    y, m, dd = iso.split("-")
+    mm = int(m)
+    if lang == "en":
+        return f"{_EN_MONTHS[mm-1]} {int(dd)}, {y}"
+    if lang in ("zh-CN", "zh-TW"):
+        return f"{y} 年 {mm} 月 {int(dd)} 日"
+    if lang == "ja":
+        return f"{y}年{mm}月{int(dd)}日"
+    if lang == "ko":
+        return f"{y}년 {mm}월 {int(dd)}일"
+    if lang == "es":
+        return f"{int(dd)} de {_ES_MONTHS[mm-1]} de {y}"
+    return iso
+
+# lang → Steam 区域映射（页面按语言显示本地区现价）
+_PRICE_REGION = {"en": "us", "zh-CN": "cn", "zh-TW": "cn", "ja": "jp", "ko": "kr", "es": "es"}
+_PRICE_REGION_LABEL = {
+    "en": "US", "zh-CN": "国区", "zh-TW": "國區", "ja": "日本", "ko": "한국", "es": "UE",
+}
+
+PRICE_UI = {
+ "en": {
+  "tag": "PRICE",
+  "heading": "Current price & deals",
+  "body_on_sale": "Yes — Doloc Town is on sale right now: -{d}% on Steam ({i} → {f}) until {end}. This block is a reference snapshot from {date}: regional prices differ and live prices change, so confirm the current number on SteamDB or isThereAnyDeal.",
+  "body_not_on_sale": "No — the {date} snapshot shows no active discount on Steam ({i}). Live prices change; SteamDB and isThereAnyDeal always show the current number.",
+  "columns": ["Item", "Detail"],
+  "row_current": ["Current price ({region})", "{f} on Steam (was {i})"],
+  "row_discount": ["Discount", "-{d}% until {end}"],
+  "row_discount_none": ["Discount", "None in this snapshot"],
+  "row_low": ["Historical low", "US${low} on {lowdate} (CheapShark)"],
+  "row_data": ["Data as of", "{date} — live prices: SteamDB · isThereAnyDeal"],
+  "faq": [
+   ["What is the lowest price Doloc Town has ever been?",
+    "Per CheapShark's tracking, the lowest recorded price is US${low}, on {lowdate} (an Early Access promotion). CheapShark compares prices across authorized stores and regional history can differ — isThereAnyDeal shows per-region price history. We only report prices from our verified snapshot."],
+   ["When will Doloc Town go on sale again?",
+    "We can't predict sale dates — no official schedule has been announced. Steam runs its usual seasonal promotions and developers can start their own discounts at any time, so the reliable way to catch the next offer is to watch the Steam store page, SteamDB or isThereAnyDeal. We only report prices we verified in our snapshot."],
+  ],
+ },
+ "zh-CN": {
+  "tag": "价格",
+  "heading": "当前价格与促销",
+  "body_on_sale": "是的——多洛可小镇目前正在促销：Steam 上 -{d}%（{i} → {f}），截止至 {end}。本块为 {date}的参考快照：地区价格有差异、实时价格会变化，请以 SteamDB 或 isThereAnyDeal 的当前数字为准。",
+  "body_not_on_sale": "目前没有——{date} 快照显示 Steam 上没有进行中的折扣（{i}）。实时价格会变化，最新数字请以 SteamDB 或 isThereAnyDeal 为准。",
+  "columns": ["项目", "详情"],
+  "row_current": ["现价（{region}）", "Steam 上 {f}（原价 {i}）"],
+  "row_discount": ["折扣", "-{d}%，截止至 {end}"],
+  "row_discount_none": ["折扣", "本次快照中没有折扣"],
+  "row_low": ["历史最低价", "US${low}（{lowdate}，CheapShark 记录）"],
+  "row_data": ["数据截至", "{date} — 实时价格见 SteamDB · isThereAnyDeal"],
+  "faq": [
+   ["多洛可小镇的历史最低价是多少？",
+    "按 CheapShark 的记录，历史最低价为 US${low}（{lowdate}，抢先体验期间的一次促销）。CheapShark 比较的是授权商店的价格，各地区的历史价格可能不同——isThereAnyDeal 提供分地区价格历史。我们只报告快照中实际核实过的价格。"],
+   ["多洛可小镇什么时候会再打折？",
+    "我们无法预测——官方没有公布任何促销计划。Steam 会按惯例举办季节性促销，开发者也可能随时自行打折；想抓住下次折扣，最可靠的方式是关注 Steam 商店页、SteamDB 或 isThereAnyDeal。我们只报告快照中实际核实过的价格。"],
+  ],
+ },
+ "ja": {
+  "tag": "価格",
+  "heading": "現在の価格とセール",
+  "body_on_sale": "はい——現在セール中です：Steam で -{d}%（{i} → {f}）、{end}まで。この価格は {date}時点の参考スナップショットです。地域により価格は異なり、リアルタイムで変動します——最新の数字は SteamDB または isThereAnyDeal で確認してください。",
+  "body_not_on_sale": "現在は割引なし——{date} 時点のスナップショットでは Steam の値引きはありません（{i}）。価格は変動するため、最新の数字は SteamDB または isThereAnyDeal で確認してください。",
+  "columns": ["項目", "詳細"],
+  "row_current": ["現在の価格（{region}）", "Steam で {f}（定価 {i}）"],
+  "row_discount": ["割引", "-{d}%、{end}まで"],
+  "row_discount_none": ["割引", "今回のスナップショットでは割引なし"],
+  "row_low": ["過去最安値", "US${low}（{lowdate}、CheapShark 調べ）"],
+  "row_data": ["データ時点", "{date} — 最新価格は SteamDB · isThereAnyDeal で"],
+  "faq": [
+   ["ドロックタウンの過去最安値はいくら？",
+    "CheapShark の記録によると、過去最安値は US${low}（{lowdate}、早期アクセス期間中のセール）です。CheapShark は正規ストアの価格を比較しており、地域ごとに履歴は異なる場合があります——isThereAnyDeal で地域別の価格履歴を確認できます。当サイトはスナップショットで検証した価格のみを掲載しています。"],
+   ["次はいつセールになる？",
+    "予測はできません——公式のセール予定は発表されていません。Steam は恒例の季節セールを行い、開発者が独自の割引を始めることもあります。次のセールを確実に掴むには、Steam ストアページ・SteamDB・isThereAnyDeal をチェックするのが確実です。当サイトはスナップショットで検証した価格のみを掲載しています。"],
+  ],
+ },
+ "ko": {
+  "tag": "가격",
+  "heading": "현재 가격 및 할인",
+  "body_on_sale": "네——현재 할인 중입니다: Steam에서 -{d}%（{i} → {f}）, {end}까지. 이 가격은 {date} 기준 참고 스냅샷입니다. 지역별로 가격이 다르고 실시간으로 변하므로 최신 숫자는 SteamDB 또는 isThereAnyDeal에서 확인하세요.",
+  "body_not_on_sale": "현재 할인 없음——{date} 기준 스냅샷에서 Steam 할인이 없습니다（{i}）. 실시간 가격은 변하므로 최신 숫자는 SteamDB 또는 isThereAnyDeal에서 확인하세요.",
+  "columns": ["항목", "세부"],
+  "row_current": ["현재 가격（{region}）", "Steam 기준 {f}（정가 {i}）"],
+  "row_discount": ["할인", "-{d}%, {end}까지"],
+  "row_discount_none": ["할인", "이번 스냅샷에는 할인 없음"],
+  "row_low": ["역대 최저가", "US${low}（{lowdate}, CheapShark 기록）"],
+  "row_data": ["데이터 기준일", "{date} — 실시간 가격은 SteamDB · isThereAnyDeal에서"],
+  "faq": [
+   ["돌록 타운의 역대 최저가는 얼마인가요?",
+    "CheapShark 기록에 따르면 역대 최저가는 US${low}（{lowdate}, 얼리 액세스 기간 세일）입니다. CheapShark는 공인 스토어의 가격을 비교하며 지역별로 이력이 다를 수 있습니다——isThereAnyDeal에서 지역별 가격 이력을 확인할 수 있습니다. 저희는 스냅샷에서 직접 확인한 가격만 안내합니다."],
+   ["다음 세일은 언제인가요?",
+    "예측할 수 없습니다——공식 일정이 발표되지 않았습니다. Steam은 정기적인 계절 세일을 진행하고 개발자가 자체 할인을 시작할 수도 있습니다. 다음 할인을 놓치지 않으려면 Steam 스토어 페이지, SteamDB 또는 isThereAnyDeal을 확인하는 것이 가장 확실합니다. 저희는 스냅샷에서 직접 확인한 가격만 안내합니다."],
+  ],
+ },
+ "es": {
+  "tag": "PRECIO",
+  "heading": "Precio actual y ofertas",
+  "body_on_sale": "Sí — Doloc Town está en oferta ahora mismo: -{d} % en Steam ({i} → {f}) hasta el {end}. Este bloque es una instantánea de referencia del {date}: los precios varían según la región y cambian en tiempo real; consulta el número actual en SteamDB o isThereAnyDeal.",
+  "body_not_on_sale": "No — la instantánea del {date} no muestra ningún descuento activo en Steam ({i}). Los precios cambian en tiempo real; SteamDB e isThereAnyDeal muestran siempre el número actual.",
+  "columns": ["Elemento", "Detalle"],
+  "row_current": ["Precio actual ({region})", "{f} en Steam (antes {i})"],
+  "row_discount": ["Descuento", "-{d} % hasta el {end}"],
+  "row_discount_none": ["Descuento", "Ninguno en esta instantánea"],
+  "row_low": ["Precio mínimo histórico", "US${low} el {lowdate} (CheapShark)"],
+  "row_data": ["Datos al", "{date} — precios en vivo en SteamDB · isThereAnyDeal"],
+  "faq": [
+   ["¿Cuál es el precio mínimo histórico de Doloc Town?",
+    "Según el registro de CheapShark, el precio más bajo registrado es US${low}, el {lowdate} (una promoción del Acceso Anticipado). CheapShark compara precios entre tiendas autorizadas y el historial regional puede diferir — isThereAnyDeal muestra el historial por región. Solo informamos de precios verificados en nuestra instantánea."],
+   ["¿Cuándo volverá a estar Doloc Town en oferta?",
+    "No podemos predecirlo — no se ha anunciado ningún calendario oficial. Steam organiza sus promociones de temporada habituales y los desarrolladores pueden lanzar descuentos propios en cualquier momento; la forma fiable de aprovechar la próxima oferta es vigilar la página de Steam, SteamDB o isThereAnyDeal. Solo informamos de precios verificados en nuestra instantánea."],
+  ],
+ },
+}
+
+def _price_common(lang):
+    """本语言价格块需要的全部格式化值（表行与 FAQ 共用）。"""
+    ui = PRICE_UI[lang]
+    cc = _PRICE_REGION[lang]
+    r = _PRICES["steam"]["regions"][cc]
+    return {
+        "f": _pf(r["final_formatted"]),
+        "i": _pf(r["initial_formatted"]),
+        "d": r["discount_percent"],
+        "end": _fmt_date(_PRICES["steam"].get("discount_deadline"), lang),
+        "date": _fmt_date(_PRICES["data_date"], lang),
+        "low": f"{_PRICES['cheapshark']['cheapest_price_ever_usd']:.2f}",
+        "lowdate": _fmt_date(_PRICES["cheapshark"]["cheapest_price_ever_date"], lang),
+        "region": _PRICE_REGION_LABEL[lang],
+    }
+
+def _price_section(lang):
+    """当前价格块：人类化结论（body）+ table 明细（本地化，数据全部来自快照）。"""
+    ui = PRICE_UI[lang]
+    common = _price_common(lang)
+    body = (ui["body_on_sale"] if common["d"] else ui["body_not_on_sale"]).format(**common)
+    rows = [
+        [ui["row_current"][0].format(**common), ui["row_current"][1].format(**common)],
+    ]
+    if common["d"]:
+        rows.append([ui["row_discount"][0], ui["row_discount"][1].format(**common)])
+    else:
+        rows.append([ui["row_discount_none"][0], ui["row_discount_none"][1]])
+    rows.append([ui["row_low"][0], ui["row_low"][1].format(**common)])
+    rows.append([ui["row_data"][0], ui["row_data"][1].format(**common)])
+    return {"type": "table", "tag": ui["tag"], "heading": ui["heading"], "body": body,
+            "columns": [ui["columns"][0], ui["columns"][1]], "rows": rows}
+
+_wtb_page = next((x for x in d["pages"] if x["slug"] == "where-to-buy"), None)
+if _wtb_page is None:
+    raise SystemExit("site.base.json 缺少 where-to-buy 页面")
+_wtb_page["sections"].insert(0, _price_section("en"))
+for _lg in ("zh-CN", "ja", "ko", "es"):
+    _i18n = _wtb_page["i18n"].get(_lg)
+    if not _i18n or "sections" not in _i18n:
+        raise SystemExit(f"where-to-buy 缺少 {_lg} sections")
+    _i18n["sections"].insert(0, _price_section(_lg))
+# FAQ 诚实补充（史低 / 何时再打折——无官方预测，不编造）
+def _append_price_faq(sections, lang):
+    for sec in sections:
+        if sec.get("type") == "faq":
+            common = _price_common(lang)
+            sec.setdefault("items", []).extend(
+                [[q.format(**common), a.format(**common)] for q, a in PRICE_UI[lang]["faq"]])
+            return
+_append_price_faq(_wtb_page["sections"], "en")
+for _lg in ("zh-CN", "ja", "ko", "es"):
+    _append_price_faq(_wtb_page["i18n"][_lg]["sections"], _lg)
+print("price block injected: where-to-buy (en/zh-CN/ja/ko/es; zh-TW via OpenCC), "
+      f"data_date={_PRICES['data_date']}")
+
 # zh-TW via OpenCC from zh-CN (site i18n + page i18n)
 zc_site = d["site"]["i18n"].get("zh-CN", {})
 d["site"]["i18n"]["zh-TW"] = json.loads(cc.convert(json.dumps(zc_site, ensure_ascii=False)))

@@ -1,0 +1,48 @@
+name: daily-doloc-price-refresh
+# 每日刷新 Doloc Town 价格快照（T1 price pilot）：
+# 抓取 Steam appdetails + CheapShark → 重建 site.json（价格块随之更新）→ 构建+审计 → 提交快照。
+# 模式对齐 tools/hot-word-monitor 的 monitor 报告提交（抓取 → 提交 → push）。
+on:
+  schedule:
+    - cron: "15 1 * * *"   # 每天 01:15 UTC = 北京 09:15
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  price-refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install build deps
+        run: pip install opencc-python-reimplemented
+      - name: Assert committed snapshot freshness (≤ 2 days)
+        # P0 价格过期护栏：若 CI 多日未跑，已提交快照过期即先失败，绝不带病刷新。
+        run: |
+          python3 - <<'PY'
+          import json, datetime, zoneinfo
+          snap = json.load(open("data/prices.json", encoding="utf-8"))
+          d = datetime.date.fromisoformat(snap["data_date"])
+          today = datetime.datetime.now(zoneinfo.ZoneInfo("Asia/Shanghai")).date()
+          age = (today - d).days
+          print(f"committed data_date={d} today={today} age={age}d")
+          if age > 2:
+              raise SystemExit(f"stale committed price snapshot: {age} days old")
+          PY
+      - name: Fetch price snapshot
+        run: python3 data/fetch_prices.py
+      - name: Rebuild site.json (price block follows snapshot)
+        run: python3 data/build_content.py
+      - name: Build site
+        run: node scripts/generate.js
+      - name: Audit
+        run: node scripts/lib/audit.js .
+      - name: Commit and push snapshot
+        run: |
+          git config user.name "doloc-price-bot"
+          git config user.email "doloc-price-bot@users.noreply.github.com"
+          git add data/prices.json data/site.json data/.lastmod.json
+          git commit -m "price snapshot $(TZ=Asia/Shanghai date +'%F %H:%M %Z')" || echo "no price change"
+          git push
