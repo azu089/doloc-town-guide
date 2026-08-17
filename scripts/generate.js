@@ -565,6 +565,11 @@ const CONSENT_UI = {
   ko: { title:"개인정보 선택", body:"선택하기 전에는 Google Analytics와 대상 가이드 7개의 Adsterra가 차단됩니다. 분석, 광고, 사기 방지 및 보고를 위해 IP, 기기, 페이지, 유입 경로, 대략적 지역, 쿠키나 유사 식별자를 처리할 수 있습니다.", change:"선택은 언제든 변경하거나 철회할 수 있습니다.", accept:"분석 및 광고 허용", reject:"선택 서비스 거부", settings:"개인정보 설정", dialog:"개인정보 설정", analytics:"분석 (Google Analytics / GA4)", advertising:"광고 (대상 가이드의 Adsterra만)", save:"선택 저장", withdraw:"모두 철회", close:"닫기", policy:"개인정보 처리방침 및 공급자 링크", adBlocked:"광고를 허용하기 전까지 선택 광고가 차단됩니다." },
   es: { title:"Opciones de privacidad", body:"Google Analytics y, en siete guías aptas, Adsterra permanecen bloqueados hasta que elijas. Pueden tratar IP, dispositivo, página, referencia, región aproximada y cookies o identificadores para análisis, publicidad, prevención del fraude e informes.", change:"Puedes cambiar o retirar tu elección en cualquier momento.", accept:"Aceptar análisis y anuncios", reject:"Rechazar servicios opcionales", settings:"Ajustes de privacidad", dialog:"Ajustes de privacidad", analytics:"Análisis (Google Analytics / GA4)", advertising:"Publicidad (Adsterra solo en guías aptas)", save:"Guardar opciones", withdraw:"Retirar todo", close:"Cerrar", policy:"Política de privacidad y enlaces de proveedores", adBlocked:"El anuncio opcional sigue bloqueado hasta que aceptes publicidad." },
 };
+function consentAdMount(lang){
+  if (!ADSTERRA_CONFIG) return "";
+  const u = CONSENT_UI[lang] || CONSENT_UI.en;
+  return `<div class="adsterra-mount" data-adsterra-mount><p class="native-ad-consent-note">${esc(u.adBlocked)}</p></div>`;
+}
 function consentUi(lang, adsterraEligible){
   const u = CONSENT_UI[lang] || CONSENT_UI.en;
   const prefix = lang === DEF ? "" : `/${lang}`;
@@ -740,7 +745,7 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });
 </script>
-</footer>${consentUi(lang, adsterraEligible)}`;
+</footer>${consentAdMount(lang)}${consentUi(lang, adsterraEligible)}`;
 }
 
 /* ---------- section renderer (Farmstead Manual components — 田园农具语言, 全局独立) ---------- */
