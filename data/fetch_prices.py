@@ -95,46 +95,111 @@ def steam_region(cc):
     }
 
 
-_MONTHS = {m: i + 1 for i, m in enumerate(
-    ["January", "February", "March", "April", "May", "June",
-     "July", "August", "September", "October", "November", "December"])}
+# 月份匹配：全称与前 3 字母缩略（Jan…Dec）都接受；按前 3 字母归一避免歧义。
+_MONTH_ABBR = {
+    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+    "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12,
+}
+_MONTH_RE = r"(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)"
+
+
+def _month_of(name):
+    return _MONTH_ABBR.get((name or "")[:3].lower())
+
+
+def _parse_offer_end(text):
+    """从商店页文本解析促销截止日，返回 (month, day, year_or_None) 或 None。
+
+    同时兼容 Steam 页面出现的两种日期形态（G4 P1 price-deadline-parser-format-mismatch）：
+      月先日后: "Offer ends August 19" / "Offer ends August 19, 2026" / "Aug 19"
+      日先月后: "Offer ends 19 August" / "Offer ends 19 August 2026" / "19 Aug"
+    """
+    if not text:
+        return None
+    patterns = [
+        # 月先日后（可带逗号与年份）
+        re.compile(rf"({_MONTH_RE})\.?\s+(\d{{1,2}}),?\s+(\d{{4}})"),
+        # 日先月后（可带年份）
+        re.compile(rf"(\d{{1,2}})\s+({_MONTH_RE})\.?,?\s+(\d{{4}})"),
+        # 月先日后（无年份）
+        re.compile(rf"({_MONTH_RE})\.?\s+(\d{{1,2}})\b"),
+        # 日先月后（无年份）
+        re.compile(rf"\b(\d{{1,2}})\s+({_MONTH_RE})\.?\b"),
+    ]
+    for pat in patterns:
+        m = pat.search(text)
+        if not m:
+            continue
+        groups = m.groups()
+        if groups[0][:1].isdigit():
+            day, month_name = int(groups[0]), groups[1]
+            year = int(groups[2]) if len(groups) == 3 and groups[2] else None
+        else:
+            month_name, day = groups[0], int(groups[1])
+            year = int(groups[2]) if len(groups) == 3 and groups[2] else None
+        month = _month_of(month_name)
+        if month:
+            return (month, day, year)
+    return None
+
+
+def _resolve_year(month, day, year, data_date):
+    """无年份时按促销应在未来/当日推断年份；带年份直接校验合法性。"""
+    today = date.fromisoformat(data_date)
+    if year is not None:
+        try:
+            return date(year, month, day)
+        except ValueError:
+            return None
+    for y in (today.year, today.year + 1):
+        try:
+            candidate = date(y, month, day)
+        except ValueError:
+            return None
+        if candidate >= today - timedelta(days=1):
+            return candidate
+    return None
 
 
 def steam_discount_deadline(data_date, regions):
-    """Official promotion end date, ISO YYYY-MM-DD or None.
+    """Official promotion end date, ISO YYYY-MM-DD.
 
     Prefers the API's discount_expiration (unix ts) when present; otherwise
     parses the Steam store page countdown ("SPECIAL PROMOTION! Offer ends
-    19 August"). The store page is fetched with l=english so the marker is
-    English regardless of locale.
+    19 August" or "Offer ends August 19"). The store page is fetched without
+    an l= parameter, so its language follows Steam's region/UA negotiation;
+    the parser therefore accepts both English month-first and day-first
+    spellings (full and abbreviated month names).
+
+    Fail-closed: when any region reports an active discount (discount_percent
+    > 0) but no end date can be resolved, raises RuntimeError so the run exits
+    non-zero and never writes a snapshot that would render a broken "until ."
+    deadline on the site.
     """
     for cc in REGIONS:
         exp = regions[cc]["discount_expiration"]
         if exp:
             return datetime.fromtimestamp(int(exp), tz=zoneinfo.ZoneInfo("UTC")).date().isoformat()
+    on_sale = any(regions[cc]["discount_percent"] for cc in REGIONS)
+    if not on_sale:
+        return None  # 无折扣时没有截止日，正常写快照
     try:
         page = http_text(STEAM_URL)
-    except Exception as exc:  # deadline is a soft field; the region data is the hard one
-        print(f"  [warn] store page fetch failed, deadline unknown: {exc}")
-        return None
-    m = re.search(r"[Oo]ffer ends\s+(\d{1,2})\s+([A-Za-z]+)", page)
-    if not m:
-        print("  [warn] store page shows no 'Offer ends' countdown (sale may be over)")
-        return None
-    day, month_name = int(m.group(1)), m.group(2)
-    month = _MONTHS.get(month_name)
-    if not month:
-        print(f"  [warn] unparsable offer-end month {month_name!r}")
-        return None
-    today = date.fromisoformat(data_date)
-    for year in (today.year, today.year + 1):
-        try:
-            candidate = date(year, month, day)
-        except ValueError:
-            return None
-        if candidate >= today - timedelta(days=1):
-            return candidate.isoformat()
-    return None
+    except Exception as exc:
+        raise RuntimeError(f"discount active but store page fetch failed, cannot resolve offer end: {exc}")
+    # 优先取主游戏倒计时元素的文本，避免页面其他折扣块干扰；失败则全页回退。
+    m = re.search(r'game_purchase_discount_countdown[^>]*>([^<]*)</p>', page)
+    parsed = _parse_offer_end(m.group(1)) if m else _parse_offer_end(page)
+    if parsed is None:
+        raise RuntimeError(
+            "discount active but offer-end date could not be parsed from the Steam "
+            "store page (expected 'Offer ends <Month> <day>' or '<day> <Month>'); "
+            "refusing to write a snapshot with an unknown deadline")
+    month, day, year = parsed
+    resolved = _resolve_year(month, day, year, data_date)
+    if resolved is None:
+        raise RuntimeError(f"discount active but offer-end date {month}/{day}/{year} is invalid; refusing to write snapshot")
+    return resolved.isoformat()
 
 
 def cheapshark():

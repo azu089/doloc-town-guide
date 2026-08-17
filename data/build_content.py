@@ -6858,6 +6858,12 @@ def _price_common(lang):
     ui = PRICE_UI[lang]
     cc = _PRICE_REGION[lang]
     r = _PRICES["steam"]["regions"][cc]
+    # 防御（与 fetch_prices.py 的 fail-closed 对齐）：有折扣时快照必须带截止日，
+    # 否则页面会渲染出「截止至 。」残缺文案——直接让构建失败。
+    if r["discount_percent"] and not _PRICES["steam"].get("discount_deadline"):
+        raise SystemExit(
+            "prices.json 显示进行中的折扣但缺少 discount_deadline："
+            "请重新运行 data/fetch_prices.py（解析失败时它会拒绝写快照）")
     return {
         "f": _pf(r["final_formatted"]),
         "i": _pf(r["initial_formatted"]),
