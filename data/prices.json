@@ -1,11 +1,11 @@
 {
   "appid": "2285550",
   "name": "Doloc Town",
-  "data_date": "2026-08-18",
-  "fetched_at": "2026-08-18T10:20:47+08:00",
+  "data_date": "2026-08-19",
+  "fetched_at": "2026-08-19T10:31:22+08:00",
   "steam": {
     "url": "https://store.steampowered.com/app/2285550/Doloc_Town/",
-    "discount_deadline": "2026-08-19",
+    "discount_deadline": "2026-08-05",
     "discount_deadline_source": "steam_store_page",
     "regions": {
       "us": {
