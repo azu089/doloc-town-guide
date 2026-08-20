@@ -15020,7 +15020,7 @@
      "type": "table",
      "tag": "PRICE",
      "heading": "Current price & deals",
-     "body": "Yes — Doloc Town is on sale right now: -20% on Steam ($19.99 → $15.99) until August 5, 2026. This block is a reference snapshot from August 19, 2026: regional prices differ and live prices change, so confirm the current number on SteamDB or isThereAnyDeal.",
+     "body": "Yes — Doloc Town is on sale right now: -20% on Steam ($19.99 → $15.99) until August 5, 2026. This block is a reference snapshot from August 20, 2026: regional prices differ and live prices change, so confirm the current number on SteamDB or isThereAnyDeal.",
      "columns": [
       "Item",
       "Detail"
@@ -15040,7 +15040,7 @@
       ],
       [
        "Data as of",
-       "August 19, 2026 — live prices: SteamDB · isThereAnyDeal"
+       "August 20, 2026 — live prices: SteamDB · isThereAnyDeal"
       ]
      ]
     },
@@ -15227,7 +15227,7 @@
        "type": "table",
        "tag": "价格",
        "heading": "当前价格与促销",
-       "body": "是的——多洛可小镇目前正在促销：Steam 上 -20%（¥58.00 → ¥46.40），截止至 2026 年 8 月 5 日。本块为 2026 年 8 月 19 日的参考快照：地区价格有差异、实时价格会变化，请以 SteamDB 或 isThereAnyDeal 的当前数字为准。",
+       "body": "是的——多洛可小镇目前正在促销：Steam 上 -20%（¥58.00 → ¥46.40），截止至 2026 年 8 月 5 日。本块为 2026 年 8 月 20 日的参考快照：地区价格有差异、实时价格会变化，请以 SteamDB 或 isThereAnyDeal 的当前数字为准。",
        "columns": [
         "项目",
         "详情"
@@ -15247,7 +15247,7 @@
         ],
         [
          "数据截至",
-         "2026 年 8 月 19 日 — 实时价格见 SteamDB · isThereAnyDeal"
+         "2026 年 8 月 20 日 — 实时价格见 SteamDB · isThereAnyDeal"
         ]
        ]
       },
@@ -15365,7 +15365,7 @@
        "type": "table",
        "tag": "價格",
        "heading": "當前價格與促銷",
-       "body": "是的——多洛可小鎮目前正在促銷：Steam 上 -20%（¥58.00 → ¥46.40），截止至 2026 年 8 月 5 日。本塊為 2026 年 8 月 19 日的參考快照：地區價格有差異、實時價格會變化，請以 SteamDB 或 isThereAnyDeal 的當前數字為準。",
+       "body": "是的——多洛可小鎮目前正在促銷：Steam 上 -20%（¥58.00 → ¥46.40），截止至 2026 年 8 月 5 日。本塊為 2026 年 8 月 20 日的參考快照：地區價格有差異、實時價格會變化，請以 SteamDB 或 isThereAnyDeal 的當前數字為準。",
        "columns": [
         "項目",
         "詳情"
@@ -15385,7 +15385,7 @@
         ],
         [
          "數據截至",
-         "2026 年 8 月 19 日 — 實時價格見 SteamDB · isThereAnyDeal"
+         "2026 年 8 月 20 日 — 實時價格見 SteamDB · isThereAnyDeal"
         ]
        ]
       },
@@ -15503,7 +15503,7 @@
        "type": "table",
        "tag": "価格",
        "heading": "現在の価格とセール",
-       "body": "はい——現在セール中です：Steam で -20%（¥2,000 → ¥1,600）、2026年8月5日まで。この価格は 2026年8月19日時点の参考スナップショットです。地域により価格は異なり、リアルタイムで変動します——最新の数字は SteamDB または isThereAnyDeal で確認してください。",
+       "body": "はい——現在セール中です：Steam で -20%（¥2,000 → ¥1,600）、2026年8月5日まで。この価格は 2026年8月20日時点の参考スナップショットです。地域により価格は異なり、リアルタイムで変動します——最新の数字は SteamDB または isThereAnyDeal で確認してください。",
        "columns": [
         "項目",
         "詳細"
@@ -15523,7 +15523,7 @@
         ],
         [
          "データ時点",
-         "2026年8月19日 — 最新価格は SteamDB · isThereAnyDeal で"
+         "2026年8月20日 — 最新価格は SteamDB · isThereAnyDeal で"
         ]
        ]
       },
@@ -15641,7 +15641,7 @@
        "type": "table",
        "tag": "가격",
        "heading": "현재 가격 및 할인",
-       "body": "네——현재 할인 중입니다: Steam에서 -20%（₩20,000 → ₩16,000）, 2026년 8월 5일까지. 이 가격은 2026년 8월 19일 기준 참고 스냅샷입니다. 지역별로 가격이 다르고 실시간으로 변하므로 최신 숫자는 SteamDB 또는 isThereAnyDeal에서 확인하세요.",
+       "body": "네——현재 할인 중입니다: Steam에서 -20%（₩20,000 → ₩16,000）, 2026년 8월 5일까지. 이 가격은 2026년 8월 20일 기준 참고 스냅샷입니다. 지역별로 가격이 다르고 실시간으로 변하므로 최신 숫자는 SteamDB 또는 isThereAnyDeal에서 확인하세요.",
        "columns": [
         "항목",
         "세부"
@@ -15661,7 +15661,7 @@
         ],
         [
          "데이터 기준일",
-         "2026년 8월 19일 — 실시간 가격은 SteamDB · isThereAnyDeal에서"
+         "2026년 8월 20일 — 실시간 가격은 SteamDB · isThereAnyDeal에서"
         ]
        ]
       },
@@ -15785,7 +15785,7 @@
        "type": "table",
        "tag": "PRECIO",
        "heading": "Precio actual y ofertas",
-       "body": "Sí — Doloc Town está en oferta ahora mismo: -20 % en Steam (19,99€ → 15,99€) hasta el 5 de agosto de 2026. Este bloque es una instantánea de referencia del 19 de agosto de 2026: los precios varían según la región y cambian en tiempo real; consulta el número actual en SteamDB o isThereAnyDeal.",
+       "body": "Sí — Doloc Town está en oferta ahora mismo: -20 % en Steam (19,99€ → 15,99€) hasta el 5 de agosto de 2026. Este bloque es una instantánea de referencia del 20 de agosto de 2026: los precios varían según la región y cambian en tiempo real; consulta el número actual en SteamDB o isThereAnyDeal.",
        "columns": [
         "Elemento",
         "Detalle"
@@ -15805,7 +15805,7 @@
         ],
         [
          "Datos al",
-         "19 de agosto de 2026 — precios en vivo en SteamDB · isThereAnyDeal"
+         "20 de agosto de 2026 — precios en vivo en SteamDB · isThereAnyDeal"
         ]
        ]
       },
