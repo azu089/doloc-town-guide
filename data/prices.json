@@ -1,61 +1,61 @@
 {
   "appid": "2285550",
   "name": "Doloc Town",
-  "data_date": "2026-08-20",
-  "fetched_at": "2026-08-20T10:30:41+08:00",
+  "data_date": "2026-08-21",
+  "fetched_at": "2026-08-21T10:36:56+08:00",
   "steam": {
     "url": "https://store.steampowered.com/app/2285550/Doloc_Town/",
-    "discount_deadline": "2026-08-05",
+    "discount_deadline": null,
     "discount_deadline_source": "steam_store_page",
     "regions": {
       "us": {
         "cc": "us",
         "currency": "USD",
         "initial_cents": 1999,
-        "final_cents": 1599,
-        "discount_percent": 20,
-        "initial_formatted": "$19.99",
-        "final_formatted": "$15.99",
+        "final_cents": 1999,
+        "discount_percent": 0,
+        "initial_formatted": "",
+        "final_formatted": "$19.99",
         "discount_expiration": null
       },
       "cn": {
         "cc": "cn",
         "currency": "CNY",
         "initial_cents": 5800,
-        "final_cents": 4640,
-        "discount_percent": 20,
-        "initial_formatted": "¥ 58.00",
-        "final_formatted": "¥ 46.40",
+        "final_cents": 5800,
+        "discount_percent": 0,
+        "initial_formatted": "",
+        "final_formatted": "¥ 58.00",
         "discount_expiration": null
       },
       "jp": {
         "cc": "jp",
         "currency": "JPY",
         "initial_cents": 200000,
-        "final_cents": 160000,
-        "discount_percent": 20,
-        "initial_formatted": "¥ 2,000",
-        "final_formatted": "¥ 1,600",
+        "final_cents": 200000,
+        "discount_percent": 0,
+        "initial_formatted": "",
+        "final_formatted": "¥ 2,000",
         "discount_expiration": null
       },
       "kr": {
         "cc": "kr",
         "currency": "KRW",
         "initial_cents": 2000000,
-        "final_cents": 1600000,
-        "discount_percent": 20,
-        "initial_formatted": "₩ 20,000",
-        "final_formatted": "₩ 16,000",
+        "final_cents": 2000000,
+        "discount_percent": 0,
+        "initial_formatted": "",
+        "final_formatted": "₩ 20,000",
         "discount_expiration": null
       },
       "es": {
         "cc": "es",
         "currency": "EUR",
         "initial_cents": 1999,
-        "final_cents": 1599,
-        "discount_percent": 20,
-        "initial_formatted": "19,99€",
-        "final_formatted": "15,99€",
+        "final_cents": 1999,
+        "discount_percent": 0,
+        "initial_formatted": "",
+        "final_formatted": "19,99€",
         "discount_expiration": null
       }
     }
@@ -65,8 +65,8 @@
     "game_url": "https://www.cheapshark.com/game/300069/DOLOCTOWN",
     "cheapest_price_ever_usd": 10.75,
     "cheapest_price_ever_date": "2025-11-21",
-    "cheapest_now_usd": 11.88,
-    "cheapest_now_store": "GameBillet"
+    "cheapest_now_usd": 13.38,
+    "cheapest_now_store": "Gamesplanet"
   },
   "authority": {
     "steamdb_url": "https://steamdb.info/app/2285550/",
