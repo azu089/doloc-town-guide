@@ -15020,7 +15020,7 @@
      "type": "table",
      "tag": "PRICE",
      "heading": "Current price & deals",
-     "body": "No — the August 26, 2026 snapshot shows no active discount on Steam (). Live prices change; SteamDB and isThereAnyDeal always show the current number.",
+     "body": "No — the August 27, 2026 snapshot shows no active discount on Steam (). Live prices change; SteamDB and isThereAnyDeal always show the current number.",
      "columns": [
       "Item",
       "Detail"
@@ -15040,7 +15040,7 @@
       ],
       [
        "Data as of",
-       "August 26, 2026 — live prices: SteamDB · isThereAnyDeal"
+       "August 27, 2026 — live prices: SteamDB · isThereAnyDeal"
       ]
      ]
     },
@@ -15227,7 +15227,7 @@
        "type": "table",
        "tag": "价格",
        "heading": "当前价格与促销",
-       "body": "目前没有——2026 年 8 月 26 日 快照显示 Steam 上没有进行中的折扣（）。实时价格会变化，最新数字请以 SteamDB 或 isThereAnyDeal 为准。",
+       "body": "目前没有——2026 年 8 月 27 日 快照显示 Steam 上没有进行中的折扣（）。实时价格会变化，最新数字请以 SteamDB 或 isThereAnyDeal 为准。",
        "columns": [
         "项目",
         "详情"
@@ -15247,7 +15247,7 @@
         ],
         [
          "数据截至",
-         "2026 年 8 月 26 日 — 实时价格见 SteamDB · isThereAnyDeal"
+         "2026 年 8 月 27 日 — 实时价格见 SteamDB · isThereAnyDeal"
         ]
        ]
       },
@@ -15365,7 +15365,7 @@
        "type": "table",
        "tag": "價格",
        "heading": "當前價格與促銷",
-       "body": "目前沒有——2026 年 8 月 26 日 快照顯示 Steam 上沒有進行中的折扣（）。實時價格會變化，最新數字請以 SteamDB 或 isThereAnyDeal 為準。",
+       "body": "目前沒有——2026 年 8 月 27 日 快照顯示 Steam 上沒有進行中的折扣（）。實時價格會變化，最新數字請以 SteamDB 或 isThereAnyDeal 為準。",
        "columns": [
         "項目",
         "詳情"
@@ -15385,7 +15385,7 @@
         ],
         [
          "數據截至",
-         "2026 年 8 月 26 日 — 實時價格見 SteamDB · isThereAnyDeal"
+         "2026 年 8 月 27 日 — 實時價格見 SteamDB · isThereAnyDeal"
         ]
        ]
       },
@@ -15503,7 +15503,7 @@
        "type": "table",
        "tag": "価格",
        "heading": "現在の価格とセール",
-       "body": "現在は割引なし——2026年8月26日 時点のスナップショットでは Steam の値引きはありません（）。価格は変動するため、最新の数字は SteamDB または isThereAnyDeal で確認してください。",
+       "body": "現在は割引なし——2026年8月27日 時点のスナップショットでは Steam の値引きはありません（）。価格は変動するため、最新の数字は SteamDB または isThereAnyDeal で確認してください。",
        "columns": [
         "項目",
         "詳細"
@@ -15523,7 +15523,7 @@
         ],
         [
          "データ時点",
-         "2026年8月26日 — 最新価格は SteamDB · isThereAnyDeal で"
+         "2026年8月27日 — 最新価格は SteamDB · isThereAnyDeal で"
         ]
        ]
       },
@@ -15641,7 +15641,7 @@
        "type": "table",
        "tag": "가격",
        "heading": "현재 가격 및 할인",
-       "body": "현재 할인 없음——2026년 8월 26일 기준 스냅샷에서 Steam 할인이 없습니다（）. 실시간 가격은 변하므로 최신 숫자는 SteamDB 또는 isThereAnyDeal에서 확인하세요.",
+       "body": "현재 할인 없음——2026년 8월 27일 기준 스냅샷에서 Steam 할인이 없습니다（）. 실시간 가격은 변하므로 최신 숫자는 SteamDB 또는 isThereAnyDeal에서 확인하세요.",
        "columns": [
         "항목",
         "세부"
@@ -15661,7 +15661,7 @@
         ],
         [
          "데이터 기준일",
-         "2026년 8월 26일 — 실시간 가격은 SteamDB · isThereAnyDeal에서"
+         "2026년 8월 27일 — 실시간 가격은 SteamDB · isThereAnyDeal에서"
         ]
        ]
       },
@@ -15785,7 +15785,7 @@
        "type": "table",
        "tag": "PRECIO",
        "heading": "Precio actual y ofertas",
-       "body": "No — la instantánea del 26 de agosto de 2026 no muestra ningún descuento activo en Steam (). Los precios cambian en tiempo real; SteamDB e isThereAnyDeal muestran siempre el número actual.",
+       "body": "No — la instantánea del 27 de agosto de 2026 no muestra ningún descuento activo en Steam (). Los precios cambian en tiempo real; SteamDB e isThereAnyDeal muestran siempre el número actual.",
        "columns": [
         "Elemento",
         "Detalle"
@@ -15805,7 +15805,7 @@
         ],
         [
          "Datos al",
-         "26 de agosto de 2026 — precios en vivo en SteamDB · isThereAnyDeal"
+         "27 de agosto de 2026 — precios en vivo en SteamDB · isThereAnyDeal"
         ]
        ]
       },
